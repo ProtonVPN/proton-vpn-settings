@@ -30,3 +30,4 @@ appConfig.json
 env.json
 .env
 po/i18n.txt
+package-lock.json
