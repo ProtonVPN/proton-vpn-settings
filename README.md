@@ -1,3 +1,7 @@
+[![CircleCI](https://circleci.com/gh/ProtonMail/protonvpn-settings.svg?style=svg)](https://circleci.com/gh/ProtonMail/protonvpn-settings)
+
+# ProtonVPN-settings
+
 You will need:
 - bash
 - node (mini latest LTS)
