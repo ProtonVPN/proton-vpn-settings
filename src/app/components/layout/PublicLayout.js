@@ -6,7 +6,7 @@ const PublicLayout = ({ children }) => {
     return (
         <>
             <div className="flex flex-nowrap">
-                <main className="main flex-item-fluid main-area">{children}</main>
+                <main className="flex-item-fluid main-area main-full">{children}</main>
             </div>
             <Icons />
         </>

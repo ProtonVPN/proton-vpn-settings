@@ -5,6 +5,7 @@ import { Loader, LoginContainer, ModalsChildren } from 'react-components';
 import { loadOpenPGP } from 'proton-shared/lib/openpgp';
 
 import PublicLayout from './components/layout/PublicLayout';
+import SignupContainer from './containers/SignupContainer/SignupContainer';
 
 const PublicApp = ({ onLogin }) => {
     const [loading, setLoading] = useState(true);
@@ -29,13 +30,12 @@ const PublicApp = ({ onLogin }) => {
     return (
         <>
             <ModalsChildren />
-            <PublicLayout>
-                <Router>
-                    <Switch>
-                        <Route render={() => <LoginContainer onLogin={onLogin} />} />
-                    </Switch>
-                </Router>
-            </PublicLayout>
+            <Router>
+                <Switch>
+                    <Route exact path="/signup" render={() => <SignupContainer />} />
+                    <Route path="/" render={() => <LoginContainer onLogin={onLogin} />} />
+                </Switch>
+            </Router>
         </>
     );
 };
