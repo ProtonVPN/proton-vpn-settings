@@ -2,20 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { classnames, Button } from 'react-components';
 
-const PlanCard = ({ active, title, monthlyPrice, discount, description, features, action, onClick }) => {
+const PlanCardHorizontal = ({ active, title, monthlyPrice, discount, description, action, onClick }) => {
     const saved = monthlyPrice * 0.12 * discount;
     const price = (monthlyPrice / 100) * discount;
 
     return (
-        <div className="flex-autogrid-item flex flex-column">
-            <div className="p1">
+        <div className={classnames(['plan-card w100', active && 'plan-card--active'])} role="button" onClick={onClick}>
+            <div>
                 <strong className="biggest">{title}</strong>
+                <div>{description}</div>
             </div>
-            <div
-                role="button"
-                onClick={onClick}
-                className={classnames(['plan-card flex-column', active && 'plan-card--active'])}
-            >
+            <div>
                 <div>
                     <sup>€</sup>
                     <strong>{price}</strong>
@@ -25,15 +22,9 @@ const PlanCard = ({ active, title, monthlyPrice, discount, description, features
                     Charging you {price * 12} € yearly
                     {saved > 0 && <strong>save {saved} €</strong>}
                 </div>
-                {description && <div className="border-bottom">{description}</div>}
-                {features && (
-                    <ul>
-                        {features.map((feature, i) => (
-                            <li key={i}>{feature}</li>
-                        ))}
-                    </ul>
-                )}
-                <Button onClick={onClick} className={classnames(['w100 mtauto', active && 'pm-button--primary'])}>
+            </div>
+            <div className="w30 flex flex-column">
+                <Button onClick={onClick} className={classnames(['mtauto mbauto', active && 'pm-button--primary'])}>
                     {action}
                 </Button>
             </div>
@@ -41,15 +32,14 @@ const PlanCard = ({ active, title, monthlyPrice, discount, description, features
     );
 };
 
-PlanCard.propTypes = {
+PlanCardHorizontal.propTypes = {
     title: PropTypes.string.isRequired,
     monthlyPrice: PropTypes.number.isRequired,
     action: PropTypes.string.isRequired,
     onClick: PropTypes.func.isRequired,
     active: PropTypes.bool,
     discount: PropTypes.number,
-    description: PropTypes.string,
-    features: PropTypes.arrayOf(PropTypes.string)
+    description: PropTypes.string
 };
 
-export default PlanCard;
+export default PlanCardHorizontal;
