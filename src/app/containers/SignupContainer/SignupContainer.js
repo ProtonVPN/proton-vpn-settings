@@ -7,8 +7,10 @@ import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection
 import SelectedPlan from './SelectedPlan/SelectedPlan';
 import { PLANS } from 'proton-shared/lib/constants';
 
+// TODO: change prices when annual is selected
 const SignupContainer = () => {
     const [plan, setPlan] = useState(PLANS.FREE);
+    const [isAnnual, setIsAnnual] = useState(false);
 
     return (
         <>
@@ -21,7 +23,13 @@ const SignupContainer = () => {
             <main className="flex flex-item-fluid main-area">
                 <div className="container-section-sticky">
                     <ObserverSections>
-                        <PlansSection onSelect={setPlan} selected={plan} id="plan" />
+                        <PlansSection
+                            isAnnual={isAnnual}
+                            onAnnualChange={setIsAnnual}
+                            onSelect={setPlan}
+                            selected={plan}
+                            id="plan"
+                        />
                         <div className="flex" id="details">
                             <div className="flex-item-fluid">
                                 <EmailSection />
