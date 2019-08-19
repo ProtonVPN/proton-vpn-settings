@@ -1,22 +1,24 @@
 import React from 'react';
-import { SubTitle, ButtonGroup, Group, Alert } from 'react-components';
+import { SubTitle, Label, Toggle, Row, Field } from 'react-components';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
 import PlanCard from './PlanCard';
 import PlanCardHorizontal from './PlanCardHorizontal';
 import { PLANS } from 'proton-shared/lib/constants';
 
-const PlansSection = ({ selected, onSelect }) => {
+const PlansSection = ({ selected, onSelect, onAnnualChange, isAnnual = false }) => {
     const handleSelect = (plan) => () => onSelect(plan);
+    const handleChangeAnnual = () => onAnnualChange(!isAnnual);
 
     return (
         <>
             <SubTitle>{c('Title').t`1. Choose a plan that works for you`}</SubTitle>
-            <Alert>Save 20% with anual subscription</Alert>
-            <Group>
-                <ButtonGroup>Monthly</ButtonGroup>
-                <ButtonGroup disabled>Anually</ButtonGroup>
-            </Group>
+            <Row>
+                <Label className="flex-item-centered-vert">{c('Label').t`Pay annually (save 20%)`}</Label>
+                <Field>
+                    <Toggle onChange={handleChangeAnnual} checked={isAnnual} />
+                </Field>
+            </Row>
             <div>
                 <div className="flex-autogrid">
                     <PlanCard
@@ -74,6 +76,8 @@ const PlansSection = ({ selected, onSelect }) => {
 };
 
 PlansSection.propTypes = {
+    isAnnual: PropTypes.bool,
+    onAnnualChange: PropTypes.func.isRequired,
     selected: PropTypes.oneOf([PLANS.FREE, PLANS.VPNBASIC, PLANS.VPNPLUS, PLANS.VISIONARY]).isRequired,
     onSelect: PropTypes.func.isRequired
 };
