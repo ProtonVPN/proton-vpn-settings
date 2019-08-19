@@ -1,5 +1,5 @@
 import React from 'react';
-import { SubTitle } from 'react-components';
+import { SubTitle, ButtonGroup, Group, Alert } from 'react-components';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
 import PlanCard from './PlanCard';
@@ -12,10 +12,15 @@ const PlansSection = ({ selected, onSelect }) => {
     return (
         <>
             <SubTitle>{c('Title').t`1. Choose a plan that works for you`}</SubTitle>
+            <Alert>Save 20% with anual subscription</Alert>
+            <Group>
+                <ButtonGroup>Monthly</ButtonGroup>
+                <ButtonGroup disabled>Anually</ButtonGroup>
+            </Group>
             <div>
                 <div className="flex-autogrid">
                     <PlanCard
-                        active={selected === 0}
+                        active={selected === PLANS.FREE}
                         onClick={handleSelect(PLANS.FREE)}
                         title={c('PlanTitle').t`Free`}
                         monthlyPrice={0}
@@ -25,7 +30,7 @@ const PlansSection = ({ selected, onSelect }) => {
                         action={c('Action').t`Get Free`}
                     />
                     <PlanCard
-                        active={selected === 1}
+                        active={selected === PLANS.VPNBASIC}
                         onClick={handleSelect(PLANS.VPNBASIC)}
                         title={c('PlanTitle').t`Basic`}
                         monthlyPrice={5}
@@ -39,7 +44,7 @@ const PlansSection = ({ selected, onSelect }) => {
                         action={c('Action').t`Get Basic`}
                     />
                     <PlanCard
-                        active={selected === 2}
+                        active={selected === PLANS.VPNPLUS}
                         onClick={handleSelect(PLANS.VPNPLUS)}
                         title={c('PlanTitle').t`Plus`}
                         monthlyPrice={10}
@@ -56,7 +61,7 @@ const PlansSection = ({ selected, onSelect }) => {
                 </div>
             </div>
             <PlanCardHorizontal
-                active={selected === 3}
+                active={selected === PLANS.VISIONARY}
                 onClick={handleSelect(PLANS.VISIONARY)}
                 title={c('PlanTitle').t`Visionary`}
                 monthlyPrice={30}
