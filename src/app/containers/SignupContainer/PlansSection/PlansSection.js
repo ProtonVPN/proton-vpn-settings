@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { SubTitle } from 'react-components';
+import PropTypes from 'prop-types';
 import { c } from 'ttag';
 import PlanCard from './PlanCard';
 import PlanCardHorizontal from './PlanCardHorizontal';
+import { PLANS } from 'proton-shared/lib/constants';
 
-const PlansSection = () => {
-    const [selected, select] = useState(0);
-
-    const handleSelect = (i) => () => {
-        select(i);
-    };
+const PlansSection = ({ selected, onSelect }) => {
+    const handleSelect = (plan) => () => onSelect(plan);
 
     return (
         <>
-            <SubTitle>{c('Title').t`Choose a plan that works for you`}</SubTitle>
+            <SubTitle>{c('Title').t`1. Choose a plan that works for you`}</SubTitle>
             <div>
                 <div className="flex-autogrid">
                     <PlanCard
                         active={selected === 0}
-                        onClick={handleSelect(0)}
+                        onClick={handleSelect(PLANS.FREE)}
                         title={c('PlanTitle').t`Free`}
                         monthlyPrice={0}
                         discount={20}
@@ -28,7 +26,7 @@ const PlansSection = () => {
                     />
                     <PlanCard
                         active={selected === 1}
-                        onClick={handleSelect(1)}
+                        onClick={handleSelect(PLANS.VPNBASIC)}
                         title={c('PlanTitle').t`Basic`}
                         monthlyPrice={5}
                         discount={20}
@@ -42,7 +40,7 @@ const PlansSection = () => {
                     />
                     <PlanCard
                         active={selected === 2}
-                        onClick={handleSelect(2)}
+                        onClick={handleSelect(PLANS.VPNPLUS)}
                         title={c('PlanTitle').t`Plus`}
                         monthlyPrice={10}
                         discount={20}
@@ -59,7 +57,7 @@ const PlansSection = () => {
             </div>
             <PlanCardHorizontal
                 active={selected === 3}
-                onClick={handleSelect(3)}
+                onClick={handleSelect(PLANS.VISIONARY)}
                 title={c('PlanTitle').t`Visionary`}
                 monthlyPrice={30}
                 discount={20}
@@ -68,6 +66,11 @@ const PlansSection = () => {
             />
         </>
     );
+};
+
+PlansSection.propTypes = {
+    selected: PropTypes.oneOf([PLANS.FREE, PLANS.VPNBASIC, PLANS.VPNPLUS, PLANS.VISIONARY]).isRequired,
+    onSelect: PropTypes.func.isRequired
 };
 
 export default PlansSection;
