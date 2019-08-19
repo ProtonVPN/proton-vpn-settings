@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { RadioGroup, Label, Row, Details, Summary } from 'react-components';
+import { RadioGroup, Label, Row, Details, Summary, SubTitle } from 'react-components';
 import RadioAccordion, { Option } from '../../../components/RadioAccordion';
 import { c } from 'ttag';
 
@@ -9,6 +9,7 @@ const PaymentDetailsSection = () => {
 
     return (
         <>
+            <SubTitle>{c('Title').t`3. Enter payment details`}</SubTitle>
             <Label htmlFor="currency">{c('Label').t`Select Currency`}</Label>
             <Row>
                 <RadioGroup
