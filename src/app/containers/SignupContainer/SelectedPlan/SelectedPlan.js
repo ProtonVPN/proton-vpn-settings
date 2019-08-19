@@ -22,6 +22,7 @@ const featureSets = {
         ]
     },
     [PLANS.VPNPLUS]: {
+        isBest: true,
         features: [
             'Access to all countries',
             '5 devices',
@@ -35,7 +36,6 @@ const featureSets = {
         ]
     },
     [PLANS.VISIONARY]: {
-        isBest: true,
         features: [
             'Access to all countries',
             '10 devices',
@@ -52,13 +52,20 @@ const featureSets = {
 };
 
 const SelectedPlan = ({ plan }) => {
+    const selectedPlan = featureSets[plan];
+
     return (
         <div className="m1">
-            <div className="flex selected-plan">
-                <div>ProtonVPN {PLAN_NAMES[plan]}</div>
-                <ul>
-                    {featureSets[plan].features.map((feature) => (
-                        <li>{feature}</li>
+            <div className="flex flex-column bordered-container selected-plan">
+                <h3 className="pt1 pb1 mb0 w100 aligncenter bg-pv-green-light color-white">
+                    ProtonVPN {PLAN_NAMES[plan]}
+                </h3>
+                {selectedPlan.isBest && (
+                    <strong className="bg-plus aligncenter small p1 m0">Congrats! You chose our BEST OFFER!</strong>
+                )}
+                <ul className="ml1 mr1">
+                    {selectedPlan.features.map((feature, i) => (
+                        <li key={i}>{feature}</li>
                     ))}
                 </ul>
             </div>
