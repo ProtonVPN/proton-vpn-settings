@@ -28,11 +28,11 @@ RadioAccordion.propTypes = {
 
 export const Option = ({ id, isActive = false, name, title, children, onSelect }) => {
     return (
-        <div>
-            <Radio checked={isActive} onChange={onSelect} name={name} id={id}>
+        <div className="mb1 bordered-container">
+            <Radio className="flex-items-center p1 w100" checked={isActive} onChange={onSelect} name={name} id={id}>
                 {title}
             </Radio>
-            <div>{isActive && children}</div>
+            {isActive && <div className="p1 ml0-5 mr0-5 mb0-5">{isActive && children}</div>}
         </div>
     );
 };
