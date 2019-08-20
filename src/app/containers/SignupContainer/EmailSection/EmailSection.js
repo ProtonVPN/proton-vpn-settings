@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { SubTitle, Input, Label, Field, Alert, Block } from 'react-components';
 import { c } from 'ttag';
 import { Link } from 'react-router-dom';
 
-const EmailSection = () => {
+// TODO: validate and 'success into error' handling
+const EmailSection = ({ onEnterEmail }) => {
+    const [email, setEmail] = useState('');
+
+    const handleChangeEmail = ({ target }) => setEmail(target.value);
+    const handleBlur = () => email && onEnterEmail();
+
     return (
         <>
             <SubTitle>{c('Title').t`2. Enter your email`}</SubTitle>
@@ -13,12 +20,22 @@ const EmailSection = () => {
             <Label htmlFor="email">{c('Label').t`Email`}</Label>
             <Block>
                 <Field>
-                    <Input id="email" placeholder={c('Placeholder').t`name@example.com`} />
+                    <Input
+                        value={email}
+                        onChange={handleChangeEmail}
+                        onBlur={handleBlur}
+                        id="email"
+                        placeholder={c('Placeholder').t`name@example.com`}
+                    />
                 </Field>
             </Block>
             <span>{c('Info').jt`or ${<Link to="/login">{c('Link').t`log in with ProtonMail account`}</Link>}`}</span>
         </>
     );
+};
+
+EmailSection.propTypes = {
+    onEnterEmail: PropTypes.func.isRequired
 };
 
 export default EmailSection;
