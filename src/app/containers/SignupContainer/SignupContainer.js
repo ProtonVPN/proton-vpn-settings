@@ -7,11 +7,35 @@ import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection
 import SelectedPlan from './SelectedPlan/SelectedPlan';
 import { PLANS } from 'proton-shared/lib/constants';
 import { getPlan } from './plans';
+import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 
-// TODO: change prices when annual is selected
+// TODO: change step (Verification -> Payment) depending on plan
+// TODO: step names translations
 const SignupContainer = () => {
     const [plan, setPlan] = useState(PLANS.FREE);
     const [isAnnual, setIsAnnual] = useState(false);
+    // If successfully convinced to purchase plus plan
+    const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
+
+    const handleChangePlan = (plan) => {
+        if (plan === PLANS.FREE && isNudgeSuccessful) {
+            setNudgeSuccessful(false);
+        }
+        setPlan(plan);
+    };
+
+    const handleUpgradeClick = () => {
+        setPlan(PLANS.VPNPLUS);
+        setNudgeSuccessful(true);
+    };
+
+    const handleContinueClick = () => {
+        if (isNudgeSuccessful) {
+            // TODO: go to #payment
+        } else {
+            // TODO: go to verification
+        }
+    };
 
     return (
         <>
@@ -27,14 +51,27 @@ const SignupContainer = () => {
                         <PlansSection
                             isAnnual={isAnnual}
                             onAnnualChange={setIsAnnual}
-                            onSelect={setPlan}
+                            onSelect={handleChangePlan}
                             selected={plan}
                             id="plan"
                         />
                         <div className="flex" id="details">
                             <div className="flex-item-fluid">
-                                <EmailSection />
-                                <PaymentDetailsSection />
+                                <div className="container-section-sticky-section" id="email">
+                                    <EmailSection />
+                                    {(plan === PLANS.FREE || isNudgeSuccessful) && (
+                                        <FreeSignupSection
+                                            onContinue={handleContinueClick}
+                                            onUpgrade={handleUpgradeClick}
+                                            plusActive={isNudgeSuccessful}
+                                        />
+                                    )}
+                                </div>
+                                {plan !== PLANS.FREE && (
+                                    <div className="container-section-sticky-section" id="payment">
+                                        <PaymentDetailsSection />
+                                    </div>
+                                )}
                             </div>
                             <SelectedPlan isAnnual={isAnnual} plan={getPlan(plan)} />
                         </div>
