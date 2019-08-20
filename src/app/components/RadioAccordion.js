@@ -42,9 +42,9 @@ Option.propTypes = {
     title: PropTypes.node.isRequired,
     children: PropTypes.node.isRequired,
     // Below are injected
-    isActive: PropTypes.bool.isRequired,
-    onSelect: PropTypes.func.isRequired,
-    name: PropTypes.string.isRequired
+    isActive: PropTypes.bool,
+    onSelect: PropTypes.func,
+    name: PropTypes.string
 };
 
 export default RadioAccordion;
