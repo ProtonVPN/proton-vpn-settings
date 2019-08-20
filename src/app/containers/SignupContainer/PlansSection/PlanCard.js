@@ -1,40 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { classnames, Button } from 'react-components';
+import { c } from 'ttag';
+import PlanPrice from './PlanPrice';
 
-const PlanCard = ({ active, title, monthlyPrice, discount, description, features, action, onClick }) => {
-    const saved = monthlyPrice * 0.12 * discount;
-    const price = (monthlyPrice / 100) * discount;
-
+const PlanCard = ({ active, plan, isAnnual, onClick }) => {
     return (
         <div className="flex-autogrid-item flex flex-column">
-            <div className="p1">
-                <strong className="biggest">{title}</strong>
+            <div className="p1 flex flex-items-center">
+                <strong className="biggest mt0 mb0">{plan.title}</strong>
+                {plan.isBest && (
+                    <strong className="ml1 mt0 mb0 pt0-25 pb0-25 pr0-5 pl0-5 bg-plus small">BEST OFFER</strong>
+                )}
             </div>
             <div
                 role="button"
                 onClick={onClick}
                 className={classnames(['plan-card flex-column', active && 'plan-card--active'])}
             >
-                <div>
-                    <sup>€</sup>
-                    <strong>{price}</strong>
-                    <span>/ mo</span>
-                </div>
-                <div>
-                    Charging you {price * 12} € yearly
-                    {saved > 0 && <strong>save {saved} €</strong>}
-                </div>
-                {description && <div className="border-bottom">{description}</div>}
-                {features && (
+                <PlanPrice plan={plan} isAnnual={isAnnual} />
+                {plan.description && <div className="border-bottom">{plan.description}</div>}
+                {plan.highlights && (
                     <ul>
-                        {features.map((feature, i) => (
+                        {plan.highlights.map((feature, i) => (
                             <li key={i}>{feature}</li>
                         ))}
                     </ul>
                 )}
                 <Button onClick={onClick} className={classnames(['w100 mtauto', active && 'pm-button--primary'])}>
-                    {action}
+                    {c('Plan Action').t`Get ${plan.title}`}
                 </Button>
             </div>
         </div>
@@ -42,14 +36,15 @@ const PlanCard = ({ active, title, monthlyPrice, discount, description, features
 };
 
 PlanCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    monthlyPrice: PropTypes.number.isRequired,
-    action: PropTypes.string.isRequired,
+    plan: PropTypes.shape({
+        isBest: PropTypes.bool,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string,
+        highlights: PropTypes.arrayOf(PropTypes.string)
+    }).isRequired,
+    isAnnual: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
-    active: PropTypes.bool,
-    discount: PropTypes.number,
-    description: PropTypes.string,
-    features: PropTypes.arrayOf(PropTypes.string)
+    active: PropTypes.bool
 };
 
 export default PlanCard;
