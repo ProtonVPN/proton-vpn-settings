@@ -5,6 +5,7 @@ import { c } from 'ttag';
 import PlanCard from './PlanCard';
 import PlanCardHorizontal from './PlanCardHorizontal';
 import { PLANS } from 'proton-shared/lib/constants';
+import { getPlan } from '../plans';
 
 const PlansSection = ({ selected, onSelect, onAnnualChange, isAnnual = false }) => {
     const handleSelect = (plan) => () => onSelect(plan);
@@ -21,55 +22,22 @@ const PlansSection = ({ selected, onSelect, onAnnualChange, isAnnual = false }) 
             </Row>
             <div>
                 <div className="flex-autogrid">
-                    <PlanCard
-                        active={selected === PLANS.FREE}
-                        onClick={handleSelect(PLANS.FREE)}
-                        title={c('PlanTitle').t`Free`}
-                        monthlyPrice={0}
-                        discount={20}
-                        description={c('Description').t`Free limited version`}
-                        features={[c('Feature').t`Access to 3 countries`, c('Feature').t`1 device`]}
-                        action={c('Action').t`Get Free`}
-                    />
-                    <PlanCard
-                        active={selected === PLANS.VPNBASIC}
-                        onClick={handleSelect(PLANS.VPNBASIC)}
-                        title={c('PlanTitle').t`Basic`}
-                        monthlyPrice={5}
-                        discount={20}
-                        description={c('Description').t`Basic privacy features`}
-                        features={[
-                            c('Feature').t`Access to all countries`,
-                            c('Feature').t`2 devices`,
-                            c('Feature').t`30-day money-back guarantee`
-                        ]}
-                        action={c('Action').t`Get Basic`}
-                    />
-                    <PlanCard
-                        active={selected === PLANS.VPNPLUS}
-                        onClick={handleSelect(PLANS.VPNPLUS)}
-                        title={c('PlanTitle').t`Plus`}
-                        monthlyPrice={10}
-                        discount={20}
-                        description={c('Description').t`The complete privacy suite`}
-                        features={[
-                            c('Feature').t`Access to all countries`,
-                            c('Feature').t`5 devices`,
-                            c('Feature').t`All advanced security features included`,
-                            c('Feature').t`30-day money-back guarantee`
-                        ]}
-                        action={c('Action').t`Get Plus`}
-                    />
+                    {[PLANS.FREE, PLANS.VPNBASIC, PLANS.VPNPLUS].map((planName) => (
+                        <PlanCard
+                            key={planName}
+                            active={selected === planName}
+                            onClick={handleSelect(planName)}
+                            plan={getPlan(planName)}
+                            isAnnual={isAnnual}
+                        />
+                    ))}
                 </div>
             </div>
             <PlanCardHorizontal
                 active={selected === PLANS.VISIONARY}
                 onClick={handleSelect(PLANS.VISIONARY)}
-                title={c('PlanTitle').t`Visionary`}
-                monthlyPrice={30}
-                discount={20}
-                description={c('Description').t`Plus 5 devices + ProtonMail Visionary plan`}
-                action={c('Action').t`Get Visionary`}
+                plan={getPlan(PLANS.VISIONARY)}
+                isAnnual={isAnnual}
             />
         </>
     );

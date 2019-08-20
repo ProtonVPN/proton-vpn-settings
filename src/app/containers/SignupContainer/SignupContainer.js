@@ -6,6 +6,7 @@ import EmailSection from './EmailSection/EmailSection';
 import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection';
 import SelectedPlan from './SelectedPlan/SelectedPlan';
 import { PLANS } from 'proton-shared/lib/constants';
+import { getPlan } from './plans';
 
 // TODO: change prices when annual is selected
 const SignupContainer = () => {
@@ -35,7 +36,7 @@ const SignupContainer = () => {
                                 <EmailSection />
                                 <PaymentDetailsSection />
                             </div>
-                            <SelectedPlan plan={plan} />
+                            <SelectedPlan isAnnual={isAnnual} plan={getPlan(plan)} />
                         </div>
                     </ObserverSections>
                 </div>
