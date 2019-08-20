@@ -16,6 +16,11 @@ const SignupContainer = () => {
     const [isAnnual, setIsAnnual] = useState(false);
     // If successfully convinced to purchase plus plan
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
+    const [step, setStep] = useState(1);
+
+    const handleEnterEmail = () => {
+        setStep(2);
+    };
 
     const handleChangePlan = (plan) => {
         if (plan === PLANS.FREE && isNudgeSuccessful) {
@@ -31,7 +36,7 @@ const SignupContainer = () => {
 
     const handleContinueClick = () => {
         if (isNudgeSuccessful) {
-            // TODO: go to #payment
+            location.replace('/signup#payment');
         } else {
             // TODO: go to verification
         }
@@ -42,7 +47,10 @@ const SignupContainer = () => {
             <header className="flex header color-white flex-items-center bg-black flex-spacebetween pt1 pb1 pl2 pr2">
                 <VpnLogo />
                 <div className="mw650p flex-item-fluid">
-                    <Wizard steps={['Plan', 'Email', 'Verification', 'Finish']} />
+                    <Wizard
+                        step={step}
+                        steps={['Plan', 'Email', plan === PLANS.FREE ? 'Verification' : 'Payment', 'Finish']}
+                    />
                 </div>
             </header>
             <main className="flex flex-item-fluid main-area">
@@ -58,7 +66,7 @@ const SignupContainer = () => {
                         <div className="flex" id="details">
                             <div className="flex-item-fluid">
                                 <div className="container-section-sticky-section" id="email">
-                                    <EmailSection />
+                                    <EmailSection onEnterEmail={handleEnterEmail} />
                                     {(plan === PLANS.FREE || isNudgeSuccessful) && (
                                         <FreeSignupSection
                                             onContinue={handleContinueClick}
