@@ -10,12 +10,16 @@ import {
     Field,
     TelInput,
     Block,
-    InlineLinkButton
+    InlineLinkButton,
+    useApiResult
 } from 'react-components';
 import { c } from 'ttag';
+import { queryEmailVerificationCode } from '../../../../../../proton-shared/lib/api/user';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
 const VerificationStep = ({ email }) => {
+    useApiResult(() => queryEmailVerificationCode(email), []);
+
     const doNotClose = <strong>{c('Warning').t`Do not close`}</strong>;
     const emailText = <strong>{email}</strong>;
     const resendButton = <InlineLinkButton className="ml0-25">{c('Action').t`resend`}</InlineLinkButton>;
