@@ -11,18 +11,19 @@ import {
     TelInput,
     Block,
     InlineLinkButton,
-    useApiResult
+    useApiResult,
+    useNotifications
 } from 'react-components';
 import { c } from 'ttag';
 import { queryEmailVerificationCode } from '../../../../../../proton-shared/lib/api/user';
+import SMSVerification from './SMSVerification';
+import EmailVerification from './EmailVerification';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
 const VerificationStep = ({ email }) => {
-    useApiResult(() => queryEmailVerificationCode(email), []);
+    const { loading } = useApiResult(() => queryEmailVerificationCode(email), []);
 
     const doNotClose = <strong>{c('Warning').t`Do not close`}</strong>;
-    const emailText = <strong>{email}</strong>;
-    const resendButton = <InlineLinkButton className="ml0-25">{c('Action').t`resend`}</InlineLinkButton>;
 
     return (
         <>
@@ -40,32 +41,9 @@ const VerificationStep = ({ email }) => {
                 <i>{c('Warning').t`You might want to check the spam folder as well.`}</i>
             </Alert>
 
-            <Bordered>
-                <Block>{c('Info').t`Please check your email and enter the code below`}</Block>
-                <Block>{c('Info').jt`The verification email is on it's way to ${emailText}`}</Block>
-                <Row>
-                    <Field className="mr1">
-                        <Input placeholder={c('Placeholder').t`Verification code`} />
-                    </Field>
-                    <PrimaryButton>{c('Action').t`Validate`}</PrimaryButton>
-                </Row>
+            <EmailVerification isLoading={loading} email={email} />
 
-                <div className="flex-items-center flex">
-                    {c('Info').t`Didn't receive an email?`}
-                    <strong className="flex-items-center flex ml0-25">{c('Info')
-                        .jt`Check your spam folder or ${resendButton}`}</strong>
-                </div>
-            </Bordered>
-
-            <Bordered>
-                <Block>{c('Info').t`Verify your account with a code sent via SMS`}</Block>
-                <Row>
-                    <Field className="mr1">
-                        <TelInput placeholder="(201) 555-0123" />
-                    </Field>
-                    <PrimaryButton>{c('Action').t`Send`}</PrimaryButton>
-                </Row>
-            </Bordered>
+            <SMSVerification />
         </>
     );
 };
