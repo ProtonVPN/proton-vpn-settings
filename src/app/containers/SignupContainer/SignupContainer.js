@@ -5,8 +5,8 @@ import PlansSection from './PlansSection/PlansSection';
 import EmailSection from './EmailSection/EmailSection';
 import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection';
 import SelectedPlan from './SelectedPlan/SelectedPlan';
-import { PLANS } from 'proton-shared/lib/constants';
-import { getPlan } from './plans';
+import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
+import { getPlan, getPlanPrice } from './plans';
 import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 import VerificationStep from './VerificationStep/VerificationStep';
 
@@ -14,6 +14,7 @@ import VerificationStep from './VerificationStep/VerificationStep';
 const SignupContainer = () => {
     const [plan, setPlan] = useState(PLANS.FREE);
     const [isAnnual, setIsAnnual] = useState(false);
+    const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
     // If successfully convinced to purchase plus plan
     const [email, setEmail] = useState('');
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
@@ -40,6 +41,8 @@ const SignupContainer = () => {
     };
 
     const step = plan ? (email ? 2 : 1) : 0;
+    const selectedPlan = getPlan(plan);
+    const { totalPrice } = getPlanPrice(plan, isAnnual);
 
     return (
         <>
@@ -79,11 +82,11 @@ const SignupContainer = () => {
                                     </div>
                                     {plan !== PLANS.FREE && (
                                         <div className="container-section-sticky-section" id="payment">
-                                            <PaymentDetailsSection />
+                                            <PaymentDetailsSection onChangeCurrency={setCurrency} amount={totalPrice} />
                                         </div>
                                     )}
                                 </div>
-                                <SelectedPlan isAnnual={isAnnual} plan={getPlan(plan)} />
+                                <SelectedPlan currency={currency} isAnnual={isAnnual} plan={selectedPlan} />
                             </div>
                         </ObserverSections>
                     )}
