@@ -1,19 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-    Title,
-    Alert,
-    Bordered,
-    Row,
-    Input,
-    PrimaryButton,
-    Field,
-    TelInput,
-    Block,
-    InlineLinkButton,
-    useApiResult,
-    useNotifications
-} from 'react-components';
+import { Title, Alert, useApiResult } from 'react-components';
 import { c } from 'ttag';
 import { queryEmailVerificationCode } from '../../../../../../proton-shared/lib/api/user';
 import SMSVerification from './SMSVerification';
