@@ -1,61 +1,103 @@
 import React, { useState } from 'react';
-import { RadioGroup, Label, Row, SubTitle } from 'react-components';
-import RadioAccordion, { Option } from '../../../components/RadioAccordion';
+import PropTypes from 'prop-types';
+import {
+    RadioGroup,
+    Label,
+    Row,
+    SubTitle,
+    Payment,
+    usePayment,
+    useToggle,
+    LinkButton,
+    Alert,
+    Href,
+    PrimaryButton,
+    Field
+} from 'react-components';
 import { c } from 'ttag';
-import PayPal from './PayPal';
-import mastercardSvg from 'design-system/assets/img/shared/bank-icons/cc-mastercard.svg';
-import visaSvg from 'design-system/assets/img/shared/bank-icons/cc-visa.svg';
-import CreditCard from './CreditCard';
+import { DEFAULT_CYCLE, DEFAULT_CURRENCY, PAYMENT_METHOD_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
+import CouponForm from 'react-components/containers/payments/subscription/CouponForm';
+import GiftCodeForm from 'react-components/containers/payments/subscription/GiftCodeForm';
 
-const PaymentDetailsSection = () => {
-    const [currency, setCurrency] = useState('eur');
-    const [activeMethod, setActiveMethod] = useState('paypal');
+// TODO: change currency based on selected currency
+const PaymentDetailsSection = ({ onChangeCurrency, amount }) => {
+    const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
+    const { state: hasCoupon, toggle: toggleCoupon } = useToggle();
+    const { state: hasGiftCode, toggle: toggleGiftCode } = useToggle();
+
+    const { method, setMethod, parameters, setParameters, setCardValidity } = usePayment();
+
+    const handleChangeCurrency = (value) => {
+        setCurrency(value);
+        onChangeCurrency(value);
+    };
+
+    const tosLink = <Href url="https://protonvpn.com/terms-and-conditions">{c('Link').t`Terms of Service`}</Href>;
+    const policyLink = <Href url="https://protonvpn.com/privacy-policy">{c('Link').t`Privacy Policy`}</Href>;
 
     return (
         <>
             <SubTitle>{c('Title').t`3. Enter payment details`}</SubTitle>
-            <Label htmlFor="currency">{c('Label').t`Select Currency`}</Label>
+            <Alert>
+                {c('Info').jt`By completing your payment, you agree to abide by our ${tosLink} and ${policyLink}`}
+            </Alert>
+
             <Row>
+                <Label htmlFor="coupon">{c('Label').t`Coupon`}</Label>
+                {hasCoupon ? (
+                    <CouponForm id="coupon" model={{ coupon: '' }} />
+                ) : (
+                    <LinkButton onClick={toggleCoupon} className="mr1">{c('Action').t`Use coupon`}</LinkButton>
+                )}
+            </Row>
+            <Row>
+                <Label htmlFor="gift-code">{c('Label').t`Gift code`}</Label>
+                {hasGiftCode ? (
+                    <GiftCodeForm id="gift-code" model={{ gift: '' }} />
+                ) : (
+                    <LinkButton onClick={toggleGiftCode} className="mr1">{c('Action').t`Use gift code`}</LinkButton>
+                )}
+            </Row>
+
+            <Row>
+                <Label htmlFor="currency">{c('Label').t`Select Currency`}</Label>
                 <RadioGroup
                     id="currency"
                     name="currency"
-                    onChange={setCurrency}
+                    onChange={handleChangeCurrency}
                     value={currency}
-                    options={[
-                        { label: c('Currency').t`EUR`, value: 'eur' },
-                        { label: c('Currency').t`USD`, value: 'usd' },
-                        { label: c('Currency').t`CHF`, value: 'chf' }
-                    ]}
+                    options={CURRENCIES.map((value) => ({ label: value, value }))}
                 />
             </Row>
 
-            <RadioAccordion name="payment-method" active={activeMethod} onSelect={setActiveMethod}>
-                <Option
-                    id="paypal"
-                    title={
-                        <>
-                            {c('Option').t`PayPal`}
-                            <img className="ml0-5" width={78} src="https://account.protonvpn.com/assets/paypal.svg" />
-                        </>
-                    }
-                >
-                    <PayPal />
-                </Option>
-                <Option
-                    id="credit-card"
-                    title={
-                        <>
-                            {c('Option').t`Credit Card`}
-                            <img className="ml0-5" width={20} src={visaSvg} />
-                            <img className="ml0-5" width={20} src={mastercardSvg} />
-                        </>
-                    }
-                >
-                    <CreditCard />
-                </Option>
-            </RadioAccordion>
+            <Payment
+                type="signup"
+                method={method}
+                amount={amount}
+                cycle={DEFAULT_CYCLE}
+                currency={currency}
+                parameters={parameters}
+                onParameters={setParameters}
+                onMethod={setMethod}
+                onValidCard={setCardValidity}
+                onPay={() => {}}
+            />
+
+            {method === PAYMENT_METHOD_TYPES.CARD && (
+                <Row>
+                    <Label />
+                    <Field>
+                        <PrimaryButton onClick={() => {}}>{c('Action').t`Confirm Payment`}</PrimaryButton>
+                    </Field>
+                </Row>
+            )}
         </>
     );
+};
+
+PaymentDetailsSection.propTypes = {
+    amount: PropTypes.number.isRequired,
+    onChangeCurrency: PropTypes.func.isRequired
 };
 
 export default PaymentDetailsSection;
