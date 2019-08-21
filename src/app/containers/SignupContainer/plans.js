@@ -79,6 +79,7 @@ export const getPlan = (planName) => getPlans()[planName];
 export const getPlanPrice = (plan, isAnnual) => {
     const discount = isAnnual ? 0.2 : 0;
     const monthlyPrice = plan.monthlyPrice - plan.monthlyPrice * discount;
-    const totalSaved = plan.monthlyPrice * discount * 12;
-    return { monthlyPrice, totalSaved };
+    const totalPrice = isAnnual ? monthlyPrice * 12 : monthlyPrice;
+    const totalSaved = totalPrice * discount;
+    return { monthlyPrice, totalPrice, totalSaved };
 };

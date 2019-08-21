@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { PLANS, PLAN_NAMES } from 'proton-shared/lib/constants';
-import { getPlan, getPlanPrice } from '../plans';
+import { getPlanPrice } from '../plans';
 import { c } from 'ttag';
+import { Price } from 'react-components';
 
-const SelectedPlan = ({ plan, isAnnual }) => {
-    const { monthlyPrice } = getPlanPrice(plan, isAnnual);
+const SelectedPlan = ({ plan, isAnnual, currency }) => {
+    const { monthlyPrice, totalPrice } = getPlanPrice(plan, isAnnual);
     const planTitle = c('VPN plan title').t`ProtonVPN ${plan.title}`;
 
     return (
@@ -25,13 +25,19 @@ const SelectedPlan = ({ plan, isAnnual }) => {
                 <div className="pb1 pl1 pr1">
                     {monthlyPrice > 0 && (
                         <div>
-                            {planTitle}: {monthlyPrice} €
+                            <span className="mr0-25">{planTitle}:</span>
+                            <Price currency={currency} divisor={1}>
+                                {monthlyPrice}
+                            </Price>
                         </div>
                     )}
                     <div>
-                        {isAnnual
-                            ? c('Plan price total').t`Total (12 months): ${monthlyPrice * 12} €`
-                            : c('Plan price total').t`Total: ${monthlyPrice} €`}
+                        <span className="mr0-25">
+                            {isAnnual ? c('Plan price total').jt`Total (12 months):` : c('Plan price total').jt`Total:`}
+                        </span>
+                        <Price currency={currency} divisor={1}>
+                            {totalPrice}
+                        </Price>
                     </div>
                 </div>
             </div>
@@ -41,6 +47,7 @@ const SelectedPlan = ({ plan, isAnnual }) => {
 
 SelectedPlan.propTypes = {
     isAnnual: PropTypes.bool.isRequired,
+    currency: PropTypes.string.isRequired,
     plan: PropTypes.shape({
         title: PropTypes.string.isRequired,
         description: PropTypes.string,
