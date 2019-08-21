@@ -8,19 +8,16 @@ import SelectedPlan from './SelectedPlan/SelectedPlan';
 import { PLANS } from 'proton-shared/lib/constants';
 import { getPlan } from './plans';
 import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
+import VerificationStep from './VerificationStep/VerificationStep';
 
-// TODO: change step (Verification -> Payment) depending on plan
 // TODO: step names translations
 const SignupContainer = () => {
     const [plan, setPlan] = useState(PLANS.FREE);
     const [isAnnual, setIsAnnual] = useState(false);
     // If successfully convinced to purchase plus plan
+    const [email, setEmail] = useState('');
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
-    const [step, setStep] = useState(1);
-
-    const handleEnterEmail = () => {
-        setStep(2);
-    };
+    const [verifyingEmail, setVerifyingEmail] = useState(false);
 
     const handleChangePlan = (plan) => {
         if (plan === PLANS.FREE && isNudgeSuccessful) {
@@ -38,9 +35,11 @@ const SignupContainer = () => {
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
         } else {
-            // TODO: go to verification
+            setVerifyingEmail(true);
         }
     };
+
+    const step = plan ? (email ? 2 : 1) : 0;
 
     return (
         <>
@@ -55,35 +54,39 @@ const SignupContainer = () => {
             </header>
             <main className="flex flex-item-fluid main-area">
                 <div className="container-section-sticky">
-                    <ObserverSections>
-                        <PlansSection
-                            isAnnual={isAnnual}
-                            onAnnualChange={setIsAnnual}
-                            onSelect={handleChangePlan}
-                            selected={plan}
-                            id="plan"
-                        />
-                        <div className="flex" id="details">
-                            <div className="flex-item-fluid">
-                                <div className="container-section-sticky-section" id="email">
-                                    <EmailSection onEnterEmail={handleEnterEmail} />
-                                    {(plan === PLANS.FREE || isNudgeSuccessful) && (
-                                        <FreeSignupSection
-                                            onContinue={handleContinueClick}
-                                            onUpgrade={handleUpgradeClick}
-                                            plusActive={isNudgeSuccessful}
-                                        />
+                    {verifyingEmail ? (
+                        <VerificationStep email={email} />
+                    ) : (
+                        <ObserverSections>
+                            <PlansSection
+                                isAnnual={isAnnual}
+                                onAnnualChange={setIsAnnual}
+                                onSelect={handleChangePlan}
+                                selected={plan}
+                                id="plan"
+                            />
+                            <div className="flex" id="details">
+                                <div className="flex-item-fluid">
+                                    <div className="container-section-sticky-section" id="email">
+                                        <EmailSection onEnterEmail={setEmail} />
+                                        {(plan === PLANS.FREE || isNudgeSuccessful) && (
+                                            <FreeSignupSection
+                                                onContinue={handleContinueClick}
+                                                onUpgrade={handleUpgradeClick}
+                                                plusActive={isNudgeSuccessful}
+                                            />
+                                        )}
+                                    </div>
+                                    {plan !== PLANS.FREE && (
+                                        <div className="container-section-sticky-section" id="payment">
+                                            <PaymentDetailsSection />
+                                        </div>
                                     )}
                                 </div>
-                                {plan !== PLANS.FREE && (
-                                    <div className="container-section-sticky-section" id="payment">
-                                        <PaymentDetailsSection />
-                                    </div>
-                                )}
+                                <SelectedPlan isAnnual={isAnnual} plan={getPlan(plan)} />
                             </div>
-                            <SelectedPlan isAnnual={isAnnual} plan={getPlan(plan)} />
-                        </div>
-                    </ObserverSections>
+                        </ObserverSections>
+                    )}
                 </div>
             </main>
         </>

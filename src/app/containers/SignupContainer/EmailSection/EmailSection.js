@@ -9,7 +9,9 @@ const EmailSection = ({ onEnterEmail }) => {
     const [email, setEmail] = useState('');
 
     const handleChangeEmail = ({ target }) => setEmail(target.value);
-    const handleBlur = () => email && onEnterEmail();
+    const handleBlur = () => email && onEnterEmail(email);
+
+    const loginLink = <Link to="/login">{c('Link').t`log in with ProtonMail account`}</Link>;
 
     return (
         <>
@@ -29,7 +31,7 @@ const EmailSection = ({ onEnterEmail }) => {
                     />
                 </Field>
             </Block>
-            <span>{c('Info').jt`or ${<Link to="/login">{c('Link').t`log in with ProtonMail account`}</Link>}`}</span>
+            <span>{c('Info').jt`or ${loginLink}`}</span>
         </>
     );
 };
