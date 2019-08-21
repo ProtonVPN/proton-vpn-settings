@@ -71,7 +71,7 @@ const SignupContainer = () => {
                             <div className="flex" id="details">
                                 <div className="flex-item-fluid">
                                     <div className="container-section-sticky-section" id="email">
-                                        <EmailSection onEnterEmail={setEmail} />
+                                        <EmailSection onSubmitEmail={handleContinueClick} onEnterEmail={setEmail} />
                                         {(plan === PLANS.FREE || isNudgeSuccessful) && (
                                             <FreeSignupSection
                                                 onContinue={handleContinueClick}

@@ -5,11 +5,17 @@ import { c } from 'ttag';
 import { Link } from 'react-router-dom';
 
 // TODO: validate and 'success into error' handling
-const EmailSection = ({ onEnterEmail }) => {
+const EmailSection = ({ onEnterEmail, onSubmitEmail }) => {
     const [email, setEmail] = useState('');
 
     const handleChangeEmail = ({ target }) => setEmail(target.value);
     const handleBlur = () => email && onEnterEmail(email);
+    const handleSubmit = () => {
+        if (email) {
+            onEnterEmail(email);
+            onSubmitEmail(email);
+        }
+    };
 
     const loginLink = <Link to="/login">{c('Link').t`log in with ProtonMail account`}</Link>;
 
@@ -26,6 +32,7 @@ const EmailSection = ({ onEnterEmail }) => {
                         value={email}
                         onChange={handleChangeEmail}
                         onBlur={handleBlur}
+                        onPressEnter={handleSubmit}
                         id="email"
                         placeholder={c('Placeholder').t`name@example.com`}
                     />
@@ -37,7 +44,8 @@ const EmailSection = ({ onEnterEmail }) => {
 };
 
 EmailSection.propTypes = {
-    onEnterEmail: PropTypes.func.isRequired
+    onEnterEmail: PropTypes.func.isRequired,
+    onSubmitEmail: PropTypes.func.isRequired
 };
 
 export default EmailSection;
