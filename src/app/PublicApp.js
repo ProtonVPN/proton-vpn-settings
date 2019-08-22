@@ -32,7 +32,7 @@ const PublicApp = ({ onLogin }) => {
             <ModalsChildren />
             <Router>
                 <Switch>
-                    <Route exact path="/signup" render={() => <SignupContainer />} />
+                    <Route exact path="/signup" render={() => <SignupContainer onLogin={onLogin} />} />
                     <Route path="/" render={() => <LoginContainer onLogin={onLogin} />} />
                 </Switch>
             </Router>

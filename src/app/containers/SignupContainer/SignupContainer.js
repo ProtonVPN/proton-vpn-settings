@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
 import { Wizard, useApi } from 'react-components';
 import { PLANS } from 'proton-shared/lib/constants';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
-import { srpVerify } from 'proton-shared/lib/srp';
+import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
 import { queryCreateUser } from 'proton-shared/lib/api/user';
+import { auth, setCookies } from 'proton-shared/lib/api/auth';
+import { getRandomString } from 'proton-shared/lib/helpers/string';
 
 const SignupState = {
     Plan: 'plan',
@@ -17,7 +20,7 @@ const SignupState = {
 
 // TODO: step names translations
 // TODO: payment code
-const SignupContainer = () => {
+const SignupContainer = ({ onLogin }) => {
     const api = useApi();
     const [plan, setPlan] = useState(PLANS.FREE);
     const [email, setEmail] = useState('');
@@ -30,8 +33,19 @@ const SignupContainer = () => {
         setSignupState(SignupState.Account);
     };
 
+    const loginAfterSignup = async (username, password) => {
+        const { UID, EventID, AccessToken, RefreshToken } = await srpAuth({
+            api,
+            credentials: { username, password },
+            config: auth({ Username: username })
+        });
+
+        await api(setCookies({ UID, AccessToken, RefreshToken, State: getRandomString(24) }));
+        onLogin({ UID, EventID });
+    };
+
     const handleSignup = async (username, password) => {
-        const { User } = await srpVerify({
+        await srpVerify({
             api,
             credentials: { password },
             config: queryCreateUser({
@@ -42,7 +56,7 @@ const SignupContainer = () => {
             })
         });
 
-        console.log(User);
+        await loginAfterSignup(username, password);
 
         setSignupState(SignupState.Thanks);
     };
@@ -82,6 +96,10 @@ const SignupContainer = () => {
             </main>
         </>
     );
+};
+
+SignupContainer.propTypes = {
+    onLogin: PropTypes.func.isRequired
 };
 
 export default SignupContainer;
