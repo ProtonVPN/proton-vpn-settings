@@ -40,7 +40,7 @@ const PublicApp = ({ onLogin }) => {
                         <Route path="/redeem" component={RedeemContainer} />
                         <Route path="/reset-password" component={ResetPasswordContainer} />
                         <Route path="/forgot-username" component={ForgotUsernameContainer} />
-                        <Route exact path="/signup" render={() => <SignupContainer />} />
+                        <Route exact path="/signup" render={() => <SignupContainer onLogin={onLogin} />} />
                         <Route render={() => <LoginContainer onLogin={onLogin} />} />
                     </Switch>
                 </Router>
