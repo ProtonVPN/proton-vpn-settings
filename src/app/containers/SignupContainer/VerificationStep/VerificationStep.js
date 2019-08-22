@@ -8,7 +8,7 @@ import EmailVerification from './EmailVerification';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
 const VerificationStep = ({ email, onVerificationDone }) => {
-    const { loading } = useApiResult(() => queryEmailVerificationCode(email), []);
+    useApiResult(() => queryEmailVerificationCode(email), []);
 
     const doNotClose = <strong>{c('Warning').t`Do not close`}</strong>;
 
@@ -28,7 +28,7 @@ const VerificationStep = ({ email, onVerificationDone }) => {
                 <i>{c('Warning').t`You might want to check the spam folder as well.`}</i>
             </Alert>
 
-            <EmailVerification onVerificationDone={onVerificationDone} isLoading={loading} email={email} />
+            <EmailVerification onVerificationDone={onVerificationDone} email={email} />
 
             <SMSVerification onVerificationDone={onVerificationDone} />
         </>

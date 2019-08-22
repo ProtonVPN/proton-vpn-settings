@@ -6,21 +6,25 @@ import { c } from 'ttag';
 const VerificationInput = ({ isLoading, onValidate }) => {
     const [code, setCode] = useState('');
 
-    const handleValidate = () => onValidate(code);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onValidate(code);
+    };
     const handleChangeCode = ({ target }) => setCode(target.value);
 
     return (
-        <Row>
-            <Field className="mr1">
-                <Input
-                    value={code}
-                    onChange={handleChangeCode}
-                    onPressEnter={handleValidate}
-                    placeholder={c('Placeholder').t`Verification code`}
-                />
-            </Field>
-            <PrimaryButton onClick={handleValidate} loading={isLoading}>{c('Action').t`Validate`}</PrimaryButton>
-        </Row>
+        <form onSubmit={handleSubmit}>
+            <Row>
+                <Field className="mr1">
+                    <Input
+                        value={code}
+                        onChange={handleChangeCode}
+                        placeholder={c('Placeholder').t`Verification code`}
+                    />
+                </Field>
+                <PrimaryButton type="submit" loading={isLoading}>{c('Action').t`Validate`}</PrimaryButton>
+            </Row>
+        </form>
     );
 };
 
