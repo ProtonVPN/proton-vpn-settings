@@ -12,7 +12,7 @@ import { c } from 'ttag';
 import { queryEmailVerificationCode, queryCheckVerificationCode } from 'proton-shared/lib/api/user';
 import VerificationInput from './VerificationInput';
 
-const EmailVerification = ({ email, isLoading }) => {
+const EmailVerification = ({ email, isLoading, onVerificationDone }) => {
     const { createNotification } = useNotifications();
     const { loading: resendLoading, request: requestCode } = useApiWithoutResult(() =>
         queryEmailVerificationCode(email)
@@ -29,7 +29,7 @@ const EmailVerification = ({ email, isLoading }) => {
 
     const handleValidateClick = async (code) => {
         await requestVerification(`${email}:${code}`);
-        // TODO: redirect to account setup
+        onVerificationDone();
     };
 
     const emailText = <strong>{email}</strong>;
@@ -55,7 +55,8 @@ const EmailVerification = ({ email, isLoading }) => {
 
 EmailVerification.propTypes = {
     email: PropTypes.string.isRequired,
-    isLoading: PropTypes.bool
+    isLoading: PropTypes.bool,
+    onVerificationDone: PropTypes.func.isRequired
 };
 
 export default EmailVerification;
