@@ -12,13 +12,14 @@ import { c } from 'ttag';
 import { queryEmailVerificationCode, queryCheckVerificationCode } from 'proton-shared/lib/api/user';
 import VerificationInput from './VerificationInput';
 
-const EmailVerification = ({ email, isLoading, onVerificationDone }) => {
+// TODO: dedup verification logic (hook? move to container?)
+const EmailVerification = ({ email, onVerificationDone }) => {
     const { createNotification } = useNotifications();
     const { loading: resendLoading, request: requestCode } = useApiWithoutResult(() =>
         queryEmailVerificationCode(email)
     );
-    const { loading: verifyLoading, request: requestVerification } = useApiResult((code) =>
-        queryCheckVerificationCode(code, 'email', 1)
+    const { loading: verifyLoading, request: requestVerification } = useApiResult(({ Token, TokenType }) =>
+        queryCheckVerificationCode(Token, TokenType, 2)
     );
 
     // TODO: debounce maybe
@@ -28,8 +29,9 @@ const EmailVerification = ({ email, isLoading, onVerificationDone }) => {
     };
 
     const handleValidateClick = async (code) => {
-        await requestVerification(`${email}:${code}`);
-        onVerificationDone();
+        const tokenData = { Token: `${email}:${code}`, TokenType: 'email' };
+        await requestVerification(tokenData);
+        onVerificationDone(tokenData);
     };
 
     const emailText = <strong>{email}</strong>;
@@ -42,7 +44,7 @@ const EmailVerification = ({ email, isLoading, onVerificationDone }) => {
         <Bordered>
             <Block>{c('Info').t`Please check your email and enter the code below`}</Block>
             <Block>{c('Info').jt`The verification email is on it's way to ${emailText}`}</Block>
-            <VerificationInput isLoading={isLoading || verifyLoading} onValidate={handleValidateClick} />
+            <VerificationInput isLoading={verifyLoading} onValidate={handleValidateClick} />
 
             <div className="flex-items-center flex">
                 {c('Info').t`Didn't receive the email?`}
@@ -55,7 +57,6 @@ const EmailVerification = ({ email, isLoading, onVerificationDone }) => {
 
 EmailVerification.propTypes = {
     email: PropTypes.string.isRequired,
-    isLoading: PropTypes.bool,
     onVerificationDone: PropTypes.func.isRequired
 };
 

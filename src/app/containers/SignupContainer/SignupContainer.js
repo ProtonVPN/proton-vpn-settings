@@ -1,25 +1,51 @@
 import React, { useState } from 'react';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
-import { Wizard } from 'react-components';
+import { Wizard, useApi } from 'react-components';
 import { PLANS } from 'proton-shared/lib/constants';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
+import { srpVerify } from 'proton-shared/lib/srp';
+import { queryCreateUser } from 'proton-shared/lib/api/user';
 
 const SignupState = {
     Plan: 'plan',
     Verification: 'verification',
-    Account: 'account'
+    Account: 'account',
+    Thanks: 'thanks'
 };
 
 // TODO: step names translations
+// TODO: payment code
 const SignupContainer = () => {
+    const api = useApi();
     const [plan, setPlan] = useState(PLANS.FREE);
     const [email, setEmail] = useState('');
+    const [tokenData, setTokenData] = useState();
     const [paymentCode, setPaymentCode] = useState();
     const [signupState, setSignupState] = useState(SignupState.Plan);
 
-    const handleNextStep = (nextStep) => () => setSignupState(nextStep);
+    const handleVerificationDone = (tokenData) => {
+        setTokenData(tokenData);
+        setSignupState(SignupState.Account);
+    };
+
+    const handleSignup = async (username, password) => {
+        const { User } = await srpVerify({
+            api,
+            credentials: { password },
+            config: queryCreateUser({
+                ...tokenData,
+                Type: 2,
+                Email: email,
+                Username: username
+            })
+        });
+
+        console.log(User);
+
+        setSignupState(SignupState.Thanks);
+    };
 
     const step = plan ? (email ? 2 : 1) : 0;
 
@@ -41,17 +67,17 @@ const SignupContainer = () => {
                             plan={plan}
                             email={email}
                             onAddPaymentMethod={setPaymentCode}
-                            onNextStep={handleNextStep(SignupState.Verification)}
+                            onNextStep={() => setSignupState(SignupState.Verification)}
                             onSubmitEmail={setEmail}
                             onChangePlan={setPlan}
                         />
                     )}
 
                     {signupState === SignupState.Verification && (
-                        <VerificationStep onVerificationDone={handleNextStep(SignupState.Account)} email={email} />
+                        <VerificationStep onVerificationDone={handleVerificationDone} email={email} />
                     )}
 
-                    {signupState === SignupState.Account && <AccountStep />}
+                    {signupState === SignupState.Account && <AccountStep onSubmit={handleSignup} />}
                 </div>
             </main>
         </>
