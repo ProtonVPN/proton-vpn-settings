@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
     Bordered,
     Block,
@@ -12,7 +13,7 @@ import PhoneInput from './PhoneInput';
 import { querySMSVerificationCode, queryCheckVerificationCode } from 'proton-shared/lib/api/user';
 import VerificationInput from './VerificationInput';
 
-const SMSVerification = () => {
+const SMSVerification = ({ onVerificationDone }) => {
     const { createNotification } = useNotifications();
     const [phone, setPhone] = useState('');
     const { loading: codeLoading, request: requestCode } = useApiWithoutResult((phone) =>
@@ -35,7 +36,7 @@ const SMSVerification = () => {
 
     const handleValidateClick = async (code) => {
         await requestVerification(`${phone}:${code}`);
-        // TODO: redirect to account setup
+        onVerificationDone();
     };
 
     const phoneText = <strong>{phone}</strong>;
@@ -62,6 +63,10 @@ const SMSVerification = () => {
             <PhoneInput loading={codeLoading} onSendClick={handleSendClick} />
         </Bordered>
     );
+};
+
+SMSVerification.propTypes = {
+    onVerificationDone: PropTypes.func.isRequired
 };
 
 export default SMSVerification;

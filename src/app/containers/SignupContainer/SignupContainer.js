@@ -9,6 +9,13 @@ import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
 import { getPlan, getPlanPrice } from './plans';
 import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 import VerificationStep from './VerificationStep/VerificationStep';
+import AccountStep from './AccountStep/AccountStep';
+
+const SignupState = {
+    Plan: 'signup',
+    Verification: 'verification',
+    Account: 'account'
+};
 
 // TODO: step names translations
 const SignupContainer = () => {
@@ -18,7 +25,7 @@ const SignupContainer = () => {
     // If successfully convinced to purchase plus plan
     const [email, setEmail] = useState('');
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
-    const [verifyingEmail, setVerifyingEmail] = useState(false);
+    const [signupState, setSignupState] = useState(SignupState.Plan);
 
     const handleChangePlan = (plan) => {
         if (plan === PLANS.FREE && isNudgeSuccessful) {
@@ -36,9 +43,11 @@ const SignupContainer = () => {
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
         } else {
-            setVerifyingEmail(true);
+            setSignupState(SignupState.Verification);
         }
     };
+
+    const handleVerificationDone = () => setSignupState(SignupState.Account);
 
     const step = plan ? (email ? 2 : 1) : 0;
     const selectedPlan = getPlan(plan);
@@ -57,9 +66,13 @@ const SignupContainer = () => {
             </header>
             <main className="flex flex-item-fluid main-area">
                 <div className="container-section-sticky">
-                    {verifyingEmail ? (
-                        <VerificationStep email={email} />
-                    ) : (
+                    {signupState === SignupState.Verification && (
+                        <VerificationStep onVerificationDone={handleVerificationDone} email={email} />
+                    )}
+
+                    {signupState === SignupState.Account && <AccountStep />}
+
+                    {signupState === SignupState.Plan && (
                         <ObserverSections>
                             <PlansSection
                                 isAnnual={isAnnual}
