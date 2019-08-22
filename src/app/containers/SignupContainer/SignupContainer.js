@@ -16,6 +16,7 @@ const SignupState = {
 const SignupContainer = () => {
     const [plan, setPlan] = useState(PLANS.FREE);
     const [email, setEmail] = useState('');
+    const [paymentCode, setPaymentCode] = useState();
     const [signupState, setSignupState] = useState(SignupState.Plan);
 
     const handleNextStep = (nextStep) => () => setSignupState(nextStep);
@@ -38,6 +39,8 @@ const SignupContainer = () => {
                     {signupState === SignupState.Plan && (
                         <PlanStep
                             plan={plan}
+                            email={email}
+                            onAddPaymentMethod={setPaymentCode}
                             onNextStep={handleNextStep(SignupState.Verification)}
                             onSubmitEmail={setEmail}
                             onChangePlan={setPlan}

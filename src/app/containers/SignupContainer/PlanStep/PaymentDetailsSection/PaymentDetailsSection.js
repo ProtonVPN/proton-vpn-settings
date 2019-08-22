@@ -12,24 +12,39 @@ import {
     Alert,
     Href,
     PrimaryButton,
-    Field
+    Field,
+    useApiWithoutResult
 } from 'react-components';
 import { c } from 'ttag';
 import { DEFAULT_CYCLE, DEFAULT_CURRENCY, PAYMENT_METHOD_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
 import CouponForm from 'react-components/containers/payments/subscription/CouponForm';
 import GiftCodeForm from 'react-components/containers/payments/subscription/GiftCodeForm';
+import { verifyPayment } from 'proton-shared/lib/api/payments';
 
-// TODO: change currency based on selected currency
-const PaymentDetailsSection = ({ onChangeCurrency, amount }) => {
+// TODO: use form submit
+const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod }) => {
     const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
     const { state: hasCoupon, toggle: toggleCoupon } = useToggle();
     const { state: hasGiftCode, toggle: toggleGiftCode } = useToggle();
-
-    const { method, setMethod, parameters, setParameters, setCardValidity } = usePayment();
+    const { method, setMethod, parameters, canPay, setParameters, setCardValidity } = usePayment();
+    // TODO: Credit wtf?
+    // TODO: Gift codes
+    const { loading: loading, request: requestVerifyPayment } = useApiWithoutResult(() =>
+        verifyPayment({
+            Amount: amount * 100,
+            Currency: currency,
+            ...parameters
+        })
+    );
 
     const handleChangeCurrency = (value) => {
         setCurrency(value);
         onChangeCurrency(value);
+    };
+
+    const handleAddPaymentMethod = async () => {
+        const { VerifyCode } = await requestVerifyPayment();
+        onAddPaymentMethod(VerifyCode);
     };
 
     const tosLink = <Href url="https://protonvpn.com/terms-and-conditions">{c('Link').t`Terms of Service`}</Href>;
@@ -80,14 +95,16 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount }) => {
                 onParameters={setParameters}
                 onMethod={setMethod}
                 onValidCard={setCardValidity}
-                onPay={() => {}}
+                onPay={handleAddPaymentMethod}
             />
 
             {method === PAYMENT_METHOD_TYPES.CARD && (
                 <Row>
                     <Label />
                     <Field>
-                        <PrimaryButton onClick={() => {}}>{c('Action').t`Confirm Payment`}</PrimaryButton>
+                        <PrimaryButton loading={loading} disabled={!canPay} onClick={handleAddPaymentMethod}>{c(
+                            'Action'
+                        ).t`Confirm Payment`}</PrimaryButton>
                     </Field>
                 </Row>
             )}
@@ -97,7 +114,8 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount }) => {
 
 PaymentDetailsSection.propTypes = {
     amount: PropTypes.number.isRequired,
-    onChangeCurrency: PropTypes.func.isRequired
+    onChangeCurrency: PropTypes.func.isRequired,
+    onAddPaymentMethod: PropTypes.func.isRequired
 };
 
 export default PaymentDetailsSection;
