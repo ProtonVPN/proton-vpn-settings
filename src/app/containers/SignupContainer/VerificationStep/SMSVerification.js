@@ -19,8 +19,8 @@ const SMSVerification = ({ onVerificationDone }) => {
     const { loading: codeLoading, request: requestCode } = useApiWithoutResult((phone) =>
         querySMSVerificationCode(phone)
     );
-    const { loading: verifyLoading, request: requestVerification } = useApiResult((code) =>
-        queryCheckVerificationCode(code, 'sms', 1)
+    const { loading: verifyLoading, request: requestVerification } = useApiResult(({ Token, TokenType }) =>
+        queryCheckVerificationCode(Token, TokenType, 1)
     );
 
     const handleSendClick = async (phone) => {
@@ -35,8 +35,9 @@ const SMSVerification = ({ onVerificationDone }) => {
     };
 
     const handleValidateClick = async (code) => {
-        await requestVerification(`${phone}:${code}`);
-        onVerificationDone();
+        const tokenData = { Token: `${phone}:${code}`, TokenType: 'sms' };
+        await requestVerification(tokenData);
+        onVerificationDone(tokenData);
     };
 
     const phoneText = <strong>{phone}</strong>;
