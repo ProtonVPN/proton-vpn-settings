@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
 import { Wizard, ObserverSections } from 'react-components';
-import PlansSection from './PlansSection/PlansSection';
-import EmailSection from './EmailSection/EmailSection';
-import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection';
-import SelectedPlan from './SelectedPlan/SelectedPlan';
+import PlansSection from './PlanStep/PlansSection/PlansSection';
+import EmailSection from './PlanStep/EmailSection/EmailSection';
+import PaymentDetailsSection from './PlanStep/PaymentDetailsSection/PaymentDetailsSection';
+import SelectedPlan from './PlanStep/SelectedPlan/SelectedPlan';
 import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
-import { getPlan, getPlanPrice } from './plans';
-import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
+import { getPlan, getPlanPrice } from './PlanStep/plans';
+import FreeSignupSection from './PlanStep/FreeSignupSection/FreeSignupSection';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
+import PlanStep from './PlanStep/PlanStep';
 
 const SignupState = {
-    Plan: 'signup',
+    Plan: 'plan',
     Verification: 'verification',
     Account: 'account'
 };
@@ -20,38 +21,12 @@ const SignupState = {
 // TODO: step names translations
 const SignupContainer = () => {
     const [plan, setPlan] = useState(PLANS.FREE);
-    const [isAnnual, setIsAnnual] = useState(false);
-    const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
-    // If successfully convinced to purchase plus plan
     const [email, setEmail] = useState('');
-    const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
     const [signupState, setSignupState] = useState(SignupState.Plan);
 
-    const handleChangePlan = (plan) => {
-        if (plan === PLANS.FREE && isNudgeSuccessful) {
-            setNudgeSuccessful(false);
-        }
-        setPlan(plan);
-    };
-
-    const handleUpgradeClick = () => {
-        setPlan(PLANS.VPNPLUS);
-        setNudgeSuccessful(true);
-    };
-
-    const handleContinueClick = () => {
-        if (isNudgeSuccessful) {
-            location.replace('/signup#payment');
-        } else {
-            setSignupState(SignupState.Verification);
-        }
-    };
-
-    const handleVerificationDone = () => setSignupState(SignupState.Account);
+    const handleNextStep = (nextStep) => () => setSignupState(nextStep);
 
     const step = plan ? (email ? 2 : 1) : 0;
-    const selectedPlan = getPlan(plan);
-    const { totalPrice } = getPlanPrice(plan, isAnnual);
 
     return (
         <>
@@ -66,43 +41,20 @@ const SignupContainer = () => {
             </header>
             <main className="flex flex-item-fluid main-area">
                 <div className="container-section-sticky">
+                    {signupState === SignupState.Plan && (
+                        <PlanStep
+                            plan={plan}
+                            onNextStep={handleNextStep(SignupState.Verification)}
+                            onSubmitEmail={setEmail}
+                            onChangePlan={setPlan}
+                        />
+                    )}
+
                     {signupState === SignupState.Verification && (
-                        <VerificationStep onVerificationDone={handleVerificationDone} email={email} />
+                        <VerificationStep onVerificationDone={handleNextStep(SignupState.Account)} email={email} />
                     )}
 
                     {signupState === SignupState.Account && <AccountStep />}
-
-                    {signupState === SignupState.Plan && (
-                        <ObserverSections>
-                            <PlansSection
-                                isAnnual={isAnnual}
-                                onAnnualChange={setIsAnnual}
-                                onSelect={handleChangePlan}
-                                selected={plan}
-                                id="plan"
-                            />
-                            <div className="flex" id="details">
-                                <div className="flex-item-fluid">
-                                    <div className="container-section-sticky-section" id="email">
-                                        <EmailSection onSubmitEmail={handleContinueClick} onEnterEmail={setEmail} />
-                                        {(plan === PLANS.FREE || isNudgeSuccessful) && (
-                                            <FreeSignupSection
-                                                onContinue={handleContinueClick}
-                                                onUpgrade={handleUpgradeClick}
-                                                plusActive={isNudgeSuccessful}
-                                            />
-                                        )}
-                                    </div>
-                                    {plan !== PLANS.FREE && (
-                                        <div className="container-section-sticky-section" id="payment">
-                                            <PaymentDetailsSection onChangeCurrency={setCurrency} amount={totalPrice} />
-                                        </div>
-                                    )}
-                                </div>
-                                <SelectedPlan currency={currency} isAnnual={isAnnual} plan={selectedPlan} />
-                            </div>
-                        </ObserverSections>
-                    )}
                 </div>
             </main>
         </>
