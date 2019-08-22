@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { SubTitle, Input, Label, Field, Alert, Block } from 'react-components';
+import { SubTitle, Input, Label, Field, Alert, Block, EmailInput } from 'react-components';
 import { c } from 'ttag';
 import { Link } from 'react-router-dom';
 
 // TODO: validate and 'success into error' handling
-const EmailSection = ({ onEnterEmail, onSubmitEmail }) => {
+const EmailSection = ({ onEnterEmail, onContinue }) => {
     const [email, setEmail] = useState('');
 
     const handleChangeEmail = ({ target }) => setEmail(target.value);
@@ -13,7 +13,7 @@ const EmailSection = ({ onEnterEmail, onSubmitEmail }) => {
     const handleSubmit = () => {
         if (email) {
             onEnterEmail(email);
-            onSubmitEmail(email);
+            onContinue(email);
         }
     };
 
@@ -28,12 +28,11 @@ const EmailSection = ({ onEnterEmail, onSubmitEmail }) => {
             <Label htmlFor="email">{c('Label').t`Email`}</Label>
             <Block>
                 <Field>
-                    <Input
+                    <EmailInput
                         value={email}
                         onChange={handleChangeEmail}
                         onBlur={handleBlur}
                         onPressEnter={handleSubmit}
-                        id="email"
                         placeholder={c('Placeholder').t`name@example.com`}
                     />
                 </Field>
@@ -45,7 +44,7 @@ const EmailSection = ({ onEnterEmail, onSubmitEmail }) => {
 
 EmailSection.propTypes = {
     onEnterEmail: PropTypes.func.isRequired,
-    onSubmitEmail: PropTypes.func.isRequired
+    onContinue: PropTypes.func.isRequired
 };
 
 export default EmailSection;
