@@ -9,7 +9,7 @@ import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
 import { getPlan, getPlanPrice } from './plans';
 
-const PlanStep = ({ plan, onSubmitEmail, onNextStep, onChangePlan }) => {
+const PlanStep = ({ plan, email, onSubmitEmail, onNextStep, onAddPaymentMethod, onChangePlan }) => {
     const [isAnnual, setIsAnnual] = useState(false);
     const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
     // If successfully convinced to purchase plus plan
@@ -30,13 +30,19 @@ const PlanStep = ({ plan, onSubmitEmail, onNextStep, onChangePlan }) => {
     const handleContinueClick = () => {
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
-        } else {
+        } else if (email) {
             onNextStep();
         }
     };
 
+    // TODO: if no email, focus email input and show error
+    const handleAddPaymentMethod = (VerifyCode) => {
+        onAddPaymentMethod(VerifyCode);
+        onNextStep();
+    };
+
     const selectedPlan = getPlan(plan);
-    const { totalPrice } = getPlanPrice(plan, isAnnual);
+    const { totalPrice } = getPlanPrice(selectedPlan, isAnnual);
 
     return (
         <ObserverSections>
@@ -50,7 +56,7 @@ const PlanStep = ({ plan, onSubmitEmail, onNextStep, onChangePlan }) => {
             <div className="flex" id="details">
                 <div className="flex-item-fluid">
                     <div className="container-section-sticky-section" id="email">
-                        <EmailSection onSubmitEmail={handleContinueClick} onEnterEmail={onSubmitEmail} />
+                        <EmailSection onContinue={handleContinueClick} onEnterEmail={onSubmitEmail} />
                         {(plan === PLANS.FREE || isNudgeSuccessful) && (
                             <FreeSignupSection
                                 onContinue={handleContinueClick}
@@ -61,7 +67,11 @@ const PlanStep = ({ plan, onSubmitEmail, onNextStep, onChangePlan }) => {
                     </div>
                     {plan !== PLANS.FREE && (
                         <div className="container-section-sticky-section" id="payment">
-                            <PaymentDetailsSection onChangeCurrency={setCurrency} amount={totalPrice} />
+                            <PaymentDetailsSection
+                                onAddPaymentMethod={handleAddPaymentMethod}
+                                onChangeCurrency={setCurrency}
+                                amount={totalPrice}
+                            />
                         </div>
                     )}
                 </div>
@@ -73,9 +83,11 @@ const PlanStep = ({ plan, onSubmitEmail, onNextStep, onChangePlan }) => {
 
 PlanStep.propTypes = {
     plan: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
     onSubmitEmail: PropTypes.func.isRequired,
     onNextStep: PropTypes.func.isRequired,
-    onChangePlan: PropTypes.func.isRequired
+    onChangePlan: PropTypes.func.isRequired,
+    onAddPaymentMethod: PropTypes.func.isRequired
 };
 
 export default PlanStep;
