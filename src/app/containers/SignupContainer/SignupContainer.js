@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
-import { Wizard, ObserverSections } from 'react-components';
-import PlansSection from './PlanStep/PlansSection/PlansSection';
-import EmailSection from './PlanStep/EmailSection/EmailSection';
-import PaymentDetailsSection from './PlanStep/PaymentDetailsSection/PaymentDetailsSection';
-import SelectedPlan from './PlanStep/SelectedPlan/SelectedPlan';
-import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
-import { getPlan, getPlanPrice } from './PlanStep/plans';
-import FreeSignupSection from './PlanStep/FreeSignupSection/FreeSignupSection';
+import { Wizard } from 'react-components';
+import { PLANS } from 'proton-shared/lib/constants';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
