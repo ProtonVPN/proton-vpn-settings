@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { getPlanPrice } from '../plans';
 import { c } from 'ttag';
 import { Price } from 'react-components';
 
 const SelectedPlan = ({ plan, isAnnual, currency }) => {
-    const { monthlyPrice, totalPrice } = getPlanPrice(plan, isAnnual);
     const planTitle = c('VPN plan title').t`ProtonVPN ${plan.title}`;
 
     return (
@@ -23,11 +21,11 @@ const SelectedPlan = ({ plan, isAnnual, currency }) => {
                 </ul>
                 <hr />
                 <div className="pb1 pl1 pr1">
-                    {monthlyPrice > 0 && (
+                    {plan.price.monthly > 0 && (
                         <div className="flex flex-spacebetween">
                             <span className="mr0-25">{planTitle}:</span>
                             <strong>
-                                <Price currency={currency}>{monthlyPrice}</Price>
+                                <Price currency={currency}>{plan.price.monthly}</Price>
                             </strong>
                         </div>
                     )}
@@ -35,7 +33,7 @@ const SelectedPlan = ({ plan, isAnnual, currency }) => {
                         <strong className="mr0-25">
                             {isAnnual ? c('Plan price total').jt`Total (12 months):` : c('Plan price total').jt`Total:`}
                         </strong>
-                        <Price currency={currency}>{totalPrice}</Price>
+                        <Price currency={currency}>{plan.price.total}</Price>
                     </div>
                 </div>
             </div>
@@ -47,6 +45,11 @@ SelectedPlan.propTypes = {
     isAnnual: PropTypes.bool.isRequired,
     currency: PropTypes.string.isRequired,
     plan: PropTypes.shape({
+        price: PropTypes.shape({
+            monthly: PropTypes.number,
+            total: PropTypes.number,
+            saved: PropTypes.number
+        }).isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string,
         features: PropTypes.arrayOf(PropTypes.string),

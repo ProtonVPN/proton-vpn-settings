@@ -31,7 +31,7 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod })
     // TODO: Gift codes
     const { loading: loading, request: requestVerifyPayment } = useApiWithoutResult(() =>
         verifyPayment({
-            Amount: amount * 100,
+            Amount: amount,
             Currency: currency,
             ...parameters
         })
@@ -59,19 +59,23 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod })
 
             <Row>
                 <Label htmlFor="coupon">{c('Label').t`Coupon`}</Label>
-                {hasCoupon ? (
-                    <CouponForm id="coupon" model={{ coupon: '' }} />
-                ) : (
-                    <LinkButton onClick={toggleCoupon} className="mr1">{c('Action').t`Use coupon`}</LinkButton>
-                )}
+                <Field>
+                    {hasCoupon ? (
+                        <CouponForm id="coupon" model={{ coupon: '' }} />
+                    ) : (
+                        <LinkButton onClick={toggleCoupon} className="mr1">{c('Action').t`Use coupon`}</LinkButton>
+                    )}
+                </Field>
             </Row>
             <Row>
                 <Label htmlFor="gift-code">{c('Label').t`Gift code`}</Label>
-                {hasGiftCode ? (
-                    <GiftCodeForm id="gift-code" model={{ gift: '' }} />
-                ) : (
-                    <LinkButton onClick={toggleGiftCode} className="mr1">{c('Action').t`Use gift code`}</LinkButton>
-                )}
+                <Field>
+                    {hasGiftCode ? (
+                        <GiftCodeForm id="gift-code" model={{ gift: '' }} />
+                    ) : (
+                        <LinkButton onClick={toggleGiftCode} className="mr1">{c('Action').t`Use gift code`}</LinkButton>
+                    )}
+                </Field>
             </Row>
 
             <Row>
