@@ -37,6 +37,12 @@ _Deploy the app as deploy + /login_
 
 Based on [proton-bundler](https://github.com/ProtonMail/proton-bundler)
 
+### Deploy to prod
+
+`$ npm run deploy:prod` 
+
+> Build from master post git clone into /tmp. `--no-remote` build from local.
+
 ## Sync translations [Crowdin to our App]
 
 To get latest translations available on crowdin, you can run `$ npm run i18n:getlatest`.
