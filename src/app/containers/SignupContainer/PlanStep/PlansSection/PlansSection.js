@@ -7,7 +7,7 @@ import PlanCardHorizontal from './PlanCardHorizontal';
 import { PLANS } from 'proton-shared/lib/constants';
 import { getPlan } from '../plans';
 
-const PlansSection = ({ selected, onSelect, onAnnualChange, isAnnual = false }) => {
+const PlansSection = ({ selected, onSelect, onAnnualChange, currency, isAnnual = false }) => {
     const handleSelect = (plan) => () => onSelect(plan);
     const handleChangeAnnual = () => onAnnualChange(!isAnnual);
 
@@ -28,6 +28,7 @@ const PlansSection = ({ selected, onSelect, onAnnualChange, isAnnual = false }) 
                             active={selected === planName}
                             onClick={handleSelect(planName)}
                             plan={getPlan(planName)}
+                            currency={currency}
                             isAnnual={isAnnual}
                         />
                     ))}
@@ -37,6 +38,7 @@ const PlansSection = ({ selected, onSelect, onAnnualChange, isAnnual = false }) 
                 active={selected === PLANS.VISIONARY}
                 onClick={handleSelect(PLANS.VISIONARY)}
                 plan={getPlan(PLANS.VISIONARY)}
+                currency={currency}
                 isAnnual={isAnnual}
             />
         </>
@@ -45,6 +47,7 @@ const PlansSection = ({ selected, onSelect, onAnnualChange, isAnnual = false }) 
 
 PlansSection.propTypes = {
     isAnnual: PropTypes.bool,
+    currency: PropTypes.string.isRequired,
     onAnnualChange: PropTypes.func.isRequired,
     selected: PropTypes.oneOf([PLANS.FREE, PLANS.VPNBASIC, PLANS.VPNPLUS, PLANS.VISIONARY]).isRequired,
     onSelect: PropTypes.func.isRequired
