@@ -16,7 +16,7 @@ export const getPlans = () => ({
     },
     [PLANS.VPNBASIC]: {
         title: PLAN_NAMES[PLANS.VPNBASIC],
-        monthlyPrice: 5,
+        monthlyPrice: 500,
         description: c('Plan Description').t`Basic privacy features`,
         highlights: [
             c('Plan Feature').t`Access to all countries`,
@@ -35,7 +35,7 @@ export const getPlans = () => ({
     [PLANS.VPNPLUS]: {
         title: PLAN_NAMES[PLANS.VPNPLUS],
         isBest: true,
-        monthlyPrice: 10,
+        monthlyPrice: 1000,
         description: c('Plan Description').t`The complete privacy suite`,
         highlights: [
             c('Plan Feature').t`Access to all countries`,
@@ -57,7 +57,7 @@ export const getPlans = () => ({
     },
     [PLANS.VISIONARY]: {
         title: PLAN_NAMES[PLANS.VISIONARY],
-        monthlyPrice: 30,
+        monthlyPrice: 3000,
         description: c('Plan Description').t`Plus 5 devices + ProtonMail Visionary plan`,
         features: [
             c('Plan Feature').t`Access to all countries`,
@@ -80,6 +80,6 @@ export const getPlanPrice = (plan, isAnnual) => {
     const discount = isAnnual ? 0.2 : 0;
     const monthlyPrice = plan.monthlyPrice - plan.monthlyPrice * discount;
     const totalPrice = isAnnual ? monthlyPrice * 12 : monthlyPrice;
-    const totalSaved = totalPrice * discount;
+    const totalSaved = plan.monthlyPrice * 12 * discount;
     return { monthlyPrice, totalPrice, totalSaved };
 };

@@ -48,6 +48,7 @@ const PlanStep = ({ plan, email, onSubmitEmail, onNextStep, onAddPaymentMethod, 
         <ObserverSections>
             <PlansSection
                 isAnnual={isAnnual}
+                currency={currency}
                 onAnnualChange={setIsAnnual}
                 onSelect={handleChangePlan}
                 selected={plan}
