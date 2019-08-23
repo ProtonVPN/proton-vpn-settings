@@ -69,11 +69,13 @@ const getPlanFeatures = (planName) =>
     }[planName]);
 
 const getPlanPrice = (plan, isAnnual) => {
-    const originalMonthlyPrice = plan.Pricing[CYCLE.MONTHLY];
-    const originalAnnualPrice = plan.Pricing[CYCLE.YEARLY];
-    const monthly = isAnnual ? originalAnnualPrice / CYCLE.MONTHLY : originalMonthlyPrice;
-    const total = isAnnual ? originalAnnualPrice : originalMonthlyPrice;
-    const saved = originalMonthlyPrice * CYCLE.YEARLY - originalAnnualPrice;
+    const monthlyPrice = plan.Pricing[CYCLE.MONTHLY];
+    const annualPrice = plan.Pricing[CYCLE.YEARLY];
+
+    const monthly = isAnnual ? annualPrice / CYCLE.MONTHLY : monthlyPrice;
+    const total = isAnnual ? annualPrice : monthlyPrice;
+    const saved = monthlyPrice * CYCLE.YEARLY - annualPrice;
+
     return { monthly, total, saved };
 };
 
