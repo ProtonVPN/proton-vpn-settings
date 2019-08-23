@@ -4,7 +4,7 @@ import { classnames, Button } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
 
-const PlanCard = ({ active, plan, isAnnual, onClick }) => {
+const PlanCard = ({ active, plan, currency, isAnnual, onClick }) => {
     return (
         <div className="flex-autogrid-item flex flex-column">
             <div className="p1 flex flex-items-center">
@@ -18,7 +18,7 @@ const PlanCard = ({ active, plan, isAnnual, onClick }) => {
                 onClick={onClick}
                 className={classnames(['plan-card flex-column', active && 'plan-card--active'])}
             >
-                <PlanPrice plan={plan} isAnnual={isAnnual} />
+                <PlanPrice plan={plan} isAnnual={isAnnual} currency={currency} />
                 {plan.description && <div className="border-bottom">{plan.description}</div>}
                 {plan.highlights && (
                     <ul>
@@ -42,6 +42,7 @@ PlanCard.propTypes = {
         description: PropTypes.string,
         highlights: PropTypes.arrayOf(PropTypes.string)
     }).isRequired,
+    currency: PropTypes.string.isRequired,
     isAnnual: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
     active: PropTypes.bool
