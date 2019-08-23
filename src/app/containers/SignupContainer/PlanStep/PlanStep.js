@@ -39,8 +39,8 @@ const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onAddPaymentMetho
     };
 
     // TODO: if no email, focus email input and show error
-    const handleAddPaymentMethod = (VerifyCode) => {
-        onAddPaymentMethod(VerifyCode);
+    const handleAddPaymentMethod = (...rest) => {
+        onAddPaymentMethod(...rest);
         confirm();
     };
 
