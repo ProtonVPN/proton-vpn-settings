@@ -24,20 +24,18 @@ const SelectedPlan = ({ plan, isAnnual, currency }) => {
                 <hr />
                 <div className="pb1 pl1 pr1">
                     {monthlyPrice > 0 && (
-                        <div>
+                        <div className="flex flex-spacebetween">
                             <span className="mr0-25">{planTitle}:</span>
-                            <Price currency={currency} divisor={1}>
-                                {monthlyPrice}
-                            </Price>
+                            <strong>
+                                <Price currency={currency}>{monthlyPrice}</Price>
+                            </strong>
                         </div>
                     )}
-                    <div>
-                        <span className="mr0-25">
+                    <div className="flex flex-spacebetween">
+                        <strong className="mr0-25">
                             {isAnnual ? c('Plan price total').jt`Total (12 months):` : c('Plan price total').jt`Total:`}
-                        </span>
-                        <Price currency={currency} divisor={1}>
-                            {totalPrice}
-                        </Price>
+                        </strong>
+                        <Price currency={currency}>{totalPrice}</Price>
                     </div>
                 </div>
             </div>
