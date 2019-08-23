@@ -44,7 +44,7 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod })
 
     const handleAddPaymentMethod = async () => {
         const { VerifyCode } = await requestVerifyPayment();
-        onAddPaymentMethod(VerifyCode);
+        onAddPaymentMethod(VerifyCode, parameters);
     };
 
     const tosLink = <Href url="https://protonvpn.com/terms-and-conditions">{c('Link').t`Terms of Service`}</Href>;
