@@ -37,10 +37,11 @@ const PlanCard = ({ active, plan, currency, isAnnual, onClick }) => {
 
 PlanCard.propTypes = {
     plan: PropTypes.shape({
-        isBest: PropTypes.bool,
         title: PropTypes.string.isRequired,
         description: PropTypes.string,
-        highlights: PropTypes.arrayOf(PropTypes.string)
+        features: PropTypes.arrayOf(PropTypes.string),
+        highlights: PropTypes.arrayOf(PropTypes.string),
+        isBest: PropTypes.bool
     }).isRequired,
     currency: PropTypes.string.isRequired,
     isAnnual: PropTypes.bool.isRequired,

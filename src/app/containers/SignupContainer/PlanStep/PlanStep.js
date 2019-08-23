@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { ObserverSections } from 'react-components';
+import { ObserverSections, usePlans } from 'react-components';
 import PlansSection from './PlansSection/PlansSection';
 import EmailSection from './EmailSection/EmailSection';
 import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection';
 import SelectedPlan from './SelectedPlan/SelectedPlan';
 import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
-import { getPlan, getPlanPrice } from './plans';
+import { getPlan } from './plans';
 
-const PlanStep = ({ plan, email, onSubmitEmail, onNextStep, onAddPaymentMethod, onChangePlan }) => {
+const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onAddPaymentMethod, onChangePlan }) => {
     const [isAnnual, setIsAnnual] = useState(false);
     const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
     // If successfully convinced to purchase plus plan
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
+    const [plans] = usePlans();
+
+    const confirm = () => onConfirm(isAnnual, currency);
 
     const handleChangePlan = (plan) => {
         if (plan === PLANS.FREE && isNudgeSuccessful) {
@@ -31,18 +34,17 @@ const PlanStep = ({ plan, email, onSubmitEmail, onNextStep, onAddPaymentMethod, 
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
         } else if (email) {
-            onNextStep();
+            confirm();
         }
     };
 
     // TODO: if no email, focus email input and show error
     const handleAddPaymentMethod = (VerifyCode) => {
         onAddPaymentMethod(VerifyCode);
-        onNextStep();
+        confirm();
     };
 
-    const selectedPlan = getPlan(plan);
-    const { totalPrice } = getPlanPrice(selectedPlan, isAnnual);
+    const selectedPlan = getPlan(planName, isAnnual, plans);
 
     return (
         <ObserverSections>
@@ -51,14 +53,14 @@ const PlanStep = ({ plan, email, onSubmitEmail, onNextStep, onAddPaymentMethod, 
                 currency={currency}
                 onAnnualChange={setIsAnnual}
                 onSelect={handleChangePlan}
-                selected={plan}
+                selected={planName}
                 id="plan"
             />
             <div className="flex" id="details">
                 <div className="flex-item-fluid">
                     <div className="container-section-sticky-section" id="email">
                         <EmailSection onContinue={handleContinueClick} onEnterEmail={onSubmitEmail} />
-                        {(plan === PLANS.FREE || isNudgeSuccessful) && (
+                        {(planName === PLANS.FREE || isNudgeSuccessful) && (
                             <FreeSignupSection
                                 onContinue={handleContinueClick}
                                 onUpgrade={handleUpgradeClick}
@@ -66,12 +68,12 @@ const PlanStep = ({ plan, email, onSubmitEmail, onNextStep, onAddPaymentMethod, 
                             />
                         )}
                     </div>
-                    {plan !== PLANS.FREE && (
+                    {planName !== PLANS.FREE && (
                         <div className="container-section-sticky-section" id="payment">
                             <PaymentDetailsSection
                                 onAddPaymentMethod={handleAddPaymentMethod}
                                 onChangeCurrency={setCurrency}
-                                amount={totalPrice}
+                                amount={selectedPlan.price.total}
                             />
                         </div>
                     )}
@@ -83,11 +85,11 @@ const PlanStep = ({ plan, email, onSubmitEmail, onNextStep, onAddPaymentMethod, 
 };
 
 PlanStep.propTypes = {
-    plan: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    onSubmitEmail: PropTypes.func.isRequired,
-    onNextStep: PropTypes.func.isRequired,
+    planName: PropTypes.string.isRequired,
     onChangePlan: PropTypes.func.isRequired,
+    onSubmitEmail: PropTypes.func.isRequired,
+    onConfirm: PropTypes.func.isRequired,
     onAddPaymentMethod: PropTypes.func.isRequired
 };
 
