@@ -1,5 +1,5 @@
 import React from 'react';
-import { SubTitle, Label, Toggle, Row, Field } from 'react-components';
+import { SubTitle, Label, Toggle, Row, Field, usePlans } from 'react-components';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
 import PlanCard from './PlanCard';
@@ -8,8 +8,9 @@ import { PLANS } from 'proton-shared/lib/constants';
 import { getPlan } from '../plans';
 
 const PlansSection = ({ selected, onSelect, onAnnualChange, currency, isAnnual = false }) => {
-    const handleSelect = (plan) => () => onSelect(plan);
+    const handleSelect = (planName) => () => onSelect(planName);
     const handleChangeAnnual = () => onAnnualChange(!isAnnual);
+    const [plans] = usePlans();
 
     return (
         <>
@@ -27,7 +28,7 @@ const PlansSection = ({ selected, onSelect, onAnnualChange, currency, isAnnual =
                             key={planName}
                             active={selected === planName}
                             onClick={handleSelect(planName)}
-                            plan={getPlan(planName)}
+                            plan={getPlan(planName, isAnnual, plans)}
                             currency={currency}
                             isAnnual={isAnnual}
                         />
@@ -37,7 +38,7 @@ const PlansSection = ({ selected, onSelect, onAnnualChange, currency, isAnnual =
             <PlanCardHorizontal
                 active={selected === PLANS.VISIONARY}
                 onClick={handleSelect(PLANS.VISIONARY)}
-                plan={getPlan(PLANS.VISIONARY)}
+                plan={getPlan(PLANS.VISIONARY, isAnnual, plans)}
                 currency={currency}
                 isAnnual={isAnnual}
             />
