@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
-import { Wizard, useApi } from 'react-components';
-import { PLANS } from 'proton-shared/lib/constants';
+import { Wizard, useApi, usePlans } from 'react-components';
+import { PLANS, CYCLE } from 'proton-shared/lib/constants';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
@@ -22,14 +22,24 @@ const SignupState = {
 // TODO: payment code
 const SignupContainer = ({ onLogin }) => {
     const api = useApi();
-    const [plan, setPlan] = useState(PLANS.FREE);
+    const [planName, setPlanName] = useState(PLANS.FREE);
+    // TODO: join to one model?
+    const [currency, setCurrency] = useState();
+    const [isAnnual, setIsAnnual] = useState();
     const [email, setEmail] = useState('');
-    const [tokenData, setTokenData] = useState();
+    const [verificationToken, setVerificationToken] = useState();
     const [paymentCode, setPaymentCode] = useState();
     const [signupState, setSignupState] = useState(SignupState.Plan);
+    const [plans, loading] = usePlans();
+
+    const handleConfirmPlan = (isAnnual, currency) => {
+        setCurrency(currency);
+        setIsAnnual(isAnnual);
+        setSignupState(SignupState.Verification);
+    };
 
     const handleVerificationDone = (tokenData) => {
-        setTokenData(tokenData);
+        setVerificationToken(tokenData);
         setSignupState(SignupState.Account);
     };
 
@@ -44,7 +54,19 @@ const SignupContainer = ({ onLogin }) => {
         onLogin({ UID, EventID });
     };
 
+    // const addSubscription = async () => {
+    //         await subscriptionModel.subscribe({
+    //             PlanIDs: getPlanIDs(),
+    //             Amount: 0,
+    //             Currency,
+    //             Cycle,
+    //             CouponCode: MODEL.CouponCode || undefined
+    //         });
+    //         await createNewPaymentMethod();
+    // }
+
     const handleSignup = async (username, password) => {
+        const tokenData = paymentCode ? { Token: paymentCode, TokenType: 'payment' } : verificationToken;
         await srpVerify({
             api,
             credentials: { password },
@@ -61,7 +83,8 @@ const SignupContainer = ({ onLogin }) => {
         setSignupState(SignupState.Thanks);
     };
 
-    const step = plan ? (email ? 2 : 1) : 0;
+    // TODO: FIXME this works wrong if plan selection is not instant
+    const step = planName ? (email ? 2 : 1) : 0;
 
     return (
         <>
@@ -70,20 +93,20 @@ const SignupContainer = ({ onLogin }) => {
                 <div className="mw650p flex-item-fluid">
                     <Wizard
                         step={step}
-                        steps={['Plan', 'Email', plan === PLANS.FREE ? 'Verification' : 'Payment', 'Finish']}
+                        steps={['Plan', 'Email', planName === PLANS.FREE ? 'Verification' : 'Payment', 'Finish']}
                     />
                 </div>
             </header>
             <main className="flex flex-item-fluid main-area">
                 <div className="container-section-sticky">
-                    {signupState === SignupState.Plan && (
+                    {plans && signupState === SignupState.Plan && (
                         <PlanStep
-                            plan={plan}
+                            planName={planName}
                             email={email}
                             onAddPaymentMethod={setPaymentCode}
-                            onNextStep={() => setSignupState(SignupState.Verification)}
+                            onConfirm={handleConfirmPlan}
                             onSubmitEmail={setEmail}
-                            onChangePlan={setPlan}
+                            onChangePlan={setPlanName}
                         />
                     )}
 
