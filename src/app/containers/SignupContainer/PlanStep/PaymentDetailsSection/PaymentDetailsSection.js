@@ -22,7 +22,7 @@ import GiftCodeForm from 'react-components/containers/payments/subscription/Gift
 import { verifyPayment } from 'proton-shared/lib/api/payments';
 
 // TODO: use form submit
-const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod }) => {
+const PaymentDetailsSection = ({ onChangeCurrency, amount, onPaymentDone }) => {
     const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
     const { state: hasCoupon, toggle: toggleCoupon } = useToggle();
     const { state: hasGiftCode, toggle: toggleGiftCode } = useToggle();
@@ -42,9 +42,9 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod })
         onChangeCurrency(value);
     };
 
-    const handleAddPaymentMethod = async () => {
+    const handlePayment = async () => {
         const { VerifyCode } = await requestVerifyPayment();
-        onAddPaymentMethod(VerifyCode, parameters);
+        onPaymentDone({ VerifyCode, parameters });
     };
 
     const tosLink = <Href url="https://protonvpn.com/terms-and-conditions">{c('Link').t`Terms of Service`}</Href>;
@@ -99,16 +99,15 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod })
                 onParameters={setParameters}
                 onMethod={setMethod}
                 onValidCard={setCardValidity}
-                onPay={handleAddPaymentMethod}
+                onPay={handlePayment}
             />
 
             {method === PAYMENT_METHOD_TYPES.CARD && (
                 <Row>
                     <Label />
                     <Field>
-                        <PrimaryButton loading={loading} disabled={!canPay} onClick={handleAddPaymentMethod}>{c(
-                            'Action'
-                        ).t`Confirm Payment`}</PrimaryButton>
+                        <PrimaryButton loading={loading} disabled={!canPay} onClick={handlePayment}>{c('Action')
+                            .t`Confirm Payment`}</PrimaryButton>
                     </Field>
                 </Row>
             )}
@@ -119,7 +118,7 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onAddPaymentMethod })
 PaymentDetailsSection.propTypes = {
     amount: PropTypes.number.isRequired,
     onChangeCurrency: PropTypes.func.isRequired,
-    onAddPaymentMethod: PropTypes.func.isRequired
+    onPaymentDone: PropTypes.func.isRequired
 };
 
 export default PaymentDetailsSection;
