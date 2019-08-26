@@ -25,35 +25,35 @@ const SignupState = {
 
 const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAuthHeaders(UID, AccessToken));
 
-//! TODO: don't need to verify when using payment
+//! TODO: don't need to go through verify step when using payment
 
 // TODO: step names translations
 // TODO: payment code
 const SignupContainer = ({ onLogin }) => {
     const api = useApi();
-    const [planName, setPlanName] = useState(PLANS.FREE);
     // TODO: join to one model?
+    const [planName, setPlanName] = useState(PLANS.FREE);
     const [currency, setCurrency] = useState();
     const [isAnnual, setIsAnnual] = useState();
     const [email, setEmail] = useState('');
     const [verificationToken, setVerificationToken] = useState();
-    const [paymentCode, setPaymentCode] = useState();
-    const [paymentParams, setPaymentParams] = useState();
+    const [paymentDetails, setPaymentDetails] = useState();
     const [signupState, setSignupState] = useState(SignupState.Plan);
 
+    // TODO: handle plans loading
     const [plans, loading] = usePlans(currency);
 
     const plan = getPlan(planName, isAnnual, plans);
 
-    const handleAddPaymentMethod = (paymentCode, paymentParams) => {
-        setPaymentCode(paymentCode);
-        setPaymentParams(paymentParams);
-    };
-
-    const handleConfirmPlan = (isAnnual, currency) => {
+    const handleConfirmPlan = (paymentDetails, isAnnual, currency) => {
         setCurrency(currency);
         setIsAnnual(isAnnual);
-        setSignupState(SignupState.Verification);
+        if (paymentDetails) {
+            setPaymentDetails(paymentDetails);
+            setSignupState(SignupState.Account);
+        } else {
+            setSignupState(SignupState.Verification);
+        }
     };
 
     const handleVerificationDone = (tokenData) => {
@@ -63,7 +63,9 @@ const SignupContainer = ({ onLogin }) => {
 
     // TODO: a lot of stuff is missing in these methods still
     const handleSignup = async (username, password) => {
-        const tokenData = paymentCode ? { Token: paymentCode, TokenType: 'payment' } : verificationToken;
+        const tokenData = paymentDetails
+            ? { Token: paymentDetails.VerifyCode, TokenType: 'payment' }
+            : verificationToken;
         await srpVerify({
             api,
             credentials: { password },
@@ -81,34 +83,31 @@ const SignupContainer = ({ onLogin }) => {
             config: auth({ Username: username })
         });
 
-        // Add subscription
-        // Amount = 0 means - paid before subscription
-        await api(
-            withAuthHeaders(
-                UID,
-                AccessToken,
-                subscribe({
-                    PlanIDs: {
-                        [plan.id]: 1
-                    },
-                    Amount: 0,
-                    Currency: currency,
-                    Cycle: isAnnual ? CYCLE.YEARLY : CYCLE.MONTHLY
-                    // CouponCode: MODEL.CouponCode || undefined // TODO this
-                })
-            )
-        );
+        if (paymentDetails) {
+            // Add subscription
+            // Amount = 0 means - paid before subscription
+            const subscription = {
+                PlanIDs: {
+                    [plan.id]: 1
+                },
+                Amount: 0,
+                Currency: currency,
+                Cycle: isAnnual ? CYCLE.YEARLY : CYCLE.MONTHLY
+                // CouponCode: MODEL.CouponCode || undefined // TODO this
+            };
+            await api(withAuthHeaders(UID, AccessToken, subscribe(subscription)));
 
-        // Add payment method
-        const { Payment } = await handle3DS(
-            {
-                Amount: plan.price.total,
-                Currency: 'CHF',
-                ...paymentParams
-            },
-            api
-        );
-        await api(withAuthHeaders(UID, AccessToken, setPaymentMethod(Payment)));
+            // Add payment method
+            const { Payment } = await handle3DS(
+                {
+                    Amount: plan.price.total,
+                    Currency: 'CHF',
+                    ...paymentDetails.parameters
+                },
+                api
+            );
+            await api(withAuthHeaders(UID, AccessToken, setPaymentMethod(Payment)));
+        }
 
         // set cookies after login
         await api(setCookies({ UID, AccessToken, RefreshToken, State: getRandomString(24) }));
@@ -117,8 +116,7 @@ const SignupContainer = ({ onLogin }) => {
         setSignupState(SignupState.Thanks);
     };
 
-    // TODO: FIXME this works wrong if plan selection is not instant
-    const step = planName ? (email ? 2 : 1) : 0;
+    const step = planName ? (email ? (signupState === SignupState.Thanks ? 3 : 2) : 1) : 0;
 
     return (
         <>
@@ -137,7 +135,6 @@ const SignupContainer = ({ onLogin }) => {
                         <PlanStep
                             planName={planName}
                             email={email}
-                            onAddPaymentMethod={handleAddPaymentMethod}
                             onConfirm={handleConfirmPlan}
                             onSubmitEmail={setEmail}
                             onChangePlan={setPlanName}
