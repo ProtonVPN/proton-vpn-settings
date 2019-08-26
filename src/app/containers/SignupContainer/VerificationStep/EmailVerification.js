@@ -1,30 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {
-    Bordered,
-    Block,
-    InlineLinkButton,
-    useNotifications,
-    useApiWithoutResult,
-    useApiResult
-} from 'react-components';
+import { Bordered, Block, InlineLinkButton, useNotifications, useApiResult } from 'react-components';
 import { c } from 'ttag';
 import { queryEmailVerificationCode, queryCheckVerificationCode } from 'proton-shared/lib/api/user';
 import VerificationInput from './VerificationInput';
+import VerificationEmailInput from './VerificationEmailInput';
 
-// TODO: dedup verification logic (hook? move to container?)
-const EmailVerification = ({ email, onVerificationDone }) => {
+const EmailVerification = ({ email, onVerificationDone, onChangeEmail, onError }) => {
     const { createNotification } = useNotifications();
-    const { loading: resendLoading, request: requestCode } = useApiWithoutResult(() =>
-        queryEmailVerificationCode(email)
+    const { loading: resendLoading, request: requestCodeResend, error: resendError } = useApiResult(
+        queryEmailVerificationCode
     );
-    const { loading: verifyLoading, request: requestVerification } = useApiResult(({ Token, TokenType }) =>
-        queryCheckVerificationCode(Token, TokenType, 2)
+    const { loading: verifyLoading, request: requestVerification, error: verificationError } = useApiResult(
+        ({ Token, TokenType }) => queryCheckVerificationCode(Token, TokenType, 2)
     );
+
+    useEffect(() => {
+        if (resendError || verificationError) {
+            onError();
+        }
+    }, [verificationError, resendError]);
+
+    const handleSendClick = async (email) => {
+        await requestCodeResend(email);
+        createNotification({ text: c('Notification').jt`Verification code sent to: ${email}` });
+        onChangeEmail(email);
+    };
 
     // TODO: debounce maybe
     const handleResendClick = async () => {
-        await requestCode();
+        await requestCodeResend(email);
         createNotification({ text: c('Notification').jt`New code sent to: ${email}` });
     };
 
@@ -34,16 +39,25 @@ const EmailVerification = ({ email, onVerificationDone }) => {
         onVerificationDone(tokenData);
     };
 
-    const emailText = <strong>{email}</strong>;
     const resendButton = (
         <InlineLinkButton onClick={handleResendClick} disabled={resendLoading} className="ml0-25">{c('Action')
             .t`resend`}</InlineLinkButton>
     );
 
+    if (resendError) {
+        return (
+            <Bordered>
+                <Block>{c('Info')
+                    .t`We are having trouble resending verification code, you can try a different email.`}</Block>
+                <VerificationEmailInput loading={resendLoading} onSendClick={handleSendClick} />
+            </Bordered>
+        );
+    }
+
     return (
         <Bordered>
             <Block>{c('Info').t`Please check your email and enter the code below`}</Block>
-            <Block>{c('Info').jt`The verification email is on it's way to ${emailText}`}</Block>
+            <Block>{c('Info').jt`The verification email is on it's way to ${<strong>{email}</strong>}`}</Block>
             <VerificationInput isLoading={verifyLoading} onValidate={handleValidateClick} />
 
             <div className="flex-items-center flex">
@@ -57,7 +71,9 @@ const EmailVerification = ({ email, onVerificationDone }) => {
 
 EmailVerification.propTypes = {
     email: PropTypes.string.isRequired,
-    onVerificationDone: PropTypes.func.isRequired
+    onVerificationDone: PropTypes.func.isRequired,
+    onChangeEmail: PropTypes.func.isRequired,
+    onError: PropTypes.func.isRequired
 };
 
 export default EmailVerification;

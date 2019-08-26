@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
-import { Wizard, useApi, usePlans, useApiWithoutResult, toDetails } from 'react-components';
-import { PLANS, CYCLE, PAYMENT_METHOD_TYPES } from 'proton-shared/lib/constants';
+import { Wizard, useApi, usePlans } from 'react-components';
+import { PLANS, CYCLE } from 'proton-shared/lib/constants';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
@@ -24,8 +24,6 @@ const SignupState = {
 };
 
 const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAuthHeaders(UID, AccessToken));
-
-//! TODO: don't need to go through verify step when using payment
 
 // TODO: step names translations
 // TODO: payment code
@@ -142,7 +140,11 @@ const SignupContainer = ({ onLogin }) => {
                     )}
 
                     {signupState === SignupState.Verification && (
-                        <VerificationStep onVerificationDone={handleVerificationDone} email={email} />
+                        <VerificationStep
+                            onVerificationDone={handleVerificationDone}
+                            email={email}
+                            onChangeEmail={setEmail}
+                        />
                     )}
 
                     {signupState === SignupState.Account && <AccountStep onSubmit={handleSignup} />}
