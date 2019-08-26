@@ -9,14 +9,14 @@ import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
 import { getPlan } from './plans';
 
-const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onAddPaymentMethod, onChangePlan }) => {
+const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onChangePlan }) => {
     const [isAnnual, setIsAnnual] = useState(false);
     const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
     // If successfully convinced to purchase plus plan
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
     const [plans] = usePlans();
 
-    const confirm = () => onConfirm(isAnnual, currency);
+    const confirm = (paymentDetails = null) => onConfirm(paymentDetails, isAnnual, currency);
 
     const handleChangePlan = (plan) => {
         if (plan === PLANS.FREE && isNudgeSuccessful) {
@@ -34,18 +34,13 @@ const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onAddPaymentMetho
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
         } else if (email) {
-            confirm();
+            confirm(); // No payment details
         }
-    };
-
-    // TODO: if no email, focus email input and show error
-    const handleAddPaymentMethod = (...rest) => {
-        onAddPaymentMethod(...rest);
-        confirm();
     };
 
     const selectedPlan = getPlan(planName, isAnnual, plans);
 
+    // TODO: if no email, focus email input and show error
     return (
         <ObserverSections>
             <PlansSection
@@ -71,7 +66,7 @@ const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onAddPaymentMetho
                     {planName !== PLANS.FREE && (
                         <div className="container-section-sticky-section" id="payment">
                             <PaymentDetailsSection
-                                onAddPaymentMethod={handleAddPaymentMethod}
+                                onPaymentDone={confirm}
                                 onChangeCurrency={setCurrency}
                                 amount={selectedPlan.price.total}
                             />
@@ -89,8 +84,7 @@ PlanStep.propTypes = {
     planName: PropTypes.string.isRequired,
     onChangePlan: PropTypes.func.isRequired,
     onSubmitEmail: PropTypes.func.isRequired,
-    onConfirm: PropTypes.func.isRequired,
-    onAddPaymentMethod: PropTypes.func.isRequired
+    onConfirm: PropTypes.func.isRequired
 };
 
 export default PlanStep;
