@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Title, Alert, useApiResult, Href, InlineLinkButton } from 'react-components';
 import { c } from 'ttag';
@@ -7,10 +7,16 @@ import SMSVerification from './SMSVerification';
 import EmailVerification from './EmailVerification';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
-const VerificationStep = ({ email, onVerificationDone, onChangeEmail }) => {
+const VerificationStep = ({ email, onVerificationDone, allowedMethods, onChangeEmail }) => {
     const [showSupport, setShowSupport] = useState(false);
-    // TODO: if email allowed
-    const { error } = useApiResult(() => queryEmailVerificationCode(email), []);
+    // TODO: if error -> check if login modal needs to be shown
+    const { error, request } = useApiResult(() => queryEmailVerificationCode(email));
+
+    useEffect(() => {
+        if (allowedMethods.email) {
+            request();
+        }
+    }, [allowedMethods]);
 
     const handleError = () => setShowSupport(true);
     const handleInvitation = () => {
@@ -45,14 +51,16 @@ const VerificationStep = ({ email, onVerificationDone, onChangeEmail }) => {
                     .jt`Any issues during the verification? Please contact the ${supportLink} or request ${invitationLink}.`}</Alert>
             )}
 
-            <EmailVerification
-                onError={handleError}
-                onVerificationDone={onVerificationDone}
-                onChangeEmail={onChangeEmail}
-                email={email}
-            />
+            {allowedMethods.email && (
+                <EmailVerification
+                    onError={handleError}
+                    onVerificationDone={onVerificationDone}
+                    onChangeEmail={onChangeEmail}
+                    email={email}
+                />
+            )}
 
-            <SMSVerification onError={handleError} onVerificationDone={onVerificationDone} />
+            {allowedMethods.sms && <SMSVerification onError={handleError} onVerificationDone={onVerificationDone} />}
         </>
     );
 };
@@ -60,7 +68,8 @@ const VerificationStep = ({ email, onVerificationDone, onChangeEmail }) => {
 VerificationStep.propTypes = {
     email: PropTypes.string.isRequired,
     onVerificationDone: PropTypes.func.isRequired,
-    onChangeEmail: PropTypes.func.isRequired
+    onChangeEmail: PropTypes.func.isRequired,
+    allowedMethods: PropTypes.object.isRequired // TODO: shape
 };
 
 export default VerificationStep;
