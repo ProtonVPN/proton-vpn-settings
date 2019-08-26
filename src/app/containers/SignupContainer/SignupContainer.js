@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
-import { Wizard, useApi, usePlans } from 'react-components';
+import { Wizard, useApi, usePlans, useApiResult } from 'react-components';
 import { PLANS, CYCLE } from 'proton-shared/lib/constants';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
-import { queryCreateUser } from 'proton-shared/lib/api/user';
+import { queryCreateUser, queryDirectSignupStatus } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
 import { subscribe, setPaymentMethod } from 'proton-shared/lib/api/payments';
@@ -21,6 +21,22 @@ const SignupState = {
     Verification: 'verification',
     Account: 'account',
     Thanks: 'thanks'
+};
+
+// TODO: move to hook
+const singupAvailability = (Direct, VerifyMethods) => {
+    const email = VerifyMethods.includes('email');
+    const sms = VerifyMethods.includes('sms');
+    const paid = VerifyMethods.includes('payment');
+    const free = email || sms;
+
+    return {
+        signupAvailable: free || paid,
+        email,
+        free,
+        sms,
+        paid
+    };
 };
 
 const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAuthHeaders(UID, AccessToken));
@@ -38,10 +54,19 @@ const SignupContainer = ({ onLogin }) => {
     const [paymentDetails, setPaymentDetails] = useState();
     const [signupState, setSignupState] = useState(SignupState.Plan);
 
+    // TODO: sequential loads?
     // TODO: handle plans loading
-    const [plans, loading] = usePlans(currency);
+    const { loading: statusLoading, result: statusResult } = useApiResult(() => queryDirectSignupStatus(2), []);
+    const [plans, plansLoading] = usePlans(currency);
 
     const plan = getPlan(planName, isAnnual, plans);
+    const { Direct, VerifyMethods = [] } = statusResult || {};
+
+    const allowedMethods = singupAvailability(Direct, VerifyMethods);
+
+    if (statusResult && !allowedMethods.signupAvailable) {
+        //TODO: redirect to invites
+    }
 
     const handleConfirmPlan = (paymentDetails, isAnnual, currency) => {
         setCurrency(currency);
@@ -129,25 +154,30 @@ const SignupContainer = ({ onLogin }) => {
             </header>
             <main className="flex flex-item-fluid main-area">
                 <div className="container-section-sticky">
-                    {plans && signupState === SignupState.Plan && (
-                        <PlanStep
-                            planName={planName}
-                            email={email}
-                            onConfirm={handleConfirmPlan}
-                            onSubmitEmail={setEmail}
-                            onChangePlan={setPlanName}
-                        />
-                    )}
+                    {statusResult && (
+                        <>
+                            {plans && signupState === SignupState.Plan && (
+                                <PlanStep
+                                    planName={planName}
+                                    email={email}
+                                    onConfirm={handleConfirmPlan}
+                                    onSubmitEmail={setEmail}
+                                    onChangePlan={setPlanName}
+                                />
+                            )}
 
-                    {signupState === SignupState.Verification && (
-                        <VerificationStep
-                            onVerificationDone={handleVerificationDone}
-                            email={email}
-                            onChangeEmail={setEmail}
-                        />
-                    )}
+                            {signupState === SignupState.Verification && (
+                                <VerificationStep
+                                    onVerificationDone={handleVerificationDone}
+                                    email={email}
+                                    onChangeEmail={setEmail}
+                                    allowedMethods={allowedMethods}
+                                />
+                            )}
 
-                    {signupState === SignupState.Account && <AccountStep onSubmit={handleSignup} />}
+                            {signupState === SignupState.Account && <AccountStep onSubmit={handleSignup} />}
+                        </>
+                    )}
                 </div>
             </main>
         </>
