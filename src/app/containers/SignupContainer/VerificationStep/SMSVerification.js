@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {
-    Bordered,
-    Block,
-    useApiWithoutResult,
-    useNotifications,
-    InlineLinkButton,
-    useApiResult
-} from 'react-components';
+import { Bordered, Block, useNotifications, InlineLinkButton, useApiResult } from 'react-components';
 import { c } from 'ttag';
 import PhoneInput from './PhoneInput';
 import { querySMSVerificationCode, queryCheckVerificationCode } from 'proton-shared/lib/api/user';
 import VerificationInput from './VerificationInput';
 
-const SMSVerification = ({ onVerificationDone }) => {
+const SMSVerification = ({ onVerificationDone, onError }) => {
     const { createNotification } = useNotifications();
     const [phone, setPhone] = useState('');
-    const { loading: codeLoading, request: requestCode } = useApiWithoutResult((phone) =>
+    const { loading: codeLoading, request: requestCode, error: requestError } = useApiResult((phone) =>
         querySMSVerificationCode(phone)
     );
-    const { loading: verifyLoading, request: requestVerification } = useApiResult(({ Token, TokenType }) =>
-        queryCheckVerificationCode(Token, TokenType, 1)
+    const { loading: verifyLoading, request: requestVerification, error: verificationError } = useApiResult(
+        ({ Token, TokenType }) => queryCheckVerificationCode(Token, TokenType, 1)
     );
+
+    useEffect(() => {
+        if (requestError || verificationError) {
+            onError();
+        }
+    }, [requestError, verificationError]);
 
     const handleSendClick = async (phone) => {
         await requestCode(phone);
@@ -67,7 +66,8 @@ const SMSVerification = ({ onVerificationDone }) => {
 };
 
 SMSVerification.propTypes = {
-    onVerificationDone: PropTypes.func.isRequired
+    onVerificationDone: PropTypes.func.isRequired,
+    onError: PropTypes.func.isRequired
 };
 
 export default SMSVerification;
