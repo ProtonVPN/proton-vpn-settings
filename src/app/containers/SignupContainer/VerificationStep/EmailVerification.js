@@ -6,14 +6,18 @@ import { queryEmailVerificationCode, queryCheckVerificationCode } from 'proton-s
 import VerificationInput from './VerificationInput';
 import VerificationEmailInput from './VerificationEmailInput';
 import LoginSignupModal from './LoginSignupModal';
+import useSignup from '../useSignup';
 
-const EmailVerification = ({ email, onVerificationDone, onChangeEmail, onError }) => {
+const EmailVerification = ({ onVerificationDone, onError }) => {
     const { createModal } = useModals();
     const { createNotification } = useNotifications();
+    const { model, updateModel } = useSignup();
     const { loading: codeLoading, request: requestCode, error: codeError } = useApiResult(queryEmailVerificationCode);
     const { loading: verifyLoading, request: requestVerification, error: verificationError } = useApiResult(
         ({ Token, TokenType }) => queryCheckVerificationCode(Token, TokenType, 2)
     );
+
+    const { email } = model;
 
     useEffect(() => {
         requestCode(email);
@@ -33,7 +37,7 @@ const EmailVerification = ({ email, onVerificationDone, onChangeEmail, onError }
     const handleSendClick = async (email) => {
         await requestCode(email);
         createNotification({ text: c('Notification').jt`Verification code sent to: ${email}` });
-        onChangeEmail(email);
+        updateModel({ email });
     };
 
     // TODO: debounce maybe
@@ -79,9 +83,7 @@ const EmailVerification = ({ email, onVerificationDone, onChangeEmail, onError }
 };
 
 EmailVerification.propTypes = {
-    email: PropTypes.string.isRequired,
     onVerificationDone: PropTypes.func.isRequired,
-    onChangeEmail: PropTypes.func.isRequired,
     onError: PropTypes.func.isRequired
 };
 
