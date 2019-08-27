@@ -14,7 +14,9 @@ const VerificationEmailInput = ({ onSendClick, loading }) => {
             <Field className="mr1">
                 <EmailInput value={email} onChange={handleChange} placeholder={c('Placeholder').t`Email`} />
             </Field>
-            <PrimaryButton loading={loading} onClick={handleSendClick}>{c('Action').t`Send`}</PrimaryButton>
+            <div>
+                <PrimaryButton loading={loading} onClick={handleSendClick}>{c('Action').t`Send`}</PrimaryButton>
+            </div>
         </Row>
     );
 };

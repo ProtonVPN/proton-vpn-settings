@@ -1,35 +1,44 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Bordered, Block, InlineLinkButton, useNotifications, useApiResult } from 'react-components';
+import { Bordered, Block, InlineLinkButton, useNotifications, useApiResult, useModals } from 'react-components';
 import { c } from 'ttag';
 import { queryEmailVerificationCode, queryCheckVerificationCode } from 'proton-shared/lib/api/user';
 import VerificationInput from './VerificationInput';
 import VerificationEmailInput from './VerificationEmailInput';
+import LoginSignupModal from './LoginSignupModal';
 
 const EmailVerification = ({ email, onVerificationDone, onChangeEmail, onError }) => {
+    const { createModal } = useModals();
     const { createNotification } = useNotifications();
-    const { loading: resendLoading, request: requestCodeResend, error: resendError } = useApiResult(
-        queryEmailVerificationCode
-    );
+    const { loading: codeLoading, request: requestCode, error: codeError } = useApiResult(queryEmailVerificationCode);
     const { loading: verifyLoading, request: requestVerification, error: verificationError } = useApiResult(
         ({ Token, TokenType }) => queryCheckVerificationCode(Token, TokenType, 2)
     );
 
     useEffect(() => {
-        if (resendError || verificationError) {
+        requestCode(email);
+    }, []);
+
+    useEffect(() => {
+        const error = codeError || verificationError;
+        if (error) {
+            // TODO: preferably not show the error toast
+            if (error.data.Code === 12220) {
+                createModal(<LoginSignupModal />);
+            }
             onError();
         }
-    }, [verificationError, resendError]);
+    }, [verificationError, codeError]);
 
     const handleSendClick = async (email) => {
-        await requestCodeResend(email);
+        await requestCode(email);
         createNotification({ text: c('Notification').jt`Verification code sent to: ${email}` });
         onChangeEmail(email);
     };
 
     // TODO: debounce maybe
     const handleResendClick = async () => {
-        await requestCodeResend(email);
+        await requestCode(email);
         createNotification({ text: c('Notification').jt`New code sent to: ${email}` });
     };
 
@@ -40,16 +49,16 @@ const EmailVerification = ({ email, onVerificationDone, onChangeEmail, onError }
     };
 
     const resendButton = (
-        <InlineLinkButton onClick={handleResendClick} disabled={resendLoading} className="ml0-25">{c('Action')
+        <InlineLinkButton onClick={handleResendClick} disabled={codeLoading} className="ml0-25">{c('Action')
             .t`resend`}</InlineLinkButton>
     );
 
-    if (resendError) {
+    if (codeError) {
         return (
             <Bordered>
                 <Block>{c('Info')
                     .t`We are having trouble resending verification code, you can try a different email.`}</Block>
-                <VerificationEmailInput loading={resendLoading} onSendClick={handleSendClick} />
+                <VerificationEmailInput loading={codeLoading} onSendClick={handleSendClick} />
             </Bordered>
         );
     }

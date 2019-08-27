@@ -6,6 +6,7 @@ import { loadOpenPGP } from 'proton-shared/lib/openpgp';
 
 import PublicLayout from './components/layout/PublicLayout';
 import SignupContainer from './containers/SignupContainer/SignupContainer';
+import InviteContainer from './containers/InviteContainer/InviteContainer';
 
 const PublicApp = ({ onLogin }) => {
     const [loading, setLoading] = useState(true);
@@ -33,6 +34,7 @@ const PublicApp = ({ onLogin }) => {
             <Router>
                 <Switch>
                     <Route exact path="/signup" render={() => <SignupContainer onLogin={onLogin} />} />
+                    <Route path="/invite" exact component={InviteContainer} />
                     <Route path="/" render={() => <LoginContainer onLogin={onLogin} />} />
                 </Switch>
             </Router>
