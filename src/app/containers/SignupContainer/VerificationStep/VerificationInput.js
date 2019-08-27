@@ -22,7 +22,9 @@ const VerificationInput = ({ isLoading, onValidate }) => {
                         placeholder={c('Placeholder').t`Verification code`}
                     />
                 </Field>
-                <PrimaryButton type="submit" loading={isLoading}>{c('Action').t`Validate`}</PrimaryButton>
+                <div>
+                    <PrimaryButton type="submit" loading={isLoading}>{c('Action').t`Validate`}</PrimaryButton>
+                </div>
             </Row>
         </form>
     );
