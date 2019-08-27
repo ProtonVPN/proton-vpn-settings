@@ -7,6 +7,7 @@ import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
+import { withRouter } from 'react-router';
 
 const SignupState = {
     Plan: 'plan',
@@ -30,7 +31,8 @@ const SignupContainer = ({ onLogin, history }) => {
     } = useSignup(onLogin);
 
     // TODO: handle signup loading
-    if (signupAvailability && !signupAvailability.available) {
+    if (signupAvailability && signupAvailability.inviteOnly) {
+        console.log(signupAvailability);
         history.push('/invite');
     }
 
@@ -93,7 +95,7 @@ const SignupContainer = ({ onLogin, history }) => {
 
 SignupContainer.propTypes = {
     onLogin: PropTypes.func.isRequired,
-    history: PropTypes.func.isRequired
+    history: PropTypes.object.isRequired
 };
 
-export default SignupContainer;
+export default withRouter(SignupContainer);
