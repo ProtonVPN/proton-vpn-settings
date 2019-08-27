@@ -5,12 +5,18 @@ import { Link } from 'react-router-dom';
 import { c } from 'ttag';
 import SMSVerification from './SMSVerification';
 import EmailVerification from './EmailVerification';
+import useSignup from '../useSignup';
 
-// TODO: useSignup directly
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
-const VerificationStep = ({ email, onVerificationDone, allowedMethods, onChangeEmail }) => {
+const VerificationStep = ({ onVerificationDone }) => {
     const [showSupport, setShowSupport] = useState(false);
+    const { signupAvailability, updateModel } = useSignup();
+
     const handleError = () => setShowSupport(true);
+    const handleVerificationDone = (verificationToken) => {
+        updateModel({ verificationToken });
+        onVerificationDone();
+    };
 
     const doNotClose = <strong>{c('Warning').t`Do not close`}</strong>;
     const supportLink = <Href url="https://protonvpn.com/support-form">{c('Link').t`support team`}</Href>; // TODO: relative url
@@ -39,25 +45,19 @@ const VerificationStep = ({ email, onVerificationDone, allowedMethods, onChangeE
                     .jt`Any issues during the verification? Please contact the ${supportLink} or request ${invitationLink}.`}</Alert>
             )}
 
-            {allowedMethods.email && (
-                <EmailVerification
-                    onError={handleError}
-                    onVerificationDone={onVerificationDone}
-                    onChangeEmail={onChangeEmail}
-                    email={email}
-                />
+            {signupAvailability.email && (
+                <EmailVerification onError={handleError} onVerificationDone={handleVerificationDone} />
             )}
 
-            {allowedMethods.sms && <SMSVerification onError={handleError} onVerificationDone={onVerificationDone} />}
+            {signupAvailability.sms && (
+                <SMSVerification onError={handleError} onVerificationDone={handleVerificationDone} />
+            )}
         </>
     );
 };
 
 VerificationStep.propTypes = {
-    email: PropTypes.string.isRequired,
-    onVerificationDone: PropTypes.func.isRequired,
-    onChangeEmail: PropTypes.func.isRequired,
-    allowedMethods: PropTypes.object.isRequired // TODO: shape
+    onVerificationDone: PropTypes.func.isRequired
 };
 
 export default VerificationStep;
