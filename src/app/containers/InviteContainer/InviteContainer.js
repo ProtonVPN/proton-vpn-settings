@@ -21,7 +21,7 @@ const InviteContainer = ({ history }) => {
     const [description, setDescription] = useState('');
     const [email, setEmail] = useState('');
     const { CLIENT_ID, APP_VERSION, CLIENT_TYPE } = useConfig();
-    const Client = getClient(CLIENT_ID);
+    const Client = getClient(CLIENT_ID); // TODO: VPN client currently won't work
     const { request, loading } = useApiWithoutResult(() =>
         reportBug({
             ...collectInfo(),
@@ -81,7 +81,7 @@ const InviteContainer = ({ history }) => {
 };
 
 InviteContainer.propTypes = {
-    history: PropTypes.func.isRequired
+    history: PropTypes.object.isRequired
 };
 
 export default InviteContainer;

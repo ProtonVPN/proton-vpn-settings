@@ -11,6 +11,12 @@ const PublicLayout = ({ children }) => {
     );
 };
 
+{
+    /* <div className="flex flex-nowrap">
+                <main className="flex-item-fluid main-area main-full">{children}</main>
+            </div> */
+}
+
 PublicLayout.propTypes = {
     children: PropTypes.node.isRequired
 };
