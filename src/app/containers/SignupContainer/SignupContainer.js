@@ -18,7 +18,7 @@ const SignupState = {
 
 // TODO: step names translations
 // TODO: payment code
-const SignupContainer = ({ onLogin, history }) => {
+const SignupContainer = ({ history }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const {
         handleSignup,
@@ -26,19 +26,18 @@ const SignupContainer = ({ onLogin, history }) => {
         model,
         updateModel,
         availablePlans,
-        handleConfirmPlan,
         handleVerificationDone
-    } = useSignup(onLogin);
+    } = useSignup();
+    const { email, planName } = model;
 
     // TODO: handle signup loading
     if (signupAvailability && signupAvailability.inviteOnly) {
-        console.log(signupAvailability);
         history.push('/invite');
     }
 
     // setSignupState(SignupState.Thanks); // TODO: onLogin show thanks page
 
-    const step = model.planName ? (model.email ? (signupState === SignupState.Thanks ? 3 : 2) : 1) : 0;
+    const step = planName ? (email ? (signupState === SignupState.Thanks ? 3 : 2) : 1) : 0;
 
     return (
         <>
@@ -47,7 +46,7 @@ const SignupContainer = ({ onLogin, history }) => {
                 <div className="mw650p flex-item-fluid">
                     <Wizard
                         step={step}
-                        steps={['Plan', 'Email', model.planName === PLANS.FREE ? 'Verification' : 'Payment', 'Finish']}
+                        steps={['Plan', 'Email', planName === PLANS.FREE ? 'Verification' : 'Payment', 'Finish']}
                     />
                 </div>
             </header>
@@ -57,18 +56,11 @@ const SignupContainer = ({ onLogin, history }) => {
                         <>
                             {availablePlans && signupState === SignupState.Plan && (
                                 <PlanStep
-                                    planName={model.planName}
-                                    email={model.email}
-                                    onConfirm={(paymentDetails, isAnnual, currency) => {
-                                        handleConfirmPlan(paymentDetails, isAnnual, currency);
-                                        if (paymentDetails) {
-                                            setSignupState(SignupState.Account);
-                                        } else {
-                                            setSignupState(SignupState.Verification);
-                                        }
-                                    }}
-                                    onSubmitEmail={(email) => updateModel({ email })}
-                                    onChangePlan={(planName) => updateModel({ planName })}
+                                    onConfirm={(paymentDetails) =>
+                                        paymentDetails
+                                            ? setSignupState(SignupState.Account)
+                                            : setSignupState(SignupState.Verification)
+                                    }
                                 />
                             )}
 
@@ -78,7 +70,7 @@ const SignupContainer = ({ onLogin, history }) => {
                                         handleVerificationDone(tokenData);
                                         setSignupState(SignupState.Account);
                                     }}
-                                    email={model.email}
+                                    email={email}
                                     onChangeEmail={(email) => updateModel({ email })}
                                     allowedMethods={signupAvailability}
                                 />
@@ -94,7 +86,6 @@ const SignupContainer = ({ onLogin, history }) => {
 };
 
 SignupContainer.propTypes = {
-    onLogin: PropTypes.func.isRequired,
     history: PropTypes.object.isRequired
 };
 
