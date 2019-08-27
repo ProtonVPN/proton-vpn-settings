@@ -1,33 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Title, Alert, useApiResult, Href, InlineLinkButton } from 'react-components';
+import { Title, Alert, Href } from 'react-components';
+import { Link } from 'react-router-dom';
 import { c } from 'ttag';
-import { queryEmailVerificationCode } from '../../../../../../proton-shared/lib/api/user';
 import SMSVerification from './SMSVerification';
 import EmailVerification from './EmailVerification';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
 const VerificationStep = ({ email, onVerificationDone, allowedMethods, onChangeEmail }) => {
     const [showSupport, setShowSupport] = useState(false);
-    // TODO: if error -> check if login modal needs to be shown
-    const { error, request } = useApiResult(() => queryEmailVerificationCode(email));
-
-    useEffect(() => {
-        if (allowedMethods.email) {
-            request();
-        }
-    }, [allowedMethods]);
-
     const handleError = () => setShowSupport(true);
-    const handleInvitation = () => {
-        console.log('invite'); // TODO: implement - modal or separate route/link
-    };
 
     const doNotClose = <strong>{c('Warning').t`Do not close`}</strong>;
     const supportLink = <Href url="https://protonvpn.com/support-form">{c('Link').t`support team`}</Href>; // TODO: relative url
     const invitationLink = (
-        <InlineLinkButton onClick={handleInvitation} title="Request an invitation">{c('Link')
-            .t`manual confirmation`}</InlineLinkButton>
+        <Link to="/invite" title={c('Link').t`Request an invitation`}>{c('Link').t`manual confirmation`}</Link>
     );
 
     return (
@@ -46,7 +33,7 @@ const VerificationStep = ({ email, onVerificationDone, allowedMethods, onChangeE
                 <i>{c('Warning').t`You might want to check the spam folder as well.`}</i>
             </Alert>
 
-            {(error || showSupport) && (
+            {showSupport && (
                 <Alert type="error">{c('Info')
                     .jt`Any issues during the verification? Please contact the ${supportLink} or request ${invitationLink}.`}</Alert>
             )}
