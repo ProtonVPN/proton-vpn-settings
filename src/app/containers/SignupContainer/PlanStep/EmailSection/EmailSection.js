@@ -1,21 +1,17 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { SubTitle, Input, Label, Field, Alert, Block, EmailInput } from 'react-components';
+import { SubTitle, Label, Field, Alert, Block, EmailInput } from 'react-components';
 import { c } from 'ttag';
 import { Link } from 'react-router-dom';
+import useSignup from '../../useSignup';
 
 // TODO: validate and 'success into error' handling
-const EmailSection = ({ onEnterEmail, onContinue }) => {
+const EmailSection = () => {
     const [email, setEmail] = useState('');
+    const { updateModel } = useSignup();
 
+    // TODO: only set value when valid
     const handleChangeEmail = ({ target }) => setEmail(target.value);
-    const handleBlur = () => email && onEnterEmail(email);
-    const handleSubmit = () => {
-        if (email) {
-            onEnterEmail(email);
-            onContinue(email);
-        }
-    };
+    const handleSubmitEmail = () => email && updateModel({ email });
 
     const loginLink = <Link to="/login">{c('Link').t`log in with ProtonMail account`}</Link>;
 
@@ -31,8 +27,8 @@ const EmailSection = ({ onEnterEmail, onContinue }) => {
                     <EmailInput
                         value={email}
                         onChange={handleChangeEmail}
-                        onBlur={handleBlur}
-                        onPressEnter={handleSubmit}
+                        onBlur={handleSubmitEmail}
+                        onPressEnter={handleSubmitEmail}
                         placeholder={c('Placeholder').t`name@example.com`}
                     />
                 </Field>
@@ -40,11 +36,6 @@ const EmailSection = ({ onEnterEmail, onContinue }) => {
             <span>{c('Info').jt`or ${loginLink}`}</span>
         </>
     );
-};
-
-EmailSection.propTypes = {
-    onEnterEmail: PropTypes.func.isRequired,
-    onContinue: PropTypes.func.isRequired
 };
 
 export default EmailSection;

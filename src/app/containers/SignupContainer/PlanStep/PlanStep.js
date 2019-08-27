@@ -54,15 +54,12 @@ const PlanStep = ({ onConfirm }) => {
             <div className="flex" id="details">
                 <div className="flex-item-fluid">
                     <div className="container-section-sticky-section" id="email">
-                        <EmailSection
-                            onContinue={handleContinueClick}
-                            onEnterEmail={(email) => updateModel({ email })}
-                        />
+                        <EmailSection />
                         {(planName === PLANS.FREE || isNudgeSuccessful) && (
                             <FreeSignupSection
                                 onContinue={handleContinueClick}
                                 onUpgrade={handleUpgradeClick}
-                                plusActive={isNudgeSuccessful}
+                                isPlusActive={isNudgeSuccessful}
                             />
                         )}
                     </div>
@@ -76,7 +73,7 @@ const PlanStep = ({ onConfirm }) => {
                         </div>
                     )}
                 </div>
-                <SelectedPlan currency={currency} isAnnual={isAnnual} plan={selectedPlan} />
+                <SelectedPlan />
             </div>
         </ObserverSections>
     );

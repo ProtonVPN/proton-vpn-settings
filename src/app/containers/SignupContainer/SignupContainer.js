@@ -8,6 +8,7 @@ import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
 import { withRouter } from 'react-router';
+import { c } from 'ttag';
 
 const SignupState = {
     Plan: 'plan',
@@ -20,14 +21,7 @@ const SignupState = {
 // TODO: payment code
 const SignupContainer = ({ history }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
-    const {
-        handleSignup,
-        signupAvailability,
-        model,
-        updateModel,
-        availablePlans,
-        handleVerificationDone
-    } = useSignup();
+    const { handleSignup, signupAvailability, model, availablePlans } = useSignup();
     const { email, planName } = model;
 
     // TODO: handle signup loading
@@ -46,7 +40,12 @@ const SignupContainer = ({ history }) => {
                 <div className="mw650p flex-item-fluid">
                     <Wizard
                         step={step}
-                        steps={['Plan', 'Email', planName === PLANS.FREE ? 'Verification' : 'Payment', 'Finish']}
+                        steps={[
+                            c('SignupStep').t`Plan`,
+                            c('SignupStep').t`Email`,
+                            planName === PLANS.FREE ? c('SignupStep').t`Verification` : c('SignupStep').t`Payment`,
+                            c('SignupStep').t`Finish`
+                        ]}
                     />
                 </div>
             </header>
@@ -65,15 +64,7 @@ const SignupContainer = ({ history }) => {
                             )}
 
                             {signupState === SignupState.Verification && (
-                                <VerificationStep
-                                    onVerificationDone={(tokenData) => {
-                                        handleVerificationDone(tokenData);
-                                        setSignupState(SignupState.Account);
-                                    }}
-                                    email={email}
-                                    onChangeEmail={(email) => updateModel({ email })}
-                                    allowedMethods={signupAvailability}
-                                />
+                                <VerificationStep onVerificationDone={() => setSignupState(SignupState.Account)} />
                             )}
 
                             {signupState === SignupState.Account && <AccountStep onSubmit={handleSignup} />}
