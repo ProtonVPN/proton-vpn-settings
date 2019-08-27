@@ -6,6 +6,7 @@ import { c } from 'ttag';
 import SMSVerification from './SMSVerification';
 import EmailVerification from './EmailVerification';
 
+// TODO: useSignup directly
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
 const VerificationStep = ({ email, onVerificationDone, allowedMethods, onChangeEmail }) => {
     const [showSupport, setShowSupport] = useState(false);

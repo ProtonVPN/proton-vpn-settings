@@ -13,6 +13,7 @@ import PreInviteContainer from './containers/PreInviteContainer';
 import { getBrowserLocale, loadLocale } from 'proton-shared/lib/i18n';
 import SignupContainer from './containers/SignupContainer/SignupContainer';
 import InviteContainer from './containers/InviteContainer/InviteContainer';
+import SignupProvider from './containers/SignupContainer/SignupProvider';
 
 import locales from './locales';
 
@@ -53,7 +54,15 @@ const PublicApp = ({ onLogin }) => {
                     />
                     <Route render={({ history }) => <LoginContainer history={history} onLogin={onLogin} />} />
                     <Route path="/invite" exact component={InviteContainer} />
-                    <Route exact path="/signup" render={() => <SignupContainer onLogin={onLogin} />} />
+                    <Route
+                        exact
+                        path="/signup"
+                        render={() => (
+                            <SignupProvider>
+                                <SignupContainer onLogin={onLogin} />
+                            </SignupProvider>
+                        )}
+                    />
                 </Switch>
             </PublicLayout>
         </>
