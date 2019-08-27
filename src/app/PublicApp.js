@@ -11,6 +11,7 @@ import ForgotUsernameContainer from './containers/ForgotUsernameContainer';
 import RedeemContainer from './containers/RedeemContainer';
 import SignupContainer from './containers/SignupContainer/SignupContainer';
 import InviteContainer from './containers/InviteContainer/InviteContainer';
+import SignupProvider from './containers/SignupContainer/SignupProvider';
 
 const PublicApp = ({ onLogin }) => {
     const [loading, setLoading] = useState(true);
@@ -42,7 +43,15 @@ const PublicApp = ({ onLogin }) => {
                         <Route path="/reset-password" component={ResetPasswordContainer} />
                         <Route path="/forgot-username" component={ForgotUsernameContainer} />
                         <Route path="/invite" exact component={InviteContainer} />
-                        <Route exact path="/signup" render={() => <SignupContainer onLogin={onLogin} />} />
+                        <Route
+                            exact
+                            path="/signup"
+                            render={() => (
+                                <SignupProvider>
+                                    <SignupContainer onLogin={onLogin} />
+                                </SignupProvider>
+                            )}
+                        />
                         <Route render={() => <LoginContainer onLogin={onLogin} />} />
                     </Switch>
                 </Router>

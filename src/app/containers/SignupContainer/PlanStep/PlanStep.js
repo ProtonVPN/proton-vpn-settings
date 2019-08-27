@@ -9,6 +9,7 @@ import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
 import { getPlan } from './plans';
 
+// TODO: use useSignup directly
 const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onChangePlan }) => {
     const [isAnnual, setIsAnnual] = useState(false);
     const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
