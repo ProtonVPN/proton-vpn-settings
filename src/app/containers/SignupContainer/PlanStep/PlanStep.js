@@ -1,53 +1,52 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { ObserverSections, usePlans } from 'react-components';
+import { ObserverSections } from 'react-components';
 import PlansSection from './PlansSection/PlansSection';
 import EmailSection from './EmailSection/EmailSection';
 import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection';
 import SelectedPlan from './SelectedPlan/SelectedPlan';
 import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
-import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
-import { getPlan } from './plans';
+import { PLANS } from 'proton-shared/lib/constants';
+import useSignup from '../useSignup';
 
-// TODO: use useSignup directly
-const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onChangePlan }) => {
-    const [isAnnual, setIsAnnual] = useState(false);
-    const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
-    // If successfully convinced to purchase plus plan
-    const [isNudgeSuccessful, setNudgeSuccessful] = useState(false);
-    const [plans] = usePlans();
+const PlanStep = ({ onConfirm }) => {
+    const [isNudgeSuccessful, setNudgeSuccessful] = useState(false); // If successfully convinced to purchase plus plan
+    const { model, updateModel, selectedPlan } = useSignup();
+    const { isAnnual, currency, planName } = model;
 
-    const confirm = (paymentDetails = null) => onConfirm(paymentDetails, isAnnual, currency);
+    // ! TODO: do not allow payment without a valid email
+    const handlePaymentDone = (paymentDetails = null) => {
+        updateModel({ paymentDetails });
+        onConfirm(paymentDetails);
+    };
 
-    const handleChangePlan = (plan) => {
-        if (plan === PLANS.FREE && isNudgeSuccessful) {
+    const handleChangePlan = (planName) => {
+        if (planName === PLANS.FREE && isNudgeSuccessful) {
             setNudgeSuccessful(false);
         }
-        onChangePlan(plan);
+        updateModel({ planName });
     };
 
     const handleUpgradeClick = () => {
-        onChangePlan(PLANS.VPNPLUS);
+        updateModel({ planName: PLANS.VPNPLUS });
         setNudgeSuccessful(true);
     };
 
     const handleContinueClick = () => {
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
-        } else if (email) {
-            confirm(); // No payment details
+        } else if (model.email) {
+            onConfirm(); // No payment details
         }
+        // TODO: focus on email and show error of no email
     };
 
-    const selectedPlan = getPlan(planName, isAnnual, plans);
-
-    // TODO: if no email, focus email input and show error
     return (
         <ObserverSections>
             <PlansSection
                 isAnnual={isAnnual}
                 currency={currency}
-                onAnnualChange={setIsAnnual}
+                onAnnualChange={(isAnnual) => updateModel({ isAnnual })}
                 onSelect={handleChangePlan}
                 selected={planName}
                 id="plan"
@@ -55,7 +54,10 @@ const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onChangePlan }) =
             <div className="flex" id="details">
                 <div className="flex-item-fluid">
                     <div className="container-section-sticky-section" id="email">
-                        <EmailSection onContinue={handleContinueClick} onEnterEmail={onSubmitEmail} />
+                        <EmailSection
+                            onContinue={handleContinueClick}
+                            onEnterEmail={(email) => updateModel({ email })}
+                        />
                         {(planName === PLANS.FREE || isNudgeSuccessful) && (
                             <FreeSignupSection
                                 onContinue={handleContinueClick}
@@ -67,8 +69,8 @@ const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onChangePlan }) =
                     {planName !== PLANS.FREE && (
                         <div className="container-section-sticky-section" id="payment">
                             <PaymentDetailsSection
-                                onPaymentDone={confirm}
-                                onChangeCurrency={setCurrency}
+                                onPaymentDone={handlePaymentDone}
+                                onChangeCurrency={(currency) => updateModel({ currency })}
                                 amount={selectedPlan.price.total}
                             />
                         </div>
@@ -81,10 +83,6 @@ const PlanStep = ({ planName, email, onSubmitEmail, onConfirm, onChangePlan }) =
 };
 
 PlanStep.propTypes = {
-    email: PropTypes.string.isRequired,
-    planName: PropTypes.string.isRequired,
-    onChangePlan: PropTypes.func.isRequired,
-    onSubmitEmail: PropTypes.func.isRequired,
     onConfirm: PropTypes.func.isRequired
 };
 

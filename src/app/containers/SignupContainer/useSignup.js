@@ -11,7 +11,6 @@ import { getPlan } from './PlanStep/plans';
 import { CYCLE } from 'proton-shared/lib/constants';
 import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
-import { noop } from 'proton-shared/lib/helpers/function';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes('email');
@@ -30,9 +29,9 @@ const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
 
 const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAuthHeaders(UID, AccessToken));
 
-const useSignup = ({ onLogin = noop }) => {
+const useSignup = () => {
     const api = useApi();
-    const [model, setModel] = useContext(SignupContext);
+    const [model, setModel, { onLogin }] = useContext(SignupContext);
     const { planName, currency, isAnnual, email, verificationToken, paymentDetails } = model;
 
     const updateModel = (partial) => setModel((model) => ({ ...model, ...partial }));
@@ -42,7 +41,7 @@ const useSignup = ({ onLogin = noop }) => {
     const { loading: statusLoading, result: statusResult } = useApiResult(() => queryDirectSignupStatus(2), []); // TODO: take app type from confir
     const [plans, plansLoading] = usePlans(currency); // TODO: change based on coupon code
 
-    const plan = getPlan(planName, isAnnual, plans); // TODO: move plans.js closer to this file
+    const selectedPlan = getPlan(planName, isAnnual, plans); // TODO: move plans.js closer to this file
     const isLoading = plansLoading || statusLoading;
 
     // TODO: a lot of stuff is missing in these methods still
@@ -72,7 +71,7 @@ const useSignup = ({ onLogin = noop }) => {
             // Amount = 0 means - paid before subscription
             const subscription = {
                 PlanIDs: {
-                    [plan.id]: 1
+                    [selectedPlan.id]: 1
                 },
                 Amount: 0,
                 Currency: currency,
@@ -84,7 +83,7 @@ const useSignup = ({ onLogin = noop }) => {
             // Add payment method
             const { Payment } = await handle3DS(
                 {
-                    Amount: plan.price.total,
+                    Amount: selectedPlan.price.total,
                     Currency: 'CHF',
                     ...paymentDetails.parameters
                 },
@@ -98,10 +97,6 @@ const useSignup = ({ onLogin = noop }) => {
         onLogin({ UID, EventID });
     };
 
-    // TODO: use local model, not arguments
-    const handleConfirmPlan = (paymentDetails, isAnnual, currency) =>
-        updateModel(paymentDetails ? { isAnnual, currency } : { isAnnual, currency, paymentDetails });
-
     // TODO: handle the whole verification
     const handleVerificationDone = (verificationToken) => updateModel({ verificationToken });
 
@@ -109,9 +104,9 @@ const useSignup = ({ onLogin = noop }) => {
         model,
         updateModel,
         isLoading,
+        selectedPlan,
         availablePlans: plans,
         signupAvailability: statusResult && getSignupAvailability(statusResult.Direct, statusResult.VerifyMethods),
-        handleConfirmPlan, // TODO: this should not exist, instead something like handlePayment should
         handleVerificationDone, // TODO: this should not exist, instead something like handleVerification should
         handleSignup
     };

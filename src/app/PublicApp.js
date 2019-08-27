@@ -54,8 +54,8 @@ const PublicApp = ({ onLogin }) => {
                         exact
                         path="/signup"
                         render={() => (
-                            <SignupProvider>
-                                <SignupContainer onLogin={onLogin} />
+                            <SignupProvider onLogin={onLogin}>
+                                <SignupContainer />
                             </SignupProvider>
                         )}
                     />

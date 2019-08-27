@@ -4,7 +4,7 @@ import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
 
 export const SignupContext = createContext(null);
 
-const SignupProvider = ({ children }) => {
+const SignupProvider = ({ children, onLogin }) => {
     const [model, setModel] = useState({
         planName: PLANS.FREE, // TODO: can set from query params
         currency: DEFAULT_CURRENCY,
@@ -14,10 +14,11 @@ const SignupProvider = ({ children }) => {
         paymentDetails: null
     });
 
-    return <SignupContext.Provider value={[model, setModel]}>{children}</SignupContext.Provider>;
+    return <SignupContext.Provider value={[model, setModel, { onLogin }]}>{children}</SignupContext.Provider>;
 };
 
 SignupProvider.propTypes = {
+    onLogin: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired
 };
 
