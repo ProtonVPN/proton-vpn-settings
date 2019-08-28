@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { SignupContext } from './SignupProvider';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
-import { useApi, usePlans } from 'react-components';
+import { useApi, usePlans, useConfig } from 'react-components';
 import { queryCreateUser } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
-import { subscribe, setPaymentMethod } from 'proton-shared/lib/api/payments';
+import { subscribe, setPaymentMethod, checkSubscription } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
-import { getPlan } from './PlanStep/plans';
+import { getPlan } from './plans';
 import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
 
@@ -15,6 +15,7 @@ const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAu
 
 const useSignup = () => {
     const api = useApi();
+    const { CLIENT_TYPE } = useConfig();
     const [model, setModel, { onLogin, signupAvailability }] = useContext(SignupContext);
     const { planName, currency, cycle, email, verificationToken, paymentDetails } = model;
 
@@ -37,7 +38,7 @@ const useSignup = () => {
             credentials: { password },
             config: queryCreateUser({
                 ...tokenData,
-                Type: 2,
+                Type: CLIENT_TYPE,
                 Email: email,
                 Username: username
             })
@@ -80,14 +81,30 @@ const useSignup = () => {
         onLogin({ UID, EventID });
     };
 
+    const applyCoupon = async (CouponCode) => {
+        const { Coupon } = await api(
+            checkSubscription({
+                PlanIDs: {
+                    [selectedPlan.id]: 1
+                },
+                CouponCode,
+                Currency: currency,
+                Cycle: cycle
+            })
+        );
+        updateModel({ appliedCoupon: Coupon });
+    };
+
     return {
         model,
-        updateModel,
         isLoading,
         selectedPlan,
         availablePlans: plans,
         signupAvailability,
-        handleSignup
+
+        updateModel,
+        handleSignup,
+        applyCoupon
     };
 };
 
