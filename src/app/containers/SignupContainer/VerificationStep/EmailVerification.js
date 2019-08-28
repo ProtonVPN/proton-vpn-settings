@@ -11,13 +11,14 @@ import useSignup from '../useSignup';
 const EmailVerification = ({ onVerificationDone, onError }) => {
     const { createModal } = useModals();
     const { createNotification } = useNotifications();
-    const { model, updateModel } = useSignup();
+    const {
+        model: { email },
+        updateModel
+    } = useSignup();
     const { loading: codeLoading, request: requestCode, error: codeError } = useApiResult(queryEmailVerificationCode);
     const { loading: verifyLoading, request: requestVerification, error: verificationError } = useApiResult(
         ({ Token, TokenType }) => queryCheckVerificationCode(Token, TokenType, 2)
     );
-
-    const { email } = model;
 
     useEffect(() => {
         requestCode(email);

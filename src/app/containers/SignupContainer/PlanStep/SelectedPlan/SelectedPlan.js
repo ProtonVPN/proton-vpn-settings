@@ -2,11 +2,13 @@ import React from 'react';
 import { c } from 'ttag';
 import { Price } from 'react-components';
 import useSignup from '../../useSignup';
+import { CYCLE } from 'proton-shared/lib/constants';
 
+// TODO: two year plan
 const SelectedPlan = () => {
     const {
         selectedPlan,
-        model: { isAnnual, currency }
+        model: { cycle, currency }
     } = useSignup();
     const planTitle = c('VPN plan title').t`ProtonVPN ${selectedPlan.title}`;
 
@@ -35,7 +37,9 @@ const SelectedPlan = () => {
                     )}
                     <div className="flex flex-spacebetween">
                         <strong className="mr0-25">
-                            {isAnnual ? c('Plan price total').jt`Total (12 months):` : c('Plan price total').jt`Total:`}
+                            {cycle === CYCLE.YEARLY
+                                ? c('Plan price total').jt`Total (12 months):`
+                                : c('Plan price total').jt`Total:`}
                         </strong>
                         <Price currency={currency}>{selectedPlan.price.total}</Price>
                     </div>
