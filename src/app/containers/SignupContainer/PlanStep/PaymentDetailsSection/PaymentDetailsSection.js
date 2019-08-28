@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
     RadioGroup,
@@ -13,38 +13,53 @@ import {
     Href,
     PrimaryButton,
     Field,
-    useApiWithoutResult
+    useLoading
 } from 'react-components';
 import { c } from 'ttag';
-import { DEFAULT_CYCLE, DEFAULT_CURRENCY, PAYMENT_METHOD_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
+import { DEFAULT_CYCLE, PAYMENT_METHOD_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
 import CouponForm from 'react-components/containers/payments/subscription/CouponForm';
 import GiftCodeForm from 'react-components/containers/payments/subscription/GiftCodeForm';
 import { verifyPayment } from 'proton-shared/lib/api/payments';
+import useSignup from '../../useSignup';
+import api from 'proton-shared/lib/api';
 
 // TODO: use form submit
-const PaymentDetailsSection = ({ onChangeCurrency, amount, onPaymentDone }) => {
-    const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
-    const { state: hasCoupon, toggle: toggleCoupon } = useToggle();
+const PaymentDetailsSection = ({ onPaymentDone }) => {
+    const { state: editingCoupon, toggle: toggleEditCoupon } = useToggle();
     const { state: hasGiftCode, toggle: toggleGiftCode } = useToggle();
+    const [loadingCoupon, withLoadingCoupon] = useLoading();
+    const [loadingVerify, withLoadingVerify] = useLoading();
+    const {
+        selectedPlan,
+        model: { currency, appliedCoupon },
+        applyCoupon,
+        updateModel
+    } = useSignup();
     const { method, setMethod, parameters, canPay, setParameters, setCardValidity } = usePayment();
+
     // TODO: Credit wtf?
     // TODO: Gift codes
-    const { loading: loading, request: requestVerifyPayment } = useApiWithoutResult(() =>
-        verifyPayment({
-            Amount: amount,
-            Currency: currency,
-            ...parameters
-        })
-    );
+    const amount = selectedPlan.price.total;
 
-    const handleChangeCurrency = (value) => {
-        setCurrency(value);
-        onChangeCurrency(value);
+    const handleChangeCurrency = (currency) => updateModel({ currency });
+    const handleApplyCoupon = async ({ coupon }) => {
+        await withLoadingCoupon(applyCoupon(coupon));
+        toggleEditCoupon();
     };
 
     const handlePayment = async () => {
-        const { VerifyCode } = await requestVerifyPayment();
-        onPaymentDone({ VerifyCode, parameters });
+        console.log('nesamone');
+        const { VerifyCode } = await api(
+            verifyPayment({
+                Amount: amount,
+                Currency: currency,
+                ...parameters
+            })
+        );
+
+        const paymentDetails = { VerifyCode, parameters };
+        updateModel({ paymentDetails });
+        onPaymentDone(true);
     };
 
     const tosLink = <Href url="https://protonvpn.com/terms-and-conditions">{c('Link').t`Terms of Service`}</Href>;
@@ -60,10 +75,17 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onPaymentDone }) => {
             <Row>
                 <Label htmlFor="coupon">{c('Label').t`Coupon`}</Label>
                 <Field>
-                    {hasCoupon ? (
-                        <CouponForm id="coupon" model={{ coupon: '' }} />
+                    {editingCoupon ? (
+                        <CouponForm
+                            id="coupon"
+                            loading={loadingCoupon}
+                            onChange={handleApplyCoupon}
+                            model={{ coupon: '' }}
+                        />
+                    ) : appliedCoupon ? (
+                        <strong>{appliedCoupon.Coupon.Description}</strong>
                     ) : (
-                        <LinkButton onClick={toggleCoupon} className="mr1">{c('Action').t`Use coupon`}</LinkButton>
+                        <LinkButton onClick={toggleEditCoupon} className="mr1">{c('Action').t`Use coupon`}</LinkButton>
                     )}
                 </Field>
             </Row>
@@ -89,25 +111,35 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onPaymentDone }) => {
                 />
             </Row>
 
-            <Payment
-                type="signup"
-                method={method}
-                amount={amount}
-                cycle={DEFAULT_CYCLE}
-                currency={currency}
-                parameters={parameters}
-                onParameters={setParameters}
-                onMethod={setMethod}
-                onValidCard={setCardValidity}
-                onPay={handlePayment}
-            />
+            {amount > 0 && (
+                <Payment
+                    type="signup"
+                    method={method}
+                    amount={amount}
+                    cycle={DEFAULT_CYCLE}
+                    currency={currency}
+                    parameters={parameters}
+                    onParameters={setParameters}
+                    onMethod={setMethod}
+                    onValidCard={setCardValidity}
+                    onPay={() => withLoadingVerify(handlePayment())}
+                />
+            )}
 
-            {method === PAYMENT_METHOD_TYPES.CARD && (
+            {(method === PAYMENT_METHOD_TYPES.CARD || !amount) && (
                 <Row>
                     <Label />
                     <Field>
-                        <PrimaryButton loading={loading} disabled={!canPay} onClick={handlePayment}>{c('Action')
-                            .t`Confirm Payment`}</PrimaryButton>
+                        {amount ? (
+                            <PrimaryButton
+                                loading={loadingVerify}
+                                disabled={!canPay}
+                                onClick={() => withLoadingVerify(handlePayment())}
+                            >{c('Action').t`Confirm Payment`}</PrimaryButton>
+                        ) : (
+                            <PrimaryButton onClick={() => onPaymentDone(true)}>{c('Action')
+                                .t`Confirm Payment`}</PrimaryButton>
+                        )}
                     </Field>
                 </Row>
             )}
@@ -116,8 +148,6 @@ const PaymentDetailsSection = ({ onChangeCurrency, amount, onPaymentDone }) => {
 };
 
 PaymentDetailsSection.propTypes = {
-    amount: PropTypes.number.isRequired,
-    onChangeCurrency: PropTypes.func.isRequired,
     onPaymentDone: PropTypes.func.isRequired
 };
 

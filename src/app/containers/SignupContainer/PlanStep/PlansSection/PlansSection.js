@@ -10,7 +10,7 @@ import useSignup from '../../useSignup';
 
 const PlansSection = ({ onSelect }) => {
     const {
-        model: { cycle },
+        model: { cycle, appliedCoupon },
         updateModel
     } = useSignup();
     const handleSelect = (planName) => () => onSelect(planName);
@@ -32,12 +32,15 @@ const PlansSection = ({ onSelect }) => {
                         <PlanCard
                             key={planName}
                             onClick={handleSelect(planName)}
-                            plan={getPlan(planName, cycle, plans)}
+                            plan={getPlan(planName, cycle, appliedCoupon, plans)}
                         />
                     ))}
                 </div>
             </div>
-            <PlanCardHorizontal onClick={handleSelect(PLANS.VISIONARY)} plan={getPlan(PLANS.VISIONARY, cycle, plans)} />
+            <PlanCardHorizontal
+                onClick={handleSelect(PLANS.VISIONARY)}
+                plan={getPlan(PLANS.VISIONARY, cycle, appliedCoupon, plans)}
+            />
         </>
     );
 };
