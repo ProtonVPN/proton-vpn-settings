@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Loader, useApi, useNotifications } from 'react-components';
 import { checkInvitation } from 'proton-shared/lib/api/invites';
@@ -19,24 +19,26 @@ const PreInviteContainer = ({ history, match }) => {
         history.push('/login');
     };
 
-    if (!token || !selector) {
-        return invalid();
-    }
+    useEffect(() => {
+        if (!token || !selector) {
+            return invalid();
+        }
 
-    api(checkInvitation({ Selector: selector, Token: token, Type: VPN }))
-        .then(({ Valid }) => {
-            if (!Valid) {
-                return invalid();
-            }
+        api(checkInvitation({ Selector: selector, Token: token, Type: VPN }))
+            .then(({ Valid }) => {
+                if (!Valid) {
+                    return invalid();
+                }
 
-            history.push({
-                pathname: '/signup',
-                state: { selector, token }
+                history.push({
+                    pathname: '/signup',
+                    state: { selector, token }
+                });
+            })
+            .catch(() => {
+                invalid();
             });
-        })
-        .catch(() => {
-            invalid();
-        });
+    }, []);
 
     return (
         <SignInLayout title={c('Title').t`Checking invitation parameters`}>
