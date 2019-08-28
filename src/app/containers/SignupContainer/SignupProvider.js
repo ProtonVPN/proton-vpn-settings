@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react';
 import PropTypes from 'prop-types';
 import { PLANS, DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
 import { queryDirectSignupStatus } from 'proton-shared/lib/api/user';
-import { useApiResult, useConfig } from 'react-components';
+import { useApiResult, useConfig, usePlans } from 'react-components';
 
 export const SignupContext = createContext(null);
 
@@ -24,13 +24,18 @@ const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
 const SignupProvider = ({ children, onLogin }) => {
     const { CLIENT_TYPE } = useConfig();
     const { result } = useApiResult(() => queryDirectSignupStatus(CLIENT_TYPE), []);
+
+    const [plans = []] = usePlans();
+    const currency = plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
+
     const [model, setModel] = useState({
         planName: PLANS.FREE, // TODO: can set from query params
-        currency: DEFAULT_CURRENCY,
         cycle: CYCLE.YEARLY,
         email: '',
         verificationToken: null,
-        paymentDetails: null
+        paymentDetails: null,
+        appliedCoupon: null,
+        currency
     });
 
     return (
