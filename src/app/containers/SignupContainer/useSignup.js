@@ -4,12 +4,12 @@ import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
 import { useApi, usePlans, useConfig, useNotifications } from 'react-components';
 import { queryCreateUser } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
-import { subscribe, setPaymentMethod, checkSubscription } from 'proton-shared/lib/api/payments';
+import { subscribe, setPaymentMethod, checkSubscription, verifyPayment } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getPlan } from './plans';
 import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
-import { getRandomString } from 'proton-shared/lib/helpers/string';
+import { getRandomString, toPrice } from 'proton-shared/lib/helpers/string';
 import { c } from 'ttag';
 import { PLANS } from 'proton-shared/lib/constants';
 
@@ -20,7 +20,16 @@ const useSignup = () => {
     const { createNotification } = useNotifications();
     const { CLIENT_TYPE } = useConfig();
     const [model, setModel, { onLogin, signupAvailability }] = useContext(SignupContext);
-    const { planName, currency, cycle, email, verificationToken, paymentDetails, appliedCoupon } = model;
+    const {
+        planName,
+        currency,
+        cycle,
+        email,
+        verificationToken,
+        paymentDetails,
+        appliedCoupon,
+        appliedGiftCode
+    } = model;
     // TODO: move verificationToken from model to useVerification hook
 
     const updateModel = (partial) => setModel((model) => ({ ...model, ...partial }));
@@ -29,11 +38,35 @@ const useSignup = () => {
     // TODO: handle plans loading
     const [plans, plansLoading] = usePlans(currency); // TODO: change available plans based on coupon code?
 
-    const selectedPlan = getPlan(planName, cycle, appliedCoupon, plans); // TODO: move plans.js closer to this file
+    const selectedPlan = getPlan(planName, cycle, appliedCoupon || appliedGiftCode, plans); // TODO: move plans.js closer to this file
     const isLoading = plansLoading || !signupAvailability;
 
+    // TODO: Credit wtf?
+    /**
+     * Verifies if payment was done and saves payment details for signup
+     * @param {*=} parameters payment parameters from usePayment
+     */
+    const checkPayment = async (parameters) => {
+        const amount = selectedPlan.price.total;
+
+        if (amount > 0 || appliedGiftCode) {
+            const { VerifyCode } = await api(
+                verifyPayment({
+                    Amount: amount,
+                    Currency: currency,
+                    Credit: appliedGiftCode ? appliedGiftCode.Amount : undefined, // weird but works
+                    GiftCode: appliedGiftCode.Coupon.Code,
+                    ...parameters
+                })
+            );
+
+            const paymentDetails = { VerifyCode, parameters };
+            updateModel({ paymentDetails });
+        }
+    };
+
     // TODO: a lot of stuff is missing in these methods still
-    const handleSignup = async (username, password) => {
+    const signup = async (username, password) => {
         const tokenData = appliedCoupon
             ? { Token: appliedCoupon.Coupon.Code, TokenType: 'coupon' }
             : paymentDetails
@@ -67,7 +100,7 @@ const useSignup = () => {
                 Amount: 0,
                 Currency: currency,
                 Cycle: cycle,
-                CouponCode: appliedCoupon && appliedCoupon.Coupon.Code
+                CouponCode: appliedCoupon ? appliedCoupon.Coupon.Code : undefined
             };
             await api(withAuthHeaders(UID, AccessToken, subscribe(subscription)));
         }
@@ -90,7 +123,6 @@ const useSignup = () => {
         onLogin({ UID, EventID });
     };
 
-    // TODO: On invalid coupon close forms
     const applyCoupon = async (CouponCode) => {
         const appliedCoupon = await api(
             checkSubscription({
@@ -112,6 +144,24 @@ const useSignup = () => {
         }
     };
 
+    const applyGiftCode = async (GiftCode) => {
+        const gift = await api(
+            checkSubscription({
+                PlanIDs: {
+                    [selectedPlan.id]: 1
+                },
+                GiftCode,
+                Currency: currency,
+                Cycle: cycle
+            })
+        );
+        const discount = toPrice(gift.Gift, currency);
+        updateModel({ appliedGiftCode: { ...gift, Coupon: { Code: GiftCode, Description: discount } } });
+        createNotification({
+            text: c('Notification').t`Gift code for ${discount} has been applied successfully`
+        });
+    };
+
     return {
         model,
         isLoading,
@@ -119,9 +169,11 @@ const useSignup = () => {
         availablePlans: plans,
         signupAvailability,
 
+        checkPayment,
         updateModel,
-        handleSignup,
-        applyCoupon
+        signup,
+        applyCoupon,
+        applyGiftCode
     };
 };
 

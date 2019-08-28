@@ -19,46 +19,49 @@ import { c } from 'ttag';
 import { DEFAULT_CYCLE, PAYMENT_METHOD_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
 import CouponForm from 'react-components/containers/payments/subscription/CouponForm';
 import GiftCodeForm from 'react-components/containers/payments/subscription/GiftCodeForm';
-import { verifyPayment } from 'proton-shared/lib/api/payments';
 import useSignup from '../../useSignup';
-import api from 'proton-shared/lib/api';
 
 // TODO: use form submit
 const PaymentDetailsSection = ({ onPaymentDone }) => {
     const { state: editingCoupon, toggle: toggleEditCoupon } = useToggle();
-    const { state: hasGiftCode, toggle: toggleGiftCode } = useToggle();
+    const { state: editingGiftCode, toggle: toggleEditGiftCode } = useToggle();
     const [loadingCoupon, withLoadingCoupon] = useLoading();
+    const [loadingGift, withLoadingGiftCode] = useLoading();
     const [loadingVerify, withLoadingVerify] = useLoading();
     const {
         selectedPlan,
-        model: { currency, appliedCoupon },
+        model: { currency, appliedCoupon, appliedGiftCode },
         applyCoupon,
+        applyGiftCode,
+        checkPayment,
         updateModel
     } = useSignup();
     const { method, setMethod, parameters, canPay, setParameters, setCardValidity } = usePayment();
 
-    // TODO: Credit wtf?
-    // TODO: Gift codes
     const amount = selectedPlan.price.total;
 
     const handleChangeCurrency = (currency) => updateModel({ currency });
     const handleApplyCoupon = async ({ coupon }) => {
-        await withLoadingCoupon(applyCoupon(coupon));
-        toggleEditCoupon();
+        try {
+            await withLoadingCoupon(applyCoupon(coupon));
+            toggleEditCoupon();
+        } catch (e) {
+            toggleEditCoupon();
+        }
     };
 
-    const handlePayment = async () => {
-        console.log('nesamone');
-        const { VerifyCode } = await api(
-            verifyPayment({
-                Amount: amount,
-                Currency: currency,
-                ...parameters
-            })
-        );
+    const handleApplyGiftCode = async ({ gift }) => {
+        try {
+            await withLoadingGiftCode(applyGiftCode(gift));
+            toggleEditGiftCode();
+        } catch (e) {
+            toggleEditGiftCode();
+        }
+    };
 
-        const paymentDetails = { VerifyCode, parameters };
-        updateModel({ paymentDetails });
+    // TODO: do we need to verify if we're using a gift code without payment?
+    const handlePayment = async () => {
+        await withLoadingVerify(checkPayment(parameters));
         onPaymentDone(true);
     };
 
@@ -92,10 +95,18 @@ const PaymentDetailsSection = ({ onPaymentDone }) => {
             <Row>
                 <Label htmlFor="gift-code">{c('Label').t`Gift code`}</Label>
                 <Field>
-                    {hasGiftCode ? (
-                        <GiftCodeForm id="gift-code" model={{ gift: '' }} />
+                    {editingGiftCode ? (
+                        <GiftCodeForm
+                            id="gift-code"
+                            loading={loadingGift}
+                            onChange={handleApplyGiftCode}
+                            model={{ gift: '' }}
+                        />
+                    ) : appliedGiftCode ? (
+                        <strong>{appliedGiftCode.Coupon.Description}</strong>
                     ) : (
-                        <LinkButton onClick={toggleGiftCode} className="mr1">{c('Action').t`Use gift code`}</LinkButton>
+                        <LinkButton onClick={toggleEditGiftCode} className="mr1">{c('Action')
+                            .t`Use gift code`}</LinkButton>
                     )}
                 </Field>
             </Row>
@@ -122,7 +133,7 @@ const PaymentDetailsSection = ({ onPaymentDone }) => {
                     onParameters={setParameters}
                     onMethod={setMethod}
                     onValidCard={setCardValidity}
-                    onPay={() => withLoadingVerify(handlePayment())}
+                    onPay={handlePayment}
                 />
             )}
 
@@ -130,16 +141,9 @@ const PaymentDetailsSection = ({ onPaymentDone }) => {
                 <Row>
                     <Label />
                     <Field>
-                        {amount ? (
-                            <PrimaryButton
-                                loading={loadingVerify}
-                                disabled={!canPay}
-                                onClick={() => withLoadingVerify(handlePayment())}
-                            >{c('Action').t`Confirm Payment`}</PrimaryButton>
-                        ) : (
-                            <PrimaryButton onClick={() => onPaymentDone(true)}>{c('Action')
-                                .t`Confirm Payment`}</PrimaryButton>
-                        )}
+                        <PrimaryButton loading={loadingVerify} disabled={amount && !canPay} onClick={handlePayment}>{c(
+                            'Action'
+                        ).t`Confirm Payment`}</PrimaryButton>
                     </Field>
                 </Row>
             )}
