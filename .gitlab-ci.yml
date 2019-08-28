@@ -35,13 +35,19 @@ deploy:
     stage: deploy
     script:
         - npm i --no-audit
-        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY
+        - git clone $CONFIG_GIT configApp
+        - cp configApp/vpn-settings/appConfig.json .
+        - cat configApp/.env configApp/vpn-settings/.env > .env
+        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --branch=deploy-$API_DEPLOY
     when: manual
 
 deploy-beta:
     stage: deploy-beta
     script:
         - npm i --no-audit
+        - git clone $CONFIG_GIT configApp
+        - cp configApp/vpn-settings/appConfig.json .
+        - cat configApp/.env configApp/vpn-settings/.env > .env
         - npm run deploy -- --branch=deploy-beta
     when: manual
 
@@ -49,5 +55,8 @@ deploy-prod:
     stage: deploy-prod
     script:
         - npm i --no-audit
+        - git clone $CONFIG_GIT configApp
+        - cp configApp/vpn-settings/appConfig.json .
+        - cat configApp/.env configApp/vpn-settings/.env > .env
         - npm run deploy -- --branch=deploy-prod
     when: manual
