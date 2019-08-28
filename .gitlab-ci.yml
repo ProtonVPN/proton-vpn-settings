@@ -45,7 +45,7 @@ deploy-beta:
     stage: deploy-beta
     script:
         - npm i --no-audit
-        - git clone "$(echo $CONFIG_GIT)" configApp
+        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} configApp
         - cp configApp/vpn-settings/appConfig.json .
         - cat configApp/.env configApp/vpn-settings/.env > .env
         - npm run deploy -- --branch=deploy-beta
