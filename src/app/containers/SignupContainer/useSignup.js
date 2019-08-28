@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { SignupContext } from './SignupProvider';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
-import { useApi, usePlans, useConfig } from 'react-components';
+import { useApi, usePlans, useConfig, useNotifications } from 'react-components';
 import { queryCreateUser } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { subscribe, setPaymentMethod, checkSubscription } from 'proton-shared/lib/api/payments';
@@ -10,14 +10,18 @@ import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getPlan } from './plans';
 import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
+import { c } from 'ttag';
+import { PLANS } from 'proton-shared/lib/constants';
 
 const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAuthHeaders(UID, AccessToken));
 
 const useSignup = () => {
     const api = useApi();
+    const { createNotification } = useNotifications();
     const { CLIENT_TYPE } = useConfig();
     const [model, setModel, { onLogin, signupAvailability }] = useContext(SignupContext);
-    const { planName, currency, cycle, email, verificationToken, paymentDetails } = model;
+    const { planName, currency, cycle, email, verificationToken, paymentDetails, appliedCoupon } = model;
+    // TODO: move verificationToken from model to useVerification hook
 
     const updateModel = (partial) => setModel((model) => ({ ...model, ...partial }));
 
@@ -25,14 +29,17 @@ const useSignup = () => {
     // TODO: handle plans loading
     const [plans, plansLoading] = usePlans(currency); // TODO: change available plans based on coupon code?
 
-    const selectedPlan = getPlan(planName, cycle, plans); // TODO: move plans.js closer to this file
+    const selectedPlan = getPlan(planName, cycle, appliedCoupon, plans); // TODO: move plans.js closer to this file
     const isLoading = plansLoading || !signupAvailability;
 
     // TODO: a lot of stuff is missing in these methods still
     const handleSignup = async (username, password) => {
-        const tokenData = paymentDetails
+        const tokenData = appliedCoupon
+            ? { Token: appliedCoupon.Coupon.Code, TokenType: 'coupon' }
+            : paymentDetails
             ? { Token: paymentDetails.VerifyCode, TokenType: 'payment' }
             : verificationToken;
+
         await srpVerify({
             api,
             credentials: { password },
@@ -50,21 +57,23 @@ const useSignup = () => {
             config: auth({ Username: username })
         });
 
-        if (paymentDetails) {
-            // Add subscription
-            // Amount = 0 means - paid before subscription
+        // Add subscription
+        // Amount = 0 means - paid before subscription
+        if (planName !== PLANS.FREE) {
             const subscription = {
                 PlanIDs: {
                     [selectedPlan.id]: 1
                 },
                 Amount: 0,
                 Currency: currency,
-                Cycle: cycle
-                // CouponCode: MODEL.CouponCode || undefined // TODO this
+                Cycle: cycle,
+                CouponCode: appliedCoupon && appliedCoupon.Coupon.Code
             };
             await api(withAuthHeaders(UID, AccessToken, subscribe(subscription)));
+        }
 
-            // Add payment method
+        // Add payment method
+        if (paymentDetails) {
             const { Payment } = await handle3DS(
                 {
                     Amount: selectedPlan.price.total,
@@ -81,8 +90,9 @@ const useSignup = () => {
         onLogin({ UID, EventID });
     };
 
+    // TODO: On invalid coupon close forms
     const applyCoupon = async (CouponCode) => {
-        const { Coupon } = await api(
+        const appliedCoupon = await api(
             checkSubscription({
                 PlanIDs: {
                     [selectedPlan.id]: 1
@@ -92,7 +102,14 @@ const useSignup = () => {
                 Cycle: cycle
             })
         );
-        updateModel({ appliedCoupon: Coupon });
+        if (appliedCoupon.Coupon) {
+            updateModel({ appliedCoupon });
+            createNotification({
+                text: c('Notification').t`Coupon "${appliedCoupon.Coupon.Description}" has been applied successfully`
+            });
+        } else {
+            createNotification({ text: c('Notification').t`Coupon is invalid or expired`, type: 'error' });
+        }
     };
 
     return {

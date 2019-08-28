@@ -59,8 +59,8 @@ const SignupContainer = ({ history }) => {
                         <>
                             {availablePlans && signupState === SignupState.Plan && (
                                 <PlanStep
-                                    onConfirm={(paymentDetails) =>
-                                        paymentDetails
+                                    onConfirm={(isVerifiedThroughPayment) =>
+                                        isVerifiedThroughPayment
                                             ? setSignupState(SignupState.Account)
                                             : setSignupState(SignupState.Verification)
                                     }

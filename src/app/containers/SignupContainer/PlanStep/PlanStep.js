@@ -18,10 +18,6 @@ const PlanStep = ({ onConfirm }) => {
     } = useSignup();
 
     // ! TODO: do not allow payment without a valid email
-    const handlePaymentDone = (paymentDetails = null) => {
-        updateModel({ paymentDetails });
-        onConfirm(paymentDetails);
-    };
 
     const handleChangePlan = (planName) => {
         if (planName === PLANS.FREE && isNudgeSuccessful) {
@@ -39,7 +35,7 @@ const PlanStep = ({ onConfirm }) => {
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
         } else if (email) {
-            onConfirm(); // No payment details
+            onConfirm(); // No payment details for free user
         }
         // TODO: focus on email and show error of no email
     };
@@ -61,11 +57,7 @@ const PlanStep = ({ onConfirm }) => {
                     </div>
                     {selectedPlan.planName !== PLANS.FREE && (
                         <div className="container-section-sticky-section" id="payment">
-                            <PaymentDetailsSection
-                                onPaymentDone={handlePaymentDone}
-                                onChangeCurrency={(currency) => updateModel({ currency })}
-                                amount={selectedPlan.price.total}
-                            />
+                            <PaymentDetailsSection onPaymentDone={onConfirm} />
                         </div>
                     )}
                 </div>
