@@ -35,6 +35,7 @@ const SignupProvider = ({ children, onLogin }) => {
         verificationToken: null,
         paymentDetails: null,
         appliedCoupon: null,
+        appliedGiftCode: null,
         currency
     });
 

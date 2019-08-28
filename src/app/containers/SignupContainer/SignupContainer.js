@@ -23,7 +23,7 @@ const SignupContainer = ({ history }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const {
         model: { planName, email },
-        handleSignup,
+        signup,
         signupAvailability,
         availablePlans
     } = useSignup();
@@ -71,7 +71,7 @@ const SignupContainer = ({ history }) => {
                                 <VerificationStep onVerificationDone={() => setSignupState(SignupState.Account)} />
                             )}
 
-                            {signupState === SignupState.Account && <AccountStep onSubmit={handleSignup} />}
+                            {signupState === SignupState.Account && <AccountStep onSubmit={signup} />}
                         </>
                     )}
                 </div>
