@@ -31,8 +31,6 @@ const PlansTable = ({
     const { Plans = [] } = subscription || {};
     const { Name = 'free' } = Plans.find(({ Services, Type }) => Type === PLAN && Services & VPN) || {};
 
-    console.log(VPNPLUS);
-
     return (
         <table className="pm-plans-table pm-table--highlight noborder" data-plan-number={PLAN_NUMBERS[Name]}>
             <thead>
