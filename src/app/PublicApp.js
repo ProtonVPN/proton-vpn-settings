@@ -44,8 +44,8 @@ const PublicApp = ({ onLogin }) => {
                         />
                         <Route path="/forgot-username" component={ForgotUsernameContainer} />
                         <Route
-                            path="/invite/:selector/:token"
-                            render={({ history, match }) => <PreInviteContainer />}
+                            path="/pre-invite/:selector/:token"
+                            render={({ history, match }) => <PreInviteContainer history={history} match={match} />}
                         />
                         <Route render={({ history }) => <LoginContainer history={history} onLogin={onLogin} />} />
                     </Switch>
