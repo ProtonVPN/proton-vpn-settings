@@ -8,9 +8,10 @@ import { CYCLE } from 'proton-shared/lib/constants';
 const SelectedPlan = () => {
     const {
         selectedPlan,
-        model: { cycle, currency }
+        model: { cycle, currency, appliedCoupon }
     } = useSignup();
     const planTitle = c('VPN plan title').t`ProtonVPN ${selectedPlan.title}`;
+    const discount = appliedCoupon && appliedCoupon.CouponDiscount;
 
     return (
         <div className="m1">
@@ -35,11 +36,19 @@ const SelectedPlan = () => {
                             </strong>
                         </div>
                     )}
+                    {discount && (
+                        <div className="flex flex-spacebetween">
+                            <span className="mr0-25">{c('Label').t`Coupon discount:`}</span>
+                            <strong>
+                                <Price className="color-global-success" currency={currency}>
+                                    {discount}
+                                </Price>
+                            </strong>
+                        </div>
+                    )}
                     <div className="flex flex-spacebetween">
                         <strong className="mr0-25">
-                            {cycle === CYCLE.YEARLY
-                                ? c('Plan price total').jt`Total (12 months):`
-                                : c('Plan price total').jt`Total:`}
+                            {cycle === CYCLE.YEARLY ? c('Label').jt`Total (12 months):` : c('Label').jt`Total:`}
                         </strong>
                         <Price currency={currency}>{selectedPlan.price.total}</Price>
                     </div>
