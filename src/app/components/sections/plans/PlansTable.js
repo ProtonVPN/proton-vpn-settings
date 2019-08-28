@@ -187,28 +187,28 @@ const PlansTable = ({
                     <th scope="row" className="pm-simple-table-row-th alignleft" />
                     <td className="aligncenter">
                         <SmallButton
-                            disabled={loading || Name === 'free'}
+                            disabled={loading}
                             className="pm-button--primary"
                             onClick={onSelect()}
                         >{c('Action').t`Update`}</SmallButton>
                     </td>
                     <td className="aligncenter">
                         <SmallButton
-                            disabled={loading || Name === 'vpnbasic'}
+                            disabled={loading}
                             className="pm-button--primary"
                             onClick={onSelect(VPNBASIC)}
                         >{c('Action').t`Update`}</SmallButton>
                     </td>
                     <td className="aligncenter">
                         <SmallButton
-                            disabled={loading || Name === 'vpnplus'}
+                            disabled={loading}
                             className="pm-button--primary"
                             onClick={onSelect(VPNPLUS)}
                         >{c('Action').t`Update`}</SmallButton>
                     </td>
                     <td className="aligncenter">
                         <SmallButton
-                            disabled={loading || Name === 'visionary'}
+                            disabled={loading}
                             className="pm-button--primary"
                             onClick={onSelect(VISIONARY)}
                         >{c('Action').t`Update`}</SmallButton>
