@@ -10,11 +10,6 @@ stages:
 variables:
     NODE_OPTIONS: --max-old-space-size=4096
 
-cache:
-    key: ${CI_COMMIT_REF_SLUG}
-    paths:
-        - node_modules/
-
 setup:
     stage: setup
     script:
@@ -33,7 +28,6 @@ lint:
 i18n:
     stage: test
     script:
-        - npm run i18n:extract
         - npm run i18n:validate
         - npm run i18n:validate:context
 
