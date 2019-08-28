@@ -3,11 +3,15 @@ import PropTypes from 'prop-types';
 import { classnames, Button } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
+import useSignup from '../../useSignup';
 
-const PlanCardHorizontal = ({ active, plan, currency, isAnnual, onClick }) => {
+const PlanCardHorizontal = ({ plan, onClick }) => {
+    const { selectedPlan } = useSignup();
+
+    const isActive = selectedPlan.planName === plan.planName;
     return (
         <div
-            className={classnames(['plan-card w100 border-top', active && 'plan-card--active'])}
+            className={classnames(['plan-card w100 border-top', isActive && 'plan-card--active'])}
             role="button"
             onClick={onClick}
         >
@@ -16,9 +20,9 @@ const PlanCardHorizontal = ({ active, plan, currency, isAnnual, onClick }) => {
                 <div>{plan.description}</div>
             </div>
 
-            <PlanPrice plan={plan} isAnnual={isAnnual} currency={currency} />
+            <PlanPrice plan={plan} />
             <div className="w30 flex flex-column">
-                <Button onClick={onClick} className={classnames(['mtauto mbauto', active && 'pm-button--primary'])}>
+                <Button onClick={onClick} className={classnames(['mtauto mbauto', isActive && 'pm-button--primary'])}>
                     {c('Plan Action').t`Get ${plan.title}`}
                 </Button>
             </div>
@@ -28,13 +32,11 @@ const PlanCardHorizontal = ({ active, plan, currency, isAnnual, onClick }) => {
 
 PlanCardHorizontal.propTypes = {
     plan: PropTypes.shape({
+        planName: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string
     }).isRequired,
-    currency: PropTypes.string.isRequired,
-    isAnnual: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired,
-    active: PropTypes.bool
+    onClick: PropTypes.func.isRequired
 };
 
 export default PlanCardHorizontal;

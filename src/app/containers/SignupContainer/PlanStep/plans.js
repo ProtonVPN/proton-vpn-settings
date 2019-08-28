@@ -68,23 +68,26 @@ const getPlanFeatures = (planName) =>
         }
     }[planName]);
 
-const getPlanPrice = (plan, isAnnual) => {
+// TODO: two-year deal
+const getPlanPrice = (plan, cycle) => {
+    const isMonthly = cycle === CYCLE.MONTHLY;
     const monthlyPrice = plan.Pricing[CYCLE.MONTHLY];
     const annualPrice = plan.Pricing[CYCLE.YEARLY];
 
-    const monthly = isAnnual ? annualPrice / CYCLE.MONTHLY : monthlyPrice;
-    const total = isAnnual ? annualPrice : monthlyPrice;
-    const saved = monthlyPrice * CYCLE.YEARLY - annualPrice;
+    const monthly = isMonthly ? monthlyPrice : annualPrice / CYCLE.YEARLY;
+    const total = isMonthly ? monthlyPrice : annualPrice;
+    const saved = monthlyPrice * CYCLE.YEARLY - monthly * CYCLE.YEARLY;
 
     return { monthly, total, saved };
 };
 
-export const getPlan = (planName, isAnnual, plans = []) => {
+export const getPlan = (planName, cycle, plans = []) => {
     const plan = plans.find(({ Type, Name }) => Type === PLAN_TYPES.PLAN && Name === planName);
     return {
         ...getPlanFeatures(planName),
+        planName,
         title: PLAN_NAMES[planName],
         id: plan && plan.ID,
-        price: plan ? getPlanPrice(plan, isAnnual) : { monthly: 0, total: 0, saved: 0 }
+        price: plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, saved: 0 }
     };
 };

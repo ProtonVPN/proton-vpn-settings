@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react';
 import PropTypes from 'prop-types';
-import { PLANS, DEFAULT_CURRENCY } from 'proton-shared/lib/constants';
+import { PLANS, DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
 import { queryDirectSignupStatus } from 'proton-shared/lib/api/user';
 import { useApiResult, useConfig } from 'react-components';
 
@@ -27,7 +27,7 @@ const SignupProvider = ({ children, onLogin }) => {
     const [model, setModel] = useState({
         planName: PLANS.FREE, // TODO: can set from query params
         currency: DEFAULT_CURRENCY,
-        isAnnual: true,
+        cycle: CYCLE.YEARLY,
         email: '',
         verificationToken: null,
         paymentDetails: null
