@@ -11,8 +11,11 @@ import useSignup from '../useSignup';
 
 const PlanStep = ({ onConfirm }) => {
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false); // If successfully convinced to purchase plus plan
-    const { model, updateModel, selectedPlan } = useSignup();
-    const { isAnnual, currency, planName } = model;
+    const {
+        model: { email },
+        updateModel,
+        selectedPlan
+    } = useSignup();
 
     // ! TODO: do not allow payment without a valid email
     const handlePaymentDone = (paymentDetails = null) => {
@@ -35,7 +38,7 @@ const PlanStep = ({ onConfirm }) => {
     const handleContinueClick = () => {
         if (isNudgeSuccessful) {
             location.replace('/signup#payment');
-        } else if (model.email) {
+        } else if (email) {
             onConfirm(); // No payment details
         }
         // TODO: focus on email and show error of no email
@@ -43,19 +46,12 @@ const PlanStep = ({ onConfirm }) => {
 
     return (
         <ObserverSections>
-            <PlansSection
-                isAnnual={isAnnual}
-                currency={currency}
-                onAnnualChange={(isAnnual) => updateModel({ isAnnual })}
-                onSelect={handleChangePlan}
-                selected={planName}
-                id="plan"
-            />
+            <PlansSection onSelect={handleChangePlan} id="plan" />
             <div className="flex" id="details">
                 <div className="flex-item-fluid">
                     <div className="container-section-sticky-section" id="email">
                         <EmailSection />
-                        {(planName === PLANS.FREE || isNudgeSuccessful) && (
+                        {(selectedPlan.planName === PLANS.FREE || isNudgeSuccessful) && (
                             <FreeSignupSection
                                 onContinue={handleContinueClick}
                                 onUpgrade={handleUpgradeClick}
@@ -63,7 +59,7 @@ const PlanStep = ({ onConfirm }) => {
                             />
                         )}
                     </div>
-                    {planName !== PLANS.FREE && (
+                    {selectedPlan.planName !== PLANS.FREE && (
                         <div className="container-section-sticky-section" id="payment">
                             <PaymentDetailsSection
                                 onPaymentDone={handlePaymentDone}

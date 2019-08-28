@@ -8,7 +8,6 @@ import { subscribe, setPaymentMethod } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getPlan } from './PlanStep/plans';
-import { CYCLE } from 'proton-shared/lib/constants';
 import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
 
@@ -17,7 +16,7 @@ const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAu
 const useSignup = () => {
     const api = useApi();
     const [model, setModel, { onLogin, signupAvailability }] = useContext(SignupContext);
-    const { planName, currency, isAnnual, email, verificationToken, paymentDetails } = model;
+    const { planName, currency, cycle, email, verificationToken, paymentDetails } = model;
 
     const updateModel = (partial) => setModel((model) => ({ ...model, ...partial }));
 
@@ -25,7 +24,7 @@ const useSignup = () => {
     // TODO: handle plans loading
     const [plans, plansLoading] = usePlans(currency); // TODO: change available plans based on coupon code?
 
-    const selectedPlan = getPlan(planName, isAnnual, plans); // TODO: move plans.js closer to this file
+    const selectedPlan = getPlan(planName, cycle, plans); // TODO: move plans.js closer to this file
     const isLoading = plansLoading || !signupAvailability;
 
     // TODO: a lot of stuff is missing in these methods still
@@ -59,7 +58,7 @@ const useSignup = () => {
                 },
                 Amount: 0,
                 Currency: currency,
-                Cycle: isAnnual ? CYCLE.YEARLY : CYCLE.MONTHLY
+                Cycle: cycle
                 // CouponCode: MODEL.CouponCode || undefined // TODO this
             };
             await api(withAuthHeaders(UID, AccessToken, subscribe(subscription)));

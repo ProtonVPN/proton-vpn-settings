@@ -21,8 +21,12 @@ const SignupState = {
 // TODO: payment code
 const SignupContainer = ({ history }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
-    const { handleSignup, signupAvailability, model, availablePlans } = useSignup();
-    const { email, planName } = model;
+    const {
+        model: { planName, email },
+        handleSignup,
+        signupAvailability,
+        availablePlans
+    } = useSignup();
 
     // TODO: handle signup loading
     if (signupAvailability && signupAvailability.inviteOnly) {

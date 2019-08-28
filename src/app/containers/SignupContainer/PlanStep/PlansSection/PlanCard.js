@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 import { classnames, Button } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
+import useSignup from '../../useSignup';
 
-const PlanCard = ({ active, plan, currency, isAnnual, onClick }) => {
+const PlanCard = ({ plan, onClick }) => {
+    const { selectedPlan } = useSignup();
+
+    const isActive = selectedPlan.planName === plan.planName;
+
     return (
         <div className="flex-autogrid-item flex flex-column">
             <div className="p1 flex flex-items-center">
@@ -16,9 +21,9 @@ const PlanCard = ({ active, plan, currency, isAnnual, onClick }) => {
             <div
                 role="button"
                 onClick={onClick}
-                className={classnames(['plan-card flex-column', active && 'plan-card--active'])}
+                className={classnames(['plan-card flex-column', isActive && 'plan-card--active'])}
             >
-                <PlanPrice plan={plan} isAnnual={isAnnual} currency={currency} />
+                <PlanPrice plan={plan} />
                 {plan.description && <div className="border-bottom">{plan.description}</div>}
                 {plan.highlights && (
                     <ul>
@@ -27,7 +32,7 @@ const PlanCard = ({ active, plan, currency, isAnnual, onClick }) => {
                         ))}
                     </ul>
                 )}
-                <Button onClick={onClick} className={classnames(['w100 mtauto', active && 'pm-button--primary'])}>
+                <Button onClick={onClick} className={classnames(['w100 mtauto', isActive && 'pm-button--primary'])}>
                     {c('Plan Action').t`Get ${plan.title}`}
                 </Button>
             </div>
@@ -37,16 +42,14 @@ const PlanCard = ({ active, plan, currency, isAnnual, onClick }) => {
 
 PlanCard.propTypes = {
     plan: PropTypes.shape({
+        planName: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string,
         features: PropTypes.arrayOf(PropTypes.string),
         highlights: PropTypes.arrayOf(PropTypes.string),
         isBest: PropTypes.bool
     }).isRequired,
-    currency: PropTypes.string.isRequired,
-    isAnnual: PropTypes.bool.isRequired,
-    onClick: PropTypes.func.isRequired,
-    active: PropTypes.bool
+    onClick: PropTypes.func.isRequired
 };
 
 export default PlanCard;
