@@ -5,7 +5,7 @@ import { c } from 'ttag';
 import PlanCard from './PlanCard';
 import PlanCardHorizontal from './PlanCardHorizontal';
 import { PLANS, CYCLE } from 'proton-shared/lib/constants';
-import { getPlan } from '../plans';
+import { getPlan } from '../../plans';
 import useSignup from '../../useSignup';
 
 const PlansSection = ({ onSelect }) => {
