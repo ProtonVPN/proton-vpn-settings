@@ -5,7 +5,7 @@ stages:
     - test
     - deploy
     - deploy-beta
-    - deploy-beta
+    - deploy-prod
 
 variables:
     NODE_OPTIONS: --max-old-space-size=4096
