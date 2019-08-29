@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
     Title,
@@ -9,50 +9,68 @@ import {
     Field,
     Alert,
     Block,
-    useApiResult,
-    useDebounceInput,
-    LinkButton
+    LinkButton,
+    useApi
 } from 'react-components';
 import { c } from 'ttag';
 import { queryCheckUsernameAvailability } from 'proton-shared/lib/api/user';
 
-// TODO: disabled form, validations
+// TODO: disabled form, password validations
 const AccountStep = ({ onSubmit }) => {
-    const [rawUsername, setRawUsername] = useState('');
+    const api = useApi();
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const username = useDebounceInput(rawUsername, 500);
-    const { request, error } = useApiResult(queryCheckUsernameAvailability);
+    const [usernameError, setUsernameError] = useState();
 
-    useEffect(() => {
-        if (username) {
-            request(username);
+    const handleChangeUsername = ({ target }) => {
+        if (usernameError) {
+            setUsernameError(null);
         }
-    }, [username]);
-
-    const handleChangeUsername = ({ target }) => setRawUsername(target.value);
+        setUsername(target.value);
+    };
     const handleChangePassword = ({ target }) => setPassword(target.value);
-    const handleSuggestionClick = (username) => () => setRawUsername(username);
-    const handlSubmit = (e) => {
+    const handleSuggestionClick = (username) => () => setUsername(username);
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        onSubmit(username, password);
+        try {
+            await api(queryCheckUsernameAvailability(username));
+            onSubmit(username, password);
+        } catch (e) {
+            const { Error: message, Details: { Suggestions: suggestions = [] } = {} } = e.data;
+            setUsernameError({
+                message,
+                suggestions
+            });
+        }
     };
 
-    const { Error: errorMessage, Details: { Suggestions = [] } = {} } = error ? error.data : {};
-
     return (
-        <form onSubmit={handlSubmit}>
+        <form onSubmit={handleSubmit}>
             <Title>{c('Title').t`Complete account set-up`}</Title>
             <Block>
                 <SubTitle>{c('Title').t`1. Choose your username`}</SubTitle>
                 <Alert>{c('Info').t`Your username can be used for ProtonMail account`}</Alert>
                 <Field>
-                    <Input error={errorMessage} value={rawUsername} onChange={handleChangeUsername} name="username" />
-                    {Suggestions.length > 0 && <div>{c('Info').t`Available usernames:`}</div>}
-                    {Suggestions.map((suggestion) => (
-                        <LinkButton className="mr0-5" onClick={handleSuggestionClick(suggestion)} key={suggestion}>
-                            {suggestion}
-                        </LinkButton>
-                    ))}
+                    <Input
+                        error={usernameError && usernameError.message}
+                        value={username}
+                        onChange={handleChangeUsername}
+                        name="username"
+                    />
+                    {usernameError && usernameError.suggestions.length > 0 && (
+                        <>
+                            <div>{c('Info').t`Available usernames:`}</div>
+                            {usernameError.suggestions.map((suggestion) => (
+                                <LinkButton
+                                    className="mr0-5"
+                                    onClick={handleSuggestionClick(suggestion)}
+                                    key={suggestion}
+                                >
+                                    {suggestion}
+                                </LinkButton>
+                            ))}
+                        </>
+                    )}
                 </Field>
             </Block>
 
@@ -65,7 +83,8 @@ const AccountStep = ({ onSubmit }) => {
             </Block>
 
             <Field>
-                <PrimaryButton type="submit">{c('Action').t`Complete`}</PrimaryButton>
+                <PrimaryButton disabled={usernameError || !username || !password} type="submit">{c('Action')
+                    .t`Complete`}</PrimaryButton>
             </Field>
         </form>
     );

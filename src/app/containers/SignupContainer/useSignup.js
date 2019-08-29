@@ -41,7 +41,6 @@ const useSignup = () => {
     const selectedPlan = getPlan(planName, cycle, appliedCoupon || appliedGiftCode, plans); // TODO: move plans.js closer to this file
     const isLoading = plansLoading || !signupAvailability;
 
-    // TODO: Credit wtf?
     /**
      * Verifies if payment was done and saves payment details for signup
      * @param {*=} parameters payment parameters from usePayment
