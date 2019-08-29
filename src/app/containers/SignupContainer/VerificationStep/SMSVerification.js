@@ -1,52 +1,36 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Bordered, Block, useNotifications, InlineLinkButton, useApiResult } from 'react-components';
+import { Bordered, Block, useNotifications, InlineLinkButton, useLoading } from 'react-components';
 import { c } from 'ttag';
 import PhoneInput from './PhoneInput';
-import { querySMSVerificationCode, queryCheckVerificationCode } from 'proton-shared/lib/api/user';
 import VerificationInput from './VerificationInput';
 
-const SMSVerification = ({ onVerificationDone, onError }) => {
+const SMSVerification = ({ verify, requestCode }) => {
     const { createNotification } = useNotifications();
-    const [phone, setPhone] = useState('');
-    const { loading: codeLoading, request: requestCode, error: requestError } = useApiResult((phone) =>
-        querySMSVerificationCode(phone)
-    );
-    const { loading: verifyLoading, request: requestVerification, error: verificationError } = useApiResult(
-        ({ Token, TokenType }) => queryCheckVerificationCode(Token, TokenType, 1)
-    );
 
-    useEffect(() => {
-        if (requestError || verificationError) {
-            onError();
-        }
-    }, [requestError, verificationError]);
+    const [phone, setPhone] = useState('');
+    const [codeLoading, withLoadingCode] = useLoading();
+    const [verifyLoading, withLoadingVerify] = useLoading();
 
     const handleSendClick = async (phone) => {
-        await requestCode(phone);
-        setPhone(phone);
+        await withLoadingCode(requestCode(phone));
         createNotification({ text: c('Notification').jt`Verification code sent to: ${phone}` });
+        setPhone(phone);
     };
 
     const handleResendClick = async () => {
-        await requestCode(phone);
+        await withLoadingCode(requestCode(phone));
         createNotification({ text: c('Notification').jt`New code sent to: ${phone}` });
     };
 
-    const handleValidateClick = async (code) => {
-        const tokenData = { Token: `${phone}:${code}`, TokenType: 'sms' };
-        await requestVerification(tokenData);
-        onVerificationDone(tokenData);
-    };
-
-    const phoneText = <strong>{phone}</strong>;
+    const handleVerifyClick = (code) => withLoadingVerify(verify(phone, code));
 
     if (phone) {
         return (
             <Bordered>
                 <Block>{c('Info').t`Please check your phone and enter the code we sent you`}</Block>
-                <Block>{c('Info').jt`The verification sms is on it's way to ${phoneText}`}</Block>
-                <VerificationInput isLoading={verifyLoading} onValidate={handleValidateClick} />
+                <Block>{c('Info').jt`The verification sms is on it's way to ${<strong>{phone}</strong>}`}</Block>
+                <VerificationInput isLoading={verifyLoading} onVerify={handleVerifyClick} />
 
                 <div className="flex-items-center flex">
                     {c('Info').t`Didn't receive the sms?`}
@@ -66,8 +50,8 @@ const SMSVerification = ({ onVerificationDone, onError }) => {
 };
 
 SMSVerification.propTypes = {
-    onVerificationDone: PropTypes.func.isRequired,
-    onError: PropTypes.func.isRequired
+    verify: PropTypes.func.isRequired,
+    requestCode: PropTypes.func.isRequired
 };
 
 export default SMSVerification;
