@@ -48,7 +48,10 @@ deploy-beta:
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - npm run deploy -- --branch=deploy-beta
+        - ls -l
+        - cat ${CI_PROJECT_DIR}/.env
+        - cat .env
+        - npm run deploy -- --branch=deploy-beta --verbose
     when: manual
 
 deploy-prod:
