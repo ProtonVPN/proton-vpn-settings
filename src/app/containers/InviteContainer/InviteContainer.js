@@ -15,13 +15,12 @@ import { c } from 'ttag';
 import { getClient, collectInfo } from 'react-components/helpers/report';
 import { reportBug } from 'proton-shared/lib/api/reports';
 
-// TODO: prefill email from url parameters when redirecting from signup
 const InviteContainer = ({ history }) => {
     const { createNotification } = useNotifications();
     const [description, setDescription] = useState('');
     const [email, setEmail] = useState('');
     const { CLIENT_ID, APP_VERSION, CLIENT_TYPE } = useConfig();
-    const Client = getClient(CLIENT_ID); // TODO: VPN client currently won't work
+    const Client = getClient(CLIENT_ID);
     const { request, loading } = useApiWithoutResult(() =>
         reportBug({
             ...collectInfo(),

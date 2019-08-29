@@ -12,13 +12,10 @@ import { c } from 'ttag';
 const SignupState = {
     Plan: 'plan',
     Verification: 'verification',
-    Account: 'account',
-    Thanks: 'thanks'
+    Account: 'account'
 };
 
-// TODO: step names translations
-// TODO: payment code
-const SignupContainer = ({ history }) => {
+const SignupContainer = () => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const {
         model: { planName, email, inviteToken },
@@ -26,8 +23,6 @@ const SignupContainer = ({ history }) => {
         signupAvailability,
         availablePlans
     } = useSignup();
-
-    // setSignupState(SignupState.Thanks); // TODO: onLogin show thanks page
 
     const step = planName ? (email ? (signupState === SignupState.Thanks ? 3 : 2) : 1) : 0;
 

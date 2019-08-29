@@ -31,7 +31,6 @@ const useSignup = () => {
         appliedCoupon,
         appliedGiftCode
     } = model;
-    // TODO: move verificationToken from model to useVerification hook
 
     const updateModel = (partial) => setModel((model) => ({ ...model, ...partial }));
 
@@ -65,7 +64,6 @@ const useSignup = () => {
         }
     };
 
-    // TODO: captcha
     const getToken = () => {
         if (inviteToken) {
             return inviteToken;
@@ -179,7 +177,8 @@ const useSignup = () => {
         updateModel,
         signup,
         applyCoupon,
-        applyGiftCode
+        applyGiftCode,
+        onLogin
     };
 };
 
