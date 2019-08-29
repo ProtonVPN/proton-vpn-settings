@@ -10,7 +10,7 @@ import useVerification from './useVerification';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
 const VerificationStep = ({ onVerificationDone }) => {
-    const { model, signupAvailability, updateModel } = useSignup();
+    const { model, signupAvailability, updateModel, onLogin } = useSignup();
     const {
         verifyEmail,
         verifySMS,
@@ -20,7 +20,7 @@ const VerificationStep = ({ onVerificationDone }) => {
         emailVerificationError,
         smsCodeError,
         smsVerificationError
-    } = useVerification();
+    } = useVerification(onLogin);
 
     const handleRequestEmailCode = async (email) => {
         await requestEmailCode(email);

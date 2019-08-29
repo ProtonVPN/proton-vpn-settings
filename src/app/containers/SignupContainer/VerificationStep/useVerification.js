@@ -1,3 +1,4 @@
+import React from 'react';
 import { useConfig, useModals, useApiResult } from 'react-components';
 import {
     queryCheckVerificationCode,
@@ -5,8 +6,9 @@ import {
     querySMSVerificationCode
 } from 'proton-shared/lib/api/user';
 import LoginSignupModal from './LoginSignupModal';
+import { useEffect } from 'react';
 
-const useVerification = () => {
+const useVerification = (onLogin) => {
     const { createModal } = useModals();
     const { CLIENT_TYPE } = useConfig();
     const { error: emailCodeError, request: requestEmailCode } = useApiResult((email) =>
@@ -20,18 +22,17 @@ const useVerification = () => {
         queryCheckVerificationCode(token, 'sms', CLIENT_TYPE)
     );
 
-    // TODO: on login, what do?
-    const verifyEmail = async (email, code) => {
-        try {
-            const Token = `${email}:${code}`;
-            await requestEmailVerification(Token);
-            return { Token, TokenType: 'email' };
-        } catch (e) {
-            if (e.data.Code === 12220) {
-                createModal(<LoginSignupModal />);
-            }
-            throw e;
+    useEffect(() => {
+        // Existing protonmail account
+        if (emailCodeError && emailCodeError.data.Code === 12220) {
+            createModal(<LoginSignupModal onLogin={onLogin} />);
         }
+    }, [emailCodeError]);
+
+    const verifyEmail = async (email, code) => {
+        const Token = `${email}:${code}`;
+        await requestEmailVerification(Token);
+        return { Token, TokenType: 'email' };
     };
 
     const verifySMS = async (phone, code) => {

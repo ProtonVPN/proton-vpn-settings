@@ -59,7 +59,6 @@ const PaymentDetailsSection = ({ onPaymentDone }) => {
         }
     };
 
-    // TODO: do we need to verify if we're using a gift code without payment?
     const handlePayment = async () => {
         await withLoadingVerify(checkPayment(parameters));
         onPaymentDone(true);
