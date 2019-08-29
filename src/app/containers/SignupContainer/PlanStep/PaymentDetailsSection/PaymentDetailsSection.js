@@ -69,7 +69,7 @@ const PaymentDetailsSection = ({ onPaymentDone }) => {
     const policyLink = <Href url="https://protonvpn.com/privacy-policy">{c('Link').t`Privacy Policy`}</Href>;
 
     return (
-        <>
+        <div className="mb2" id="payment">
             <SubTitle>{c('Title').t`3. Enter payment details`}</SubTitle>
             <Alert>
                 {c('Info').jt`By completing your payment, you agree to abide by our ${tosLink} and ${policyLink}`}
@@ -139,7 +139,7 @@ const PaymentDetailsSection = ({ onPaymentDone }) => {
 
             {(method === PAYMENT_METHOD_TYPES.CARD || !amount) && (
                 <Row>
-                    <Label />
+                    <Label></Label>
                     <Field>
                         <PrimaryButton loading={loadingVerify} disabled={amount && !canPay} onClick={handlePayment}>{c(
                             'Action'
@@ -147,7 +147,7 @@ const PaymentDetailsSection = ({ onPaymentDone }) => {
                     </Field>
                 </Row>
             )}
-        </>
+        </div>
     );
 };
 

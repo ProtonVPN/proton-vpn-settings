@@ -18,7 +18,7 @@ const PlansSection = ({ onSelect }) => {
     const [plans] = usePlans();
 
     return (
-        <>
+        <div className="mb2">
             <SubTitle>{c('Title').t`1. Choose a plan that works for you`}</SubTitle>
             <Row>
                 <Label className="flex-item-centered-vert">{c('Label').t`Pay annually (save 20%)`}</Label>
@@ -41,7 +41,7 @@ const PlansSection = ({ onSelect }) => {
                 onClick={handleSelect(PLANS.VISIONARY)}
                 plan={getPlan(PLANS.VISIONARY, cycle, null, plans)}
             />
-        </>
+        </div>
     );
 };
 

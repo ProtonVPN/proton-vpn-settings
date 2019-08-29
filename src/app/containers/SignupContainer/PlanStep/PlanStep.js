@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { ObserverSections } from 'react-components';
 import PlansSection from './PlansSection/PlansSection';
 import EmailSection from './EmailSection/EmailSection';
 import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection';
@@ -33,37 +32,31 @@ const PlanStep = ({ onConfirm }) => {
 
     const handleContinueClick = () => {
         if (isNudgeSuccessful) {
-            location.replace('/signup#payment');
+            // TODO: focus on email and show error of no email
+            document.querySelector('#payment').scrollIntoView({ behavior: 'smooth' });
         } else if (email) {
             onConfirm(); // No payment details for free user
         }
-        // TODO: focus on email and show error of no email
     };
 
     return (
-        <ObserverSections>
-            <PlansSection onSelect={handleChangePlan} id="plan" />
+        <>
+            <PlansSection onSelect={handleChangePlan} />
             <div className="flex" id="details">
                 <div className="flex-item-fluid">
-                    <div className="container-section-sticky-section" id="email">
-                        <EmailSection />
-                        {(selectedPlan.planName === PLANS.FREE || isNudgeSuccessful) && (
-                            <FreeSignupSection
-                                onContinue={handleContinueClick}
-                                onUpgrade={handleUpgradeClick}
-                                isPlusActive={isNudgeSuccessful}
-                            />
-                        )}
-                    </div>
-                    {selectedPlan.planName !== PLANS.FREE && (
-                        <div className="container-section-sticky-section" id="payment">
-                            <PaymentDetailsSection onPaymentDone={onConfirm} />
-                        </div>
+                    <EmailSection />
+                    {(selectedPlan.planName === PLANS.FREE || isNudgeSuccessful) && (
+                        <FreeSignupSection
+                            onContinue={handleContinueClick}
+                            onUpgrade={handleUpgradeClick}
+                            isPlusActive={isNudgeSuccessful}
+                        />
                     )}
+                    {selectedPlan.planName !== PLANS.FREE && <PaymentDetailsSection onPaymentDone={onConfirm} />}
                 </div>
                 <SelectedPlan />
             </div>
-        </ObserverSections>
+        </>
     );
 };
 

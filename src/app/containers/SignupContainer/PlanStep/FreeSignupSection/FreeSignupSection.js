@@ -7,7 +7,7 @@ const FreeSignupSection = ({ isPlusActive, onContinue, onUpgrade }) => {
     const tosLink = <Href url="https://protonvpn.com/terms-and-conditions">{c('Link').t`Terms of Service`}</Href>;
     const policyLink = <Href url="https://protonvpn.com/privacy-policy">{c('Link').t`Privacy Policy`}</Href>;
     return (
-        <>
+        <div className="mb2">
             <Block className="mt2">{c('Info')
                 .jt`By choosing ProtonVPN Free, you agree to abide by our ${tosLink} and ${policyLink}`}</Block>
             <div className="flex onmobile-flex-column">
@@ -32,7 +32,7 @@ const FreeSignupSection = ({ isPlusActive, onContinue, onUpgrade }) => {
                     {isPlusActive && <div>{c('Info').t`Plus plan selected`}</div>}
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
