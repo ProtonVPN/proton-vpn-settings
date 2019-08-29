@@ -10,6 +10,10 @@ stages:
 variables:
     NODE_OPTIONS: --max-old-space-size=4096
 
+before_script:
+ - git config --global user.email $GIT_CI_EMAIL
+ - git config --global user.name $GIT_CI_USERNAME
+
 setup:
     stage: setup
     script:
@@ -48,9 +52,6 @@ deploy-beta:
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - ls -la
-        - cat ${CI_PROJECT_DIR}/.env
-        - cat .env
         - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n
     when: manual
 
