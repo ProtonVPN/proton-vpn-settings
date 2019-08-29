@@ -22,7 +22,7 @@ const SignupState = {
 const SignupContainer = ({ history }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const {
-        model: { planName, email },
+        model: { planName, email, inviteToken },
         signup,
         signupAvailability,
         availablePlans
@@ -60,7 +60,7 @@ const SignupContainer = ({ history }) => {
                             {availablePlans && signupState === SignupState.Plan && (
                                 <PlanStep
                                     onConfirm={(isVerifiedThroughPayment) =>
-                                        isVerifiedThroughPayment
+                                        isVerifiedThroughPayment || inviteToken
                                             ? setSignupState(SignupState.Account)
                                             : setSignupState(SignupState.Verification)
                                     }
