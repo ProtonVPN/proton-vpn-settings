@@ -23,7 +23,6 @@ const EmailVerification = ({ verify, requestCode, requireEmailChange }) => {
     const handleSendClick = async (email) => {
         await withLoadingCode(requestCode(email));
         createNotification({ text: c('Notification').jt`Verification code sent to: ${email}` });
-        updateModel({ email });
     };
 
     // TODO: resend timer
