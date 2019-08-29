@@ -16,7 +16,7 @@ const EmailSection = () => {
     const loginLink = <Link to="/login">{c('Link').t`log in with ProtonMail account`}</Link>;
 
     return (
-        <>
+        <div className="mb2">
             <SubTitle>{c('Title').t`2. Enter your email`}</SubTitle>
             <Alert>{c('Info')
                 .t`Your email is not shared with third parties and is only used for account-related questions, communication, and recovery.
@@ -34,7 +34,7 @@ const EmailSection = () => {
                 </Field>
             </Block>
             <span>{c('Info').jt`or ${loginLink}`}</span>
-        </>
+        </div>
     );
 };
 

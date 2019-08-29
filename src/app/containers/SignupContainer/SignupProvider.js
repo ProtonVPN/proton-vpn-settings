@@ -7,6 +7,8 @@ import { withRouter } from 'react-router-dom';
 
 export const SignupContext = createContext(null);
 
+const DEFAULT_PLAN = PLANS.FREE;
+
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes('email');
     const sms = allowedMethods.includes('sms');
@@ -22,16 +24,18 @@ const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     };
 };
 
-const SignupProvider = ({ children, onLogin, history }) => {
+const SignupProvider = ({ children, onLogin, location, history }) => {
     const { CLIENT_TYPE } = useConfig();
     const { result } = useApiResult(() => queryDirectSignupStatus(CLIENT_TYPE), []);
 
     const [plans = []] = usePlans();
     const currency = plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
     const invite = history.location.state;
+    const searchParams = new URLSearchParams(location.search);
+    const initialPlan = invite ? PLANS.FREE : searchParams.get('plan') || DEFAULT_PLAN;
 
     const [model, setModel] = useState({
-        planName: PLANS.FREE, // TODO: can set from query params
+        planName: initialPlan,
         cycle: CYCLE.YEARLY,
         email: '',
         inviteToken: invite && `${invite.selector}:${invite.token}`,
@@ -61,6 +65,9 @@ const SignupProvider = ({ children, onLogin, history }) => {
 SignupProvider.propTypes = {
     onLogin: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
+    location: PropTypes.shape({
+        search: PropTypes.string.isRequired
+    }).isRequired,
     history: PropTypes.shape({
         location: PropTypes.shape({
             state: PropTypes.shape({
