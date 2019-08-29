@@ -25,6 +25,7 @@ const useSignup = () => {
         currency,
         cycle,
         email,
+        inviteToken,
         verificationToken,
         paymentDetails,
         appliedCoupon,
@@ -64,19 +65,25 @@ const useSignup = () => {
         }
     };
 
+    // TODO: captcha
+    const getToken = () => {
+        if (inviteToken) {
+            return inviteToken;
+        } else if (appliedCoupon) {
+            return { Token: appliedCoupon.Coupon.Code, TokenType: 'coupon' };
+        } else if (paymentDetails) {
+            return { Token: paymentDetails.VerifyCode, TokenType: 'payment' };
+        }
+        return verificationToken;
+    };
+
     // TODO: a lot of stuff is missing in these methods still
     const signup = async (username, password) => {
-        const tokenData = appliedCoupon
-            ? { Token: appliedCoupon.Coupon.Code, TokenType: 'coupon' }
-            : paymentDetails
-            ? { Token: paymentDetails.VerifyCode, TokenType: 'payment' }
-            : verificationToken;
-
         await srpVerify({
             api,
             credentials: { password },
             config: queryCreateUser({
-                ...tokenData,
+                ...getToken(),
                 Type: CLIENT_TYPE,
                 Email: email,
                 Username: username
