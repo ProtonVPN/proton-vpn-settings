@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import VpnLogo from 'react-components/components/logo/VpnLogo';
 import { Wizard } from 'react-components';
 import { PLANS } from 'proton-shared/lib/constants';
@@ -7,7 +6,7 @@ import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
-import { withRouter } from 'react-router';
+import { Redirect } from 'react-router-dom';
 import { c } from 'ttag';
 
 const SignupState = {
@@ -28,14 +27,14 @@ const SignupContainer = ({ history }) => {
         availablePlans
     } = useSignup();
 
-    // TODO: handle signup loading
-    if (signupAvailability && signupAvailability.inviteOnly) {
-        history.push('/invite');
-    }
-
     // setSignupState(SignupState.Thanks); // TODO: onLogin show thanks page
 
     const step = planName ? (email ? (signupState === SignupState.Thanks ? 3 : 2) : 1) : 0;
+
+    // TODO: handle signup loading
+    if (signupAvailability && signupAvailability.inviteOnly) {
+        return <Redirect to="/invite" />;
+    }
 
     return (
         <>
@@ -80,8 +79,4 @@ const SignupContainer = ({ history }) => {
     );
 };
 
-SignupContainer.propTypes = {
-    history: PropTypes.object.isRequired
-};
-
-export default withRouter(SignupContainer);
+export default SignupContainer;
