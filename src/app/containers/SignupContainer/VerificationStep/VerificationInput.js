@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Row, Field, Input, PrimaryButton } from 'react-components';
 import { c } from 'ttag';
 
-const VerificationInput = ({ isLoading, onValidate }) => {
+const VerificationInput = ({ isLoading, onVerify }) => {
     const [code, setCode] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onValidate(code);
+        onVerify(code);
     };
     const handleChangeCode = ({ target }) => setCode(target.value);
 
@@ -23,7 +23,8 @@ const VerificationInput = ({ isLoading, onValidate }) => {
                     />
                 </Field>
                 <div>
-                    <PrimaryButton type="submit" loading={isLoading}>{c('Action').t`Validate`}</PrimaryButton>
+                    <PrimaryButton disabled={!code} type="submit" loading={isLoading}>{c('Action')
+                        .t`Validate`}</PrimaryButton>
                 </div>
             </Row>
         </form>
@@ -32,7 +33,7 @@ const VerificationInput = ({ isLoading, onValidate }) => {
 
 VerificationInput.propTypes = {
     isLoading: PropTypes.bool,
-    onValidate: PropTypes.func.isRequired
+    onVerify: PropTypes.func.isRequired
 };
 
 export default VerificationInput;

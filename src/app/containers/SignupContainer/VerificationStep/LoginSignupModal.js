@@ -5,6 +5,7 @@ import { c } from 'ttag';
 import LoginForm from 'react-components/containers/login/LoginForm';
 
 // TODO: reuse signup container logic (hook?)
+// TODO: what this do?
 const LoginSignupModal = ({ onClose, ...rest }) => {
     const modalTitleID = 'loginSignupModal';
     return (
