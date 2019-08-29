@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Title, Alert, Href } from 'react-components';
 import { Link } from 'react-router-dom';
@@ -6,18 +6,42 @@ import { c } from 'ttag';
 import SMSVerification from './SMSVerification';
 import EmailVerification from './EmailVerification';
 import useSignup from '../useSignup';
+import useVerification from './useVerification';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)
 const VerificationStep = ({ onVerificationDone }) => {
-    const [showSupport, setShowSupport] = useState(false);
-    const { signupAvailability, updateModel } = useSignup();
+    const { model, signupAvailability, updateModel } = useSignup();
+    const {
+        verifyEmail,
+        verifySMS,
+        requestEmailCode,
+        requestSMSCode,
+        emailCodeError,
+        emailVerificationError,
+        smsCodeError,
+        smsVerificationError
+    } = useVerification();
 
-    const handleError = () => setShowSupport(true);
-    const handleVerificationDone = (verificationToken) => {
+    const handleRequestEmailCode = async (email) => {
+        await requestEmailCode(email);
+        if (model.email !== email) {
+            updateModel({ email });
+        }
+    };
+
+    const handleVerifyEmail = async (email, code) => {
+        const { verificationToken } = await verifyEmail(email, code);
         updateModel({ verificationToken });
         onVerificationDone();
     };
 
+    const handleVerifySms = async (phone, code) => {
+        const { verificationToken } = await verifySMS(phone, code);
+        updateModel({ verificationToken });
+        onVerificationDone();
+    };
+
+    const showSupport = smsCodeError || smsVerificationError || emailCodeError || emailVerificationError;
     const doNotClose = <strong>{c('Warning').t`Do not close`}</strong>;
     const supportLink = <Href url="https://protonvpn.com/support-form">{c('Link').t`support team`}</Href>; // TODO: relative url
     const invitationLink = (
@@ -46,12 +70,14 @@ const VerificationStep = ({ onVerificationDone }) => {
             )}
 
             {signupAvailability.email && (
-                <EmailVerification onError={handleError} onVerificationDone={handleVerificationDone} />
+                <EmailVerification
+                    verify={handleVerifyEmail}
+                    requestCode={handleRequestEmailCode}
+                    requireEmailChange={emailCodeError}
+                />
             )}
 
-            {signupAvailability.sms && (
-                <SMSVerification onError={handleError} onVerificationDone={handleVerificationDone} />
-            )}
+            {signupAvailability.sms && <SMSVerification verify={handleVerifySms} requestCode={requestSMSCode} />}
         </>
     );
 };

@@ -15,7 +15,8 @@ const PhoneInput = ({ onSendClick, loading }) => {
                 <TelInput value={phone} onChange={handleChangePhone} placeholder="(201) 555-0123" />
             </Field>
             <div>
-                <PrimaryButton loading={loading} onClick={handleSendClick}>{c('Action').t`Send`}</PrimaryButton>
+                <PrimaryButton disabled={!phone} loading={loading} onClick={handleSendClick}>{c('Action')
+                    .t`Send`}</PrimaryButton>
             </div>
         </Row>
     );
