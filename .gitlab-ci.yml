@@ -37,12 +37,14 @@ i18n:
 
 deploy:
     stage: deploy
+    tags:
+        - heavy
     script:
         - npm i --no-audit
-        - git clone "$(echo $CONFIG_GIT)" configApp
-        - cp configApp/vpn-settings/appConfig.json .
-        - cat configApp/.env configApp/vpn-settings/.env > .env
-        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --branch=deploy-$API_DEPLOY
+        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
+        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
+        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch
     when: manual
 
 deploy-beta:
@@ -54,16 +56,17 @@ deploy-beta:
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - npm run build -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch
         - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch
     when: manual
 
 deploy-prod:
     stage: deploy-prod
+    tags:
+        - heavy
     script:
         - npm i --no-audit
-        - git clone "$(echo $CONFIG_GIT)" configApp
-        - cp configApp/vpn-settings/appConfig.json .
-        - cat configApp/.env configApp/vpn-settings/.env > .env
-        - npm run deploy -- --branch=deploy-prod --api=prod --no-i18n
+        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
+        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
+        - npm run deploy -- --branch=deploy-prod --api=prod --verbose --no-i18n --no-lint --forceFetch
     when: manual
