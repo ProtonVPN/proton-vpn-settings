@@ -19,6 +19,7 @@ before_script:
  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
  - git config --global user.email $GIT_CI_EMAIL
  - git config --global user.name $GIT_CI_USERNAME
+ - ssh-keyscan -t rsa ${CI_SERVER_HOST} >> ~/.ssh/known_hosts
 
 setup:
     stage: setup
