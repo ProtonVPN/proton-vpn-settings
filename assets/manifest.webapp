@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "name": "ProtonVPN Settings",
+  "description": "Use ProtonVPN and protect your online activity",
+  "icons": {
+    "60": "/settings/assets/firefox_app_60x60.png",
+    "128": "/settings/assets/firefox_app_128x128.png",
+    "512": "/settings/assets/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": "Proton Technologies AG",
+    "url": "https://github.com/ProtonMail/protonvpn-settings"
+  }
+}
