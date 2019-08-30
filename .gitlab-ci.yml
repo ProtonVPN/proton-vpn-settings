@@ -11,6 +11,10 @@ variables:
     NODE_OPTIONS: --max-old-space-size=4096
 
 before_script:
+ - apt-get -y update
+ - 'which ssh-agent || apt-get -y install openssh-client'
+ - eval $(ssh-agent -s)
+ - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
  - git config --global user.email $GIT_CI_EMAIL
  - git config --global user.name $GIT_CI_USERNAME
 
@@ -42,6 +46,7 @@ deploy:
     script:
         - npm i --no-audit
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
         - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch
@@ -54,6 +59,7 @@ deploy-beta:
     script:
         - npm i --no-audit
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
         - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch
@@ -66,6 +72,7 @@ deploy-prod:
     script:
         - npm i --no-audit
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
         - npm run deploy -- --branch=deploy-prod --api=prod --verbose --no-i18n --no-lint --forceFetch
