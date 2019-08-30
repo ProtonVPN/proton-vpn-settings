@@ -1,7 +1,6 @@
 import React from 'react';
+import { RedeemCouponSection } from 'react-components';
 
-const RedeemContainer = () => {
-    return <>RedeemContainer</>;
-};
+const RedeemContainer = () => <RedeemCouponSection />;
 
 export default RedeemContainer;

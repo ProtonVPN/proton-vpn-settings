@@ -10,7 +10,7 @@ const SignInLayout = ({ children, title }) => {
     }, []);
 
     return (
-        <>
+        <div className="pt1 pb1 pl2 pr2">
             <header className="flex flex-nowrap flex-spacebetween">
                 <Href url="https://protonvpn.com" target="_self">{c('Link').t`Back to protonvpn.com`}</Href>
                 <Link className="pv-button-greenborder" to="/signup">{c('Link').t`Sign up for free`}</Link>
@@ -26,7 +26,7 @@ const SignInLayout = ({ children, title }) => {
             </div>
             <footer className="aligncenter">{c('Footer')
                 .t`2019 ProtonVPN.com - Made globally, hosted in Switzerland.`}</footer>
-        </>
+        </div>
     );
 };
 
