@@ -6,6 +6,8 @@ stages:
     - deploy
     - deploy-beta
     - deploy-prod
+    - i18n-upgrade-app
+    - i18n-to-crowdin
 
 variables:
     NODE_OPTIONS: --max-old-space-size=4096
@@ -38,6 +40,32 @@ i18n:
     script:
         - npm run i18n:validate
         - npm run i18n:validate:context
+
+i18n-upgrade-app:
+    stage: i18n-upgrade-app
+    tags:
+        - heavy
+    script:
+        - npm i --no-audit
+        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
+        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
+        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
+        - npm run i18n:getlatest
+    when: manual
+
+i18n-to-crowdin:
+    stage: i18n-to-crowdin
+    tags:
+        - heavy
+    script:
+        - npm i --no-audit
+        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
+        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
+        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
+        - npm run i18n:upgrade
+    when: manual
 
 deploy:
     stage: deploy
