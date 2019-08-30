@@ -49,7 +49,7 @@ deploy:
         - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch
+        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
     when: manual
 
 deploy-beta:
@@ -62,7 +62,7 @@ deploy-beta:
         - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch
+        - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch --fromCi
     when: manual
 
 deploy-prod:
@@ -75,5 +75,5 @@ deploy-prod:
         - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - npm run deploy -- --branch=deploy-prod --api=prod --verbose --no-i18n --no-lint --forceFetch
+        - npm run deploy -- --branch=deploy-prod --api=prod --verbose --no-i18n --no-lint --forceFetch --fromCi
     when: manual
