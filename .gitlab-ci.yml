@@ -26,11 +26,21 @@ setup:
     stage: setup
     script:
         - npm install --no-audit
+        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
+        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
+        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
+        - cat ${CI_PROJECT_DIR}/configApp/.env > ${CI_PROJECT_DIR}/.env
+        - echo >> ${CI_PROJECT_DIR}/.env
+        - cat ${CI_PROJECT_DIR}/configApp/vpn-settings/.env >> ${CI_PROJECT_DIR}/{.env,appConfig.json}
         - npx proton-pack config
     artifacts:
+        expire_in: 1 days
         paths:
             - node_modules/
             - src/app/config.js
+            - .env
+            - .gitconfig
+            - appConfig.json
 
 lint:
     stage: test
@@ -49,11 +59,6 @@ i18n-upgrade-app:
         - heavy
     script:
         - npm i --no-audit
-        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
-        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
-        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
-        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/.env
         - npm run i18n:getlatest
     when: manual
 
@@ -63,11 +68,6 @@ i18n-to-crowdin:
         - heavy
     script:
         - npm i --no-audit
-        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
-        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
-        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
-        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/.env
         - npm run i18n:upgrade
     when: manual
 
@@ -77,11 +77,6 @@ deploy:
         - heavy
     script:
         - npm i --no-audit
-        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
-        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
-        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
-        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/.env
         - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
     when: manual
 
@@ -91,11 +86,6 @@ deploy-beta:
         - heavy
     script:
         - npm i --no-audit
-        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
-        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
-        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
-        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/.env
         - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch --fromCi
     when: manual
 
@@ -105,10 +95,5 @@ deploy-prod:
         - heavy
     script:
         - npm i --no-audit
-        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
-        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
-        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
-        - cat ${CI_PROJECT_DIR}/configApp/.env ${CI_PROJECT_DIR}/configApp/vpn-settings/.env > ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/.env
         - npm run deploy -- --branch=deploy-prod --api=prod --verbose --no-i18n --no-lint --forceFetch --fromCi
     when: manual
