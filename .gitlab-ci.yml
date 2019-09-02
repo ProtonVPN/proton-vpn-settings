@@ -31,7 +31,8 @@ setup:
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
         - cat ${CI_PROJECT_DIR}/configApp/.env > ${CI_PROJECT_DIR}/.env
         - echo >> ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/configApp/vpn-settings/.env >> ${CI_PROJECT_DIR}/{.env,appConfig.json}
+        - cat ${CI_PROJECT_DIR}/configApp/vpn-settings/.env >> ${CI_PROJECT_DIR}/.env
+        - cat ${CI_PROJECT_DIR}/{.env,appConfig.json}
         - npx proton-pack config
     artifacts:
         expire_in: 1 days
