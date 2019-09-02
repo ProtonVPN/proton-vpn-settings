@@ -4,6 +4,7 @@ stages:
     - setup
     - test
     - deploy
+    - deploy-qa
     - deploy-beta
     - deploy-prod
     - i18n-upgrade-app
@@ -69,7 +70,7 @@ i18n-to-crowdin:
         - heavy
     script:
         - npm i --no-audit
-        - npm run i18n:upgrade
+        - npm run i18n:upgrade -- --limit-i18n=${I18N_APPROVED}
     when: manual
 
 deploy:
@@ -79,6 +80,15 @@ deploy:
     script:
         - npm i --no-audit
         - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
+    when: manual
+
+deploy-qa:
+    stage: deploy-qa
+    tags:
+        - heavy
+    script:
+        - npm i --no-audit
+        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY_QA --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
     when: manual
 
 deploy-beta:
