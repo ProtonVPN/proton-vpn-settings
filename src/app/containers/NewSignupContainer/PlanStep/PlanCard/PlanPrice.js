@@ -2,14 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
 import { Price } from 'react-components';
-import useSignup from '../../useSignup';
-import { CYCLE } from 'proton-shared/lib/constants';
+import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
-const PlanPrice = ({ plan }) => {
-    const {
-        model: { cycle, currency }
-    } = useSignup();
-
+const PlanPrice = ({ plan, cycle, currency }) => {
     return (
         <div>
             <strong>{c('Plan price per month').jt`${(
@@ -34,6 +29,8 @@ const PlanPrice = ({ plan }) => {
 };
 
 PlanPrice.propTypes = {
+    cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
+    currency: PropTypes.oneOf(CURRENCIES).isRequired,
     plan: PropTypes.shape({
         price: PropTypes.shape({
             monthly: PropTypes.number,

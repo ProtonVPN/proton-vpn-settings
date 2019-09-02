@@ -1,24 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Alert, Payment, usePayment, useLoading, PrimaryButton, Field, Label, Row } from 'react-components';
+import { Alert, Payment, usePayment, PrimaryButton, Field, Label, Row } from 'react-components';
 import { c } from 'ttag';
-import { DEFAULT_CYCLE, PAYMENT_METHOD_TYPES } from 'proton-shared/lib/constants';
-import useSignup from '../useSignup';
-import SelectedPlan from '../SelectedPlan';
+import { PAYMENT_METHOD_TYPES, CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
-const PaymentStep = ({ onPaymentDone }) => {
-    const [loading, withLoading] = useLoading();
-    const {
-        model: { currency },
-        checkPayment,
-        selectedPlan
-    } = useSignup();
+// TODO: loading / check payment?
+const PaymentStep = ({ onPaymentDone, paymentAmount, model, children }) => {
     const { method, setMethod, parameters, canPay, setParameters, setCardValidity } = usePayment();
 
-    const handlePayment = async () => {
-        await withLoading(checkPayment(parameters));
-        onPaymentDone(); // TODO: send payment params
-    };
+    const handlePaymentDone = () => onPaymentDone(model, parameters);
 
     return (
         <>
@@ -29,33 +19,39 @@ const PaymentStep = ({ onPaymentDone }) => {
                     <Payment
                         type="signup"
                         method={method}
-                        amount={selectedPlan.price.total}
-                        cycle={DEFAULT_CYCLE}
-                        currency={currency}
+                        amount={paymentAmount}
+                        cycle={model.cycle}
+                        currency={model.currency}
                         parameters={parameters}
                         onParameters={setParameters}
                         onMethod={setMethod}
                         onValidCard={setCardValidity}
-                        onPay={handlePayment}
+                        onPay={handlePaymentDone}
                     />
                     {method === PAYMENT_METHOD_TYPES.CARD && (
                         <Row>
                             <Label></Label>
                             <Field>
-                                <PrimaryButton loading={loading} disabled={!canPay} onClick={handlePayment}>{c('Action')
+                                <PrimaryButton disabled={!canPay} onClick={handlePaymentDone}>{c('Action')
                                     .t`Confirm Payment`}</PrimaryButton>
                             </Field>
                         </Row>
                     )}
                 </div>
-                <SelectedPlan />
+                {children}
             </Row>
         </>
     );
 };
 
 PaymentStep.propTypes = {
-    onPaymentDone: PropTypes.func.isRequired
+    paymentAmount: PropTypes.number.isRequired,
+    model: PropTypes.shape({
+        cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
+        currency: PropTypes.oneOf(CURRENCIES).isRequired
+    }),
+    onPaymentDone: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired
 };
 
 export default PaymentStep;

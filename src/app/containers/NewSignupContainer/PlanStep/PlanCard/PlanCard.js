@@ -3,13 +3,9 @@ import PropTypes from 'prop-types';
 import { classnames, Button } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
-import useSignup from '../../useSignup';
+import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
-const PlanCard = ({ plan, onSelect }) => {
-    const { selectedPlan } = useSignup();
-
-    const isActive = selectedPlan.planName === plan.planName;
-
+const PlanCard = ({ plan, isActive, onSelect, cycle, currency }) => {
     return (
         <div className="flex-autogrid-item flex flex-column">
             <div className="p1 flex flex-items-center">
@@ -23,7 +19,7 @@ const PlanCard = ({ plan, onSelect }) => {
                 onClick={onSelect}
                 className={classnames(['plan-card flex-column', isActive && 'plan-card--active'])}
             >
-                <PlanPrice plan={plan} />
+                <PlanPrice plan={plan} cycle={cycle} currency={currency} />
                 {plan.description && <div className="border-bottom">{plan.description}</div>}
                 {plan.highlights && (
                     <ul>
@@ -41,6 +37,7 @@ const PlanCard = ({ plan, onSelect }) => {
 };
 
 PlanCard.propTypes = {
+    isActive: PropTypes.bool.isRequired,
     plan: PropTypes.shape({
         planName: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
@@ -49,6 +46,8 @@ PlanCard.propTypes = {
         highlights: PropTypes.arrayOf(PropTypes.string),
         isBest: PropTypes.bool
     }).isRequired,
+    cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
+    currency: PropTypes.oneOf(CURRENCIES).isRequired,
     onSelect: PropTypes.func.isRequired
 };
 
