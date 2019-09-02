@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Row, Field, Input, PrimaryButton, Label, InlineLinkButton } from 'react-components';
+import { Row, Field, Input, PrimaryButton, Label, InlineLinkButton, useLoading } from 'react-components';
 import { c } from 'ttag';
 
-const VerificationCodeForm = ({ isLoading, onSubmit, onResend }) => {
+const VerificationCodeForm = ({ onSubmit, onResend }) => {
+    const [loading, withLoading] = useLoading();
     const [code, setCode] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(code);
+        withLoading(onSubmit(code));
     };
     const handleChangeCode = ({ target }) => setCode(target.value);
 
@@ -30,15 +31,13 @@ const VerificationCodeForm = ({ isLoading, onSubmit, onResend }) => {
                         />
                     </Field>
                 </Row>
-                <PrimaryButton disabled={!code} type="submit" loading={isLoading}>{c('Action')
-                    .t`Verify`}</PrimaryButton>
+                <PrimaryButton disabled={!code} type="submit" loading={loading}>{c('Action').t`Verify`}</PrimaryButton>
             </form>
         </div>
     );
 };
 
 VerificationCodeForm.propTypes = {
-    isLoading: PropTypes.bool,
     onSubmit: PropTypes.func.isRequired,
     onResend: PropTypes.func.isRequired
 };

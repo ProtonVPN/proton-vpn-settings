@@ -8,8 +8,8 @@ const VerificationForm = ({ defaultEmail, allowedMethods, onRequestCode, onSubmi
 
     const handleResend = () => setParams(null);
 
-    const handleSubmitMethod = (params) => {
-        onRequestCode(params);
+    const handleSubmitMethod = async (params) => {
+        await onRequestCode(params);
         setParams(params);
     };
 

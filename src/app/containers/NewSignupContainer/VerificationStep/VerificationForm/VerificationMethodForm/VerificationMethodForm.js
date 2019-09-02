@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Row } from 'react-components';
+import { Row, useLoading } from 'react-components';
 import { c } from 'ttag';
 import VerificationMethodSelector from './VerificationMethodSelector';
 import VerificationEmailInput from './VerificationEmailInput';
@@ -12,10 +12,13 @@ const VERIFICATION_METHOD = {
 };
 
 const VerificationMethodForm = ({ defaultEmail, allowedMethods, onSubmit }) => {
+    const [loading, withLoading] = useLoading();
     const [method, setMethod] = useState(VERIFICATION_METHOD.EMAIL);
 
-    const handleSendEmailCode = (Address) => onSubmit({ Type: VERIFICATION_METHOD.EMAIL, Destination: { Address } });
-    const handleSendSMSCode = (Phone) => onSubmit({ Type: VERIFICATION_METHOD.SMS, Destination: { Phone } });
+    const handleSendEmailCode = (Address) =>
+        withLoading(onSubmit({ Type: VERIFICATION_METHOD.EMAIL, Destination: { Address } }));
+    const handleSendSMSCode = (Phone) =>
+        withLoading(onSubmit({ Type: VERIFICATION_METHOD.SMS, Destination: { Phone } }));
 
     const methods = Object.values(VERIFICATION_METHOD).filter((method) => allowedMethods.includes(method));
 
@@ -29,10 +32,16 @@ const VerificationMethodForm = ({ defaultEmail, allowedMethods, onSubmit }) => {
             </Row>
 
             {method === VERIFICATION_METHOD.EMAIL && (
-                <VerificationEmailInput defaultEmail={defaultEmail} onSendClick={handleSendEmailCode} />
+                <VerificationEmailInput
+                    loading={loading}
+                    defaultEmail={defaultEmail}
+                    onSendClick={handleSendEmailCode}
+                />
             )}
 
-            {method === VERIFICATION_METHOD.SMS && <VerificationPhoneInput onSendClick={handleSendSMSCode} />}
+            {method === VERIFICATION_METHOD.SMS && (
+                <VerificationPhoneInput loading={loading} onSendClick={handleSendSMSCode} />
+            )}
         </div>
     );
 };

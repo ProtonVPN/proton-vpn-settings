@@ -19,7 +19,7 @@ const SignupState = {
     Payment: 'payment'
 };
 
-// TODO: use normal verification if invite verification is disabled?
+// TODO: better handling of allowed methods (invite, coupon)
 const SignupContainer = ({ history, onLogin }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const handleLogin = (...rest) => {
@@ -32,21 +32,16 @@ const SignupContainer = ({ history, onLogin }) => {
 
     const invite = history.location.state;
 
-    // TODO: handle signup loading
-    if (signupAvailability && signupAvailability.inviteOnly) {
-        return <Redirect to="/invite" />;
-    }
-
     const handleSelectPlan = (model) => {
         setModel(model);
         setSignupState(SignupState.Account);
     };
 
-    const handleCreateAccount = (model) => {
+    const handleCreateAccount = async (model) => {
         setModel(model);
         if (model.planName === PLAN.FREE) {
             if (invite) {
-                signup(model, { invite });
+                await signup(model, { invite });
             } else {
                 setSignupState(SignupState.Verification);
             }
@@ -55,15 +50,15 @@ const SignupContainer = ({ history, onLogin }) => {
         }
     };
 
-    const handleVerificationDone = (model, verificationToken) => {
+    const handleVerificationDone = async (model, verificationToken) => {
         setModel(model);
-        signup(model, { verificationToken });
+        await signup(model, { verificationToken });
     };
 
     const handlePaymentDone = async (model, paymentParameters) => {
         setModel(model);
         const paymentDetails = await checkPayment(model, paymentParameters);
-        signup(model, { paymentDetails });
+        await signup(model, { paymentDetails });
     };
 
     const selectedPlanComponent = <SelectedPlan plan={selectedPlan} currency={model.currency} cycle={model.cycle} />;
