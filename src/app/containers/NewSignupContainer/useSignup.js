@@ -1,8 +1,7 @@
-import { useContext } from 'react';
-import { SignupContext } from './SignupProvider';
+import { useState } from 'react';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
-import { useApi, usePlans, useConfig } from 'react-components';
-import { queryCreateUser } from 'proton-shared/lib/api/user';
+import { useApi, usePlans, useConfig, useApiResult } from 'react-components';
+import { queryCreateUser, queryDirectSignupStatus } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { subscribe, setPaymentMethod, verifyPayment } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
@@ -10,44 +9,68 @@ import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getPlan } from './plans';
 import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
-import { PLANS } from 'proton-shared/lib/constants';
+import { PLANS, DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
+
+const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
+    const email = allowedMethods.includes('email');
+    const sms = allowedMethods.includes('sms');
+    const paid = allowedMethods.includes('payment');
+    const free = email || sms;
+
+    return {
+        allowedMethods,
+        inviteOnly: !isDirectSignupEnabled || (!free && !paid),
+        email,
+        free,
+        sms,
+        paid
+    };
+};
 
 const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAuthHeaders(UID, AccessToken));
 
-const useSignup = () => {
+const useSignup = (onLogin) => {
     const api = useApi();
     const { CLIENT_TYPE } = useConfig();
-    const [model, setModel, { onLogin, signupAvailability }] = useContext(SignupContext);
-    const { planName, currency, cycle, email, username, password } = model;
+    const { result } = useApiResult(() => queryDirectSignupStatus(CLIENT_TYPE), []);
+    const [plans = [], plansLoading] = usePlans();
 
-    const updateModel = (partial, onUpdate) => setModel((model) => ({ ...model, ...partial }), onUpdate);
-
-    // TODO: sequential loads?
-    // TODO: handle plans loading
-    const [plans, plansLoading] = usePlans(currency); // TODO: change available plans based on coupon code?
-
-    const selectedPlan = getPlan(planName, cycle, plans);
+    const defaultCurrency = plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
+    const initialPlan = new URLSearchParams(location.search).get('plan') || PLANS.FREE;
+    const signupAvailability = result && getSignupAvailability(result.Direct, result.VerifyMethods);
     const isLoading = plansLoading || !signupAvailability;
+
+    const [model, setModel] = useState({
+        planName: initialPlan,
+        cycle: CYCLE.YEARLY,
+        email: '',
+        username: '',
+        password: '',
+        currency: defaultCurrency
+    });
 
     /**
      * Verifies if payment was done and saves payment details for signup
-     * @param {*=} parameters payment parameters from usePayment
+     * @param {*=} paymentParameters payment parameters from usePayment
+     * @returns {Promise<{ VerifyCode, paymentParameters }>} - paymentDetails
      */
-    const checkPayment = async (parameters) => {
+    const checkPayment = async (model, paymentParameters) => {
+        const selectedPlan = getPlan(model.planName, model.cycle, plans);
         const amount = selectedPlan.price.total;
 
         if (amount > 0) {
             const { VerifyCode } = await api(
                 verifyPayment({
                     Amount: amount,
-                    Currency: currency,
-                    ...parameters
+                    Currency: model.currency,
+                    ...paymentParameters
                 })
             );
 
-            const paymentDetails = { VerifyCode, parameters };
-            updateModel({ paymentDetails });
+            return { VerifyCode, paymentParameters };
         }
+
+        return null;
     };
 
     const getToken = ({ appliedCoupon, invite, verificationToken, paymentDetails }) => {
@@ -62,9 +85,10 @@ const useSignup = () => {
     };
 
     // TODO: appliedCoupon (and gift code?)
-    // TODO: invitation token
-    const signup = async ({ appliedCoupon, invite, verificationToken, paymentDetails }) => {
-        const { Token, TokenType } = getToken({ appliedCoupon, invite, verificationToken, paymentDetails });
+    const signup = async (model, signupToken) => {
+        const { Token, TokenType } = getToken(signupToken);
+        const { planName, password, email, username, currency, cycle } = model;
+        const selectedPlan = getPlan(planName, cycle, plans);
 
         await srpVerify({
             api,
@@ -100,12 +124,12 @@ const useSignup = () => {
         }
 
         // Add payment method
-        if (paymentDetails) {
+        if (signupToken.paymentDetails) {
             const { Payment } = await handle3DS(
                 {
                     Amount: selectedPlan.price.total,
                     Currency: currency,
-                    ...paymentDetails.parameters
+                    ...signupToken.paymentDetails.paymentParameters
                 },
                 api
             );
@@ -120,14 +144,13 @@ const useSignup = () => {
     return {
         model,
         isLoading,
-        selectedPlan,
         availablePlans: plans,
+        selectedPlan: getPlan(model.planName, model.cycle, plans),
         signupAvailability,
 
         checkPayment,
-        updateModel,
-        signup,
-        onLogin
+        setModel,
+        signup
     };
 };
 

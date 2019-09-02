@@ -1,37 +1,37 @@
-import React from 'react';
-import { Row, Field, usePlans, CurrencySelector, CycleSelector } from 'react-components';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { Row, Field, usePlans, CurrencySelector, CycleSelector } from 'react-components';
 import PlanCard from './PlanCard/PlanCard';
-import { PLANS } from 'proton-shared/lib/constants';
+import { PLANS, CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
 import { getPlan } from '../plans';
-import useSignup from '../useSignup';
 
-const PlanStep = ({ onSelect }) => {
-    const {
-        model: { cycle, currency },
-        updateModel
-    } = useSignup();
-    const handleSelect = (planName) => () => {
-        updateModel({ planName });
-        onSelect(planName);
-    };
-    const handleChangeCycle = (cycle) => updateModel({ cycle });
-    const handleChangeCurrency = (currency) => updateModel({ currency });
+const PlanStep = ({ onSelect, model }) => {
+    const [currency, setCurrency] = useState(model.currency);
+    const [cycle, setCycle] = useState(model.cycle);
+    const handleSelect = (planName) => () => onSelect({ ...model, planName, currency, cycle });
+
     const [plans] = usePlans();
 
     return (
         <>
             <Row className="flex-spacebetween">
                 <Field>
-                    <CycleSelector cycle={cycle} onSelect={handleChangeCycle} />
+                    <CycleSelector cycle={cycle} onSelect={setCycle} />
                 </Field>
                 <Field>
-                    <CurrencySelector currency={currency} onSelect={handleChangeCurrency} />
+                    <CurrencySelector currency={currency} onSelect={setCurrency} />
                 </Field>
             </Row>
             <div className="flex-autogrid">
                 {[PLANS.FREE, PLANS.VPNBASIC, PLANS.VPNPLUS, PLANS.VISIONARY].map((planName) => (
-                    <PlanCard key={planName} onSelect={handleSelect(planName)} plan={getPlan(planName, cycle, plans)} />
+                    <PlanCard
+                        key={planName}
+                        onSelect={handleSelect(planName)}
+                        cycle={cycle}
+                        currency={currency}
+                        plan={getPlan(planName, cycle, plans)}
+                        isActive={planName === model.planName}
+                    />
                 ))}
             </div>
         </>
@@ -39,6 +39,11 @@ const PlanStep = ({ onSelect }) => {
 };
 
 PlanStep.propTypes = {
+    model: PropTypes.shape({
+        planName: PropTypes.string.isRequired,
+        cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
+        currency: PropTypes.oneOf(CURRENCIES).isRequired
+    }).isRequired,
     onSelect: PropTypes.func.isRequired
 };
 

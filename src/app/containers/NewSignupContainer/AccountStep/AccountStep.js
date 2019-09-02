@@ -1,28 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useSignup from '../useSignup';
 import AccountForm from './AccountForm';
-import SelectedPlan from '../SelectedPlan';
 import { Row } from 'react-components';
 
-const AccountStep = ({ onContinue }) => {
-    const { updateModel } = useSignup();
-
-    const handleSubmit = ({ email, password, username }) => {
-        updateModel({ email, password, username });
-        onContinue();
-    };
+const AccountStep = ({ onContinue, model, children }) => {
+    const handleSubmit = ({ email, username, password }) => onContinue({ ...model, email, username, password });
 
     return (
         <Row>
             <AccountForm onSubmit={handleSubmit} />
-            <SelectedPlan />
+            {children}
         </Row>
     );
 };
 
 AccountStep.propTypes = {
-    onContinue: PropTypes.func.isRequired
+    model: PropTypes.object.isRequired,
+    onContinue: PropTypes.func.isRequired,
+    children: PropTypes.node.isRequired
 };
 
 export default AccountStep;
