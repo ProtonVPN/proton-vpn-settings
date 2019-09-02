@@ -19,7 +19,7 @@ import { c } from 'ttag';
 import { DEFAULT_CYCLE, PAYMENT_METHOD_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
 import CouponForm from 'react-components/containers/payments/subscription/CouponForm';
 import GiftCodeForm from 'react-components/containers/payments/subscription/GiftCodeForm';
-import useSignup from '../../useSignup';
+import useSignup from '../../../NewSignupContainer/useSignup';
 
 // TODO: use form submit
 const PaymentDetailsSection = ({ onPaymentDone }) => {

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { c } from 'ttag';
 import SMSVerification from './SMSVerification';
 import EmailVerification from './EmailVerification';
-import useSignup from '../useSignup';
+import useSignup from '../../NewSignupContainer/useSignup';
 import useVerification from './useVerification';
 
 // TODO: dynamic phone number placeholder (probably should come from TelInput)

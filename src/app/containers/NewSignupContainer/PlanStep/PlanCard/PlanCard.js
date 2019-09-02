@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { classnames, Button } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
-import useSignup from '../../../NewSignupContainer/useSignup';
+import useSignup from '../../useSignup';
 
-const PlanCard = ({ plan, onClick }) => {
+const PlanCard = ({ plan, onSelect }) => {
     const { selectedPlan } = useSignup();
 
     const isActive = selectedPlan.planName === plan.planName;
@@ -20,7 +20,7 @@ const PlanCard = ({ plan, onClick }) => {
             </div>
             <div
                 role="button"
-                onClick={onClick}
+                onClick={onSelect}
                 className={classnames(['plan-card flex-column', isActive && 'plan-card--active'])}
             >
                 <PlanPrice plan={plan} />
@@ -32,7 +32,7 @@ const PlanCard = ({ plan, onClick }) => {
                         ))}
                     </ul>
                 )}
-                <Button onClick={onClick} className={classnames(['w100 mtauto', isActive && 'pm-button--primary'])}>
+                <Button onClick={onSelect} className={classnames(['w100 mtauto', isActive && 'pm-button--primary'])}>
                     {c('Plan Action').t`Get ${plan.title}`}
                 </Button>
             </div>
@@ -49,7 +49,7 @@ PlanCard.propTypes = {
         highlights: PropTypes.arrayOf(PropTypes.string),
         isBest: PropTypes.bool
     }).isRequired,
-    onClick: PropTypes.func.isRequired
+    onSelect: PropTypes.func.isRequired
 };
 
 export default PlanCard;

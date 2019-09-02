@@ -81,13 +81,9 @@ const getPlanPrice = (plan, cycle) => {
     return { monthly, total, saved };
 };
 
-export const getPlan = (planName, cycle, appliedCoupon, plans = []) => {
+export const getPlan = (planName, cycle, plans = []) => {
     const plan = plans.find(({ Type, Name }) => Type === PLAN_TYPES.PLAN && Name === planName);
     const price = plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, saved: 0 };
-
-    if (appliedCoupon) {
-        price.total = appliedCoupon.AmountDue;
-    }
 
     return {
         ...getPlanFeatures(planName),

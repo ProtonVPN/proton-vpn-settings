@@ -1,7 +1,7 @@
 import React from 'react';
 import { c } from 'ttag';
 import { Price } from 'react-components';
-import useSignup from '../../../NewSignupContainer/useSignup';
+import useSignup from './useSignup';
 import { CYCLE } from 'proton-shared/lib/constants';
 
 // TODO: two year plan
@@ -15,7 +15,7 @@ const SelectedPlan = () => {
     const discount = appliedCoupon && appliedCoupon.CouponDiscount;
 
     return (
-        <div className="m1">
+        <div className="ml1">
             <div className="flex flex-column bordered-container selected-plan">
                 <h3 className="pt1 pb1 mb0 w100 aligncenter bg-pv-green-light color-white">{planTitle}</h3>
                 {selectedPlan.isBest && (
