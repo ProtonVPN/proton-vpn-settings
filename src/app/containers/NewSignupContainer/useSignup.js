@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
-import { useApi, usePlans, useConfig, useApiResult } from 'react-components';
+import { useApi, usePlans, useConfig, useApiResult, useModals } from 'react-components';
 import { queryCreateUser, queryDirectSignupStatus } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { subscribe, setPaymentMethod, verifyPayment } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getPlan, PLAN } from './plans';
-import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
 import { DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
+import { handlePaymentToken } from 'react-components/containers/payments/paymentTokenHelper';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes('email');
@@ -31,6 +31,7 @@ const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAu
 
 const useSignup = (onLogin) => {
     const api = useApi();
+    const { createModal } = useModals();
     const { CLIENT_TYPE } = useConfig();
     const { result } = useApiResult(() => queryDirectSignupStatus(CLIENT_TYPE), []);
     const [plans = [], plansLoading] = usePlans();
@@ -125,14 +126,15 @@ const useSignup = (onLogin) => {
 
         // Add payment method
         if (signupToken.paymentDetails) {
-            const { Payment } = await handle3DS(
-                {
+            const { Payment } = await handlePaymentToken({
+                params: {
                     Amount: selectedPlan.price.total,
                     Currency: currency,
                     ...signupToken.paymentDetails.paymentParameters
                 },
-                api
-            );
+                api,
+                createModal
+            });
             await api(withAuthHeaders(UID, AccessToken, setPaymentMethod(Payment)));
         }
 

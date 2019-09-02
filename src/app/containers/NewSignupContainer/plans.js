@@ -78,6 +78,7 @@ export const getPlan = (planName, cycle, plans = []) => {
         planName,
         title: PLAN_NAMES[planName],
         id: plan && plan.ID,
+        disabled: !plan && planName !== PLAN.FREE,
         price
     };
 };

@@ -5,7 +5,6 @@ import PlanCard from './PlanCard/PlanCard';
 import { CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
 import { getPlan, PLAN } from '../plans';
 
-// TODO: disable plans that are not allowed
 const PlanStep = ({ onSelect, model }) => {
     const [currency, setCurrency] = useState(model.currency);
     const [cycle, setCycle] = useState(model.cycle);
@@ -24,16 +23,20 @@ const PlanStep = ({ onSelect, model }) => {
                 </Field>
             </Row>
             <div className="flex-autogrid">
-                {[PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY].map((planName) => (
-                    <PlanCard
-                        key={planName}
-                        onSelect={handleSelect(planName)}
-                        cycle={cycle}
-                        currency={currency}
-                        plan={getPlan(planName, cycle, plans)}
-                        isActive={planName === model.planName}
-                    />
-                ))}
+                {[PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY].map((planName) => {
+                    const plan = getPlan(planName, cycle, plans);
+                    return (
+                        <PlanCard
+                            key={planName}
+                            onSelect={handleSelect(planName)}
+                            cycle={cycle}
+                            currency={currency}
+                            plan={plan}
+                            isActive={planName === model.planName}
+                            isDisabled={plan.disabled}
+                        />
+                    );
+                })}
             </div>
         </>
     );

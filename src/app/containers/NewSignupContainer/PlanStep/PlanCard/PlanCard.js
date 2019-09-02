@@ -1,11 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classnames, Button } from 'react-components';
+import { classnames, Button, Tooltip } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
 import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
-const PlanCard = ({ plan, isActive, onSelect, cycle, currency }) => {
+const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => {
+    const button = (
+        <Button
+            disabled={isDisabled}
+            onClick={onSelect}
+            className={classnames(['w100 mtauto', isActive && 'pm-button--primary'])}
+        >
+            {c('Plan Action').t`Get ${plan.title}`}
+        </Button>
+    );
+
     return (
         <div className="flex-autogrid-item flex flex-column">
             <div className="p1 flex flex-items-center">
@@ -29,9 +39,11 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency }) => {
                         ))}
                     </ul>
                 )}
-                <Button onClick={onSelect} className={classnames(['w100 mtauto', isActive && 'pm-button--primary'])}>
-                    {c('Plan Action').t`Get ${plan.title}`}
-                </Button>
+                {isDisabled ? (
+                    <Tooltip title={c('Info').t`This plan is temporarily disabled`}>{button}</Tooltip>
+                ) : (
+                    button
+                )}
             </div>
         </div>
     );
@@ -50,7 +62,8 @@ PlanCard.propTypes = {
     }).isRequired,
     cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
     currency: PropTypes.oneOf(CURRENCIES).isRequired,
-    onSelect: PropTypes.func.isRequired
+    onSelect: PropTypes.func.isRequired,
+    isDisabled: PropTypes.bool
 };
 
 export default PlanCard;

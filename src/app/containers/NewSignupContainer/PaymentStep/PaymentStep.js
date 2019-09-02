@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Alert, Payment, usePayment, PrimaryButton, Field, Label, Row } from 'react-components';
+import { Alert, Payment, usePayment, PrimaryButton, Field, Label, Row, useLoading } from 'react-components';
 import { c } from 'ttag';
 import { PAYMENT_METHOD_TYPES, CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
-// TODO: loading / check payment?
 const PaymentStep = ({ onPaymentDone, paymentAmount, model, children }) => {
+    const [loading, withLoading] = useLoading();
     const { method, setMethod, parameters, canPay, setParameters, setCardValidity } = usePayment();
 
-    const handlePaymentDone = () => onPaymentDone(model, parameters);
+    const handlePaymentDone = () => withLoading(onPaymentDone(model, parameters));
 
     return (
         <>
@@ -32,8 +32,9 @@ const PaymentStep = ({ onPaymentDone, paymentAmount, model, children }) => {
                         <Row>
                             <Label></Label>
                             <Field>
-                                <PrimaryButton disabled={!canPay} onClick={handlePaymentDone}>{c('Action')
-                                    .t`Confirm Payment`}</PrimaryButton>
+                                <PrimaryButton loading={loading} disabled={!canPay} onClick={handlePaymentDone}>{c(
+                                    'Action'
+                                ).t`Confirm payment`}</PrimaryButton>
                             </Field>
                         </Row>
                     )}

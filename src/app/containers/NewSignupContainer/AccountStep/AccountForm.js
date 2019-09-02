@@ -1,6 +1,17 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Input, PasswordInput, PrimaryButton, Field, useApi, Row, Label, EmailInput, Block } from 'react-components';
+import {
+    Input,
+    PasswordInput,
+    PrimaryButton,
+    Field,
+    useApi,
+    Row,
+    Label,
+    EmailInput,
+    Block,
+    useLoading
+} from 'react-components';
 import { c } from 'ttag';
 import { queryCheckUsernameAvailability } from 'proton-shared/lib/api/user';
 
@@ -11,6 +22,7 @@ const AccountForm = ({ onSubmit }) => {
     const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [email, setEmail] = useState('');
     const [usernameError, setUsernameError] = useState();
+    const [loading, withLoading] = useLoading();
 
     const handleChangeUsername = ({ target }) => {
         if (usernameError) {
@@ -38,63 +50,61 @@ const AccountForm = ({ onSubmit }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <Row>
-                    <Label htmlFor="username">{c('Label').t`Username`}</Label>
-                    <Field>
-                        <Input
-                            required
-                            error={usernameError}
-                            value={username}
-                            onChange={handleChangeUsername}
-                            name="username"
-                            id="username"
-                        />
-                    </Field>
-                </Row>
+        <form onSubmit={(e) => withLoading(handleSubmit(e))}>
+            <Row>
+                <Label htmlFor="username">{c('Label').t`Username`}</Label>
+                <Field>
+                    <Input
+                        required
+                        error={usernameError}
+                        value={username}
+                        onChange={handleChangeUsername}
+                        name="username"
+                        id="username"
+                    />
+                </Field>
+            </Row>
 
-                <Row>
-                    <Label htmlFor="password">{c('Label').t`Password`}</Label>
-                    <Field>
-                        <div className="mb1">
-                            <PasswordInput
-                                id="password"
-                                required
-                                value={password}
-                                onChange={handleChangePassword}
-                                name="password"
-                            />
-                        </div>
+            <Row>
+                <Label htmlFor="password">{c('Label').t`Password`}</Label>
+                <Field>
+                    <div className="mb1">
                         <PasswordInput
-                            id="passwordConfirmation"
-                            value={passwordConfirmation}
-                            onChange={handleChangePasswordConfirmation}
-                            name="passwordConfirmation"
-                            pattern={password}
-                        />
-                    </Field>
-                </Row>
-
-                <Row>
-                    <Label htmlFor="email">{c('Label').t`Email`}</Label>
-                    <Field>
-                        <EmailInput
-                            id="email"
+                            id="password"
                             required
-                            value={email}
-                            onChange={handleChangeEmail}
-                            placeholder={c('Placeholder').t`user@domain.com`}
+                            value={password}
+                            onChange={handleChangePassword}
+                            name="password"
                         />
-                    </Field>
-                </Row>
+                    </div>
+                    <PasswordInput
+                        id="passwordConfirmation"
+                        value={passwordConfirmation}
+                        onChange={handleChangePasswordConfirmation}
+                        name="passwordConfirmation"
+                        pattern={password}
+                    />
+                </Field>
+            </Row>
 
-                <Block>
-                    {c('Info').t`By clicking Create Account you agree to abide by ProtonVPN's Terms and Conditions`}
-                </Block>
+            <Row>
+                <Label htmlFor="email">{c('Label').t`Email`}</Label>
+                <Field>
+                    <EmailInput
+                        id="email"
+                        required
+                        value={email}
+                        onChange={handleChangeEmail}
+                        placeholder={c('Placeholder').t`user@domain.com`}
+                    />
+                </Field>
+            </Row>
 
-                <PrimaryButton type="submit">{c('Action').t`Complete`}</PrimaryButton>
-            </div>
+            <Block>
+                {c('Info').t`By clicking Create Account you agree to abide by ProtonVPN's Terms and Conditions`}
+            </Block>
+
+            <PrimaryButton loading={loading} type="submit">{c('Action').t`Complete`}</PrimaryButton>
         </form>
     );
 };
