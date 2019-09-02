@@ -4,7 +4,7 @@ import { Bordered, Block, InlineLinkButton, useNotifications, useLoading } from 
 import { c } from 'ttag';
 import VerificationInput from './VerificationInput';
 import VerificationEmailInput from './VerificationEmailInput';
-import useSignup from '../useSignup';
+import useSignup from '../../NewSignupContainer/useSignup';
 
 const EmailVerification = ({ verify, requestCode, requireEmailChange }) => {
     const { createNotification } = useNotifications();

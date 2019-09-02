@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SubTitle, Label, Field, Alert, Block, EmailInput } from 'react-components';
 import { c } from 'ttag';
 import { Link } from 'react-router-dom';
-import useSignup from '../../useSignup';
+import useSignup from '../../../NewSignupContainer/useSignup';
 
 // TODO: validate and 'success into error' handling
 const EmailSection = () => {

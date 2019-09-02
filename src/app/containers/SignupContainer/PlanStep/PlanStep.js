@@ -6,7 +6,7 @@ import PaymentDetailsSection from './PaymentDetailsSection/PaymentDetailsSection
 import SelectedPlan from './SelectedPlan/SelectedPlan';
 import FreeSignupSection from './FreeSignupSection/FreeSignupSection';
 import { PLANS } from 'proton-shared/lib/constants';
-import useSignup from '../useSignup';
+import useSignup from '../../NewSignupContainer/useSignup';
 
 const PlanStep = ({ onConfirm }) => {
     const [isNudgeSuccessful, setNudgeSuccessful] = useState(false); // If successfully convinced to purchase plus plan

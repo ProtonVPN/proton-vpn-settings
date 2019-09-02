@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { classnames, Button } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
-import useSignup from '../../useSignup';
+import useSignup from '../../../NewSignupContainer/useSignup';
 
 const PlanCardHorizontal = ({ plan, onClick }) => {
     const { selectedPlan } = useSignup();

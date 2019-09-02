@@ -5,7 +5,7 @@ import { PLANS } from 'proton-shared/lib/constants';
 import VerificationStep from './VerificationStep/VerificationStep';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
-import useSignup from './useSignup';
+import useSignup from '../NewSignupContainer/useSignup';
 import { Redirect } from 'react-router-dom';
 import { c } from 'ttag';
 

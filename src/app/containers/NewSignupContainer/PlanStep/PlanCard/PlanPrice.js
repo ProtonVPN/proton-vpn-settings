@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
 import { Price } from 'react-components';
-import useSignup from '../../../NewSignupContainer/useSignup';
+import useSignup from '../../useSignup';
 import { CYCLE } from 'proton-shared/lib/constants';
 
 const PlanPrice = ({ plan }) => {
