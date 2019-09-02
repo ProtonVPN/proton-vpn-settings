@@ -61,7 +61,7 @@ i18n-upgrade-app:
         - heavy
     script:
         - npm i --no-audit
-        - npm run i18n:getlatest
+        - npm run i18n:getlatest -- --limit-i18n=${I18N_APPROVED}
     when: manual
 
 i18n-to-crowdin:
@@ -70,7 +70,7 @@ i18n-to-crowdin:
         - heavy
     script:
         - npm i --no-audit
-        - npm run i18n:upgrade -- --limit-i18n=${I18N_APPROVED}
+        - npm run i18n:upgrade
     when: manual
 
 deploy:
