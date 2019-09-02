@@ -5,6 +5,7 @@ import { Route } from 'react-router';
 import { Sidebar, MainAreaContext } from 'react-components';
 
 import PrivateHeader from './PrivateHeader';
+import Hamburger from './Hamburger';
 
 const PrivateLayout = ({ children }) => {
     const mainAreaRef = useRef();

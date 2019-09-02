@@ -1,10 +1,12 @@
 import React from 'react';
-import { MainLogo, SupportDropdown, UserDropdown } from 'react-components';
+import PropTypes from 'prop-types';
+import { MainLogo, SupportDropdown, UserDropdown, Hamburger } from 'react-components';
 
-const PrivateHeader = () => {
+const PrivateHeader = ({ onToggle }) => {
     return (
         <header className="header flex flex-nowrap reset4print">
             <MainLogo url="/account" className="nomobile" />
+            <Hamburger onToggle={onToggle} />
             <div className="searchbox-container nomobile"></div>
             <div className="topnav-container flex-item-centered-vert flex-item-fluid">
                 <ul className="topnav-list unstyled mt0 mb0 ml1 flex flex-nowrap">
@@ -19,5 +21,7 @@ const PrivateHeader = () => {
         </header>
     );
 };
+
+PrivateHeader.propTypes = {};
 
 export default PrivateHeader;
