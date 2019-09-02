@@ -6,10 +6,10 @@ import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { subscribe, setPaymentMethod, verifyPayment } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
-import { getPlan } from './plans';
+import { getPlan, PLAN } from './plans';
 import { handle3DS } from 'react-components/containers/payments/paymentTokenHelper';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
-import { PLANS, DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
+import { DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes('email');
@@ -36,7 +36,7 @@ const useSignup = (onLogin) => {
     const [plans = [], plansLoading] = usePlans();
 
     const defaultCurrency = plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
-    const initialPlan = new URLSearchParams(location.search).get('plan') || PLANS.FREE;
+    const initialPlan = new URLSearchParams(location.search).get('plan') || PLAN.FREE;
     const signupAvailability = result && getSignupAvailability(result.Direct, result.VerifyMethods);
     const isLoading = plansLoading || !signupAvailability;
 
@@ -110,7 +110,7 @@ const useSignup = (onLogin) => {
 
         // Add subscription
         // Amount = 0 means - paid before subscription
-        if (planName !== PLANS.FREE) {
+        if (planName !== PLAN.FREE) {
             const subscription = {
                 PlanIDs: {
                     [selectedPlan.id]: 1

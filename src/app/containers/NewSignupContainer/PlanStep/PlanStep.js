@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Field, usePlans, CurrencySelector, CycleSelector } from 'react-components';
 import PlanCard from './PlanCard/PlanCard';
-import { PLANS, CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
-import { getPlan } from '../plans';
+import { CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
+import { getPlan, PLAN } from '../plans';
 
+// TODO: disable plans that are not allowed
 const PlanStep = ({ onSelect, model }) => {
     const [currency, setCurrency] = useState(model.currency);
     const [cycle, setCycle] = useState(model.cycle);
@@ -23,7 +24,7 @@ const PlanStep = ({ onSelect, model }) => {
                 </Field>
             </Row>
             <div className="flex-autogrid">
-                {[PLANS.FREE, PLANS.VPNBASIC, PLANS.VPNPLUS, PLANS.VISIONARY].map((planName) => (
+                {[PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY].map((planName) => (
                     <PlanCard
                         key={planName}
                         onSelect={handleSelect(planName)}

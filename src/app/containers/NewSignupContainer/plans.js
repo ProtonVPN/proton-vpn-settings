@@ -1,82 +1,70 @@
 import { c } from 'ttag';
-import { PLANS, PLAN_NAMES, PLAN_TYPES, CYCLE } from 'proton-shared/lib/constants';
+import { PLANS, PLAN_TYPES, CYCLE } from 'proton-shared/lib/constants';
 
-// TODO: devices based on dynamic plan
-const getPlanFeatures = (planName) =>
+export const PLAN = {
+    FREE: 'free',
+    VISIONARY: PLANS.VISIONARY,
+    BASIC: PLANS.VPNBASIC,
+    PLUS: PLANS.VPNPLUS
+};
+
+export const PLAN_NAMES = {
+    [PLAN.FREE]: 'Free',
+    [PLAN.VISIONARY]: 'Visionary',
+    [PLAN.BASIC]: 'Basic',
+    [PLAN.PLUS]: 'Plus'
+};
+
+const getPlanFeatures = (plan) =>
     ({
-        [PLANS.FREE]: {
-            description: c('Plan Description').t`Free limited version`,
-            highlights: [c('Plan Feature').t`Access to 3 countries`, c('Plan Feature').t`1 device`],
+        [PLAN.FREE]: {
+            description: c('Plan Description').t`Privacy and security for everyone`,
             features: [
-                c('Plan Feature').t`Access to 3 countries`,
-                c('Plan Feature').t`1 device`,
-                c('Plan Feature').t`Free trial of Plus account for 7 days`,
-                c('Plan Feature').t`Multi-platform support`
+                c('Plan Feature').t`1 simultaneous VPN connection`,
+                c('Plan Feature').t`Servers in 3 countries`,
+                c('Plan Feature').t`No logs policy`,
+                c('Plan Feature').t`No data limit`,
+                c('Plan Feature').t`No ads`
             ]
         },
-        [PLANS.VPNBASIC]: {
+        [PLAN.BASIC]: {
             description: c('Plan Description').t`Basic privacy features`,
-            highlights: [
-                c('Plan Feature').t`Access to all countries`,
-                c('Plan Feature').t`2 devices`,
-                c('Plan Feature').t`30-day money-back guarantee`
-            ],
+            additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.FREE]} plan features`,
             features: [
-                c('Plan Feature').t`Access to all countries`,
-                c('Plan Feature').t`2 devices`,
-                c('Plan Feature').t`High speeds`,
-                c('Plan Feature').t`Safe file sharing`,
-                c('Plan Feature').t`Multi-platform support`,
-                c('Plan Feature').t`30-day money-back guarantee`
+                c('Plan Feature').t`2 simultaneous VPN connections`,
+                c('Plan Feature').t`Servers in 32 countries`,
+                c('Plan Feature').t`High speeds - up to 1 Gb/s`,
+                c('Plan Feature').t`P2P support` // TODO: info tooltips
             ]
         },
-        [PLANS.VPNPLUS]: {
+        [PLAN.PLUS]: {
             isBest: true,
-            description: c('Plan Description').t`The complete privacy suite`,
-            highlights: [
-                c('Plan Feature').t`Access to all countries`,
-                c('Plan Feature').t`5 devices`,
-                c('Plan Feature').t`All advanced security features included`,
-                c('Plan Feature').t`30-day money-back guarantee`
-            ],
+            description: c('Plan Description').t`Advanced security features`,
+            additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.BASIC]} plan features`,
             features: [
-                c('Plan Feature').t`Access to all countries`,
-                c('Plan Feature').t`5 devices`,
+                c('Plan Feature').t`5 simultaneous VPN connections`,
+                c('Plan Feature').t`Secure Core`,
                 c('Plan Feature').t`Highest speeds`,
-                c('Plan Feature').t`Secure Core servers`,
-                c('Plan Feature').t`Safe file sharing`,
-                c('Plan Feature').t`Secure streaming`,
-                c('Plan Feature').t`Tor servers`,
-                c('Plan Feature').t`Multi-platform support`,
-                c('Plan Feature').t`30-day money-back guarantee`
+                c('Plan Feature').t`Access blocked content`
             ]
         },
-        [PLANS.VISIONARY]: {
-            description: c('Plan Description').t`Plus 5 devices + ProtonMail Visionary plan`,
+        [PLAN.VISIONARY]: {
+            description: c('Plan Description').t`The complete privacy suite`,
+            additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.PLUS]} plan features`,
             features: [
-                c('Plan Feature').t`Access to all countries`,
-                c('Plan Feature').t`10 devices`,
-                c('Plan Feature').t`Highest speeds`,
-                c('Plan Feature').t`Secure Core servers`,
-                c('Plan Feature').t`Safe file sharing`,
-                c('Plan Feature').t`Secure streaming`,
-                c('Plan Feature').t`Tor servers`,
-                c('Plan Feature').t`ProtonMail Visionary included`,
-                c('Plan Feature').t`Multi-platform support`,
-                c('Plan Feature').t`30-day money-back guarantee`
+                c('Plan Feature').t`10 simutaneous plan features`,
+                c('Plan Feature').t`ProtonMail Visionary account`
             ]
         }
-    }[planName]);
+    }[plan]);
 
-// TODO: two-year deal
 const getPlanPrice = (plan, cycle) => {
-    const isMonthly = cycle === CYCLE.MONTHLY;
     const monthlyPrice = plan.Pricing[CYCLE.MONTHLY];
-    const annualPrice = plan.Pricing[CYCLE.YEARLY];
+    const cyclePrice = plan.Pricing[cycle];
 
-    const monthly = isMonthly ? monthlyPrice : annualPrice / CYCLE.YEARLY;
-    const total = isMonthly ? monthlyPrice : annualPrice;
-    const saved = monthlyPrice * CYCLE.YEARLY - monthly * CYCLE.YEARLY;
+    const monthly = cyclePrice / cycle;
+    const total = cyclePrice;
+    const saved = monthlyPrice * cycle - cyclePrice;
 
     return { monthly, total, saved };
 };
