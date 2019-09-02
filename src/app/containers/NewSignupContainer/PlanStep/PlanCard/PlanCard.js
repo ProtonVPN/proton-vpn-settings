@@ -21,9 +21,10 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency }) => {
             >
                 <PlanPrice plan={plan} cycle={cycle} currency={currency} />
                 {plan.description && <div className="border-bottom">{plan.description}</div>}
-                {plan.highlights && (
+                {plan.additionalFeatures && <div className="m1">{plan.additionalFeatures} + </div>}
+                {plan.features && (
                     <ul>
-                        {plan.highlights.map((feature, i) => (
+                        {plan.features.map((feature, i) => (
                             <li key={i}>{feature}</li>
                         ))}
                     </ul>
@@ -42,6 +43,7 @@ PlanCard.propTypes = {
         planName: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string,
+        additionalFeatures: PropTypes.string,
         features: PropTypes.arrayOf(PropTypes.string),
         highlights: PropTypes.arrayOf(PropTypes.string),
         isBest: PropTypes.bool
