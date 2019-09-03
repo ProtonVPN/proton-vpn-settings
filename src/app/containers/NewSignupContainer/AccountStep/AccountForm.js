@@ -19,7 +19,6 @@ const AccountForm = ({ onSubmit }) => {
     const api = useApi();
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [passwordConfirmation, setPasswordConfirmation] = useState('');
     const [email, setEmail] = useState('');
     const [usernameError, setUsernameError] = useState();
     const [loading, withLoading] = useLoading();
@@ -32,7 +31,6 @@ const AccountForm = ({ onSubmit }) => {
     };
 
     const handleChangePassword = ({ target }) => setPassword(target.value);
-    const handleChangePasswordConfirmation = ({ target }) => setPasswordConfirmation(target.value);
     const handleChangeEmail = ({ target }) => setEmail(target.value);
 
     const handleSubmit = async (e) => {
@@ -45,7 +43,7 @@ const AccountForm = ({ onSubmit }) => {
                 email
             });
         } catch (e) {
-            setUsernameError(e.data.Error);
+            setUsernameError(e.data ? e.data.Error : c('Error').t`Can't check username, try again later`);
         }
     };
 
@@ -77,13 +75,7 @@ const AccountForm = ({ onSubmit }) => {
                             name="password"
                         />
                     </div>
-                    <PasswordInput
-                        id="passwordConfirmation"
-                        value={passwordConfirmation}
-                        onChange={handleChangePasswordConfirmation}
-                        name="passwordConfirmation"
-                        pattern={password}
-                    />
+                    <PasswordInput id="passwordConfirmation" name="passwordConfirmation" pattern={password} />
                 </Field>
             </Row>
 

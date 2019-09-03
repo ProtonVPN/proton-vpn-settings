@@ -52,7 +52,11 @@ const PublicApp = ({ onLogin }) => {
                         path="/pre-invite/:selector/:token"
                         render={({ history, match }) => <PreInviteContainer history={history} match={match} />}
                     />
-                    <Route exact path="/signup" render={() => <SignupContainer onLogin={onLogin} />} />
+                    <Route
+                        exact
+                        path="/signup"
+                        render={() => <SignupContainer history={history} onLogin={onLogin} />}
+                    />
                     <Route render={({ history }) => <LoginContainer history={history} onLogin={onLogin} />} />
                 </Switch>
             </PublicLayout>

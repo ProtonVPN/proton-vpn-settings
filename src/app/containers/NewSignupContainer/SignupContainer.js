@@ -7,7 +7,6 @@ import useSignup from './useSignup';
 import { c } from 'ttag';
 import VerificationStep from './VerificationStep/VerificationStep';
 import PaymentStep from './PaymentStep/PaymentStep';
-import { withRouter } from 'react-router-dom';
 import SelectedPlan from './SelectedPlan';
 import { PLAN } from './plans';
 
@@ -130,4 +129,4 @@ SignupContainer.propTypes = {
     }).isRequired
 };
 
-export default withRouter(SignupContainer);
+export default SignupContainer;
