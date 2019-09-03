@@ -11,7 +11,7 @@
         "postversion": "git update-index --assume-unchanged package-lock.json && git push --tags",
         "i18n:validate": "proton-i18n validate lint-functions",
         "i18n:validate:context": "proton-i18n extract && proton-i18n validate",
-        "i18n:upgrade": "proton-i18n extract --verbose && proton-i18n crowdin -u --verbose && proton-i18n commit update--verbose ",
+        "i18n:upgrade": "proton-i18n extract --verbose && proton-i18n crowdin -u --verbose && proton-i18n commit update --verbose ",
         "i18n:getlatest": "proton-i18n upgrade",
         "deploy": "proton-bundler",
         "deploy:standalone": "proton-bundler --appMode standalone",
