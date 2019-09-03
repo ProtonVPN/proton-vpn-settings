@@ -21,7 +21,8 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
             <div className="p1 flex flex-items-center">
                 <strong className="biggest mt0 mb0">{plan.title}</strong>
                 {plan.isBest && (
-                    <strong className="ml1 mt0 mb0 pt0-25 pb0-25 pr0-5 pl0-5 bg-plus small">BEST OFFER</strong>
+                    <strong className="ml1 mt0 mb0 pt0-25 pb0-25 pr0-5 pl0-5 bg-plus small">{c('PlanInfo')
+                        .t`BEST OFFER`}</strong>
                 )}
             </div>
             <div
@@ -30,10 +31,15 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
                 className={classnames(['plan-card flex-column', isActive && 'plan-card--active'])}
             >
                 <PlanPrice plan={plan} cycle={cycle} currency={currency} />
-                {plan.description && <div className="border-bottom">{plan.description}</div>}
-                {plan.additionalFeatures && <div className="m1">{plan.additionalFeatures} + </div>}
+                {plan.description && <strong className="border-top mt1 pt1 mb1 big">{plan.description}</strong>}
+                {plan.additionalFeatures && (
+                    <>
+                        <div>{plan.additionalFeatures}</div>
+                        <strong className="color-global-success">+</strong>
+                    </>
+                )}
                 {plan.features && (
-                    <ul>
+                    <ul className="mt0 mb1 unstyled">
                         {plan.features.map((feature, i) => (
                             <li key={i}>{feature}</li>
                         ))}

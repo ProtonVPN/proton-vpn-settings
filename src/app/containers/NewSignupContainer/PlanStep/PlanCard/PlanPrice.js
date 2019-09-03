@@ -1,26 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
-import { Price } from 'react-components';
+import { Price, Block } from 'react-components';
 import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
 const PlanPrice = ({ plan, cycle, currency }) => {
     const discount = plan.couponDiscount || plan.price.saved;
     return (
         <div>
-            <strong>{c('Plan price per month').jt`${(
-                <Price currency={currency}>{plan.price.totalMonthly}</Price>
-            )} / mo`}</strong>
+            <Block>
+                {c('PlanPrice').jt`${(
+                    <strong>
+                        <Price className="biggest" currency={currency}>
+                            {plan.price.totalMonthly}
+                        </Price>
+                    </strong>
+                )} / mo`}
+            </Block>
+
             <div>
                 {cycle === CYCLE.MONTHLY
-                    ? c('Plan price info monthly').jt`Charging you ${(
-                          <Price currency={currency}>{plan.price.monthly}</Price>
-                      )} monthly`
-                    : c('Plan price info yearly').jt`Charging you ${(
-                          <Price currency={currency}>{plan.price.total}</Price>
-                      )} yearly`}
+                    ? c('PlanPrice').jt`Billed as ${<Price currency={currency}>{plan.price.monthly}</Price>} monthly`
+                    : c('PlanPrice').jt`Billed as ${<Price currency={currency}>{plan.price.total}</Price>} yearly`}
                 {discount > 0 && (
-                    <strong>{c('Plan price yearly savings').jt`save ${(
+                    <strong className="ml0-25 color-global-success">{c('PlanPrice').jt`SAVE ${(
                         <Price currency={currency}>{discount}</Price>
                     )}`}</strong>
                 )}
