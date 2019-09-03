@@ -15,6 +15,8 @@ export const PLAN_NAMES = {
     [PLAN.PLUS]: 'Plus'
 };
 
+export const VPN_PLANS = [PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
+
 const getPlanFeatures = (plan) =>
     ({
         [PLAN.FREE]: {
@@ -58,20 +60,23 @@ const getPlanFeatures = (plan) =>
         }
     }[plan]);
 
+// To use coupon, AmountDue from coupon must be merged into plan.
 const getPlanPrice = (plan, cycle) => {
     const monthlyPrice = plan.Pricing[CYCLE.MONTHLY];
     const cyclePrice = plan.Pricing[cycle];
+    const adjustedTotal = plan.AmountDue;
 
     const monthly = cyclePrice / cycle;
-    const total = cyclePrice;
+    const total = typeof adjustedTotal !== 'undefined' ? plan.AmountDue : cyclePrice;
     const saved = monthlyPrice * cycle - cyclePrice;
+    const totalMonthly = total / cycle;
 
-    return { monthly, total, saved };
+    return { monthly, total, totalMonthly, saved };
 };
 
 export const getPlan = (planName, cycle, plans = []) => {
     const plan = plans.find(({ Type, Name }) => Type === PLAN_TYPES.PLAN && Name === planName);
-    const price = plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, saved: 0 };
+    const price = plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, totalMonthly: 0, saved: 0 };
 
     return {
         ...getPlanFeatures(planName),
@@ -79,6 +84,8 @@ export const getPlan = (planName, cycle, plans = []) => {
         title: PLAN_NAMES[planName],
         id: plan && plan.ID,
         disabled: !plan && planName !== PLAN.FREE,
-        price
+        price,
+        couponDiscount: plan && Math.abs(plan.CouponDiscount),
+        couponDescription: plan && plan.CouponDescription
     };
 };

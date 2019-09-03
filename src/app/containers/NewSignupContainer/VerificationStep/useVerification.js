@@ -4,7 +4,7 @@ import { queryCheckVerificationCode, queryVerificationCode } from 'proton-shared
 const useVerification = () => {
     const api = useApi();
     const { CLIENT_TYPE } = useConfig();
-    const requestCode = api(({ Type, Destination }) => queryVerificationCode(Type, Destination));
+    const requestCode = ({ Type, Destination }) => api(queryVerificationCode(Type, Destination));
 
     const verify = async (code, { Type: TokenType, Destination }) => {
         const Token = `${Destination.Phone || Destination.Address}:${code}`;

@@ -55,7 +55,7 @@ const PublicApp = ({ onLogin }) => {
                     <Route
                         exact
                         path="/signup"
-                        render={() => <SignupContainer history={history} onLogin={onLogin} />}
+                        render={({ history }) => <SignupContainer history={history} onLogin={onLogin} />}
                     />
                     <Route render={({ history }) => <LoginContainer history={history} onLogin={onLogin} />} />
                 </Switch>
