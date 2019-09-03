@@ -12,7 +12,7 @@ const VerificationStep = ({ onVerificationDone, allowedMethods, model, children 
         const newEmail = params.Destination.Address;
         const verificationToken = await verify(code, params);
 
-        onVerificationDone(
+        await onVerificationDone(
             { ...model, email: newEmail && newEmail !== model.email ? newEmail : model.email },
             verificationToken
         );

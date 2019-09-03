@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Wizard } from 'react-components';
+import { Wizard, Loader } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
@@ -17,6 +17,7 @@ const SignupState = {
     Payment: 'payment'
 };
 
+// TODO: back-forward buttons
 // TODO: better handling of allowed methods (invite, coupon)
 const SignupContainer = ({ history, onLogin }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
@@ -24,11 +25,15 @@ const SignupContainer = ({ history, onLogin }) => {
         history.push('/dashboard');
         onLogin(...rest);
     };
-    const { model, setModel, signup, selectedPlan, checkPayment, signupAvailability, availablePlans } = useSignup(
-        handleLogin
-    );
 
-    const invite = history.location.state;
+    const historyState = history.location.state || {};
+    const invite = historyState.invite;
+    const coupon = historyState.coupon;
+
+    const { model, setModel, signup, selectedPlan, checkPayment, signupAvailability, plans, isLoading } = useSignup(
+        handleLogin,
+        coupon
+    );
 
     const handleSelectPlan = (model) => {
         setModel(model);
@@ -37,14 +42,13 @@ const SignupContainer = ({ history, onLogin }) => {
 
     const handleCreateAccount = async (model) => {
         setModel(model);
-        if (model.planName === PLAN.FREE) {
-            if (invite) {
-                await signup(model, { invite });
-            } else {
-                setSignupState(SignupState.Verification);
-            }
-        } else {
+
+        if (selectedPlan.price.total > 0) {
             setSignupState(SignupState.Payment);
+        } else if (invite || coupon) {
+            await signup(model, { invite, coupon });
+        } else {
+            setSignupState(SignupState.Verification);
         }
     };
 
@@ -74,13 +78,18 @@ const SignupContainer = ({ history, onLogin }) => {
         <main className="flex flex-item-fluid main-area">
             <div className="container-section-sticky">
                 <Wizard step={step} steps={steps} />
-                {signupAvailability && (
+                {isLoading ? (
+                    <Loader />
+                ) : (
                     <>
-                        {availablePlans && signupState === SignupState.Plan && (
+                        {signupState === SignupState.Plan && (
                             <PlanStep
+                                plans={plans}
                                 model={model}
+                                onChangeCycle={(cycle) => setModel({ ...model, cycle })}
+                                onChangeCurrency={(currency) => setModel({ ...model, currency })}
                                 signupAvailability={signupAvailability}
-                                onSelect={handleSelectPlan}
+                                onSelectPlan={handleSelectPlan}
                             />
                         )}
 
@@ -121,10 +130,15 @@ SignupContainer.propTypes = {
     history: PropTypes.shape({
         push: PropTypes.func.isRequired,
         location: PropTypes.shape({
-            state: PropTypes.shape({
-                selector: PropTypes.string.isRequired,
-                token: PropTypes.string.isRequired
-            })
+            state: PropTypes.oneOfType([
+                PropTypes.shape({
+                    selector: PropTypes.string.isRequired,
+                    token: PropTypes.string.isRequired
+                }),
+                PropTypes.shape({
+                    Coupon: PropTypes.shape({ Code: PropTypes.string })
+                })
+            ])
         }).isRequired
     }).isRequired
 };

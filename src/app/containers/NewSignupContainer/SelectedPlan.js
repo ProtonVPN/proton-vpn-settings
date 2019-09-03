@@ -5,7 +5,6 @@ import { Price } from 'react-components';
 import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
 // TODO: CTA buttons
-// TODO: coupon (also check for which plan)
 const SelectedPlan = ({ plan, cycle, currency }) => {
     const planTitle = c('VPN plan title').t`ProtonVPN ${plan.title}`;
 
@@ -24,6 +23,7 @@ const SelectedPlan = ({ plan, cycle, currency }) => {
     };
 
     const billingCycle = billingCycleI18n[cycle];
+    const discount = plan.couponDiscount || plan.price.saved;
 
     return (
         <div className="ml1">
@@ -45,12 +45,14 @@ const SelectedPlan = ({ plan, cycle, currency }) => {
                             </strong>
                         </div>
                     )}
-                    {billingCycle.discount && (
+                    {(billingCycle.discount || plan.couponDiscount) && (
                         <div className="flex flex-spacebetween">
-                            <span className="mr0-25">{billingCycle.discount}:</span>
+                            <span className="mr0-25">
+                                {plan.couponDiscount ? plan.couponDescription : billingCycle.discount}:
+                            </span>
                             <strong>
                                 <Price className="color-global-success" currency={currency}>
-                                    {plan.price.saved}
+                                    {discount}
                                 </Price>
                             </strong>
                         </div>

@@ -20,21 +20,12 @@ const RedeemCouponForm = ({ history }) => {
         e.preventDefault();
 
         const { Plans = [] } = await api(queryCheckVerificationCode(couponCode, TOKEN_TYPES.COUPON, CLIENT_TYPE));
-        const [{ Currency, Cycle }] = Plans;
-        const PlanIDs = Plans.reduce((acc, { ID, Quantity }) => {
-            acc[ID] = Quantity;
-            return acc;
-        }, {});
-        const response = await api(
-            checkSubscription({
-                CouponCode: couponCode,
-                Currency,
-                Cycle,
-                PlanIDs
-            })
-        );
+        const [{ Cycle, Name }] = Plans;
 
-        history.push('/signup', response);
+        history.push({
+            pathname: '/signup',
+            state: { coupon: { code: couponCode, cycle: Cycle, plan: Name } }
+        });
     };
 
     return (

@@ -37,7 +37,7 @@ const AccountForm = ({ onSubmit }) => {
         e.preventDefault();
         try {
             await api(queryCheckUsernameAvailability(username));
-            onSubmit({
+            await onSubmit({
                 username,
                 password,
                 email

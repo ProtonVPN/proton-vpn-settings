@@ -1,15 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { handlePaymentToken } from 'react-components/containers/payments/paymentTokenHelper';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
 import { useApi, usePlans, useConfig, useApiResult, useModals } from 'react-components';
 import { queryCreateUser, queryDirectSignupStatus } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
-import { subscribe, setPaymentMethod, verifyPayment } from 'proton-shared/lib/api/payments';
+import { subscribe, setPaymentMethod, verifyPayment, checkSubscription } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
-import { DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
-import { getPlan, PLAN } from './plans';
+import { DEFAULT_CURRENCY, CYCLE, PLAN_TYPES } from 'proton-shared/lib/constants';
+import { getPlan, PLAN, VPN_PLANS } from './plans';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes('email');
@@ -29,26 +29,68 @@ const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
 
 const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAuthHeaders(UID, AccessToken));
 
-const useSignup = (onLogin) => {
+/**
+ * @param {Function} onLogin
+ * @param {{ plan, code, cycle }} coupon
+ */
+const useSignup = (onLogin, coupon) => {
     const api = useApi();
     const { createModal } = useModals();
     const { CLIENT_TYPE } = useConfig();
     const { result } = useApiResult(() => queryDirectSignupStatus(CLIENT_TYPE), []);
-    const [plans = [], plansLoading] = usePlans();
+    const [plans] = usePlans();
+    const [plansWithCoupons, setPlansWithCoupons] = useState();
 
-    const defaultCurrency = plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
-    const initialPlan = new URLSearchParams(location.search).get('plan') || PLAN.FREE;
+    const defaultCurrency = plans && plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
     const signupAvailability = result && getSignupAvailability(result.Direct, result.VerifyMethods);
-    const isLoading = plansLoading || !signupAvailability;
+    const isLoading = !plansWithCoupons || !signupAvailability;
 
     const [model, setModel] = useState({
-        planName: initialPlan,
-        cycle: CYCLE.YEARLY,
+        planName: coupon ? coupon.plan : PLAN.FREE,
+        cycle: coupon ? coupon.cycle : CYCLE.YEARLY,
         email: '',
         username: '',
         password: '',
         currency: defaultCurrency
     });
+
+    // Util we can query plans+coupons at once, we need to check each plan individually
+    useEffect(() => {
+        const applyCoupon = async () => {
+            const vpnPlans = plans.filter(({ Name, Type }) => Type === PLAN_TYPES.PLAN && VPN_PLANS.includes(Name));
+            const plansWithCoupons = await Promise.all(
+                vpnPlans.map(async (plan) => {
+                    const {
+                        AmountDue,
+                        CouponDiscount,
+                        Coupon: { Description }
+                    } = await api(
+                        checkSubscription({
+                            CouponCode: coupon.code,
+                            Currency: model.currency,
+                            Cycle: model.cycle,
+                            PlanIDs: { [plan.ID]: 1 }
+                        })
+                    );
+                    return {
+                        ...plan,
+                        AmountDue,
+                        CouponDiscount,
+                        CouponDescription: Description
+                    };
+                })
+            );
+            setPlansWithCoupons(plansWithCoupons);
+        };
+
+        if (plans) {
+            if (coupon) {
+                applyCoupon();
+            } else {
+                setPlansWithCoupons(plans);
+            }
+        }
+    }, [plans, coupon, model.cycle, model.currency]);
 
     /**
      * Verifies if payment was done and saves payment details for signup
@@ -74,18 +116,17 @@ const useSignup = (onLogin) => {
         return null;
     };
 
-    const getToken = ({ appliedCoupon, invite, verificationToken, paymentDetails }) => {
+    const getToken = ({ coupon, invite, verificationToken, paymentDetails }) => {
         if (invite) {
             return { Token: `${invite.selector}:${invite.token}`, TokenType: 'invite' };
-        } else if (appliedCoupon) {
-            return { Token: appliedCoupon.Coupon.Code, TokenType: 'coupon' };
+        } else if (coupon) {
+            return { Token: coupon.code, TokenType: 'coupon' };
         } else if (paymentDetails) {
             return { Token: paymentDetails.VerifyCode, TokenType: 'payment' };
         }
         return verificationToken;
     };
 
-    // TODO: appliedCoupon (and gift code?)
     const signup = async (model, signupToken) => {
         const { Token, TokenType } = getToken(signupToken);
         const { planName, password, email, username, currency, cycle } = model;
@@ -118,8 +159,8 @@ const useSignup = (onLogin) => {
                 },
                 Amount: 0,
                 Currency: currency,
-                Cycle: cycle
-                // CouponCode: appliedCoupon ? appliedCoupon.Coupon.Code : undefined
+                Cycle: cycle,
+                CouponCode: signupToken.coupon ? Token : undefined
             };
             await api(withAuthHeaders(UID, AccessToken, subscribe(subscription)));
         }
@@ -146,8 +187,8 @@ const useSignup = (onLogin) => {
     return {
         model,
         isLoading,
-        availablePlans: plans,
-        selectedPlan: getPlan(model.planName, model.cycle, plans),
+        plans: plansWithCoupons,
+        selectedPlan: getPlan(model.planName, model.cycle, plansWithCoupons || []),
         signupAvailability,
 
         checkPayment,
