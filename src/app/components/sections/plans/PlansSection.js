@@ -122,7 +122,7 @@ const PlansSection = () => {
                 {showPlans ? c('Action').t`Hide plans` : c('Action').t`Show plans`}
             </Button>
             {showPlans ? (
-                <div className="scroll-horizontal-if-needed pt2">
+                <div className="scroll-horizontal-if-needed pt3">
                     <PlansTable
                         onSelect={(planName) => () => withLoading(handleSelectPlan(planName))}
                         loading={loading}
