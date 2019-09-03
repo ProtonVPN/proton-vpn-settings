@@ -4,7 +4,6 @@ import { Wizard } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
-import { Redirect } from 'react-router-dom';
 import { c } from 'ttag';
 import VerificationStep from './VerificationStep/VerificationStep';
 import PaymentStep from './PaymentStep/PaymentStep';
@@ -79,7 +78,11 @@ const SignupContainer = ({ history, onLogin }) => {
                 {signupAvailability && (
                     <>
                         {availablePlans && signupState === SignupState.Plan && (
-                            <PlanStep model={model} onSelect={handleSelectPlan} />
+                            <PlanStep
+                                model={model}
+                                signupAvailability={signupAvailability}
+                                onSelect={handleSelectPlan}
+                            />
                         )}
 
                         {signupState === SignupState.Account && (

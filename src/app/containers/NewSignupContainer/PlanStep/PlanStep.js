@@ -5,7 +5,7 @@ import PlanCard from './PlanCard/PlanCard';
 import { CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
 import { getPlan, PLAN } from '../plans';
 
-const PlanStep = ({ onSelect, model }) => {
+const PlanStep = ({ onSelect, model, signupAvailability }) => {
     const [currency, setCurrency] = useState(model.currency);
     const [cycle, setCycle] = useState(model.cycle);
     const handleSelect = (planName) => () => onSelect({ ...model, planName, currency, cycle });
@@ -33,7 +33,7 @@ const PlanStep = ({ onSelect, model }) => {
                             currency={currency}
                             plan={plan}
                             isActive={planName === model.planName}
-                            isDisabled={plan.disabled}
+                            isDisabled={plan.disabled || (!signupAvailability.paid && plan.price.monthly > 0)}
                         />
                     );
                 })}
@@ -43,6 +43,9 @@ const PlanStep = ({ onSelect, model }) => {
 };
 
 PlanStep.propTypes = {
+    signupAvailability: PropTypes.shape({
+        paid: PropTypes.bool
+    }).isRequired,
     model: PropTypes.shape({
         planName: PropTypes.string.isRequired,
         cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
