@@ -11,9 +11,7 @@ import ForgotUsernameContainer from './containers/ForgotUsernameContainer';
 import RedeemContainer from './containers/RedeemContainer';
 import PreInviteContainer from './containers/PreInviteContainer';
 import { getBrowserLocale, loadLocale } from 'proton-shared/lib/i18n';
-import SignupContainer from './containers/NewSignupContainer/SignupContainer';
-import InviteContainer from './containers/InviteContainer/InviteContainer';
-import SignupProvider from './containers/NewSignupContainer/SignupProvider';
+import SignupContainer from './containers/SignupContainer/SignupContainer';
 
 import locales from './locales';
 
