@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { handlePaymentToken } from 'react-components/containers/payments/paymentTokenHelper';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
 import { useApi, usePlans, useConfig, useApiResult, useModals } from 'react-components';
 import { queryCreateUser, queryDirectSignupStatus } from 'proton-shared/lib/api/user';
@@ -6,10 +7,9 @@ import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { subscribe, setPaymentMethod, verifyPayment } from 'proton-shared/lib/api/payments';
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
-import { getPlan, PLAN } from './plans';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
 import { DEFAULT_CURRENCY, CYCLE } from 'proton-shared/lib/constants';
-import { handlePaymentToken } from 'react-components/containers/payments/paymentTokenHelper';
+import { getPlan, PLAN } from './plans';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes('email');
