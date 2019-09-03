@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Wizard, Loader } from 'react-components';
+import { Wizard, Loader, Row, Button, Title } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
 import { c } from 'ttag';
 import VerificationStep from './VerificationStep/VerificationStep';
 import PaymentStep from './PaymentStep/PaymentStep';
-import SelectedPlan from './SelectedPlan';
-import { PLAN } from './plans';
+import SelectedPlan from './SelectedPlan/SelectedPlan';
+import { PLAN, getPlan } from './plans';
+import SupportDropdown from '../../components/header/SupportDropdown';
+import { CYCLE } from 'proton-shared/lib/constants';
 
 const SignupState = {
     Plan: 'plan',
@@ -17,7 +19,6 @@ const SignupState = {
     Payment: 'payment'
 };
 
-// TODO: back-forward buttons
 // TODO: better handling of allowed methods (invite, coupon)
 const SignupContainer = ({ history, onLogin }) => {
     const [signupState, setSignupState] = useState(SignupState.Plan);
@@ -63,7 +64,25 @@ const SignupContainer = ({ history, onLogin }) => {
         await signup(model, { paymentDetails });
     };
 
-    const selectedPlanComponent = <SelectedPlan plan={selectedPlan} currency={model.currency} cycle={model.cycle} />;
+    const handleUpgradeToBasicClick = () => {
+        setModel({ ...model, planName: PLAN.BASIC });
+        if (signupState === SignupState.Verification) {
+            setSignupState(SignupState.Payment);
+        }
+    };
+
+    const handleExtendCycle = () => setModel({ ...model, cycle: CYCLE.YEARLY });
+
+    const selectedPlanComponent = (
+        <SelectedPlan
+            plan={selectedPlan}
+            currency={model.currency}
+            cycle={model.cycle}
+            onUpgrade={handleUpgradeToBasicClick}
+            onExtendCycle={handleExtendCycle}
+            basicPlan={getPlan(PLAN.BASIC, model.cycle, plans)}
+        />
+    );
     const step = signupState === SignupState.Plan ? 0 : signupState === SignupState.Account ? 1 : 2;
     const baseSteps = [c('SignupStep').t`Select a subscription plan`, c('SignupStep').t`Create an account`];
     const steps = invite
@@ -74,10 +93,37 @@ const SignupContainer = ({ history, onLogin }) => {
                   : [c('SignupStep').t`Provide payment details`]
           );
 
+    const prevStep = {
+        [SignupState.Account]: SignupState.Plan,
+        [SignupState.Payment]: SignupState.Account,
+        [SignupState.Verification]: SignupState.Account
+    }[signupState];
+
+    const handleBackClick = () => {
+        if (prevStep) {
+            setSignupState(prevStep);
+        } else {
+            history.push('/');
+        }
+    };
+
     return (
         <main className="flex flex-item-fluid main-area">
             <div className="container-section-sticky">
-                <Wizard step={step} steps={steps} />
+                <Row className="flex-spacebetween">
+                    <div>
+                        <Button onClick={handleBackClick}>
+                            {prevStep ? c('Action').t`Back` : c('Action').t`Homepage`}
+                        </Button>
+                    </div>
+                    <Title>{c('Title').t`Sign up`}</Title>
+                    <div>
+                        <SupportDropdown />
+                    </div>
+                </Row>
+                <div className="w500p mb2">
+                    <Wizard step={step} steps={steps} />
+                </div>
                 {isLoading ? (
                     <Loader />
                 ) : (

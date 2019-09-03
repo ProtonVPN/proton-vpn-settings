@@ -8,13 +8,13 @@ import { subscribe, setPaymentMethod, verifyPayment, checkSubscription } from 'p
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
-import { DEFAULT_CURRENCY, CYCLE, PLAN_TYPES } from 'proton-shared/lib/constants';
+import { DEFAULT_CURRENCY, CYCLE, PLAN_TYPES, TOKEN_TYPES } from 'proton-shared/lib/constants';
 import { getPlan, PLAN, VPN_PLANS } from './plans';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
-    const email = allowedMethods.includes('email');
-    const sms = allowedMethods.includes('sms');
-    const paid = allowedMethods.includes('payment');
+    const email = allowedMethods.includes(TOKEN_TYPES.EMAIL);
+    const sms = allowedMethods.includes(TOKEN_TYPES.SMS);
+    const paid = allowedMethods.includes(TOKEN_TYPES.PAYMENT);
     const free = email || sms;
 
     return {
@@ -118,11 +118,11 @@ const useSignup = (onLogin, coupon) => {
 
     const getToken = ({ coupon, invite, verificationToken, paymentDetails }) => {
         if (invite) {
-            return { Token: `${invite.selector}:${invite.token}`, TokenType: 'invite' };
+            return { Token: `${invite.selector}:${invite.token}`, TokenType: TOKEN_TYPES.INVITE };
         } else if (coupon) {
-            return { Token: coupon.code, TokenType: 'coupon' };
+            return { Token: coupon.code, TokenType: TOKEN_TYPES.COUPON };
         } else if (paymentDetails) {
-            return { Token: paymentDetails.VerifyCode, TokenType: 'payment' };
+            return { Token: paymentDetails.VerifyCode, TokenType: TOKEN_TYPES.PAYMENT };
         }
         return verificationToken;
     };

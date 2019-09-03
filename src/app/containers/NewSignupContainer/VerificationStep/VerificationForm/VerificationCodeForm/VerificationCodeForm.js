@@ -23,12 +23,7 @@ const VerificationCodeForm = ({ onSubmit, onResend }) => {
                 <Row>
                     <Label htmlFor="code">{c('Label').t`6-digit code`}</Label>
                     <Field className="mr1">
-                        <Input
-                            id="code"
-                            value={code}
-                            onChange={handleChangeCode}
-                            placeholder={c('Placeholder').t`123456`}
-                        />
+                        <Input id="code" value={code} onChange={handleChangeCode} placeholder="123456" />
                     </Field>
                 </Row>
                 <PrimaryButton disabled={!code} type="submit" loading={loading}>{c('Action').t`Verify`}</PrimaryButton>

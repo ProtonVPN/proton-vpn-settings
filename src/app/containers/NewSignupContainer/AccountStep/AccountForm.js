@@ -10,7 +10,8 @@ import {
     Label,
     EmailInput,
     Block,
-    useLoading
+    useLoading,
+    Info
 } from 'react-components';
 import { c } from 'ttag';
 import { queryCheckUsernameAvailability } from 'proton-shared/lib/api/user';
@@ -50,7 +51,13 @@ const AccountForm = ({ onSubmit }) => {
     return (
         <form onSubmit={(e) => withLoading(handleSubmit(e))}>
             <Row>
-                <Label htmlFor="username">{c('Label').t`Username`}</Label>
+                <Label htmlFor="username">
+                    {c('Label').t`Username`}
+                    <Info
+                        title={c('Tooltip')
+                            .t`Username which is used for all Proton services. This can also be used later to create a secure ProtonMail account.`}
+                    />
+                </Label>
                 <Field>
                     <Input
                         required
@@ -64,7 +71,13 @@ const AccountForm = ({ onSubmit }) => {
             </Row>
 
             <Row>
-                <Label htmlFor="password">{c('Label').t`Password`}</Label>
+                <Label htmlFor="password">
+                    {c('Label').t`Password`}
+                    <Info
+                        title={c('Tooltip')
+                            .t`If you forget your password, you will no longer have access to your account or your data. Please save it someplace safe.`}
+                    />
+                </Label>
                 <Field>
                     <div className="mb1">
                         <PasswordInput
@@ -80,7 +93,13 @@ const AccountForm = ({ onSubmit }) => {
             </Row>
 
             <Row>
-                <Label htmlFor="email">{c('Label').t`Email`}</Label>
+                <Label htmlFor="email">
+                    {c('Label').t`Email address`}
+                    <Info
+                        title={c('Tooltip')
+                            .t`Your email is not shared with third parties and is only used for recovery and account-related questions or communication.`}
+                    />
+                </Label>
                 <Field>
                     <EmailInput
                         id="email"

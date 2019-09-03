@@ -5,10 +5,11 @@ import { c } from 'ttag';
 import VerificationMethodSelector from './VerificationMethodSelector';
 import VerificationEmailInput from './VerificationEmailInput';
 import VerificationPhoneInput from './VerificationPhoneInput';
+import { TOKEN_TYPES } from 'proton-shared/lib/constants';
 
 const VERIFICATION_METHOD = {
-    SMS: 'sms',
-    EMAIL: 'email'
+    SMS: TOKEN_TYPES.SMS,
+    EMAIL: TOKEN_TYPES.EMAIL
 };
 
 const VerificationMethodForm = ({ defaultEmail, allowedMethods, onSubmit }) => {
