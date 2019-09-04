@@ -28,17 +28,12 @@ const SignupState = {
 const SignupContainer = ({ history, onLogin }) => {
     const searchParams = new URLSearchParams(history.location.search);
     const [signupState, setSignupState] = useState(SignupState.Plan);
-    const handleLogin = (...rest) => {
-        history.push('/dashboard');
-        onLogin(...rest);
-    };
-
     const historyState = history.location.state || {};
     const invite = historyState.invite;
     const coupon = historyState.coupon;
 
     const { model, setModel, signup, selectedPlan, checkPayment, signupAvailability, plans, isLoading } = useSignup(
-        handleLogin,
+        onLogin,
         coupon,
         {
             planName: searchParams.get('plan'),
