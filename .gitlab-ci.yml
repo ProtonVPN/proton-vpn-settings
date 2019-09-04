@@ -34,6 +34,7 @@ setup:
         - echo >> ${CI_PROJECT_DIR}/.env
         - cat ${CI_PROJECT_DIR}/configApp/vpn-settings/.env >> ${CI_PROJECT_DIR}/.env
         - cat ${CI_PROJECT_DIR}/{.env,appConfig.json}
+        - git checkout package-lock.json
         - npx proton-pack config
     artifacts:
         expire_in: 1 days
@@ -54,6 +55,7 @@ i18n:
     tags:
         - heavy
     script:
+        - npm install --no-audit --no-package-lock
         - npm run i18n:validate
         - npm run i18n:validate:context
 
