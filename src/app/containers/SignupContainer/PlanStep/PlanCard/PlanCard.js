@@ -49,7 +49,7 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
                     </>
                 )}
                 {plan.features && (
-                    <ul className="mt0 mb1 unstyled">
+                    <ul className="mt0 mb2 unstyled">
                         {plan.features.map((feature, i) => (
                             <li key={i}>{feature}</li>
                         ))}
