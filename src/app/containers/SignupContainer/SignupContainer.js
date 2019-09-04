@@ -165,14 +165,6 @@ const SignupContainer = ({ history, onLogin }) => {
                         )}
                     </>
                 )}
-                <div>
-                    <h3 className="mb0">{c('Title').t`Already have a Proton account?`}</h3>
-                    <div className="flex flex-nowrap flex-spacebetween flex-items-center">
-                        <p>{c('Info')
-                            .t`If you are a ProtonMail user you can use you Proton account to log in to ProtonVPN.`}</p>
-                        <Link className="pv-button-greenborder" to="/login">{c('Link').t`Log in`}</Link>
-                    </div>
-                </div>
             </div>
         </main>
     );
