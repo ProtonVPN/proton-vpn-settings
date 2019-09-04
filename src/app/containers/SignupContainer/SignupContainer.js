@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Wizard, Loader, Row, Button, Title } from 'react-components';
+import { Loader, Row, Button, Title } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
@@ -11,6 +11,10 @@ import SelectedPlan from './SelectedPlan/SelectedPlan';
 import { PLAN, getPlan } from './plans';
 import SupportDropdown from '../../components/header/SupportDropdown';
 import { CYCLE } from 'proton-shared/lib/constants';
+
+// TODO: Flexible on these parameters:
+// - URLs
+// - plans
 
 const SignupState = {
     Plan: 'plan',
@@ -83,15 +87,6 @@ const SignupContainer = ({ history, onLogin }) => {
             basicPlan={getPlan(PLAN.BASIC, model.cycle, plans)}
         />
     );
-    const step = signupState === SignupState.Plan ? 0 : signupState === SignupState.Account ? 1 : 2;
-    const baseSteps = [c('SignupStep').t`Select a subscription plan`, c('SignupStep').t`Create an account`];
-    const steps = invite
-        ? baseSteps
-        : baseSteps.concat(
-              model.planName === PLAN.FREE
-                  ? [c('SignupStep').t`Verify your account`]
-                  : [c('SignupStep').t`Provide payment details`]
-          );
 
     const prevStep = {
         [SignupState.Account]: SignupState.Plan,
@@ -121,9 +116,6 @@ const SignupContainer = ({ history, onLogin }) => {
                         <SupportDropdown />
                     </div>
                 </Row>
-                <div className="w500p mb2">
-                    <Wizard step={step} steps={steps} />
-                </div>
                 {isLoading ? (
                     <Loader />
                 ) : (

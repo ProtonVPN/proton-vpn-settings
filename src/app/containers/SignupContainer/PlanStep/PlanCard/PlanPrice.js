@@ -20,10 +20,18 @@ const PlanPrice = ({ plan, cycle, currency }) => {
 
             <div>
                 {cycle === CYCLE.MONTHLY
-                    ? c('PlanPrice').jt`Billed as ${<Price currency={currency}>{plan.price.monthly}</Price>} monthly`
-                    : c('PlanPrice').jt`Billed as ${<Price currency={currency}>{plan.price.total}</Price>} yearly`}
+                    ? c('PlanPrice').jt`Billed as ${(
+                          <Price currency={currency} suffix={c('Suffix').t`monthly`}>
+                              {plan.price.monthly}
+                          </Price>
+                      )}`
+                    : c('PlanPrice').jt`Billed as ${(
+                          <Price currency={currency} suffix={c('Suffix').t`yearly`}>
+                              {plan.price.total}
+                          </Price>
+                      )}`}
                 {discount > 0 && (
-                    <strong className="ml0-25 color-global-success">{c('PlanPrice').jt`SAVE ${(
+                    <strong className="ml0-25 color-primary">{c('PlanPrice').jt`SAVE ${(
                         <Price currency={currency}>{discount}</Price>
                     )}`}</strong>
                 )}

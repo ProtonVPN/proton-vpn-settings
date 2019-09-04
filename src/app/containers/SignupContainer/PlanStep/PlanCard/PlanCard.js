@@ -31,11 +31,15 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
                 className={classnames(['plan-card flex-column', isActive && 'plan-card--active'])}
             >
                 <PlanPrice plan={plan} cycle={cycle} currency={currency} />
-                {plan.description && <strong className="border-top mt1 pt1 mb1 big">{plan.description}</strong>}
+                {plan.description && (
+                    <strong className={classnames(['border-top mt1 pt1 mb1 big', plan.isBest && 'color-primary'])}>
+                        {plan.description}
+                    </strong>
+                )}
                 {plan.additionalFeatures && (
                     <>
                         <div>{plan.additionalFeatures}</div>
-                        <strong className="color-global-success">+</strong>
+                        <strong className="color-primary">+</strong>
                     </>
                 )}
                 {plan.features && (

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Alert } from 'react-components';
+import { Row, Alert, SubTitle } from 'react-components';
 import VerificationForm from './VerificationForm/VerificationForm';
 import useVerification from './useVerification';
 import { c } from 'ttag';
@@ -20,6 +20,7 @@ const VerificationStep = ({ onVerificationDone, allowedMethods, model, children 
 
     return (
         <>
+            <SubTitle>{c('Title').t`Are you human?`}</SubTitle>
             <Row>
                 <div>
                     <Alert>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Alert, Payment, usePayment, PrimaryButton, Field, Label, Row, useLoading } from 'react-components';
+import { Alert, Payment, usePayment, PrimaryButton, Field, Label, Row, useLoading, SubTitle } from 'react-components';
 import { c } from 'ttag';
 import { PAYMENT_METHOD_TYPES, CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
@@ -12,7 +12,7 @@ const PaymentStep = ({ onPaymentDone, paymentAmount, model, children }) => {
 
     return (
         <>
-            <h3>{c('Title').t`Select a payment method`}</h3>
+            <SubTitle>{c('Title').t`Provide payment details`}</SubTitle>
             <Row>
                 <div>
                     <Alert>{c('Info').t`Your payment details are protected with TLS encryption and Swiss laws`}</Alert>

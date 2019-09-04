@@ -1,15 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Field, CurrencySelector, CycleSelector } from 'react-components';
+import { Row, Field, CurrencySelector, CycleSelector, SubTitle } from 'react-components';
 import PlanCard from './PlanCard/PlanCard';
 import { CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
-import { getPlan, PLAN, VPN_PLANS } from '../plans';
+import { getPlan, VPN_PLANS } from '../plans';
+import { c } from 'ttag';
 
 const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model, signupAvailability }) => {
     const handleSelect = (planName) => () => onSelectPlan({ ...model, planName });
 
     return (
         <>
+            <SubTitle>{c('Title').t`Select a subscription plan`}</SubTitle>
             <Row className="flex-spacebetween">
                 <Field>
                     <CycleSelector cycle={model.cycle} onSelect={onChangeCycle} />

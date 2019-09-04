@@ -46,7 +46,7 @@ const useSignup = (onLogin, coupon) => {
     const isLoading = !plansWithCoupons || !signupAvailability;
 
     const [model, setModel] = useState({
-        planName: coupon ? coupon.plan : PLAN.FREE,
+        planName: coupon ? coupon.plan : PLAN.PLUS,
         cycle: coupon ? coupon.cycle : CYCLE.YEARLY,
         email: '',
         username: '',
@@ -54,7 +54,7 @@ const useSignup = (onLogin, coupon) => {
         currency: defaultCurrency
     });
 
-    // Util we can query plans+coupons at once, we need to check each plan individually
+    // Until we can query plans+coupons at once, we need to check each plan individually
     useEffect(() => {
         const applyCoupon = async () => {
             const vpnPlans = plans.filter(({ Name, Type }) => Type === PLAN_TYPES.PLAN && VPN_PLANS.includes(Name));
