@@ -1,5 +1,7 @@
+import React from 'react';
 import { c } from 'ttag';
 import { PLANS, PLAN_TYPES, CYCLE } from 'proton-shared/lib/constants';
+import { Info } from 'react-components';
 
 export const PLAN = {
     FREE: 'free',
@@ -36,7 +38,10 @@ const getPlanFeatures = (plan) =>
                 c('Plan Feature').t`2 simultaneous VPN connections`,
                 c('Plan Feature').t`Servers in 32 countries`,
                 c('Plan Feature').t`High speeds - up to 1 Gb/s`,
-                c('Plan Feature').t`P2P support` // TODO: info tooltips
+                <>
+                    <span className="mr0-5">{c('Plan Feature').t`P2P support`}</span>
+                    <Info title={c('Tooltip').t`Support for file sharing protocols such as Bittorrent.`} />
+                </>
             ]
         },
         [PLAN.PLUS]: {
@@ -47,7 +52,13 @@ const getPlanFeatures = (plan) =>
                 c('Plan Feature').t`5 simultaneous VPN connections`,
                 c('Plan Feature').t`Secure Core`,
                 c('Plan Feature').t`Highest speeds`,
-                c('Plan Feature').t`Access blocked content`
+                <>
+                    <span className="mr0-5">{c('Plan Feature').t`Access blocked content`}</span>
+                    <Info
+                        title={c('Tooltip')
+                            .t`Access content (Netflix, Amazon Prime, Wikipedia, Facebook, Youtube, etc) no matter where you are.`}
+                    />
+                </>
             ]
         },
         [PLAN.VISIONARY]: {
