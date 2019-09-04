@@ -6,6 +6,8 @@ import { CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
 import { getPlan, VPN_PLANS } from '../plans';
 import { c } from 'ttag';
 
+const { MONTHLY, YEARLY, TWO_YEARS } = CYCLE;
+
 const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model, signupAvailability }) => {
     const handleSelect = (planName) => () => onSelectPlan({ ...model, planName });
 
@@ -14,7 +16,15 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
             <SubTitle>{c('Title').t`Select a plan`}</SubTitle>
             <Row className="flex-spacebetween">
                 <Field>
-                    <CycleSelector cycle={model.cycle} onSelect={onChangeCycle} />
+                    <CycleSelector
+                        cycle={model.cycle}
+                        onSelect={onChangeCycle}
+                        options={[
+                            { text: c('Billing cycle option').t`Monthly`, value: MONTHLY },
+                            { text: c('Billing cycle option').t`Annually, save 20%`, value: YEARLY },
+                            { text: c('Billing cycle option').t`Two-year, save 33%`, value: TWO_YEARS }
+                        ]}
+                    />
                 </Field>
                 <Field>
                     <CurrencySelector currency={model.currency} onSelect={onChangeCurrency} />
@@ -47,7 +57,7 @@ PlanStep.propTypes = {
     plans: PropTypes.arrayOf(PropTypes.object).isRequired, // TODO: better type
     model: PropTypes.shape({
         planName: PropTypes.string.isRequired,
-        cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
+        cycle: PropTypes.oneOf([MONTHLY, TWO_YEARS, YEARLY]).isRequired,
         currency: PropTypes.oneOf(CURRENCIES).isRequired
     }).isRequired,
     onSelectPlan: PropTypes.func.isRequired,
