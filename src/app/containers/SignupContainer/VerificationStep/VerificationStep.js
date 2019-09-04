@@ -23,11 +23,7 @@ const VerificationStep = ({ onVerificationDone, allowedMethods, model, children 
             <SubTitle>{c('Title').t`Are you human?`}</SubTitle>
             <Row>
                 <div>
-                    <Alert>
-                        {c('Info')
-                            .t`In order to prevent abuse and provide the best possible user experience, we need to verify your
-                        account.`}
-                    </Alert>
+                    <Alert>{c('Info').t`To prevent misuse, please verify you are human`}</Alert>
                     <VerificationForm
                         allowedMethods={allowedMethods}
                         defaultEmail={model.email}
