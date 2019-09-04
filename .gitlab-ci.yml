@@ -26,7 +26,7 @@ before_script:
 setup:
     stage: setup
     script:
-        - npm install --no-audit
+        - npm install --no-audit --no-package-lock
         - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
         - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
         - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
