@@ -1,16 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AccountForm from './AccountForm';
-import { Row } from 'react-components';
+import { Row, SubTitle } from 'react-components';
+import { c } from 'ttag';
 
 const AccountStep = ({ onContinue, model, children }) => {
     const handleSubmit = ({ email, username, password }) => onContinue({ ...model, email, username, password });
 
     return (
-        <Row>
-            <AccountForm onSubmit={handleSubmit} />
-            {children}
-        </Row>
+        <>
+            <SubTitle>{c('Title').t`Create an account`}</SubTitle>
+            <Row>
+                <AccountForm onSubmit={handleSubmit} />
+                {children}
+            </Row>
+        </>
     );
 };
 
