@@ -34,7 +34,7 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
                     </Field>
                 </div>
             </Row>
-            <div className="flex-autogrid">
+            <div className="flex flex-nowrap">
                 {VPN_PLANS.map((planName) => {
                     const plan = getPlan(planName, model.cycle, plans);
                     return (
