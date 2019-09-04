@@ -6,7 +6,7 @@ import { c } from 'ttag';
 import LoginPromptModal from './LoginPromptModal';
 
 const isProtonEmail = (email) => {
-    const protonmailRegex = /@(protonmail\.com|pm\.me)$/i;
+    const protonmailRegex = /@(protonmail\.(com|ch)|pm\.me|)$/i;
     return protonmailRegex.test(email);
 };
 
