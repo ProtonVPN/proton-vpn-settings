@@ -71,6 +71,7 @@ const AccountForm = ({ onSubmit }) => {
                         onChange={handleChangeUsername}
                         name="username"
                         id="username"
+                        autoFocus={true}
                         placeholder={c('Placeholder').t`Username`}
                     />
                 </Field>
