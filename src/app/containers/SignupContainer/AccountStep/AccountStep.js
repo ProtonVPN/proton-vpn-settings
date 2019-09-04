@@ -3,18 +3,15 @@ import PropTypes from 'prop-types';
 import AccountForm from './AccountForm';
 import { Row, SubTitle, useModals } from 'react-components';
 import { c } from 'ttag';
-import LoginPromptModal from './LoginPromptModal';
+import { hasProtonDomain } from 'proton-shared/lib/helpers/string';
 
-const isProtonEmail = (email) => {
-    const protonmailRegex = /@(protonmail\.(com|ch)|pm\.me|)$/i;
-    return protonmailRegex.test(email);
-};
+import LoginPromptModal from './LoginPromptModal';
 
 const AccountStep = ({ onContinue, model, children }) => {
     const { createModal } = useModals();
 
     const handleSubmit = ({ email, username, password }) => {
-        if (isProtonEmail(email)) {
+        if (hasProtonDomain(email)) {
             createModal(<LoginPromptModal email={email} />);
         } else {
             onContinue({ ...model, email, username, password });
