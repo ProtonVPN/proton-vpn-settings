@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormModal, PrimaryButton } from 'react-components';
+import { FormModal, PrimaryButton, Alert } from 'react-components';
 import { c } from 'ttag';
 import { Link } from 'react-router-dom';
 
@@ -17,9 +17,12 @@ const LoginPromptModal = ({ email, ...rest }) => {
             }
             {...rest}
         >
-            <p>{c('Info').t`You already have a Proton account.`}</p>
-            <p>{c('Info')
-                .t`Your existing Proton account can be used to access all Proton services. Please login with ${email}`}</p>
+            <Alert>
+                {c('Info').t`You already have a Proton account.`}
+                <br />
+                {c('Info')
+                    .t`Your existing Proton account can be used to access all Proton services. Please login with ${email}`}
+            </Alert>
         </FormModal>
     );
 };
