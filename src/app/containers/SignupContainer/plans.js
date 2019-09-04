@@ -73,13 +73,12 @@ const getPlanFeatures = (plan) =>
 
 // To use coupon, AmountDue from coupon must be merged into plan.
 const getPlanPrice = (plan, cycle) => {
-    const monthlyPrice = plan.Pricing[CYCLE.MONTHLY];
+    const monthly = plan.Pricing[CYCLE.MONTHLY];
     const cyclePrice = plan.Pricing[cycle];
     const adjustedTotal = plan.AmountDue;
 
-    const monthly = cyclePrice / cycle;
     const total = typeof adjustedTotal !== 'undefined' ? plan.AmountDue : cyclePrice;
-    const saved = monthlyPrice * cycle - cyclePrice;
+    const saved = monthly * cycle - cyclePrice;
     const totalMonthly = total / cycle;
 
     return { monthly, total, totalMonthly, saved };

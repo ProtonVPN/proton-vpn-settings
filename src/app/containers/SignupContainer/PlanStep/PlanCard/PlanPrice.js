@@ -22,7 +22,7 @@ const PlanPrice = ({ plan, cycle, currency }) => {
                 {cycle === CYCLE.MONTHLY
                     ? c('PlanPrice').jt`Billed as ${(
                           <Price currency={currency} suffix={c('Suffix').t`monthly`}>
-                              {plan.price.monthly}
+                              {plan.price.totalMonthly}
                           </Price>
                       )}`
                     : c('PlanPrice').jt`Billed as ${(

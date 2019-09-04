@@ -2,20 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 import { c } from 'ttag';
-import { Price, PrimaryButton } from 'react-components';
+import { Price } from 'react-components';
 
-const PriceInfo = ({ plan, cycle, currency, onExtendCycle }) => {
+const PriceInfo = ({ plan, cycle, currency }) => {
     const billingCycleI18n = {
         [CYCLE.MONTHLY]: {
-            label: c('Label').t`1 month:`
+            label: c('Label').t`1 month`,
+            total: c('Label').t`Total due`
         },
         [CYCLE.YEARLY]: {
-            label: c('Label').t`12 months:`,
-            discount: c('Label').t`Annual discount (20%)`
+            label: c('Label').t`12 months`,
+            discount: c('Label').t`Annual discount (20%)`,
+            total: c('Label').t`Total (annual plan)`
         },
         [CYCLE.TWO_YEARS]: {
-            label: c('Label').t`24 months:`,
-            discount: c('Label').t`Two-year discount (33%)`
+            label: c('Label').t`24 months`,
+            discount: c('Label').t`Two-year discount (33%)`,
+            total: c('Label').t`Total (two-year plan)`
         }
     };
 
@@ -26,34 +29,34 @@ const PriceInfo = ({ plan, cycle, currency, onExtendCycle }) => {
         <>
             {plan.price.monthly > 0 && (
                 <div className="flex flex-spacebetween">
-                    <span className="mr0-25">{billingCycle.label}</span>
-                    <strong>
-                        <Price currency={currency}>{plan.price.monthly}</Price>
-                    </strong>
+                    <span className="mr0-25">
+                        {plan.title} - {billingCycle.label}
+                    </span>
+                    <Price currency={currency}>{plan.price.monthly * cycle}</Price>
                 </div>
             )}
             {(plan.couponDiscount || billingCycle.discount) && (
-                <div className="flex flex-spacebetween">
+                <div className="flex color-global-success flex-spacebetween">
                     <span className="mr0-25">
-                        {plan.couponDiscount ? plan.couponDescription : billingCycle.discount}:
+                        {plan.couponDiscount ? plan.couponDescription : billingCycle.discount}
                     </span>
-                    <strong>
-                        <Price className="color-global-success" currency={currency}>
-                            {discount}
+                    <Price currency={currency}>{-discount}</Price>
+                </div>
+            )}
+            <div className="border-top pt0-5 mt0-5">
+                {cycle !== CYCLE.MONTHLY && (
+                    <span className="flex flex-spacebetween">
+                        <span className="mr0-25">{c('Label').t`Monthly price`}</span>
+                        <Price currency={currency} suffix={c('Suffix').t`/ month`}>
+                            {plan.price.totalMonthly}
                         </Price>
-                    </strong>
-                </div>
-            )}
-            <div className="flex flex-spacebetween">
-                <strong className="mr0-25">{c('Label').t`Total due:`}</strong>
-                <Price currency={currency}>{plan.price.total}</Price>
+                    </span>
+                )}
+                <strong className="flex flex-spacebetween">
+                    <span className="mr0-25">{billingCycle.total}</span>
+                    <Price currency={currency}>{plan.price.total}</Price>
+                </strong>
             </div>
-            {cycle === CYCLE.MONTHLY && (
-                <div className="mt1">
-                    <PrimaryButton className="w100" onClick={onExtendCycle}>{c('Action')
-                        .t`Pay annually and save 20%`}</PrimaryButton>
-                </div>
-            )}
         </>
     );
 };
@@ -61,8 +64,7 @@ const PriceInfo = ({ plan, cycle, currency, onExtendCycle }) => {
 PriceInfo.propTypes = {
     plan: PropTypes.object.isRequired, // TODO: better type
     cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
-    currency: PropTypes.oneOf(CURRENCIES).isRequired,
-    onExtendCycle: PropTypes.isRequired
+    currency: PropTypes.oneOf(CURRENCIES).isRequired
 };
 
 export default PriceInfo;

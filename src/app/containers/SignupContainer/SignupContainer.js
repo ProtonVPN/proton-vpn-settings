@@ -8,10 +8,11 @@ import useSignup from './useSignup';
 import { c } from 'ttag';
 import VerificationStep from './VerificationStep/VerificationStep';
 import PaymentStep from './PaymentStep/PaymentStep';
-import SelectedPlan from './SelectedPlan/SelectedPlan';
-import { PLAN, getPlan } from './plans';
+import { PLAN } from './plans';
 import SupportDropdown from '../../components/header/SupportDropdown';
 import { CYCLE } from 'proton-shared/lib/constants';
+import PlanDetails from './SelectedPlan/PlanDetails';
+import PlanSummary from './SelectedPlan/PlanSummary';
 
 // TODO: Flexible on these parameters:
 // - URLs
@@ -75,24 +76,29 @@ const SignupContainer = ({ history, onLogin }) => {
         await signup(model, { paymentDetails });
     };
 
-    const handleUpgradeToBasicClick = () => {
-        setModel({ ...model, planName: PLAN.BASIC });
-        if (signupState === SignupState.Verification) {
+    const handleUpgrade = (planName) => {
+        setModel({ ...model, planName });
+        if (planName !== PLAN.FREE && signupState === SignupState.Verification) {
             setSignupState(SignupState.Payment);
+        } else if (planName === PLAN.FREE && signupState === SignupState.Payment) {
+            setSignupState(SignupState.Verification);
         }
     };
 
     const handleExtendCycle = () => setModel({ ...model, cycle: CYCLE.YEARLY });
 
     const selectedPlanComponent = (
-        <SelectedPlan
-            plan={selectedPlan}
-            currency={model.currency}
-            cycle={model.cycle}
-            onUpgrade={handleUpgradeToBasicClick}
-            onExtendCycle={handleExtendCycle}
-            basicPlan={getPlan(PLAN.BASIC, model.cycle, plans)}
-        />
+        <div className="ml1 selected-plan">
+            <PlanDetails selectedPlan={selectedPlan} />
+            <PlanSummary
+                selectedPlan={selectedPlan}
+                plans={plans}
+                onExtendCycle={handleExtendCycle}
+                onUpgrade={handleUpgrade}
+                cycle={model.cycle}
+                currency={model.currency}
+            />
+        </div>
     );
 
     const prevStep = {
