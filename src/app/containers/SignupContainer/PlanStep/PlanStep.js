@@ -11,7 +11,7 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
 
     return (
         <>
-            <SubTitle>{c('Title').t`Select a subscription plan`}</SubTitle>
+            <SubTitle>{c('Title').t`Select a plan`}</SubTitle>
             <Row className="flex-spacebetween">
                 <Field>
                     <CycleSelector cycle={model.cycle} onSelect={onChangeCycle} />
