@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useNotifications } from 'react-components';
 import VerificationMethodForm from './VerificationMethodForm/VerificationMethodForm';
 import VerificationCodeForm from './VerificationCodeForm/VerificationCodeForm';
+import { c } from 'ttag';
 
 const VerificationForm = ({ defaultEmail, allowedMethods, onRequestCode, onSubmit }) => {
+    const { createNotification } = useNotifications();
     const [params, setParams] = useState(null);
 
-    const handleResend = () => setParams(null);
+    const handleBack = () => setParams(null);
 
-    const handleSubmitMethod = async (params) => {
+    const sendCode = async (params) => {
+        const destination = params.Destination.Phone || params.Destination.Address;
         await onRequestCode(params);
+        createNotification({ text: c('Notification').t`Verification code successfully sent to ${destination}` });
+    };
+
+    const handleResendCode = () => sendCode(params);
+
+    const handleRequestCode = async (params) => {
+        await sendCode(params);
         setParams(params);
     };
 
@@ -20,12 +31,19 @@ const VerificationForm = ({ defaultEmail, allowedMethods, onRequestCode, onSubmi
             <VerificationMethodForm
                 defaultEmail={defaultEmail}
                 allowedMethods={allowedMethods}
-                onSubmit={handleSubmitMethod}
+                onSubmit={handleRequestCode}
             />
         );
     }
 
-    return <VerificationCodeForm onSubmit={handleSubmitCode} onResend={handleResend} />;
+    return (
+        <VerificationCodeForm
+            destination={params.Destination.Phone || params.Destination.Address}
+            onSubmit={handleSubmitCode}
+            onBack={handleBack}
+            onResend={handleResendCode}
+        />
+    );
 };
 
 VerificationForm.propTypes = {

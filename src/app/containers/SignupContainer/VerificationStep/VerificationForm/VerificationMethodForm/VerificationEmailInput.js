@@ -1,25 +1,24 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Field, Row, PrimaryButton, EmailInput, Label } from 'react-components';
+import { PrimaryButton, EmailInput } from 'react-components';
 import { c } from 'ttag';
 
 const VerificationEmailInput = ({ defaultEmail = '', onSendClick, loading }) => {
     const [email, setEmail] = useState(defaultEmail);
 
     const handleChange = ({ target }) => setEmail(target.value);
-    const handleSendClick = () => onSendClick(email);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        onSendClick(email);
+    };
 
     return (
-        <>
-            <Row>
-                <Label>{c('Label').t`Email address`}</Label>
-                <Field className="mr1">
-                    <EmailInput value={email} onChange={handleChange} placeholder={c('Placeholder').t`Email`} />
-                </Field>
-            </Row>
-            <PrimaryButton disabled={!email} loading={loading} onClick={handleSendClick}>{c('Action')
-                .t`Send`}</PrimaryButton>
-        </>
+        <form onSubmit={handleSubmit}>
+            <EmailInput value={email} onChange={handleChange} placeholder={c('Placeholder').t`Email`} />
+            <div className="mt1 flex flex-justify-end">
+                <PrimaryButton type="submit" disabled={!email} loading={loading}>{c('Action').t`Send`}</PrimaryButton>
+            </div>
+        </form>
     );
 };
 
