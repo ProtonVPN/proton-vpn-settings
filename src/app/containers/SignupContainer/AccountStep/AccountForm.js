@@ -9,7 +9,7 @@ import {
     Row,
     Label,
     EmailInput,
-    Block,
+    Alert,
     useLoading,
     Info
 } from 'react-components';
@@ -52,7 +52,7 @@ const AccountForm = ({ onSubmit }) => {
         <form onSubmit={(e) => withLoading(handleSubmit(e))}>
             <Row>
                 <Label htmlFor="username">
-                    {c('Label').t`Username`}
+                    <span className="mr0-5">{c('Label').t`Username`}</span>
                     <Info
                         title={c('Tooltip')
                             .t`Username which is used for all Proton services. This can also be used later to create a secure ProtonMail account.`}
@@ -66,13 +66,14 @@ const AccountForm = ({ onSubmit }) => {
                         onChange={handleChangeUsername}
                         name="username"
                         id="username"
+                        placeholder={c('Placeholder').t`Username`}
                     />
                 </Field>
             </Row>
 
             <Row>
                 <Label htmlFor="password">
-                    {c('Label').t`Password`}
+                    <span className="mr0-5">{c('Label').t`Password`}</span>
                     <Info
                         title={c('Tooltip')
                             .t`If you forget your password, you will no longer have access to your account or your data. Please save it someplace safe.`}
@@ -86,15 +87,21 @@ const AccountForm = ({ onSubmit }) => {
                             value={password}
                             onChange={handleChangePassword}
                             name="password"
+                            placeholder={c('Placeholder').t`Password`}
                         />
                     </div>
-                    <PasswordInput id="passwordConfirmation" name="passwordConfirmation" pattern={password} />
+                    <PasswordInput
+                        id="passwordConfirmation"
+                        name="passwordConfirmation"
+                        pattern={password}
+                        placeholder={c('Placeholder').t`Confirm password`}
+                    />
                 </Field>
             </Row>
 
             <Row>
                 <Label htmlFor="email">
-                    {c('Label').t`Email address`}
+                    <span className="mr0-5">{c('Label').t`Email address`}</span>
                     <Info
                         title={c('Tooltip')
                             .t`Your email is not shared with third parties and is only used for recovery and account-related questions or communication.`}
@@ -111,11 +118,11 @@ const AccountForm = ({ onSubmit }) => {
                 </Field>
             </Row>
 
-            <Block>
-                {c('Info').t`By clicking Create Account you agree to abide by ProtonVPN's Terms and Conditions`}
-            </Block>
+            <Alert>
+                {c('Info').t`By clicking Create account you agree to abide by ProtonVPN's Terms and Conditions`}
+            </Alert>
 
-            <PrimaryButton loading={loading} type="submit">{c('Action').t`Complete`}</PrimaryButton>
+            <PrimaryButton loading={loading} type="submit">{c('Action').t`Create account`}</PrimaryButton>
         </form>
     );
 };

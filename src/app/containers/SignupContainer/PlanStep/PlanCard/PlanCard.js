@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { classnames, Button, Tooltip } from 'react-components';
+import { classnames, Button, Tooltip, Badge } from 'react-components';
 import { c } from 'ttag';
 import PlanPrice from './PlanPrice';
 import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
@@ -20,10 +20,7 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
         <div className="flex-autogrid-item flex flex-column">
             <div className="p1 flex flex-items-center">
                 <strong className="biggest mt0 mb0">{plan.title}</strong>
-                {plan.isBest && (
-                    <strong className="ml1 mt0 mb0 pt0-25 pb0-25 pr0-5 pl0-5 bg-plus small">{c('PlanInfo')
-                        .t`BEST OFFER`}</strong>
-                )}
+                {plan.isBest && <Badge>{c('Plan info').t`Most popular`}</Badge>}
             </div>
             <div
                 role="button"

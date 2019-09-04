@@ -113,7 +113,7 @@ const SignupContainer = ({ history, onLogin }) => {
                     </div>
                     <Title>{c('Title').t`Sign up`}</Title>
                     <div>
-                        <SupportDropdown />
+                        <SupportDropdown content={c('Action').t`Need help`} />
                     </div>
                 </Row>
                 {isLoading ? (
