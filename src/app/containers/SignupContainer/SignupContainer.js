@@ -111,15 +111,17 @@ const SignupContainer = ({ history, onLogin }) => {
 
     return (
         <main className="flex flex-item-fluid main-area">
-            <div className="container-section-sticky">
-                <Row className="flex-spacebetween">
-                    <div>
-                        <Button onClick={handleBackClick}>
-                            {prevStep ? c('Action').t`Back` : c('Action').t`Homepage`}
+            <div className="center p2 container-plans-signup">
+                <Row>
+                    <div className="flex-item-fluid">
+                        <Button className="pm-button--primaryborder" onClick={handleBackClick}>
+                            {prevStep ? c('Action').t`Back` : c('Action').t`Back to home page`}
                         </Button>
                     </div>
-                    <Title>{c('Title').t`Sign up`}</Title>
-                    <div>
+                    <div className="w">
+                        <Title>{c('Title').t`Sign up`}</Title>
+                    </div>
+                    <div className="flex-item-fluid alignright">
                         <SupportDropdown content={c('Action').t`Need help`} />
                     </div>
                 </Row>
@@ -165,7 +167,7 @@ const SignupContainer = ({ history, onLogin }) => {
                         )}
                     </>
                 )}
-                <div>
+                <div className="border-top pt3">
                     <h3 className="mb0">{c('Title').t`Already have a Proton account?`}</h3>
                     <div className="flex flex-nowrap flex-spacebetween flex-items-center">
                         <p>{c('Info')
