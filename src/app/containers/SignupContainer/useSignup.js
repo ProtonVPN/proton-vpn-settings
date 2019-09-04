@@ -8,8 +8,9 @@ import { subscribe, setPaymentMethod, verifyPayment, checkSubscription } from 'p
 import { mergeHeaders } from 'proton-shared/lib/fetch/helpers';
 import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
-import { DEFAULT_CURRENCY, CYCLE, PLAN_TYPES, TOKEN_TYPES } from 'proton-shared/lib/constants';
+import { DEFAULT_CURRENCY, CYCLE, PLAN_TYPES, TOKEN_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
 import { getPlan, PLAN, VPN_PLANS } from './plans';
+import { merge } from 'proton-shared/lib/helpers/object';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes(TOKEN_TYPES.EMAIL);
@@ -33,7 +34,7 @@ const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAu
  * @param {Function} onLogin
  * @param {{ plan, code, cycle }} coupon
  */
-const useSignup = (onLogin, coupon) => {
+const useSignup = (onLogin, coupon, initialModel = {}) => {
     const api = useApi();
     const { createModal } = useModals();
     const { CLIENT_TYPE } = useConfig();
@@ -42,16 +43,18 @@ const useSignup = (onLogin, coupon) => {
     const [plansWithCoupons, setPlansWithCoupons] = useState();
 
     const defaultCurrency = plans && plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
+    const defaultCycle = coupon ? coupon.cycle : CYCLE.YEARLY;
+    const defaultPlan = coupon ? coupon.plan : PLAN.PLUS;
     const signupAvailability = result && getSignupAvailability(result.Direct, result.VerifyMethods);
     const isLoading = !plansWithCoupons || !signupAvailability;
 
     const [model, setModel] = useState({
-        planName: coupon ? coupon.plan : PLAN.PLUS,
-        cycle: coupon ? coupon.cycle : CYCLE.YEARLY,
-        email: '',
-        username: '',
-        password: '',
-        currency: defaultCurrency
+        planName: Object.values(PLAN).includes(initialModel.planName) ? initialModel.planName : defaultPlan,
+        cycle: Object.values(CYCLE).includes(initialModel.cycle) ? initialModel.cycle : defaultCycle,
+        currency: CURRENCIES.includes(initialModel.currency) ? initialModel.currency : defaultCurrency,
+        email: initialModel.email || '',
+        username: initialModel.username || '',
+        password: initialModel.password || ''
     });
 
     // Until we can query plans+coupons at once, we need to check each plan individually

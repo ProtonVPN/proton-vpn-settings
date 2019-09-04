@@ -26,6 +26,7 @@ const SignupState = {
 
 // TODO: better handling of allowed methods (invite, coupon)
 const SignupContainer = ({ history, onLogin }) => {
+    const searchParams = new URLSearchParams(history.location.search);
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const handleLogin = (...rest) => {
         history.push('/dashboard');
@@ -38,7 +39,12 @@ const SignupContainer = ({ history, onLogin }) => {
 
     const { model, setModel, signup, selectedPlan, checkPayment, signupAvailability, plans, isLoading } = useSignup(
         handleLogin,
-        coupon
+        coupon,
+        {
+            planName: searchParams.get('plan'),
+            cycle: Number(searchParams.get('cycle')),
+            currency: searchParams.get('currency')
+        }
     );
 
     const handleSelectPlan = (model) => {
@@ -177,6 +183,7 @@ SignupContainer.propTypes = {
     history: PropTypes.shape({
         push: PropTypes.func.isRequired,
         location: PropTypes.shape({
+            search: PropTypes.string.isRequired,
             state: PropTypes.oneOfType([
                 PropTypes.shape({
                     selector: PropTypes.string.isRequired,
