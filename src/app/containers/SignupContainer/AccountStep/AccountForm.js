@@ -9,6 +9,7 @@ import {
     Row,
     Label,
     EmailInput,
+    Href,
     Alert,
     useLoading,
     Info
@@ -47,6 +48,10 @@ const AccountForm = ({ onSubmit }) => {
             setUsernameError(e.data ? e.data.Error : c('Error').t`Can't check username, try again later`);
         }
     };
+
+    const termsAndConditionsLink = (
+        <Href key="0" url="https://protonvpn.com/terms-and-conditions">{c('Link').t`terms and conditions`}</Href>
+    );
 
     return (
         <form onSubmit={(e) => withLoading(handleSubmit(e))}>
@@ -119,7 +124,7 @@ const AccountForm = ({ onSubmit }) => {
             </Row>
 
             <Alert>
-                {c('Info').t`By clicking Create account you agree to abide by ProtonVPN's Terms and Conditions`}
+                {c('Info').jt`By clicking Create account you agree to abide by ProtonVPN's ${termsAndConditionsLink}.`}
             </Alert>
 
             <PrimaryButton loading={loading} type="submit">{c('Action').t`Create account`}</PrimaryButton>
