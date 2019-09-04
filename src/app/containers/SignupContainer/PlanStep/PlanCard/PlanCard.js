@@ -10,7 +10,11 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
         <Button
             disabled={isDisabled}
             onClick={onSelect}
-            className={classnames(['w100 mtauto increase-surface-click', isActive && 'pm-button--primary'])}
+            className={classnames([
+                'w100 mtauto increase-surface-click',
+                !isActive && 'pm-button--primaryborder',
+                isActive && 'pm-button--primary'
+            ])}
         >
             {c('Plan Action').t`Get ${plan.title}`}
         </Button>
