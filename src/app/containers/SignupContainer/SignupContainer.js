@@ -116,15 +116,17 @@ const SignupContainer = ({ history, onLogin }) => {
 
     return (
         <main className="flex flex-item-fluid main-area">
-            <div className="container-section-sticky">
-                <Row className="flex-spacebetween">
-                    <div>
+            <div className="center p2 container-plans-signup">
+                <Row>
+                    <div className="flex-item-fluid">
                         <Button onClick={handleBackClick}>
                             {prevStep ? c('Action').t`Back` : c('Action').t`Homepage`}
                         </Button>
                     </div>
-                    <Title>{c('Title').t`Sign up`}</Title>
-                    <div>
+                    <div className="w">
+                        <Title>{c('Title').t`Sign up`}</Title>
+                    </div>
+                    <div className="flex-item-fluid alignright">
                         <SupportDropdown content={c('Action').t`Need help`} />
                     </div>
                 </Row>

@@ -13,22 +13,26 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
 
     return (
         <>
-            <SubTitle>{c('Title').t`Select a plan`}</SubTitle>
-            <Row className="flex-spacebetween">
-                <Field>
-                    <CycleSelector
-                        cycle={model.cycle}
-                        onSelect={onChangeCycle}
-                        options={[
-                            { text: c('Billing cycle option').t`Monthly`, value: MONTHLY },
-                            { text: c('Billing cycle option').t`Annually, save 20%`, value: YEARLY },
-                            { text: c('Billing cycle option').t`Two-year, save 33%`, value: TWO_YEARS }
-                        ]}
-                    />
-                </Field>
-                <Field>
-                    <CurrencySelector currency={model.currency} onSelect={onChangeCurrency} />
-                </Field>
+            <Row className="flex-items-vcenter border-top pt3">
+                <div className="flex-item-fluid">
+                    <SubTitle>{c('Title').t`Select a plan`}</SubTitle>
+                </div>
+                <div className="mlauto">
+                    <Field>
+                        <CycleSelector
+                            cycle={model.cycle}
+                            onSelect={onChangeCycle}
+                            options={[
+                                { text: c('Billing cycle option').t`Monthly`, value: MONTHLY },
+                                { text: c('Billing cycle option').t`Annually, save 20%`, value: YEARLY },
+                                { text: c('Billing cycle option').t`Two-year, save 33%`, value: TWO_YEARS }
+                            ]}
+                        />
+                    </Field>
+                    <Field>
+                        <CurrencySelector currency={model.currency} onSelect={onChangeCurrency} />
+                    </Field>
+                </div>
             </Row>
             <div className="flex-autogrid">
                 {VPN_PLANS.map((planName) => {

@@ -7,7 +7,7 @@ import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 const PlanPrice = ({ plan, cycle, currency }) => {
     const discount = plan.couponDiscount || plan.price.saved;
     return (
-        <div>
+        <div className="border-top pt1 plan-price">
             <Block>
                 {c('PlanPrice').jt`${(
                     <strong>

@@ -10,23 +10,28 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
         <Button
             disabled={isDisabled}
             onClick={onSelect}
-            className={classnames(['w100 mtauto', isActive && 'pm-button--primary'])}
+            className={classnames(['w100 mtauto increase-surface-click', isActive && 'pm-button--primary'])}
         >
             {c('Plan Action').t`Get ${plan.title}`}
         </Button>
     );
 
     return (
-        <div className="flex-autogrid-item flex flex-column">
+        <div
+            className={classnames([
+                'plan-card flex-autogrid-item flex flex-column relative',
+                isActive && 'plan-card--active'
+            ])}
+        >
             <div className="p1 flex flex-items-center">
                 <strong className="biggest mt0 mb0">{plan.title}</strong>
-                {plan.isBest && <Badge>{c('Plan info').t`Most popular`}</Badge>}
+                {plan.isBest && (
+                    <div className="mlauto">
+                        <Badge>{c('Plan info').t`Most popular`}</Badge>
+                    </div>
+                )}
             </div>
-            <div
-                role="button"
-                onClick={onSelect}
-                className={classnames(['plan-card flex-column', isActive && 'plan-card--active'])}
-            >
+            <div className="flex-item-fluid-auto p1 flex flex-column">
                 <PlanPrice plan={plan} cycle={cycle} currency={currency} />
                 {plan.description && (
                     <strong className={classnames(['border-top mt1 pt1 mb1 big', plan.isBest && 'color-primary'])}>
