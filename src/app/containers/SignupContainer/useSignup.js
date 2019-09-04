@@ -10,7 +10,6 @@ import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
 import { DEFAULT_CURRENCY, CYCLE, PLAN_TYPES, TOKEN_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
 import { getPlan, PLAN, VPN_PLANS } from './plans';
-import { merge } from 'proton-shared/lib/helpers/object';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes(TOKEN_TYPES.EMAIL);

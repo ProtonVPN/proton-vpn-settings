@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { c } from 'ttag';
 import { useApi, useConfig, PrimaryButton, Input, useLoading } from 'react-components';
 import { queryCheckVerificationCode } from 'proton-shared/lib/api/user';
-import { checkSubscription } from 'proton-shared/lib/api/payments';
 import { TOKEN_TYPES } from 'proton-shared/lib/constants';
 
 const RedeemCouponForm = ({ history }) => {
