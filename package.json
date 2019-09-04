@@ -1,6 +1,6 @@
 {
     "name": "proton-vpn-settings",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "description": "ProtonVPN React web application",
     "main": "index.js",
     "scripts": {

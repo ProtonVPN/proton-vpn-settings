@@ -51,6 +51,8 @@ lint:
 
 i18n:
     stage: test
+    tags:
+        - heavy
     script:
         - npm run i18n:validate
         - npm run i18n:validate:context
