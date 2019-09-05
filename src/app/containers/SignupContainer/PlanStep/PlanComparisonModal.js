@@ -36,6 +36,7 @@ const PlanComparisonModal = ({
                         updateCurrency={setCurrency}
                         updateCycle={setCycle}
                         plans={plans}
+                        extendedDetails
                     />
                 </InnerModal>
             </div>

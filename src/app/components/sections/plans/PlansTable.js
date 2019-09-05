@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip, Icon, CurrencySelector, CycleSelector, SmallButton, Info } from 'react-components';
+import {
+    Tooltip,
+    Icon,
+    CurrencySelector,
+    CycleSelector,
+    SmallButton,
+    Info,
+    useApiResult,
+    Loader
+} from 'react-components';
 import { c } from 'ttag';
 import { PLANS, DEFAULT_CURRENCY, DEFAULT_CYCLE, PLAN_TYPES, PLAN_SERVICES, CYCLE } from 'proton-shared/lib/constants';
 
 import PlanPrice from './PlanPrice';
+import { queryVPNLogicalServerInfo } from 'proton-shared/lib/api/vpn';
 
 const { VISIONARY, VPNBASIC, VPNPLUS } = PLANS;
 const { PLAN } = PLAN_TYPES;
@@ -25,11 +35,25 @@ const PlansTable = ({
     updateCycle,
     currency = DEFAULT_CURRENCY,
     updateCurrency,
-    subscription
+    subscription,
+    extendedDetails = false
 }) => {
     const mySubscriptionText = c('Title').t`My subscription`;
     const { Plans = [] } = subscription || {};
     const { Name = 'free' } = Plans.find(({ Services, Type }) => Type === PLAN && Services & VPN) || {};
+
+    const { loading: serversLoading, result, request } = useApiResult(queryVPNLogicalServerInfo);
+
+    useEffect(() => {
+        request();
+    }, []);
+
+    const countCountries = (servers) =>
+        Object.keys(servers.reduce((countries, { ExitCountry }) => ({ ...countries, [ExitCountry]: true }), {}));
+
+    const freeCountriesCount = result && countCountries(result.LogicalServers.filter(({ Tier }) => Tier === 0)).length;
+    const basicCountriesCount = result && countCountries(result.LogicalServers.filter(({ Tier }) => Tier <= 1)).length;
+    const allCountriesCount = result && countCountries(result.LogicalServers).length;
 
     const addCycleTooltip = (comp) => {
         if (cycle === CYCLE.MONTHLY) {
@@ -88,10 +112,10 @@ const PlansTable = ({
                         <span className="mr0-5">{c('Header').t`Countries`}</span>
                         <Info title={c('Tooltip').t`Access to VPN servers`} />
                     </th>
-                    <td className="aligncenter">3</td>
-                    <td className="aligncenter">{c('Plan details').t`All Countries`}</td>
-                    <td className="aligncenter">{c('Plan details').t`All Countries`}</td>
-                    <td className="aligncenter">{c('Plan details').t`All Countries`}</td>
+                    <td className="aligncenter">{serversLoading ? <Loader /> : freeCountriesCount}</td>
+                    <td className="aligncenter">{serversLoading ? <Loader /> : basicCountriesCount}</td>
+                    <td className="aligncenter">{serversLoading ? <Loader /> : allCountriesCount}</td>
+                    <td className="aligncenter">{serversLoading ? <Loader /> : allCountriesCount}</td>
                 </tr>
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
@@ -235,7 +259,8 @@ PlansTable.propTypes = {
     cycle: PropTypes.number,
     updateCurrency: PropTypes.func,
     updateCycle: PropTypes.func,
-    subscription: PropTypes.object
+    subscription: PropTypes.object,
+    extendedDetails: PropTypes.bool
 };
 
 export default PlansTable;
