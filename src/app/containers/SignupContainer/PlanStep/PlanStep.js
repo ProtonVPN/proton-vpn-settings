@@ -52,26 +52,32 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
                     />
                 ))}
             </div>
+            {model.cycle === CYCLE.YEARLY && (
+                <strong className="mt2 bl big aligncenter color-primary">{c('Info')
+                    .t`You are saving 20% with an annual plan`}</strong>
+            )}
+            {model.cycle === CYCLE.TWO_YEARS && (
+                <strong className="mt2 bl big aligncenter color-primary">{c('Info')
+                    .t`You are saving 33% with an two-year plan`}</strong>
+            )}
             <div className="mt2">
-                <Block>
-                    <LinkButton className="bl center" onClick={handleComparisonClick}>{c('Action')
-                        .t`View full plan comparison`}</LinkButton>
-                </Block>
-                <div className="aligncenter">
-                    <span>
-                        {c('Info').jt`All plans support: ${(
-                            <>
-                                <OSIcon os="android" />
-                                <OSIcon os="windows" />
-                                <OSIcon os="macos" />
-                                <OSIcon os="ios" />
-                                <OSIcon os="linux" />
-                            </>
-                        )}`}
-                    </span>
-                    <span className="ml2 mr2 bordered" />
-                    <span>{c('Info').t`30-days money back guarantee`}</span>
-                </div>
+                <LinkButton className="bl center" onClick={handleComparisonClick}>{c('Action')
+                    .t`View full plan comparison`}</LinkButton>
+            </div>
+            <div className="mt2 aligncenter">
+                <span>
+                    {c('Info').jt`All plans support: ${(
+                        <>
+                            <OSIcon os="android" />
+                            <OSIcon os="windows" />
+                            <OSIcon os="macos" />
+                            <OSIcon os="ios" />
+                            <OSIcon os="linux" />
+                        </>
+                    )}`}
+                </span>
+                <span className="ml2 mr2 bordered" />
+                <span>{c('Info').t`30-days money back guarantee`}</span>
             </div>
         </>
     );
