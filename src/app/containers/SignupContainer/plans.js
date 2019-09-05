@@ -1,5 +1,5 @@
 import React from 'react';
-import { c } from 'ttag';
+import { c, msgid } from 'ttag';
 import { PLANS, PLAN_TYPES, CYCLE } from 'proton-shared/lib/constants';
 import { Info } from 'react-components';
 
@@ -20,7 +20,7 @@ export const PLAN_NAMES = {
 export const VPN_PLANS = [PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
 
 // TODO: dynamic countries and max connections
-const getPlanFeatures = (plan) =>
+const getPlanFeatures = (plan, maxConnections) =>
     ({
         [PLAN.FREE]: {
             description: c('Plan Description').t`Privacy and security for everyone`,
@@ -33,7 +33,11 @@ const getPlanFeatures = (plan) =>
                 ]
             },
             features: [
-                c('Plan Feature').t`1 simultaneous VPN connection`,
+                c('Plan Feature').ngettext(
+                    msgid`${maxConnections} simultaneous VPN connection`,
+                    `${maxConnections} simultaneous VPN connections`,
+                    maxConnections
+                ),
                 c('Plan Feature').t`Servers in 3 countries`,
                 c('Plan Feature').t`Medium speed`,
                 c('Plan Feature').t`No logs policy`,
@@ -53,7 +57,11 @@ const getPlanFeatures = (plan) =>
                 ]
             },
             features: [
-                c('Plan Feature').t`2 simultaneous VPN connections`,
+                c('Plan Feature').ngettext(
+                    msgid`${maxConnections} simultaneous VPN connection`,
+                    `${maxConnections} simultaneous VPN connections`,
+                    maxConnections
+                ),
                 c('Plan Feature').t`Servers in 30+ countries`,
                 c('Plan Feature').t`High speed servers`,
                 c('Plan Feature').t`Filesharing/P2P support`,
@@ -69,7 +77,11 @@ const getPlanFeatures = (plan) =>
             description: c('Plan Description').t`Advanced security features`,
             additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.BASIC]} plan features`,
             features: [
-                c('Plan Feature').t`5 simultaneous VPN connections`,
+                c('Plan Feature').ngettext(
+                    msgid`${maxConnections} simultaneous VPN connection`,
+                    `${maxConnections} simultaneous VPN connections`,
+                    maxConnections
+                ),
                 c('Plan Feature').t`Secure Core`,
                 c('Plan Feature').t`Highest speeds`,
                 <>
@@ -85,7 +97,11 @@ const getPlanFeatures = (plan) =>
             description: c('Plan Description').t`The complete privacy suite`,
             additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.PLUS]} plan features`,
             features: [
-                c('Plan Feature').t`10 simutaneous plan features`,
+                c('Plan Feature').ngettext(
+                    msgid`${maxConnections} simultaneous VPN connection`,
+                    `${maxConnections} simultaneous VPN connections`,
+                    maxConnections
+                ),
                 c('Plan Feature').t`ProtonMail Visionary account`
             ]
         }
@@ -97,7 +113,7 @@ const getPlanPrice = (plan, cycle) => {
     const cyclePrice = plan.Pricing[cycle];
     const adjustedTotal = plan.AmountDue;
 
-    const total = typeof adjustedTotal !== 'undefined' ? plan.AmountDue : cyclePrice;
+    const total = typeof adjustedTotal !== 'undefined' ? adjustedTotal : cyclePrice;
     const saved = monthly * cycle - cyclePrice;
     const totalMonthly = total / cycle;
 
@@ -107,9 +123,8 @@ const getPlanPrice = (plan, cycle) => {
 export const getPlan = (planName, cycle, plans = []) => {
     const plan = plans.find(({ Type, Name }) => Type === PLAN_TYPES.PLAN && Name === planName);
     const price = plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, totalMonthly: 0, saved: 0 };
-
     return {
-        ...getPlanFeatures(planName),
+        ...getPlanFeatures(planName, plan ? plan.MaxVPN : 1),
         planName,
         title: PLAN_NAMES[planName],
         id: plan && plan.ID,

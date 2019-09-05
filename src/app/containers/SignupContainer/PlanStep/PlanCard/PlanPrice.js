@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
-import { Price, Block } from 'react-components';
+import { Price } from 'react-components';
 import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
 const PlanPrice = ({ plan, cycle, currency }) => {
     const discount = plan.couponDiscount || plan.price.saved;
     return (
         <div className="border-top pt1 plan-price">
-            <Block>
+            <div className="mb0-5">
                 {c('PlanPrice').jt`${(
                     <strong>
                         <Price className="biggest" currency={currency}>
@@ -16,23 +16,25 @@ const PlanPrice = ({ plan, cycle, currency }) => {
                         </Price>
                     </strong>
                 )} / mo`}
-            </Block>
+            </div>
 
             <div>
-                {cycle === CYCLE.MONTHLY
-                    ? c('PlanPrice').jt`Billed as ${(
-                          <Price currency={currency} suffix={c('Suffix').t`monthly`}>
-                              {plan.price.totalMonthly}
-                          </Price>
-                      )}`
-                    : c('PlanPrice').jt`Billed as ${(
-                          <Price
-                              currency={currency}
-                              suffix={cycle === CYCLE.TWO_YEARS ? c('Suffix').t`/2-year` : c('Suffix').t`/year`}
-                          >
-                              {plan.price.total}
-                          </Price>
-                      )}`}
+                <span className="opacity-50">
+                    {cycle === CYCLE.MONTHLY
+                        ? c('PlanPrice').jt`Billed as ${(
+                              <Price currency={currency} suffix={c('Suffix').t`monthly`}>
+                                  {plan.price.totalMonthly}
+                              </Price>
+                          )}`
+                        : c('PlanPrice').jt`Billed as ${(
+                              <Price
+                                  currency={currency}
+                                  suffix={cycle === CYCLE.TWO_YEARS ? c('Suffix').t`/2-year` : c('Suffix').t`/year`}
+                              >
+                                  {plan.price.total}
+                              </Price>
+                          )}`}
+                </span>
                 {discount > 0 && (
                     <strong className="ml0-25 color-primary">{c('PlanPrice').jt`SAVE ${(
                         <Price currency={currency}>{discount}</Price>
