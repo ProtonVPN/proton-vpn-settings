@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
     Tooltip,
@@ -7,14 +7,13 @@ import {
     CycleSelector,
     SmallButton,
     Info,
-    useApiResult,
-    Loader
+    Loader,
+    useVPNCountries
 } from 'react-components';
 import { c } from 'ttag';
 import { PLANS, DEFAULT_CURRENCY, DEFAULT_CYCLE, PLAN_TYPES, PLAN_SERVICES, CYCLE } from 'proton-shared/lib/constants';
 
 import PlanPrice from './PlanPrice';
-import { queryVPNLogicalServerInfo } from 'proton-shared/lib/api/vpn';
 
 const { VISIONARY, VPNBASIC, VPNPLUS } = PLANS;
 const { PLAN } = PLAN_TYPES;
@@ -36,24 +35,12 @@ const PlansTable = ({
     currency = DEFAULT_CURRENCY,
     updateCurrency,
     subscription,
-    extendedDetails = false
+    extendedDetails = false // TODO: add extended details
 }) => {
     const mySubscriptionText = c('Title').t`My subscription`;
     const { Plans = [] } = subscription || {};
     const { Name = 'free' } = Plans.find(({ Services, Type }) => Type === PLAN && Services & VPN) || {};
-
-    const { loading: serversLoading, result, request } = useApiResult(queryVPNLogicalServerInfo);
-
-    useEffect(() => {
-        request();
-    }, []);
-
-    const countCountries = (servers) =>
-        Object.keys(servers.reduce((countries, { ExitCountry }) => ({ ...countries, [ExitCountry]: true }), {}));
-
-    const freeCountriesCount = result && countCountries(result.LogicalServers.filter(({ Tier }) => Tier === 0)).length;
-    const basicCountriesCount = result && countCountries(result.LogicalServers.filter(({ Tier }) => Tier <= 1)).length;
-    const allCountriesCount = result && countCountries(result.LogicalServers).length;
+    const [countries, countriesLoading] = useVPNCountries();
 
     const addCycleTooltip = (comp) => {
         if (cycle === CYCLE.MONTHLY) {
@@ -112,10 +99,10 @@ const PlansTable = ({
                         <span className="mr0-5">{c('Header').t`Countries`}</span>
                         <Info title={c('Tooltip').t`Access to VPN servers`} />
                     </th>
-                    <td className="aligncenter">{serversLoading ? <Loader /> : freeCountriesCount}</td>
-                    <td className="aligncenter">{serversLoading ? <Loader /> : basicCountriesCount}</td>
-                    <td className="aligncenter">{serversLoading ? <Loader /> : allCountriesCount}</td>
-                    <td className="aligncenter">{serversLoading ? <Loader /> : allCountriesCount}</td>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.free.length}</td>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.basic.length}</td>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.all.length}</td>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.all.length}</td>
                 </tr>
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
