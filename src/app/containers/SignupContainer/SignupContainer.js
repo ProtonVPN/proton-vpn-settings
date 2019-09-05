@@ -11,7 +11,7 @@ import { PLAN } from './plans';
 import SupportDropdown from '../../components/header/SupportDropdown';
 import { CYCLE } from 'proton-shared/lib/constants';
 import PlanDetails from './SelectedPlan/PlanDetails';
-import PlanSummary from './SelectedPlan/PlanSummary';
+import PlanUpsell from './SelectedPlan/PlanUpsell';
 
 // TODO: Flexible on these parameters:
 // - URLs
@@ -83,8 +83,8 @@ const SignupContainer = ({ history, onLogin }) => {
 
     const selectedPlanComponent = (
         <div className="ml1 selected-plan">
-            <PlanDetails selectedPlan={selectedPlan} />
-            <PlanSummary
+            <PlanDetails selectedPlan={selectedPlan} cycle={model.cycle} currency={model.currency} />
+            <PlanUpsell
                 selectedPlan={selectedPlan}
                 plans={plans}
                 onExtendCycle={handleExtendCycle}

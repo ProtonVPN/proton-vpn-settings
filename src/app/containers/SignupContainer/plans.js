@@ -19,13 +19,23 @@ export const PLAN_NAMES = {
 
 export const VPN_PLANS = [PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
 
+// TODO: dynamic countries and max connections
 const getPlanFeatures = (plan) =>
     ({
         [PLAN.FREE]: {
             description: c('Plan Description').t`Privacy and security for everyone`,
+            upsell: {
+                planName: PLAN.BASIC,
+                features: [
+                    c('Plan Feature').t`High speed 1 Gbps VPN servers`,
+                    c('Plan Feature').t`Access to 30+ countries`,
+                    c('Plan Feature').t`Filesharing/P2P support`
+                ]
+            },
             features: [
                 c('Plan Feature').t`1 simultaneous VPN connection`,
                 c('Plan Feature').t`Servers in 3 countries`,
+                c('Plan Feature').t`Medium speed`,
                 c('Plan Feature').t`No logs policy`,
                 c('Plan Feature').t`No data limit`,
                 c('Plan Feature').t`No ads`
@@ -34,10 +44,20 @@ const getPlanFeatures = (plan) =>
         [PLAN.BASIC]: {
             description: c('Plan Description').t`Basic privacy features`,
             additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.FREE]} plan features`,
+            upsell: {
+                planName: PLAN.PLUS,
+                features: [
+                    c('Plan Feature').t`Highest speed servers (10 Gbps)`,
+                    c('Plan Feature').t`Access blocked content`,
+                    c('Plan Feature').t`All advanced security features`
+                ]
+            },
             features: [
                 c('Plan Feature').t`2 simultaneous VPN connections`,
-                c('Plan Feature').t`Servers in 32 countries`,
-                c('Plan Feature').t`High speeds - up to 1 Gb/s`,
+                c('Plan Feature').t`Servers in 30+ countries`,
+                c('Plan Feature').t`High speed servers`,
+                c('Plan Feature').t`Filesharing/P2P support`,
+                c('Plan Feature').t`No logs policy`,
                 <>
                     <span className="mr0-5">{c('Plan Feature').t`P2P support`}</span>
                     <Info title={c('Tooltip').t`Support for file sharing protocols such as Bittorrent.`} />

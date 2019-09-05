@@ -32,7 +32,9 @@ const PriceInfo = ({ plan, cycle, currency }) => {
                     <span className="mr0-25">
                         {plan.title} - {billingCycle.label}
                     </span>
-                    <Price currency={currency}>{plan.price.monthly * cycle}</Price>
+                    <Price currency={currency} suffix={c('Suffix').t`/ month`}>
+                        {plan.price.totalMonthly}
+                    </Price>
                 </div>
             )}
             {(plan.couponDiscount || billingCycle.discount) && (
@@ -43,20 +45,10 @@ const PriceInfo = ({ plan, cycle, currency }) => {
                     <Price currency={currency}>{-discount}</Price>
                 </div>
             )}
-            <div className="border-top pt0-5 mt0-5">
-                {cycle !== CYCLE.MONTHLY && (
-                    <span className="flex flex-spacebetween">
-                        <span className="mr0-25">{c('Label').t`Monthly price`}</span>
-                        <Price currency={currency} suffix={c('Suffix').t`/ month`}>
-                            {plan.price.totalMonthly}
-                        </Price>
-                    </span>
-                )}
-                <strong className="flex flex-spacebetween">
-                    <span className="mr0-25">{billingCycle.total}</span>
-                    <Price currency={currency}>{plan.price.total}</Price>
-                </strong>
-            </div>
+            <strong className="flex flex-spacebetween">
+                <span className="mr0-25">{billingCycle.total}</span>
+                <Price currency={currency}>{plan.price.total}</Price>
+            </strong>
         </>
     );
 };
