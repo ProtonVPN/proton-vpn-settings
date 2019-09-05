@@ -35,10 +35,10 @@ const PlanSummary = ({ selectedPlan, plans, cycle, currency, onExtendCycle, onUp
             <div className="p1">
                 {planName !== PLAN.FREE && <PriceInfo plan={selectedPlan} cycle={cycle} currency={currency} />}
                 {planName === PLAN.FREE && (
-                    <>
-                        <div>{c('Free plan upsell').t`2 simultaneous VPN`}</div>
-                        <div>{c('Free plan upsell').t`Access to 30+ countries`}</div>
-                    </>
+                    <ul className="selected-plan-list unstyled m0">
+                        <li>{c('Free plan upsell').t`2 simultaneous VPN`}</li>
+                        <li>{c('Free plan upsell').t`Access to 30+ countries`}</li>
+                    </ul>
                 )}
 
                 {!upsellDone && cycle === CYCLE.MONTHLY && planName !== PLAN.FREE ? (

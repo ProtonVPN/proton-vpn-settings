@@ -18,7 +18,7 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
                     <SubTitle>{c('Title').t`Select a plan`}</SubTitle>
                 </div>
                 <div className="mlauto">
-                    <Field>
+                    <Field className="mr1">
                         <CycleSelector
                             cycle={model.cycle}
                             onSelect={onChangeCycle}
