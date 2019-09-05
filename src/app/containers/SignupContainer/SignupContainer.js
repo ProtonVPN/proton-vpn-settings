@@ -7,7 +7,7 @@ import useSignup from './useSignup';
 import { c } from 'ttag';
 import VerificationStep from './VerificationStep/VerificationStep';
 import PaymentStep from './PaymentStep/PaymentStep';
-import { PLAN } from './plans';
+import { PLAN, VPN_PLANS } from './plans';
 import SupportDropdown from '../../components/header/SupportDropdown';
 import { CYCLE } from 'proton-shared/lib/constants';
 import PlanDetails from './SelectedPlan/PlanDetails';
@@ -32,15 +32,20 @@ const SignupContainer = ({ history, onLogin }) => {
     const invite = historyState.invite;
     const coupon = historyState.coupon;
 
-    const { model, setModel, signup, selectedPlan, checkPayment, signupAvailability, plans, isLoading } = useSignup(
-        onLogin,
-        coupon,
-        {
-            planName: searchParams.get('plan'),
-            cycle: Number(searchParams.get('cycle')),
-            currency: searchParams.get('currency')
-        }
-    );
+    const {
+        model,
+        setModel,
+        signup,
+        selectedPlan,
+        checkPayment,
+        signupAvailability,
+        getPlanByName,
+        isLoading
+    } = useSignup(onLogin, coupon, {
+        planName: searchParams.get('plan'),
+        cycle: Number(searchParams.get('cycle')),
+        currency: searchParams.get('currency')
+    });
 
     const handleSelectPlan = (model) => {
         setModel(model);
@@ -86,7 +91,7 @@ const SignupContainer = ({ history, onLogin }) => {
             <PlanDetails selectedPlan={selectedPlan} cycle={model.cycle} currency={model.currency} />
             <PlanUpsell
                 selectedPlan={selectedPlan}
-                plans={plans}
+                getPlanByName={getPlanByName}
                 onExtendCycle={handleExtendCycle}
                 onUpgrade={handleUpgrade}
                 cycle={model.cycle}
@@ -131,7 +136,7 @@ const SignupContainer = ({ history, onLogin }) => {
                     <>
                         {signupState === SignupState.Plan && (
                             <PlanStep
-                                plans={plans}
+                                plans={VPN_PLANS.map((plan) => getPlanByName(plan))}
                                 model={model}
                                 onChangeCycle={(cycle) => setModel({ ...model, cycle })}
                                 onChangeCurrency={(currency) => setModel({ ...model, currency })}

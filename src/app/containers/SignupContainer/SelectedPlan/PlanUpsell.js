@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { c } from 'ttag';
-import { PLAN, getPlan } from '../plans';
+import { PLAN } from '../plans';
 import { PrimaryButton, Price } from 'react-components';
 import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
-const PlanUpsell = ({ selectedPlan, plans, cycle, currency, onExtendCycle, onUpgrade }) => {
+const PlanUpsell = ({ selectedPlan, getPlanByName, cycle, currency, onExtendCycle, onUpgrade }) => {
     const [upsellDone, setUpsellDone] = useState(false);
     const { planName, upsell } = selectedPlan;
     const upsellCycle = cycle === CYCLE.MONTHLY && planName !== PLAN.FREE;
@@ -14,7 +14,8 @@ const PlanUpsell = ({ selectedPlan, plans, cycle, currency, onExtendCycle, onUpg
         return null; // No upsell needed
     }
 
-    const upsellPlan = upsell && getPlan(upsell.planName, cycle, plans);
+    const yearlyPlan = getPlanByName(selectedPlan.planName, CYCLE.YEARLY);
+    const upsellPlan = upsell && getPlanByName(upsell.planName);
 
     const handleExtendCycle = () => {
         setUpsellDone(true);
@@ -34,7 +35,20 @@ const PlanUpsell = ({ selectedPlan, plans, cycle, currency, onExtendCycle, onUpg
             <div className="p1">
                 {upsellCycle && (
                     <>
-                        <div>KAINA</div>
+                        <div className="flex flex-spacebetween">
+                            <span className="mr0-25">{c('Plan upsell').t`Monthly plan`}</span>
+                            <s>
+                                <Price className="strike" currency={currency} suffix={c('Suffix').t`/ month`}>
+                                    {selectedPlan.price.totalMonthly}
+                                </Price>
+                            </s>
+                        </div>
+                        <div className="flex flex-spacebetween">
+                            <span className="mr0-25">{c('Plan upsell').t`Yearly plan`}</span>
+                            <Price currency={currency} suffix={c('Suffix').t`/ month`}>
+                                {yearlyPlan.price.totalMonthly}
+                            </Price>
+                        </div>
                         <PrimaryButton className="w100 mt1" onClick={handleExtendCycle}>{c('Action')
                             .t`Pay annually and save 20%`}</PrimaryButton>
                     </>
@@ -67,7 +81,7 @@ PlanUpsell.propTypes = {
     currency: PropTypes.oneOf(CURRENCIES).isRequired,
     onExtendCycle: PropTypes.func.isRequired,
     onUpgrade: PropTypes.func.isRequired,
-    plans: PropTypes.array.isRequired // TODO: better type
+    getPlanByName: PropTypes.func.isRequired
 };
 
 export default PlanUpsell;

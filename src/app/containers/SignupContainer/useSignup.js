@@ -56,6 +56,8 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
         password: initialModel.password || ''
     });
 
+    const getPlanByName = (planName, cycle = model.cycle) => getPlan(planName, cycle, plansWithCoupons || []);
+
     // Until we can query plans+coupons at once, we need to check each plan individually
     useEffect(() => {
         const applyCoupon = async () => {
@@ -100,7 +102,7 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
      * @returns {Promise<{ VerifyCode, paymentParameters }>} - paymentDetails
      */
     const checkPayment = async (model, paymentParameters) => {
-        const selectedPlan = getPlan(model.planName, model.cycle, plans);
+        const selectedPlan = getPlanByName(model.planName, model.cycle);
         const amount = selectedPlan.price.total;
 
         if (amount > 0) {
@@ -132,7 +134,7 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
     const signup = async (model, signupToken) => {
         const { Token, TokenType } = getToken(signupToken);
         const { planName, password, email, username, currency, cycle } = model;
-        const selectedPlan = getPlan(planName, cycle, plans);
+        const selectedPlan = getPlanByName(planName, cycle);
 
         await srpVerify({
             api,
@@ -189,8 +191,8 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
     return {
         model,
         isLoading,
-        plans: plansWithCoupons,
-        selectedPlan: getPlan(model.planName, model.cycle, plansWithCoupons || []),
+        getPlanByName,
+        selectedPlan: getPlanByName(model.planName),
         signupAvailability,
 
         checkPayment,
