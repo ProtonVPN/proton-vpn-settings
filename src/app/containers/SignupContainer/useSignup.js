@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { handlePaymentToken } from 'react-components/containers/payments/paymentTokenHelper';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
-import { useApi, usePlans, useConfig, useApiResult, useModals } from 'react-components';
+import { useApi, usePlans, useConfig, useApiResult, useModals, useVPNCountries } from 'react-components';
 import { queryCreateUser, queryDirectSignupStatus } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { subscribe, setPaymentMethod, verifyPayment, checkSubscription } from 'proton-shared/lib/api/payments';
@@ -40,12 +40,13 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
     const { result } = useApiResult(() => queryDirectSignupStatus(CLIENT_TYPE), []);
     const [plans] = usePlans();
     const [plansWithCoupons, setPlansWithCoupons] = useState();
+    const [countries, countriesLoading] = useVPNCountries();
 
     const defaultCurrency = plans && plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
     const defaultCycle = coupon ? coupon.cycle : CYCLE.YEARLY;
     const defaultPlan = coupon ? coupon.plan : PLAN.PLUS;
     const signupAvailability = result && getSignupAvailability(result.Direct, result.VerifyMethods);
-    const isLoading = !plansWithCoupons || !signupAvailability;
+    const isLoading = !plansWithCoupons || !signupAvailability || countriesLoading;
 
     const [model, setModel] = useState({
         planName: Object.values(PLAN).includes(initialModel.planName) ? initialModel.planName : defaultPlan,
@@ -56,7 +57,8 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
         password: initialModel.password || ''
     });
 
-    const getPlanByName = (planName, cycle = model.cycle) => getPlan(planName, cycle, plansWithCoupons || []);
+    const getPlanByName = (planName, cycle = model.cycle) =>
+        getPlan(planName, cycle, plansWithCoupons || [], countries);
 
     // Until we can query plans+coupons at once, we need to check each plan individually
     useEffect(() => {

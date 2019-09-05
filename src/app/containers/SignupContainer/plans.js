@@ -19,8 +19,7 @@ export const PLAN_NAMES = {
 
 export const VPN_PLANS = [PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
 
-// TODO: dynamic countries and max connections
-const getPlanFeatures = (plan, maxConnections) =>
+const getPlanFeatures = (plan, maxConnections, countries) =>
     ({
         [PLAN.FREE]: {
             description: c('Plan Description').t`Privacy and security for everyone`,
@@ -28,7 +27,7 @@ const getPlanFeatures = (plan, maxConnections) =>
                 planName: PLAN.BASIC,
                 features: [
                     c('Plan Feature').t`High speed 1 Gbps VPN servers`,
-                    c('Plan Feature').t`Access to 30+ countries`,
+                    c('Plan Feature').t`Access to ${countries.basic.length} countries`,
                     c('Plan Feature').t`Filesharing/P2P support`
                 ]
             },
@@ -38,7 +37,7 @@ const getPlanFeatures = (plan, maxConnections) =>
                     `${maxConnections} simultaneous VPN connections`,
                     maxConnections
                 ),
-                c('Plan Feature').t`Servers in 3 countries`,
+                c('Plan Feature').t`Servers in ${countries.free.length} countries`,
                 c('Plan Feature').t`Medium speed`,
                 c('Plan Feature').t`No logs policy`,
                 c('Plan Feature').t`No data limit`,
@@ -62,7 +61,7 @@ const getPlanFeatures = (plan, maxConnections) =>
                     `${maxConnections} simultaneous VPN connections`,
                     maxConnections
                 ),
-                c('Plan Feature').t`Servers in 30+ countries`,
+                c('Plan Feature').t`Servers in ${countries.basic.length} countries`,
                 c('Plan Feature').t`High speed servers`,
                 c('Plan Feature').t`Filesharing/P2P support`,
                 c('Plan Feature').t`No logs policy`,
@@ -82,6 +81,8 @@ const getPlanFeatures = (plan, maxConnections) =>
                     `${maxConnections} simultaneous VPN connections`,
                     maxConnections
                 ),
+                countries.basic.length !== countries.all.length &&
+                    c('Plan Feature').t`Servers in ${countries.all.length} countries`,
                 c('Plan Feature').t`Secure Core`,
                 c('Plan Feature').t`Highest speeds`,
                 <>
@@ -120,11 +121,11 @@ const getPlanPrice = (plan, cycle) => {
     return { monthly, total, totalMonthly, saved };
 };
 
-export const getPlan = (planName, cycle, plans = []) => {
+export const getPlan = (planName, cycle, plans = [], countries = []) => {
     const plan = plans.find(({ Type, Name }) => Type === PLAN_TYPES.PLAN && Name === planName);
     const price = plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, totalMonthly: 0, saved: 0 };
     return {
-        ...getPlanFeatures(planName, plan ? plan.MaxVPN : 1),
+        ...getPlanFeatures(planName, plan ? plan.MaxVPN : 1, countries),
         planName,
         title: PLAN_NAMES[planName],
         id: plan && plan.ID,
