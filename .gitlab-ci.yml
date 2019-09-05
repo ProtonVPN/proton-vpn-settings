@@ -22,6 +22,9 @@ before_script:
  - git config --global user.name $GIT_CI_USERNAME
  - mkdir ~/.ssh 2> /dev/null
  - ssh-keyscan -t rsa ${CI_SERVER_HOST} > ~/.ssh/known_hosts
+ - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+ - git remote set-url github git@github.com:ProtonMail/proton-vpn-settings.git
+ - git remote -v
 
 setup:
     stage: setup
@@ -64,6 +67,7 @@ i18n-upgrade-app:
     script:
         - git checkout master
         - npm run i18n:getlatest -- --limit-i18n=${I18N_APPROVED} --verbose
+        - git push github master
     when: manual
 
 i18n-to-crowdin:
@@ -73,6 +77,7 @@ i18n-to-crowdin:
     script:
         - git checkout master
         - npm run i18n:upgrade
+        - git push github master
     when: manual
 
 deploy:
@@ -82,6 +87,7 @@ deploy:
     script:
         - npm i --no-audit --no-package-lock
         - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
+        - git push github deploy-$BRANCH_DEPLOY
     when: manual
 
 deploy-qa:
@@ -91,6 +97,7 @@ deploy-qa:
     script:
         - npm i --no-audit --no-package-lock
         - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY_QA --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
+        - git push github deploy-$BRANCH_DEPLOY_QA
     when: manual
 
 deploy-beta:
@@ -100,6 +107,7 @@ deploy-beta:
     script:
         - npm i --no-audit --no-package-lock
         - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch --fromCi
+        - git push github deploy-beta
     when: manual
 
 deploy-prod:
@@ -109,4 +117,5 @@ deploy-prod:
     script:
         - npm i --no-audit --no-package-lock
         - npm run deploy -- --branch=deploy-prod --api=prod --verbose --no-i18n --no-lint --forceFetch --fromCi
+        - git push github deploy-prod
     when: manual
