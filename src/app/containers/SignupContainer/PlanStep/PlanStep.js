@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Field, CurrencySelector, CycleSelector, SubTitle } from 'react-components';
+import { Row, Field, CurrencySelector, CycleSelector, SubTitle, useModals, LinkButton, Block } from 'react-components';
 import PlanCard from './PlanCard/PlanCard';
 import { CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
 import { c } from 'ttag';
+import PlanComparisonModal from './PlanComparisonModal';
+import OSIcon from './OSIcon';
 
 const { MONTHLY, YEARLY, TWO_YEARS } = CYCLE;
 
 const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model, signupAvailability }) => {
+    const { createModal } = useModals();
+
     const handleSelect = (planName) => () => onSelectPlan({ ...model, planName });
+    const handleComparisonClick = () =>
+        createModal(<PlanComparisonModal cycle={model.cycle} currency={model.currency} />);
 
     return (
         <>
@@ -45,6 +51,27 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
                         isDisabled={plan.disabled || (!signupAvailability.paid && plan.price.monthly > 0)}
                     />
                 ))}
+            </div>
+            <div className="mt2">
+                <Block>
+                    <LinkButton className="bl center" onClick={handleComparisonClick}>{c('Action')
+                        .t`View full plan comparison`}</LinkButton>
+                </Block>
+                <div className="aligncenter">
+                    <span>
+                        {c('Info').jt`All plans support: ${(
+                            <>
+                                <OSIcon os="android" />
+                                <OSIcon os="windows" />
+                                <OSIcon os="macos" />
+                                <OSIcon os="ios" />
+                                <OSIcon os="linux" />
+                            </>
+                        )}`}
+                    </span>
+                    <span className="ml2 mr2 bordered" />
+                    <span>{c('Info').t`30-days money back guarantee`}</span>
+                </div>
             </div>
         </>
     );

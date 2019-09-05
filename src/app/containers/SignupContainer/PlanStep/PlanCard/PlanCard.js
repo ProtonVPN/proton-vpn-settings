@@ -72,7 +72,7 @@ PlanCard.propTypes = {
         title: PropTypes.string.isRequired,
         description: PropTypes.string,
         additionalFeatures: PropTypes.string,
-        features: PropTypes.arrayOf(PropTypes.string),
+        features: PropTypes.arrayOf(PropTypes.node),
         highlights: PropTypes.arrayOf(PropTypes.string),
         isBest: PropTypes.bool
     }).isRequired,
