@@ -16,6 +16,16 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
     const handleComparisonClick = () =>
         createModal(<PlanComparisonModal defaultCycle={model.cycle} defaultCurrency={model.currency} />);
 
+    const supportedOS = (
+        <>
+            <OSIcon os="android" />
+            <OSIcon os="windows" />
+            <OSIcon os="macos" />
+            <OSIcon os="ios" />
+            <OSIcon os="linux" />
+        </>
+    );
+
     return (
         <>
             <Row className="flex-items-vcenter border-top pt3">
@@ -65,17 +75,7 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
                     .t`View full plan comparison`}</LinkButton>
             </div>
             <div className="mt2 aligncenter">
-                <span>
-                    {c('Info').jt`All plans support: ${(
-                        <>
-                            <OSIcon os="android" />
-                            <OSIcon os="windows" />
-                            <OSIcon os="macos" />
-                            <OSIcon os="ios" />
-                            <OSIcon os="linux" />
-                        </>
-                    )}`}
-                </span>
+                <span>{c('Info').jt`All plans support: ${supportedOS}`}</span>
                 <span className="ml2 mr2 bordered" />
                 <span>{c('Info').t`30-days money back guarantee`}</span>
             </div>

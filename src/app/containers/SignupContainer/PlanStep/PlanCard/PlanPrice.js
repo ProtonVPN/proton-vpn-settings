@@ -6,39 +6,35 @@ import { CYCLE, CURRENCIES } from 'proton-shared/lib/constants';
 
 const PlanPrice = ({ plan, cycle, currency }) => {
     const discount = plan.couponDiscount || plan.price.saved;
+    const totalMonthlyPriceText = (
+        <strong>
+            <Price className="biggest" currency={currency}>
+                {plan.price.totalMonthly}
+            </Price>
+        </strong>
+    );
+    const totalBilledText =
+        cycle === CYCLE.MONTHLY ? (
+            <Price currency={currency} suffix={c('Suffix').t`monthly`}>
+                {plan.price.totalMonthly}
+            </Price>
+        ) : (
+            <Price
+                currency={currency}
+                suffix={cycle === CYCLE.TWO_YEARS ? c('Suffix').t`/2-year` : c('Suffix').t`/year`}
+            >
+                {plan.price.total}
+            </Price>
+        );
+    const discountText = <Price currency={currency}>{discount}</Price>;
     return (
         <div className="border-top pt1 plan-price">
-            <div className="mb0-5">
-                {c('PlanPrice').jt`${(
-                    <strong>
-                        <Price className="biggest" currency={currency}>
-                            {plan.price.totalMonthly}
-                        </Price>
-                    </strong>
-                )} / mo`}
-            </div>
+            <div className="mb0-5">{c('PlanPrice').jt`${totalMonthlyPriceText} / mo`}</div>
 
             <div>
-                <span className="opacity-50">
-                    {cycle === CYCLE.MONTHLY
-                        ? c('PlanPrice').jt`Billed as ${(
-                              <Price currency={currency} suffix={c('Suffix').t`monthly`}>
-                                  {plan.price.totalMonthly}
-                              </Price>
-                          )}`
-                        : c('PlanPrice').jt`Billed as ${(
-                              <Price
-                                  currency={currency}
-                                  suffix={cycle === CYCLE.TWO_YEARS ? c('Suffix').t`/2-year` : c('Suffix').t`/year`}
-                              >
-                                  {plan.price.total}
-                              </Price>
-                          )}`}
-                </span>
+                <span className="opacity-50">{c('PlanPrice').jt`Billed as ${totalBilledText}`}</span>
                 {discount > 0 && (
-                    <strong className="ml0-25 color-primary">{c('PlanPrice').jt`SAVE ${(
-                        <Price currency={currency}>{discount}</Price>
-                    )}`}</strong>
+                    <strong className="ml0-25 color-primary">{c('PlanPrice').jt`SAVE ${discountText}`}</strong>
                 )}
             </div>
         </div>

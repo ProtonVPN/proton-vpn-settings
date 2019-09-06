@@ -27,6 +27,12 @@ const PlanUpsell = ({ selectedPlan, getPlanByName, cycle, currency, onExtendCycl
         onUpgrade(upsell.planName);
     };
 
+    const totalMonthlyText = (
+        <Price currency={currency} suffix={c('Suffix').t`/ month`}>
+            {upsellPlan.price.totalMonthly}
+        </Price>
+    );
+
     return (
         <div className="flex mt1 flex-column bordered-container">
             <h6 className="p0-5 mb0 w100 aligncenter bg-primary color-white">
@@ -61,13 +67,8 @@ const PlanUpsell = ({ selectedPlan, getPlanByName, cycle, currency, onExtendCycl
                                 <li key={i}>{feature}</li>
                             ))}
                         </ul>
-                        <PrimaryButton className="w100 mt1" onClick={handleUpgrade()}>{c('Action').jt`Try ${
-                            upsellPlan.title
-                        } for only ${(
-                            <Price currency={currency} suffix={c('Suffix').t`/ month`}>
-                                {upsellPlan.price.totalMonthly}
-                            </Price>
-                        )}`}</PrimaryButton>
+                        <PrimaryButton className="w100 mt1" onClick={handleUpgrade()}>{c('Action')
+                            .jt`Try ${upsellPlan.title} for only ${totalMonthlyText}`}</PrimaryButton>
                     </>
                 )}
             </div>
