@@ -1,7 +1,15 @@
 import { useState, useEffect } from 'react';
 import { handlePaymentToken } from 'react-components/containers/payments/paymentTokenHelper';
 import { srpVerify, srpAuth } from 'proton-shared/lib/srp';
-import { useApi, usePlans, useConfig, useApiResult, useModals, useVPNCountries } from 'react-components';
+import {
+    useApi,
+    usePlans,
+    useConfig,
+    useApiResult,
+    useModals,
+    useVPNCountries,
+    useNotifications
+} from 'react-components';
 import { queryCreateUser, queryDirectSignupStatus } from 'proton-shared/lib/api/user';
 import { auth, setCookies } from 'proton-shared/lib/api/auth';
 import { subscribe, setPaymentMethod, verifyPayment, checkSubscription } from 'proton-shared/lib/api/payments';
@@ -10,6 +18,7 @@ import { getAuthHeaders } from 'proton-shared/lib/api';
 import { getRandomString } from 'proton-shared/lib/helpers/string';
 import { DEFAULT_CURRENCY, CYCLE, PLAN_TYPES, TOKEN_TYPES, CURRENCIES } from 'proton-shared/lib/constants';
 import { getPlan, PLAN, VPN_PLANS } from './plans';
+import { c } from 'ttag';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes(TOKEN_TYPES.EMAIL);
@@ -31,21 +40,24 @@ const withAuthHeaders = (UID, AccessToken, config) => mergeHeaders(config, getAu
 
 /**
  * @param {Function} onLogin
- * @param {{ plan, code, cycle }} coupon
+ * @param {{ plan, code, cycle }} coupon - is ignored if method is not allowed
  */
-const useSignup = (onLogin, coupon, initialModel = {}) => {
+const useSignup = (onLogin, coupon, invite, initialModel = {}) => {
     const api = useApi();
+    const { createNotification } = useNotifications();
     const { createModal } = useModals();
     const { CLIENT_TYPE } = useConfig();
     const { result } = useApiResult(() => queryDirectSignupStatus(CLIENT_TYPE), []);
     const [plans] = usePlans();
     const [plansWithCoupons, setPlansWithCoupons] = useState();
     const [countries, countriesLoading] = useVPNCountries();
+    const [appliedCoupon, setAppliedCoupon] = useState();
+    const [appliedInvite, setAppliedInvite] = useState();
 
+    const signupAvailability = result && getSignupAvailability(result.Direct, result.VerifyMethods);
     const defaultCurrency = plans && plans[0] ? plans[0].Currency : DEFAULT_CURRENCY;
     const defaultCycle = coupon ? coupon.cycle : CYCLE.YEARLY;
     const defaultPlan = coupon ? coupon.plan : PLAN.PLUS;
-    const signupAvailability = result && getSignupAvailability(result.Direct, result.VerifyMethods);
     const isLoading = !plansWithCoupons || !signupAvailability || countriesLoading;
 
     const [model, setModel] = useState({
@@ -86,17 +98,36 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
                     };
                 })
             );
+            setAppliedCoupon(coupon);
             setPlansWithCoupons(plansWithCoupons);
         };
 
-        if (plans) {
-            if (coupon) {
-                applyCoupon();
-            } else {
-                setPlansWithCoupons(plans);
-            }
+        if (!plans || !signupAvailability) {
+            return;
         }
-    }, [plans, coupon, model.cycle, model.currency]);
+
+        if (coupon && !signupAvailability.allowedMethods.includes(TOKEN_TYPES.COUPON)) {
+            createNotification({ type: 'error', text: c('Notification').t`Coupons are temporarily disabled` });
+        }
+
+        if (coupon) {
+            applyCoupon();
+        } else {
+            setPlansWithCoupons(plans);
+        }
+    }, [signupAvailability, plans, coupon, model.cycle, model.currency]);
+
+    useEffect(() => {
+        if (!invite || !signupAvailability) {
+            return;
+        }
+
+        if (!signupAvailability.allowedMethods.includes(TOKEN_TYPES.INVITE)) {
+            createNotification({ type: 'error', text: c('Notification').t`Invites are temporarily disabled` });
+        } else {
+            setAppliedInvite(invite);
+        }
+    }, [invite, signupAvailability]);
 
     /**
      * Verifies if payment was done and saves payment details for signup
@@ -196,6 +227,8 @@ const useSignup = (onLogin, coupon, initialModel = {}) => {
         getPlanByName,
         selectedPlan: getPlanByName(model.planName),
         signupAvailability,
+        appliedCoupon,
+        appliedInvite,
 
         checkPayment,
         setModel,

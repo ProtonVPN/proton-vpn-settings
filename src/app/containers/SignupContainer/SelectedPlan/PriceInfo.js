@@ -54,7 +54,7 @@ const PriceInfo = ({ plan, cycle, currency }) => {
 };
 
 PriceInfo.propTypes = {
-    plan: PropTypes.object.isRequired, // TODO: better type
+    plan: PropTypes.object.isRequired,
     cycle: PropTypes.oneOf([CYCLE.MONTHLY, CYCLE.TWO_YEARS, CYCLE.YEARLY]).isRequired,
     currency: PropTypes.oneOf(CURRENCIES).isRequired
 };

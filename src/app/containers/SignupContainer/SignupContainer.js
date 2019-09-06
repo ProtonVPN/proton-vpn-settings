@@ -13,10 +13,6 @@ import { CYCLE } from 'proton-shared/lib/constants';
 import PlanDetails from './SelectedPlan/PlanDetails';
 import PlanUpsell from './SelectedPlan/PlanUpsell';
 
-// TODO: Flexible on these parameters:
-// - URLs
-// - plans
-
 const SignupState = {
     Plan: 'plan',
     Account: 'account',
@@ -24,7 +20,7 @@ const SignupState = {
     Payment: 'payment'
 };
 
-// TODO: better handling of allowed methods (invite, coupon)
+// TODO: Flexible urls and plans for reuse between project
 const SignupContainer = ({ history, onLogin }) => {
     const searchParams = new URLSearchParams(history.location.search);
     const [signupState, setSignupState] = useState(SignupState.Plan);
@@ -40,8 +36,10 @@ const SignupContainer = ({ history, onLogin }) => {
         checkPayment,
         signupAvailability,
         getPlanByName,
-        isLoading
-    } = useSignup(onLogin, coupon, {
+        isLoading,
+        appliedCoupon,
+        appliedInvite
+    } = useSignup(onLogin, coupon, invite, {
         planName: searchParams.get('plan'),
         cycle: Number(searchParams.get('cycle')),
         currency: searchParams.get('currency')
@@ -57,8 +55,8 @@ const SignupContainer = ({ history, onLogin }) => {
 
         if (selectedPlan.price.total > 0) {
             setSignupState(SignupState.Payment);
-        } else if (invite || coupon) {
-            await signup(model, { invite, coupon });
+        } else if (appliedInvite || appliedCoupon) {
+            await signup(model, { invite: appliedInvite, coupon: appliedCoupon });
         } else {
             setSignupState(SignupState.Verification);
         }
