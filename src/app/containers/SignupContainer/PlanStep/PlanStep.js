@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Field, CurrencySelector, CycleSelector, SubTitle, useModals, LinkButton, Block } from 'react-components';
+import { Row, Field, CurrencySelector, CycleSelector, SubTitle, useModals, LinkButton } from 'react-components';
 import PlanCard from './PlanCard/PlanCard';
 import { CURRENCIES, CYCLE } from 'proton-shared/lib/constants';
 import { c } from 'ttag';
