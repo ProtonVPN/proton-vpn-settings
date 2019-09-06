@@ -2,6 +2,10 @@ import React from 'react';
 import { c, msgid } from 'ttag';
 import { PLANS, PLAN_TYPES, CYCLE } from 'proton-shared/lib/constants';
 import { Info } from 'react-components';
+import freePlanSvg from 'design-system/assets/img/pv-images/plans/free.svg';
+import basicPlanSvg from 'design-system/assets/img/pv-images/plans/basic.svg';
+import plusPlanSvg from 'design-system/assets/img/pv-images/plans/plus.svg';
+import visionaryPlanSvg from 'design-system/assets/img/pv-images/plans/visionary.svg';
 
 export const PLAN = {
     FREE: 'free',
@@ -22,6 +26,7 @@ export const VPN_PLANS = [PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
 const getPlanFeatures = (plan, maxConnections, countries) =>
     ({
         [PLAN.FREE]: {
+            image: <img width={13} src={freePlanSvg} alt={`${PLAN_NAMES[PLAN.FREE]} plan image`} />,
             description: c('Plan Description').t`Privacy and security for everyone`,
             upsell: {
                 planName: PLAN.BASIC,
@@ -45,6 +50,7 @@ const getPlanFeatures = (plan, maxConnections, countries) =>
             ]
         },
         [PLAN.BASIC]: {
+            image: <img width={60} src={basicPlanSvg} alt={`${PLAN_NAMES[PLAN.BASIC]} plan image`} />,
             description: c('Plan Description').t`Basic privacy features`,
             additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.FREE]} plan features`,
             upsell: {
@@ -72,6 +78,7 @@ const getPlanFeatures = (plan, maxConnections, countries) =>
             ]
         },
         [PLAN.PLUS]: {
+            image: <img width={60} src={plusPlanSvg} alt={`${PLAN_NAMES[PLAN.PLUS]} plan image`} />,
             isBest: true,
             description: c('Plan Description').t`Advanced security features`,
             additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.BASIC]} plan features`,
@@ -95,6 +102,7 @@ const getPlanFeatures = (plan, maxConnections, countries) =>
             ]
         },
         [PLAN.VISIONARY]: {
+            image: <img width={100} src={visionaryPlanSvg} alt={`${PLAN_NAMES[PLAN.VISIONARY]} plan image`} />,
             description: c('Plan Description').t`The complete privacy suite`,
             additionalFeatures: c('Plan feature').t`All ${PLAN_NAMES[PLAN.PLUS]} plan features`,
             features: [

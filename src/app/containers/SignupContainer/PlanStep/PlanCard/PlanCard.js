@@ -27,6 +27,9 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
                 isActive && 'plan-card--active'
             ])}
         >
+            <div style={{ height: 70 }} className="mb1 flex flex-items-end">
+                {plan.image}
+            </div>
             <div className="flex flex-items-center">
                 <strong className="biggest mt0 mb0">{plan.title}</strong>
                 {plan.isBest && (
@@ -68,6 +71,7 @@ const PlanCard = ({ plan, isActive, onSelect, cycle, currency, isDisabled }) => 
 PlanCard.propTypes = {
     isActive: PropTypes.bool.isRequired,
     plan: PropTypes.shape({
+        image: PropTypes.node.isRequired,
         planName: PropTypes.string.isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string,

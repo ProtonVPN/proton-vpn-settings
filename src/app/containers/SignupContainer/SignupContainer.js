@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Loader, Row, Button, Title } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
@@ -22,6 +22,10 @@ const SignupState = {
 
 // TODO: Flexible urls and plans for reuse between project
 const SignupContainer = ({ history, onLogin }) => {
+    useEffect(() => {
+        document.title = c('Title').t`Sign up - ProtonVPN`;
+    }, []);
+
     const searchParams = new URLSearchParams(history.location.search);
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const historyState = history.location.state || {};
