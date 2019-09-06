@@ -132,22 +132,32 @@ const useSignup = (onLogin, coupon, invite, initialModel = {}) => {
     /**
      * Verifies if payment was done and saves payment details for signup
      * @param {*=} paymentParameters payment parameters from usePayment
-     * @returns {Promise<{ VerifyCode, paymentParameters }>} - paymentDetails
+     * @returns {Promise<{ VerifyCode, Payment }>} - paymentDetails
      */
     const checkPayment = async (model, paymentParameters) => {
         const selectedPlan = getPlanByName(model.planName, model.cycle);
         const amount = selectedPlan.price.total;
 
         if (amount > 0) {
+            const { Payment } = await handlePaymentToken({
+                params: {
+                    Amount: selectedPlan.price.total,
+                    Currency: model.currency,
+                    ...paymentParameters
+                },
+                api,
+                createModal
+            });
+
             const { VerifyCode } = await api(
                 verifyPayment({
                     Amount: amount,
                     Currency: model.currency,
-                    ...paymentParameters
+                    Payment
                 })
             );
 
-            return { VerifyCode, paymentParameters };
+            return { VerifyCode, Payment };
         }
 
         return null;
@@ -204,16 +214,7 @@ const useSignup = (onLogin, coupon, invite, initialModel = {}) => {
 
         // Add payment method
         if (signupToken.paymentDetails) {
-            const { Payment } = await handlePaymentToken({
-                params: {
-                    Amount: selectedPlan.price.total,
-                    Currency: currency,
-                    ...signupToken.paymentDetails.paymentParameters
-                },
-                api,
-                createModal
-            });
-            await api(withAuthHeaders(UID, AccessToken, setPaymentMethod(Payment)));
+            await api(withAuthHeaders(UID, AccessToken, setPaymentMethod(signupToken.paymentDetails.Payment)));
         }
 
         // set cookies after login
