@@ -5,6 +5,7 @@ import { c } from 'ttag';
 
 const ResendCodeModal = ({ modalTitleID = 'modalTitle', onResend, onBack, destination, onClose, ...rest }) => {
     const editI18n = c('Action').t`Edit`;
+    const destinationText = <strong>{destination}</strong>;
 
     return (
         <DialogModal {...rest}>
@@ -14,9 +15,8 @@ const ResendCodeModal = ({ modalTitleID = 'modalTitle', onResend, onBack, destin
             <div className="pm-modalContent">
                 <InnerModal>
                     <p>
-                        {c('Info').jt`Click below to resend the code to ${<strong>{destination}</strong>}. If ${(
-                            <strong>{destination}</strong>
-                        )} is incorrect, please click "${editI18n}".`}
+                        {c('Info')
+                            .jt`Click below to resend the code to ${destinationText}. If ${destinationText} is incorrect, please click "${editI18n}".`}
                     </p>
                 </InnerModal>
                 <FooterModal>
