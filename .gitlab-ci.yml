@@ -5,8 +5,6 @@ stages:
     - test
     - deploy
     - deploy-qa
-    - deploy-beta
-    - deploy-prod
     - i18n-upgrade-app
     - i18n-to-crowdin
 
@@ -86,7 +84,7 @@ deploy:
         - dind
     script:
         - npm i --no-audit --no-package-lock
-        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
+        - npm run deploy:standalone -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
         - git push github deploy-$BRANCH_DEPLOY
     when: manual
 
@@ -96,26 +94,6 @@ deploy-qa:
         - dind
     script:
         - npm i --no-audit --no-package-lock
-        - npm run deploy -- --branch=deploy-$BRANCH_DEPLOY_QA --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
+        - npm run deploy:standalone -- --branch=deploy-$BRANCH_DEPLOY_QA --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
         - git push github deploy-$BRANCH_DEPLOY_QA
-    when: manual
-
-deploy-beta:
-    stage: deploy-beta
-    tags:
-        - dind
-    script:
-        - npm i --no-audit --no-package-lock
-        - npm run deploy -- --branch=deploy-beta --api=beta --verbose --no-i18n --no-lint --forceFetch --fromCi
-        - git push github deploy-beta
-    when: manual
-
-deploy-prod:
-    stage: deploy-prod
-    tags:
-        - dind
-    script:
-        - npm i --no-audit --no-package-lock
-        - npm run deploy -- --branch=deploy-prod --api=prod --verbose --no-i18n --no-lint --forceFetch --fromCi
-        - git push github deploy-prod
     when: manual
