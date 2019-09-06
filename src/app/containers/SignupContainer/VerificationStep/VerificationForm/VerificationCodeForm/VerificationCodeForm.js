@@ -18,6 +18,7 @@ const VerificationCodeForm = ({ onSubmit, onResend, onBack, destination }) => {
     const { createModal } = useModals();
     const [loading, withLoading] = useLoading();
     const [code, setCode] = useState('');
+    const destinationText = <strong>{destination}</strong>;
 
     const handleResend = () => {
         createModal(<ResendCodeModal onBack={onBack} onResend={onResend} destination={destination} />);
@@ -33,9 +34,7 @@ const VerificationCodeForm = ({ onSubmit, onResend, onBack, destination }) => {
     return (
         <div>
             <h3>{c('Title').t`Enter verification code`}</h3>
-            <Alert>{c('Info').jt`Enter the verification code that was sent to ${(
-                <strong>{destination}</strong>
-            )}`}</Alert>
+            <Alert>{c('Info').jt`Enter the verification code that was sent to ${destination}`}</Alert>
             <form onSubmit={handleSubmit}>
                 <Row>
                     <Label htmlFor="code">{c('Label').t`6-digit code`}</Label>
