@@ -7,19 +7,10 @@ import PlansTable from '../../../components/sections/plans/PlansTable';
 
 const { MONTHLY, YEARLY, TWO_YEARS } = CYCLE;
 
-const PlanComparisonModal = ({
-    modalTitleID = 'modalTitle',
-    onClose,
-    selectedPlanName,
-    defaultCycle,
-    defaultCurrency,
-    ...rest
-}) => {
+const PlanComparisonModal = ({ modalTitleID = 'modalTitle', onClose, defaultCycle, defaultCurrency, ...rest }) => {
     const [cycle, setCycle] = useState(defaultCycle);
     const [currency, setCurrency] = useState(defaultCurrency);
     const [plans, loadingPlans] = usePlans();
-
-    const selected = plans.filter(({ Name }) => Name === selectedPlanName);
 
     return (
         <DialogModal {...rest} className="pm-modal--wider">
@@ -29,14 +20,13 @@ const PlanComparisonModal = ({
             <div className="pm-modalContent">
                 <InnerModal>
                     <PlansTable
-                        subscription={{ Plans: selected }}
+                        subscription={null}
                         loading={loadingPlans}
                         currency={currency}
                         cycle={cycle}
                         updateCurrency={setCurrency}
                         updateCycle={setCycle}
                         plans={plans}
-                        extendedDetails
                     />
                 </InnerModal>
             </div>
@@ -46,7 +36,6 @@ const PlanComparisonModal = ({
 
 PlanComparisonModal.propTypes = {
     ...DialogModal.propTypes,
-    selectedPlanName: PropTypes.string.isRequired,
     cycle: PropTypes.oneOf([MONTHLY, TWO_YEARS, YEARLY]).isRequired,
     currency: PropTypes.oneOf(CURRENCIES).isRequired
 };

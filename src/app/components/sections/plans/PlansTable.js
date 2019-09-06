@@ -34,13 +34,14 @@ const PlansTable = ({
     updateCycle,
     currency = DEFAULT_CURRENCY,
     updateCurrency,
-    subscription,
-    extendedDetails = false // TODO: add extended details
+    subscription
 }) => {
     const mySubscriptionText = c('Title').t`My subscription`;
     const { Plans = [] } = subscription || {};
     const { Name = 'free' } = Plans.find(({ Services, Type }) => Type === PLAN && Services & VPN) || {};
     const [countries, countriesLoading] = useVPNCountries();
+
+    const getPlan = (planName) => plans.find(({ Name }) => Name === planName);
 
     const addCycleTooltip = (comp) => {
         if (cycle === CYCLE.MONTHLY) {
@@ -51,7 +52,10 @@ const PlansTable = ({
     };
 
     return (
-        <table className="pm-plans-table pm-table--highlight noborder" data-plan-number={PLAN_NUMBERS[Name]}>
+        <table
+            className="pm-plans-table pm-table--highlight noborder"
+            data-plan-number={subscription !== null && PLAN_NUMBERS[Name]}
+        >
             <thead>
                 <tr>
                     <th className="is-empty" />
@@ -94,26 +98,97 @@ const PlansTable = ({
                         <PlanPrice cycle={cycle} currency={currency} plans={plans} planName={VISIONARY} />
                     </td>
                 </tr>
+
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
-                        <span className="mr0-5">{c('Header').t`Countries`}</span>
-                        <Info title={c('Tooltip').t`Access to VPN servers`} />
+                        <span className="mr0-5">{c('Header').t`Apps for Android / Linux / iOS / Windows`}</span>
                     </th>
-                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.free.length}</td>
-                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.basic.length}</td>
-                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.all.length}</td>
-                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.all.length}</td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
                 </tr>
+
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
-                        <span className="mr0-5">{c('Header').t`Devices`}</span>
-                        <Info title={c('Tooltip').t`Number of simultaneous connections`} />
+                        <span className="mr0-5">{c('Header').t`Advanced encryption`}</span>
                     </th>
-                    <td className="aligncenter">1</td>
-                    <td className="aligncenter">2</td>
-                    <td className="aligncenter">5</td>
-                    <td className="aligncenter">10</td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
                 </tr>
+
+                <tr>
+                    <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
+                        <span className="mr0-5">{c('Header').t`Kill Switch / Always-on`}</span>
+                    </th>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
+                        <span className="mr0-5">{c('Header').t`No logs policy`}</span>
+                    </th>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
+                        <span className="mr0-5">{c('Header').t`No data limits`}</span>
+                    </th>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                </tr>
+
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">{c('Header')
                         .t`Speed`}</th>
@@ -124,11 +199,24 @@ const PlansTable = ({
                 </tr>
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
-                        <span className="mr0-5">{c('Header').t`Plus servers`}</span>
-                        <Info
-                            title={c('Tooltip')
-                                .t`Exclusive servers only available to Plus and Visionary users with higher speed`}
-                        />
+                        <span className="mr0-5">{c('Header').t`P2P support (BitTorrent, etc.)`}</span>
+                    </th>
+                    <td className="aligncenter">
+                        <Icon name="off" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
+                        <span className="mr0-5">{c('Header').t`Tor over VPN`}</span>
                     </th>
                     <td className="aligncenter">
                         <Icon name="off" />
@@ -143,6 +231,7 @@ const PlansTable = ({
                         <Icon name="on" />
                     </td>
                 </tr>
+
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
                         <span className="mr0-5">{c('Header').t`Secure core`}</span>
@@ -164,12 +253,10 @@ const PlansTable = ({
                         <Icon name="on" />
                     </td>
                 </tr>
+
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
-                        <span className="mr0-5">{c('Header').t`Tor servers`}</span>
-                        <Info
-                            title={c('Tooltip').t`Send all your traffic through the Tor network with a single click`}
-                        />
+                        <span className="mr0-5">{c('Header').t`Stream geo-blocked content`}</span>
                     </th>
                     <td className="aligncenter">
                         <Icon name="off" />
@@ -184,6 +271,25 @@ const PlansTable = ({
                         <Icon name="on" />
                     </td>
                 </tr>
+
+                <tr>
+                    <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
+                        <span className="mr0-5">{c('Header').t`Simultaneous connections`}</span>
+                    </th>
+                    <td className="aligncenter">1</td>
+                    <td className="aligncenter">{getPlan(VPNBASIC).MaxVPN}</td>
+                    <td className="aligncenter">{getPlan(VPNPLUS).MaxVPN}</td>
+                    <td className="aligncenter">{getPlan(VISIONARY).MaxVPN}</td>
+                </tr>
+                <tr>
+                    <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
+                        <span className="mr0-5">{c('Header').t`Countries`}</span>
+                    </th>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.free.length}</td>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.basic.length}</td>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.all.length}</td>
+                    <td className="aligncenter">{countriesLoading ? <Loader /> : countries.all.length}</td>
+                </tr>
                 <tr>
                     <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
                         <span className="mr0-5">ProtonMail Visionary</span>
@@ -197,6 +303,21 @@ const PlansTable = ({
                     </td>
                     <td className="aligncenter">
                         <Icon name="off" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row" className="pm-simple-table-row-th alignleft bg-global-light">
+                        <span className="mr0-5">{c('Header').t`30-day money-back guarantee`}</span>
+                    </th>
+                    <td className="aligncenter" />
+                    <td className="aligncenter">
+                        <Icon name="on" />
+                    </td>
+                    <td className="aligncenter">
+                        <Icon name="on" />
                     </td>
                     <td className="aligncenter">
                         <Icon name="on" />
@@ -246,8 +367,7 @@ PlansTable.propTypes = {
     cycle: PropTypes.number,
     updateCurrency: PropTypes.func,
     updateCycle: PropTypes.func,
-    subscription: PropTypes.object,
-    extendedDetails: PropTypes.bool
+    subscription: PropTypes.object
 };
 
 export default PlansTable;

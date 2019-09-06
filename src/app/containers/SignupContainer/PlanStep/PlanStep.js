@@ -14,9 +14,7 @@ const PlanStep = ({ plans, onSelectPlan, onChangeCurrency, onChangeCycle, model,
 
     const handleSelect = (planName) => () => onSelectPlan({ ...model, planName });
     const handleComparisonClick = () =>
-        createModal(
-            <PlanComparisonModal selectedPlanName={model.planName} cycle={model.cycle} currency={model.currency} />
-        );
+        createModal(<PlanComparisonModal defaultCycle={model.cycle} defaultCurrency={model.currency} />);
 
     return (
         <>
