@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Loader, Button, Title } from 'react-components';
+import { Loader, Button, Title, useLoading } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
@@ -28,6 +28,7 @@ const SignupContainer = ({ history, onLogin }) => {
 
     const searchParams = new URLSearchParams(history.location.search);
     const [signupState, setSignupState] = useState(SignupState.Plan);
+    const [loading, withLoading] = useLoading(false);
     const historyState = history.location.state || {};
     const invite = historyState.invite;
     const coupon = historyState.coupon;
@@ -92,6 +93,7 @@ const SignupContainer = ({ history, onLogin }) => {
         <div className="ml1 onmobile-ml0 onmobile-mt2 selected-plan">
             <PlanDetails selectedPlan={selectedPlan} cycle={model.cycle} currency={model.currency} />
             <PlanUpsell
+                disabled={loading}
                 selectedPlan={selectedPlan}
                 getPlanByName={getPlanByName}
                 onExtendCycle={handleExtendCycle}
@@ -167,7 +169,7 @@ const SignupContainer = ({ history, onLogin }) => {
                             <PaymentStep
                                 model={model}
                                 paymentAmount={selectedPlan.price.total}
-                                onPaymentDone={handlePaymentDone}
+                                onPaymentDone={(...rest) => withLoading(handlePaymentDone(...rest))}
                             >
                                 {selectedPlanComponent}
                             </PaymentStep>
