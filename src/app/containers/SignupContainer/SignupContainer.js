@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Loader, Button, Title, useLoading } from 'react-components';
+import { Loader, Button, Title, useLoading, Icon } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
@@ -124,16 +124,16 @@ const SignupContainer = ({ history, onLogin }) => {
     return (
         <main className="flex flex-item-fluid main-area">
             <div className="center p2 container-plans-signup onmobile-p1">
-                <div className="flex flex-nowrap mb1">
-                    <div className="flex-item-fluid">
+                <div className="flex flex-nowrap onmobile-flex-wrap mb1">
+                    <div className="flex-item-fluid plan-back-button">
                         <Button onClick={handleBackClick}>
                             {prevStep ? c('Action').t`Back` : c('Action').t`Homepage`}
                         </Button>
                     </div>
-                    <div className="w">
+                    <div class="onmobile-min-w100 onmobile-aligncenter onmobile-mt0-5">
                         <Title>{c('Title').t`Sign up`}</Title>
                     </div>
-                    <div className="flex-item-fluid alignright">
+                    <div className="flex-item-fluid alignright plan-help-button">
                         <SupportDropdown content={c('Action').t`Need help`} />
                     </div>
                 </div>
