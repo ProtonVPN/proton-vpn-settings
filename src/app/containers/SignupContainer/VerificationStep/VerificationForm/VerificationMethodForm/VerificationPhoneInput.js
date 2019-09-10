@@ -18,7 +18,12 @@ const VerificationPhoneInput = ({ onSendClick, loading }) => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="mb1">
-                <IntlTelInput onPhoneNumberChange={handleChangePhone} onPhoneNumberBlur={handleChangePhone} />
+                <IntlTelInput
+                    containerClassName="w100"
+                    inputClassName="w100"
+                    onPhoneNumberChange={handleChangePhone}
+                    onPhoneNumberBlur={handleChangePhone}
+                />
             </div>
             <div>
                 <PrimaryButton type="submit" disabled={!phone} loading={loading}>{c('Action').t`Send`}</PrimaryButton>
