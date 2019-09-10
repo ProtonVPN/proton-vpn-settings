@@ -30,39 +30,43 @@ const VerificationMethodForm = ({ defaultEmail, allowedMethods, onSubmit }) => {
             <h3>{c('Title').t`Select an account verification method`}</h3>
 
             {allowedMethods.length ? (
-                <Row>
-                    <Label>
-                        {isMethodAllowed(VERIFICATION_METHOD.EMAIL) ? (
-                            <div className="mb1">
-                                <Radio
-                                    className="mb1 block"
-                                    checked={method === VERIFICATION_METHOD.EMAIL}
-                                    onChange={handleSelectMethod(VERIFICATION_METHOD.EMAIL)}
-                                >{c('Option').t`Email address`}</Radio>
+                <>
+                    <Row>
+                        <Label>{c('Label').t`Verification method`}</Label>
+                        <Field className="auto flex-item-fluid-auto">
+                            <div className="pt0-5">
+                                {isMethodAllowed(VERIFICATION_METHOD.EMAIL) ? (
+                                    <Radio
+                                        className="mr1"
+                                        checked={method === VERIFICATION_METHOD.EMAIL}
+                                        onChange={handleSelectMethod(VERIFICATION_METHOD.EMAIL)}
+                                    >{c('Option').t`Email address`}</Radio>
+                                ) : null}
+                                {isMethodAllowed(VERIFICATION_METHOD.SMS) && (
+                                    <Radio
+                                        checked={method === VERIFICATION_METHOD.SMS}
+                                        onChange={handleSelectMethod(VERIFICATION_METHOD.SMS)}
+                                    >{c('Option').t`SMS`}</Radio>
+                                )}
                             </div>
-                        ) : null}
-                        {isMethodAllowed(VERIFICATION_METHOD.SMS) && (
-                            <div className="mb1">
-                                <Radio
-                                    checked={method === VERIFICATION_METHOD.SMS}
-                                    onChange={handleSelectMethod(VERIFICATION_METHOD.SMS)}
-                                >{c('Option').t`SMS`}</Radio>
-                            </div>
-                        )}
-                    </Label>
-                    <Field className="auto flex-item-fluid-auto">
-                        {method === VERIFICATION_METHOD.EMAIL && (
-                            <VerificationEmailInput
-                                loading={loading}
-                                defaultEmail={defaultEmail}
-                                onSendClick={handleSendEmailCode}
-                            />
-                        )}
-                        {method === VERIFICATION_METHOD.SMS && (
-                            <VerificationPhoneInput loading={loading} onSendClick={handleSendSMSCode} />
-                        )}
-                    </Field>
-                </Row>
+                        </Field>
+                    </Row>
+                    <Row>
+                        <Label> </Label>
+                        <Field className="auto flex-item-fluid-auto">
+                            {method === VERIFICATION_METHOD.EMAIL && (
+                                <VerificationEmailInput
+                                    loading={loading}
+                                    defaultEmail={defaultEmail}
+                                    onSendClick={handleSendEmailCode}
+                                />
+                            )}
+                            {method === VERIFICATION_METHOD.SMS && (
+                                <VerificationPhoneInput loading={loading} onSendClick={handleSendSMSCode} />
+                            )}
+                        </Field>
+                    </Row>
+                </>
             ) : null}
         </div>
     );

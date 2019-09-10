@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 const LoginPanel = () => {
     return (
         <div className="border-top mt2 pt2">
-            <h3 className="mb1">{c('Title').t`Arleady have a Proton account?`}</h3>
+            <h3 className="mb1">{c('Title').t`Already have a Proton account?`}</h3>
             <div className="flex flex-nowrap flex-spacebetween flex-items-center">
                 <div className="mr1">{c('Info')
                     .t`If you are a ProtonMail user you can use your Proton account to log in to ProtonVPN.`}</div>
