@@ -30,30 +30,25 @@ const VerificationMethodForm = ({ defaultEmail, allowedMethods, onSubmit }) => {
             <h3>{c('Title').t`Select an account verification method`}</h3>
 
             {allowedMethods.length ? (
-                <>
-                    <Row>
-                        <Label>{c('Label').t`Verification method`}</Label>
-                        <Field className="auto flex-item-fluid-auto">
-                            <div className="pt0-5">
-                                {isMethodAllowed(VERIFICATION_METHOD.EMAIL) ? (
-                                    <Radio
-                                        className="mr1"
-                                        checked={method === VERIFICATION_METHOD.EMAIL}
-                                        onChange={handleSelectMethod(VERIFICATION_METHOD.EMAIL)}
-                                    >{c('Option').t`Email address`}</Radio>
-                                ) : null}
-                                {isMethodAllowed(VERIFICATION_METHOD.SMS) && (
-                                    <Radio
-                                        checked={method === VERIFICATION_METHOD.SMS}
-                                        onChange={handleSelectMethod(VERIFICATION_METHOD.SMS)}
-                                    >{c('Option').t`SMS`}</Radio>
-                                )}
-                            </div>
-                        </Field>
-                    </Row>
-                    <Row>
-                        <Label> </Label>
-                        <Field className="auto flex-item-fluid-auto">
+                <Row>
+                    <Label>{c('Label').t`Verification method`}</Label>
+                    <Field className="auto flex-item-fluid-auto">
+                        <div className="pt0-5 mb1">
+                            {isMethodAllowed(VERIFICATION_METHOD.EMAIL) ? (
+                                <Radio
+                                    className="mr1"
+                                    checked={method === VERIFICATION_METHOD.EMAIL}
+                                    onChange={handleSelectMethod(VERIFICATION_METHOD.EMAIL)}
+                                >{c('Option').t`Email address`}</Radio>
+                            ) : null}
+                            {isMethodAllowed(VERIFICATION_METHOD.SMS) && (
+                                <Radio
+                                    checked={method === VERIFICATION_METHOD.SMS}
+                                    onChange={handleSelectMethod(VERIFICATION_METHOD.SMS)}
+                                >{c('Option').t`SMS`}</Radio>
+                            )}
+                        </div>
+                        <div>
                             {method === VERIFICATION_METHOD.EMAIL && (
                                 <VerificationEmailInput
                                     loading={loading}
@@ -64,9 +59,9 @@ const VerificationMethodForm = ({ defaultEmail, allowedMethods, onSubmit }) => {
                             {method === VERIFICATION_METHOD.SMS && (
                                 <VerificationPhoneInput loading={loading} onSendClick={handleSendSMSCode} />
                             )}
-                        </Field>
-                    </Row>
-                </>
+                        </div>
+                    </Field>
+                </Row>
             ) : null}
         </div>
     );
