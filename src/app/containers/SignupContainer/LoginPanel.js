@@ -6,11 +6,9 @@ const LoginPanel = () => {
     return (
         <div className="border-top mt2 pt2">
             <h3 className="mb1">{c('Title').t`Already have a Proton account?`}</h3>
-            <div className="flex flex-nowrap flex-spacebetween flex-items-center">
-                <div className="mr1">{c('Info')
-                    .t`If you are a ProtonMail user you can use your Proton account to log in to ProtonVPN.`}</div>
-                <Link className="pm-button--primaryborder" to="/login">{c('Link').t`Log in`}</Link>
-            </div>
+            <div className="mb1">{c('Info')
+                .t`If you are a ProtonMail user you can use your Proton account to log in to ProtonVPN.`}</div>
+            <Link className="pm-button--primaryborder" to="/login">{c('Link').t`Log in`}</Link>
         </div>
     );
 };
