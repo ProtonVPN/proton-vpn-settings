@@ -27,7 +27,7 @@ const PaymentStep = ({ onPay, paymentAmount, model, children }) => {
                         onMethod={setMethod}
                         onValidCard={setCardValidity}
                         onPay={handlePayment}
-                        fluidDisplay={true}
+                        fieldClassName="auto flex-item-fluid-auto"
                     >
                         {method === PAYMENT_METHOD_TYPES.CARD && (
                             <Field>
