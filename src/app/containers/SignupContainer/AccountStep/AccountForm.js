@@ -10,7 +10,6 @@ import {
     Label,
     EmailInput,
     Href,
-    Alert,
     useLoading,
     Info
 } from 'react-components';

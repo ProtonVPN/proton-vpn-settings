@@ -19,8 +19,9 @@ const VerificationStep = ({ onVerify, requestCode, allowedMethods, model, childr
         <div className="border-top pt3 mb2">
             <SubTitle>{c('Title').t`Are you human?`}</SubTitle>
             <Row className="auto flex-item-fluid-auto">
-                <div class="w100">
-                    <Alert>{c('Info').t`To prevent misuse, please verify you are human. Please do not close this tab until you have verified your account.`}</Alert>
+                <div className="w100">
+                    <Alert>{c('Info')
+                        .t`To prevent misuse, please verify you are human. Please do not close this tab until you have verified your account.`}</Alert>
                     <VerificationForm
                         allowedMethods={allowedMethods}
                         defaultEmail={model.email}
