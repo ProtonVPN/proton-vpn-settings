@@ -27,6 +27,7 @@ const PaymentStep = ({ onPay, paymentAmount, model, children }) => {
                         onMethod={setMethod}
                         onValidCard={setCardValidity}
                         onPay={handlePayment}
+                        fluidDisplay={true}
                     >
                         {method === PAYMENT_METHOD_TYPES.CARD && (
                             <Field>

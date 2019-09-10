@@ -60,7 +60,7 @@ const AccountForm = ({ onSubmit }) => {
     );
 
     return (
-        <form onSubmit={(e) => withLoading(handleSubmit(e))}>
+        <form className="flex-item-fluid-auto" onSubmit={(e) => withLoading(handleSubmit(e))}>
             <Row>
                 <Label htmlFor="username">
                     <span className="mr0-5">{c('Label').t`Username`}</span>
@@ -69,7 +69,7 @@ const AccountForm = ({ onSubmit }) => {
                             .t`Username which is used for all Proton services. This can also be used later to create a secure ProtonMail account.`}
                     />
                 </Label>
-                <Field>
+                <Field className="auto flex-item-fluid">
                     <Input
                         required
                         error={usernameError}
@@ -91,7 +91,7 @@ const AccountForm = ({ onSubmit }) => {
                             .t`If you forget your password, you will no longer have access to your account or your data. Please save it someplace safe.`}
                     />
                 </Label>
-                <Field>
+                <Field className="auto flex-item-fluid">
                     <div className="mb1">
                         <PasswordInput
                             id="password"
@@ -123,7 +123,7 @@ const AccountForm = ({ onSubmit }) => {
                             .t`Your email is not shared with third parties and is only used for recovery and account-related questions or communication.`}
                     />
                 </Label>
-                <Field>
+                <Field className="auto flex-item-fluid">
                     <div className="mb1">
                         <EmailInput
                             id="email"
@@ -133,10 +133,10 @@ const AccountForm = ({ onSubmit }) => {
                             placeholder={c('Placeholder').t`user@domain.com`}
                         />
                     </div>
-                    <Alert>
+                    <p>
                         {c('Info')
                             .jt`By clicking Create account you agree to abide by our ${termsOfServiceLink} and ${privacyPolicyLink}.`}
-                    </Alert>
+                    </p>
 
                     <PrimaryButton loading={loading} type="submit">{c('Action').t`Create account`}</PrimaryButton>
                 </Field>
