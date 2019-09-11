@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Loader, Button, Title, useLoading } from 'react-components';
+import { Loader, Button, Title, useLoading, FullLoader, LoaderPage } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
@@ -30,7 +30,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
     const searchParams = new URLSearchParams(history.location.search);
     const [signupState, setSignupState] = useState(SignupState.Plan);
     const [upsellDone, setUpsellDone] = useState(false);
-    const [loading, withLoading] = useLoading(false);
+    const [creatingAccount, withCreateLoading] = useLoading(false);
     const historyState = history.location.state || {};
     const invite = historyState.invite;
     const coupon = historyState.coupon;
@@ -108,7 +108,6 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
             <PlanDetails selectedPlan={selectedPlan} cycle={model.cycle} currency={model.currency} />
             {!upsellDone && (
                 <PlanUpsell
-                    disabled={loading}
                     selectedPlan={selectedPlan}
                     getPlanByName={getPlanByName}
                     onExtendCycle={handleExtendCycle}
@@ -139,9 +138,11 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
             <div className="center p2 container-plans-signup onmobile-p1">
                 <div className="flex flex-nowrap onmobile-flex-wrap mb1">
                     <div className="flex-item-fluid plan-back-button">
-                        <Button onClick={handleBackClick}>
-                            {prevStep ? c('Action').t`Back` : c('Action').t`Homepage`}
-                        </Button>
+                        {!creatingAccount && (
+                            <Button onClick={handleBackClick}>
+                                {prevStep ? c('Action').t`Back` : c('Action').t`Homepage`}
+                            </Button>
+                        )}
                     </div>
                     <div className="onmobile-min-w100 onmobile-aligncenter onmobile-mt0-5">
                         <Title>{c('Title').t`Sign up`}</Title>
@@ -150,8 +151,11 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
                         <SupportDropdown content={c('Action').t`Need help`} />
                     </div>
                 </div>
-                {isLoading ? (
-                    <Loader />
+                {isLoading || creatingAccount ? (
+                    <LoaderPage
+                        color="pm-blue"
+                        text={isLoading ? c('Info').t`Loading` : c('Info').t`Creating your account`}
+                    />
                 ) : (
                     <>
                         {signupState === SignupState.Plan && (
@@ -175,7 +179,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
                             <VerificationStep
                                 model={model}
                                 allowedMethods={signupAvailability.allowedMethods}
-                                onVerify={(...rest) => withLoading(handleVerification(...rest))}
+                                onVerify={(...rest) => withCreateLoading(handleVerification(...rest))}
                                 requestCode={requestCode}
                             >
                                 {selectedPlanComponent}
@@ -186,7 +190,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
                             <PaymentStep
                                 model={model}
                                 paymentAmount={selectedPlan.price.total}
-                                onPay={(...rest) => withLoading(handlePayment(...rest))}
+                                onPay={(...rest) => withCreateLoading(handlePayment(...rest))}
                             >
                                 {selectedPlanComponent}
                             </PaymentStep>
