@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Loader, Button, Title, useLoading, FullLoader, LoaderPage } from 'react-components';
+import { Button, Title, useLoading, LoaderPage } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
 import PlanStep from './PlanStep/PlanStep';
 import useSignup from './useSignup';
