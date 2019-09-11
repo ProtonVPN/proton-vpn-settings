@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/ProtonMail/protonvpn-settings.svg?style=svg)](https://circleci.com/gh/ProtonMail/protonvpn-settings)
+[![CircleCI](https://circleci.com/gh/ProtonMail/proton-vpn-settings.svg?style=svg)](https://circleci.com/gh/ProtonMail/proton-vpn-settings)
 
 # ProtonVPN-settings
 
