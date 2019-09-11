@@ -29,13 +29,10 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
     }, []);
 
     const searchParams = new URLSearchParams(history.location.search);
-    const hasOffer = checkCookie('offer', 'bestdeal');
     const preSelectedPlan = searchParams.get('plan');
-    const availablePlans = hasOffer ? BEST_DEAL_PLANS : VPN_PLANS;
+    const availablePlans = checkCookie('offer', 'bestdeal') ? BEST_DEAL_PLANS : VPN_PLANS;
 
-    const [signupState, setSignupState] = useState(
-        hasOffer && preSelectedPlan ? SignupState.Account : SignupState.Plan
-    );
+    const [signupState, setSignupState] = useState(preSelectedPlan ? SignupState.Account : SignupState.Plan);
     const [upsellDone, setUpsellDone] = useState(false);
     const [loading, withLoading] = useLoading(false);
     const historyState = history.location.state || {};
