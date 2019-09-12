@@ -14,6 +14,7 @@ import PlanDetails from './SelectedPlan/PlanDetails';
 import PlanUpsell from './SelectedPlan/PlanUpsell';
 import useVerification from './VerificationStep/useVerification';
 import { checkCookie } from 'proton-shared/lib/helpers/cookies';
+import { redirectTo } from 'proton-shared/lib/helpers/browser';
 
 const SignupState = {
     Plan: 'plan',
@@ -30,6 +31,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
 
     const searchParams = new URLSearchParams(history.location.search);
     const preSelectedPlan = searchParams.get('plan');
+    const redirectToMobile = searchParams.get('from') === 'mobile';
     const availablePlans = checkCookie('offer', 'bestdeal') ? BEST_DEAL_PLANS : VPN_PLANS;
 
     const [signupState, setSignupState] = useState(preSelectedPlan ? SignupState.Account : SignupState.Plan);
@@ -41,6 +43,11 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
 
     const handleLogin = (...args) => {
         stopRedirect();
+
+        if (redirectToMobile) {
+            return redirectTo('protonvpn://registered');
+        }
+
         history.push('/downloads');
         onLogin(...args);
     };
