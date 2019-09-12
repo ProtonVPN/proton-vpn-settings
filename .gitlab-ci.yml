@@ -13,6 +13,7 @@ variables:
 
 before_script:
  - apt-get -y update
+ - apt-get install -y gawk rsync
  - 'which ssh-agent || apt-get -y install openssh-client'
  - eval $(ssh-agent -s)
  - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
@@ -21,20 +22,13 @@ before_script:
  - mkdir ~/.ssh 2> /dev/null
  - ssh-keyscan -t rsa ${CI_SERVER_HOST} > ~/.ssh/known_hosts
  - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
- - git remote set-url github git@github.com:ProtonMail/proton-vpn-settings.git
  - git remote -v
+ - git clone "$CI_SCRIPTS_GIT" --depth 1 ci-scripts
 
 setup:
     stage: setup
     script:
-        - npm install --no-audit --no-package-lock
-        - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@${CONFIG_GIT} ${CI_PROJECT_DIR}/configApp
-        - cp ${CI_PROJECT_DIR}/configApp/.gitconfig ${CI_PROJECT_DIR}/.gitconfig
-        - cp ${CI_PROJECT_DIR}/configApp/vpn-settings/appConfig.json ${CI_PROJECT_DIR}/appConfig.json
-        - cat ${CI_PROJECT_DIR}/configApp/.env > ${CI_PROJECT_DIR}/.env
-        - echo >> ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/configApp/vpn-settings/.env >> ${CI_PROJECT_DIR}/.env
-        - cat ${CI_PROJECT_DIR}/{.env,appConfig.json}
+        - ci-scripts/prepare-ci.sh install-app
         - npx proton-pack config
     artifacts:
         expire_in: 1 days
@@ -44,6 +38,7 @@ setup:
             - .env
             - .gitconfig
             - appConfig.json
+            - ci-scripts
 
 lint:
     stage: test
@@ -63,9 +58,7 @@ i18n-upgrade-app:
     tags:
         - dind
     script:
-        - git checkout master
-        - npm run i18n:getlatest -- --limit-i18n=${I18N_APPROVED} --verbose
-        - git push github master
+        - ci-scripts/prepare-ci.sh i18n upgrade-app "$I18N_APPROVED"
     when: manual
 
 i18n-to-crowdin:
@@ -73,9 +66,7 @@ i18n-to-crowdin:
     tags:
         - dind
     script:
-        - git checkout master
-        - npm run i18n:upgrade
-        - git push github master
+        - ci-scripts/prepare-ci.sh i18n to-crowdin
     when: manual
 
 deploy:
@@ -83,9 +74,8 @@ deploy:
     tags:
         - dind
     script:
-        - npm i --no-audit --no-package-lock
-        - npm run deploy:standalone -- --branch=deploy-$BRANCH_DEPLOY --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
-        - git push github deploy-$BRANCH_DEPLOY
+        - ./scripts/prepare-ci.sh install-app
+        - ./scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY" "$API_DEPLOY";
     when: manual
 
 deploy-qa:
@@ -93,7 +83,9 @@ deploy-qa:
     tags:
         - dind
     script:
-        - npm i --no-audit --no-package-lock
-        - npm run deploy:standalone -- --branch=deploy-$BRANCH_DEPLOY_QA --api=$API_DEPLOY --verbose --no-i18n --no-lint --forceFetch --fromCi
-        - git push github deploy-$BRANCH_DEPLOY_QA
+        - ./scripts/prepare-ci.sh install-app
+        - ./scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY_QA" "$API_DEPLOY";
     when: manual
+
+variable:
+    APP_GIT: git@github.com:ProtonMail/proton-vpn-settings.git
