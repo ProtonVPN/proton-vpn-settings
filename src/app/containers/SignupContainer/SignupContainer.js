@@ -43,12 +43,11 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
     const coupon = historyState.coupon;
 
     const handleLogin = (...args) => {
-        stopRedirect();
-
         if (redirectToMobile) {
             return setSignupState(SignupState.MobileRedirection);
         }
 
+        stopRedirect();
         history.push('/downloads');
         onLogin(...args);
     };
