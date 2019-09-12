@@ -27,6 +27,8 @@ before_script:
 
 setup:
     stage: setup
+    tags:
+        - dind
     script:
         - ./ci-scripts/prepare-ci.sh install-app
         - npx proton-pack config
@@ -42,6 +44,8 @@ setup:
 
 lint:
     stage: test
+    tags:
+        - dind
     script:
         - npm run lint
 
