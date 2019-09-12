@@ -14,7 +14,6 @@ import PlanDetails from './SelectedPlan/PlanDetails';
 import PlanUpsell from './SelectedPlan/PlanUpsell';
 import useVerification from './VerificationStep/useVerification';
 import { checkCookie } from 'proton-shared/lib/helpers/cookies';
-import { redirectTo } from 'proton-shared/lib/helpers/browser';
 
 const SignupState = {
     Plan: 'plan',
@@ -45,7 +44,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
         stopRedirect();
 
         if (redirectToMobile) {
-            return redirectTo('protonvpn://registered');
+            return (document.location = 'protonvpn://registered');
         }
 
         history.push('/downloads');
