@@ -40,7 +40,6 @@ setup:
             - .env
             - .gitconfig
             - appConfig.json
-            - ci-scripts
 
 lint:
     stage: test
