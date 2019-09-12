@@ -10,7 +10,7 @@ const MobileRedirectionStep = ({ model }) => {
             <Row className="aligncenter">
                 <Icon name="on" className="mb2" fill="success" size={100} />
                 <Paragraph className="mb2">{c('Info')
-                    .t`Your account has been successfully created. You will be redirected to the ProtonVPN app.`}</Paragraph>
+                    .t`Your account has been successfully created. Please press the "Close" button to be taken back to the app.`}</Paragraph>
                 <Href className="pm-button" url={`protonvpn://registered?username=${model.username}`} target="_top">{c(
                     'Link'
                 ).t`Close`}</Href>
