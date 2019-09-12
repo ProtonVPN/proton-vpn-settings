@@ -87,5 +87,5 @@ deploy-qa:
         - ./ci-scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY_QA" "$API_DEPLOY";
     when: manual
 
-variable:
+variables:
     APP_GIT: git@github.com:ProtonMail/proton-vpn-settings.git
