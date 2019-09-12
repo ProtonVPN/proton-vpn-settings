@@ -28,7 +28,7 @@ before_script:
 setup:
     stage: setup
     script:
-        - ci-scripts/prepare-ci.sh install-app
+        - ./ci-scripts/prepare-ci.sh install-app
         - npx proton-pack config
     artifacts:
         expire_in: 1 days
@@ -58,7 +58,7 @@ i18n-upgrade-app:
     tags:
         - dind
     script:
-        - ci-scripts/prepare-ci.sh i18n upgrade-app "$I18N_APPROVED"
+        - ./ci-scripts/prepare-ci.sh i18n upgrade-app "$I18N_APPROVED"
     when: manual
 
 i18n-to-crowdin:
@@ -66,7 +66,7 @@ i18n-to-crowdin:
     tags:
         - dind
     script:
-        - ci-scripts/prepare-ci.sh i18n to-crowdin
+        - ./ci-scripts/prepare-ci.sh i18n to-crowdin
     when: manual
 
 deploy:
@@ -74,8 +74,8 @@ deploy:
     tags:
         - dind
     script:
-        - ./scripts/prepare-ci.sh install-app
-        - ./scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY" "$API_DEPLOY";
+        - ./ci-scripts/prepare-ci.sh install-app
+        - ./ci-scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY" "$API_DEPLOY";
     when: manual
 
 deploy-qa:
@@ -83,8 +83,8 @@ deploy-qa:
     tags:
         - dind
     script:
-        - ./scripts/prepare-ci.sh install-app
-        - ./scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY_QA" "$API_DEPLOY";
+        - ./ci-scripts/prepare-ci.sh install-app
+        - ./ci-scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY_QA" "$API_DEPLOY";
     when: manual
 
 variable:
