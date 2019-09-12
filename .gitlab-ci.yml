@@ -77,7 +77,7 @@ deploy:
     tags:
         - dind
     script:
-        - ./ci-scripts/prepare-ci.sh install-app
+        - ./ci-scripts/prepare-ci.sh install-app-remote
         - ./ci-scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY" "$API_DEPLOY";
     when: manual
 
@@ -86,7 +86,7 @@ deploy-qa:
     tags:
         - dind
     script:
-        - ./ci-scripts/prepare-ci.sh install-app
+        - ./ci-scripts/prepare-ci.sh install-app-remote
         - ./ci-scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY_QA" "$API_DEPLOY";
     when: manual
 
