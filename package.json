@@ -9,6 +9,7 @@
         "pretty": "prettier --write  $(find src/app -type f -name '*.js')",
         "preversion": "git update-index --no-assume-unchanged package-lock.json",
         "postversion": "git update-index --assume-unchanged package-lock.json && git push --tags",
+        "sync:lock": "./node_modules/proton-bundler/scripts/updatePackageLock.sh",
         "i18n:validate": "proton-i18n validate lint-functions",
         "i18n:validate:context": "proton-i18n extract && proton-i18n validate",
         "i18n:upgrade": "proton-i18n extract --verbose && proton-i18n crowdin -u --verbose && proton-i18n commit update --verbose ",
