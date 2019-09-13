@@ -166,7 +166,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
                 <Title className="signup-title mt1-5">{c('Title').t`Sign up`}</Title>
 
                 {isLoading || creatingAccount ? (
-                    <div className="aligncenter">
+                    <div className="aligncenter mt2">
                         <FullLoader color="pm-primary" size={200} />
                         <TextLoader>{isLoading ? c('Info').t`Loading` : c('Info').t`Creating your account`}</TextLoader>
                     </div>
