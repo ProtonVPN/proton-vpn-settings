@@ -3,6 +3,646 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
+#: src/app/components/header/SupportDropdown.js:6
+msgctxt "Link"
+msgid "Support"
+msgstr ""
+
+#: src/app/components/layout/PrivateLayout.js:16
+msgctxt "Link"
+msgid "Dashboard"
+msgstr ""
+
+#: src/app/components/layout/PrivateLayout.js:21
+msgctxt "Link"
+msgid "Account"
+msgstr ""
+
+#: src/app/components/layout/PrivateLayout.js:26
+msgctxt "Link"
+msgid "Downloads"
+msgstr ""
+
+#: src/app/components/layout/PrivateLayout.js:31
+msgctxt "Link"
+msgid "Payments"
+msgstr ""
+
+#: src/app/components/layout/PublicHeader.js:14
+msgctxt "Link"
+msgid "protonvpn.com"
+msgstr ""
+
+#: src/app/components/layout/SignInLayout.js:21
+msgctxt "Link"
+msgid "Sign up for free"
+msgstr ""
+
+#: src/app/components/layout/SignInLayout.js:34
+msgctxt "Link"
+msgid "Don't have an account yet? Sign up for free!"
+msgstr ""
+
+#: src/app/components/page/Page.js:25
+msgctxt "Link"
+msgid "Upgrade now"
+msgstr ""
+
+#: src/app/containers/LoginContainer.js:24
+msgctxt "Link"
+msgid "Reset password"
+msgstr ""
+
+#: src/app/containers/LoginContainer.js:27
+msgctxt "Link"
+msgid "Forgot username?"
+msgstr ""
+
+#: src/app/containers/LoginContainer.js:30
+msgctxt "Link"
+msgid "Common login problems"
+msgstr ""
+
+#: src/app/containers/LoginContainer.js:34
+msgctxt "Link"
+msgid "Contact support"
+msgstr ""
+
+#: src/app/containers/SignupContainer/LoginPanel.js:12
+msgctxt "Link"
+msgid "Log in"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:59
+msgctxt "Link"
+msgid "Terms of Service"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:63
+msgctxt "Link"
+msgid "Privacy Policy"
+msgstr ""
+
+#: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:17
+msgctxt "Link"
+msgid "Close"
+msgstr ""
+
+#: node_modules/react-components/components/link/LearnMore.js:7
+msgctxt "Link"
+msgid "Learn more"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:95
+msgctxt "Link"
+msgid "clearing your browser cache"
+msgstr ""
+
+#: node_modules/react-components/containers/account/UsernameSection.js:36
+msgctxt "Link"
+msgid "Not activated"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:33
+#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:73
+msgctxt "Link"
+msgid "Back to login"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:13
+msgctxt "Link"
+msgid "here"
+msgstr ""
+
+#: node_modules/react-components/containers/heading/SupportDropdown.js:45
+#: node_modules/react-components/containers/heading/UserDropdown.js:103
+#: src/app/components/header/SupportDropdown.js:14
+msgctxt "Action"
+msgid "I have a question"
+msgstr ""
+
+#: node_modules/react-components/containers/heading/SupportDropdown.js:55
+#: node_modules/react-components/containers/heading/UserDropdown.js:113
+#: src/app/components/header/SupportDropdown.js:23
+msgctxt "Action"
+msgid "Report bug"
+msgstr ""
+
+#: src/app/components/sections/redeem/RedeemCouponForm.js:43
+msgctxt "Action"
+msgid "Activate my coupon"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
+#: src/app/components/sections/plans/PlansTable.js:355
+msgctxt "Action"
+msgid "Hide additional features"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
+#: src/app/components/sections/plans/PlansTable.js:355
+msgctxt "Action"
+msgid "Compare all features"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:133
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:206
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:40
+#: src/app/components/sections/plans/PlansTable.js:360
+#: src/app/components/sections/plans/PlansTable.js:365
+#: src/app/components/sections/plans/PlansTable.js:370
+#: src/app/components/sections/plans/PlansTable.js:379
+msgctxt "Action"
+msgid "Update"
+msgstr ""
+
+#: src/app/components/sections/plans/PlansTable.js:360
+#: src/app/components/sections/plans/PlansTable.js:365
+#: src/app/components/sections/plans/PlansTable.js:370
+#: src/app/components/sections/plans/PlansTable.js:379
+msgctxt "Action"
+msgid "Select"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationEmailInput.js:21
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationPhoneInput.js:29
+msgctxt "Action"
+msgid "Send"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:57
+msgctxt "Action"
+msgid "Verify"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:61
+msgctxt "Action"
+msgid "Did not receive the code?"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:65
+msgctxt "Action"
+msgid "Use another verification method"
+msgstr ""
+
+#: node_modules/react-components/containers/notification/RecoveryEmail.js:10
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:53
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:7
+msgctxt "Action"
+msgid "Edit"
+msgstr ""
+
+#: node_modules/react-components/components/modal/Confirm.js:11
+#: node_modules/react-components/components/modal/FormModal.js:18
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:95
+#: node_modules/react-components/containers/login/LoginForm.js:215
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:248
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:39
+#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:12
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:25
+msgctxt "Action"
+msgid "Cancel"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:41
+msgctxt "Action"
+msgid "Resend"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:78
+msgctxt "Action"
+msgid "View full plan comparison"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:144
+msgctxt "Action"
+msgid "Create account"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:15
+msgctxt "Action"
+msgid "Go to login"
+msgstr ""
+
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:213
+#: src/app/containers/SignupContainer/SignupContainer.js:150
+msgctxt "Action"
+msgid "Back"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SignupContainer.js:152
+msgctxt "Action"
+msgid "Homepage"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SignupContainer.js:162
+msgctxt "Action"
+msgid "Need help"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:38
+msgctxt "Action"
+msgid "Confirm payment"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:52
+msgctxt "Action"
+msgid "Pay annually and save 20%"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:64
+#, javascript-format
+msgctxt "Action"
+msgid "Try ${ upsellPlan.title } for only ${ totalMonthlyText }"
+msgstr ""
+
+#: node_modules/react-components/components/modal/PreviewPDFModal.js:8
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:396
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:410
+#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:38
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:47
+#: node_modules/react-components/containers/login/AbuseModal.js:21
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:49
+#: node_modules/react-components/containers/payments/PayPalModal.js:28
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:251
+msgctxt "Action"
+msgid "Close"
+msgstr ""
+
+#: node_modules/react-components/components/modal/Confirm.js:12
+msgctxt "Action"
+msgid "Confirm"
+msgstr ""
+
+#: node_modules/react-components/components/modal/Header.js:9
+msgctxt "Action"
+msgid "Close modal"
+msgstr ""
+
+#: node_modules/react-components/components/modal/FormModal.js:19
+#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:76
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:217
+#: node_modules/react-components/containers/login/LoginForm.js:238
+#: node_modules/react-components/containers/login/LoginForm.js:266
+#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:44
+#: node_modules/react-components/containers/support/BugModal.js:126
+msgctxt "Action"
+msgid "Submit"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceActions.js:45
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:48
+msgctxt "Action"
+msgid "Pay"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:411
+#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:39
+#: node_modules/react-components/containers/payments/EditCardModal.js:50
+msgctxt "Action"
+msgid "Save"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:92
+msgctxt "Action"
+msgid "User"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:98
+msgctxt "Action"
+msgid "Organization"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:101
+msgctxt "Action"
+msgid "Customize"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceActions.js:24
+msgctxt "Action"
+msgid "View"
+msgstr ""
+
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:252
+#: node_modules/react-components/containers/invoices/InvoiceActions.js:38
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:102
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:105
+#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/VPNClientCard.js:14
+msgctxt "Action"
+msgid "Download"
+msgstr ""
+
+#: node_modules/react-components/containers/support/AttachScreenshot.js:46
+msgctxt "Action"
+msgid "Clear"
+msgstr ""
+
+#: node_modules/react-components/containers/support/AttachScreenshot.js:53
+msgctxt "Action"
+msgid "Add screenshot(s)"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:194
+msgctxt "Action"
+msgid "Hide info"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:194
+msgctxt "Action"
+msgid "Show info"
+msgstr ""
+
+#: node_modules/react-components/containers/heading/UserDropdown.js:78
+#: node_modules/react-components/containers/heading/UserDropdown.js:86
+msgctxt "Action"
+msgid "Settings"
+msgstr ""
+
+#: node_modules/react-components/containers/heading/UserDropdown.js:124
+msgctxt "Action"
+msgid "Proton shop"
+msgstr ""
+
+#: node_modules/react-components/containers/heading/UserDropdown.js:134
+msgctxt "Action"
+msgid "Support us"
+msgstr ""
+
+#: node_modules/react-components/containers/heading/UserDropdown.js:143
+msgctxt "Action"
+msgid "Logout"
+msgstr ""
+
+#: node_modules/react-components/containers/login/LoginForm.js:206
+msgctxt "Action"
+msgid "Log in"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:397
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:260
+msgctxt "Action"
+msgid "Ok"
+msgstr ""
+
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:268
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:134
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:164
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:177
+msgctxt "Action"
+msgid "Next"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:38
+msgctxt "Action"
+msgid "Yes"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:96
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:62
+msgctxt "Action"
+msgid "Delete"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteSection.js:63
+msgctxt "Action"
+msgid "Delete your account"
+msgstr ""
+
+#: node_modules/react-components/containers/account/PasswordsSection.js:93
+msgctxt "Action"
+msgid "Change mailbox password"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:58
+msgctxt "Action"
+msgid "Mark as default"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:59
+msgctxt "Action"
+msgid "Add credit / debit card"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:61
+msgctxt "Action"
+msgid "Add PayPal"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:74
+msgctxt "Action"
+msgid "Get a new password"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:34
+msgctxt "Action"
+msgid "Email me my username(s)"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:37
+msgctxt "Action"
+msgid "Reset my password"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:30
+msgctxt "Action"
+msgid "Reset password"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:65
+msgctxt "Action"
+msgid "Top up"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:34
+msgctxt "Action"
+msgid "Verify payment"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/DowngradeModal.js:7
+msgctxt "Action"
+msgid "Downgrade"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/DonateModal.js:41
+msgctxt "Action"
+msgid "Donate"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:50
+#: node_modules/react-components/containers/payments/subscription/CouponForm.js:27
+#: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:26
+msgctxt "Action"
+msgid "Apply"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CyclePromotion.js:16
+msgctxt "Action"
+msgid "Switch now"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:83
+msgctxt "Action"
+msgid "Add gift code"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:134
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:231
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:133
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:206
+msgctxt "Action"
+msgid "Upgrade"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:242
+msgctxt "Action"
+msgid "Pay yearly"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:116
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:258
+msgctxt "Action"
+msgid "Remove coupon"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/Thanks.js:23
+msgctxt "Action"
+msgid "Got it"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:230
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:254
+#.  Insert it before the last one
+msgctxt "Action"
+msgid "Previous"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:145
+msgctxt "Action"
+msgid "Add coupon"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Bitcoin.js:52
+#: node_modules/react-components/containers/payments/PayPal.js:69
+msgctxt "Action"
+msgid "Try again"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/BillingSection.js:72
+#: node_modules/react-components/containers/payments/BillingSection.js:80
+#: node_modules/react-components/containers/payments/BillingSection.js:268
+msgctxt "Action"
+msgid "Add credits"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/BillingSection.js:79
+#: node_modules/react-components/containers/payments/BillingSection.js:260
+msgctxt "Action"
+msgid "Use gift code"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:90
+msgctxt "Action"
+msgid "Check out with PayPal"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:205
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:208
+msgctxt "Action"
+msgid "Download all configurations"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:54
+msgctxt "Action"
+msgid "Edit credentials"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:62
+msgctxt "Action"
+msgid "Hide"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:62
+msgctxt "Action"
+msgid "Show"
+msgstr ""
+
+#: src/app/components/layout/PublicHeader.js:9
+msgctxt "Label"
+msgid "Back to:"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:34
+msgctxt "Label"
+msgid "Verification method"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:45
+msgctxt "Label"
+msgid "6-digit code"
+msgstr ""
+
+#: node_modules/react-components/containers/login/PasswordForm.js:10
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:70
+msgctxt "Label"
+msgid "Username"
+msgstr ""
+
+#: node_modules/react-components/containers/login/PasswordForm.js:28
+#: node_modules/react-components/containers/login/UnlockModal.js:41
+#: node_modules/react-components/containers/password/PasswordTotpInputs.js:10
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:92
+msgctxt "Label"
+msgid "Password"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:125
+#: node_modules/react-components/containers/notification/EmailSection.js:66
+#: node_modules/react-components/containers/support/BugModal.js:147
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:123
+msgctxt "Label"
+msgid "Email address"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:10
+msgctxt "Label"
+msgid "1 month"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:11
+msgctxt "Label"
+msgid "Total price"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:14
+msgctxt "Label"
+msgid "12 months"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:15
+msgctxt "Label"
+msgid "Annual discount (20%)"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:16
+msgctxt "Label"
+msgid "Total price (annually)"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:19
+msgctxt "Label"
+msgid "24 months"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:20
+msgctxt "Label"
+msgid "Two-year discount (33%)"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:21
+msgctxt "Label"
+msgid "Total price (two-year)"
+msgstr ""
+
 #: node_modules/react-components/components/button/Copy.js:24
 msgctxt "Label"
 msgid "Copied"
@@ -23,68 +663,29 @@ msgctxt "Label"
 msgid "Hide password"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:26
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:46
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:55
+#: node_modules/react-components/containers/payments/CreditsModal.js:79
+#: node_modules/react-components/containers/payments/DonateModal.js:46
 msgctxt "Label"
-msgid "OpenVPN / IKEv2 username"
+msgid "Amount"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:37
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:58
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:63
+#: node_modules/react-components/containers/payments/BillingSection.js:254
+#: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:73
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:197
 msgctxt "Label"
-msgid "OpenVPN / IKEv2 password"
+msgid "Amount due"
 msgstr ""
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:349
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:156
-#: node_modules/react-components/containers/login/TOTPForm.js:9
-#: node_modules/react-components/containers/password/PasswordTotpInputs.js:26
+#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:46
 msgctxt "Label"
-msgid "Two-factor code"
-msgstr ""
-
-#: node_modules/react-components/containers/login/UnlockModal.js:34
-#: node_modules/react-components/containers/password/AskAuthModal.js:18
-msgctxt "Label"
-msgid "Cancel"
-msgstr ""
-
-#: node_modules/react-components/containers/login/UnlockModal.js:35
-#: node_modules/react-components/containers/password/AskAuthModal.js:19
-msgctxt "Label"
-msgid "Submit"
-msgstr ""
-
-#: node_modules/react-components/containers/login/PasswordForm.js:28
-#: node_modules/react-components/containers/login/UnlockModal.js:41
-#: node_modules/react-components/containers/password/PasswordTotpInputs.js:10
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:92
-msgctxt "Label"
-msgid "Password"
-msgstr ""
-
-#: node_modules/react-components/containers/login/PasswordForm.js:10
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:70
-msgctxt "Label"
-msgid "Username"
-msgstr ""
-
-#: node_modules/react-components/containers/account/PasswordsSection.js:86
-#: node_modules/react-components/containers/login/UnlockForm.js:9
-msgctxt "Label"
-msgid "Mailbox password"
+msgid "Customize invoices"
 msgstr ""
 
 #: node_modules/react-components/containers/support/BugModal.js:135
 msgctxt "Label"
 msgid "Proton username"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailSection.js:66
-#: node_modules/react-components/containers/support/BugModal.js:147
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:123
-msgctxt "Label"
-msgid "Email address"
 msgstr ""
 
 #: node_modules/react-components/containers/support/BugModal.js:159
@@ -127,9 +728,45 @@ msgctxt "Label"
 msgid "Browser version"
 msgstr ""
 
-#: node_modules/react-components/containers/api/HumanVerificationModal.js:22
+#: node_modules/react-components/containers/notification/EmailSection.js:70
 msgctxt "Label"
-msgid "Captcha"
+msgid "Allow password reset"
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailSection.js:83
+msgctxt "Label"
+msgid "Daily email notifications"
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailModal.js:75
+msgctxt "Label"
+msgid "Email"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:349
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:155
+#: node_modules/react-components/containers/login/TOTPForm.js:9
+#: node_modules/react-components/containers/password/PasswordTotpInputs.js:26
+msgctxt "Label"
+msgid "Two-factor code"
+msgstr ""
+
+#: node_modules/react-components/containers/account/PasswordsSection.js:86
+#: node_modules/react-components/containers/login/UnlockForm.js:9
+msgctxt "Label"
+msgid "Mailbox password"
+msgstr ""
+
+#: node_modules/react-components/containers/login/UnlockModal.js:34
+#: node_modules/react-components/containers/password/AskAuthModal.js:18
+msgctxt "Label"
+msgid "Cancel"
+msgstr ""
+
+#: node_modules/react-components/containers/login/UnlockModal.js:35
+#: node_modules/react-components/containers/password/AskAuthModal.js:19
+msgctxt "Label"
+msgid "Submit"
 msgstr ""
 
 #: node_modules/react-components/containers/account/UsernameSection.js:18
@@ -140,6 +777,21 @@ msgstr ""
 #: node_modules/react-components/containers/account/UsernameSection.js:28
 msgctxt "Label"
 msgid "ProtonMail address"
+msgstr ""
+
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:149
+msgctxt "Label"
+msgid "Key"
+msgstr ""
+
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:155
+msgctxt "Label"
+msgid "Interval"
+msgstr ""
+
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:161
+msgctxt "Label"
+msgid "Digits"
 msgstr ""
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:105
@@ -191,39 +843,19 @@ msgctxt "Label"
 msgid "Confirm password"
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:113
+#: node_modules/react-components/containers/account/TwoFactorSection.js:24
+msgctxt "Label"
+msgid "Two-factor authentication"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:111
 msgctxt "Label"
 msgid "Feedback"
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:127
-msgctxt "Label"
-msgid "Email address (optional)"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:141
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:140
 msgctxt "Label"
 msgid "Login password"
-msgstr ""
-
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:149
-msgctxt "Label"
-msgid "Key"
-msgstr ""
-
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:155
-msgctxt "Label"
-msgid "Interval"
-msgstr ""
-
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:161
-msgctxt "Label"
-msgid "Digits"
-msgstr ""
-
-#: node_modules/react-components/containers/account/TwoFactorSection.js:24
-msgctxt "Label"
-msgid "Two-factor authentication"
 msgstr ""
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:67
@@ -231,37 +863,29 @@ msgctxt "Label"
 msgid "Two password mode"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:46
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodDetails.js:17
 msgctxt "Label"
-msgid "Customize invoices"
+msgid "Cardholder name"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:55
-#: node_modules/react-components/containers/payments/CreditsModal.js:79
-#: node_modules/react-components/containers/payments/DonateModal.js:46
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:71
 msgctxt "Label"
-msgid "Amount"
+msgid "Pay with cash"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:63
-#: node_modules/react-components/containers/payments/BillingSection.js:254
-#: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:73
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:215
+#: node_modules/react-components/containers/payments/BitcoinDetails.js:10
 msgctxt "Label"
-msgid "Amount due"
+msgid "Amount BTC"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/BillingSection.js:221
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:102
+#: node_modules/react-components/containers/payments/BitcoinDetails.js:16
 msgctxt "Label"
-msgid "Sub-total"
+msgid "BTC address"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/BillingSection.js:231
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:112
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:249
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:55
 msgctxt "Label"
-msgid "Coupon"
+msgid "Enter gift code"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/BillingSection.js:243
@@ -319,14 +943,17 @@ msgctxt "Label"
 msgid "Billing cycle"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/BitcoinDetails.js:10
+#: node_modules/react-components/containers/payments/BillingSection.js:231
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:112
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:249
 msgctxt "Label"
-msgid "Amount BTC"
+msgid "Coupon"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/BitcoinDetails.js:16
+#: node_modules/react-components/containers/payments/BillingSection.js:221
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:102
 msgctxt "Label"
-msgid "BTC address"
+msgid "Sub-total"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/BillingSection.js:113
@@ -374,698 +1001,358 @@ msgctxt "Label"
 msgid "Payment method"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:55
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:38
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:46
 msgctxt "Label"
-msgid "Enter gift code"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailSection.js:70
-msgctxt "Label"
-msgid "Allow password reset"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailSection.js:83
-msgctxt "Label"
-msgid "Daily email notifications"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailModal.js:75
-msgctxt "Label"
-msgid "Email"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodDetails.js:17
-msgctxt "Label"
-msgid "Cardholder name"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:71
-msgctxt "Label"
-msgid "Pay with cash"
-msgstr ""
-
-#: src/app/components/layout/PublicHeader.js:9
-msgctxt "Label"
-msgid "Back to:"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:10
-msgctxt "Label"
-msgid "1 month"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:11
-msgctxt "Label"
-msgid "Total price"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:14
-msgctxt "Label"
-msgid "12 months"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:15
-msgctxt "Label"
-msgid "Annual discount (20%)"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:16
-msgctxt "Label"
-msgid "Total price (annually)"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:19
-msgctxt "Label"
-msgid "24 months"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:20
-msgctxt "Label"
-msgid "Two-year discount (33%)"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:21
-msgctxt "Label"
-msgid "Total price (two-year)"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:45
-msgctxt "Label"
-msgid "6-digit code"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:34
-msgctxt "Label"
-msgid "Verification method"
-msgstr ""
-
-#: node_modules/react-components/components/pagination/Pagination.js:50
-msgctxt "Title"
-msgid "Open pagination"
-msgstr ""
-
-#: node_modules/react-components/components/dropdown/DropdownActions.js:47
-msgctxt "Title"
-msgid "Open actions dropdown"
-msgstr ""
-
-#: node_modules/react-components/components/modal/PreviewPDFModal.js:6
-msgctxt "Title"
-msgid "Preview"
-msgstr ""
-
-#: node_modules/react-components/components/sidebar/SubSidebar.js:18
-msgctxt "Title"
-msgid "Navigation"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:98
-#: src/app/containers/DownloadsContainer.js:18
-msgctxt "Title"
-msgid "OpenVPN configuration files"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:106
-msgctxt "Title"
-msgid "1. Select platform"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:123
-msgctxt "Title"
-msgid "2. Select protocol"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:136
-msgctxt "Title"
-msgid "3. Select connection and download"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:155
-msgctxt "Title"
-msgid "Secure core configs"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:177
-msgctxt "Title"
-msgid "Country configs"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:198
-msgctxt "Title"
-msgid "Server configs"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:9
-#: src/app/containers/DownloadsContainer.js:14
-msgctxt "Title"
-msgid "ProtonVPN clients"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:19
-#: src/app/containers/AccountContainer.js:34
-msgctxt "Title"
 msgid "OpenVPN / IKEv2 username"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:22
-msgctxt "Title"
-msgid "Edit OpenVPN / IKEv2 credentials"
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:49
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:58
+msgctxt "Label"
+msgid "OpenVPN / IKEv2 password"
 msgstr ""
 
-#: node_modules/react-components/containers/login/AbuseModal.js:6
-msgctxt "Title"
-msgid "Account disabled"
+#: node_modules/react-components/containers/api/HumanVerificationModal.js:22
+msgctxt "Label"
+msgid "Captcha"
 msgstr ""
 
-#: node_modules/react-components/containers/login/UnlockModal.js:33
-#: node_modules/react-components/containers/password/AskAuthModal.js:17
-msgctxt "Title"
-msgid "Sign in again to continue"
+#: src/app/components/layout/SignInLayout.js:38
+msgctxt "Footer"
+msgid "2019 ProtonVPN.com - Made globally, hosted in Switzerland."
 msgstr ""
 
-#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:29
-msgctxt "Title"
-msgid "Confirm reset password"
+#: src/app/components/sections/redeem/RedeemCouponForm.js:35
+msgctxt "Placeholder"
+msgid "Enter coupon code"
 msgstr ""
 
-#: node_modules/react-components/containers/support/BugModal.js:127
-msgctxt "Title"
-msgid "Report bug"
+#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:26
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationEmailInput.js:18
+msgctxt "Placeholder"
+msgid "Email"
 msgstr ""
 
-#: node_modules/react-components/containers/api/HumanVerificationModal.js:9
-msgctxt "Title"
-msgid "Human verification"
-msgstr ""
-
-#: node_modules/react-components/containers/account/UsernameSection.js:16
-#: src/app/containers/AccountContainer.js:22
-msgctxt "Title"
+#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:54
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:85
+msgctxt "Placeholder"
 msgid "Username"
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:99
-#: node_modules/react-components/containers/account/DeleteSection.js:41
-msgctxt "Title"
-msgid "Delete account"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:103
-#: node_modules/react-components/containers/account/PasswordsSection.js:38
-msgctxt "Title"
-msgid "Change login password"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:131
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:165
-msgctxt "Title"
-msgid "Switch to two-password mode"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:256
-msgctxt "Title"
-msgid "Switch to one-password mode"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:274
-#: node_modules/react-components/containers/account/PasswordsSection.js:38
-msgctxt "Title"
-msgid "Change password"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:286
-msgctxt "Title"
-msgid "Change mailbox password"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:82
-msgctxt "Title"
-msgid "Disable two-factor authentication"
-msgstr ""
-
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:267
-msgctxt "Title"
-msgid "Set up two-factor authentication"
-msgstr ""
-
-#: node_modules/react-components/containers/account/TwoFactorSection.js:21
-#: src/app/containers/AccountContainer.js:30
-msgctxt "Title"
-msgid "Two-factor authentication"
-msgstr ""
-
-#: node_modules/react-components/containers/account/NewsSection.js:17
-#: node_modules/react-components/containers/account/NewsSection.js:25
-#: src/app/containers/AccountContainer.js:42
-msgctxt "Title"
-msgid "Email subscriptions"
-msgstr ""
-
-#: node_modules/react-components/containers/account/PasswordsSection.js:23
-#: src/app/containers/AccountContainer.js:26
-msgctxt "Title"
-msgid "Passwords"
-msgstr ""
-
-#: node_modules/react-components/containers/account/PasswordsSection.js:37
-msgctxt "Title"
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:340
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:370
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:147
+#: node_modules/react-components/containers/login/PasswordForm.js:37
+#: node_modules/react-components/containers/password/PasswordTotpInputs.js:13
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:106
+msgctxt "Placeholder"
 msgid "Password"
 msgstr ""
 
-#: node_modules/react-components/containers/account/PasswordsSection.js:37
-msgctxt "Title"
-msgid "Login password"
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:116
+msgctxt "Placeholder"
+msgid "Confirm password"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:59
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:69
-#: src/app/containers/PaymentsContainer.js:22
-msgctxt "Title"
-msgid "Invoices"
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:136
+msgctxt "Placeholder"
+msgid "user@domain.com"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:116
-msgctxt "Title"
-msgid "Amount"
+#: node_modules/react-components/containers/support/BugModal.js:141
+msgctxt "Placeholder"
+msgid "Proton username"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:117
-msgctxt "Title"
-msgid "Type"
+#: node_modules/react-components/containers/support/BugModal.js:153
+msgctxt "Placeholder"
+msgid "A way to contact you"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:118
-msgctxt "Title"
-msgid "Status"
+#: node_modules/react-components/containers/support/BugModal.js:177
+msgctxt "Placeholder"
+msgid "Please describe the problem and include any error messages"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:119
-msgctxt "Title"
-msgid "Date"
+#: node_modules/react-components/containers/support/BugModal.js:206
+msgctxt "Placeholder"
+msgid "OS name"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:120
-msgctxt "Title"
-msgid "Action"
+#: node_modules/react-components/containers/support/BugModal.js:217
+msgctxt "Placeholder"
+msgid "OS version"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:40
-msgctxt "Title"
-msgid "Add invoice details"
+#: node_modules/react-components/containers/support/BugModal.js:228
+msgctxt "Placeholder"
+msgid "Browser name"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceActions.js:31
-msgctxt "Title"
-msgid "Preview invoice"
+#: node_modules/react-components/containers/support/BugModal.js:239
+msgctxt "Placeholder"
+msgid "Browser version"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:49
-msgctxt "Title"
-msgid "Pay invoice"
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:356
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:162
+#: node_modules/react-components/containers/login/TOTPForm.js:20
+#: node_modules/react-components/containers/password/PasswordTotpInputs.js:29
+msgctxt "Placeholder"
+msgid "Two-factor code"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:98
-msgctxt "Title"
-msgid "Subscription details"
+#: node_modules/react-components/containers/login/UnlockForm.js:20
+msgctxt "Placeholder"
+msgid "Mailbox password"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:148
-msgctxt "Title"
-msgid "Order summary"
+#: node_modules/react-components/containers/login/PasswordForm.js:22
+msgctxt "Placeholder"
+msgid "Username or email"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:181
-msgctxt "Title"
-msgid "VPN protection"
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:384
+msgctxt "Placeholder"
+msgid "Confirm"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:194
-msgctxt "Title"
-msgid "Customization"
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:118
+msgctxt "Placeholder"
+msgid "Feedback"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:24
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:208
-#.  Insert it before the last one
-msgctxt "Title"
-msgid "Payment details"
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:133
+msgctxt "Placeholder"
+msgid "Email address"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/Thanks.js:17
-msgctxt "Title"
-msgid "Thank you!"
+#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:66
+msgctxt "Placeholder"
+msgid "Recovery email"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/CustomMailSection.js:26
-msgctxt "Title"
-msgid "ProtonMail total"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:54
-#: src/app/containers/DashboardContainer.js:23
-msgctxt "Title"
-msgid "Subscription"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/DonateModal.js:40
-msgctxt "Title"
-msgid "Make a donation"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:13
-msgctxt "Title"
-msgid "Payment verification in progress"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:13
-msgctxt "Title"
-msgid "Payment verification"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:40
-msgctxt "Title"
-msgid "New tab"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/BillingSection.js:62
-#: node_modules/react-components/containers/payments/BillingSection.js:88
-#: node_modules/react-components/containers/payments/BillingSection.js:97
-#: node_modules/react-components/containers/payments/BillingSection.js:108
-msgctxt "Title"
-msgid "Billing details"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CreditsModal.js:66
-msgctxt "Title"
-msgid "Add credits"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/DowngradeModal.js:7
-msgctxt "Title"
-msgid "Confirm downgrade"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Card.js:71
-msgctxt "Title"
-msgid "Security code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Card.js:82
-msgctxt "Title"
-msgid "ZIP / postal code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:48
-msgctxt "Title"
-msgid "Gift code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/EditCardModal.js:18
-msgctxt "Title"
-msgid "Edit credit/debit card"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/EditCardModal.js:18
-msgctxt "Title"
-msgid "Add credit/debit card"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailSection.js:62
-#: src/app/containers/AccountContainer.js:38
-msgctxt "Title"
-msgid "Recovery & notification"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailModal.js:70
-msgctxt "Title"
-msgid "Update recovery/notification email"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:33
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:49
-#: src/app/containers/PaymentsContainer.js:18
-msgctxt "Title"
-msgid "Payment methods"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansTable.js:42
-msgctxt "Title"
-msgid "My subscription"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansSection.js:109
-#: src/app/components/sections/plans/PlansSection.js:117
-#: src/app/containers/DashboardContainer.js:19
-msgctxt "Title"
-msgid "Plans"
-msgstr ""
-
-#: src/app/containers/ForgotUsernameContainer.js:25
-#: src/app/containers/LoginContainer.js:16
-#: src/app/containers/ResetPasswordContainer.js:10
-msgctxt "Title"
-msgid "Log in"
-msgstr ""
-
-#: src/app/containers/LoginContainer.js:17
-msgctxt "Title"
-msgid "User log in"
-msgstr ""
-
-#: src/app/containers/RedeemContainer.js:24
-msgctxt "Title"
-msgid "Redeem your coupon and start protecting your online privacy"
-msgstr ""
-
-#: src/app/containers/RedeemContainer.js:43
-msgctxt "Title"
-msgid "Swiss Based"
-msgstr ""
-
-#: src/app/containers/RedeemContainer.js:50
-msgctxt "Title"
-msgid "Secure Core Servers"
-msgstr ""
-
-#: src/app/containers/RedeemContainer.js:57
-msgctxt "Title"
-msgid "No Logs"
-msgstr ""
-
-#: src/app/containers/RedeemContainer.js:64
-msgctxt "Title"
-msgid "Kill Switch"
-msgstr ""
-
-#: src/app/containers/RedeemContainer.js:70
-msgctxt "Title"
-msgid "DNS leak prevention"
-msgstr ""
-
-#: src/app/containers/RedeemContainer.js:77
-msgctxt "Title"
-msgid "Strong encryption"
-msgstr ""
-
-#: src/app/containers/DownloadsContainer.js:9
-msgctxt "Title"
-msgid "Downloads"
-msgstr ""
-
-#: src/app/containers/DashboardContainer.js:13
-msgctxt "Title"
-msgid "Dashboard"
-msgstr ""
-
-#: src/app/containers/DashboardContainer.js:28
-msgctxt "Title"
-msgid "Billing"
-msgstr ""
-
-#: src/app/containers/PreInviteContainer.js:44
-msgctxt "Title"
-msgid "Checking invitation parameters"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/AccountStep.js:24
-msgctxt "Title"
-msgid "Create an account"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:11
-msgctxt "Title"
-msgid "ProtonVPN"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SignupContainer.js:28
-msgctxt "Title"
-msgid "Sign up - ProtonVPN"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SignupContainer.js:159
-msgctxt "Title"
-msgid "Sign up"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanComparisonModal.js:18
-msgctxt "Title"
-msgid "ProtonVPN plan comparison"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:34
-msgctxt "Title"
-msgid "Select a plan"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:15
-msgctxt "Title"
-msgid "Provide payment details"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PlanDetails.js:13
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:25
 #, javascript-format
-msgctxt "Title"
-msgid "${ title } plan details"
+msgctxt "Placeholder"
+msgid "Enter the word '${ WORD }' here"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:32
-msgctxt "Title"
-msgid "Upgrade and get more"
+#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:27
+msgctxt "Placeholder"
+msgid "Choose a new password"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:33
-msgctxt "Title"
-msgid "Summary"
+#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:24
+msgctxt "Placeholder"
+msgid "Reset code"
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:14
-msgctxt "Title"
-msgid "Resend code"
+#: node_modules/react-components/containers/payments/subscription/CouponForm.js:20
+msgctxt "Placeholder"
+msgid "Coupon"
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:36
-msgctxt "Title"
-msgid "Enter verification code"
+#: node_modules/react-components/containers/payments/PaymentSelector.js:30
+msgctxt "Placeholder"
+msgid "Other"
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:30
-msgctxt "Title"
-msgid "Select an account verification method"
+#: node_modules/react-components/containers/payments/Card.js:30
+msgctxt "Placeholder"
+msgid "Full name"
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:22
-msgctxt "Title"
-msgid "Are you human?"
+#: node_modules/react-components/containers/payments/Card.js:42
+msgctxt "Placeholder"
+msgid "Card number"
 msgstr ""
 
-#: src/app/containers/SignupContainer/LoginPanel.js:8
-msgctxt "Title"
-msgid "Already have a Proton account?"
+#: node_modules/react-components/containers/payments/Card.js:68
+msgctxt "Placeholder"
+msgid "CVV"
 msgstr ""
 
-#: src/app/containers/ForgotUsernameContainer.js:26
-msgctxt "Title"
-msgid "Forgot your username?"
+#: node_modules/react-components/containers/payments/Card.js:81
+msgctxt "Placeholder"
+msgid "ZIP"
 msgstr ""
 
-#: src/app/containers/ResetPasswordContainer.js:11
-msgctxt "Title"
-msgid "Reset password"
+#: node_modules/react-components/containers/payments/Card.js:81
+msgctxt "Placeholder"
+msgid "Postal code"
 msgstr ""
 
-#: src/app/containers/AccountContainer.js:17
-msgctxt "Title"
-msgid "Account"
+#: src/app/components/sections/plans/PlanPrice.js:51
+#, javascript-format
+msgctxt "Info"
+msgid "billed as ${ billedPrice }"
 msgstr ""
 
-#: src/app/containers/AccountContainer.js:46
-msgctxt "Title"
-msgid "Delete"
+#: src/app/components/sections/plans/PlansSection.js:46
+msgctxt "Info"
+msgid "You already have a free account"
 msgstr ""
 
-#: src/app/containers/PaymentsContainer.js:12
-msgctxt "Title"
-msgid "Payments"
+#: src/app/components/sections/plans/PlansSection.js:55
+msgctxt "Info"
+msgid ""
+"This will downgrade your VPN to a free subscription. ProtonVPN is free "
+"software that is possible thanks to donations and paid accounts. Please "
+"consider making a donation so we can continue to enable secure internet "
+"anywhere for everyone."
+msgstr ""
+
+#: src/app/components/sections/plans/PlansSection.js:137
+msgctxt "Info"
+msgid "Get 20% bundle discount when you purchase ProtonMail and ProtonVPN together."
+msgstr ""
+
+#: src/app/components/sections/plans/PlansSection.js:140
+#, javascript-format
+msgctxt "Info"
+msgid "You are currently subscribed to ${ names }."
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:38
+#, javascript-format
+msgctxt "Info"
+msgid "Enter the verification code that was sent to ${ destinationText }."
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:40
+msgctxt "Info"
+msgid "If you don't find the email in your inbox, please check your spam folder."
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:19
+#, javascript-format
+msgctxt "Info"
+msgid ""
+"Click below to resend the code to ${ destinationText }. If ${ "
+"destinationType } is incorrect, please click \"${ editI18n }\"."
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:25
+msgctxt "Info"
+msgid ""
+"To prevent misuse, please verify you are human. Please do not close this "
+"tab until you have verified your account."
+msgstr ""
+
+#: src/app/containers/SignupContainer/LoginPanel.js:9
+msgctxt "Info"
+msgid ""
+"If you are a ProtonMail user you can use your Proton account to log in to "
+"ProtonVPN."
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:70
+msgctxt "Info"
+msgid "You are saving 20% with an annual plan"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:74
+msgctxt "Info"
+msgid "You are saving 33% with an two-year plan"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:82
+#, javascript-format
+msgctxt "Info"
+msgid "All plans support: ${ supportedOS }"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:84
+msgctxt "Info"
+msgid "30-days money back guarantee"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:60
+msgctxt "Info"
+msgid "This plan is temporarily disabled"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:140
+#, javascript-format
+msgctxt "Info"
+msgid ""
+"By clicking Create account you agree to abide by our ${ termsOfServiceLink "
+"} and ${ privacyPolicyLink }."
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:21
+msgctxt "Info"
+msgid "You already have a Proton account."
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:23
+#, javascript-format
+msgctxt "Info"
+msgid ""
+"Your existing Proton account can be used to access all Proton services. "
+"Please login with ${ email }"
+msgstr ""
+
+#: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:11
+msgctxt "Info"
+msgid ""
+"Your account has been successfully created. Please press the \"Close\" "
+"button to be taken back to the app."
 msgstr ""
 
 #: node_modules/react-components/components/loader/Loader.js:24
-#: src/app/containers/SignupContainer/SignupContainer.js:165
+#: src/app/containers/SignupContainer/SignupContainer.js:171
 msgctxt "Info"
 msgid "Loading"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/LoadIndicator.js:8
+#: src/app/containers/SignupContainer/SignupContainer.js:171
 msgctxt "Info"
-msgid "Server load"
+msgid "Creating your account"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:38
+#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:18
 msgctxt "Info"
-msgid "Server is currently down"
+msgid "Your payment details are protected with TLS encryption and Swiss laws"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:48
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:83
 msgctxt "Info"
-msgid "P2P"
+msgid "You can customize and download your invoices for accounting purposes."
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:54
+#: node_modules/react-components/containers/support/AttachScreenshot.js:45
 msgctxt "Info"
-msgid "Tor"
+msgid "Screenshot(s) attached"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:101
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:204
+#: node_modules/react-components/containers/support/BugModal.js:130
+#, javascript-format
 msgctxt "Info"
-msgid "Plan upgrade required"
+msgid "Refreshing the page or ${ link } will automatically resolve most issues."
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:100
+#: node_modules/react-components/containers/support/BugModal.js:245
+#, javascript-format
+msgctxt "Info"
+msgid "Contact us at ${ criticalEmail } for critical security issues."
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailSection.js:63
 msgctxt "Info"
 msgid ""
-"Use this section to generate config files for third party VPN clients\n"
-"or when setting up a connection on a router. If you use a native ProtonVPN\n"
-"client to connect, you do not need to manually handle these configuration "
-"files."
+"The selected method can be used to recover an account in the event you "
+"forget your password and to be notified about missed emails."
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:157
+#: node_modules/react-components/containers/notification/EmailSection.js:86
 msgctxt "Info"
 msgid ""
-"Secure Core configurations add additional protection against VPN endpoint "
-"compromise."
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:162
-msgctxt "Info"
-msgid "ProtonVPN Plus or Visionary required for Secure Core feature."
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:179
-msgctxt "Info"
-msgid ""
-"Country Connect configuration files ensure a faster connection to the "
-"selected country on average."
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:183
-msgctxt "Info"
-msgid "ProtonVPN Basic, Plus or Visionary required for Country level connection."
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:199
-msgctxt "Info"
-msgid "Connect to a single server in the country of your choice."
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:21
-msgctxt "Info"
-msgid ""
-"Use the following credentials when connecting to ProtonVPN servers without "
-"application. Examples use cases include: Tunnelblick on MacOS, OpenVPN on "
-"GNU/Linux.\n"
-"Do not use the OpenVPN / IKEv2 credentials in ProtonVPN applications or on "
-"the ProtonVPN dashboard."
+"When notifications are enabled, we'll send an alert to your "
+"recovery/notification address if you have new messages in your ProtonMail "
+"account."
 msgstr ""
 
 #: node_modules/react-components/containers/login/AbuseModal.js:10
@@ -1090,204 +1377,9 @@ msgctxt "Info"
 msgid "You can find more information and contact us ${ contactLink }."
 msgstr ""
 
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:20
-#, javascript-format
-msgctxt "Info"
-msgid ""
-"Resetting your password will reset your encryption keys for all Proton "
-"related services (Mail and VPN). You will be unable to read your existing "
-"messages. If you know your ProtonMail credentials, do NOT reset. You can "
-"log in with them ${ loginLink }."
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:22
-msgctxt "Info"
-msgid "ALL YOUR DATA WILL BE LOST!"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:33
-msgctxt "Info"
-msgid ""
-"If you remember your old password later, you can recover your existing "
-"messages."
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:14
-msgctxt "Info"
-msgid ""
-"We've sent a reset code to your recovery email, valid for one hour or until "
-"you request a new code. Enter it below to continue."
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:27
-msgctxt "Info"
-msgid ""
-"IMPORTANT: Do not close or navigate away from this page. You will need to "
-"enter the reset code into the field below once you receive it."
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ResetPasswordForm.js:74
-msgctxt "Info"
-msgid "This can take a few seconds or a few minutes depending on your device."
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:22
-msgctxt "Info"
-msgid "Keep this password safe, it cannot be recovered."
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:309
-#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:41
-msgctxt "Info"
-msgid ""
-"Do NOT forget this password. If you forget it, you will not be able to "
-"login or decrypt your messages."
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:17
-msgctxt "Info"
-msgid ""
-"Enter your recovery email address, and we'll send you your username(s). "
-"(This is usually the email address you provided during signup.)"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:30
-msgctxt "Info"
-msgid ""
-"Resetting your password means your old password and the places it is saved "
-"will no longer work. Are you sure you want to reset your password?"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:46
-msgctxt "Info"
-msgid "We will send a reset code to your recovery email to reset your password."
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:130
-#, javascript-format
-msgctxt "Info"
-msgid "Refreshing the page or ${ link } will automatically resolve most issues."
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:245
-#, javascript-format
-msgctxt "Info"
-msgid "Contact us at ${ criticalEmail } for critical security issues."
-msgstr ""
-
-#: node_modules/react-components/containers/support/AttachScreenshot.js:45
-msgctxt "Info"
-msgid "Screenshot(s) attached"
-msgstr ""
-
-#: node_modules/react-components/containers/api/HumanVerificationModal.js:19
-msgctxt "Info"
-msgid "For security reasons, please verify that you are not a robot."
-msgstr ""
-
-#: node_modules/react-components/containers/app/LoaderPage.js:17
-#, javascript-format
-msgctxt "Info"
-msgid "Loading ${ appName }"
-msgstr ""
-
-#: node_modules/react-components/containers/account/MozillaInfoPanel.js:9
-msgctxt "Info"
-msgid "Your subscription is managed by Mozilla. Please contact Mozilla support."
-msgstr ""
-
 #: node_modules/react-components/containers/account/UsernameSection.js:35
 msgctxt "Info"
 msgid "Log in to ProtonMail to activate your address"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteSection.js:57
-msgctxt "Info"
-msgid ""
-"Deleting your account will permanently delete your emails, and you will "
-"lose your email address."
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteSection.js:59
-msgctxt "Info"
-msgid ""
-"Deleting your account will permanently delete all data associated with it "
-"and it cannot be recovered. You will no longer be able to use the same "
-"username should you decide to create a new account."
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:134
-msgctxt "Info"
-msgid ""
-"Two-password mode uses separate passwords for login and mailbox decryption. "
-"This provides a minor security benefit in some situations, however we "
-"recommend one-password mode for most users. To switch to two password mode, "
-"first set a login password and then set a mailbox password."
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:264
-msgctxt "Info"
-msgid ""
-"ProtonMail can also be used with a single password which replaces both the "
-"login and mailbox password. To switch to single password mode, enter the "
-"single password you would like to use and click Save."
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:313
-#, javascript-format
-msgctxt "Info"
-msgid ""
-"Save your password somewhere safe. Click on the ${ eye } icon to confirm "
-"you that have typed your password correctly."
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:317
-msgctxt "Info"
-msgid ""
-"We recommend adding a recovery email address first. Otherwise, you cannot "
-"recover your account if something goes wrong."
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:104
-msgctxt "Info"
-msgid "Warning: This also deletes all connected services"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:105
-msgctxt "Info"
-msgid "Example: ProtonMail, ProtonContact, ProtonVPN, ProtonDrive, ProtonCalendar"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:108
-msgctxt "Info"
-msgid "Warning: deletion is permanent"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:109
-msgctxt "Info"
-msgid ""
-"If you wish to delete this account in order to combine it with another one, "
-"do NOT delete it."
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:137
-msgctxt "Info"
-msgid "Please provide an email address in case we need to contact you."
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:151
-msgctxt "Info"
-msgid "Enter your login password to confirm your identity."
-msgstr ""
-
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:28
-msgctxt "Info"
-msgid "Emailing preference updated"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:51
-msgctxt "Info"
-msgid "Two-factor authentication disabled"
 msgstr ""
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:84
@@ -1357,6 +1449,93 @@ msgid ""
 "used once."
 msgstr ""
 
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:134
+msgctxt "Info"
+msgid ""
+"Two-password mode uses separate passwords for login and mailbox decryption. "
+"This provides a minor security benefit in some situations, however we "
+"recommend one-password mode for most users. To switch to two password mode, "
+"first set a login password and then set a mailbox password."
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:264
+msgctxt "Info"
+msgid ""
+"ProtonMail can also be used with a single password which replaces both the "
+"login and mailbox password. To switch to single password mode, enter the "
+"single password you would like to use and click Save."
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:309
+#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:41
+msgctxt "Info"
+msgid ""
+"Do NOT forget this password. If you forget it, you will not be able to "
+"login or decrypt your messages."
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:313
+#, javascript-format
+msgctxt "Info"
+msgid ""
+"Save your password somewhere safe. Click on the ${ eye } icon to confirm "
+"you that have typed your password correctly."
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:317
+msgctxt "Info"
+msgid ""
+"We recommend adding a recovery email address first. Otherwise, you cannot "
+"recover your account if something goes wrong."
+msgstr ""
+
+#: node_modules/react-components/containers/account/MozillaInfoPanel.js:9
+msgctxt "Info"
+msgid "Your subscription is managed by Mozilla. Please contact Mozilla support."
+msgstr ""
+
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:28
+msgctxt "Info"
+msgid "Emailing preference updated"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:51
+msgctxt "Info"
+msgid "Two-factor authentication disabled"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:102
+msgctxt "Info"
+msgid "Warning: This also deletes all connected services"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:103
+msgctxt "Info"
+msgid "Example: ProtonMail, ProtonContact, ProtonVPN, ProtonDrive, ProtonCalendar"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:106
+msgctxt "Info"
+msgid "Warning: deletion is permanent"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:107
+msgctxt "Info"
+msgid ""
+"If you wish to delete this account in order to combine it with another one, "
+"do NOT delete it."
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:136
+msgctxt "Info"
+msgid "Please provide an email address in case we need to contact you."
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:150
+msgctxt "Info"
+msgid "Enter your login password to confirm your identity."
+msgstr ""
+
 #: node_modules/react-components/containers/account/NewsSection.js:26
 msgctxt "Info"
 msgid ""
@@ -1364,30 +1543,162 @@ msgid ""
 "subscribe to our various emails and visit our blog from time to time."
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:83
+#: node_modules/react-components/containers/account/DeleteSection.js:57
 msgctxt "Info"
-msgid "You can customize and download your invoices for accounting purposes."
+msgid ""
+"Deleting your account will permanently delete your emails, and you will "
+"lose your email address."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:40
+#: node_modules/react-components/containers/account/DeleteSection.js:59
+msgctxt "Info"
+msgid ""
+"Deleting your account will permanently delete all data associated with it "
+"and it cannot be recovered. You will no longer be able to use the same "
+"username should you decide to create a new account."
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:12
+msgctxt "Info"
+msgid "You have no saved payment methods."
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:45
+msgctxt "Info"
+msgid "Expired"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:46
+msgctxt "Info"
+msgid "default"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:30
+msgctxt "Info"
+msgid ""
+"Resetting your password means your old password and the places it is saved "
+"will no longer work. Are you sure you want to reset your password?"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:46
+msgctxt "Info"
+msgid "We will send a reset code to your recovery email to reset your password."
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/ResetPasswordForm.js:74
+msgctxt "Info"
+msgid "This can take a few seconds or a few minutes depending on your device."
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:17
+msgctxt "Info"
+msgid ""
+"Enter your recovery email address, and we'll send you your username(s). "
+"(This is usually the email address you provided during signup.)"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:20
 #, javascript-format
 msgctxt "Info"
-msgid "Amount below minimum. (${ amount })"
+msgid ""
+"Resetting your password will reset your encryption keys for all Proton "
+"related services (Mail and VPN). You will be unable to read your existing "
+"messages. If you know your ProtonMail credentials, do NOT reset. You can "
+"log in with them ${ loginLink }."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:64
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:22
 msgctxt "Info"
-msgid ""
-"Bitcoin transactions can take some time to be confirmed (up to 24 hours). "
-"Once confirmed, we will add credits to your account. After transaction "
-"confirmation, you can pay your invoice with the credits."
+msgid "ALL YOUR DATA WILL BE LOST!"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:73
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:33
 msgctxt "Info"
 msgid ""
-"After making your Bitcoin payment, please follow the instructions below to "
-"upgrade."
+"If you remember your old password later, you can recover your existing "
+"messages."
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:22
+msgctxt "Info"
+msgid "Keep this password safe, it cannot be recovered."
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:14
+msgctxt "Info"
+msgid ""
+"We've sent a reset code to your recovery email, valid for one hour or until "
+"you request a new code. Enter it below to continue."
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:27
+msgctxt "Info"
+msgid ""
+"IMPORTANT: Do not close or navigate away from this page. You will need to "
+"enter the reset code into the field below once you receive it."
+msgstr ""
+
+#: node_modules/react-components/containers/app/LoaderPage.js:17
+#, javascript-format
+msgctxt "Info"
+msgid "Loading ${ appName }"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:69
+#: node_modules/react-components/containers/payments/DonateModal.js:44
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:194
+msgctxt "Info"
+msgid ""
+"Your payment details are protected with TLS encryption and Swiss privacy "
+"laws."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:76
+#, javascript-format
+msgctxt "Info"
+msgid ""
+"Top up your account with credits that you can use to subscribe to a new "
+"plan or renew your current plan. You get one credit for every ${ "
+"i18nCurrency } spent."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:84
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:41
+msgctxt "Info"
+msgid "Please verify the payment in the new tab."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:43
+msgctxt "Info"
+msgid ""
+"A new tab will open to confirm the payment, please disable any popup "
+"blockers."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/DowngradeModal.js:8
+msgctxt "Info"
+msgid "Your account will be downgraded in a few minutes."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/DowngradeModal.js:9
+msgctxt "Info"
+msgid ""
+"Additional addresses, custom domains, and users must be removed/disabled "
+"before performing this action. Any connections to premium servers will be "
+"terminated."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:53
+msgctxt "Info"
+msgid "If you purchased or were given a gift code, add it here."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:50
+msgctxt "Info"
+msgid ""
+"By using ProtonVPN to browse the web, your Internet connection is encrypted "
+"to ensure that your navigation is secure. ProtonVPN has servers located in "
+"30+ countries around the world."
 msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/CyclePromotion.js:15
@@ -1403,51 +1714,6 @@ msgstr ""
 #: node_modules/react-components/containers/payments/subscription/CyclePromotion.js:23
 msgctxt "Info"
 msgid "A 33% discount two year billing has been automatically applied."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:50
-msgctxt "Info"
-msgid ""
-"By using ProtonVPN to browse the web, your Internet connection is encrypted "
-"to ensure that your navigation is secure. ProtonVPN has servers located in "
-"30+ countries around the world."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:17
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:18
-msgctxt "Info"
-msgid "no subscription"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CreditsModal.js:69
-#: node_modules/react-components/containers/payments/DonateModal.js:44
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:212
-#.  Insert it before the last one
-msgctxt "Info"
-msgid ""
-"Your payment details are protected with TLS encryption and Swiss privacy "
-"laws."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:243
-#.  Insert it before the last one
-msgctxt "Info"
-msgid "By clicking Upgrade, you agree to abide by Proton's terms and conditions."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/Thanks.js:19
-msgctxt "Info"
-msgid "Thank you for your subscription."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/Thanks.js:20
-msgctxt "Info"
-msgid "Your new features are now available."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/Thanks.js:27
-msgctxt "Info"
-msgid "Thank you"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:12
@@ -1496,24 +1762,52 @@ msgctxt "Info"
 msgid "33% rebate applied to your subscription"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:65
+#: node_modules/react-components/containers/payments/subscription/Thanks.js:19
 msgctxt "Info"
-msgid ""
-"You will need to login to your PayPal account to complete this transaction. "
-"We will open a new tab with PayPal for you. If you use any pop-up blockers, "
-"please disable them to continue."
+msgid "Thank you for your subscription."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:42
+#: node_modules/react-components/containers/payments/subscription/Thanks.js:20
 msgctxt "Info"
-msgid "Please verify the payment in the new tab."
+msgid "Your new features are now available."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:44
+#: node_modules/react-components/containers/payments/subscription/Thanks.js:27
+msgctxt "Info"
+msgid "Thank you"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:225
+#.  Insert it before the last one
+msgctxt "Info"
+msgid "By clicking Upgrade, you agree to abide by Proton's terms and conditions."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:17
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:18
+msgctxt "Info"
+msgid "no subscription"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Bitcoin.js:40
+#, javascript-format
+msgctxt "Info"
+msgid "Amount below minimum. (${ amount })"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Bitcoin.js:64
 msgctxt "Info"
 msgid ""
-"A new tab will open to confirm the payment, please disable any popup "
-"blockers."
+"Bitcoin transactions can take some time to be confirmed (up to 24 hours). "
+"Once confirmed, we will add credits to your account. After transaction "
+"confirmation, you can pay your invoice with the credits."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Bitcoin.js:73
+msgctxt "Info"
+msgid ""
+"After making your Bitcoin payment, please follow the instructions below to "
+"upgrade."
 msgstr ""
 
 #: node_modules/react-components/containers/payments/BillingSection.js:63
@@ -1521,1745 +1815,690 @@ msgctxt "Info"
 msgid "There are no billing details available for your current subscription."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:76
-#, javascript-format
+#: node_modules/react-components/containers/payments/PayPal.js:87
 msgctxt "Info"
 msgid ""
-"Top up your account with credits that you can use to subscribe to a new "
-"plan or renew your current plan. You get one credit for every ${ "
-"i18nCurrency } spent."
+"You will need to login to your PayPal account to complete this transaction. "
+"We will open a new tab with PayPal for you. If you use any pop-up blockers, "
+"please disable them to continue."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/DowngradeModal.js:8
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/LoadIndicator.js:8
 msgctxt "Info"
-msgid "Your account will be downgraded in a few minutes."
+msgid "Server load"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/DowngradeModal.js:9
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:38
 msgctxt "Info"
-msgid ""
-"Additional addresses, custom domains, and users must be removed/disabled "
-"before performing this action. Any connections to premium servers will be "
-"terminated."
+msgid "Server is currently down"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:53
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:48
 msgctxt "Info"
-msgid "If you purchased or were given a gift code, add it here."
+msgid "P2P"
 msgstr ""
 
-#: node_modules/react-components/containers/notification/EmailSection.js:63
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:54
 msgctxt "Info"
-msgid ""
-"The selected method can be used to recover an account in the event you "
-"forget your password and to be notified about missed emails."
+msgid "Tor"
 msgstr ""
 
-#: node_modules/react-components/containers/notification/EmailSection.js:86
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:101
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:204
 msgctxt "Info"
-msgid ""
-"When notifications are enabled, we'll send an alert to your "
-"recovery/notification address if you have new messages in your ProtonMail "
-"account."
+msgid "Plan upgrade required"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:12
-msgctxt "Info"
-msgid "You have no saved payment methods."
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:45
-msgctxt "Info"
-msgid "Expired"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:46
-msgctxt "Info"
-msgid "default"
-msgstr ""
-
-#: src/app/components/sections/plans/PlanPrice.js:51
-#, javascript-format
-msgctxt "Info"
-msgid "billed as ${ billedPrice }"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansSection.js:44
-msgctxt "Info"
-msgid "You already have a free account"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansSection.js:120
-msgctxt "Info"
-msgid "Get 20% bundle discount when you purchase ProtonMail and ProtonVPN together."
-msgstr ""
-
-#: src/app/components/sections/plans/PlansSection.js:123
-#, javascript-format
-msgctxt "Info"
-msgid "You are currently subscribed to ${ names }."
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:21
-msgctxt "Info"
-msgid "You already have a Proton account."
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:23
-#, javascript-format
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:100
 msgctxt "Info"
 msgid ""
-"Your existing Proton account can be used to access all Proton services. "
-"Please login with ${ email }"
+"Use this section to generate config files for third party VPN clients\n"
+"or when setting up a connection on a router. If you use a native ProtonVPN\n"
+"client to connect, you do not need to manually handle these configuration "
+"files."
 msgstr ""
 
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:140
-#, javascript-format
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:157
 msgctxt "Info"
 msgid ""
-"By clicking Create account you agree to abide by our ${ termsOfServiceLink "
-"} and ${ privacyPolicyLink }."
+"Secure Core configurations add additional protection against VPN endpoint "
+"compromise."
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:165
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:162
 msgctxt "Info"
-msgid "Creating your account"
+msgid "ProtonVPN Plus or Visionary required for Secure Core feature."
 msgstr ""
 
-#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:60
-msgctxt "Info"
-msgid "This plan is temporarily disabled"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:70
-msgctxt "Info"
-msgid "You are saving 20% with an annual plan"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:74
-msgctxt "Info"
-msgid "You are saving 33% with an two-year plan"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:82
-#, javascript-format
-msgctxt "Info"
-msgid "All plans support: ${ supportedOS }"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:84
-msgctxt "Info"
-msgid "30-days money back guarantee"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:18
-msgctxt "Info"
-msgid "Your payment details are protected with TLS encryption and Swiss laws"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:19
-#, javascript-format
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:179
 msgctxt "Info"
 msgid ""
-"Click below to resend the code to ${ destinationText }. If ${ "
-"destinationType } is incorrect, please click \"${ editI18n }\"."
+"Country Connect configuration files ensure a faster connection to the "
+"selected country on average."
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:38
-#, javascript-format
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:183
 msgctxt "Info"
-msgid "Enter the verification code that was sent to ${ destinationText }."
+msgid "ProtonVPN Basic, Plus or Visionary required for Country level connection."
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:40
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:199
 msgctxt "Info"
-msgid "If you don't find the email in your inbox, please check your spam folder."
+msgid "Connect to a single server in the country of your choice."
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:25
-msgctxt "Info"
-msgid ""
-"To prevent misuse, please verify you are human. Please do not close this "
-"tab until you have verified your account."
-msgstr ""
-
-#: src/app/containers/SignupContainer/LoginPanel.js:9
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:33
 msgctxt "Info"
 msgid ""
-"If you are a ProtonMail user you can use your Proton account to log in to "
-"ProtonVPN."
+"Use the following credentials when connecting to ProtonVPN servers without "
+"application. Examples use cases include: Tunnelblick on MacOS, OpenVPN on "
+"GNU/Linux.\n"
+"Do not use the OpenVPN / IKEv2 credentials in ProtonVPN applications or on "
+"the ProtonVPN dashboard."
 msgstr ""
 
-#: node_modules/react-components/components/input/EmailInput.js:9
-msgctxt "Error"
-msgid "Email address invalid"
+#: node_modules/react-components/containers/api/HumanVerificationModal.js:19
+msgctxt "Info"
+msgid "For security reasons, please verify that you are not a robot."
 msgstr ""
 
-#: node_modules/react-components/components/input/Input.js:27
-msgctxt "Error"
-msgid "This field is required"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:76
-#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:37
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:114
-msgctxt "Error"
-msgid "Passwords do not match"
-msgstr ""
-
-#: node_modules/react-components/containers/api/ApiProvider.js:38
-msgctxt "Error"
-msgid "Could not connect to server."
-msgstr ""
-
-#: node_modules/react-components/containers/api/ApiProvider.js:39
-msgctxt "Error"
-msgid "No internet connection found"
-msgstr ""
-
-#: node_modules/react-components/containers/api/ApiProvider.js:45
-msgctxt "Error"
-msgid "Request timed out."
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:211
-msgctxt "Error"
-msgid "Please generate keys before you try to change your password."
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:75
-msgctxt "Error"
-msgid "You have no invoices."
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:85
-msgctxt "Error"
-msgid ""
-"Your account or organization currently has an overdue invoice. Please pay "
-"all unpaid invoices."
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceActions.js:53
-msgctxt "Error"
-msgid "Payments are currently not available, please try again later"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Bitcoin.js:51
-msgctxt "Error"
-msgid "Error connecting to the Bitcoin API."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/GiftCodeInput.js:9
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:31
-#: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:14
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:95
-msgctxt "Error"
-msgid "Invalid gift code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:89
-msgctxt "Error"
-msgid "Your coupon is invalid or cannot be applied to your plan"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PayPal.js:37
-msgctxt "Error"
-msgid "Amount below minimum."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PayPal.js:43
-msgctxt "Error"
-msgid "Amount above the maximum."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Payment.js:49
-#, javascript-format
-msgctxt "Error"
-msgid "The minimum amount that can be donated is ${ price }"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Payment.js:58
-#, javascript-format
-msgctxt "Error"
-msgid "The minimum amount of credit that can be added is ${ _price }"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Payment.js:67
-#, javascript-format
-msgctxt "Error"
-msgid "The minimum payment we accept is ${ _price2 }"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/cardValidator.js:15
-msgctxt "Error"
-msgid "Name on card required"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/cardValidator.js:21
-msgctxt "Error"
-msgid "Invalid expiration date"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/cardValidator.js:26
-msgctxt "Error"
-msgid "Invalid card number"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/cardValidator.js:31
-msgctxt "Error"
-msgid "Invalid CVC code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/cardValidator.js:36
-msgctxt "Error"
-msgid "Invalid postal code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:30
-msgctxt "Error"
-msgid "Payment process cancelled"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:36
-msgctxt "Error"
-msgid "Payment process failed"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:40
-msgctxt "Error"
-msgid "Payment process consumed"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:44
-msgctxt "Error"
-msgid "Payment process not supported"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:56
-msgctxt "Error"
-msgid "Unknown payment token status"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:81
-msgctxt "Error"
-msgid "Tab closed"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailSection.js:44
-#: node_modules/react-components/containers/notification/EmailSection.js:54
-msgctxt "Error"
-msgid "Please set a recovery/notification email"
-msgstr ""
-
-#: node_modules/proton-shared/lib/keys/keys.js:98
-msgctxt "Error"
-msgid "'Signature verification failed"
-msgstr ""
-
-#: node_modules/proton-shared/lib/keys/keys.js:118
-msgctxt "Error"
-msgid "Incorrect decryption password"
-msgstr ""
-
-#: src/app/containers/PreInviteContainer.js:18
-msgctxt "Error"
-msgid "Invalid invitation link"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:54
-msgctxt "Error"
-msgid "Can't check username, try again later"
-msgstr ""
-
-#: node_modules/react-components/components/link/LearnMore.js:7
-msgctxt "Link"
-msgid "Learn more"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:13
-msgctxt "Link"
-msgid "here"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:33
-#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:73
-msgctxt "Link"
-msgid "Back to login"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:95
-msgctxt "Link"
-msgid "clearing your browser cache"
-msgstr ""
-
-#: node_modules/react-components/containers/account/UsernameSection.js:36
-msgctxt "Link"
-msgid "Not activated"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:70
-msgctxt "Link"
-msgid "Add auto-reply"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:71
-msgctxt "Link"
-msgid "Add custom domain"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:72
-msgctxt "Link"
-msgid "Add filters"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:73
-msgctxt "Link"
-msgid "Manage encrypted contacts"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:76
-msgctxt "Link"
-msgid "Add new users"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:77
-msgctxt "Link"
-msgid "Use ProtonVPN"
-msgstr ""
-
-#: src/app/components/page/Page.js:25
-msgctxt "Link"
-msgid "Upgrade now"
-msgstr ""
-
-#: src/app/components/header/SupportDropdown.js:6
-msgctxt "Link"
-msgid "Support"
-msgstr ""
-
-#: src/app/components/layout/PrivateLayout.js:16
-msgctxt "Link"
-msgid "Dashboard"
-msgstr ""
-
-#: src/app/components/layout/PrivateLayout.js:21
-msgctxt "Link"
-msgid "Account"
-msgstr ""
-
-#: src/app/components/layout/PrivateLayout.js:26
-msgctxt "Link"
-msgid "Downloads"
-msgstr ""
-
-#: src/app/components/layout/PrivateLayout.js:31
-msgctxt "Link"
-msgid "Payments"
-msgstr ""
-
-#: src/app/components/layout/PublicHeader.js:14
-msgctxt "Link"
-msgid "protonvpn.com"
-msgstr ""
-
-#: src/app/components/layout/SignInLayout.js:21
-msgctxt "Link"
-msgid "Sign up for free"
-msgstr ""
-
-#: src/app/components/layout/SignInLayout.js:34
-msgctxt "Link"
-msgid "Don't have an account yet? Sign up for free!"
-msgstr ""
-
-#: src/app/containers/LoginContainer.js:24
-msgctxt "Link"
-msgid "Reset password"
-msgstr ""
-
-#: src/app/containers/LoginContainer.js:27
-msgctxt "Link"
-msgid "Forgot username?"
-msgstr ""
-
-#: src/app/containers/LoginContainer.js:30
-msgctxt "Link"
-msgid "Common login problems"
-msgstr ""
-
-#: src/app/containers/LoginContainer.js:34
-msgctxt "Link"
-msgid "Contact support"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:59
-msgctxt "Link"
-msgid "Terms of Service"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:63
-msgctxt "Link"
-msgid "Privacy Policy"
-msgstr ""
-
-#: src/app/containers/SignupContainer/LoginPanel.js:12
-msgctxt "Link"
-msgid "Log in"
-msgstr ""
-
-#: node_modules/react-components/components/modal/Confirm.js:11
-#: node_modules/react-components/components/modal/FormModal.js:18
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:97
-#: node_modules/react-components/containers/login/LoginForm.js:215
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:266
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:39
-#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:12
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:25
-msgctxt "Action"
-msgid "Cancel"
-msgstr ""
-
-#: node_modules/react-components/components/modal/Confirm.js:12
-msgctxt "Action"
-msgid "Confirm"
-msgstr ""
-
-#: node_modules/react-components/components/modal/Header.js:9
-msgctxt "Action"
-msgid "Close modal"
-msgstr ""
-
-#: node_modules/react-components/components/modal/PreviewPDFModal.js:8
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:396
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:410
-#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:38
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:47
-#: node_modules/react-components/containers/login/AbuseModal.js:21
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:49
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:269
-msgctxt "Action"
-msgid "Close"
-msgstr ""
-
-#: node_modules/react-components/components/modal/FormModal.js:19
-#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:76
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:217
-#: node_modules/react-components/containers/login/LoginForm.js:238
-#: node_modules/react-components/containers/login/LoginForm.js:266
-#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:44
-#: node_modules/react-components/containers/support/BugModal.js:126
-msgctxt "Action"
-msgid "Submit"
-msgstr ""
-
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:252
-#: node_modules/react-components/containers/invoices/InvoiceActions.js:38
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:102
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:105
-#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/VPNClientCard.js:14
-msgctxt "Action"
-msgid "Download"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:205
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:208
-msgctxt "Action"
-msgid "Download all configurations"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:42
-msgctxt "Action"
-msgid "Edit credentials"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:133
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:206
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:40
-#: src/app/components/sections/plans/PlansTable.js:360
-#: src/app/components/sections/plans/PlansTable.js:365
-#: src/app/components/sections/plans/PlansTable.js:370
-#: src/app/components/sections/plans/PlansTable.js:379
-msgctxt "Action"
-msgid "Update"
-msgstr ""
-
-#: node_modules/react-components/containers/login/LoginForm.js:206
-msgctxt "Action"
-msgid "Log in"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:37
-msgctxt "Action"
-msgid "Reset my password"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:30
-msgctxt "Action"
-msgid "Reset password"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:34
-msgctxt "Action"
-msgid "Email me my username(s)"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:74
-msgctxt "Action"
-msgid "Get a new password"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:194
-msgctxt "Action"
-msgid "Hide info"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:194
-msgctxt "Action"
-msgid "Show info"
-msgstr ""
-
-#: node_modules/react-components/containers/support/AttachScreenshot.js:46
-msgctxt "Action"
-msgid "Clear"
-msgstr ""
-
-#: node_modules/react-components/containers/support/AttachScreenshot.js:53
-msgctxt "Action"
-msgid "Add screenshot(s)"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteSection.js:63
-msgctxt "Action"
-msgid "Delete your account"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:397
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:260
-msgctxt "Action"
-msgid "Ok"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:411
-#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:39
-#: node_modules/react-components/containers/payments/EditCardModal.js:50
-msgctxt "Action"
-msgid "Save"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:98
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:62
-msgctxt "Action"
-msgid "Delete"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:38
-msgctxt "Action"
-msgid "Yes"
-msgstr ""
-
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:213
-#: src/app/containers/SignupContainer/SignupContainer.js:143
-msgctxt "Action"
-msgid "Back"
-msgstr ""
-
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:268
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:152
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:182
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:195
-msgctxt "Action"
-msgid "Next"
-msgstr ""
-
-#: node_modules/react-components/containers/account/PasswordsSection.js:93
-msgctxt "Action"
-msgid "Change mailbox password"
-msgstr ""
-
-#: node_modules/react-components/containers/heading/SupportDropdown.js:45
-#: node_modules/react-components/containers/heading/UserDropdown.js:103
-#: src/app/components/header/SupportDropdown.js:14
-msgctxt "Action"
-msgid "I have a question"
-msgstr ""
-
-#: node_modules/react-components/containers/heading/SupportDropdown.js:55
-#: node_modules/react-components/containers/heading/UserDropdown.js:113
-#: src/app/components/header/SupportDropdown.js:23
-msgctxt "Action"
-msgid "Report bug"
-msgstr ""
-
-#: node_modules/react-components/containers/heading/UserDropdown.js:78
-#: node_modules/react-components/containers/heading/UserDropdown.js:86
-msgctxt "Action"
-msgid "Settings"
-msgstr ""
-
-#: node_modules/react-components/containers/heading/UserDropdown.js:124
-msgctxt "Action"
-msgid "Proton shop"
-msgstr ""
-
-#: node_modules/react-components/containers/heading/UserDropdown.js:134
-msgctxt "Action"
-msgid "Support us"
-msgstr ""
-
-#: node_modules/react-components/containers/heading/UserDropdown.js:143
-msgctxt "Action"
-msgid "Logout"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:92
-msgctxt "Action"
-msgid "User"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:98
-msgctxt "Action"
-msgid "Organization"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:101
-msgctxt "Action"
-msgid "Customize"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceActions.js:24
-msgctxt "Action"
-msgid "View"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceActions.js:45
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:48
-msgctxt "Action"
-msgid "Pay"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Bitcoin.js:52
-#: node_modules/react-components/containers/payments/PayPal.js:57
-msgctxt "Action"
-msgid "Try again"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:50
-#: node_modules/react-components/containers/payments/subscription/CouponForm.js:27
-#: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:26
-msgctxt "Action"
-msgid "Apply"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CyclePromotion.js:16
-msgctxt "Action"
-msgid "Switch now"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
-#: src/app/components/sections/plans/PlansTable.js:355
-msgctxt "Action"
-msgid "Hide additional features"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
-#: src/app/components/sections/plans/PlansTable.js:355
-msgctxt "Action"
-msgid "Compare all features"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:116
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:258
-msgctxt "Action"
-msgid "Remove coupon"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:145
-msgctxt "Action"
-msgid "Add coupon"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:152
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:249
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:133
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:206
-msgctxt "Action"
-msgid "Upgrade"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:248
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:272
-#.  Insert it before the last one
-msgctxt "Action"
-msgid "Previous"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/Thanks.js:23
-msgctxt "Action"
-msgid "Got it"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:83
-msgctxt "Action"
-msgid "Add gift code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:242
-msgctxt "Action"
-msgid "Pay yearly"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/DonateModal.js:41
-msgctxt "Action"
-msgid "Donate"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PayPal.js:67
-msgctxt "Action"
-msgid "Check out with PayPal"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:35
-msgctxt "Action"
-msgid "Verify payment"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/BillingSection.js:72
-#: node_modules/react-components/containers/payments/BillingSection.js:80
-#: node_modules/react-components/containers/payments/BillingSection.js:268
-msgctxt "Action"
-msgid "Add credits"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/BillingSection.js:79
-#: node_modules/react-components/containers/payments/BillingSection.js:260
-msgctxt "Action"
-msgid "Use gift code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CreditsModal.js:65
-msgctxt "Action"
-msgid "Top up"
+#: src/app/components/sections/plans/PlansTable.js:42
+msgctxt "Title"
+msgid "My subscription"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:7
-msgctxt "Action"
-msgid "Downgrade"
+#: src/app/components/sections/plans/PlansSection.js:54
+msgctxt "Title"
+msgid "Confirm downgrade"
 msgstr ""
 
-#: node_modules/react-components/containers/notification/RecoveryEmail.js:10
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:53
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:7
-msgctxt "Action"
-msgid "Edit"
+#: src/app/components/sections/plans/PlansSection.js:126
+#: src/app/components/sections/plans/PlansSection.js:134
+#: src/app/containers/DashboardContainer.js:19
+msgctxt "Title"
+msgid "Plans"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:58
-msgctxt "Action"
-msgid "Mark as default"
+#: src/app/containers/PaymentsContainer.js:12
+msgctxt "Title"
+msgid "Payments"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:59
-#.  const handlePayPal = () => {
-#.      createModal(<PayPalModal onChange={request} />);
-#.  };
-msgctxt "Action"
-msgid "Add credit / debit card"
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:33
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:49
+#: src/app/containers/PaymentsContainer.js:18
+msgctxt "Title"
+msgid "Payment methods"
 msgstr ""
 
-#: src/app/components/sections/redeem/RedeemCouponForm.js:43
-msgctxt "Action"
-msgid "Activate my coupon"
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:59
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:69
+#: src/app/containers/PaymentsContainer.js:22
+msgctxt "Title"
+msgid "Invoices"
 msgstr ""
 
-#: src/app/components/sections/plans/PlansTable.js:360
-#: src/app/components/sections/plans/PlansTable.js:365
-#: src/app/components/sections/plans/PlansTable.js:370
-#: src/app/components/sections/plans/PlansTable.js:379
-msgctxt "Action"
-msgid "Select"
+#: src/app/containers/DashboardContainer.js:13
+msgctxt "Title"
+msgid "Dashboard"
 msgstr ""
 
-#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:15
-msgctxt "Action"
-msgid "Go to login"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:144
-msgctxt "Action"
-msgid "Create account"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SignupContainer.js:145
-msgctxt "Action"
-msgid "Homepage"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SignupContainer.js:155
-msgctxt "Action"
-msgid "Need help"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:78
-msgctxt "Action"
-msgid "View full plan comparison"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:38
-msgctxt "Action"
-msgid "Confirm payment"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:52
-msgctxt "Action"
-msgid "Pay annually and save 20%"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:64
-#, javascript-format
-msgctxt "Action"
-msgid "Try ${ upsellPlan.title } for only ${ totalMonthlyText }"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:41
-msgctxt "Action"
-msgid "Resend"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:57
-msgctxt "Action"
-msgid "Verify"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:61
-msgctxt "Action"
-msgid "Did not receive the code?"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:65
-msgctxt "Action"
-msgid "Use another verification method"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationEmailInput.js:21
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationPhoneInput.js:29
-msgctxt "Action"
-msgid "Send"
-msgstr ""
-
-#: node_modules/react-components/components/toggle/Toggle.js:9
-msgctxt "Toggle button"
-msgid "On"
-msgstr ""
-
-#: node_modules/react-components/components/toggle/Toggle.js:10
-msgctxt "Toggle button"
-msgid "Off"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
-msgctxt "TableHeader"
-msgid "Name"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
-msgctxt "TableHeader"
-msgid "Country"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:83
-msgctxt "TableHeader"
-msgid "Status"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:84
-msgctxt "TableHeader"
-msgid "Action"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/Country.js:28
-#, javascript-format
-msgctxt "CountryInfo"
-msgid "(via ${ exitCountryName })"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:113
-msgctxt "Option"
-msgid "MacOS"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:114
-msgctxt "Option"
-msgid "GNU/Linux"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:115
-msgctxt "Option"
-msgid "Windows"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:116
-msgctxt "Option"
-msgid "Android"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:117
-msgctxt "Option"
-msgid "iOS"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:118
-msgctxt "Option"
-msgid "Router"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:130
-msgctxt "Option"
-msgid "UDP"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:131
-msgctxt "Option"
-msgid "TCP"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/helpers.js:10
-msgctxt "Option"
-msgid "included"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/helpers.js:12
-msgctxt "Option"
-msgid "1 address"
-msgid_plural "${ value } addresses"
-msgstr[0] ""
-msgstr[1] ""
-
-#: node_modules/react-components/containers/payments/subscription/helpers.js:15
-msgctxt "Option"
-msgid "1 GB storage"
-msgid_plural "${ value } GB storage"
-msgstr[0] ""
-msgstr[1] ""
-
-#: node_modules/react-components/containers/payments/subscription/helpers.js:18
-msgctxt "Option"
-msgid "1 custom domain"
-msgid_plural "${ value } custom domains"
-msgstr[0] ""
-msgstr[1] ""
-
-#: node_modules/react-components/containers/payments/subscription/helpers.js:21
-msgctxt "Option"
-msgid "1 user"
-msgid_plural "${ value } users"
-msgstr[0] ""
-msgstr[1] ""
-
-#: node_modules/react-components/containers/payments/subscription/helpers.js:24
-msgctxt "Option"
-msgid "1 VPN connection"
-msgid_plural "${ value } VPN connections"
-msgstr[0] ""
-msgstr[1] ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:42
-msgctxt "Option"
-msgid "Email address"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:48
-msgctxt "Option"
-msgid "SMS"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:141
-msgctxt "Tab"
-msgid "Secure Core configs"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:145
-msgctxt "Tab"
-msgid "Country configs"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:149
-msgctxt "Tab"
-msgid "Server configs"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:12
-msgctxt "VPNClient"
-msgid "Android"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:17
-msgctxt "VPNClient"
-msgid "iOS"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:22
-msgctxt "VPNClient"
-msgid "Windows"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:26
-msgctxt "VPNClient"
-msgid "MacOS"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:28
-msgctxt "VPNClient"
-msgid "GNU/Linux"
-msgstr ""
-
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:32
-msgctxt "Notification"
-msgid "OpenVPN / IKEv2 credentials updated"
-msgstr ""
-
-#: src/app/containers/SignupContainer/useSignup.js:117
-msgctxt "Notification"
-msgid "Coupons are temporarily disabled"
-msgstr ""
-
-#: src/app/containers/SignupContainer/useSignup.js:133
-msgctxt "Notification"
-msgid "Invites are temporarily disabled"
-msgstr ""
-
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationForm.js:17
-#, javascript-format
-msgctxt "Notification"
-msgid "Verification code successfully sent to ${ destination }"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:356
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:163
-#: node_modules/react-components/containers/login/TOTPForm.js:20
-#: node_modules/react-components/containers/password/PasswordTotpInputs.js:29
-msgctxt "Placeholder"
-msgid "Two-factor code"
-msgstr ""
-
-#: node_modules/react-components/containers/login/PasswordForm.js:22
-msgctxt "Placeholder"
-msgid "Username or email"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:340
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:370
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:148
-#: node_modules/react-components/containers/login/PasswordForm.js:37
-#: node_modules/react-components/containers/password/PasswordTotpInputs.js:13
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:106
-msgctxt "Placeholder"
-msgid "Password"
-msgstr ""
-
-#: node_modules/react-components/containers/login/UnlockForm.js:20
-msgctxt "Placeholder"
-msgid "Mailbox password"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:25
-#, javascript-format
-msgctxt "Placeholder"
-msgid "Enter the word '${ WORD }' here"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:24
-msgctxt "Placeholder"
-msgid "Reset code"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:27
-msgctxt "Placeholder"
-msgid "Choose a new password"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:26
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationEmailInput.js:18
-msgctxt "Placeholder"
-msgid "Email"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:54
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:85
-msgctxt "Placeholder"
-msgid "Username"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:66
-msgctxt "Placeholder"
-msgid "Recovery email"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:141
-msgctxt "Placeholder"
-msgid "Proton username"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:153
-msgctxt "Placeholder"
-msgid "A way to contact you"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:177
-msgctxt "Placeholder"
-msgid "Please describe the problem and include any error messages"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:206
-msgctxt "Placeholder"
-msgid "OS name"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:217
-msgctxt "Placeholder"
-msgid "OS version"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:228
-msgctxt "Placeholder"
-msgid "Browser name"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:239
-msgctxt "Placeholder"
-msgid "Browser version"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:384
-msgctxt "Placeholder"
-msgid "Confirm"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:120
-msgctxt "Placeholder"
-msgid "Feedback"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:134
-msgctxt "Placeholder"
-msgid "Email address"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CouponForm.js:20
-msgctxt "Placeholder"
-msgid "Coupon"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Card.js:30
-msgctxt "Placeholder"
-msgid "Full name"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Card.js:42
-msgctxt "Placeholder"
-msgid "Card number"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Card.js:68
-msgctxt "Placeholder"
-msgid "CVV"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Card.js:81
-msgctxt "Placeholder"
-msgid "ZIP"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Card.js:81
-msgctxt "Placeholder"
-msgid "Postal code"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentSelector.js:30
-msgctxt "Placeholder"
-msgid "Other"
-msgstr ""
-
-#: src/app/components/sections/redeem/RedeemCouponForm.js:35
-msgctxt "Placeholder"
-msgid "Enter coupon code"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:116
-msgctxt "Placeholder"
-msgid "Confirm password"
-msgstr ""
-
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:136
-msgctxt "Placeholder"
-msgid "user@domain.com"
-msgstr ""
-
-#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:35
-msgctxt "Password"
-msgid "Confirm new password"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:34
-#: node_modules/react-components/containers/support/BugModal.js:48
-msgctxt "Bug category"
-msgid "Login problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:35
-msgctxt "Bug category"
-msgid "Sign up problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:36
-msgctxt "Bug category"
-msgid "Bridge problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:37
-msgctxt "Bug category"
-msgid "Import / export problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:38
-msgctxt "Bug category"
-msgid "Custom domains problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:39
-#: node_modules/react-components/containers/support/BugModal.js:50
-msgctxt "Bug category"
-msgid "Payments problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:40
-#: node_modules/react-components/containers/support/BugModal.js:54
-msgctxt "Bug category"
-msgid "Connection problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:41
-msgctxt "Bug category"
-msgid "Slow speed problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:42
-msgctxt "Bug category"
-msgid "VPN problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:43
-#: node_modules/react-components/containers/support/BugModal.js:59
-msgctxt "Bug category"
-msgid "Feature request"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:44
-msgctxt "Bug category"
-msgid "Other"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:49
-msgctxt "Bug category"
-msgid "Signup problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:51
-msgctxt "Bug category"
-msgid "Installation problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:52
-msgctxt "Bug category"
-msgid "Update problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:53
-msgctxt "Bug category"
-msgid "Application problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:55
-msgctxt "Bug category"
-msgid "Speed problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:56
-msgctxt "Bug category"
-msgid "Manual setup problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:57
-msgctxt "Bug category"
-msgid "Website access problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:58
-msgctxt "Bug category"
-msgid "Streaming problem"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:80
-msgctxt "Action to select a title for the bug report modal"
-msgid "Select"
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:111
-msgctxt "Success"
-msgid "Bug reported"
-msgstr ""
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:94
-msgctxt "Success"
-msgid "Password updated"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DeleteAccountModal.js:84
-msgctxt "Success"
-msgid "Account deleted"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:29
-msgctxt "Success"
-msgid "Invoice customized"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/DonateModal.js:31
-msgctxt "Success"
-msgid ""
-"Your support is essential to keeping Proton running. Thank you for "
-"supporting internet privacy!"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CreditsModal.js:56
-msgctxt "Success"
-msgid "Credits added"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:39
-msgctxt "Success"
-msgid "Gift code applied"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:48
-#: node_modules/react-components/containers/payments/EditCardModal.js:40
-msgctxt "Success"
-msgid "Payment method updated"
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailModal.js:61
-msgctxt "Success"
-msgid "Email updated"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:38
-msgctxt "Success"
-msgid "Payment method deleted"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansSection.js:51
-msgctxt "Success"
-msgid "You have successfully unsubscribed"
-msgstr ""
-
-#: src/app/containers/ForgotUsernameContainer.js:18
-msgctxt "Success"
-msgid ""
-"If you entered a valid notification email we will send you an email with "
-"your usernames in the next minute."
-msgstr ""
-
-#: node_modules/react-components/containers/support/BugModal.js:131
-msgctxt "Warning"
-msgid ""
-"Bug reports are not end-to-end encrypted, please do not send any sensitive "
-"information."
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailModal.js:37
-msgctxt "Warning"
-msgid ""
-"By deleting this address, you will no longer be able to recover your "
-"account."
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailModal.js:41
-msgctxt "Warning"
-msgid ""
-"By deleting this address, you will no longer be able to receive daily email "
-"notifications."
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailModal.js:45
-msgctxt "Warning"
-msgid ""
-"By deleting this address, you will no longer be able to recover your "
-"account or receive daily email notifications."
-msgstr ""
-
-#: node_modules/react-components/containers/notification/EmailModal.js:49
-msgctxt "Warning"
-msgid "Are you sure you want to delete the address?"
-msgstr ""
-
-#: node_modules/react-components/containers/support/AttachScreenshot.js:23
-msgctxt "Error notification in the bug report modal when the user upload file"
-msgid "No image selected"
-msgstr ""
-
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:43
-msgctxt "Label for news"
-msgid "Major announcements (2-3 per year)"
-msgstr ""
-
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:54
-msgctxt "Label for news"
-msgid "Major features (3-4 per year)"
-msgstr ""
-
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:65
-msgctxt "Label for news"
-msgid "Proton Business (4-5 per year)"
-msgstr ""
-
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:76
-msgctxt "Label for news"
-msgid "Proton newsletter (5-6 per year)"
-msgstr ""
-
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:82
-msgctxt "Label for news"
-msgid "Proton Beta (10-12 per year)"
-msgstr ""
-
-#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:34
-msgctxt "Message"
-msgid "Are you sure you want to disable two-factor authentication?"
-msgstr ""
-
-#: node_modules/react-components/containers/error/GenericError.js:13
-msgctxt "Error message"
-msgid "Aaah! Something went wrong"
-msgstr ""
-
-#: node_modules/react-components/containers/error/GenericError.js:16
-msgctxt "Error message"
-msgid "Brace yourself till we get the error fixed."
-msgstr ""
-
-#: node_modules/react-components/containers/error/GenericError.js:17
-msgctxt "Error message"
-msgid "You may also refresh the page or try again later."
-msgstr ""
-
-#: node_modules/react-components/containers/heading/SupportDropdownButton.js:16
-msgctxt "Header"
-msgid "Support"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:67
-msgctxt "Header"
-msgid "Pricing"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:82
-#: src/app/components/sections/plans/PlansTable.js:126
-msgctxt "Header"
-msgid "Speed"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:90
-#: src/app/components/sections/plans/PlansTable.js:107
-msgctxt "Header"
-msgid "Simultaneous connections"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:101
-#: src/app/components/sections/plans/PlansTable.js:215
-msgctxt "Header"
-msgid "Advanced encryption"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:113
-#: src/app/components/sections/plans/PlansTable.js:255
-msgctxt "Header"
-msgid "No logs policy"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:125
-#: src/app/components/sections/plans/PlansTable.js:275
-msgctxt "Header"
-msgid "No data limits"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:137
-msgctxt "Header"
-msgid "P2P support"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:148
-msgctxt "Header"
-msgid "Secure streaming"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:159
-#: src/app/components/sections/plans/PlansTable.js:154
-msgctxt "Header"
-msgid "Tor over VPN"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:174
-#: src/app/components/sections/plans/PlansTable.js:172
-msgctxt "Header"
-msgid "Secure core"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansTable.js:117
-msgctxt "Header"
-msgid "Countries"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansTable.js:136
-msgctxt "Header"
-msgid "P2P support (BitTorrent, etc.)"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansTable.js:195
-msgctxt "Header"
-msgid "Apps for Android / Linux / iOS / Windows"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansTable.js:235
-msgctxt "Header"
-msgid "Kill Switch / Always-on"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansTable.js:295
-msgctxt "Header"
-msgid "Stream geo-blocked content"
-msgstr ""
-
-#: src/app/components/sections/plans/PlansTable.js:336
-msgctxt "Header"
-msgid "30-day money-back guarantee"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceState.js:16
-msgctxt "Invoice state display as badge"
-msgid "Unpaid"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceState.js:17
-msgctxt "Invoice state display as badge"
-msgid "Paid"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceState.js:18
-msgctxt "Invoice state display as badge"
-msgid "Void"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceState.js:19
-msgctxt "Invoice state display as badge"
-msgid "Billed"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceState.js:20
-msgctxt "Invoice state display as badge"
-msgid "Writeoff"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:43
-msgctxt "Info message for custom invoice modal"
-msgid "Add your name (or company name) and address to your invoices."
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:52
-msgctxt "Placeholder for custom invoice text"
-msgid "Add your name (or company name) and address to your invoices"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceActions.js:12
-msgctxt "Title for PDF file"
-msgid "ProtonMail invoice"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceType.js:7
-msgctxt "Invoice type display as badge"
-msgid "Other"
-msgstr ""
-
-#: node_modules/react-components/containers/invoices/InvoiceType.js:8
-msgctxt "Invoice type display as badge"
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:54
+#: src/app/containers/DashboardContainer.js:23
+msgctxt "Title"
 msgid "Subscription"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:9
-msgctxt "Invoice type display as badge"
-msgid "Cancellation"
+#: src/app/containers/DashboardContainer.js:28
+msgctxt "Title"
+msgid "Billing"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:10
-msgctxt "Invoice type display as badge"
-msgid "Credit"
+#: src/app/containers/ForgotUsernameContainer.js:25
+#: src/app/containers/LoginContainer.js:16
+#: src/app/containers/ResetPasswordContainer.js:10
+msgctxt "Title"
+msgid "Log in"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:11
-msgctxt "Invoice type display as badge"
-msgid "Donation"
+#: src/app/containers/LoginContainer.js:17
+msgctxt "Title"
+msgid "User log in"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:12
-msgctxt "Invoice type display as badge"
-msgid "Chargeback"
+#: src/app/containers/AccountContainer.js:17
+msgctxt "Title"
+msgid "Account"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:13
-msgctxt "Invoice type display as badge"
-msgid "Renewal"
+#: node_modules/react-components/containers/account/UsernameSection.js:16
+#: src/app/containers/AccountContainer.js:22
+msgctxt "Title"
+msgid "Username"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:14
-msgctxt "Invoice type display as badge"
-msgid "Refund"
+#: node_modules/react-components/containers/account/PasswordsSection.js:23
+#: src/app/containers/AccountContainer.js:26
+msgctxt "Title"
+msgid "Passwords"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:15
-msgctxt "Invoice type display as badge"
-msgid "Modification"
+#: node_modules/react-components/containers/account/TwoFactorSection.js:21
+#: src/app/containers/AccountContainer.js:30
+msgctxt "Title"
+msgid "Two-factor authentication"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/InvoiceType.js:16
-msgctxt "Invoice type display as badge"
-msgid "Addition"
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:31
+#: src/app/containers/AccountContainer.js:34
+msgctxt "Title"
+msgid "OpenVPN / IKEv2 username"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/PlanPrice.js:10
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:23
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:41
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:48
-msgctxt "Suffix"
-msgid "/ month"
+#: node_modules/react-components/containers/notification/EmailSection.js:62
+#: src/app/containers/AccountContainer.js:38
+msgctxt "Title"
+msgid "Recovery & notification"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:70
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:75
-msgctxt "Suffix"
-msgid "/mo"
+#: node_modules/react-components/containers/account/NewsSection.js:17
+#: node_modules/react-components/containers/account/NewsSection.js:25
+#: src/app/containers/AccountContainer.js:42
+msgctxt "Title"
+msgid "Email subscriptions"
 msgstr ""
 
-#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:18
-msgctxt "Suffix"
-msgid "monthly"
+#: src/app/containers/AccountContainer.js:46
+msgctxt "Title"
+msgid "Delete"
 msgstr ""
 
-#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:25
-msgctxt "Suffix"
-msgid "/2-year"
+#: src/app/containers/RedeemContainer.js:24
+msgctxt "Title"
+msgid "Redeem your coupon and start protecting your online privacy"
 msgstr ""
 
-#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:25
-msgctxt "Suffix"
-msgid "/year"
+#: src/app/containers/RedeemContainer.js:43
+msgctxt "Title"
+msgid "Swiss Based"
+msgstr ""
+
+#: src/app/containers/RedeemContainer.js:50
+msgctxt "Title"
+msgid "Secure Core Servers"
+msgstr ""
+
+#: src/app/containers/RedeemContainer.js:57
+msgctxt "Title"
+msgid "No Logs"
+msgstr ""
+
+#: src/app/containers/RedeemContainer.js:64
+msgctxt "Title"
+msgid "Kill Switch"
+msgstr ""
+
+#: src/app/containers/RedeemContainer.js:70
+msgctxt "Title"
+msgid "DNS leak prevention"
+msgstr ""
+
+#: src/app/containers/RedeemContainer.js:77
+msgctxt "Title"
+msgid "Strong encryption"
+msgstr ""
+
+#: src/app/containers/PreInviteContainer.js:44
+msgctxt "Title"
+msgid "Checking invitation parameters"
+msgstr ""
+
+#: src/app/containers/ResetPasswordContainer.js:11
+msgctxt "Title"
+msgid "Reset password"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:30
+msgctxt "Title"
+msgid "Select an account verification method"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:36
+msgctxt "Title"
+msgid "Enter verification code"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:14
+msgctxt "Title"
+msgid "Resend code"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:22
+msgctxt "Title"
+msgid "Are you human?"
+msgstr ""
+
+#: src/app/containers/SignupContainer/LoginPanel.js:8
+msgctxt "Title"
+msgid "Already have a Proton account?"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:34
+msgctxt "Title"
+msgid "Select a plan"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanComparisonModal.js:18
+msgctxt "Title"
+msgid "ProtonVPN plan comparison"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountStep.js:24
+msgctxt "Title"
+msgid "Create an account"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:11
+msgctxt "Title"
+msgid "ProtonVPN"
+msgstr ""
+
+#: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:9
+msgctxt "Title"
+msgid "Account created"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SignupContainer.js:30
+msgctxt "Title"
+msgid "Sign up - ProtonVPN"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SignupContainer.js:166
+msgctxt "Title"
+msgid "Sign up"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:15
+msgctxt "Title"
+msgid "Provide payment details"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PlanDetails.js:13
+#, javascript-format
+msgctxt "Title"
+msgid "${ title } plan details"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:32
+msgctxt "Title"
+msgid "Upgrade and get more"
+msgstr ""
+
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:33
+msgctxt "Title"
+msgid "Summary"
+msgstr ""
+
+#: src/app/containers/ForgotUsernameContainer.js:26
+msgctxt "Title"
+msgid "Forgot your username?"
+msgstr ""
+
+#: src/app/containers/DownloadsContainer.js:9
+msgctxt "Title"
+msgid "Downloads"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:9
+#: src/app/containers/DownloadsContainer.js:14
+msgctxt "Title"
+msgid "ProtonVPN clients"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:98
+#: src/app/containers/DownloadsContainer.js:18
+msgctxt "Title"
+msgid "OpenVPN configuration files"
+msgstr ""
+
+#: node_modules/react-components/components/pagination/Pagination.js:50
+msgctxt "Title"
+msgid "Open pagination"
+msgstr ""
+
+#: node_modules/react-components/components/modal/PreviewPDFModal.js:6
+msgctxt "Title"
+msgid "Preview"
+msgstr ""
+
+#: node_modules/react-components/components/sidebar/SubSidebar.js:18
+msgctxt "Title"
+msgid "Navigation"
+msgstr ""
+
+#: node_modules/react-components/components/dropdown/DropdownActions.js:47
+msgctxt "Title"
+msgid "Open actions dropdown"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:49
+msgctxt "Title"
+msgid "Pay invoice"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:40
+msgctxt "Title"
+msgid "Add invoice details"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:116
+msgctxt "Title"
+msgid "Amount"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:117
+msgctxt "Title"
+msgid "Type"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:118
+msgctxt "Title"
+msgid "Status"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:119
+msgctxt "Title"
+msgid "Date"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:120
+msgctxt "Title"
+msgid "Action"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceActions.js:31
+msgctxt "Title"
+msgid "Preview invoice"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:127
+msgctxt "Title"
+msgid "Report bug"
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailModal.js:70
+msgctxt "Title"
+msgid "Update recovery/notification email"
+msgstr ""
+
+#: node_modules/react-components/containers/login/AbuseModal.js:6
+msgctxt "Title"
+msgid "Account disabled"
+msgstr ""
+
+#: node_modules/react-components/containers/login/UnlockModal.js:33
+#: node_modules/react-components/containers/password/AskAuthModal.js:17
+msgctxt "Title"
+msgid "Sign in again to continue"
+msgstr ""
+
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:267
+msgctxt "Title"
+msgid "Set up two-factor authentication"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:103
+#: node_modules/react-components/containers/account/PasswordsSection.js:38
+msgctxt "Title"
+msgid "Change login password"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:131
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:165
+msgctxt "Title"
+msgid "Switch to two-password mode"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:256
+msgctxt "Title"
+msgid "Switch to one-password mode"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:274
+#: node_modules/react-components/containers/account/PasswordsSection.js:38
+msgctxt "Title"
+msgid "Change password"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:286
+msgctxt "Title"
+msgid "Change mailbox password"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:82
+msgctxt "Title"
+msgid "Disable two-factor authentication"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:97
+#: node_modules/react-components/containers/account/DeleteSection.js:41
+msgctxt "Title"
+msgid "Delete account"
+msgstr ""
+
+#: node_modules/react-components/containers/account/PasswordsSection.js:37
+msgctxt "Title"
+msgid "Password"
+msgstr ""
+
+#: node_modules/react-components/containers/account/PasswordsSection.js:37
+msgctxt "Title"
+msgid "Login password"
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:29
+msgctxt "Title"
+msgid "Confirm reset password"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:66
+msgctxt "Title"
+msgid "Add credits"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:13
+msgctxt "Title"
+msgid "Payment verification in progress"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:13
+msgctxt "Title"
+msgid "Payment verification"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:39
+msgctxt "Title"
+msgid "New tab"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/DonateModal.js:40
+msgctxt "Title"
+msgid "Make a donation"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:48
+msgctxt "Title"
+msgid "Gift code"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPalModal.js:24
+msgctxt "Title"
+msgid "Add PayPal payment method"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomMailSection.js:26
+msgctxt "Title"
+msgid "ProtonMail total"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:24
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:190
+msgctxt "Title"
+msgid "Payment details"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/Thanks.js:17
+msgctxt "Title"
+msgid "Thank you!"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:130
+msgctxt "Title"
+msgid "Order summary"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:163
+msgctxt "Title"
+msgid "VPN protection"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:176
+msgctxt "Title"
+msgid "Customization"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:98
+msgctxt "Title"
+msgid "Subscription details"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/EditCardModal.js:18
+msgctxt "Title"
+msgid "Edit credit/debit card"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/EditCardModal.js:18
+msgctxt "Title"
+msgid "Add credit/debit card"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/BillingSection.js:62
+#: node_modules/react-components/containers/payments/BillingSection.js:88
+#: node_modules/react-components/containers/payments/BillingSection.js:97
+#: node_modules/react-components/containers/payments/BillingSection.js:108
+msgctxt "Title"
+msgid "Billing details"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Card.js:71
+msgctxt "Title"
+msgid "Security code"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Card.js:82
+msgctxt "Title"
+msgid "ZIP / postal code"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:106
+msgctxt "Title"
+msgid "1. Select platform"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:123
+msgctxt "Title"
+msgid "2. Select protocol"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:136
+msgctxt "Title"
+msgid "3. Select connection and download"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:155
+msgctxt "Title"
+msgid "Secure core configs"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:177
+msgctxt "Title"
+msgid "Country configs"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:198
+msgctxt "Title"
+msgid "Server configs"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:22
+msgctxt "Title"
+msgid "Edit OpenVPN / IKEv2 credentials"
+msgstr ""
+
+#: node_modules/react-components/containers/api/HumanVerificationModal.js:9
+msgctxt "Title"
+msgid "Human verification"
+msgstr ""
+
+#: src/app/components/sections/plans/PlansTable.js:51
+msgctxt "Tooltip"
+msgid "Save 20% when billed annually"
+msgstr ""
+
+#: src/app/components/sections/plans/PlansTable.js:174
+msgctxt "Tooltip"
+msgid ""
+"Provides additional protection against VPN server compromise by routing "
+"connections through our Secure Core network"
+msgstr ""
+
+#: src/app/components/sections/plans/PlansTable.js:316
+msgctxt "Tooltip"
+msgid "Includes ProtonMail encrypted email with all features"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:72
+msgctxt "Tooltip"
+msgid ""
+"Username which is used for all Proton services. This can also be used later "
+"to create a secure ProtonMail account."
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:94
+msgctxt "Tooltip"
+msgid ""
+"If you forget your password, you will no longer have access to your account "
+"or your data. Please save it someplace safe."
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:125
+msgctxt "Tooltip"
+msgid ""
+"Your email is not shared with third parties and is only used for recovery "
+"and account-related questions or communication."
+msgstr ""
+
+#: src/app/containers/SignupContainer/plans.js:77
+msgctxt "Tooltip"
+msgid "Support for file sharing protocols such as Bittorrent."
+msgstr ""
+
+#: src/app/containers/SignupContainer/plans.js:99
+msgctxt "Tooltip"
+msgid ""
+"Access content (Netflix, Amazon Prime, Wikipedia, Facebook, Youtube, etc) "
+"no matter where you are."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CycleDiscountBadge.js:15
+msgctxt "Tooltip"
+msgid "Discount applied for annual billing cycle"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CycleDiscountBadge.js:16
+msgctxt "Tooltip"
+msgid "Discount applied for two-year billing cycle"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:83
@@ -3315,263 +2554,96 @@ msgid ""
 "thomas.anderson@example.com"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/CycleDiscountBadge.js:15
-msgctxt "Tooltip"
-msgid "Discount applied for annual billing cycle"
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:90
+#: src/app/components/sections/plans/PlansTable.js:107
+msgctxt "Header"
+msgid "Simultaneous connections"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/CycleDiscountBadge.js:16
-msgctxt "Tooltip"
-msgid "Discount applied for two-year billing cycle"
+#: src/app/components/sections/plans/PlansTable.js:117
+msgctxt "Header"
+msgid "Countries"
 msgstr ""
 
-#: src/app/components/sections/plans/PlansTable.js:51
-msgctxt "Tooltip"
-msgid "Save 20% when billed annually"
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:82
+#: src/app/components/sections/plans/PlansTable.js:126
+msgctxt "Header"
+msgid "Speed"
 msgstr ""
 
-#: src/app/components/sections/plans/PlansTable.js:174
-msgctxt "Tooltip"
-msgid ""
-"Provides additional protection against VPN server compromise by routing "
-"connections through our Secure Core network"
+#: src/app/components/sections/plans/PlansTable.js:136
+msgctxt "Header"
+msgid "P2P support (BitTorrent, etc.)"
 msgstr ""
 
-#: src/app/components/sections/plans/PlansTable.js:316
-msgctxt "Tooltip"
-msgid "Includes ProtonMail encrypted email with all features"
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:159
+#: src/app/components/sections/plans/PlansTable.js:154
+msgctxt "Header"
+msgid "Tor over VPN"
 msgstr ""
 
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:72
-msgctxt "Tooltip"
-msgid ""
-"Username which is used for all Proton services. This can also be used later "
-"to create a secure ProtonMail account."
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:174
+#: src/app/components/sections/plans/PlansTable.js:172
+msgctxt "Header"
+msgid "Secure core"
 msgstr ""
 
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:94
-msgctxt "Tooltip"
-msgid ""
-"If you forget your password, you will no longer have access to your account "
-"or your data. Please save it someplace safe."
+#: src/app/components/sections/plans/PlansTable.js:195
+msgctxt "Header"
+msgid "Apps for Android / Linux / iOS / Windows"
 msgstr ""
 
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:125
-msgctxt "Tooltip"
-msgid ""
-"Your email is not shared with third parties and is only used for recovery "
-"and account-related questions or communication."
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:101
+#: src/app/components/sections/plans/PlansTable.js:215
+msgctxt "Header"
+msgid "Advanced encryption"
 msgstr ""
 
-#: src/app/containers/SignupContainer/plans.js:77
-msgctxt "Tooltip"
-msgid "Support for file sharing protocols such as Bittorrent."
+#: src/app/components/sections/plans/PlansTable.js:235
+msgctxt "Header"
+msgid "Kill Switch / Always-on"
 msgstr ""
 
-#: src/app/containers/SignupContainer/plans.js:99
-msgctxt "Tooltip"
-msgid ""
-"Access content (Netflix, Amazon Prime, Wikipedia, Facebook, Youtube, etc) "
-"no matter where you are."
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:113
+#: src/app/components/sections/plans/PlansTable.js:255
+msgctxt "Header"
+msgid "No logs policy"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:85
-msgctxt "VPN speed"
-msgid "High"
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:125
+#: src/app/components/sections/plans/PlansTable.js:275
+msgctxt "Header"
+msgid "No data limits"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:86
-msgctxt "VPN speed"
-msgid "Highest"
+#: src/app/components/sections/plans/PlansTable.js:295
+msgctxt "Header"
+msgid "Stream geo-blocked content"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/CustomMailSection.js:32
-#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:238
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:65
-#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:77
-msgctxt "Price"
-msgid "Free"
+#: src/app/components/sections/plans/PlansTable.js:336
+msgctxt "Header"
+msgid "30-day money-back guarantee"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/BillingSection.js:29
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:29
-msgctxt "Billing cycle"
-msgid "Monthly"
+#: node_modules/react-components/containers/heading/SupportDropdownButton.js:16
+msgctxt "Header"
+msgid "Support"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/BillingSection.js:30
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:30
-msgctxt "Billing cycle"
-msgid "Yearly"
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:67
+msgctxt "Header"
+msgid "Pricing"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/BillingSection.js:31
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:31
-msgctxt "Billing cycle"
-msgid "2-year"
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:137
+msgctxt "Header"
+msgid "P2P support"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:123
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:198
-msgctxt "Plan"
-msgid "Free"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/Cash.js:13
-#, javascript-format
-msgctxt "Info for cash payment method"
-msgid "To pay via Cash, please email us at ${ email } for instructions."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CycleSelector.js:13
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:42
-msgctxt "Billing cycle option"
-msgid "Monthly"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CycleSelector.js:14
-msgctxt "Billing cycle option"
-msgid "Annually"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CycleSelector.js:15
-msgctxt "Billing cycle option"
-msgid "Two-year"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:43
-msgctxt "Billing cycle option"
-msgid "Annually SAVE 20%"
-msgstr ""
-
-#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:44
-msgctxt "Billing cycle option"
-msgid "Two-year SAVE 33%"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CreditsModal.js:26
-msgctxt "Monetary unit"
-msgid "Euro"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CreditsModal.js:27
-msgctxt "Monetary unit"
-msgid "Swiss franc"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CreditsModal.js:28
-msgctxt "Monetary unit"
-msgid "Dollar"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CouponDiscountBadge.js:12
-msgctxt "Discount with coupon code"
-msgid "20% discount applied to your subscription"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/CouponDiscountBadge.js:20
-msgctxt "Discount with coupon code"
-msgid "50% discount applied to your subscription"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodState.js:10
-msgctxt "Label on payment method"
-msgid "Expired"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodState.js:17
-msgctxt "Label on payment method"
-msgid "Default"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:65
-msgctxt "Confirmation title"
-msgid "Delete payment method"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:66
-msgctxt "Confirmation message to delete payment method"
-msgid "Are you sure you want to delete this payment method?"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodDetails.js:21
-msgctxt "Label for credit card"
-msgid "Expiration"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:56
-#.  const handlePayPal = () => {
-#.      createModal(<PayPalModal onChange={request} />);
-#.  };
-msgctxt "Info for payment methods"
-msgid ""
-"If you wish to pay by credit card, you can add your card below. Learn about "
-"other payment options."
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:30
-msgctxt "Title for payment methods table"
-msgid "Method"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:31
-msgctxt "Title for payment methods table"
-msgid "Status"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:32
-msgctxt "Title for payment methods table"
-msgid "Actions"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:36
-msgctxt "Payment method option"
-msgid "Pay with credit/debit card"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:59
-msgctxt "Payment method option"
-msgid "Pay with PayPal"
-msgstr ""
-
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:66
-msgctxt "Payment method option"
-msgid "Pay with Bitcoin"
-msgstr ""
-
-#: node_modules/proton-shared/lib/constants.js:236
-msgctxt "Theme"
-msgid "Dark (Default)"
-msgstr ""
-
-#: node_modules/proton-shared/lib/constants.js:240
-msgctxt "Theme"
-msgid "Light"
-msgstr ""
-
-#: node_modules/proton-shared/lib/constants.js:244
-msgctxt "Theme"
-msgid "Blue"
-msgstr ""
-
-#: node_modules/proton-shared/lib/constants.js:248
-msgctxt "Theme"
-msgid "Custom theme"
-msgstr ""
-
-#: node_modules/proton-shared/lib/helpers/humanSize.js:13
-msgctxt "file size format"
-msgid "KB"
-msgstr ""
-
-#: node_modules/proton-shared/lib/helpers/humanSize.js:14
-msgctxt "file size format"
-msgid "MB"
-msgstr ""
-
-#: node_modules/proton-shared/lib/helpers/humanSize.js:15
-msgctxt "file size format"
-msgid "GB"
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:148
+msgctxt "Header"
+msgid "Secure streaming"
 msgstr ""
 
 #: src/app/components/sections/plans/PlansTable.js:128
@@ -3590,14 +2662,79 @@ msgctxt "Plan details"
 msgid "Highest"
 msgstr ""
 
-#: src/app/components/sections/plans/PlansSection.js:39
+#: src/app/components/sections/plans/PlansSection.js:41
 msgctxt "Separator, spacing is important"
 msgid " and "
 msgstr ""
 
-#: src/app/components/layout/SignInLayout.js:38
-msgctxt "Footer"
-msgid "2019 ProtonVPN.com - Made globally, hosted in Switzerland."
+#: src/app/components/sections/plans/PlansSection.js:68
+msgctxt "Success"
+msgid "You have successfully unsubscribed"
+msgstr ""
+
+#: src/app/containers/ForgotUsernameContainer.js:18
+msgctxt "Success"
+msgid ""
+"If you entered a valid notification email we will send you an email with "
+"your usernames in the next minute."
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:29
+msgctxt "Success"
+msgid "Invoice customized"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:111
+msgctxt "Success"
+msgid "Bug reported"
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailModal.js:61
+msgctxt "Success"
+msgid "Email updated"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:94
+msgctxt "Success"
+msgid "Password updated"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DeleteAccountModal.js:82
+msgctxt "Success"
+msgid "Account deleted"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:38
+msgctxt "Success"
+msgid "Payment method deleted"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:48
+#: node_modules/react-components/containers/payments/EditCardModal.js:40
+msgctxt "Success"
+msgid "Payment method updated"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:56
+msgctxt "Success"
+msgid "Credits added"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/DonateModal.js:31
+msgctxt "Success"
+msgid ""
+"Your support is essential to keeping Proton running. Thank you for "
+"supporting internet privacy!"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:39
+msgctxt "Success"
+msgid "Gift code applied"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPalModal.js:19
+msgctxt "Success"
+msgid "Payment method added"
 msgstr ""
 
 #: src/app/containers/LoginContainer.js:21
@@ -3680,6 +2817,363 @@ msgid ""
 "encryption."
 msgstr ""
 
+#: src/app/containers/PreInviteContainer.js:18
+msgctxt "Error"
+msgid "Invalid invitation link"
+msgstr ""
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:54
+msgctxt "Error"
+msgid "Can't check username, try again later"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:76
+#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:37
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:114
+msgctxt "Error"
+msgid "Passwords do not match"
+msgstr ""
+
+#: node_modules/react-components/components/input/EmailInput.js:9
+msgctxt "Error"
+msgid "Email address invalid"
+msgstr ""
+
+#: node_modules/react-components/components/input/Input.js:27
+msgctxt "Error"
+msgid "This field is required"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:75
+msgctxt "Error"
+msgid "You have no invoices."
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:85
+msgctxt "Error"
+msgid ""
+"Your account or organization currently has an overdue invoice. Please pay "
+"all unpaid invoices."
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceActions.js:53
+msgctxt "Error"
+msgid "Payments are currently not available, please try again later"
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailSection.js:44
+#: node_modules/react-components/containers/notification/EmailSection.js:54
+msgctxt "Error"
+msgid "Please set a recovery/notification email"
+msgstr ""
+
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:211
+msgctxt "Error"
+msgid "Please generate keys before you try to change your password."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/cardValidator.js:15
+msgctxt "Error"
+msgid "Name on card required"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/cardValidator.js:21
+msgctxt "Error"
+msgid "Invalid expiration date"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/cardValidator.js:26
+msgctxt "Error"
+msgid "Invalid card number"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/cardValidator.js:31
+msgctxt "Error"
+msgid "Invalid CVC code"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/cardValidator.js:36
+msgctxt "Error"
+msgid "Invalid postal code"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/GiftCodeInput.js:9
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:31
+#: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:14
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:77
+msgctxt "Error"
+msgid "Invalid gift code"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:71
+msgctxt "Error"
+msgid "Your coupon is invalid or cannot be applied to your plan"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Bitcoin.js:51
+msgctxt "Error"
+msgid "Error connecting to the Bitcoin API."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:30
+msgctxt "Error"
+msgid "Payment process cancelled"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:36
+msgctxt "Error"
+msgid "Payment process failed"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:40
+msgctxt "Error"
+msgid "Payment process consumed"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:44
+msgctxt "Error"
+msgid "Payment process not supported"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:56
+msgctxt "Error"
+msgid "Unknown payment token status"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:85
+msgctxt "Error"
+msgid "Tab closed"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Payment.js:49
+#, javascript-format
+msgctxt "Error"
+msgid "The minimum amount that can be donated is ${ price }"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Payment.js:58
+#, javascript-format
+msgctxt "Error"
+msgid "The minimum amount of credit that can be added is ${ _price }"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Payment.js:67
+#, javascript-format
+msgctxt "Error"
+msgid "The minimum payment we accept is ${ _price2 }"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:49
+msgctxt "Error"
+msgid "Amount below minimum."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:55
+msgctxt "Error"
+msgid "Amount above the maximum."
+msgstr ""
+
+#: node_modules/react-components/containers/api/ApiProvider.js:38
+msgctxt "Error"
+msgid "Could not connect to server."
+msgstr ""
+
+#: node_modules/react-components/containers/api/ApiProvider.js:39
+msgctxt "Error"
+msgid "No internet connection found"
+msgstr ""
+
+#: node_modules/react-components/containers/api/ApiProvider.js:45
+msgctxt "Error"
+msgid "Request timed out."
+msgstr ""
+
+#: node_modules/proton-shared/lib/keys/keys.js:98
+msgctxt "Error"
+msgid "'Signature verification failed"
+msgstr ""
+
+#: node_modules/proton-shared/lib/keys/keys.js:118
+msgctxt "Error"
+msgid "Incorrect decryption password"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationForm.js:17
+#, javascript-format
+msgctxt "Notification"
+msgid "Verification code successfully sent to ${ destination }"
+msgstr ""
+
+#: src/app/containers/SignupContainer/useSignup.js:117
+msgctxt "Notification"
+msgid "Coupons are temporarily disabled"
+msgstr ""
+
+#: src/app/containers/SignupContainer/useSignup.js:133
+msgctxt "Notification"
+msgid "Invites are temporarily disabled"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:32
+msgctxt "Notification"
+msgid "OpenVPN / IKEv2 credentials updated"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:42
+msgctxt "Option"
+msgid "Email address"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:48
+msgctxt "Option"
+msgid "SMS"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/helpers.js:10
+msgctxt "Option"
+msgid "included"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/helpers.js:12
+msgctxt "Option"
+msgid "1 address"
+msgid_plural "${ value } addresses"
+msgstr[0] ""
+msgstr[1] ""
+
+#: node_modules/react-components/containers/payments/subscription/helpers.js:15
+msgctxt "Option"
+msgid "1 GB storage"
+msgid_plural "${ value } GB storage"
+msgstr[0] ""
+msgstr[1] ""
+
+#: node_modules/react-components/containers/payments/subscription/helpers.js:18
+msgctxt "Option"
+msgid "1 custom domain"
+msgid_plural "${ value } custom domains"
+msgstr[0] ""
+msgstr[1] ""
+
+#: node_modules/react-components/containers/payments/subscription/helpers.js:21
+msgctxt "Option"
+msgid "1 user"
+msgid_plural "${ value } users"
+msgstr[0] ""
+msgstr[1] ""
+
+#: node_modules/react-components/containers/payments/subscription/helpers.js:24
+msgctxt "Option"
+msgid "1 VPN connection"
+msgid_plural "${ value } VPN connections"
+msgstr[0] ""
+msgstr[1] ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:113
+msgctxt "Option"
+msgid "MacOS"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:114
+msgctxt "Option"
+msgid "GNU/Linux"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:115
+msgctxt "Option"
+msgid "Windows"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:116
+msgctxt "Option"
+msgid "Android"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:117
+msgctxt "Option"
+msgid "iOS"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:118
+msgctxt "Option"
+msgid "Router"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:130
+msgctxt "Option"
+msgid "UDP"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:131
+msgctxt "Option"
+msgid "TCP"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
+msgctxt "VerificationType"
+msgid "email"
+msgstr ""
+
+#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
+msgctxt "VerificationType"
+msgid "phone"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CycleSelector.js:13
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:42
+msgctxt "Billing cycle option"
+msgid "Monthly"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:43
+msgctxt "Billing cycle option"
+msgid "Annually SAVE 20%"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanStep.js:44
+msgctxt "Billing cycle option"
+msgid "Two-year SAVE 33%"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CycleSelector.js:14
+msgctxt "Billing cycle option"
+msgid "Annually"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CycleSelector.js:15
+msgctxt "Billing cycle option"
+msgid "Two-year"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:18
+msgctxt "Suffix"
+msgid "monthly"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:25
+msgctxt "Suffix"
+msgid "/2-year"
+msgstr ""
+
+#: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:25
+msgctxt "Suffix"
+msgid "/year"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/PlanPrice.js:10
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:23
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:41
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:48
+msgctxt "Suffix"
+msgid "/ month"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:70
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:75
+msgctxt "Suffix"
+msgid "/mo"
+msgstr ""
+
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:37
 #, javascript-format
 msgctxt "PlanPrice"
@@ -3706,16 +3200,6 @@ msgstr ""
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:35
 msgctxt "Plan info"
 msgid "Most popular"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:39
-msgctxt "Plan upsell"
-msgid "Monthly plan"
-msgstr ""
-
-#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:47
-msgctxt "Plan upsell"
-msgid "Yearly plan"
 msgstr ""
 
 #: src/app/containers/SignupContainer/plans.js:31
@@ -3862,12 +3346,540 @@ msgctxt "Plan feature"
 msgid "All ${ PLAN_NAMES[PLAN.PLUS] } plan features"
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
-msgctxt "VerificationType"
-msgid "email"
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:39
+msgctxt "Plan upsell"
+msgid "Monthly plan"
 msgstr ""
 
-#: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
-msgctxt "VerificationType"
-msgid "phone"
+#: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:47
+msgctxt "Plan upsell"
+msgid "Yearly plan"
+msgstr ""
+
+#: node_modules/react-components/components/toggle/Toggle.js:9
+msgctxt "Toggle button"
+msgid "On"
+msgstr ""
+
+#: node_modules/react-components/components/toggle/Toggle.js:10
+msgctxt "Toggle button"
+msgid "Off"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:7
+msgctxt "Invoice type display as badge"
+msgid "Other"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:8
+msgctxt "Invoice type display as badge"
+msgid "Subscription"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:9
+msgctxt "Invoice type display as badge"
+msgid "Cancellation"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:10
+msgctxt "Invoice type display as badge"
+msgid "Credit"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:11
+msgctxt "Invoice type display as badge"
+msgid "Donation"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:12
+msgctxt "Invoice type display as badge"
+msgid "Chargeback"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:13
+msgctxt "Invoice type display as badge"
+msgid "Renewal"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:14
+msgctxt "Invoice type display as badge"
+msgid "Refund"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:15
+msgctxt "Invoice type display as badge"
+msgid "Modification"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceType.js:16
+msgctxt "Invoice type display as badge"
+msgid "Addition"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:43
+msgctxt "Info message for custom invoice modal"
+msgid "Add your name (or company name) and address to your invoices."
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceTextModal.js:52
+msgctxt "Placeholder for custom invoice text"
+msgid "Add your name (or company name) and address to your invoices"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceState.js:16
+msgctxt "Invoice state display as badge"
+msgid "Unpaid"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceState.js:17
+msgctxt "Invoice state display as badge"
+msgid "Paid"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceState.js:18
+msgctxt "Invoice state display as badge"
+msgid "Void"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceState.js:19
+msgctxt "Invoice state display as badge"
+msgid "Billed"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceState.js:20
+msgctxt "Invoice state display as badge"
+msgid "Writeoff"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/InvoiceActions.js:12
+msgctxt "Title for PDF file"
+msgid "ProtonMail invoice"
+msgstr ""
+
+#: node_modules/react-components/containers/support/AttachScreenshot.js:23
+msgctxt "Error notification in the bug report modal when the user upload file"
+msgid "No image selected"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:34
+#: node_modules/react-components/containers/support/BugModal.js:48
+msgctxt "Bug category"
+msgid "Login problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:35
+msgctxt "Bug category"
+msgid "Sign up problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:36
+msgctxt "Bug category"
+msgid "Bridge problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:37
+msgctxt "Bug category"
+msgid "Import / export problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:38
+msgctxt "Bug category"
+msgid "Custom domains problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:39
+#: node_modules/react-components/containers/support/BugModal.js:50
+msgctxt "Bug category"
+msgid "Payments problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:40
+#: node_modules/react-components/containers/support/BugModal.js:54
+msgctxt "Bug category"
+msgid "Connection problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:41
+msgctxt "Bug category"
+msgid "Slow speed problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:42
+msgctxt "Bug category"
+msgid "VPN problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:43
+#: node_modules/react-components/containers/support/BugModal.js:59
+msgctxt "Bug category"
+msgid "Feature request"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:44
+msgctxt "Bug category"
+msgid "Other"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:49
+msgctxt "Bug category"
+msgid "Signup problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:51
+msgctxt "Bug category"
+msgid "Installation problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:52
+msgctxt "Bug category"
+msgid "Update problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:53
+msgctxt "Bug category"
+msgid "Application problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:55
+msgctxt "Bug category"
+msgid "Speed problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:56
+msgctxt "Bug category"
+msgid "Manual setup problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:57
+msgctxt "Bug category"
+msgid "Website access problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:58
+msgctxt "Bug category"
+msgid "Streaming problem"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:80
+msgctxt "Action to select a title for the bug report modal"
+msgid "Select"
+msgstr ""
+
+#: node_modules/react-components/containers/support/BugModal.js:131
+msgctxt "Warning"
+msgid ""
+"Bug reports are not end-to-end encrypted, please do not send any sensitive "
+"information."
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailModal.js:37
+msgctxt "Warning"
+msgid ""
+"By deleting this address, you will no longer be able to recover your "
+"account."
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailModal.js:41
+msgctxt "Warning"
+msgid ""
+"By deleting this address, you will no longer be able to receive daily email "
+"notifications."
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailModal.js:45
+msgctxt "Warning"
+msgid ""
+"By deleting this address, you will no longer be able to recover your "
+"account or receive daily email notifications."
+msgstr ""
+
+#: node_modules/react-components/containers/notification/EmailModal.js:49
+msgctxt "Warning"
+msgid "Are you sure you want to delete the address?"
+msgstr ""
+
+#: node_modules/react-components/containers/error/GenericError.js:13
+msgctxt "Error message"
+msgid "Aaah! Something went wrong"
+msgstr ""
+
+#: node_modules/react-components/containers/error/GenericError.js:16
+msgctxt "Error message"
+msgid "Brace yourself till we get the error fixed."
+msgstr ""
+
+#: node_modules/react-components/containers/error/GenericError.js:17
+msgctxt "Error message"
+msgid "You may also refresh the page or try again later."
+msgstr ""
+
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:43
+msgctxt "Label for news"
+msgid "Major announcements (2-3 per year)"
+msgstr ""
+
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:54
+msgctxt "Label for news"
+msgid "Major features (3-4 per year)"
+msgstr ""
+
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:65
+msgctxt "Label for news"
+msgid "Proton Business (4-5 per year)"
+msgstr ""
+
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:76
+msgctxt "Label for news"
+msgid "Proton newsletter (5-6 per year)"
+msgstr ""
+
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:82
+msgctxt "Label for news"
+msgid "Proton Beta (10-12 per year)"
+msgstr ""
+
+#: node_modules/react-components/containers/account/DisableTwoFactorModal.js:34
+msgctxt "Message"
+msgid "Are you sure you want to disable two-factor authentication?"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodState.js:10
+msgctxt "Label on payment method"
+msgid "Expired"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodState.js:17
+msgctxt "Label on payment method"
+msgid "Default"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodDetails.js:21
+msgctxt "Label for credit card"
+msgid "Expiration"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:30
+msgctxt "Title for payment methods table"
+msgid "Method"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:31
+msgctxt "Title for payment methods table"
+msgid "Status"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:32
+msgctxt "Title for payment methods table"
+msgid "Actions"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:65
+msgctxt "Confirmation title"
+msgid "Delete payment method"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:66
+msgctxt "Confirmation message to delete payment method"
+msgid "Are you sure you want to delete this payment method?"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:36
+msgctxt "Payment method option"
+msgid "Pay with credit/debit card"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:59
+msgctxt "Payment method option"
+msgid "Pay with PayPal"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:66
+msgctxt "Payment method option"
+msgid "Pay with Bitcoin"
+msgstr ""
+
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:56
+msgctxt "Info for payment methods"
+msgid ""
+"If you wish to pay by credit card, you can add your card below. Learn about "
+"other payment options."
+msgstr ""
+
+#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:35
+msgctxt "Password"
+msgid "Confirm new password"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:26
+msgctxt "Monetary unit"
+msgid "Euro"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:27
+msgctxt "Monetary unit"
+msgid "Swiss franc"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CreditsModal.js:28
+msgctxt "Monetary unit"
+msgid "Dollar"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:85
+msgctxt "VPN speed"
+msgid "High"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:86
+msgctxt "VPN speed"
+msgid "Highest"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/CustomMailSection.js:32
+#: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:238
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:65
+#: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:77
+msgctxt "Price"
+msgid "Free"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/BillingSection.js:29
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:29
+msgctxt "Billing cycle"
+msgid "Monthly"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/BillingSection.js:30
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:30
+msgctxt "Billing cycle"
+msgid "Yearly"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/BillingSection.js:31
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:31
+msgctxt "Billing cycle"
+msgid "2-year"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:123
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:198
+msgctxt "Plan"
+msgid "Free"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/Cash.js:13
+#, javascript-format
+msgctxt "Info for cash payment method"
+msgid "To pay via Cash, please email us at ${ email } for instructions."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CouponDiscountBadge.js:12
+msgctxt "Discount with coupon code"
+msgid "20% discount applied to your subscription"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/CouponDiscountBadge.js:20
+msgctxt "Discount with coupon code"
+msgid "50% discount applied to your subscription"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
+msgctxt "TableHeader"
+msgid "Name"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
+msgctxt "TableHeader"
+msgid "Country"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:83
+msgctxt "TableHeader"
+msgid "Status"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:84
+msgctxt "TableHeader"
+msgid "Action"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/Country.js:28
+#, javascript-format
+msgctxt "CountryInfo"
+msgid "(via ${ exitCountryName })"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:141
+msgctxt "Tab"
+msgid "Secure Core configs"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:145
+msgctxt "Tab"
+msgid "Country configs"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:149
+msgctxt "Tab"
+msgid "Server configs"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:12
+msgctxt "VPNClient"
+msgid "Android"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:17
+msgctxt "VPNClient"
+msgid "iOS"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:22
+msgctxt "VPNClient"
+msgid "Windows"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:26
+msgctxt "VPNClient"
+msgid "MacOS"
+msgstr ""
+
+#: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:28
+msgctxt "VPNClient"
+msgid "GNU/Linux"
+msgstr ""
+
+#: node_modules/proton-shared/lib/helpers/humanSize.js:13
+msgctxt "file size format"
+msgid "KB"
+msgstr ""
+
+#: node_modules/proton-shared/lib/helpers/humanSize.js:14
+msgctxt "file size format"
+msgid "MB"
+msgstr ""
+
+#: node_modules/proton-shared/lib/helpers/humanSize.js:15
+msgctxt "file size format"
+msgid "GB"
+msgstr ""
+
+#: node_modules/proton-shared/lib/constants.js:236
+msgctxt "Theme"
+msgid "Dark (Default)"
+msgstr ""
+
+#: node_modules/proton-shared/lib/constants.js:240
+msgctxt "Theme"
+msgid "Light"
+msgstr ""
+
+#: node_modules/proton-shared/lib/constants.js:244
+msgctxt "Theme"
+msgid "Blue"
+msgstr ""
+
+#: node_modules/proton-shared/lib/constants.js:248
+msgctxt "Theme"
+msgid "Custom theme"
 msgstr ""
