@@ -145,8 +145,8 @@ msgctxt "Action"
 msgid "Compare all features"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:133
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:206
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:134
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:207
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:40
 #: src/app/components/sections/plans/PlansTable.js:360
 #: src/app/components/sections/plans/PlansTable.js:365
@@ -438,7 +438,7 @@ msgctxt "Action"
 msgid "Email me my username(s)"
 msgstr ""
 
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:37
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:42
 msgctxt "Action"
 msgid "Reset my password"
 msgstr ""
@@ -487,19 +487,19 @@ msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:134
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:231
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:133
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:206
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:134
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:207
 msgctxt "Action"
 msgid "Upgrade"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:242
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:243
 msgctxt "Action"
 msgid "Pay yearly"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:116
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:258
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:259
 msgctxt "Action"
 msgid "Remove coupon"
 msgstr ""
@@ -670,7 +670,12 @@ msgctxt "Label"
 msgid "Amount"
 msgstr ""
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:63
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:64
+msgctxt "Label"
+msgid "Credits used"
+msgstr ""
+
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:73
 #: node_modules/react-components/containers/payments/BillingSection.js:254
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:73
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:197
@@ -912,40 +917,40 @@ msgctxt "Label"
 msgid "Gift"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:140
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:141
 msgctxt "Label"
 msgid "Users"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:150
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:151
 msgctxt "Label"
 msgid "Email addresses"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:160
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:161
 msgctxt "Label"
 msgid "Storage capacity"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:173
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:174
 msgctxt "Label"
 msgid "Custom domains"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:184
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:213
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:185
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:214
 msgctxt "Label"
 msgid "VPN connections"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:224
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:225
 msgctxt "Label"
 msgid "Billing cycle"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/BillingSection.js:231
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:112
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:249
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:250
 msgctxt "Label"
 msgid "Coupon"
 msgstr ""
@@ -1133,7 +1138,7 @@ msgctxt "Placeholder"
 msgid "Recovery email"
 msgstr ""
 
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:25
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:30
 #, javascript-format
 msgctxt "Placeholder"
 msgid "Enter the word '${ WORD }' here"
@@ -1494,7 +1499,7 @@ msgctxt "Info"
 msgid "Your subscription is managed by Mozilla. Please contact Mozilla support."
 msgstr ""
 
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:28
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:20
 msgctxt "Info"
 msgid "Emailing preference updated"
 msgstr ""
@@ -1597,7 +1602,7 @@ msgid ""
 "(This is usually the email address you provided during signup.)"
 msgstr ""
 
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:20
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:25
 #, javascript-format
 msgctxt "Info"
 msgid ""
@@ -1607,12 +1612,12 @@ msgid ""
 "log in with them ${ loginLink }."
 msgstr ""
 
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:22
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:27
 msgctxt "Info"
 msgid "ALL YOUR DATA WILL BE LOST!"
 msgstr ""
 
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:33
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:38
 msgctxt "Info"
 msgid ""
 "If you remember your old password later, you can recover your existing "
@@ -1736,28 +1741,28 @@ msgctxt "Info"
 msgid "No subscription yet"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:124
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:125
 msgctxt "Info"
 msgid "Not activated"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:129
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:202
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:130
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:203
 msgctxt "Info"
 msgid "Combine paid ProtonMail and ProtonVPN and get a 20% discount on both"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:229
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:230
 msgctxt "Info"
 msgid "Switch to annual billing for a 20% discount"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:233
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:234
 msgctxt "Info"
 msgid "20% rebate applied to your subscription"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:237
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:238
 msgctxt "Info"
 msgid "33% rebate applied to your subscription"
 msgstr ""
@@ -3613,27 +3618,27 @@ msgctxt "Error message"
 msgid "You may also refresh the page or try again later."
 msgstr ""
 
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:43
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:26
 msgctxt "Label for news"
 msgid "Major announcements (2-3 per year)"
 msgstr ""
 
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:54
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:27
 msgctxt "Label for news"
 msgid "Major features (3-4 per year)"
 msgstr ""
 
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:65
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:28
 msgctxt "Label for news"
 msgid "Proton Business (4-5 per year)"
 msgstr ""
 
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:76
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:29
 msgctxt "Label for news"
 msgid "Proton newsletter (5-6 per year)"
 msgstr ""
 
-#: node_modules/react-components/containers/account/NewsCheckboxes.js:82
+#: node_modules/react-components/containers/account/NewsCheckboxes.js:30
 msgctxt "Label for news"
 msgid "Proton Beta (10-12 per year)"
 msgstr ""
@@ -3761,8 +3766,8 @@ msgctxt "Billing cycle"
 msgid "2-year"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:123
-#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:198
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:124
+#: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:199
 msgctxt "Plan"
 msgid "Free"
 msgstr ""
