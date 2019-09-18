@@ -24,14 +24,14 @@ before_script:
  - ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
  - git remote -v
  - git clone "$CI_SCRIPTS_GIT" --depth 1 ci-scripts
+ - ls -l
 
 setup:
     stage: setup
     tags:
         - dind
     script:
-        - ./ci-scripts/prepare-ci.sh install-app
-        - npx proton-pack config
+        - ./ci-scripts/prepare-ci.sh install-app --remote "$APP_GIT"
     artifacts:
         expire_in: 1 days
         paths:
@@ -61,7 +61,7 @@ i18n-upgrade-app:
     tags:
         - dind
     script:
-        - ./ci-scripts/prepare-ci.sh i18n upgrade-app "$I18N_APPROVED"
+        - ./ci-scripts/prepare-ci.sh i18n upgrade-app --limit "$I18N_APPROVED"
     when: manual
 
 i18n-to-crowdin:
@@ -78,7 +78,7 @@ deploy:
         - dind
     script:
         - ./ci-scripts/prepare-ci.sh install-app-remote
-        - ./ci-scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY" "$API_DEPLOY";
+        - ./ci-scripts/prepare-ci.sh deploy-app --branch "$BRANCH_DEPLOY" --api "$API_DEPLOY"
     when: manual
 
 deploy-qa:
@@ -86,8 +86,8 @@ deploy-qa:
     tags:
         - dind
     script:
-        - ./ci-scripts/prepare-ci.sh install-app-remote
-        - ./ci-scripts/prepare-ci.sh deploy-app "$BRANCH_DEPLOY_QA" "$API_DEPLOY";
+        - ./ci-scripts/prepare-ci.sh install-app-remote --update-lock
+        - ./ci-scripts/prepare-ci.sh deploy-app --branch "$BRANCH_DEPLOY_QA" --api "$API_DEPLOY"
     when: manual
 
 variables:
