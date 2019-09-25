@@ -99,7 +99,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
 
     const handlePayment = async (model, paymentParameters) => {
         const paymentDetails = await makePayment(model, paymentParameters);
-        await signup(model, { paymentDetails });
+        await withCreateLoading(signup(model, { paymentDetails }));
         setModel(model);
     };
 
@@ -201,11 +201,7 @@ const SignupContainer = ({ history, onLogin, stopRedirect }) => {
                         )}
 
                         {signupState === SignupState.Payment && (
-                            <PaymentStep
-                                model={model}
-                                paymentAmount={selectedPlan.price.total}
-                                onPay={(...rest) => withCreateLoading(handlePayment(...rest))}
-                            >
+                            <PaymentStep model={model} paymentAmount={selectedPlan.price.total} onPay={handlePayment}>
                                 {selectedPlanComponent}
                             </PaymentStep>
                         )}
