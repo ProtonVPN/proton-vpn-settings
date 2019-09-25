@@ -16,7 +16,7 @@ import useVerification from './VerificationStep/useVerification';
 import { checkCookie } from 'proton-shared/lib/helpers/cookies';
 import MobileRedirectionStep from './MobileRedirectionStep/MobileRedirectionStep';
 
-export const SignupState = {
+const SignupState = {
     Plan: 'plan',
     Account: 'account',
     Verification: 'verification',
@@ -33,7 +33,7 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
 
     useEffect(() => {
         document.title = c('Title').t`Sign up - ProtonVPN`;
-        // Always start at plans of account if plan is preselected
+        // Always start at plans, or account if plan is preselected
         if (preSelectedPlan) {
             history.replace(`/signup/${SignupState.Account}`);
         } else {
@@ -48,9 +48,11 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
     const invite = historyState.invite;
     const coupon = historyState.coupon;
 
+    const goToStep = (step) => history.push(`/signup/${step}`);
+
     const handleLogin = (...args) => {
         if (redirectToMobile) {
-            return history.push(`/signup/${SignupState.MobileRedirection}`);
+            goToStep(SignupState.MobileRedirection);
         }
 
         stopRedirect();
@@ -79,10 +81,6 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
         }
     );
     const { verify, requestCode } = useVerification();
-
-    const goToStep = (step) => {
-        history.push(`/signup/${step}`);
-    };
 
     const handleSelectPlan = (model, next = false) => {
         setModel(model);
@@ -150,7 +148,7 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
                 <div className="flex flex-nowrap flex-items-center onmobile-flex-wrap mb1">
                     <div className="flex-item-fluid plan-back-button">
                         {!creatingAccount &&
-                            (match.params.step && match.params.step !== SignupState.Plan ? (
+                            (signupState && signupState !== SignupState.Plan ? (
                                 <Button onClick={() => history.goBack()}>{c('Action').t`Back`}</Button>
                             ) : (
                                 <Href className="pm-button" url="https://protonvpn.com" target="_self">{c('Action')
@@ -176,7 +174,7 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
                     </div>
                 ) : (
                     <>
-                        {(!match.params.step || match.params.step === SignupState.Plan) && (
+                        {(!signupState || signupState === SignupState.Plan) && (
                             <PlanStep
                                 plans={availablePlans.map((plan) => getPlanByName(plan))}
                                 model={model}
@@ -186,12 +184,12 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
                                 onSelectPlan={handleSelectPlan}
                             />
                         )}
-                        {match.params.step === SignupState.Account && (
+                        {signupState === SignupState.Account && (
                             <AccountStep model={model} onContinue={handleCreateAccount}>
                                 {selectedPlanComponent}
                             </AccountStep>
                         )}
-                        {match.params.step === SignupState.Verification && (
+                        {signupState === SignupState.Verification && (
                             <VerificationStep
                                 model={model}
                                 allowedMethods={signupAvailability.allowedMethods}
@@ -201,7 +199,7 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
                                 {selectedPlanComponent}
                             </VerificationStep>
                         )}
-                        {match.params.step === SignupState.Payment && (
+                        {signupState === SignupState.Payment && (
                             <PaymentStep
                                 model={model}
                                 paymentAmount={selectedPlan.price.total}
@@ -210,7 +208,7 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
                                 {selectedPlanComponent}
                             </PaymentStep>
                         )}
-                        {match.params.step === SignupState.MobileRedirection && <MobileRedirectionStep model={model} />}
+                        {signupState === SignupState.MobileRedirection && <MobileRedirectionStep model={model} />}
                     </>
                 )}
             </div>
@@ -221,6 +219,11 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
 SignupContainer.propTypes = {
     stopRedirect: PropTypes.func.isRequired,
     onLogin: PropTypes.func.isRequired,
+    match: PropTypes.shape({
+        params: PropTypes.shape({
+            step: PropTypes.string
+        })
+    }).isRequired,
     history: PropTypes.shape({
         push: PropTypes.func.isRequired,
         location: PropTypes.shape({
