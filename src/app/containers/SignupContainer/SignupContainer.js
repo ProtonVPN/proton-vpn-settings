@@ -52,7 +52,7 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
 
     const handleLogin = (...args) => {
         if (redirectToMobile) {
-            goToStep(SignupState.MobileRedirection);
+            return goToStep(SignupState.MobileRedirection);
         }
 
         stopRedirect();
