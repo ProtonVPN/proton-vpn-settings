@@ -103,11 +103,6 @@ msgctxt "Link"
 msgid "Not activated"
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteSection.js:37
-msgctxt "Link"
-msgid "mail.protonmail.com"
-msgstr ""
-
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:33
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:73
 msgctxt "Link"
@@ -175,7 +170,7 @@ msgctxt "Action"
 msgid "Send"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:82
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:81
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:57
 msgctxt "Action"
 msgid "Verify"
@@ -203,9 +198,9 @@ msgstr ""
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:95
 #: node_modules/react-components/containers/login/LoginForm.js:215
 #: node_modules/react-components/containers/payments/PayPal.js:96
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:81
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:116
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:248
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:80
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:115
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:245
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:39
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:12
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:25
@@ -234,17 +229,17 @@ msgid "Go to login"
 msgstr ""
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:218
-#: src/app/containers/SignupContainer/SignupContainer.js:150
+#: src/app/containers/SignupContainer/SignupContainer.js:152
 msgctxt "Action"
 msgid "Back"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:152
+#: src/app/containers/SignupContainer/SignupContainer.js:154
 msgctxt "Action"
 msgid "Homepage"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:162
+#: src/app/containers/SignupContainer/SignupContainer.js:164
 msgctxt "Action"
 msgid "Need help"
 msgstr ""
@@ -273,7 +268,7 @@ msgstr ""
 #: node_modules/react-components/containers/login/AbuseModal.js:21
 #: node_modules/react-components/containers/payments/CreditsModal.js:65
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:49
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:251
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:248
 msgctxt "Action"
 msgid "Close"
 msgstr ""
@@ -394,9 +389,9 @@ msgid "Ok"
 msgstr ""
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:273
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:134
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:164
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:177
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:136
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:170
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:183
 msgctxt "Action"
 msgid "Next"
 msgstr ""
@@ -412,7 +407,7 @@ msgctxt "Action"
 msgid "Delete"
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteSection.js:73
+#: node_modules/react-components/containers/account/DeleteSection.js:75
 msgctxt "Action"
 msgid "Delete your account"
 msgstr ""
@@ -464,12 +459,12 @@ msgstr ""
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:52
 #: node_modules/react-components/containers/payments/PayPal.js:78
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:128
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:127
 msgctxt "Action"
 msgid "Try again"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:132
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:131
 msgctxt "Action"
 msgid "Use a different payment method"
 msgstr ""
@@ -523,14 +518,14 @@ msgctxt "Action"
 msgid "Got it"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:134
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:231
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:136
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:229
 msgctxt "Action"
 msgid "Continue"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:230
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:254
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:228
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:251
 #.  Insert it before the last one
 msgctxt "Action"
 msgid "Previous"
@@ -692,7 +687,7 @@ msgstr ""
 #: node_modules/react-components/containers/invoices/PayInvoiceModal.js:73
 #: node_modules/react-components/containers/payments/BillingSection.js:254
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:73
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:197
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:203
 msgctxt "Label"
 msgid "Amount due"
 msgstr ""
@@ -887,7 +882,7 @@ msgctxt "Label"
 msgid "Cardholder name"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:69
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:68
 msgctxt "Label"
 msgid "Pay with cash"
 msgstr ""
@@ -1317,12 +1312,12 @@ msgid ""
 msgstr ""
 
 #: node_modules/react-components/components/loader/Loader.js:24
-#: src/app/containers/SignupContainer/SignupContainer.js:171
+#: src/app/containers/SignupContainer/SignupContainer.js:173
 msgctxt "Info"
 msgid "Loading"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:171
+#: src/app/containers/SignupContainer/SignupContainer.js:173
 msgctxt "Info"
 msgid "Creating your account"
 msgstr ""
@@ -1557,7 +1552,7 @@ msgid ""
 "subscribe to our various emails and visit our blog from time to time."
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteSection.js:43
+#: node_modules/react-components/containers/account/DeleteSection.js:45
 #, javascript-format
 msgctxt "Info"
 msgid ""
@@ -1565,14 +1560,14 @@ msgid ""
 "please log in at ${ loginLink } and delete your account there."
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteSection.js:67
+#: node_modules/react-components/containers/account/DeleteSection.js:69
 msgctxt "Info"
 msgid ""
 "Deleting your account will permanently delete your emails, and you will "
 "lose your email address."
 msgstr ""
 
-#: node_modules/react-components/containers/account/DeleteSection.js:69
+#: node_modules/react-components/containers/account/DeleteSection.js:71
 msgctxt "Info"
 msgid ""
 "Deleting your account will permanently delete all data associated with it "
@@ -1668,7 +1663,7 @@ msgstr ""
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:69
 #: node_modules/react-components/containers/payments/DonateModal.js:44
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:194
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:200
 msgctxt "Info"
 msgid ""
 "Your payment details are protected with TLS encryption and Swiss privacy "
@@ -1684,46 +1679,33 @@ msgid ""
 "i18nCurrency } spent."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:42
-msgctxt "Info"
-msgid "You will not be charged"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:92
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:91
 msgctxt "Info"
 msgid "Your bank requires 3-D Secure verification for security purposes."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:97
-#, javascript-format
-msgctxt "Info"
-msgid ""
-"Verification will open a new tab. Please disable any popup blockers. ${ "
-"notCharged }. Any amount used to verify your card will be refunded "
-"immediately."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:103
-msgctxt "Info"
-msgid "You will be soon redirected to your bank to verify your payment."
-msgstr ""
-
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:106
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:96
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:105
 msgctxt "Info"
 msgid "Verification will open a new tab, please disable any popup blockers."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:112
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:102
+msgctxt "Info"
+msgid "You will be soon redirected to your bank to verify your payment."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:111
 msgctxt "Info"
 msgid "Please verify payment at the new tab which was opened."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:118
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:117
 msgctxt "Info"
 msgid "Payment can take a few minutes to fully verify."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:123
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:122
 msgctxt "Info"
 msgid ""
 "Please try again, use a different payment method, or call your bank for "
@@ -1769,6 +1751,11 @@ msgstr ""
 #: node_modules/react-components/containers/payments/subscription/CyclePromotion.js:23
 msgctxt "Info"
 msgid "A 33% discount two year billing has been automatically applied."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/Upgrading.js:8
+msgctxt "Info"
+msgid "Your account is being upgraded, this may take up to 30 seconds."
 msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:12
@@ -1830,12 +1817,6 @@ msgstr ""
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:27
 msgctxt "Info"
 msgid "Thank you"
-msgstr ""
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:225
-#.  Insert it before the last one
-msgctxt "Info"
-msgid "By clicking Upgrade, you agree to abide by Proton's terms and conditions."
 msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:17
@@ -2169,12 +2150,12 @@ msgctxt "Title"
 msgid "Account created"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:30
+#: src/app/containers/SignupContainer/SignupContainer.js:35
 msgctxt "Title"
 msgid "Sign up - ProtonVPN"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:166
+#: src/app/containers/SignupContainer/SignupContainer.js:168
 msgctxt "Title"
 msgid "Sign up"
 msgstr ""
@@ -2369,7 +2350,7 @@ msgstr ""
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:31
 msgctxt "Title"
-msgid "Card verification"
+msgid "Payment verification"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:32
@@ -2384,10 +2365,10 @@ msgstr ""
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:34
 msgctxt "Title"
-msgid "3-D secure payment verification failed"
+msgid "3-D Secure verification failed"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:125
+#: node_modules/react-components/containers/payments/PaymentVerificationModal.js:124
 msgctxt "Title"
 msgid "Error"
 msgstr ""
@@ -2413,7 +2394,7 @@ msgid "ProtonMail total"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:24
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:190
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:196
 msgctxt "Title"
 msgid "Payment details"
 msgstr ""
@@ -2423,17 +2404,22 @@ msgctxt "Title"
 msgid "Thank you!"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:130
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:132
 msgctxt "Title"
 msgid "Order summary"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:163
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:155
+msgctxt "Title"
+msgid "Upgrading account"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:169
 msgctxt "Title"
 msgid "VPN protection"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:176
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:182
 msgctxt "Title"
 msgid "Customization"
 msgstr ""
@@ -3755,12 +3741,12 @@ msgctxt "Payment method option"
 msgid "Pay with credit/debit card"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:57
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:56
 msgctxt "Payment method option"
 msgid "Pay with PayPal"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:64
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:63
 msgctxt "Payment method option"
 msgid "Pay with Bitcoin"
 msgstr ""
