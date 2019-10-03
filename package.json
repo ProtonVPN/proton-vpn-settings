@@ -5,8 +5,8 @@
     "main": "index.js",
     "scripts": {
         "start": "git update-index --assume-unchanged package-lock.json && proton-pack dev-server",
-        "lint": "eslint src --ext .js --quiet --cache",
-        "pretty": "prettier --write  $(find src/app -type f -name '*.js')",
+        "lint": "eslint src --ext .js,.ts,.tsx --quiet --cache",
+        "pretty": "prettier --write  $(find src/app -type f -name '*.js' -o -name '*.ts' -o -name '*.tsx')",
         "preversion": "git update-index --no-assume-unchanged package-lock.json",
         "postversion": "git update-index --assume-unchanged package-lock.json && git push --tags",
         "sync:lock": "./node_modules/proton-bundler/scripts/updatePackageLock.sh",
@@ -18,7 +18,8 @@
         "deploy:standalone": "proton-bundler --appMode standalone",
         "build": "cross-env NODE_ENV=production proton-pack compile $npm_package_config_publicPathFlag",
         "build:standalone": "cross-env NODE_ENV=production proton-pack compile --appMode=standalone",
-        "deploy:prod": "proton-bundler --remote --branch=deploy-prod"
+        "deploy:prod": "proton-bundler --remote --branch=deploy-prod",
+        "check-types": "tsc"
     },
     "repository": {
         "type": "git",
@@ -44,21 +45,25 @@
         "ttag": "^1.7.14"
     },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^2.3.2",
+        "@typescript-eslint/parser": "^2.3.2",
         "husky": "^2.3.0",
         "lint-staged": "^8.1.7",
         "prettier": "^1.17.1",
         "proton-bundler": "github:ProtonMail/proton-bundler#master",
-        "proton-i18n": "github:ProtonMail/proton-i18n#semver:^1.4.0"
+        "proton-i18n": "github:ProtonMail/proton-i18n#semver:^1.4.0",
+        "typescript": "^3.6.3"
     },
     "lint-staged": {
-        "*.js": [
+        "(*.ts|*.tsx|*.js)": [
             "prettier --write",
+            "eslint",
             "git add"
         ]
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "npm run check-types && lint-staged"
         }
     },
     "config": {
