@@ -51,7 +51,7 @@
         "lint-staged": "^8.1.7",
         "prettier": "^1.17.1",
         "proton-bundler": "github:ProtonMail/proton-bundler#master",
-        "proton-i18n": "github:ProtonMail/proton-i18n#semver:^1.4.0",
+        "proton-i18n": "github:ProtonMail/proton-i18n#semver:^1.6.12",
         "typescript": "^3.6.3"
     },
     "lint-staged": {
