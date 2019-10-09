@@ -781,7 +781,7 @@ msgctxt "Action"
 msgid "Use another verification method"
 msgstr ""
 
-#: node_modules/react-components/containers/notification/RecoveryEmail.js:10
+#: node_modules/react-components/containers/notification/RecoveryEmail.js:15
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:56
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:7
 msgctxt "Action"
@@ -1166,8 +1166,8 @@ msgctxt "Action"
 msgid "Check out with PayPal"
 msgstr ""
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:205
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:208
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:206
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:209
 msgctxt "Action"
 msgid "Download all configurations"
 msgstr ""
@@ -1355,6 +1355,11 @@ msgid ""
 "When notifications are enabled, we'll send an alert to your "
 "recovery/notification address if you have new messages in your ProtonMail "
 "account."
+msgstr ""
+
+#: node_modules/react-components/containers/notification/RecoveryEmail.js:11
+msgctxt "Info"
+msgid "Not set"
 msgstr ""
 
 #: node_modules/react-components/containers/login/AbuseModal.js:10
@@ -1708,7 +1713,7 @@ msgstr ""
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:143
 msgctxt "Info"
-msgid "Verification can take a few minutes to fully verify."
+msgid "Verification can take a few minutes."
 msgstr ""
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:144
@@ -1896,7 +1901,7 @@ msgid "Tor"
 msgstr ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:101
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:204
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:205
 msgctxt "Info"
 msgid "Plan upgrade required"
 msgstr ""
@@ -1913,8 +1918,8 @@ msgstr ""
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:157
 msgctxt "Info"
 msgid ""
-"Secure Core configurations add additional protection against VPN endpoint "
-"compromise."
+"Install a Secure Core configuration file to benefit from an additional "
+"protection against VPN endpoint compromise."
 msgstr ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:162
@@ -1925,8 +1930,8 @@ msgstr ""
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:179
 msgctxt "Info"
 msgid ""
-"Country Connect configuration files ensure a faster connection to the "
-"selected country on average."
+"Install a Country configuration file to connect to a random server in the "
+"country of your choice."
 msgstr ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:183
@@ -1936,7 +1941,9 @@ msgstr ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:199
 msgctxt "Info"
-msgid "Connect to a single server in the country of your choice."
+msgid ""
+"Install a Server configuration file to connect to a specific server in the "
+"country of your choice."
 msgstr ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:33
@@ -2202,11 +2209,6 @@ msgstr ""
 #: src/app/containers/DownloadsContainer.js:18
 msgctxt "Title"
 msgid "OpenVPN configuration files"
-msgstr ""
-
-#: node_modules/react-components/components/pagination/Pagination.js:50
-msgctxt "Title"
-msgid "Open pagination"
 msgstr ""
 
 #: node_modules/react-components/components/modal/PreviewPDFModal.js:6
@@ -3710,7 +3712,7 @@ msgstr ""
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:28
 msgctxt "Label for news"
-msgid "Proton Business (4-5 per year)"
+msgid "Proton for business (4-5 per year)"
 msgstr ""
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:29
