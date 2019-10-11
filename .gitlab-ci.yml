@@ -36,7 +36,7 @@ setup:
         expire_in: 1 days
         paths:
             - node_modules/
-            - src/app/config.js
+            - src/app/config.ts
             - .env
             - .gitconfig
             - appConfig.json
