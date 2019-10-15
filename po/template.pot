@@ -109,6 +109,11 @@ msgctxt "Link"
 msgid "here"
 msgstr ""
 
+#: node_modules/react-components/containers/payments/PayPal.js:99
+msgctxt "Link"
+msgid "click here"
+msgstr ""
+
 #: node_modules/react-components/containers/login/SignInLayout.js:26
 #: src/app/components/layout/PublicHeader.js:9
 msgctxt "Label"
@@ -792,7 +797,7 @@ msgstr ""
 #: node_modules/react-components/components/modal/FormModal.js:18
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:95
 #: node_modules/react-components/containers/login/LoginForm.js:215
-#: node_modules/react-components/containers/payments/PayPal.js:94
+#: node_modules/react-components/containers/payments/PayPal.js:112
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:97
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:139
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:250
@@ -824,17 +829,17 @@ msgid "Go to login"
 msgstr ""
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:218
-#: src/app/containers/SignupContainer/SignupContainer.js:151
+#: src/app/containers/SignupContainer/SignupContainer.js:153
 msgctxt "Action"
 msgid "Back"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:153
+#: src/app/containers/SignupContainer/SignupContainer.js:155
 msgctxt "Action"
 msgid "Homepage"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:163
+#: src/app/containers/SignupContainer/SignupContainer.js:165
 msgctxt "Action"
 msgid "Need help"
 msgstr ""
@@ -1029,12 +1034,12 @@ msgctxt "Action"
 msgid "Mark as default"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:59
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:61
 msgctxt "Action"
 msgid "Add credit / debit card"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:61
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:63
 msgctxt "Action"
 msgid "Add PayPal"
 msgstr ""
@@ -1065,7 +1070,7 @@ msgid "Top up"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:52
-#: node_modules/react-components/containers/payments/PayPal.js:76
+#: node_modules/react-components/containers/payments/PayPal.js:88
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:155
 msgctxt "Action"
 msgid "Try again"
@@ -1161,9 +1166,15 @@ msgctxt "Action"
 msgid "Use gift code"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:102
+#: node_modules/react-components/containers/payments/PayPal.js:124
+#: node_modules/react-components/containers/payments/PayPal.js:153
 msgctxt "Action"
 msgid "Check out with PayPal"
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:139
+msgctxt "Action"
+msgid "Add PayPal payment method"
 msgstr ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:206
@@ -1305,12 +1316,12 @@ msgid ""
 "button to be taken back to the app."
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:172
+#: src/app/containers/SignupContainer/SignupContainer.js:174
 msgctxt "Info"
 msgid "Loading"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:172
+#: src/app/containers/SignupContainer/SignupContainer.js:174
 msgctxt "Info"
 msgid "Creating your account"
 msgstr ""
@@ -1867,17 +1878,41 @@ msgctxt "Info"
 msgid "There are no billing details available for your current subscription."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:92
+#: node_modules/react-components/containers/payments/PayPal.js:110
 msgctxt "Info"
 msgid "Please verify the payment in the new tab."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:99
+#: node_modules/react-components/containers/payments/PayPal.js:120
+#: node_modules/react-components/containers/payments/PayPal.js:150
 msgctxt "Info"
 msgid ""
-"You will need to login to your PayPal account to complete this transaction. "
-"We will open a new tab with PayPal for you. If you use any pop-up blockers, "
-"please disable them to continue."
+"We will redirect you to PayPal in a new browser tab to complete this "
+"transaction. If you use any pop-up blockers, please disable them to "
+"continue."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:128
+#, javascript-format
+msgctxt "Info"
+msgid ""
+"You must have a credit card or bank account linked with your PayPal "
+"account. If your PayPal account doesn't have that, please ${ clickHere }."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:135
+msgctxt "Info"
+msgid ""
+"This will enable PayPal to be used to pay for your Proton subscription. We "
+"will redirect you to PayPal in a new browser tab. If you use any pop-up "
+"blockers, please disable them to continue."
+msgstr ""
+
+#: node_modules/react-components/containers/payments/PayPal.js:143
+msgctxt "Info"
+msgid ""
+"You must have a credit card or bank account linked with your PayPal account "
+"in order to add it as a payment method."
 msgstr ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/LoadIndicator.js:8
@@ -1985,7 +2020,7 @@ msgid "Payments"
 msgstr ""
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:33
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:49
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:51
 #: src/app/containers/PaymentsContainer.js:18
 msgctxt "Title"
 msgid "Payment methods"
@@ -2168,7 +2203,7 @@ msgctxt "Title"
 msgid "Sign up - ProtonVPN"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:167
+#: src/app/containers/SignupContainer/SignupContainer.js:169
 msgctxt "Title"
 msgid "Sign up"
 msgstr ""
@@ -2918,7 +2953,7 @@ msgctxt "Error"
 msgid "Email address invalid"
 msgstr ""
 
-#: node_modules/react-components/components/input/Input.js:30
+#: node_modules/react-components/components/input/Input.js:31
 msgctxt "Error"
 msgid "This field is required"
 msgstr ""
@@ -3054,12 +3089,12 @@ msgctxt "Error"
 msgid "The minimum payment we accept is ${ _price2 }"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:56
+#: node_modules/react-components/containers/payments/PayPal.js:68
 msgctxt "Error"
 msgid "Amount below minimum."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:62
+#: node_modules/react-components/containers/payments/PayPal.js:74
 msgctxt "Error"
 msgid "Amount above the maximum."
 msgstr ""
@@ -3095,12 +3130,12 @@ msgctxt "Notification"
 msgid "Verification code successfully sent to ${ destination }"
 msgstr ""
 
-#: src/app/containers/SignupContainer/useSignup.js:117
+#: src/app/containers/SignupContainer/useSignup.js:124
 msgctxt "Notification"
 msgid "Coupons are temporarily disabled"
 msgstr ""
 
-#: src/app/containers/SignupContainer/useSignup.js:133
+#: src/app/containers/SignupContainer/useSignup.js:140
 msgctxt "Notification"
 msgid "Invites are temporarily disabled"
 msgstr ""
@@ -3785,7 +3820,7 @@ msgctxt "Payment method option"
 msgid "Pay with Bitcoin"
 msgstr ""
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:56
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:58
 msgctxt "Info for payment methods"
 msgid ""
 "If you wish to pay by credit card, you can add your card below. Learn about "
