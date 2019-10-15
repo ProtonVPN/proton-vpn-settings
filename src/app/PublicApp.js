@@ -1,15 +1,15 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Redirect, Route, Switch } from 'react-router-dom';
-import { StandardPublicApp, ResetPasswordContainer, ForgotUsernameContainer } from 'react-components';
+import { StandardPublicApp, ResetPasswordContainer, ForgotUsernameContainer, SignupContainer } from 'react-components';
 
 import PublicLayout from './components/layout/PublicLayout';
 import LoginContainer from './containers/LoginContainer';
 import RedeemContainer from './containers/RedeemContainer';
 import PreInviteContainer from './containers/PreInviteContainer';
-import SignupContainer from './containers/SignupContainer/SignupContainer';
 
 import locales from './locales';
+import PlansTable from './components/sections/plans/PlansTable';
 
 const PublicApp = ({ onLogin }) => {
     const hasStopRedirect = useRef(false);
@@ -34,6 +34,7 @@ const PublicApp = ({ onLogin }) => {
                                 history={history}
                                 match={match}
                                 onLogin={onLogin}
+                                renderPlansTable={(props) => <PlansTable {...props} />}
                             />
                         )}
                     />
