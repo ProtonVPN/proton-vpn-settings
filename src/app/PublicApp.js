@@ -30,6 +30,7 @@ const PublicApp = ({ onLogin }) => {
                         path="/signup/:step?"
                         render={({ history, match }) => (
                             <SignupContainer
+                                redirectUrl="/downloads"
                                 homepageUrl={'https://protonvpn.com'}
                                 stopRedirect={stopRedirect}
                                 history={history}
