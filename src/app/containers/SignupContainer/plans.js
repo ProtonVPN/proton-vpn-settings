@@ -147,7 +147,7 @@ export const getPlan = (planName, cycle, plans = [], countries = []) => {
     const price = (plan && getPlanPrice(plan, cycle)) || { monthly: 0, total: 0, totalMonthly: 0, saved: 0 };
 
     return {
-        ...getPlanFeatures(planName, plan ? plan.MaxVPN : 1, countries),
+        ...getPlanFeatures(planName, plan ? plan.MaxVPN || 0 : 1, countries),
         planName,
         title: PLAN_NAMES[planName],
         id: plan && plan.ID,

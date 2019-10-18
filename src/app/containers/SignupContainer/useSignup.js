@@ -88,7 +88,7 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
 
     // Until we can query plans+coupons at once, we need to check each plan individually
     useEffect(() => {
-        const getPlansWithCoupon = async (plans) => {
+        const getPlansWithCoupon = async (plans, bundleName) => {
             const { AmountDue, CouponDiscount, Coupon } = await api(
                 checkSubscription({
                     CouponCode: coupon.code,
@@ -98,10 +98,11 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
                 })
             );
             const sum = (a = 0, b = 0) => a + b;
-            const plan = plans.length
+            const plan = !bundleName
                 ? plans[0]
                 : {
                       //Constructs artificial plan for bundles
+                      Name: bundleName,
                       Type: PLAN_TYPES.PLAN,
                       Pricing: plans.reduce(
                           (pricing, plan) => ({
@@ -132,7 +133,10 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
             const bundle = PLAN_BUNDLES[model.planName];
             const bundlePlan =
                 bundle &&
-                getPlansWithCoupon(plans.filter(({ Name, Type }) => Type === PLAN_TYPES.PLAN && bundle.includes(Name)));
+                (await getPlansWithCoupon(
+                    plans.filter(({ Name, Type }) => Type === PLAN_TYPES.PLAN && bundle.includes(Name)),
+                    model.planName
+                ));
 
             const plansWithCoupons = await Promise.all(
                 bundlePlan ? [...plansInfo, bundlePlan] : plansInfo.map(getPlanWithCoupon)
