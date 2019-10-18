@@ -16,6 +16,7 @@ export const PLAN = {
 };
 
 export const PLAN_NAMES = {
+    [PLAN.BUNDLE_PLUS]: 'Mail+VPN Plus',
     [PLAN.FREE]: 'Free',
     [PLAN.VISIONARY]: 'Visionary',
     [PLAN.BASIC]: 'Basic',
@@ -143,8 +144,8 @@ const getPlanPrice = (plan, cycle) => {
 
 export const getPlan = (planName, cycle, plans = [], countries = []) => {
     const plan = plans.find(({ Type, Name }) => Type === PLAN_TYPES.PLAN && Name === planName);
-    const price = plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, totalMonthly: 0, saved: 0 };
-    // TODO: if plan is bundle, then set pricing accordingly (sum?)
+    const price = (plan && getPlanPrice(plan, cycle)) || { monthly: 0, total: 0, totalMonthly: 0, saved: 0 };
+
     return {
         ...getPlanFeatures(planName, plan ? plan.MaxVPN : 1, countries),
         planName,

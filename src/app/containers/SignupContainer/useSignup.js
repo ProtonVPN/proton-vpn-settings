@@ -27,6 +27,8 @@ import {
 import { getPlan, PLAN, VPN_PLANS, PLAN_BUNDLES } from './plans';
 import { c } from 'ttag';
 
+const toPlanMap = (plans) => plans.reduce((planMap, plan) => ({ ...planMap, [plan.ID]: 1 }), {});
+
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
     const email = allowedMethods.includes(TOKEN_TYPES.EMAIL);
     const sms = allowedMethods.includes(TOKEN_TYPES.SMS);
@@ -86,29 +88,54 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
 
     // Until we can query plans+coupons at once, we need to check each plan individually
     useEffect(() => {
+        const getPlansWithCoupon = async (plans) => {
+            const { AmountDue, CouponDiscount, Coupon } = await api(
+                checkSubscription({
+                    CouponCode: coupon.code,
+                    Currency: model.currency,
+                    Cycle: model.cycle,
+                    PlanIDs: toPlanMap(plans)
+                })
+            );
+            const sum = (a = 0, b = 0) => a + b;
+            const plan = plans.length
+                ? plans[0]
+                : {
+                      //Constructs artificial plan for bundles
+                      Type: PLAN_TYPES.PLAN,
+                      Pricing: plans.reduce(
+                          (pricing, plan) => ({
+                              ...pricing,
+                              [CYCLE.MONTHLY]: sum(plan.Pricing[CYCLE.MONTHLY], pricing[CYCLE.MONTHLY]),
+                              [CYCLE.YEARLY]: sum(plan.Pricing[CYCLE.YEARLY], pricing[CYCLE.YEARLY]),
+                              [CYCLE.TWO_YEARS]: sum(plan.Pricing[CYCLE.TWO_YEARS], pricing[CYCLE.TWO_YEARS])
+                          }),
+                          {}
+                      )
+                  };
+            return Coupon
+                ? {
+                      ...plan,
+                      AmountDue,
+                      CouponDiscount,
+                      CouponDescription: Coupon.Description
+                  }
+                : plan;
+        };
+        const getPlanWithCoupon = (plan) => getPlansWithCoupon([plan]);
+
         const applyCoupon = async () => {
             const plansInfo = plans.filter(
                 ({ Name, Type }) => Type === PLAN_TYPES.PLAN && availablePlans.includes(Name)
             );
+
+            const bundle = PLAN_BUNDLES[model.planName];
+            const bundlePlan =
+                bundle &&
+                getPlansWithCoupon(plans.filter(({ Name, Type }) => Type === PLAN_TYPES.PLAN && bundle.includes(Name)));
+
             const plansWithCoupons = await Promise.all(
-                plansInfo.map(async (plan) => {
-                    const { AmountDue, CouponDiscount, Coupon } = await api(
-                        checkSubscription({
-                            CouponCode: coupon.code,
-                            Currency: model.currency,
-                            Cycle: model.cycle,
-                            PlanIDs: { [plan.ID]: 1 }
-                        })
-                    );
-                    return Coupon
-                        ? {
-                              ...plan,
-                              AmountDue,
-                              CouponDiscount,
-                              CouponDescription: Coupon.Description
-                          }
-                        : plan;
-                })
+                bundlePlan ? [...plansInfo, bundlePlan] : plansInfo.map(getPlanWithCoupon)
             );
             setAppliedCoupon(coupon);
             setPlansWithCoupons(plansWithCoupons);
@@ -213,10 +240,10 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
         // Amount = 0 means - paid before subscription
         if (planName !== PLAN.FREE) {
             const bundle = PLAN_BUNDLES[selectedPlan.planName];
-            const PlanIDs = bundle ? bundle.map((name) => getPlanByName(name)) : [selectedPlan.id];
+            const plans = bundle ? bundle.map((name) => getPlanByName(name)) : [selectedPlan];
 
             const subscription = {
-                PlanIDs,
+                PlanIDs: toPlanMap(plans),
                 Amount: 0,
                 Currency: currency,
                 Cycle: cycle,
