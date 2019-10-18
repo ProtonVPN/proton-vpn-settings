@@ -9,6 +9,7 @@ import visionaryPlanSvg from 'design-system/assets/img/pv-images/plans/visionary
 
 export const PLAN = {
     FREE: 'free',
+    BUNDLE_PLUS: 'plus_vpnplus',
     VISIONARY: PLANS.VISIONARY,
     BASIC: PLANS.VPNBASIC,
     PLUS: PLANS.VPNPLUS
@@ -19,6 +20,10 @@ export const PLAN_NAMES = {
     [PLAN.VISIONARY]: 'Visionary',
     [PLAN.BASIC]: 'Basic',
     [PLAN.PLUS]: 'Plus'
+};
+
+export const PLAN_BUNDLES = {
+    [PLAN.BUNDLE_PLUS]: [PLANS.PLUS, PLANS.VPNPLUS]
 };
 
 export const VPN_PLANS = [PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
@@ -114,6 +119,12 @@ const getPlanFeatures = (plan, maxConnections, countries) =>
                 ),
                 c('Plan Feature').t`ProtonMail Visionary account`
             ]
+        },
+        [PLAN.BUNDLE_PLUS]: {
+            image: <img width={100} src={visionaryPlanSvg} alt={`${PLAN_NAMES[PLAN.VISIONARY]} plan image`} />,
+            description: c('Plan Description').t`Bundle bundle bundle`,
+            additionalFeatures: c('Plan feature').t`Features features features`,
+            features: [c('Plan Feature').t`Feature 1`, c('Plan Feature').t`Feature 2`, c('Plan Feature').t`Feature 3`]
         }
     }[plan]);
 
@@ -133,6 +144,7 @@ const getPlanPrice = (plan, cycle) => {
 export const getPlan = (planName, cycle, plans = [], countries = []) => {
     const plan = plans.find(({ Type, Name }) => Type === PLAN_TYPES.PLAN && Name === planName);
     const price = plan ? getPlanPrice(plan, cycle) : { monthly: 0, total: 0, totalMonthly: 0, saved: 0 };
+    // TODO: if plan is bundle, then set pricing accordingly (sum?)
     return {
         ...getPlanFeatures(planName, plan ? plan.MaxVPN : 1, countries),
         planName,

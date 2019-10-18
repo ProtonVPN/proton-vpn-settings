@@ -24,7 +24,7 @@ import {
     CURRENCIES,
     PAYMENT_METHOD_TYPES
 } from 'proton-shared/lib/constants';
-import { getPlan, PLAN, VPN_PLANS } from './plans';
+import { getPlan, PLAN, VPN_PLANS, PLAN_BUNDLES } from './plans';
 import { c } from 'ttag';
 
 const getSignupAvailability = (isDirectSignupEnabled, allowedMethods = []) => {
@@ -87,16 +87,12 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
     // Until we can query plans+coupons at once, we need to check each plan individually
     useEffect(() => {
         const applyCoupon = async () => {
-            const vpnPlans = plans.filter(
+            const plansInfo = plans.filter(
                 ({ Name, Type }) => Type === PLAN_TYPES.PLAN && availablePlans.includes(Name)
             );
             const plansWithCoupons = await Promise.all(
-                vpnPlans.map(async (plan) => {
-                    const {
-                        AmountDue,
-                        CouponDiscount,
-                        Coupon: { Description }
-                    } = await api(
+                plansInfo.map(async (plan) => {
+                    const { AmountDue, CouponDiscount, Coupon } = await api(
                         checkSubscription({
                             CouponCode: coupon.code,
                             Currency: model.currency,
@@ -104,12 +100,14 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
                             PlanIDs: { [plan.ID]: 1 }
                         })
                     );
-                    return {
-                        ...plan,
-                        AmountDue,
-                        CouponDiscount,
-                        CouponDescription: Description
-                    };
+                    return Coupon
+                        ? {
+                              ...plan,
+                              AmountDue,
+                              CouponDiscount,
+                              CouponDescription: Coupon.Description
+                          }
+                        : plan;
                 })
             );
             setAppliedCoupon(coupon);
@@ -214,10 +212,11 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
         // Add subscription
         // Amount = 0 means - paid before subscription
         if (planName !== PLAN.FREE) {
+            const bundle = PLAN_BUNDLES[selectedPlan.planName];
+            const PlanIDs = bundle ? bundle.map((name) => getPlanByName(name)) : [selectedPlan.id];
+
             const subscription = {
-                PlanIDs: {
-                    [selectedPlan.id]: 1
-                },
+                PlanIDs,
                 Amount: 0,
                 Currency: currency,
                 Cycle: cycle,
