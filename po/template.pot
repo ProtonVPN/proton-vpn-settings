@@ -83,12 +83,12 @@ msgctxt "Link"
 msgid "clearing your browser cache"
 msgstr ""
 
-#: node_modules/react-components/containers/login/SignInLayout.js:41
+#: node_modules/react-components/containers/login/SignInLayout.js:45
 msgctxt "Link"
 msgid "Sign up for free"
 msgstr ""
 
-#: node_modules/react-components/containers/login/SignInLayout.js:54
+#: node_modules/react-components/containers/login/SignInLayout.js:58
 msgctxt "Link"
 msgid "Don't have an account yet? Sign up for free!"
 msgstr ""
@@ -109,7 +109,7 @@ msgctxt "Link"
 msgid "here"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:99
+#: node_modules/react-components/containers/payments/PayPal.js:110
 msgctxt "Link"
 msgid "click here"
 msgstr ""
@@ -192,12 +192,12 @@ msgctxt "Label"
 msgid "Total price (two-year)"
 msgstr ""
 
-#: node_modules/react-components/components/button/Copy.js:25
+#: node_modules/react-components/components/button/Copy.js:20
 msgctxt "Label"
 msgid "Copied"
 msgstr ""
 
-#: node_modules/react-components/components/button/Copy.js:25
+#: node_modules/react-components/components/button/Copy.js:20
 msgctxt "Label"
 msgid "Copy"
 msgstr ""
@@ -292,7 +292,7 @@ msgctxt "Label"
 msgid "Daily email notifications"
 msgstr ""
 
-#: node_modules/react-components/containers/notification/EmailModal.js:75
+#: node_modules/react-components/containers/notification/EmailModal.js:74
 msgctxt "Label"
 msgid "Email"
 msgstr ""
@@ -794,10 +794,10 @@ msgid "Edit"
 msgstr ""
 
 #: node_modules/react-components/components/modal/Confirm.js:11
-#: node_modules/react-components/components/modal/FormModal.js:18
+#: node_modules/react-components/components/modal/FormModal.js:19
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:95
-#: node_modules/react-components/containers/login/LoginForm.js:215
-#: node_modules/react-components/containers/payments/PayPal.js:112
+#: node_modules/react-components/containers/login/LoginForm.js:216
+#: node_modules/react-components/containers/payments/PayPal.js:122
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:97
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:139
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:250
@@ -829,22 +829,22 @@ msgid "Go to login"
 msgstr ""
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:218
-#: src/app/containers/SignupContainer/SignupContainer.js:153
+#: src/app/containers/SignupContainer/SignupContainer.js:151
 msgctxt "Action"
 msgid "Back"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:155
+#: src/app/containers/SignupContainer/SignupContainer.js:153
 msgctxt "Action"
 msgid "Homepage"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:165
+#: src/app/containers/SignupContainer/SignupContainer.js:163
 msgctxt "Action"
 msgid "Need help"
 msgstr ""
 
-#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:38
+#: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:45
 msgctxt "Action"
 msgid "Confirm payment"
 msgstr ""
@@ -873,6 +873,7 @@ msgctxt "Action"
 msgid "Close"
 msgstr ""
 
+#: node_modules/react-components/components/modal/Confirm.js:10
 #: node_modules/react-components/components/modal/Confirm.js:12
 msgctxt "Action"
 msgid "Confirm"
@@ -883,11 +884,11 @@ msgctxt "Action"
 msgid "Close modal"
 msgstr ""
 
-#: node_modules/react-components/components/modal/FormModal.js:19
+#: node_modules/react-components/components/modal/FormModal.js:20
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:76
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:222
-#: node_modules/react-components/containers/login/LoginForm.js:238
-#: node_modules/react-components/containers/login/LoginForm.js:266
+#: node_modules/react-components/containers/login/LoginForm.js:239
+#: node_modules/react-components/containers/login/LoginForm.js:267
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:44
 #: node_modules/react-components/containers/support/BugModal.js:126
 msgctxt "Action"
@@ -957,39 +958,39 @@ msgid "Show info"
 msgstr ""
 
 #: node_modules/react-components/containers/heading/SupportDropdown.js:57
-#: node_modules/react-components/containers/heading/UserDropdown.js:104
+#: node_modules/react-components/containers/heading/UserDropdown.js:109
 msgctxt "Action"
 msgid "I have a question"
 msgstr ""
 
 #: node_modules/react-components/containers/heading/SupportDropdown.js:67
-#: node_modules/react-components/containers/heading/UserDropdown.js:114
+#: node_modules/react-components/containers/heading/UserDropdown.js:119
 msgctxt "Action"
 msgid "Report bug"
 msgstr ""
 
-#: node_modules/react-components/containers/heading/UserDropdown.js:79
-#: node_modules/react-components/containers/heading/UserDropdown.js:87
+#: node_modules/react-components/containers/heading/UserDropdown.js:84
+#: node_modules/react-components/containers/heading/UserDropdown.js:92
 msgctxt "Action"
 msgid "Settings"
 msgstr ""
 
-#: node_modules/react-components/containers/heading/UserDropdown.js:125
+#: node_modules/react-components/containers/heading/UserDropdown.js:130
 msgctxt "Action"
 msgid "Proton shop"
 msgstr ""
 
-#: node_modules/react-components/containers/heading/UserDropdown.js:135
+#: node_modules/react-components/containers/heading/UserDropdown.js:140
 msgctxt "Action"
 msgid "Support us"
 msgstr ""
 
-#: node_modules/react-components/containers/heading/UserDropdown.js:144
+#: node_modules/react-components/containers/heading/UserDropdown.js:149
 msgctxt "Action"
 msgid "Logout"
 msgstr ""
 
-#: node_modules/react-components/containers/login/LoginForm.js:206
+#: node_modules/react-components/containers/login/LoginForm.js:207
 msgctxt "Action"
 msgid "Log in"
 msgstr ""
@@ -1070,7 +1071,7 @@ msgid "Top up"
 msgstr ""
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:52
-#: node_modules/react-components/containers/payments/PayPal.js:88
+#: node_modules/react-components/containers/payments/PayPal.js:94
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:155
 msgctxt "Action"
 msgid "Try again"
@@ -1166,13 +1167,13 @@ msgctxt "Action"
 msgid "Use gift code"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:124
-#: node_modules/react-components/containers/payments/PayPal.js:153
+#: node_modules/react-components/containers/payments/PayPal.js:134
+#: node_modules/react-components/containers/payments/PayPal.js:163
 msgctxt "Action"
 msgid "Check out with PayPal"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:139
+#: node_modules/react-components/containers/payments/PayPal.js:149
 msgctxt "Action"
 msgid "Add PayPal payment method"
 msgstr ""
@@ -1316,12 +1317,12 @@ msgid ""
 "button to be taken back to the app."
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:174
+#: src/app/containers/SignupContainer/SignupContainer.js:172
 msgctxt "Info"
 msgid "Loading"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:174
+#: src/app/containers/SignupContainer/SignupContainer.js:172
 msgctxt "Info"
 msgid "Creating your account"
 msgstr ""
@@ -1878,13 +1879,13 @@ msgctxt "Info"
 msgid "There are no billing details available for your current subscription."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:110
+#: node_modules/react-components/containers/payments/PayPal.js:120
 msgctxt "Info"
 msgid "Please verify the payment in the new tab."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:120
-#: node_modules/react-components/containers/payments/PayPal.js:150
+#: node_modules/react-components/containers/payments/PayPal.js:130
+#: node_modules/react-components/containers/payments/PayPal.js:160
 msgctxt "Info"
 msgid ""
 "We will redirect you to PayPal in a new browser tab to complete this "
@@ -1892,7 +1893,7 @@ msgid ""
 "continue."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:128
+#: node_modules/react-components/containers/payments/PayPal.js:138
 #, javascript-format
 msgctxt "Info"
 msgid ""
@@ -1900,7 +1901,7 @@ msgid ""
 "account. If your PayPal account doesn't have that, please ${ clickHere }."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:135
+#: node_modules/react-components/containers/payments/PayPal.js:145
 msgctxt "Info"
 msgid ""
 "This will enable PayPal to be used to pay for your Proton subscription. We "
@@ -1908,7 +1909,7 @@ msgid ""
 "blockers, please disable them to continue."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:143
+#: node_modules/react-components/containers/payments/PayPal.js:153
 msgctxt "Info"
 msgid ""
 "You must have a credit card or bank account linked with your PayPal account "
@@ -2203,7 +2204,7 @@ msgctxt "Title"
 msgid "Sign up - ProtonVPN"
 msgstr ""
 
-#: src/app/containers/SignupContainer/SignupContainer.js:169
+#: src/app/containers/SignupContainer/SignupContainer.js:167
 msgctxt "Title"
 msgid "Sign up"
 msgstr ""
@@ -3089,12 +3090,12 @@ msgctxt "Error"
 msgid "The minimum payment we accept is ${ _price2 }"
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:68
+#: node_modules/react-components/containers/payments/PayPal.js:74
 msgctxt "Error"
 msgid "Amount below minimum."
 msgstr ""
 
-#: node_modules/react-components/containers/payments/PayPal.js:74
+#: node_modules/react-components/containers/payments/PayPal.js:80
 msgctxt "Error"
 msgid "Amount above the maximum."
 msgstr ""
@@ -3978,7 +3979,7 @@ msgstr ""
 
 #: node_modules/proton-shared/lib/themes/themes.js:11
 msgctxt "Theme"
-msgid "Dark (Default)"
+msgid "Default"
 msgstr ""
 
 #: node_modules/proton-shared/lib/themes/themes.js:21
