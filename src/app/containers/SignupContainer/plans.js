@@ -153,6 +153,7 @@ export const getPlan = (planName, cycle, plans = [], countries = []) => {
         id: plan && plan.ID,
         disabled: !plan && planName !== PLAN.FREE,
         price,
+        couponAmount: plan && plan.CouponAmount,
         couponDiscount: plan && Math.abs(plan.CouponDiscount),
         couponDescription: plan && plan.CouponDescription
     };

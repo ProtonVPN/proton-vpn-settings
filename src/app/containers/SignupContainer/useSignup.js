@@ -89,7 +89,7 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
     // Until we can query plans+coupons at once, we need to check each plan individually
     useEffect(() => {
         const getPlansWithCoupon = async (plans, bundleName) => {
-            const { AmountDue, CouponDiscount, Coupon } = await api(
+            const { AmountDue, CouponDiscount, Coupon, Amount } = await api(
                 checkSubscription({
                     CouponCode: coupon.code,
                     Currency: model.currency,
@@ -118,6 +118,7 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
                 ? {
                       ...plan,
                       AmountDue,
+                      CouponAmount: Amount,
                       CouponDiscount,
                       CouponDescription: Coupon.Description
                   }

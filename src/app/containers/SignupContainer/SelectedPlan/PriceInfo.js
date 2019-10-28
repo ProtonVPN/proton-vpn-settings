@@ -5,8 +5,7 @@ import { c } from 'ttag';
 import { Price } from 'react-components';
 
 const PriceInfo = ({ plan, cycle, currency }) => {
-    console.log('sdfasdf', plan);
-    const baseTotal = plan.price.monthly * cycle;
+    const baseTotal = plan.couponAmount || plan.price.monthly * cycle;
     const discount = plan.couponDiscount || plan.price.saved;
     const discountPercentage = Math.floor((discount * 100) / baseTotal);
 
