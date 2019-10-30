@@ -1,7 +1,7 @@
-import { useEffect, ReactChildren } from 'react';
+import { useEffect, ReactNode } from 'react';
 
 type Props = {
-    children: ReactChildren;
+    children: ReactNode;
     title: string;
 };
 
