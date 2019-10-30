@@ -124,8 +124,26 @@ const getPlanFeatures = (plan, maxConnections, countries) =>
         [PLAN.BUNDLE_PLUS]: {
             image: <img width={100} src={visionaryPlanSvg} alt={`${PLAN_NAMES[PLAN.VISIONARY]} plan image`} />,
             description: c('Plan Description').t`Bundle bundle bundle`,
-            additionalFeatures: c('Plan feature').t`Features features features`,
-            features: [c('Plan Feature').t`Feature 1`, c('Plan Feature').t`Feature 2`, c('Plan Feature').t`Feature 3`]
+            additionalFeatures: c('Plan feature').t`ProtonMail Plus plan included`,
+            features: [
+                c('Plan Feature').ngettext(
+                    msgid`${maxConnections} simultaneous VPN connection`,
+                    `${maxConnections} simultaneous VPN connections`,
+                    maxConnections
+                ),
+                countries.basic.length !== countries.all.length &&
+                    c('Plan Feature').t`Servers in ${countries.all.length} countries`,
+                c('Plan Feature').t`Secure Core`,
+                c('Plan Feature').t`Highest speeds`,
+                <>
+                    <span className="mr0-5">{c('Plan Feature').t`Access blocked content`}</span>
+                    <Info
+                        title={c('Tooltip')
+                            .t`Access content (Netflix, Amazon Prime, Wikipedia, Facebook, Youtube, etc) no matter where you are.`}
+                    />
+                </>,
+                c('Plan Feature').t`All advanced security features`
+            ]
         }
     }[plan]);
 
@@ -153,8 +171,8 @@ export const getPlan = (planName, cycle, plans = [], countries = []) => {
         id: plan && plan.ID,
         disabled: !plan && planName !== PLAN.FREE,
         price,
-        couponAmount: plan && plan.CouponAmount,
-        couponDiscount: plan && Math.abs(plan.CouponDiscount),
+        couponDiscount:
+            plan && typeof plan.AmountDue !== 'undefined' && Math.abs(price.monthly * cycle - plan.AmountDue),
         couponDescription: plan && plan.CouponDescription
     };
 };

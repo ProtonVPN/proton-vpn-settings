@@ -5,7 +5,7 @@ import { c } from 'ttag';
 import { Price } from 'react-components';
 
 const PriceInfo = ({ plan, cycle, currency }) => {
-    const baseTotal = plan.couponAmount || plan.price.monthly * cycle;
+    const baseTotal = plan.price.monthly * cycle;
     const discount = plan.couponDiscount || plan.price.saved;
     const discountPercentage = Math.floor((discount * 100) / baseTotal);
 
@@ -39,7 +39,9 @@ const PriceInfo = ({ plan, cycle, currency }) => {
             {(plan.couponDiscount || billingCycleI18n.discount) && (
                 <div className="flex color-global-success flex-spacebetween">
                     <span className="mr0-25">
-                        {plan.couponDiscount ? plan.couponDescription : billingCycleI18n.discount}
+                        {plan.couponDiscount
+                            ? `${plan.couponDescription} (${discountPercentage}%)`
+                            : billingCycleI18n.discount}
                     </span>
                     <Price currency={currency}>{-discount}</Price>
                 </div>
