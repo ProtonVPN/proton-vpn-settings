@@ -1,5 +1,13 @@
-import React from 'react';
-import { SubscriptionSection, BillingSection } from 'react-components';
+import React, { useEffect } from 'react';
+import {
+    SubscriptionSection,
+    BillingSection,
+    useModals,
+    VPNBlackFridayModal,
+    usePlans,
+    SubscriptionModal,
+    useSubscription
+} from 'react-components';
 import { PERMISSIONS } from 'proton-shared/lib/constants';
 import { c } from 'ttag';
 
@@ -34,6 +42,35 @@ export const getDashboardPage = () => {
 };
 
 const DashboardContainer = () => {
+    const { createModal } = useModals();
+    const [plans, loading] = usePlans();
+    const [subscription] = useSubscription();
+
+    const handleSelect = ({ planIDs = [], cycle, currency, couponCode }) => {
+        const plansMap = planIDs.reduce((acc, planID) => {
+            const { Name } = plans.find(({ ID }) => ID === planID);
+            acc[Name] = 1;
+            return acc;
+        }, Object.create(null));
+
+        createModal(
+            <SubscriptionModal
+                plansMap={plansMap}
+                customize={false}
+                subscription={subscription}
+                cycle={cycle}
+                currency={currency}
+                coupon={couponCode}
+            />
+        );
+    };
+
+    useEffect(() => {
+        if (plans) {
+            createModal(<VPNBlackFridayModal plans={plans} onSelect={handleSelect} />);
+        }
+    }, [loading]);
+
     return (
         <Page config={getDashboardPage()}>
             <PlansSection />
