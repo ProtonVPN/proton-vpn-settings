@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: PMtranslator\n"
 "Language-Team: Spanish, Mexico\n"
 "Language: es_MX\n"
-"PO-Revision-Date: 2019-10-24 11:26\n"
+"PO-Revision-Date: 2019-10-31 15:48\n"
 
 #: src/app/components/layout/PrivateLayout.js:16
 msgctxt "Link"
@@ -221,22 +221,22 @@ msgctxt "Label"
 msgid "Hide password"
 msgstr "Ocultar contraseña"
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:55
-#: node_modules/react-components/containers/payments/CreditsModal.js:79
-#: node_modules/react-components/containers/payments/DonateModal.js:46
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:57
+#: node_modules/react-components/containers/payments/CreditsModal.js:81
+#: node_modules/react-components/containers/payments/DonateModal.js:48
 msgctxt "Label"
 msgid "Amount"
 msgstr "Monto"
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:64
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:66
 msgctxt "Label"
 msgid "Credits used"
 msgstr "Créditos usados"
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:73
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:75
 #: node_modules/react-components/containers/payments/BillingSection.js:254
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:77
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:208
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:210
 msgctxt "Label"
 msgid "Amount due"
 msgstr "Monto vencido"
@@ -260,11 +260,6 @@ msgstr "Categoría"
 msgctxt "Label"
 msgid "What happened?"
 msgstr "¿Qué ha ocurrido?"
-
-#: node_modules/react-components/containers/support/BugModal.js:184
-msgctxt "Label"
-msgid "Attach screenshots"
-msgstr "Adjuntar capturas de pantalla"
 
 #: node_modules/react-components/containers/support/BugModal.js:192
 msgctxt "Label"
@@ -559,19 +554,19 @@ msgctxt "Label"
 msgid "Billing cycle end date"
 msgstr "Ciclo de facturación termina el"
 
-#: node_modules/react-components/containers/payments/Payment.js:73
+#: node_modules/react-components/containers/payments/Payment.js:74
 msgctxt "Label"
 msgid "Payment method"
 msgstr "Método de pago"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:38
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:46
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:53
 msgctxt "Label"
 msgid "OpenVPN / IKEv2 username"
 msgstr "Usuario OpenVPN / IKEv2"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:49
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:58
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:65
 msgctxt "Label"
 msgid "OpenVPN / IKEv2 password"
 msgstr "Contraseña OpenVPN / IKEv2"
@@ -599,7 +594,7 @@ msgid "Username"
 msgstr "Nombre de usuario"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:362
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:392
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:393
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:147
 #: node_modules/react-components/containers/login/PasswordForm.js:37
 #: node_modules/react-components/containers/password/PasswordTotpInputs.js:13
@@ -671,7 +666,7 @@ msgctxt "Placeholder"
 msgid "Username or email"
 msgstr "Nombre de usuario o correo electrónico"
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:406
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:408
 msgctxt "Placeholder"
 msgid "Confirm"
 msgstr "Confirmar"
@@ -727,12 +722,12 @@ msgctxt "Placeholder"
 msgid "Full name"
 msgstr "Nombre completo"
 
-#: node_modules/react-components/containers/payments/Card.js:78
+#: node_modules/react-components/containers/payments/Card.js:79
 msgctxt "Placeholder"
 msgid "ZIP"
 msgstr "ZIP"
 
-#: node_modules/react-components/containers/payments/Card.js:78
+#: node_modules/react-components/containers/payments/Card.js:79
 msgctxt "Placeholder"
 msgid "Postal code"
 msgstr "Código postal"
@@ -756,7 +751,7 @@ msgstr "Comparar todas las características"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:134
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:207
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:40
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:47
 #: src/app/components/sections/plans/PlansTable.js:355
 #: src/app/components/sections/plans/PlansTable.js:360
 #: src/app/components/sections/plans/PlansTable.js:365
@@ -809,8 +804,8 @@ msgstr "Editar"
 #: node_modules/react-components/containers/payments/PayPal.js:122
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:97
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:139
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:250
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:39
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:253
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:46
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:12
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:25
 msgctxt "Action"
@@ -870,14 +865,14 @@ msgid "Try ${ upsellPlan.title } for only ${ totalMonthlyText }"
 msgstr "Pruebe ${ upsellPlan.title } por sólo ${ totalMonthlyText }"
 
 #: node_modules/react-components/components/modal/PreviewPDFModal.js:8
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:418
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:432
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:420
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:434
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:38
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:47
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:49
 #: node_modules/react-components/containers/login/AbuseModal.js:21
-#: node_modules/react-components/containers/payments/CreditsModal.js:65
+#: node_modules/react-components/containers/payments/CreditsModal.js:67
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:49
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:253
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:256
 msgctxt "Action"
 msgid "Close"
 msgstr "Cerrar"
@@ -905,12 +900,12 @@ msgid "Submit"
 msgstr "Enviar"
 
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:45
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:48
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:50
 msgctxt "Action"
 msgid "Pay"
 msgstr "Pagar"
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:433
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:435
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:39
 #: node_modules/react-components/containers/payments/EditCardModal.js:51
 msgctxt "Action"
@@ -1004,16 +999,16 @@ msgctxt "Action"
 msgid "Log in"
 msgstr "Iniciar sesión"
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:419
+#: node_modules/react-components/containers/account/ChangePasswordModal.js:421
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:265
 msgctxt "Action"
 msgid "Ok"
 msgstr "Ok"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:273
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:137
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:175
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:188
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:139
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:177
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:190
 msgctxt "Action"
 msgid "Next"
 msgstr "Siguiente"
@@ -1074,7 +1069,7 @@ msgctxt "Action"
 msgid "Reset password"
 msgstr "Restablecer contraseña"
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:64
+#: node_modules/react-components/containers/payments/CreditsModal.js:66
 msgctxt "Action"
 msgid "Top up"
 msgstr "Recargar"
@@ -1101,7 +1096,7 @@ msgctxt "Action"
 msgid "Downgrade"
 msgstr "Degradar"
 
-#: node_modules/react-components/containers/payments/DonateModal.js:41
+#: node_modules/react-components/containers/payments/DonateModal.js:43
 msgctxt "Action"
 msgid "Donate"
 msgstr "Donar"
@@ -1145,15 +1140,15 @@ msgctxt "Action"
 msgid "Got it"
 msgstr "Entendido"
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:137
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:234
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:139
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:237
 msgctxt "Action"
 msgid "Continue"
 msgstr "Continuar"
 
 #.  Insert it before the last one
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:233
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:256
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:236
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:259
 msgctxt "Action"
 msgid "Previous"
 msgstr "Anterior"
@@ -1607,14 +1602,14 @@ msgctxt "Info"
 msgid "Loading ${ appName }"
 msgstr "Cargando ${ appName }"
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:69
-#: node_modules/react-components/containers/payments/DonateModal.js:44
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:205
+#: node_modules/react-components/containers/payments/CreditsModal.js:71
+#: node_modules/react-components/containers/payments/DonateModal.js:46
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:207
 msgctxt "Info"
 msgid "Your payment details are protected with TLS encryption and Swiss privacy laws."
 msgstr "Sus detalles de pago están protegidos con el cifrado TLS y las leyes de privacidad suizas."
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:76
+#: node_modules/react-components/containers/payments/CreditsModal.js:78
 #, javascript-format
 msgctxt "Info"
 msgid "Top up your account with credits that you can use to subscribe to a new plan or renew your current plan. You get one credit for every ${ i18nCurrency } spent."
@@ -2158,7 +2153,7 @@ msgctxt "Title"
 msgid "Open actions dropdown"
 msgstr "Abrir acciones desplegables"
 
-#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:49
+#: node_modules/react-components/containers/invoices/PayInvoiceModal.js:51
 msgctxt "Title"
 msgid "Pay invoice"
 msgstr "Pagar factura"
@@ -2293,7 +2288,7 @@ msgctxt "Title"
 msgid "Confirm reset password"
 msgstr "Confirmar restablecimiento de contraseña"
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:66
+#: node_modules/react-components/containers/payments/CreditsModal.js:68
 msgctxt "Title"
 msgid "Add credits"
 msgstr "Añadir créditos"
@@ -2333,7 +2328,7 @@ msgctxt "Title"
 msgid "Error"
 msgstr "Error"
 
-#: node_modules/react-components/containers/payments/DonateModal.js:40
+#: node_modules/react-components/containers/payments/DonateModal.js:42
 msgctxt "Title"
 msgid "Make a donation"
 msgstr "Hacer una donación"
@@ -2354,7 +2349,7 @@ msgid "ProtonMail total"
 msgstr "Total ProtonMail"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:24
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:201
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:203
 msgctxt "Title"
 msgid "Payment details"
 msgstr "Detalles del pago"
@@ -2364,22 +2359,22 @@ msgctxt "Title"
 msgid "Thank you!"
 msgstr "¡Gracias!"
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:133
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:135
 msgctxt "Title"
 msgid "Order summary"
 msgstr "Resumen del pedido"
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:160
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:162
 msgctxt "Title"
 msgid "Upgrading account"
 msgstr "Mejorando la cuenta"
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:174
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:176
 msgctxt "Title"
 msgid "VPN protection"
 msgstr "Protección VPN"
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:187
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:189
 msgctxt "Title"
 msgid "Customization"
 msgstr "Personalización"
@@ -2407,7 +2402,7 @@ msgctxt "Title"
 msgid "Billing details"
 msgstr "Datos de facturación"
 
-#: node_modules/react-components/containers/payments/Card.js:79
+#: node_modules/react-components/containers/payments/Card.js:80
 msgctxt "Title"
 msgid "ZIP / postal code"
 msgstr "ZIP / código postal"
@@ -2526,16 +2521,6 @@ msgstr "Protección adicional mediante el enrutamiento de su tráfico a través 
 msgctxt "Tooltip"
 msgid "Order additional connections to provide ProtonVPN to other users with your organization"
 msgstr "Ordene conexiones adicionales para dar ProtonVPN a otros usuarios en su organización"
-
-#: node_modules/react-components/containers/payments/subscription/CustomPlusSection.js:74
-msgctxt "Tooltip"
-msgid "Add additional addresses to your account."
-msgstr "Añadir direcciones adicionales a su cuenta."
-
-#: node_modules/react-components/containers/payments/subscription/CustomPlusSection.js:96
-msgctxt "Tooltip"
-msgid "Use your own domain name."
-msgstr "Utilice su nombre de dominio propio."
 
 #: node_modules/react-components/containers/payments/subscription/CustomProfessionalSection.js:49
 msgctxt "Tooltip"
@@ -2706,12 +2691,12 @@ msgctxt "Success"
 msgid "Payment method updated"
 msgstr "Método de pago actualizado"
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:56
+#: node_modules/react-components/containers/payments/CreditsModal.js:58
 msgctxt "Success"
 msgid "Credits added"
 msgstr "Créditos añadidos"
 
-#: node_modules/react-components/containers/payments/DonateModal.js:31
+#: node_modules/react-components/containers/payments/DonateModal.js:33
 msgctxt "Success"
 msgid "Your support is essential to keeping Proton running. Thank you for supporting internet privacy!"
 msgstr "Su apoyo es esencial para mantener Proton en funcionamiento. ¡Gracias por apoyar la privacidad de internet!"
@@ -2883,12 +2868,12 @@ msgstr "Código postal inválido"
 #: node_modules/react-components/containers/payments/GiftCodeInput.js:9
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:31
 #: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:14
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:78
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:80
 msgctxt "Error"
 msgid "Invalid gift code"
 msgstr "Código de regalo inválido"
 
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:72
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:74
 msgctxt "Error"
 msgid "Your coupon is invalid or cannot be applied to your plan"
 msgstr "Su cupón es inválido o no puede aplicarse a su plan"
@@ -2934,19 +2919,19 @@ msgctxt "Error"
 msgid "Tab closed"
 msgstr "Pestaña cerrada"
 
-#: node_modules/react-components/containers/payments/Payment.js:49
+#: node_modules/react-components/containers/payments/Payment.js:50
 #, javascript-format
 msgctxt "Error"
 msgid "The minimum amount that can be donated is ${ price }"
 msgstr "La cantidad mínima que se puede donar es de ${ price }"
 
-#: node_modules/react-components/containers/payments/Payment.js:58
+#: node_modules/react-components/containers/payments/Payment.js:59
 #, javascript-format
 msgctxt "Error"
 msgid "The minimum amount of credit that can be added is ${ _price }"
 msgstr "La cantidad mínima de crédito que se puede añadir es de ${ _price }"
 
-#: node_modules/react-components/containers/payments/Payment.js:67
+#: node_modules/react-components/containers/payments/Payment.js:68
 #, javascript-format
 msgctxt "Error"
 msgid "The minimum payment we accept is ${ _price2 }"
@@ -2961,6 +2946,12 @@ msgstr "Cantidad menor al mínimo."
 msgctxt "Error"
 msgid "Amount above the maximum."
 msgstr "Cantidad mayor al máximo."
+
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:31
+#, javascript-format
+msgctxt "Error"
+msgid "'${ credentials.username }' is a reserved word. Please set another username."
+msgstr ""
 
 #: node_modules/react-components/containers/api/ApiProvider.js:38
 msgctxt "Error"
@@ -3003,7 +2994,7 @@ msgctxt "Notification"
 msgid "Invites are temporarily disabled"
 msgstr "Las invitaciones están temporalmente deshabilitadas"
 
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:32
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:39
 msgctxt "Notification"
 msgid "OpenVPN / IKEv2 credentials updated"
 msgstr "Credenciales OpenVPN / IKEv2 actualizadas"
@@ -3024,39 +3015,42 @@ msgid "included"
 msgstr "incluido"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:12
+#, javascript-format
 msgctxt "Option"
-msgid "1 address"
+msgid "${ value } address"
 msgid_plural "${ value } addresses"
-msgstr[0] "1 dirección"
-msgstr[1] "${ value } direcciones"
+msgstr[0] ""
+msgstr[1] ""
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:15
 msgctxt "Option"
-msgid "1 GB storage"
+msgid "${ value } GB storage"
 msgid_plural "${ value } GB storage"
-msgstr[0] "1 GB de almacenamiento"
-msgstr[1] "${ value } GB de almacenamiento"
+msgstr[0] ""
+msgstr[1] ""
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:18
+#, javascript-format
 msgctxt "Option"
-msgid "1 custom domain"
+msgid "${ value } custom domain"
 msgid_plural "${ value } custom domains"
-msgstr[0] "1 dominio personalizado"
-msgstr[1] "${ value } dominios personalizados"
+msgstr[0] ""
+msgstr[1] ""
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:21
 msgctxt "Option"
-msgid "1 user"
+msgid "${ value } user"
 msgid_plural "${ value } users"
-msgstr[0] "1 usuario"
-msgstr[1] "${ value } usuarios"
+msgstr[0] ""
+msgstr[1] ""
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:24
+#, javascript-format
 msgctxt "Option"
-msgid "1 VPN connection"
+msgid "${ value } VPN connection"
 msgid_plural "${ value } VPN connections"
-msgstr[0] "1 conexión VPN"
-msgstr[1] "${ value } conexiones VPN"
+msgstr[0] ""
+msgstr[1] ""
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:113
 msgctxt "Option"
@@ -3570,6 +3564,11 @@ msgctxt "Warning"
 msgid "Are you sure you want to delete the address?"
 msgstr "¿Está seguro que desea eliminar esta dirección?"
 
+#: node_modules/react-components/containers/support/BugModal.js:184
+msgctxt "Label, make it short please"
+msgid "Attach screenshot(s)"
+msgstr ""
+
 #: node_modules/react-components/containers/error/GenericError.js:13
 msgctxt "Error message"
 msgid "Aaah! Something went wrong"
@@ -3685,17 +3684,17 @@ msgctxt "Password"
 msgid "Confirm new password"
 msgstr "Confirmar contraseña nueva"
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:26
+#: node_modules/react-components/containers/payments/CreditsModal.js:27
 msgctxt "Monetary unit"
 msgid "Euro"
 msgstr "Euro"
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:27
+#: node_modules/react-components/containers/payments/CreditsModal.js:28
 msgctxt "Monetary unit"
 msgid "Swiss franc"
 msgstr "Franco suizo"
 
-#: node_modules/react-components/containers/payments/CreditsModal.js:28
+#: node_modules/react-components/containers/payments/CreditsModal.js:29
 msgctxt "Monetary unit"
 msgid "Dollar"
 msgstr "Dólar"
@@ -3742,7 +3741,7 @@ msgctxt "Plan"
 msgid "Free"
 msgstr "Free"
 
-#: node_modules/react-components/containers/payments/Card.js:56
+#: node_modules/react-components/containers/payments/Card.js:57
 msgctxt "Placeholder, make it short"
 msgid "Security code"
 msgstr "Código de seguridad"
