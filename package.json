@@ -8,7 +8,7 @@
         "lint": "eslint src --ext .js,.ts,.tsx --quiet --cache",
         "pretty": "prettier --write  $(find src/app -type f -name '*.js' -o -name '*.ts' -o -name '*.tsx')",
         "preversion": "git update-index --no-assume-unchanged package-lock.json",
-        "postversion": "git update-index --assume-unchanged package-lock.json && git push --tags",
+        "postversion": "git update-index --assume-unchanged package-lock.json && git push --tags && git push",
         "sync:lock": "./node_modules/proton-bundler/scripts/updatePackageLock.sh",
         "i18n:validate": "proton-i18n validate lint-functions",
         "i18n:validate:context": "proton-i18n extract && proton-i18n validate",
