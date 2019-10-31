@@ -1,6 +1,30 @@
 [
   {
+    "key": "es-MX",
+    "lang": "es_MX"
+  },
+  {
     "key": "es",
     "lang": "es_ES"
+  },
+  {
+    "key": "fr",
+    "lang": "fr_FR"
+  },
+  {
+    "key": "it",
+    "lang": "it_IT"
+  },
+  {
+    "key": "nl",
+    "lang": "nl_NL"
+  },
+  {
+    "key": "pl",
+    "lang": "pl_PL"
+  },
+  {
+    "key": "pt",
+    "lang": "pt_BR"
   }
 ]

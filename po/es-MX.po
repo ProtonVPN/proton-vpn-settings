@@ -4,13 +4,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: crowdin.com\n"
 "X-Crowdin-Project: protonvpn\n"
-"X-Crowdin-Language: es-ES\n"
+"X-Crowdin-Language: es-MX\n"
 "X-Crowdin-File: ProtonVPN Settings Application.pot\n"
 "Project-Id-Version: protonvpn\n"
 "Last-Translator: PMtranslator\n"
-"Language-Team: Spanish\n"
-"Language: es_ES\n"
-"PO-Revision-Date: 2019-10-24 11:22\n"
+"Language-Team: Spanish, Mexico\n"
+"Language: es_MX\n"
+"PO-Revision-Date: 2019-10-24 11:26\n"
 
 #: src/app/components/layout/PrivateLayout.js:16
 msgctxt "Link"
@@ -50,17 +50,17 @@ msgstr "Restablecer contraseña"
 #: src/app/containers/LoginContainer.js:25
 msgctxt "Link"
 msgid "Forgot username?"
-msgstr "¿Olvidó su nombre de usuario?"
+msgstr "¿Olvidó su usuario?"
 
 #: src/app/containers/LoginContainer.js:28
 msgctxt "Link"
 msgid "Common login problems"
-msgstr "Problemas comunes de inicio de sesión"
+msgstr "Problemas frecuentes de inicio de sesión"
 
 #: src/app/containers/LoginContainer.js:32
 msgctxt "Link"
 msgid "Contact support"
-msgstr "Contactar con el soporte"
+msgstr "Contacte al soporte"
 
 #: src/app/containers/SignupContainer/LoginPanel.js:12
 msgctxt "Link"
@@ -70,12 +70,12 @@ msgstr "Iniciar sesión"
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:59
 msgctxt "Link"
 msgid "Terms of Service"
-msgstr "Términos de servicio"
+msgstr "Términos de Servicio"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:63
 msgctxt "Link"
 msgid "Privacy Policy"
-msgstr "Política de Privacidad"
+msgstr "Políticas de Privacidad"
 
 #: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:17
 msgctxt "Link"
@@ -95,17 +95,17 @@ msgstr "vaciar la caché del navegador"
 #: node_modules/react-components/containers/login/SignInLayout.js:45
 msgctxt "Link"
 msgid "Sign up for free"
-msgstr "Regístrate gratis"
+msgstr "Regístrese gratis"
 
 #: node_modules/react-components/containers/login/SignInLayout.js:58
 msgctxt "Link"
 msgid "Don't have an account yet? Sign up for free!"
-msgstr "¿No tienes una cuenta todavía? ¡Regístrate gratis!"
+msgstr "¿No tiene cuenta aún? ¡Regístrese gratis!"
 
 #: node_modules/react-components/containers/account/UsernameSection.js:36
 msgctxt "Link"
 msgid "Not activated"
-msgstr "No está activado"
+msgstr "No activado"
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:33
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:73
@@ -121,7 +121,7 @@ msgstr "aquí"
 #: node_modules/react-components/containers/payments/PayPal.js:110
 msgctxt "Link"
 msgid "click here"
-msgstr "haz clic aquí"
+msgstr "haga clic aquí"
 
 #: node_modules/react-components/containers/login/SignInLayout.js:26
 #: src/app/components/layout/PublicHeader.js:9
@@ -159,12 +159,12 @@ msgstr "Contraseña"
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:123
 msgctxt "Label"
 msgid "Email address"
-msgstr "Dirección de correo electrónico"
+msgstr "Dirección de correo"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:10
 msgctxt "Label"
 msgid "1 month"
-msgstr "1 mes"
+msgstr "Un mes"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:11
 msgctxt "Label"
@@ -194,7 +194,7 @@ msgstr "24 meses"
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:20
 msgctxt "Label"
 msgid "Two-year discount (33%)"
-msgstr "Descuento de dos años (33%)"
+msgstr "Descuento por dos años (33%)"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:21
 msgctxt "Label"
@@ -226,7 +226,7 @@ msgstr "Ocultar contraseña"
 #: node_modules/react-components/containers/payments/DonateModal.js:46
 msgctxt "Label"
 msgid "Amount"
-msgstr "Cantidad"
+msgstr "Monto"
 
 #: node_modules/react-components/containers/invoices/PayInvoiceModal.js:64
 msgctxt "Label"
@@ -239,7 +239,7 @@ msgstr "Créditos usados"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:208
 msgctxt "Label"
 msgid "Amount due"
-msgstr "Importe debido"
+msgstr "Monto vencido"
 
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:46
 msgctxt "Label"
@@ -249,7 +249,7 @@ msgstr "Personalizar facturas"
 #: node_modules/react-components/containers/support/BugModal.js:135
 msgctxt "Label"
 msgid "Proton username"
-msgstr "Nombre de usuario"
+msgstr "Nombre de usuario de Proton"
 
 #: node_modules/react-components/containers/support/BugModal.js:159
 msgctxt "Label"
@@ -294,7 +294,7 @@ msgstr "Versión del navegador"
 #: node_modules/react-components/containers/notification/EmailSection.js:70
 msgctxt "Label"
 msgid "Allow password reset"
-msgstr "Permitir restablecer la contraseña"
+msgstr "Permitir restablecimiento de contraseña"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:83
 msgctxt "Label"
@@ -304,7 +304,7 @@ msgstr "Notificaciones diarias por correo electrónico"
 #: node_modules/react-components/containers/notification/EmailModal.js:74
 msgctxt "Label"
 msgid "Email"
-msgstr "Correo electrónico"
+msgstr "Correo"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:371
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:155
@@ -368,7 +368,7 @@ msgstr "Contraseña anterior de inicio de sesión"
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:160
 msgctxt "Label"
 msgid "New login password"
-msgstr "Nueva contraseña de inicio de sesión"
+msgstr "Contraseña nueva de inicio de sesión"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:127
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:161
@@ -386,7 +386,7 @@ msgstr "Contraseña anterior"
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:309
 msgctxt "Label"
 msgid "New mailbox password"
-msgstr "Nueva contraseña del buzón"
+msgstr "Contraseña nueva del buzón"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:188
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:310
@@ -398,7 +398,7 @@ msgstr "Confirmar contraseña del buzón"
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:297
 msgctxt "Label"
 msgid "New password"
-msgstr "Nueva contraseña"
+msgstr "Contraseña nueva"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:280
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:298
@@ -439,7 +439,7 @@ msgstr "Pagar en efectivo"
 #: node_modules/react-components/containers/payments/BitcoinDetails.js:10
 msgctxt "Label"
 msgid "Amount BTC"
-msgstr "Cantidad BTC"
+msgstr "Monto BTC"
 
 #: node_modules/react-components/containers/payments/BitcoinDetails.js:16
 msgctxt "Label"
@@ -468,7 +468,7 @@ msgstr "Créditos"
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:50
 msgctxt "Label"
 msgid "Proration"
-msgstr "Proración"
+msgstr "Prorrateo"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:68
 msgctxt "Label"
@@ -483,7 +483,7 @@ msgstr "Usuarios"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:151
 msgctxt "Label"
 msgid "Email addresses"
-msgstr "Direcciones de correo electrónico"
+msgstr "Direcciones de correo"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:161
 msgctxt "Label"
@@ -552,12 +552,12 @@ msgstr "Plan ProtonVPN"
 #: node_modules/react-components/containers/payments/BillingSection.js:205
 msgctxt "Label"
 msgid "Extra VPN connections"
-msgstr "Conexiones VPN extra"
+msgstr "Conexiones VPN adicionales"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:272
 msgctxt "Label"
 msgid "Billing cycle end date"
-msgstr "Fecha final del ciclo de facturación"
+msgstr "Ciclo de facturación termina el"
 
 #: node_modules/react-components/containers/payments/Payment.js:73
 msgctxt "Label"
@@ -584,13 +584,13 @@ msgstr "Captcha"
 #: src/app/components/sections/redeem/RedeemCouponForm.js:35
 msgctxt "Placeholder"
 msgid "Enter coupon code"
-msgstr "Introduzca el código de cupón"
+msgstr "Ingrese el código del cupón"
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:26
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationEmailInput.js:18
 msgctxt "Placeholder"
 msgid "Email"
-msgstr "Correo electrónico"
+msgstr "Correo"
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:54
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:85
@@ -626,22 +626,22 @@ msgstr "Nombre de usuario de Proton"
 #: node_modules/react-components/containers/support/BugModal.js:153
 msgctxt "Placeholder"
 msgid "A way to contact you"
-msgstr "Una forma de contactarte"
+msgstr "Una forma de contactarle"
 
 #: node_modules/react-components/containers/support/BugModal.js:177
 msgctxt "Placeholder"
 msgid "Please describe the problem and include any error messages"
-msgstr "Por favor describa el problema e incluya cualquier mensaje de error"
+msgstr "Por favor, describa el problema e incluya cualquier mensaje de error"
 
 #: node_modules/react-components/containers/support/BugModal.js:206
 msgctxt "Placeholder"
 msgid "OS name"
-msgstr "Nombre OS"
+msgstr "Sistema Operativo"
 
 #: node_modules/react-components/containers/support/BugModal.js:217
 msgctxt "Placeholder"
 msgid "OS version"
-msgstr "Versión OS"
+msgstr "Versión del sistema operativo"
 
 #: node_modules/react-components/containers/support/BugModal.js:228
 msgctxt "Placeholder"
@@ -730,12 +730,12 @@ msgstr "Nombre completo"
 #: node_modules/react-components/containers/payments/Card.js:78
 msgctxt "Placeholder"
 msgid "ZIP"
-msgstr "CP"
+msgstr "ZIP"
 
 #: node_modules/react-components/containers/payments/Card.js:78
 msgctxt "Placeholder"
 msgid "Postal code"
-msgstr "Código Postal"
+msgstr "Código postal"
 
 #: src/app/components/sections/redeem/RedeemCouponForm.js:43
 msgctxt "Action"
@@ -746,13 +746,13 @@ msgstr "Activar mi cupón"
 #: src/app/components/sections/plans/PlansTable.js:350
 msgctxt "Action"
 msgid "Hide additional features"
-msgstr "Ocultar funciones adicionales"
+msgstr "Ocultar características adicionales"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
 #: src/app/components/sections/plans/PlansTable.js:350
 msgctxt "Action"
 msgid "Compare all features"
-msgstr "Comparar todas las funciones"
+msgstr "Comparar todas las características"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:134
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:207
@@ -788,12 +788,12 @@ msgstr "Verificar"
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:61
 msgctxt "Action"
 msgid "Did not receive the code?"
-msgstr "¿No ha recibido el código?"
+msgstr "¿No recibió el código?"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:65
 msgctxt "Action"
 msgid "Use another verification method"
-msgstr "Usa otro método de verificación"
+msgstr "Use otro método para verificar"
 
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:15
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:56
@@ -825,7 +825,7 @@ msgstr "Reenviar"
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:77
 msgctxt "Action"
 msgid "View full plan comparison"
-msgstr "Ver comparación de plan completo"
+msgstr "Ver comparación de todo el plan"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:144
 msgctxt "Action"
@@ -841,7 +841,7 @@ msgstr "Ir al inicio de sesión"
 #: src/app/containers/SignupContainer/SignupContainer.js:151
 msgctxt "Action"
 msgid "Back"
-msgstr "Atrás"
+msgstr "Volver"
 
 #: src/app/containers/SignupContainer/SignupContainer.js:153
 msgctxt "Action"
@@ -851,7 +851,7 @@ msgstr "Página principal"
 #: src/app/containers/SignupContainer/SignupContainer.js:163
 msgctxt "Action"
 msgid "Need help"
-msgstr "Necesitas ayuda"
+msgstr "Necesita ayuda"
 
 #: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:45
 msgctxt "Action"
@@ -861,13 +861,13 @@ msgstr "Confirmar pago"
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:52
 msgctxt "Action"
 msgid "Pay annually and save 20%"
-msgstr "Pague anualmente y ahorre 20%"
+msgstr "Pague anualmente y ahorre un 20%"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:64
 #, javascript-format
 msgctxt "Action"
 msgid "Try ${ upsellPlan.title } for only ${ totalMonthlyText }"
-msgstr "Prueba ${ upsellPlan.title } por sólo ${ totalMonthlyText }"
+msgstr "Pruebe ${ upsellPlan.title } por sólo ${ totalMonthlyText }"
 
 #: node_modules/react-components/components/modal/PreviewPDFModal.js:8
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:418
@@ -949,7 +949,7 @@ msgstr "Descargar"
 #: node_modules/react-components/containers/support/AttachScreenshot.js:46
 msgctxt "Action"
 msgid "Clear"
-msgstr "Limpiar"
+msgstr "Borrar"
 
 #: node_modules/react-components/containers/support/AttachScreenshot.js:53
 msgctxt "Action"
@@ -976,7 +976,7 @@ msgstr "Tengo una pregunta"
 #: node_modules/react-components/containers/heading/UserDropdown.js:119
 msgctxt "Action"
 msgid "Report bug"
-msgstr "Reportar error"
+msgstr "Reportar un error"
 
 #: node_modules/react-components/containers/heading/UserDropdown.js:84
 #: node_modules/react-components/containers/heading/UserDropdown.js:92
@@ -992,7 +992,7 @@ msgstr "Tienda Proton"
 #: node_modules/react-components/containers/heading/UserDropdown.js:140
 msgctxt "Action"
 msgid "Support us"
-msgstr "Apóyanos"
+msgstr "Apóyenos"
 
 #: node_modules/react-components/containers/heading/UserDropdown.js:149
 msgctxt "Action"
@@ -1008,7 +1008,7 @@ msgstr "Iniciar sesión"
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:265
 msgctxt "Action"
 msgid "Ok"
-msgstr "Aceptar"
+msgstr "Ok"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:273
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:137
@@ -1027,12 +1027,12 @@ msgstr "Sí"
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:65
 msgctxt "Action"
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: node_modules/react-components/containers/account/DeleteSection.js:75
 msgctxt "Action"
 msgid "Delete your account"
-msgstr "Eliminar tu cuenta"
+msgstr "Eliminar su cuenta"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:93
 msgctxt "Action"
@@ -1042,12 +1042,12 @@ msgstr "Cambiar contraseña del buzón"
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:61
 msgctxt "Action"
 msgid "Mark as default"
-msgstr "Marcar como predeterminada"
+msgstr "Marcar como predeterminado"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:61
 msgctxt "Action"
 msgid "Add credit / debit card"
-msgstr "Añadir tarjeta de crédito / débito"
+msgstr "Añadir tarjeta de crédito/débito"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:63
 msgctxt "Action"
@@ -1057,7 +1057,7 @@ msgstr "Añadir PayPal"
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:74
 msgctxt "Action"
 msgid "Get a new password"
-msgstr "Obtener una nueva contraseña"
+msgstr "Obtener una contraseña nueva"
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:34
 msgctxt "Action"
@@ -1077,29 +1077,29 @@ msgstr "Restablecer contraseña"
 #: node_modules/react-components/containers/payments/CreditsModal.js:64
 msgctxt "Action"
 msgid "Top up"
-msgstr "Completar"
+msgstr "Recargar"
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:52
 #: node_modules/react-components/containers/payments/PayPal.js:94
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:155
 msgctxt "Action"
 msgid "Try again"
-msgstr "Vuelva a intentarlo"
+msgstr "Intente nuevamente"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:161
 msgctxt "Action"
 msgid "Use a different card"
-msgstr "Usa una tarjeta diferente"
+msgstr "Use una tarjeta distinta"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:162
 msgctxt "Action"
 msgid "Use a different payment method"
-msgstr "Usa un método de pago diferente"
+msgstr "Utilice un método de pago diferente"
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:7
 msgctxt "Action"
 msgid "Downgrade"
-msgstr "Bajar la categoría"
+msgstr "Degradar"
 
 #: node_modules/react-components/containers/payments/DonateModal.js:41
 msgctxt "Action"
@@ -1185,7 +1185,7 @@ msgstr "Pagar con PayPal"
 #: node_modules/react-components/containers/payments/PayPal.js:149
 msgctxt "Action"
 msgid "Add PayPal payment method"
-msgstr "Añadir método de pago de PayPal"
+msgstr "Añadir PayPal como método de pago"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:206
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:209
@@ -1222,66 +1222,66 @@ msgstr "Ya tiene una cuenta gratuita"
 #: src/app/components/sections/plans/PlansSection.js:55
 msgctxt "Info"
 msgid "This will downgrade your VPN to a free subscription. ProtonVPN is free software that is possible thanks to donations and paid accounts. Please consider making a donation so we can continue to enable secure internet anywhere for everyone."
-msgstr "Esto degradará su VPN a una suscripción gratuita. ProtonVPN es un software gratuito que es posible gracias a donaciones y cuentas pagas. Considere hacer una donación para que podamos continuar habilitando un Internet seguro en cualquier lugar para todos."
+msgstr "Esta acción degradará su suscripción VPN a una gratuita. ProtonVPN es un software libre que es posible gracias a donaciones y suscripciones pagas. Por favor considere hacer una donación para que podamos seguir ofreciendo internet seguro donde sea y para todos."
 
 #: src/app/components/sections/plans/PlansSection.js:138
 msgctxt "Info"
 msgid "Get 20% bundle discount when you purchase ProtonMail and ProtonVPN together."
-msgstr "Obtenga un 20% de descuento por paquete cuando compre ProtonMail y ProtonVPN juntos."
+msgstr "Obtenga un descuento del 20% cuando compra juntos ProtonMail y ProtonVPN."
 
 #: src/app/components/sections/plans/PlansSection.js:141
 #, javascript-format
 msgctxt "Info"
 msgid "You are currently subscribed to ${ names }."
-msgstr "Actualmente estás suscrito a ${ names }."
+msgstr "Actualmente está suscrito a ${ names }."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:38
 #, javascript-format
 msgctxt "Info"
 msgid "Enter the verification code that was sent to ${ destinationText }."
-msgstr "Introduzca el código de verificación que se envió a ${ destinationText }."
+msgstr "Ingrese el código de verificación que fue enviado a ${ destinationText }."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:40
 msgctxt "Info"
 msgid "If you don't find the email in your inbox, please check your spam folder."
-msgstr "Si no encuentra el correo electrónico en su bandeja de entrada, por favor, compruebe su carpeta de spam."
+msgstr "Si no encuentra el correo electrónico en su buzón, por favor revise la carpeta de correo no deseado."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:19
 #, javascript-format
 msgctxt "Info"
 msgid "Click below to resend the code to ${ destinationText }. If ${ destinationType } is incorrect, please click \"${ editI18n }\"."
-msgstr "Haz clic abajo para reenviar el código a ${ destinationText }. Si ${ destinationType } es incorrecto, por favor haz clic en \"${ editI18n }\"."
+msgstr "Haga click abajo para reenviar el código a ${ destinationText }. Si ${ destinationType } es incorrecto, por favor haga clic en \"${ editI18n }\"."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:25
 msgctxt "Info"
 msgid "To prevent misuse, please verify you are human. Please do not close this tab until you have verified your account."
-msgstr "Para evitar un mal uso, por favor verifique que es humano. Por favor, no cierre esta pestaña hasta que se haya verificado su cuenta."
+msgstr "Para prevenir un mal uso, por favor verifique que es un humano. Por favor no cierre esta pestaña hasta que su cuenta sea verificada."
 
 #: src/app/containers/SignupContainer/LoginPanel.js:9
 msgctxt "Info"
 msgid "If you are a ProtonMail user you can use your Proton account to log in to ProtonVPN."
-msgstr "Si eres un usuario de ProtonMail, puedes usar tu cuenta de Proton para iniciar sesión en ProtonVPN."
+msgstr "Si usted es un usuario de ProtonMail puede usar su cuenta de Proton para iniciar sesión en ProtonVPN."
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:69
 msgctxt "Info"
 msgid "You are saving 20% with an annual plan"
-msgstr "Ahorras un 20% con un plan anual"
+msgstr "Usted ahorra un 20% con un plan anual"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:73
 msgctxt "Info"
 msgid "You are saving 33% with an two-year plan"
-msgstr "Ahorras un 33% con un plan de dos años"
+msgstr "Usted ahorra un 33% con un plan de dos años"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:81
 #, javascript-format
 msgctxt "Info"
 msgid "All plans support: ${ supportedOS }"
-msgstr "Todos los planes son compatibles: ${ supportedOS }"
+msgstr "Todos los planes son compatibles con: ${ supportedOS }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:83
 msgctxt "Info"
 msgid "30-days money back guarantee"
-msgstr "Garantía de devolución de dinero de 30 días"
+msgstr "30 días de garantía de devolución del pago"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:60
 msgctxt "Info"
@@ -1297,18 +1297,18 @@ msgstr "Al hacer clic en Crear cuenta, acepta cumplir con nuestros ${ termsOfSer
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:21
 msgctxt "Info"
 msgid "You already have a Proton account."
-msgstr "Ya tienes una cuenta de Proton."
+msgstr "Ya posee una cuenta de Proton."
 
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:23
 #, javascript-format
 msgctxt "Info"
 msgid "Your existing Proton account can be used to access all Proton services. Please login with ${ email }"
-msgstr "Tu cuenta de Proton existente puede ser usada para acceder a todos los servicios de Proton. Por favor, inicia sesión con ${ email }"
+msgstr "Su cuenta de Proton existente puede ser usada para acceder a todos los servicios de Proton. Por favor, inicie sesión con ${ email }"
 
 #: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:11
 msgctxt "Info"
 msgid "Your account has been successfully created. Please press the \"Close\" button to be taken back to the app."
-msgstr "Tu cuenta ha sido creada correctamente. Por favor, pulsa el botón \"Cerrar\" para volver a la aplicación."
+msgstr "Su cuenta ha sido creada exitosamente. Por favor, pulse el botón \"Cerrar\" para volver a la aplicación."
 
 #: src/app/containers/SignupContainer/SignupContainer.js:172
 msgctxt "Info"
@@ -1318,12 +1318,12 @@ msgstr "Cargando"
 #: src/app/containers/SignupContainer/SignupContainer.js:172
 msgctxt "Info"
 msgid "Creating your account"
-msgstr "Creando tu cuenta"
+msgstr "Creando su cuenta"
 
 #: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:18
 msgctxt "Info"
 msgid "Your payment details are protected with TLS encryption and Swiss laws"
-msgstr "Sus datos de pago están protegidos con cifrado TLS y las leyes Suizas"
+msgstr "Su información de pago está protegida con cifrado TLS y las leyes de Suiza"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:83
 msgctxt "Info"
@@ -1333,7 +1333,7 @@ msgstr "Puede personalizar y descargar sus facturas con fines contables."
 #: node_modules/react-components/containers/support/AttachScreenshot.js:45
 msgctxt "Info"
 msgid "Screenshot(s) attached"
-msgstr "Captura(s) adjunta"
+msgstr "Captura(s) añadida(s)"
 
 #: node_modules/react-components/containers/support/BugModal.js:130
 #, javascript-format
@@ -1345,7 +1345,7 @@ msgstr "Actualizar la página o ${ link } resolverá automáticamente la mayorí
 #, javascript-format
 msgctxt "Info"
 msgid "Contact us at ${ criticalEmail } for critical security issues."
-msgstr "Contacte con nosotros en ${ criticalEmail } para problemas de seguridad críticos."
+msgstr "Contáctenos en ${ criticalEmail } por problemas críticos de seguridad."
 
 #: node_modules/react-components/containers/notification/EmailSection.js:63
 msgctxt "Info"
@@ -1355,7 +1355,7 @@ msgstr "El método seleccionado puede ser utilizado para recuperar una cuenta en
 #: node_modules/react-components/containers/notification/EmailSection.js:86
 msgctxt "Info"
 msgid "When notifications are enabled, we'll send an alert to your recovery/notification address if you have new messages in your ProtonMail account."
-msgstr "Cuando las notificaciones están habilitadas, enviaremos una alerta a su dirección de recuperación cuando tenga mensajes nuevos en su cuenta de ProtonMail."
+msgstr "Cuando las notificaciones están habilitadas, enviaremos una alerta a su dirección de recuperación/notificación cuando tenga mensajes nuevos en su cuenta de ProtonMail."
 
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:11
 msgctxt "Info"
@@ -1376,18 +1376,18 @@ msgstr "aquí"
 #, javascript-format
 msgctxt "Info"
 msgid "Account disabled due to ${ abuseOrFraudLink }."
-msgstr "Cuenta desactivada debido a ${ abuseOrFraudLink }."
+msgstr "Cuenta deshabilitada debido a ${ abuseOrFraudLink }."
 
 #: node_modules/react-components/containers/login/AbuseModal.js:24
 #, javascript-format
 msgctxt "Info"
 msgid "You can find more information and contact us ${ contactLink }."
-msgstr "Puede encontrar más información y contactarnos ${ contactLink }."
+msgstr "Puede encontrar más información y contactarnos en ${ contactLink }."
 
 #: node_modules/react-components/containers/account/UsernameSection.js:35
 msgctxt "Info"
 msgid "Log in to ProtonMail to activate your address"
-msgstr "Inicia sesión en ProtonMail para activar tu dirección"
+msgstr "Inicie sesión en ProtonMail para activar su dirección"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:91
 msgctxt "Info"
@@ -1397,13 +1397,13 @@ msgstr "lea primero nuestra guía de 2FA"
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:97
 msgctxt "Info"
 msgid "This wizard will enable Two Factor Authentication (2FA) on your Proton account. 2FA will make your Proton account more secure so we recommend enabling it."
-msgstr "Este asistente habilitará la autenticación de dos factores (2FA) en su cuenta de Proton. 2FA hará que su cuenta de Proton sea más segura, por lo que recomendamos habilitarla."
+msgstr "Este asistente le permitirá habilitar la autenticación de dos factores (2FA) en su cuenta de Proton. 2FA hará su cuenta más segura por lo que le recomendamos habilitar esta opción."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:101
 #, javascript-format
 msgctxt "Info"
 msgid "If you have never used 2FA before, we strongly recommend you ${ guideButton }."
-msgstr "Si nunca ha usado 2FA antes, le recomendamos encarecidamente ${ guideButton }."
+msgstr "Si nunca ha usado 2FA antes, le recomendamos enérgicamente ${ guideButton }."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:118
 msgctxt "Info"
@@ -1419,7 +1419,7 @@ msgstr "Escanee este código con su dispositivo de autenticación de dos factore
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:141
 msgctxt "Info"
 msgid "Scan QR code instead"
-msgstr "Escanear código QR en su lugar"
+msgstr "Escanear en cambio el código QR"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:149
 #, javascript-format
@@ -1435,7 +1435,7 @@ msgstr "Autenticación de dos factores habilitada"
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:231
 msgctxt "Info"
 msgid "Important: Please make sure you save the recovery codes. Otherwise you can permanently lose access to your account if you lose your 2FA device."
-msgstr "Importante: Por favor asegúrese que haya guardado los códigos de recuperación. De lo contrario podría permanentemente perder acceso a su cuenta si pierde su dispositivo 2FA."
+msgstr "Importante: Por favor asegúrese de guardar los códigos de recuperación. De lo contrario puede perder permanentemente el acceso a su cuenta si pierde su dispositivo de 2FA."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:235
 msgctxt "Info"
@@ -1445,18 +1445,18 @@ msgstr "Si pierde su dispositivo habilitado para dos factores, estos códigos se
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:154
 msgctxt "Info"
 msgid "Two-password mode uses separate passwords for login and mailbox decryption. This provides a minor security benefit in some situations, however we recommend one-password mode for most users. To switch to two password mode, first set a login password and then set a mailbox password."
-msgstr "El modo de dos contraseñas utiliza contraseñas separadas para el inicio de sesión y el descifrado del buzón. Esto proporciona un pequeño beneficio de seguridad en algunas situaciones, sin embargo, recomendamos una contraseña para la mayoría de los usuarios. Para cambiar al modo de dos contraseñas, primero establezca una contraseña de inicio de sesión y luego una contraseña del buzón."
+msgstr "El modo de dos contraseñas utiliza contraseñas separadas para el inicio de sesión y el descifrado del buzón. Esto proporciona un pequeño beneficio de seguridad en algunas situaciones, sin embargo, recomendamos el modo de una contraseña para la mayoría de los usuarios. Para cambiar al modo de dos contraseñas, primero establezca una contraseña de inicio de sesión y luego una contraseña del buzón."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:284
 msgctxt "Info"
 msgid "ProtonMail can also be used with a single password which replaces both the login and mailbox password. To switch to single password mode, enter the single password you would like to use and click Save."
-msgstr "ProtonMail puede también utilizarse con una sola contraseña que sustituye tanto a la contraseña de inicio de sesión como la del buzón. Para cambiar al modo de una contraseña, ingrese la única contraseña que desea utilizar y haga clic en guardar."
+msgstr "ProtonMail puede también utilizarse con una única contraseña que reemplaza tanto a la contraseña de inicio de sesión como la del buzón. Para cambiar al modo de una contraseña, ingrese la única contraseña que desea utilizar y haga clic en guardar."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:330
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:41
 msgctxt "Info"
 msgid "Do NOT forget this password. If you forget it, you will not be able to login or decrypt your messages."
-msgstr "NO olvide esta contraseña. Si la olvida, no podrá iniciar sesión ni descifrar sus mensajes."
+msgstr "* NO olvide esta contraseña. Si la olvida, no podrá iniciar sesión ni descifrar sus mensajes."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:334
 #, javascript-format
@@ -1497,7 +1497,7 @@ msgstr "Ejemplo: ProtonMail, ProtonContact, ProtonVPN, ProtonDrive, ProtonCalend
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:106
 msgctxt "Info"
 msgid "Warning: deletion is permanent"
-msgstr "Advertencia: la eliminación será permanente"
+msgstr "Advertencia: la eliminación es permanente"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:107
 msgctxt "Info"
@@ -1507,7 +1507,7 @@ msgstr "Si desea eliminar esta cuenta para combinarla con otra, NO la elimine."
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:136
 msgctxt "Info"
 msgid "Please provide an email address in case we need to contact you."
-msgstr "Indique una dirección de correo en caso de que necesitemos contactarle."
+msgstr "Indique una dirección de correo electrónico en caso de que necesitemos contactarle."
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:150
 msgctxt "Info"
@@ -1523,7 +1523,7 @@ msgstr "Para estar al tanto del último desarrollo en los productos de Proton, p
 #, javascript-format
 msgctxt "Info"
 msgid "Your ProtonVPN and ProtonMail accounts are linked. To delete them both, please log in at ${ loginLink } and delete your account there."
-msgstr "Tus cuentas ProtonVPN y ProtonMail están vinculadas. Para borrar ambas, por favor inicia sesión en ${ loginLink } y elimina tu cuenta allí."
+msgstr "Sus cuentas ProtonVPN y ProtonMail están vinculadas. Para eliminarlas, inicie sesión en ${ loginLink } y elimine su cuenta allí."
 
 #: node_modules/react-components/containers/account/DeleteSection.js:69
 msgctxt "Info"
@@ -1533,7 +1533,7 @@ msgstr "Eliminar su cuenta eliminará permanentemente sus correos electrónicos 
 #: node_modules/react-components/containers/account/DeleteSection.js:71
 msgctxt "Info"
 msgid "Deleting your account will permanently delete all data associated with it and it cannot be recovered. You will no longer be able to use the same username should you decide to create a new account."
-msgstr "Al eliminar tu cuenta, se eliminarán permanentemente todos los datos asociados con ella y no se podrán recuperar. Ya no podrás usar el mismo nombre de usuario si decides crearte una nueva cuenta."
+msgstr "Al eliminar su cuenta, se eliminarán permanentemente todos los datos asociados con ella y no se podrán recuperar. Ya no podrá usar el mismo nombre de usuario si decide crear una cuenta nueva."
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:12
 msgctxt "Info"
@@ -1553,28 +1553,28 @@ msgstr "por defecto"
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:30
 msgctxt "Info"
 msgid "Resetting your password means your old password and the places it is saved will no longer work. Are you sure you want to reset your password?"
-msgstr "Restablecer su contraseña significa que su contraseña anterior y los lugares donde está guardada ya no funcionarán. ¿Seguro que quieres restablecer tu contraseña?"
+msgstr "Al restablecer su contraseña significa que su contraseña anterior y los lugares donde está guardada ya no funcionarán. ¿Seguro que desea restablecer su contraseña?"
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:46
 msgctxt "Info"
 msgid "We will send a reset code to your recovery email to reset your password."
-msgstr "Le enviaremos un código de restablecimiento a su correo electrónico de recuperación para restablecer su contraseña."
+msgstr "Enviaremos un código de restablecimiento a su correo electrónico de recuperación para restablecer su contraseña."
 
 #: node_modules/react-components/containers/resetPassword/ResetPasswordForm.js:74
 msgctxt "Info"
 msgid "This can take a few seconds or a few minutes depending on your device."
-msgstr "Esto puede demorar unos segundos o unos minutos dependiendo de su dispositivo."
+msgstr "Esto puede tardar unos segundos o unos minutos dependiendo de su dispositivo."
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:17
 msgctxt "Info"
 msgid "Enter your recovery email address, and we'll send you your username(s). (This is usually the email address you provided during signup.)"
-msgstr "Introduzca su dirección de correo electrónico de recuperación y le enviaremos su nombre de usuario(s). (Esta suele ser la dirección de correo electrónico que proporcionó durante el registro)"
+msgstr "Ingrese su dirección de correo electrónico de recuperación y le enviaremos su nombre de usuario(s). (Esta suele ser la dirección de correo electrónico que proporcionó durante el registro)."
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:29
 #, javascript-format
 msgctxt "Info"
 msgid "Resetting your password will reset your encryption keys for all Proton related services (Mail and VPN). You will be unable to read your existing messages. If you know your ProtonMail credentials, do NOT reset. You can log in with them ${ loginLink }."
-msgstr "Al restablecer su contraseña, se restablecerán sus claves de cifrado para todos los servicios relacionados con Proton (Correo y VPN). No podrás leer tus mensajes existentes. Si conoces tus credenciales de ProtonMail, NO reinicies. Puedes iniciar sesión con ellas ${ loginLink }."
+msgstr "Al restablecer su contraseña, se restablecerán sus claves de cifrado para todos los servicios relacionados con Proton (Correo y VPN). No podrá leer sus mensajes existentes. Si conoce sus credenciales de ProtonMail, NO reinicie. Puede iniciar sesión con ellas ${ loginLink }."
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:31
 msgctxt "Info"
@@ -1594,12 +1594,12 @@ msgstr "Mantenga esta contraseña segura, no se puede recuperar."
 #: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:14
 msgctxt "Info"
 msgid "We've sent a reset code to your recovery email, valid for one hour or until you request a new code. Enter it below to continue."
-msgstr "Hemos enviado un código de restablecimiento a su correo electrónico de recuperación, válido durante una hora o hasta que solicite un nuevo código. Ingrese abajo para continuar."
+msgstr "Hemos enviado un código de restablecimiento a su correo electrónico de recuperación, válido durante una hora o hasta que solicite un nuevo código. Ingréselo abajo para continuar."
 
 #: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:27
 msgctxt "Info"
 msgid "IMPORTANT: Do not close or navigate away from this page. You will need to enter the reset code into the field below once you receive it."
-msgstr "IMPORTANTE: No cierre ni navegue fuera de esta página. Deberá introducir el código de reinicio en el campo a continuación una vez que lo reciba."
+msgstr "IMPORTANTE: No cierre ni navegue fuera de esta página. Deberá ingresar el código de reinicio en el campo de abajo una vez que lo reciba."
 
 #: node_modules/react-components/containers/app/LoaderPage.js:17
 #, javascript-format
@@ -1623,18 +1623,18 @@ msgstr "Recargue su cuenta con créditos que puede utilizar para suscribirse a u
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:108
 msgctxt "Info"
 msgid "Your bank requires 3-D Secure verification for security purposes."
-msgstr "Tu banco requiere verificación 3-D Secure por razones de seguridad."
+msgstr "Su banco requiere una verificación de seguridad 3-D por razones de seguridad."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:115
 msgctxt "Info"
 msgid "Verification will open a new tab, please disable any popup blockers. You will not be charged. Any amount used to verify the card will be refunded immediately."
-msgstr "La verificación abrirá una nueva pestaña, deshabilite los bloqueadores de ventanas emergentes. No se le cobrará. Cualquier cantidad utilizada para verificar la tarjeta será reembolsada de inmediato."
+msgstr "La verificación abrirá una pestaña nueva, deshabilite cualquier bloqueador de ventanas emergentes. No se le cobrará este proceso. Cualquier monto usado para verificar la tarjeta le será reembolsado inmediatamente."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:117
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:126
 msgctxt "Info"
 msgid "Verification will open a new tab, please disable any popup blockers."
-msgstr "La verificación abrirá una nueva pestaña, por favor desactiva los bloqueadores de ventanas emergentes."
+msgstr "La verificación abrirá una pestaña nueva, deshabilite cualquier bloqueador de ventanas."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:123
 msgctxt "Info"
@@ -1644,12 +1644,12 @@ msgstr "Pronto será redirigido a su banco para verificar su pago."
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:134
 msgctxt "Info"
 msgid "Please verify the card in the new tab which was opened."
-msgstr "Verifique la tarjeta en la nueva pestaña que se abrió."
+msgstr "Verifique la tarjeta en la pestaña nueva que se abrió."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:135
 msgctxt "Info"
 msgid "Please verify payment at the new tab which was opened."
-msgstr "Por favor verifique el pago en la nueva pestaña que se abrió."
+msgstr "Verifique el pago en la pestaña nueva que se abrió."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:143
 msgctxt "Info"
@@ -1659,17 +1659,17 @@ msgstr "La verificación puede tardar unos minutos."
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:144
 msgctxt "Info"
 msgid "Payment can take a few minutes to fully verify."
-msgstr "El pago puede tardar unos minutos para verificar completamente."
+msgstr "El pago puede tardar unos minutos para verificarse completamente."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:150
 msgctxt "Info"
 msgid "Please try again, use a different payment method, or call your bank for assistance."
-msgstr "Por favor, inténtelo de nuevo, utilice un método de pago diferente, o llame a su banco para obtener ayuda."
+msgstr "Intente de nuevo, utilice un método de pago diferente o llame a su banco para asistencia."
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:8
 msgctxt "Info"
 msgid "Your account will be downgraded in a few minutes."
-msgstr "Tu cuenta será degradada en unos minutos."
+msgstr "Su cuenta será degradada en unos pocos minutos."
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:9
 msgctxt "Info"
@@ -1704,7 +1704,7 @@ msgstr "Se aplicó automáticamente un descuento del 33% en la facturación bien
 #: node_modules/react-components/containers/payments/subscription/Upgrading.js:8
 msgctxt "Info"
 msgid "Your account is being upgraded, this may take up to 30 seconds."
-msgstr "Tu cuenta está siendo mejorada, esto puede tardar hasta 30 segundos."
+msgstr "Su cuenta está siendo mejorada, esto puede tomar hasta 30 segundos."
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:12
 msgctxt "Info"
@@ -1724,23 +1724,23 @@ msgstr "facturación bienal"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:60
 msgctxt "Info"
 msgid "No subscription yet"
-msgstr "Aún no hay suscripción"
+msgstr "No hay suscripciones"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:125
 msgctxt "Info"
 msgid "Not activated"
-msgstr "No está activado"
+msgstr "No activado"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:130
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:203
 msgctxt "Info"
 msgid "Combine paid ProtonMail and ProtonVPN and get a 20% discount on both"
-msgstr "Combina ProtonMail y ProtonVPN y obtén un 20% de descuentos en ambos"
+msgstr "Combine ProtonMail y ProtonVPN y obtenga un 20% de descuentos en ambos"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:230
 msgctxt "Info"
 msgid "Switch to annual billing for a 20% discount"
-msgstr "Cambie a facturación anual para obtener un descuento del 20%"
+msgstr "Cambie a facturación anual por un 20% de descuento"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:234
 msgctxt "Info"
@@ -1760,12 +1760,12 @@ msgstr "Gracias por su suscripción."
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:20
 msgctxt "Info"
 msgid "Your new features are now available."
-msgstr "Sus funciones nuevas ya están disponibles."
+msgstr "Sus características nuevas ya están disponibles."
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:27
 msgctxt "Info"
 msgid "Thank you"
-msgstr "Muchas gracias"
+msgstr "Gracias"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:17
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:18
@@ -1777,7 +1777,7 @@ msgstr "no hay suscripción"
 #, javascript-format
 msgctxt "Info"
 msgid "Amount below minimum. (${ amount })"
-msgstr "Cantidad inferior al mínimo. (${ amount })"
+msgstr "Cantidad por debajo del mínimo. (${ amount })"
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:64
 msgctxt "Info"
@@ -1787,7 +1787,7 @@ msgstr "Las transacciones de Bitcoin pueden tomar un tiempo para ser confirmadas
 #: node_modules/react-components/containers/payments/Bitcoin.js:73
 msgctxt "Info"
 msgid "After making your Bitcoin payment, please follow the instructions below to upgrade."
-msgstr "Después de realizar el pago con Bitcoin, siga las instrucciones para actualizar."
+msgstr "Después de realizar el pago con Bitcoin, siga las instrucciones para mejorar."
 
 #: node_modules/react-components/containers/payments/BillingSection.js:63
 msgctxt "Info"
@@ -1797,24 +1797,24 @@ msgstr "No hay detalles de facturación disponibles para su suscripción actual.
 #: node_modules/react-components/containers/payments/PayPal.js:120
 msgctxt "Info"
 msgid "Please verify the payment in the new tab."
-msgstr "Por favor verifique el pago en la nueva pestaña."
+msgstr "Por favor verifique el pago en la pestaña nueva."
 
 #: node_modules/react-components/containers/payments/PayPal.js:130
 #: node_modules/react-components/containers/payments/PayPal.js:160
 msgctxt "Info"
 msgid "We will redirect you to PayPal in a new browser tab to complete this transaction. If you use any pop-up blockers, please disable them to continue."
-msgstr "Te redirigiremos a PayPal en una nueva pestaña de navegador para completar esta transacción. Si usas cualquier bloqueador emergente, por favor desactívalos para continuar."
+msgstr "Lo redirigiremos a PayPal en una pestaña nueva de navegador para completar esta transacción. Si usa cualquier bloqueador emergente, por favor desactívelo para continuar."
 
 #: node_modules/react-components/containers/payments/PayPal.js:138
 #, javascript-format
 msgctxt "Info"
 msgid "You must have a credit card or bank account linked with your PayPal account. If your PayPal account doesn't have that, please ${ clickHere }."
-msgstr "Debes tener una tarjeta de crédito o una cuenta bancaria vinculada con tu cuenta de PayPal. Si tu cuenta de PayPal no tiene eso, por favor ${ clickHere }."
+msgstr "Debe tener una tarjeta de crédito o una cuenta bancaria vinculada con su cuenta de PayPal. Si su cuenta de PayPal no las tiene, por favor ${ clickHere }."
 
 #: node_modules/react-components/containers/payments/PayPal.js:145
 msgctxt "Info"
 msgid "This will enable PayPal to be used to pay for your Proton subscription. We will redirect you to PayPal in a new browser tab. If you use any pop-up blockers, please disable them to continue."
-msgstr "Esto permitirá a PayPal que se utilice para pagar su suscripción a Proton. Te redirigiremos a PayPal en una nueva pestaña de navegador. Si utiliza cualquier bloqueador emergente, por favor desactívalos para continuar."
+msgstr "Esto permitirá que PayPal se utilice para pagar su suscripción a Proton. Lo redirigiremos a PayPal en una pestaña nueva de navegador. Si utiliza cualquier bloqueador emergente, por favor desactívelo para continuar."
 
 #: node_modules/react-components/containers/payments/PayPal.js:153
 msgctxt "Info"
@@ -1853,33 +1853,33 @@ msgid "Use this section to generate config files for third party VPN clients\n"
 "or when setting up a connection on a router. If you use a native ProtonVPN\n"
 "client to connect, you do not need to manually handle these configuration files."
 msgstr "Utilice esta sección para generar archivos de configuración para clientes VPN de terceros\n"
-"o al configurar una conexión en un router. Si utiliza un cliente nativo ProtonVPN\n"
-"para conectarse, no necesita manejar manualmente estos archivos de configuración."
+"o al configurar una conexión en un enrutador. Si utiliza un cliente nativo de ProtonVPN\n"
+"para conectar, no necesita manejar estos archivos de configuración."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:157
 msgctxt "Info"
 msgid "Install a Secure Core configuration file to benefit from an additional protection against VPN endpoint compromise."
-msgstr "Instale un archivo de configuración Secure Core para beneficiarse de una protección adicional contra el compromiso de punto final VPN."
+msgstr "Instale un archivo de configuración de Secure Core para obtener protección adicional contra el compromiso de punto final de VPN."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:162
 msgctxt "Info"
 msgid "ProtonVPN Plus or Visionary required for Secure Core feature."
-msgstr "Se requiere ProtonVPN Plus o Visionary para la función Secure Core."
+msgstr "Se requiere de ProtonVPN Plus o Visionary para tener Secure Core."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:179
 msgctxt "Info"
 msgid "Install a Country configuration file to connect to a random server in the country of your choice."
-msgstr "Instale un archivo de configuración de país para conectarse a un servidor aleatorio en el país que elija."
+msgstr "Instale un archivo de configuración de País para conectarse a un servidor aleatorio en el país de su elección."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:183
 msgctxt "Info"
 msgid "ProtonVPN Basic, Plus or Visionary required for Country level connection."
-msgstr "Se requiere ProtonVPN Basic, Plus o Visionary para la conexión a nivel de país."
+msgstr "Se requiere de ProtonVPN Basic, Plus o Visionary para tener conexión a nivel de país."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:199
 msgctxt "Info"
 msgid "Install a Server configuration file to connect to a specific server in the country of your choice."
-msgstr "Instale un archivo de configuración del servidor para conectarse a un servidor específico en el país de su elección."
+msgstr "Instale un archivo de configuración de Servidor para conectarse a un servidor específico en el país de su elección."
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:33
 msgctxt "Info"
@@ -2003,7 +2003,7 @@ msgstr "Suscripciones de correo electrónico"
 #: src/app/containers/AccountContainer.js:46
 msgctxt "Title"
 msgid "Delete"
-msgstr "Borrar"
+msgstr "Eliminar"
 
 #: src/app/containers/RedeemContainer.js:24
 msgctxt "Title"
@@ -2023,7 +2023,7 @@ msgstr "Servidores Secure Core"
 #: src/app/containers/RedeemContainer.js:57
 msgctxt "Title"
 msgid "No Logs"
-msgstr "No hay información de registros"
+msgstr "Sin registros"
 
 #: src/app/containers/RedeemContainer.js:64
 msgctxt "Title"
@@ -2033,7 +2033,7 @@ msgstr "Kill Switch"
 #: src/app/containers/RedeemContainer.js:70
 msgctxt "Title"
 msgid "DNS leak prevention"
-msgstr "Prevención contra filtración de DNS"
+msgstr "Prevención contra la filtración de DNS"
 
 #: src/app/containers/RedeemContainer.js:77
 msgctxt "Title"
@@ -2053,7 +2053,7 @@ msgstr "Seleccione un método de verificación de cuenta"
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:36
 msgctxt "Title"
 msgid "Enter verification code"
-msgstr "Introduzca el código de verificación"
+msgstr "Ingrese el código de verificación"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:14
 msgctxt "Title"
@@ -2063,22 +2063,22 @@ msgstr "Reenviar código"
 #: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:22
 msgctxt "Title"
 msgid "Are you human?"
-msgstr "¿Eres humano?"
+msgstr "¿Es un humano?"
 
 #: src/app/containers/SignupContainer/LoginPanel.js:8
 msgctxt "Title"
 msgid "Already have a Proton account?"
-msgstr "¿Ya tienes una cuenta Proton?"
+msgstr "¿Ya tiene una cuenta de Proton?"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:34
 msgctxt "Title"
 msgid "Select a plan"
-msgstr "Selecciona un plan"
+msgstr "Seleccione un plan"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanComparisonModal.js:19
 msgctxt "Title"
 msgid "ProtonVPN plan comparison"
-msgstr "Comparación del plan ProtonVPN"
+msgstr "Comparativa de planes de ProtonVPN"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountStep.js:24
 msgctxt "Title"
@@ -2098,12 +2098,12 @@ msgstr "Cuenta creada"
 #: src/app/containers/SignupContainer/SignupContainer.js:34
 msgctxt "Title"
 msgid "Sign up - ProtonVPN"
-msgstr "Regístrate - ProtonVPN"
+msgstr "Registrarse - ProtonVPN"
 
 #: src/app/containers/SignupContainer/SignupContainer.js:167
 msgctxt "Title"
 msgid "Sign up"
-msgstr "Regístrate"
+msgstr "Registrarse"
 
 #: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:15
 msgctxt "Title"
@@ -2114,12 +2114,12 @@ msgstr "Proporcionar detalles de pago"
 #, javascript-format
 msgctxt "Title"
 msgid "${ title } plan details"
-msgstr "Detalles del plan de${ title }"
+msgstr "Detalles del plan ${ title }"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:32
 msgctxt "Title"
 msgid "Upgrade and get more"
-msgstr "Mejora y obtén más"
+msgstr "Mejore su subscripción y obtenga más"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:33
 msgctxt "Title"
@@ -2171,7 +2171,7 @@ msgstr "Añadir detalles de la factura"
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:116
 msgctxt "Title"
 msgid "Amount"
-msgstr "Cantidad"
+msgstr "Monto"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:117
 msgctxt "Title"
@@ -2216,7 +2216,7 @@ msgstr "Actualizar correo de recuperación/notificación"
 #: node_modules/react-components/containers/login/AbuseModal.js:6
 msgctxt "Title"
 msgid "Account disabled"
-msgstr "Cuenta desactivada"
+msgstr "Cuenta deshabilitada"
 
 #: node_modules/react-components/containers/login/ResetPasswordContainer.js:9
 msgctxt "Title"
@@ -2291,7 +2291,7 @@ msgstr "Contraseña de inicio de sesión"
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:29
 msgctxt "Title"
 msgid "Confirm reset password"
-msgstr "Confirmar restablecer contraseña"
+msgstr "Confirmar restablecimiento de contraseña"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:66
 msgctxt "Title"
@@ -2326,7 +2326,7 @@ msgstr "Verificación de pago en progreso"
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:46
 msgctxt "Title"
 msgid "3-D Secure verification failed"
-msgstr "La verificación de seguridad 3-D falló"
+msgstr "Falló la verificación de seguridad 3-D"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:152
 msgctxt "Title"
@@ -2346,7 +2346,7 @@ msgstr "Código de regalo"
 #: node_modules/react-components/containers/payments/PayPalModal.js:23
 msgctxt "Title"
 msgid "Add PayPal payment method"
-msgstr "Añadir método de pago de PayPal"
+msgstr "Añadir PayPal como método de pago"
 
 #: node_modules/react-components/containers/payments/subscription/CustomMailSection.js:26
 msgctxt "Title"
@@ -2357,7 +2357,7 @@ msgstr "Total ProtonMail"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:201
 msgctxt "Title"
 msgid "Payment details"
-msgstr "Detalles de pago"
+msgstr "Detalles del pago"
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:17
 msgctxt "Title"
@@ -2372,7 +2372,7 @@ msgstr "Resumen del pedido"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:160
 msgctxt "Title"
 msgid "Upgrading account"
-msgstr "Mejorando cuenta"
+msgstr "Mejorando la cuenta"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:174
 msgctxt "Title"
@@ -2387,7 +2387,7 @@ msgstr "Personalización"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:98
 msgctxt "Title"
 msgid "Subscription details"
-msgstr "Datos de suscripción"
+msgstr "Datos de la suscripción"
 
 #: node_modules/react-components/containers/payments/EditCardModal.js:18
 msgctxt "Title"
@@ -2410,7 +2410,7 @@ msgstr "Datos de facturación"
 #: node_modules/react-components/containers/payments/Card.js:79
 msgctxt "Title"
 msgid "ZIP / postal code"
-msgstr "CP / código postal"
+msgstr "ZIP / código postal"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:106
 msgctxt "Title"
@@ -2430,17 +2430,17 @@ msgstr "3. Seleccionar conexión y descarga"
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:155
 msgctxt "Title"
 msgid "Secure core configs"
-msgstr "Configuraciones de Secure Core"
+msgstr "Ajustes de Secure Core"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:177
 msgctxt "Title"
 msgid "Country configs"
-msgstr "Configuraciones de País"
+msgstr "Ajustes de país"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:198
 msgctxt "Title"
 msgid "Server configs"
-msgstr "Configuraciones de Servidor"
+msgstr "Ajustes de servidor"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:22
 msgctxt "Title"
@@ -2465,7 +2465,7 @@ msgstr "Proporciona protección adicional contra el compromiso del servidor VPN 
 #: src/app/components/sections/plans/PlansTable.js:311
 msgctxt "Tooltip"
 msgid "Includes ProtonMail encrypted email with all features"
-msgstr "Incluye un correo electrónico cifrado con todas las características"
+msgstr "Incluye ProtonMail cifrado con todas las características"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:72
 msgctxt "Tooltip"
@@ -2475,7 +2475,7 @@ msgstr "Nombre de usuario que se utiliza para todos los servicios de Proton. Est
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:94
 msgctxt "Tooltip"
 msgid "If you forget your password, you will no longer have access to your account or your data. Please save it someplace safe."
-msgstr "Si olvidas tu contraseña, ya no tendrás acceso a tu cuenta o a tus datos. Por favor, guárdala en un lugar seguro."
+msgstr "Si olvida su contraseña, ya no tendrá acceso a su cuenta o a sus datos. Por favor, guárdela en un lugar seguro."
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:125
 msgctxt "Tooltip"
@@ -2495,22 +2495,22 @@ msgstr "Acceda al contenido (Netflix, Amazon Prime, Wikipedia, Facebook, Youtube
 #: node_modules/react-components/containers/payments/CycleDiscountBadge.js:15
 msgctxt "Tooltip"
 msgid "Discount applied for annual billing cycle"
-msgstr "Descuento aplicado para ciclo de facturación anual"
+msgstr "Descuento aplicado para el ciclo de facturación anual"
 
 #: node_modules/react-components/containers/payments/CycleDiscountBadge.js:16
 msgctxt "Tooltip"
 msgid "Discount applied for two-year billing cycle"
-msgstr "Descuento aplicado para ciclo de facturación de dos años"
+msgstr "Descuento aplicado para el ciclo de facturación de dos años"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:83
 msgctxt "Tooltip"
 msgid "Download and stream faster with a faster VPN connection."
-msgstr "Descarga y transmite más rápido con una conexión VPN más rápida."
+msgstr "Descargue y transmita más rápido con una conexión VPN más rápida."
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:92
 msgctxt "Tooltip"
 msgid "More connections allows more devices to use ProtonVPN at the same time."
-msgstr "Más conexiones permiten que más dispositivos usen ProtonVPN al mismo tiempo."
+msgstr "Más conexiones permiten que más dispositivos utilicen ProtonVPN al mismo tiempo."
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:162
 msgctxt "Tooltip"
@@ -2584,7 +2584,7 @@ msgstr "Secure Core"
 #: src/app/components/sections/plans/PlansTable.js:190
 msgctxt "Header"
 msgid "Apps for Android / Linux / iOS / Windows"
-msgstr "Aplicaciones para Android / Linux / iOS / Windows"
+msgstr "Apps para Android / Linux / iOS / Windows"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:101
 #: src/app/components/sections/plans/PlansTable.js:210
@@ -2595,7 +2595,7 @@ msgstr "Cifrado avanzado"
 #: src/app/components/sections/plans/PlansTable.js:230
 msgctxt "Header"
 msgid "Kill Switch / Always-on"
-msgstr "Kill Switch / Siempre On"
+msgstr "Kill Switch / Siempre activo"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:113
 #: src/app/components/sections/plans/PlansTable.js:250
@@ -2612,7 +2612,7 @@ msgstr "Sin límite de datos"
 #: src/app/components/sections/plans/PlansTable.js:290
 msgctxt "Header"
 msgid "Stream geo-blocked content"
-msgstr "Transmita contenido geobloqueado"
+msgstr "Transmitir contenido geobloqueado"
 
 #: src/app/components/sections/plans/PlansTable.js:331
 msgctxt "Header"
@@ -2642,18 +2642,18 @@ msgstr "Transmisión segura"
 #: src/app/components/sections/plans/PlansTable.js:123
 msgctxt "Plan details"
 msgid "Medium"
-msgstr "Medio"
+msgstr "Media"
 
 #: src/app/components/sections/plans/PlansTable.js:124
 msgctxt "Plan details"
 msgid "High"
-msgstr "Alto"
+msgstr "Alta"
 
 #: src/app/components/sections/plans/PlansTable.js:125
 #: src/app/components/sections/plans/PlansTable.js:126
 msgctxt "Plan details"
 msgid "Highest"
-msgstr "Más alto"
+msgstr "Máxima"
 
 #: src/app/components/sections/plans/PlansSection.js:41
 msgctxt "Separator, spacing is important"
@@ -2663,7 +2663,7 @@ msgstr " y "
 #: src/app/components/sections/plans/PlansSection.js:69
 msgctxt "Success"
 msgid "You have successfully unsubscribed"
-msgstr "Ha cancelado su suscripción satisfactoriamente"
+msgstr "Se ha desuscrito satisfactoriamente"
 
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:29
 msgctxt "Success"
@@ -2729,12 +2729,12 @@ msgstr "Método de pago añadido"
 #: src/app/containers/LoginContainer.js:19
 msgctxt "Dropdown button"
 msgid "Need help?"
-msgstr "¿Necesitas ayuda?"
+msgstr "¿Necesita ayuda?"
 
 #: src/app/containers/RedeemContainer.js:31
 msgctxt "Image alt"
 msgid "Laptop & smartphone shown connected to ProtonVPN network."
-msgstr "Su ordenador portátil y sú teléfono se muestran conectados a la red ProtonVPN."
+msgstr "Su ordenador portátil y su celular se muestran conectados a la red ProtonVPN."
 
 #: src/app/containers/RedeemContainer.js:42
 msgctxt "Image alt"
@@ -2749,17 +2749,17 @@ msgstr "Servidores Secure Core"
 #: src/app/containers/RedeemContainer.js:56
 msgctxt "Image alt"
 msgid "No logs"
-msgstr "No hay información de registros"
+msgstr "Sin registros"
 
 #: src/app/containers/RedeemContainer.js:63
 msgctxt "Image alt"
 msgid "Kill switch to prevent IP exposure"
-msgstr "Kill Switch para prevenir exposición de IP"
+msgstr "Kill Switch para prevenir la exposición de IP"
 
 #: src/app/containers/RedeemContainer.js:69
 msgctxt "Image alt"
 msgid "DNS leak prevention"
-msgstr "Prevención contra filtración de DNS"
+msgstr "Prevención contra la filtración de DNS"
 
 #: src/app/containers/RedeemContainer.js:76
 msgctxt "Image alt"
@@ -2769,17 +2769,17 @@ msgstr "Cifrado fuerte"
 #: src/app/containers/RedeemContainer.js:44
 msgctxt "About"
 msgid "Protect your data with Swiss privacy laws, some of the strongest in the world"
-msgstr "Proteja sus datos con las leyes de privacidad suizas, algunas de las más sólidas del mundo"
+msgstr "Proteja sus datos con las leyes de privacidad de Suiza, unas de las más sólidas del mundo"
 
 #: src/app/containers/RedeemContainer.js:51
 msgctxt "About"
 msgid "Defend yourself against advanced network-based attacks by routing your traffic through hardened servers"
-msgstr "Defiéndete de ataques avanzados basados ​​en la red enrutando tu tráfico a través de servidores reforzados"
+msgstr "Defiéndase de ataques avanzados basados ​​en la red redirigiendo su tráfico a través de servidores reforzados"
 
 #: src/app/containers/RedeemContainer.js:58
 msgctxt "About"
 msgid "Keep your browsing history private - we do not keep any records of our users' online activity"
-msgstr "Mantenga privado su historial de navegación: no guardamos ningún registro de la actividad en línea de nuestros usuarios"
+msgstr "Mantenga privado su historial de navegación: nosotros no guardamos ningún registro de la actividad en línea de nuestros usuarios"
 
 #: src/app/containers/RedeemContainer.js:65
 msgctxt "About"
@@ -2789,12 +2789,12 @@ msgstr "Mantenga sus datos seguros incluso si está desconectado de su servidor 
 #: src/app/containers/RedeemContainer.js:71
 msgctxt "About"
 msgid "Prevent your DNS requests from revealing your browsing history by encrypting all your DNS queries"
-msgstr "Evite que sus solicitudes DNS revelen su historial de navegación encriptando todas sus consultas DNS"
+msgstr "Evite que sus solicitudes DNS revelen su historial de navegación al cifrar todas sus consultas DNS"
 
 #: src/app/containers/RedeemContainer.js:78
 msgctxt "About"
 msgid "Defend your Internet connection with AES-256, the highest strength encryption."
-msgstr "Defienda su conexión en Internet con AES-256, el cifrado de mayor fuerza."
+msgstr "Defienda su conexión en internet con AES-256, el cifrado más fuerte disponible."
 
 #: src/app/containers/PreInviteContainer.js:16
 msgctxt "Error"
@@ -2804,14 +2804,14 @@ msgstr "Enlace de invitación inválido"
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:54
 msgctxt "Error"
 msgid "Can't check username, try again later"
-msgstr "No se puede comprobar el nombre de usuario, inténtelo de nuevo más tarde"
+msgstr "No se puede comprobar el nombre de usuario, inténtelo nuevamente más tarde"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:96
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:37
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:114
 msgctxt "Error"
 msgid "Passwords do not match"
-msgstr "Las contraseñas no coinciden"
+msgstr "Las contraseñas no coinciden entre sí"
 
 #: node_modules/react-components/components/input/EmailInput.js:9
 msgctxt "Error"
@@ -2826,7 +2826,7 @@ msgstr "Este campo es obligatorio"
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:75
 msgctxt "Error"
 msgid "You have no invoices."
-msgstr "No tienes facturas."
+msgstr "No tiene facturas."
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:85
 msgctxt "Error"
@@ -2842,7 +2842,7 @@ msgstr "Los pagos no están disponibles, vuelva a intentarlo más tarde"
 #: node_modules/react-components/containers/notification/EmailSection.js:54
 msgctxt "Error"
 msgid "Please set a recovery/notification email"
-msgstr "Por favor establezca un correo electrónico de recuperación/notificación"
+msgstr "Por favor, establezca un correo electrónico de recuperación/notificación"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:231
 msgctxt "Error"
@@ -2852,7 +2852,7 @@ msgstr "Por favor, genere claves antes de intentar cambiar su contraseña."
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:38
 msgctxt "Error"
 msgid "Please enter '${ WORD }'"
-msgstr "Por favor, introduzca '${ WORD }'"
+msgstr "Por favor, ingrese '${ WORD }'"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:16
 msgctxt "Error"
@@ -2862,23 +2862,23 @@ msgstr "Nombre en la tarjeta requerido"
 #: node_modules/react-components/containers/payments/cardValidator.js:22
 msgctxt "Error"
 msgid "Invalid expiration date"
-msgstr "Fecha de caducidad no válida"
+msgstr "Fecha de expiración inválida"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:27
 msgctxt "Error"
 msgid "Invalid card number"
-msgstr "Número de tarjeta no válido"
+msgstr "Número de tarjeta inválido"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:36
 #, javascript-format
 msgctxt "Error"
 msgid "Invalid ${ name } code"
-msgstr "Código de ${ name } inválido"
+msgstr "Código ${ name } inválido"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:43
 msgctxt "Error"
 msgid "Invalid postal code"
-msgstr "Código postal no válido"
+msgstr "Código postal inválido"
 
 #: node_modules/react-components/containers/payments/GiftCodeInput.js:9
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:31
@@ -2886,12 +2886,12 @@ msgstr "Código postal no válido"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:78
 msgctxt "Error"
 msgid "Invalid gift code"
-msgstr "Código de regalo no válido"
+msgstr "Código de regalo inválido"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:72
 msgctxt "Error"
 msgid "Your coupon is invalid or cannot be applied to your plan"
-msgstr "Su cupón no es válido o no puede aplicarse a su plan"
+msgstr "Su cupón es inválido o no puede aplicarse a su plan"
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:51
 msgctxt "Error"
@@ -2917,7 +2917,7 @@ msgstr "Proceso de pago fallido"
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:46
 msgctxt "Error"
 msgid "Payment process consumed"
-msgstr "Proceso de pago consumido"
+msgstr "Proceso de pago completado"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:50
 msgctxt "Error"
@@ -2944,7 +2944,7 @@ msgstr "La cantidad mínima que se puede donar es de ${ price }"
 #, javascript-format
 msgctxt "Error"
 msgid "The minimum amount of credit that can be added is ${ _price }"
-msgstr "La cantidad mínima de crédito que se puede agregar es de ${ _price }"
+msgstr "La cantidad mínima de crédito que se puede añadir es de ${ _price }"
 
 #: node_modules/react-components/containers/payments/Payment.js:67
 #, javascript-format
@@ -2955,12 +2955,12 @@ msgstr "El pago mínimo que aceptamos es de ${ _price2 }"
 #: node_modules/react-components/containers/payments/PayPal.js:74
 msgctxt "Error"
 msgid "Amount below minimum."
-msgstr "Cantidad inferior al mínimo."
+msgstr "Cantidad menor al mínimo."
 
 #: node_modules/react-components/containers/payments/PayPal.js:80
 msgctxt "Error"
 msgid "Amount above the maximum."
-msgstr "Cantidad superior al máximo."
+msgstr "Cantidad mayor al máximo."
 
 #: node_modules/react-components/containers/api/ApiProvider.js:38
 msgctxt "Error"
@@ -2980,7 +2980,7 @@ msgstr "Tiempo de espera agotado."
 #: node_modules/proton-shared/lib/keys/keys.js:98
 msgctxt "Error"
 msgid "'Signature verification failed"
-msgstr "'Verificación de firma fallida"
+msgstr "Falló la verificación de la firma"
 
 #: node_modules/proton-shared/lib/keys/keys.js:118
 msgctxt "Error"
@@ -3001,7 +3001,7 @@ msgstr "Los cupones están temporalmente deshabilitados"
 #: src/app/containers/SignupContainer/useSignup.js:140
 msgctxt "Notification"
 msgid "Invites are temporarily disabled"
-msgstr "Las invitaciones están temporalmente desactivadas"
+msgstr "Las invitaciones están temporalmente deshabilitadas"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:32
 msgctxt "Notification"
@@ -3011,7 +3011,7 @@ msgstr "Credenciales OpenVPN / IKEv2 actualizadas"
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:42
 msgctxt "Option"
 msgid "Email address"
-msgstr "Dirección de correo electrónico"
+msgstr "Dirección de correo"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:48
 msgctxt "Option"
@@ -3034,7 +3034,7 @@ msgstr[1] "${ value } direcciones"
 msgctxt "Option"
 msgid "1 GB storage"
 msgid_plural "${ value } GB storage"
-msgstr[0] "1GB de almacenamiento"
+msgstr[0] "1 GB de almacenamiento"
 msgstr[1] "${ value } GB de almacenamiento"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:18
@@ -3086,7 +3086,7 @@ msgstr "iOS"
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:118
 msgctxt "Option"
 msgid "Router"
-msgstr "Router"
+msgstr "Enrutador"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:130
 msgctxt "Option"
@@ -3101,7 +3101,7 @@ msgstr "TCP"
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
 msgctxt "VerificationType"
 msgid "email"
-msgstr "correo electrónico"
+msgstr "correo"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
 msgctxt "VerificationType"
@@ -3117,7 +3117,7 @@ msgstr "Mensual"
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:43
 msgctxt "Billing cycle option"
 msgid "Annually SAVE 20%"
-msgstr "Ahorre 20% anual"
+msgstr "Ahorre 20% anualmente"
 
 #: node_modules/react-components/containers/payments/CycleSelector.js:15
 msgctxt "Billing cycle option"
@@ -3132,7 +3132,7 @@ msgstr "Dos años"
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:18
 msgctxt "Suffix"
 msgid "monthly"
-msgstr "mensual"
+msgstr "mensualmente"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:25
 msgctxt "Suffix"
@@ -3150,7 +3150,7 @@ msgstr "/año"
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:48
 msgctxt "Suffix"
 msgid "/ month"
-msgstr "/ mes"
+msgstr "/mes"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:70
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:75
@@ -3179,7 +3179,7 @@ msgstr "AHORRA ${ discountText }"
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:19
 msgctxt "Plan Action"
 msgid "Get ${ plan.title }"
-msgstr "Obtén ${ plan.title }"
+msgstr "Obtiene ${ plan.title }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:35
 msgctxt "Plan info"
@@ -3194,7 +3194,7 @@ msgstr "Privacidad y seguridad para todos"
 #: src/app/containers/SignupContainer/plans.js:55
 msgctxt "Plan Description"
 msgid "Basic privacy features"
-msgstr "Características de privacidad básicas"
+msgstr "Características de privacidad de Basic"
 
 #: src/app/containers/SignupContainer/plans.js:83
 msgctxt "Plan Description"
@@ -3221,7 +3221,7 @@ msgstr "Acceso a ${ countries.basic.length } países"
 #: src/app/containers/SignupContainer/plans.js:74
 msgctxt "Plan Feature"
 msgid "Filesharing/P2P support"
-msgstr "Soporte de archivos compartidos/P2P"
+msgstr "Soporte para Filesharing/P2P"
 
 #: src/app/containers/SignupContainer/plans.js:41
 #: src/app/containers/SignupContainer/plans.js:66
@@ -3231,8 +3231,8 @@ msgstr "Soporte de archivos compartidos/P2P"
 msgctxt "Plan Feature"
 msgid "${ maxConnections } simultaneous VPN connection"
 msgid_plural "${ maxConnections } simultaneous VPN connections"
-msgstr[0] "Conexión VPN simultánea de ${ maxConnections }"
-msgstr[1] "Conexiones VPN simultáneas de${ maxConnections }"
+msgstr[0] "${ maxConnections } conexión VPN simultánea"
+msgstr[1] "${ maxConnections } conexiones VPN simultáneas"
 
 #: src/app/containers/SignupContainer/plans.js:46
 msgctxt "Plan Feature"
@@ -3248,7 +3248,7 @@ msgstr "Velocidad media"
 #: src/app/containers/SignupContainer/plans.js:77
 msgctxt "Plan Feature"
 msgid "No logs policy"
-msgstr "No hay política de registros"
+msgstr "Política de no registros"
 
 #: src/app/containers/SignupContainer/plans.js:49
 msgctxt "Plan Feature"
@@ -3263,7 +3263,7 @@ msgstr "Sin anuncios"
 #: src/app/containers/SignupContainer/plans.js:60
 msgctxt "Plan Feature"
 msgid "Highest speed servers (10 Gbps)"
-msgstr "Servidores de mayor velocidad (10 Gbps)"
+msgstr "Servidores de alta velocidad (10 Gbps)"
 
 #: src/app/containers/SignupContainer/plans.js:61
 #: src/app/containers/SignupContainer/plans.js:96
@@ -3306,7 +3306,7 @@ msgstr "Velocidades más altas"
 #: src/app/containers/SignupContainer/plans.js:115
 msgctxt "Plan Feature"
 msgid "ProtonMail Visionary account"
-msgstr "Cuenta Visionary ProtonMail"
+msgstr "Cuenta ProtonMail Visionary"
 
 #: src/app/containers/SignupContainer/plans.js:56
 #, javascript-format
@@ -3339,12 +3339,12 @@ msgstr "Plan anual"
 #: node_modules/react-components/components/toggle/Toggle.js:10
 msgctxt "Toggle button"
 msgid "On"
-msgstr "Activado"
+msgstr "On"
 
 #: node_modules/react-components/components/toggle/Toggle.js:11
 msgctxt "Toggle button"
 msgid "Off"
-msgstr "Desactivado"
+msgstr "Off"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:7
 msgctxt "Invoice type display as badge"
@@ -3374,7 +3374,7 @@ msgstr "Donación"
 #: node_modules/react-components/containers/invoices/InvoiceType.js:12
 msgctxt "Invoice type display as badge"
 msgid "Chargeback"
-msgstr "Devolución del importe"
+msgstr "Devolución"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:13
 msgctxt "Invoice type display as badge"
@@ -3404,32 +3404,32 @@ msgstr "Añada su nombre (o nombre de la empresa) y dirección a sus facturas."
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:52
 msgctxt "Placeholder for custom invoice text"
 msgid "Add your name (or company name) and address to your invoices"
-msgstr "Añada su nombre (o nombre de la empresa) y dirección a sus facturas"
+msgstr "Añada su nombre (o nombre de la compañía) y dirección a sus facturas"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:16
 msgctxt "Invoice state display as badge"
 msgid "Unpaid"
-msgstr "No pagado"
+msgstr "No pagada"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:17
 msgctxt "Invoice state display as badge"
 msgid "Paid"
-msgstr "Pagado"
+msgstr "Pagada"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:18
 msgctxt "Invoice state display as badge"
 msgid "Void"
-msgstr "Vacío"
+msgstr "Vencida"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:19
 msgctxt "Invoice state display as badge"
 msgid "Billed"
-msgstr "Facturado"
+msgstr "Facturada"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:20
 msgctxt "Invoice state display as badge"
 msgid "Writeoff"
-msgstr "Cancelar"
+msgstr "Cancelación"
 
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:12
 msgctxt "Title for PDF file"
@@ -3455,7 +3455,7 @@ msgstr "Problema de registro"
 #: node_modules/react-components/containers/support/BugModal.js:37
 msgctxt "Bug category"
 msgid "Bridge problem"
-msgstr "Problema de puente"
+msgstr "Problema de Bridge"
 
 #: node_modules/react-components/containers/support/BugModal.js:38
 msgctxt "Bug category"
@@ -3471,7 +3471,7 @@ msgstr "Problema de dominios personalizados"
 #: node_modules/react-components/containers/support/BugModal.js:51
 msgctxt "Bug category"
 msgid "Payments problem"
-msgstr "Problema con los pagos"
+msgstr "Problema de pagos"
 
 #: node_modules/react-components/containers/support/BugModal.js:41
 #: node_modules/react-components/containers/support/BugModal.js:55
@@ -3482,7 +3482,7 @@ msgstr "Problema de conexión"
 #: node_modules/react-components/containers/support/BugModal.js:42
 msgctxt "Bug category"
 msgid "Slow speed problem"
-msgstr "Problema de velocidad lenta"
+msgstr "Problema de baja velocidad"
 
 #: node_modules/react-components/containers/support/BugModal.js:43
 msgctxt "Bug category"
@@ -3493,7 +3493,7 @@ msgstr "Problema de VPN"
 #: node_modules/react-components/containers/support/BugModal.js:60
 msgctxt "Bug category"
 msgid "Feature request"
-msgstr "Solicitud de función"
+msgstr "Solicitud de característica"
 
 #: node_modules/react-components/containers/support/BugModal.js:45
 msgctxt "Bug category"
@@ -3558,22 +3558,22 @@ msgstr "Si elimina esta dirección, ya no podrá recuperar su cuenta."
 #: node_modules/react-components/containers/notification/EmailModal.js:41
 msgctxt "Warning"
 msgid "By deleting this address, you will no longer be able to receive daily email notifications."
-msgstr "Si elimina esta dirección, ya no podrá recibir notificaciones diarias de correo."
+msgstr "Si elimina esta dirección, ya no podrá recibir notificaciones diarias de correo electrónico."
 
 #: node_modules/react-components/containers/notification/EmailModal.js:45
 msgctxt "Warning"
 msgid "By deleting this address, you will no longer be able to recover your account or receive daily email notifications."
-msgstr "Si elimina esta dirección, ya no podrá recuperar su cuenta o recibir notificaciones diarias de correo."
+msgstr "Si elimina esta dirección, ya no podrá recuperar su cuenta o recibir notificaciones diarias de correo electrónico."
 
 #: node_modules/react-components/containers/notification/EmailModal.js:49
 msgctxt "Warning"
 msgid "Are you sure you want to delete the address?"
-msgstr "¿Realmente quiere eliminar esta dirección?"
+msgstr "¿Está seguro que desea eliminar esta dirección?"
 
 #: node_modules/react-components/containers/error/GenericError.js:13
 msgctxt "Error message"
 msgid "Aaah! Something went wrong"
-msgstr "¡Aaah! Algo salió mal"
+msgstr "¡Ahh! Algo salió mal"
 
 #: node_modules/react-components/containers/error/GenericError.js:16
 msgctxt "Error message"
@@ -3583,12 +3583,12 @@ msgstr "Espere un tiempo hasta que arreglemos el error."
 #: node_modules/react-components/containers/error/GenericError.js:17
 msgctxt "Error message"
 msgid "You may also refresh the page or try again later."
-msgstr "También puede actualizar la página o volver a intentarlo más tarde."
+msgstr "Actualice la página o vuelva a intentarlo más tarde."
 
 #: node_modules/react-components/containers/login/FooterDetails.js:10
 msgctxt "Footer"
 msgid "Made globally, hosted in Switzerland."
-msgstr "Hecho globalmente, alojado en Suiza."
+msgstr "Hecho mundialmente, alojado en Suiza."
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:26
 msgctxt "Label for news"
@@ -3608,17 +3608,17 @@ msgstr "Proton para negocios (4-5 por año)"
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:29
 msgctxt "Label for news"
 msgid "Proton newsletter (5-6 per year)"
-msgstr "Boletín de ProtonMail (5-6 por año)"
+msgstr "Boletín de Proton (5-6 por año)"
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:30
 msgctxt "Label for news"
 msgid "Proton Beta (10-12 per year)"
-msgstr "Funciones Beta (10-12 por año)"
+msgstr "Proton Beta (10-12 por año)"
 
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:34
 msgctxt "Message"
 msgid "Are you sure you want to disable two-factor authentication?"
-msgstr "¿Está seguro de que desea deshabilitar la autenticación de dos factores?"
+msgstr "¿Está seguro que desea deshabilitar la autenticación de dos factores?"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodState.js:10
 msgctxt "Label on payment method"
@@ -3633,7 +3633,7 @@ msgstr "Por defecto"
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodDetails.js:21
 msgctxt "Label for credit card"
 msgid "Expiration"
-msgstr "Caducidad"
+msgstr "Expiración"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:30
 msgctxt "Title for payment methods table"
@@ -3668,7 +3668,7 @@ msgstr "Pagar con tarjeta de crédito/débito"
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:56
 msgctxt "Payment method option"
 msgid "Pay with PayPal"
-msgstr "Pagar con Paypal"
+msgstr "Pagar con PayPal"
 
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:63
 msgctxt "Payment method option"
@@ -3683,7 +3683,7 @@ msgstr "Si desea pagar con tarjeta de crédito, puede añadir su tarjeta a conti
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:35
 msgctxt "Password"
 msgid "Confirm new password"
-msgstr "Confirmar nueva contraseña"
+msgstr "Confirmar contraseña nueva"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:26
 msgctxt "Monetary unit"
@@ -3703,7 +3703,7 @@ msgstr "Dólar"
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:85
 msgctxt "VPN speed"
 msgid "High"
-msgstr "Alto"
+msgstr "Alta"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:86
 msgctxt "VPN speed"
@@ -3716,7 +3716,7 @@ msgstr "Máxima"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:77
 msgctxt "Price"
 msgid "Free"
-msgstr "Free"
+msgstr "Gratuita"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:29
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:29
@@ -3734,7 +3734,7 @@ msgstr "Anual"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:31
 msgctxt "Billing cycle"
 msgid "2-year"
-msgstr "2 años"
+msgstr "2-años"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:124
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:199
@@ -3756,7 +3756,7 @@ msgstr "Para pagar en efectivo, envíenos un correo electrónico a ${ email } pa
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:12
 msgctxt "Discount with coupon code"
 msgid "20% discount applied to your subscription"
-msgstr "20% de descuento aplicado a su suscripción"
+msgstr "20% de descuento aplicaro a su suscripción"
 
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:20
 msgctxt "Discount with coupon code"
@@ -3792,17 +3792,17 @@ msgstr "(vía ${ exitCountryName })"
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:141
 msgctxt "Tab"
 msgid "Secure Core configs"
-msgstr "Configuraciones de Secure Core"
+msgstr "Ajustes de Secure Core"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:145
 msgctxt "Tab"
 msgid "Country configs"
-msgstr "Configuraciones de País"
+msgstr "Ajustes de país"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:149
 msgctxt "Tab"
 msgid "Server configs"
-msgstr "Configuraciones del Servidor"
+msgstr "Ajustes de servidor"
 
 #: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:12
 msgctxt "VPNClient"
@@ -3832,7 +3832,7 @@ msgstr "GNU/Linux"
 #: node_modules/proton-shared/lib/themes/themes.js:11
 msgctxt "Theme"
 msgid "Default"
-msgstr ""
+msgstr "Por defecto"
 
 #: node_modules/proton-shared/lib/themes/themes.js:21
 msgctxt "Theme"
