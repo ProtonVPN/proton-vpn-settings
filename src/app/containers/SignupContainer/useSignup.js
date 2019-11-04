@@ -143,7 +143,6 @@ const useSignup = (onLogin, { coupon, invite, availablePlans = VPN_PLANS } = {},
             const bundlePlan = bundle && (await getPlansWithCoupon(bundlePlans, model.planName));
 
             const plansWithCoupons = await Promise.all(bundlePlan ? [bundlePlan] : plansInfo.map(getPlanWithCoupon));
-            console.log(plansWithCoupons);
             setAppliedCoupon(coupon);
             setPlansWithCoupons(plansWithCoupons);
         };
