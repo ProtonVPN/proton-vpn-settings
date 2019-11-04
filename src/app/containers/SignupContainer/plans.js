@@ -168,7 +168,7 @@ export const getPlan = (planName, cycle, plans = [], countries = []) => {
         ...getPlanFeatures(planName, plan ? plan.MaxVPN || 0 : 1, countries),
         planName,
         title: PLAN_NAMES[planName],
-        id: plan && plan.ID,
+        ID: plan && plan.ID,
         disabled: !plan && planName !== PLAN.FREE,
         price,
         couponDiscount:
