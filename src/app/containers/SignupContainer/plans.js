@@ -123,7 +123,7 @@ const getPlanFeatures = (plan, maxConnections, countries) =>
         },
         [PLAN.BUNDLE_PLUS]: {
             image: <img width={100} src={visionaryPlanSvg} alt={`${PLAN_NAMES[PLAN.VISIONARY]} plan image`} />,
-            description: c('Plan Description').t`Bundle bundle bundle`,
+            description: c('Plan Description').t`Bundle plan`,
             additionalFeatures: c('Plan feature').t`ProtonMail Plus plan included`,
             features: [
                 c('Plan Feature').ngettext(
