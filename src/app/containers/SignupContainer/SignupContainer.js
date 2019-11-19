@@ -171,6 +171,9 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
         </div>
     );
 
+    const isBundlePlan = selectedPlan.planName === PLAN.BUNDLE_PLUS;
+    const homepageUrl = isBundlePlan ? 'https://protonvpn.com/blackfriday' : 'https://protonvpn.com';
+
     return (
         <PublicPage title={c('Title').t`Sign up`}>
             <main className="flex flex-item-fluid main-area--noHeader">
@@ -178,17 +181,16 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
                     <div className="flex flex-nowrap flex-items-center onmobile-flex-wrap mb1">
                         <div className="flex-item-fluid plan-back-button">
                             {!creatingAccount &&
-                                (signupState &&
-                                signupState !== SignupState.Plan &&
-                                selectedPlan.planName !== PLAN.BUNDLE_PLUS ? (
+                                (signupState && signupState !== SignupState.Plan && !isBundlePlan ? (
                                     <Button onClick={() => history.goBack()}>{c('Action').t`Back`}</Button>
                                 ) : (
-                                    <Href className="pm-button" url="https://protonvpn.com" target="_self">{c('Action')
-                                        .t`Homepage`}</Href>
+                                    <Href className="pm-button" url={homepageUrl} target="_self">
+                                        {isBundlePlan ? c('Action').t`Back` : c('Action').t`Homepage`}
+                                    </Href>
                                 ))}
                         </div>
                         <div className="onmobile-min-w100 onmobile-aligncenter onmobile-mt0-5">
-                            <Href url="https://protonvpn.com" target="_self">
+                            <Href url={homepageUrl} target="_self">
                                 <VpnLogo className="fill-primary" />
                             </Href>
                         </div>
