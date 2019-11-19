@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
     SubscriptionSection,
     BillingSection,
@@ -6,8 +6,12 @@ import {
     VPNBlackFridayModal,
     usePlans,
     SubscriptionModal,
-    useSubscription
+    useSubscription,
+    useBlackFriday,
+    useUser,
+    useApi
 } from 'react-components';
+import { checkLastCancelledSubscription } from 'react-components/containers/payments/subscription/helpers';
 import { PERMISSIONS } from 'proton-shared/lib/constants';
 import { c } from 'ttag';
 
@@ -42,9 +46,13 @@ export const getDashboardPage = () => {
 };
 
 const DashboardContainer = () => {
+    const api = useApi();
     const { createModal } = useModals();
-    const [plans, loading] = usePlans();
+    const [plans, loadingPlans] = usePlans();
     const [subscription] = useSubscription();
+    const isBlackFriday = useBlackFriday();
+    const checked = useRef(false);
+    const [user] = useUser();
 
     const handleSelect = ({ planIDs = [], cycle, currency, couponCode }) => {
         const plansMap = planIDs.reduce((acc, planID) => {
@@ -65,11 +73,18 @@ const DashboardContainer = () => {
         );
     };
 
-    useEffect(() => {
-        if (plans) {
+    const check = async () => {
+        if (await checkLastCancelledSubscription(api)) {
             createModal(<VPNBlackFridayModal plans={plans} onSelect={handleSelect} />);
         }
-    }, [loading]);
+    };
+
+    useEffect(() => {
+        if (!checked.current && user.isFree && isBlackFriday) {
+            check();
+            checked.current = true;
+        }
+    }, [loadingPlans]);
 
     return (
         <Page config={getDashboardPage()}>
