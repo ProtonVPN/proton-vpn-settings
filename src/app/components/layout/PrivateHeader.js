@@ -55,7 +55,7 @@ const PrivateHeader = ({ location, expanded, onToggleExpand }) => {
 };
 
 PrivateHeader.propTypes = {
-    expanded: PropTypes.boolean,
+    expanded: PropTypes.bool,
     onToggleExpand: PropTypes.func,
     location: PropTypes.shape({
         pathname: PropTypes.string
