@@ -16,6 +16,7 @@
         "i18n:getlatest": "proton-i18n upgrade",
         "deploy": "proton-bundler",
         "deploy:standalone": "proton-bundler --appMode standalone",
+        "bundle:ci": "cross-env NODE_ENV_DIST=ci proton-bundler",
         "build": "cross-env NODE_ENV=production proton-pack compile $npm_package_config_publicPathFlag",
         "build:standalone": "cross-env NODE_ENV=production proton-pack compile --appMode=standalone",
         "deploy:prod": "proton-bundler --remote --branch=deploy-prod",
