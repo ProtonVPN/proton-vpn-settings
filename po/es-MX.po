@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: PMtranslator\n"
 "Language-Team: Spanish, Mexico\n"
 "Language: es_MX\n"
-"PO-Revision-Date: 2019-11-22 11:27\n"
+"PO-Revision-Date: 2019-11-25 07:23\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -896,7 +896,7 @@ msgstr "Error"
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:9
 msgctxt "Title"
 msgid "Confirm loss of Proton bonuses"
-msgstr "Confirmar pérdida de bonos de Proton"
+msgstr "Confirmar pérdida de beneficios de Proton"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:68
 msgctxt "Title"
@@ -1520,7 +1520,7 @@ msgstr "Utilice un método de pago diferente"
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:10
 msgctxt "Action"
 msgid "Remove bonuses"
-msgstr "Eliminar bonos"
+msgstr "Eliminar beneficios"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:66
 msgctxt "Action"
@@ -3071,7 +3071,7 @@ msgstr "2-años"
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:12
 msgctxt "Discount with coupon code"
 msgid "20% discount applied to your subscription"
-msgstr "20% de descuento aplicaro a su suscripción"
+msgstr "20% de descuento aplicado a su suscripción"
 
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:22
 msgctxt "Discount with coupon code"

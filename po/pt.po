@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: PMtranslator\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2019-11-22 11:26\n"
+"PO-Revision-Date: 2019-11-25 07:23\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"

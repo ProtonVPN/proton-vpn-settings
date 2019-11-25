@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: PMtranslator\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2019-11-22 11:25\n"
+"PO-Revision-Date: 2019-11-25 07:22\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -2264,7 +2264,7 @@ msgstr "Obniżając plan do wersji Free, utracisz te bonusy na zawsze, nawet je�
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:18
 msgctxt "Info"
 msgid "+5GB bonus storage"
-msgstr "+5 GB dodatkowej przestrzeni dyskowej"
+msgstr "+5 GB bonusowej przestrzeni dyskowej"
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:20
 msgctxt "Info"
@@ -2347,7 +2347,7 @@ msgstr "33% zniżka wliczona do Twojej subskrypcji"
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:13
 msgctxt "Info"
 msgid "Black Friday 2019 newcomer discount has been applied!"
-msgstr "Zniżka z okazji Czarnego Piątku dla nowych użytkowników została naliczona!"
+msgstr "Zniżka dla nowych użytkowników z okazji Czarnego Piątku 2019 została naliczona!"
 
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:20
 msgctxt "Info"
@@ -3071,12 +3071,12 @@ msgstr "Dwuletni"
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:12
 msgctxt "Discount with coupon code"
 msgid "20% discount applied to your subscription"
-msgstr "Zniżka 20% wliczona do Twojej subskrypcji"
+msgstr "Zniżka 20% została wliczona do Twojej subskrypcji"
 
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:22
 msgctxt "Discount with coupon code"
 msgid "Black Friday 2019 newcomer discount has been applied"
-msgstr "Zniżka z okazji Czarnego Piątku dla nowych użytkowników została naliczona"
+msgstr "Zniżka dla nowych użytkowników z okazji Czarnego Piątku 2019 została naliczona"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:27
 msgctxt "Monetary unit"

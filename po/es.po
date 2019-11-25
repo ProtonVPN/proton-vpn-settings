@@ -10,7 +10,7 @@ msgstr ""
 "Last-Translator: PMtranslator\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-11-22 11:23\n"
+"PO-Revision-Date: 2019-11-25 07:21\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -2347,7 +2347,7 @@ msgstr "33% de reembolso aplicado a su suscripción"
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:13
 msgctxt "Info"
 msgid "Black Friday 2019 newcomer discount has been applied!"
-msgstr ""
+msgstr "¡Se ha aplicado el descuento para los usuarios recién llegados al Black Friday de 2019!"
 
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:20
 msgctxt "Info"
@@ -2398,7 +2398,7 @@ msgstr "Tu cuenta está siendo mejorada, esto puede tardar hasta 30 segundos."
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:104
 msgctxt "Info"
 msgid "Don't miss out on limited time discounts for newcomers!"
-msgstr ""
+msgstr "¡No te pierdas los descuentos por tiempo limitado para los usuarios recién llegados!"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:152
 #, javascript-format
@@ -3076,7 +3076,7 @@ msgstr "20% de descuento aplicado a su suscripción"
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:22
 msgctxt "Discount with coupon code"
 msgid "Black Friday 2019 newcomer discount has been applied"
-msgstr ""
+msgstr "Se ha aplicado el descuento para usuarios recién llegados al Black Friday de 2019"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:27
 msgctxt "Monetary unit"
