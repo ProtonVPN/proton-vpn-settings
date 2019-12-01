@@ -80,7 +80,7 @@ const DashboardContainer = () => {
     };
 
     useEffect(() => {
-        if (!checked.current && user.isFree && isBlackFriday) {
+        if (Array.isArray(plans) && !checked.current && user.isFree && isBlackFriday) {
             check();
             checked.current = true;
         }
