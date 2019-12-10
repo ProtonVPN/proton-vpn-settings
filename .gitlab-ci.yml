@@ -3,6 +3,11 @@ include:
     ref: master
     file: '/_templates-ci/public.gitlab-ci.yml'
 
+include:
+ - project: 'proton/fe/proton-config'
+   ref: master
+   file: '/_templates-ci/i18n-sync.gitlab-ci.yml'
+
 variables:
     APP_GIT: git@github.com:ProtonMail/proton-vpn-settings.git
     NODE_OPTIONS: --max-old-space-size=4096
