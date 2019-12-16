@@ -2,15 +2,13 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: protonvpn\n"
 "X-Crowdin-Language: it\n"
 "X-Crowdin-File: ProtonVPN Settings Application.pot\n"
 "Project-Id-Version: protonvpn\n"
-"Last-Translator: PMtranslator\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2019-11-25 07:22\n"
+"PO-Revision-Date: 2019-12-13 10:27\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -2542,7 +2540,7 @@ msgstr "Contattaci a ${ criticalEmail } per problemi di sicurezza critici."
 #, javascript-format
 msgctxt "Info"
 msgid "billed as ${ billedPrice }"
-msgstr "fatturato come ${ billedPrice }"
+msgstr "spendi solo ${ billedPrice }"
 
 #: src/app/components/sections/plans/PlansSection.js:51
 msgctxt "Info"
@@ -2653,7 +2651,7 @@ msgstr "Tutti i piani supportano: ${ supportedOS }"
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:83
 msgctxt "Info"
 msgid "30-days money back guarantee"
-msgstr "Rimborso garantito per 30 giorni"
+msgstr "Rimborso garantito i primi 30 giorni"
 
 #: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:24
 msgctxt "Placeholder"
@@ -3915,7 +3913,7 @@ msgstr "${ totalMonthlyPriceText } / mese"
 #, javascript-format
 msgctxt "PlanPrice"
 msgid "Billed as ${ totalBilledText }"
-msgstr "Fatturato come ${ totalBilledText }"
+msgstr "Spendi solo ${ totalBilledText }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:41
 #, javascript-format

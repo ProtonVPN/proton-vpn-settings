@@ -1,13 +1,13 @@
 msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Crowdin-Project: protonvpn\n"
-"X-Crowdin-Language: pt-BR\n"
+"X-Crowdin-Language: id\n"
 "X-Crowdin-File: ProtonVPN Settings Application.pot\n"
 "Project-Id-Version: protonvpn\n"
-"Language-Team: Portuguese, Brazilian\n"
-"Language: pt_BR\n"
+"Language-Team: Indonesian\n"
+"Language: id_ID\n"
 "PO-Revision-Date: 2019-12-13 10:28\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
@@ -28,101 +28,101 @@ msgstr "GB"
 #: node_modules/proton-shared/lib/keys/keys.js:102
 msgctxt "Error"
 msgid "Signature verification failed"
-msgstr "Falha na verificação da assinatura"
+msgstr "Verifikasi tanda tangan gagal"
 
 #: node_modules/proton-shared/lib/keys/keys.js:122
 msgctxt "Error"
 msgid "Incorrect decryption password"
-msgstr "Senha de descriptografia incorreta"
+msgstr "Sandi dekripsi salah"
 
 #: node_modules/react-components/components/input/EmailInput.js:9
 msgctxt "Error"
 msgid "Email address invalid"
-msgstr "Endereço de e-mail inválido"
+msgstr "Alamat surel tidak valid"
 
 #: node_modules/react-components/components/input/Input.js:31
 msgctxt "Error"
 msgid "This field is required"
-msgstr "Este campo é obrigatório"
+msgstr "Bagian ini wajib isi"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:96
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:37
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:114
 msgctxt "Error"
 msgid "Passwords do not match"
-msgstr "As senhas não conferem"
+msgstr "Sandi tidak sama"
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:38
 msgctxt "Error"
 msgid "Please enter '${ WORD }'"
-msgstr "Por favor, digite '${ WORD }'"
+msgstr "Masukkan '${ WORD }'"
 
 #: node_modules/react-components/containers/api/ApiProvider.js:38
 msgctxt "Error"
 msgid "Could not connect to server."
-msgstr "Não foi possível conectar ao servidor."
+msgstr "Gagal sambung ke server."
 
 #: node_modules/react-components/containers/api/ApiProvider.js:39
 msgctxt "Error"
 msgid "No internet connection found"
-msgstr "Nenhuma conexão com a internet foi encontrada"
+msgstr "Gagal sambung ke Internet"
 
 #: node_modules/react-components/containers/api/ApiProvider.js:45
 msgctxt "Error"
 msgid "Request timed out."
-msgstr "Solicitação expirada."
+msgstr "Terlalu lama memuat."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:231
 msgctxt "Error"
 msgid "Please generate keys before you try to change your password."
-msgstr "Por favor, crie novas chaves antes de tentar alterar sua senha."
+msgstr "Hasilkan kunci sebelum Anda mengubah sandi."
 
 #: node_modules/react-components/containers/notification/EmailSection.js:44
 #: node_modules/react-components/containers/notification/EmailSection.js:54
 msgctxt "Error"
 msgid "Please set a recovery/notification email"
-msgstr "Por favor defina um e-mail para recuperação/notificação"
+msgstr "Masukkan surel pemulihan/pemberitahuan"
 
 #: node_modules/react-components/containers/payments/PayPal.js:74
 msgctxt "Error"
 msgid "Amount below minimum."
-msgstr "Quantidade abaixo do mínimo."
+msgstr "Jumlah di bawah minimal."
 
 #: node_modules/react-components/containers/payments/PayPal.js:80
 msgctxt "Error"
 msgid "Amount above the maximum."
-msgstr "Quantidade acima do máximo."
+msgstr "Jumlah di atas maksimal."
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:51
 msgctxt "Error"
 msgid "Error connecting to the Bitcoin API."
-msgstr "Erro ao conectar com a API do Bitcoin."
+msgstr "Gagal sambung ke API Bitcoin."
 
 #: node_modules/react-components/containers/payments/cardValidator.js:16
 msgctxt "Error"
 msgid "Name on card required"
-msgstr "Nome do cartão de credito obrigatório"
+msgstr "Wajib isi nama di kartu"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:22
 msgctxt "Error"
 msgid "Invalid expiration date"
-msgstr "Data de validade inválida"
+msgstr "Tanggal kedaluwarsa tidak valid"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:27
 msgctxt "Error"
 msgid "Invalid card number"
-msgstr "Número do cartão inválido"
+msgstr "Nomor kartu tidak valid"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:36
 #, javascript-format
 msgctxt "Error"
 msgid "Invalid ${ name } code"
-msgstr "Código ${ name } inválido"
+msgstr "Kode ${ name } tidak valid"
 
 #: node_modules/react-components/containers/payments/cardValidator.js:43
 msgctxt "Error"
 msgid "Invalid postal code"
-msgstr "CEP inválido"
+msgstr "Kode pos tidak valid"
 
 #: node_modules/react-components/containers/payments/GiftCodeInput.js:9
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:31
@@ -130,137 +130,137 @@ msgstr "CEP inválido"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:81
 msgctxt "Error"
 msgid "Invalid gift code"
-msgstr "Código de vale-presente inválido"
+msgstr "Kode hadiah tidak valid"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:75
 msgctxt "Error"
 msgid "Your coupon is invalid or cannot be applied to your plan"
-msgstr "Seu cupom é inválido ou não pode ser aplicado ao seu plano"
+msgstr "Kupon Anda tidak valid / tidak berlaku untuk paket Anda"
 
 #: node_modules/react-components/containers/payments/Payment.js:50
 #, javascript-format
 msgctxt "Error"
 msgid "The minimum amount that can be donated is ${ price }"
-msgstr "O valor mínimo que pode ser doado é ${ price }"
+msgstr "Sumbangan minimal ${ price }"
 
 #: node_modules/react-components/containers/payments/Payment.js:59
 #, javascript-format
 msgctxt "Error"
 msgid "The minimum amount of credit that can be added is ${ _price }"
-msgstr "A quantidade mínima de crédito que pode ser adicionado é ${ _price }"
+msgstr "Tambahan kredit minimal ${ _price }"
 
 #: node_modules/react-components/containers/payments/Payment.js:68
 #, javascript-format
 msgctxt "Error"
 msgid "The minimum payment we accept is ${ _price2 }"
-msgstr "O pagamento mínimo que aceitamos é ${ _price2 }"
+msgstr "Pembayaran minimal ${ _price2 }"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:32
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:128
 msgctxt "Error"
 msgid "Process aborted"
-msgstr "Processo abortado"
+msgstr "Proses dibatalkan"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:36
 msgctxt "Error"
 msgid "Payment process cancelled"
-msgstr "Processo de pagamento cancelado"
+msgstr "Proses pembayaran dibatalkan"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:42
 msgctxt "Error"
 msgid "Payment process failed"
-msgstr "Falha no processo de pagamento"
+msgstr "Proses pembayaran gagal"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:46
 msgctxt "Error"
 msgid "Payment process consumed"
-msgstr "Processo de pagamento concluído"
+msgstr "Proses pembayaran terlalu lama"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:50
 msgctxt "Error"
 msgid "Payment process not supported"
-msgstr "Processo de pagamento não suportado"
+msgstr "Proses pembayaran tidak didukung"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:62
 msgctxt "Error"
 msgid "Unknown payment token status"
-msgstr "Status da token de pagamento desconhecido"
+msgstr "Status token pembayaran tidak dikenal"
 
 #: node_modules/react-components/containers/payments/paymentTokenHelper.js:95
 msgctxt "Error"
 msgid "Tab closed"
-msgstr "Guia fechada"
+msgstr "Tab ditutup"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:31
 #, javascript-format
 msgctxt "Error"
 msgid "'${ credentials.username }' is a reserved word. Please set another username."
-msgstr "'${ credentials.username }' já está reservado. Por favor, digite outro nome de usuário."
+msgstr "'${ credentials.username }' sudah ada. Gunakan nama yang lain."
 
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:53
 msgctxt "Error"
 msgid "Payments are currently not available, please try again later"
-msgstr "Os pagamentos não estão disponíveis no momento. Por favor, tente novamente mais tarde"
+msgstr "Pembayaran tidak bisa dilakukan. Coba lagi nanti"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:75
 msgctxt "Error"
 msgid "You have no invoices."
-msgstr "Você não tem faturas."
+msgstr "Tidak ada tagihan."
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:85
 msgctxt "Error"
 msgid "Your account or organization currently has an overdue invoice. Please pay all unpaid invoices."
-msgstr "A sua conta ou organização tem neste momento uma fatura em atraso. Por favor regularize a situação."
+msgstr "Ada tagihan yang lewat jatuh tempo. Mohon lunasi semua tagihan."
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:54
 msgctxt "Error"
 msgid "Can't check username, try again later"
-msgstr "Não foi possível verificar o nome de usuário, tente novamente mais tarde"
+msgstr "Gagal periksa nama pengguna. Coba lagi nanti"
 
 #: src/app/containers/PreInviteContainer.js:16
 msgctxt "Error"
 msgid "Invalid invitation link"
-msgstr "Link de convite inválido"
+msgstr "Tautan undangan tidak valid"
 
 #: node_modules/proton-shared/lib/themes/themes.js:11
 msgctxt "Theme"
 msgid "Default"
-msgstr "Padrão"
+msgstr "Bawaan"
 
 #: node_modules/proton-shared/lib/themes/themes.js:21
 msgctxt "Theme"
 msgid "Custom theme"
-msgstr "Tema personalizado"
+msgstr "Tema khusus"
 
 #: node_modules/proton-shared/lib/themes/themes.js:31
 msgctxt "Theme"
 msgid "Light"
-msgstr "Claro"
+msgstr "Cerah"
 
 #: node_modules/proton-shared/lib/themes/themes.js:40
 msgctxt "Theme"
 msgid "Blue"
-msgstr "Azul"
+msgstr "Biru"
 
 #: node_modules/react-components/components/button/Copy.js:20
 msgctxt "Label"
 msgid "Copied"
-msgstr "Copiado"
+msgstr "Tersalin"
 
 #: node_modules/react-components/components/button/Copy.js:20
 msgctxt "Label"
 msgid "Copy"
-msgstr "Copiar"
+msgstr "Salin"
 
 #: node_modules/react-components/components/input/PasswordInput.js:21
 msgctxt "Label"
 msgid "Reveal password"
-msgstr "Revelar senha"
+msgstr "Perlihatkan kata sandi"
 
 #: node_modules/react-components/components/input/PasswordInput.js:21
 msgctxt "Label"
 msgid "Hide password"
-msgstr "Ocultar senha"
+msgstr "Sembunyikan kata sandi"
 
 #: node_modules/react-components/containers/api/HumanVerificationModal.js:22
 msgctxt "Label"
@@ -270,56 +270,56 @@ msgstr "Captcha"
 #: node_modules/react-components/containers/account/TwoFactorSection.js:32
 msgctxt "Label"
 msgid "Two-factor authentication"
-msgstr "Autenticação de dois fatores"
+msgstr "Otentikasi dua-faktor"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:125
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:278
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:308
 msgctxt "Label"
 msgid "Old login password"
-msgstr "Senha de login antiga"
+msgstr "Kata sandi lama untuk masuk"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:126
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:160
 msgctxt "Label"
 msgid "New login password"
-msgstr "Nova senha de login"
+msgstr "Kata sandi baru untuk masuk"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:127
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:161
 msgctxt "Label"
 msgid "Confirm login password"
-msgstr "Confirmar senha de login"
+msgstr "Konfirmasi kata sandi untuk masuk"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:159
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:296
 msgctxt "Label"
 msgid "Old password"
-msgstr "Senha antiga"
+msgstr "Kata sandi lama"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:187
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:309
 msgctxt "Label"
 msgid "New mailbox password"
-msgstr "Nova senha da caixa de correio"
+msgstr "Kata sandi baru untuk kotak masuk"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:188
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:310
 msgctxt "Label"
 msgid "Confirm mailbox password"
-msgstr "Confirmar senha da caixa de correio"
+msgstr "Konfirmasi kata sandi untuk kotak masuk"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:279
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:297
 msgctxt "Label"
 msgid "New password"
-msgstr "Nova senha"
+msgstr "Kata sandi baru"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:280
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:298
 msgctxt "Label"
 msgid "Confirm password"
-msgstr "Confirmar senha"
+msgstr "Konfirmasi kata sandi"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:371
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:155
@@ -327,33 +327,33 @@ msgstr "Confirmar senha"
 #: node_modules/react-components/containers/password/PasswordTotpInputs.js:26
 msgctxt "Label"
 msgid "Two-factor code"
-msgstr "Código de autenticação em dois fatores"
+msgstr "Kode dua-faktor"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:67
 msgctxt "Label"
 msgid "Two password mode"
-msgstr "Modo de duas senhas"
+msgstr "Mode dua kata sandi"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:86
 #: node_modules/react-components/containers/login/UnlockForm.js:9
 msgctxt "Label"
 msgid "Mailbox password"
-msgstr "Senha da caixa de correio"
+msgstr "Kata sandi kotak masuk"
 
 #: node_modules/react-components/containers/account/UsernameSection.js:18
 msgctxt "Label"
 msgid "Name"
-msgstr "Nome"
+msgstr "Nama"
 
 #: node_modules/react-components/containers/account/UsernameSection.js:28
 msgctxt "Label"
 msgid "ProtonMail address"
-msgstr "Endereço do ProtonMail"
+msgstr "Alamat ProtonMail"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:111
 msgctxt "Label"
 msgid "Feedback"
-msgstr "Feedback"
+msgstr "Umpan balik"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:125
 #: node_modules/react-components/containers/notification/EmailSection.js:66
@@ -361,107 +361,107 @@ msgstr "Feedback"
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:123
 msgctxt "Label"
 msgid "Email address"
-msgstr "Endereço de e-mail"
+msgstr "Alamat surel"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:140
 msgctxt "Label"
 msgid "Login password"
-msgstr "Senha do login"
+msgstr "Kata sandi masuk"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:154
 msgctxt "Label"
 msgid "Key"
-msgstr "Chave"
+msgstr "Kunci"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:160
 msgctxt "Label"
 msgid "Interval"
-msgstr "Intervalo"
+msgstr "Interval"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:166
 msgctxt "Label"
 msgid "Digits"
-msgstr "Dígitos"
+msgstr "Digit"
 
 #: node_modules/react-components/containers/notification/EmailModal.js:74
 msgctxt "Label"
 msgid "Email"
-msgstr "E-mail"
+msgstr "Surel"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:70
 msgctxt "Label"
 msgid "Allow password reset"
-msgstr "Permitir redefinição da senha"
+msgstr "Izinkan set ulang kata sandi"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:83
 msgctxt "Label"
 msgid "Daily email notifications"
-msgstr "Notificações diárias por e-mail"
+msgstr "Pemberitahuan surel harian"
 
 #: node_modules/react-components/containers/payments/BitcoinDetails.js:10
 msgctxt "Label"
 msgid "Amount BTC"
-msgstr "Valor em BTC"
+msgstr "Jumlah BTC"
 
 #: node_modules/react-components/containers/payments/BitcoinDetails.js:16
 msgctxt "Label"
 msgid "BTC address"
-msgstr "Endereço BTC"
+msgstr "Alamat BTC"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:68
 #: node_modules/react-components/containers/payments/BillingSection.js:264
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:39
 msgctxt "Label"
 msgid "Credits"
-msgstr "Creditos"
+msgstr "Kredit"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:113
 msgctxt "Label"
 msgid "ProtonMail plan"
-msgstr "Plano do ProtonMail"
+msgstr "Paket ProtonMail"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:129
 msgctxt "Label"
 msgid "Extra users"
-msgstr "Usuários adicionais"
+msgstr "Pengguna tambahan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:145
 msgctxt "Label"
 msgid "Extra email addresses"
-msgstr "Endereços de e-mail adicionais"
+msgstr "Alamat surel tambahan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:161
 msgctxt "Label"
 msgid "Extra storage"
-msgstr "Armazenamento adicional"
+msgstr "Penyimpanan tambahan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:177
 msgctxt "Label"
 msgid "Extra domains"
-msgstr "Domínios adicionais"
+msgstr "Domain tambahan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:193
 msgctxt "Label"
 msgid "ProtonVPN plan"
-msgstr "Plano do ProtonVPN"
+msgstr "Paket ProtonVPN"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:205
 msgctxt "Label"
 msgid "Extra VPN connections"
-msgstr "Conexões VPN adicionais"
+msgstr "Sambungan VPN tambahan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:221
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:103
 msgctxt "Label"
 msgid "Sub-total"
-msgstr "Subtotal"
+msgstr "Sub-total"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:231
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:111
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:250
 msgctxt "Label"
 msgid "Coupon"
-msgstr "Cupom"
+msgstr "Kupon"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:243
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:28
@@ -476,94 +476,94 @@ msgstr "Total"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:211
 msgctxt "Label"
 msgid "Amount due"
-msgstr "Valor a pagar"
+msgstr "Jumlah jatuh tempo"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:272
 msgctxt "Label"
 msgid "Billing cycle end date"
-msgstr "Data de término do ciclo de faturamento"
+msgstr "Jatuh tempo"
 
 #: node_modules/react-components/containers/invoices/PayInvoiceModal.js:57
 #: node_modules/react-components/containers/payments/CreditsModal.js:81
 #: node_modules/react-components/containers/payments/DonateModal.js:48
 msgctxt "Label"
 msgid "Amount"
-msgstr "Quantidade"
+msgstr "Jumlah"
 
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:55
 msgctxt "Label"
 msgid "Enter gift code"
-msgstr "Digite o código do vale-presente"
+msgstr "Masukkan kode hadiah"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:50
 msgctxt "Label"
 msgid "Proration"
-msgstr "Cálculo proporcional"
+msgstr "Prorasi"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:68
 msgctxt "Label"
 msgid "Gift"
-msgstr "Presente"
+msgstr "Hadiah"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:141
 msgctxt "Label"
 msgid "Users"
-msgstr "Usuários"
+msgstr "Pengguna"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:151
 msgctxt "Label"
 msgid "Email addresses"
-msgstr "Endereços de e-mail"
+msgstr "Alamat surel"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:161
 msgctxt "Label"
 msgid "Storage capacity"
-msgstr "Capacidade de armazenamento"
+msgstr "Kapasitas penyimpanan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:174
 msgctxt "Label"
 msgid "Custom domains"
-msgstr "Domínios personalizados"
+msgstr "Domain kustom"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:185
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:214
 msgctxt "Label"
 msgid "VPN connections"
-msgstr "Conexões VPN"
+msgstr "Sambungan VPN"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:225
 msgctxt "Label"
 msgid "Billing cycle"
-msgstr "Ciclo de faturamento"
+msgstr "Siklus Penagihan"
 
 #: node_modules/react-components/containers/payments/Payment.js:74
 msgctxt "Label"
 msgid "Payment method"
-msgstr "Método de pagamento"
+msgstr "Metode pembayaran"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:38
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:53
 msgctxt "Label"
 msgid "OpenVPN / IKEv2 username"
-msgstr "Nome de usuário OpenVPN / IKEv2"
+msgstr "Nama pengguna OpenVPN / IKEv2"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:49
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:65
 msgctxt "Label"
 msgid "OpenVPN / IKEv2 password"
-msgstr "Senha OpenVPN / IKEv2"
+msgstr "Kata sandi OpenVPN / IKEv2"
 
 #: node_modules/react-components/containers/login/UnlockModal.js:34
 #: node_modules/react-components/containers/password/AskAuthModal.js:18
 msgctxt "Label"
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Batal"
 
 #: node_modules/react-components/containers/login/UnlockModal.js:35
 #: node_modules/react-components/containers/password/AskAuthModal.js:19
 msgctxt "Label"
 msgid "Submit"
-msgstr "Enviar"
+msgstr "Kirim"
 
 #: node_modules/react-components/containers/login/PasswordForm.js:28
 #: node_modules/react-components/containers/login/UnlockModal.js:41
@@ -571,261 +571,261 @@ msgstr "Enviar"
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:92
 msgctxt "Label"
 msgid "Password"
-msgstr "Senha"
+msgstr "Kata Sandi"
 
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:68
 msgctxt "Label"
 msgid "Pay with cash"
-msgstr "Pagar com dinheiro"
+msgstr "Bayar secara tunai"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodDetails.js:17
 msgctxt "Label"
 msgid "Cardholder name"
-msgstr "Nome do titular do cartão"
+msgstr "Nama pemegang kartu"
 
 #: node_modules/react-components/containers/login/PasswordForm.js:10
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:70
 msgctxt "Label"
 msgid "Username"
-msgstr "Nome de usuário"
+msgstr "Nama Pengguna"
 
 #: node_modules/react-components/containers/login/SignInLayout.js:26
 #: src/app/components/layout/PublicHeader.js:9
 msgctxt "Label"
 msgid "Back to:"
-msgstr "Voltar para:"
+msgstr "Kembali ke:"
 
 #: node_modules/react-components/containers/invoices/PayInvoiceModal.js:66
 msgctxt "Label"
 msgid "Credits used"
-msgstr "Créditos usados"
+msgstr "Kredit terpakai"
 
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:46
 msgctxt "Label"
 msgid "Customize invoices"
-msgstr "Personalizar faturas"
+msgstr "Sesuaikan tagihan"
 
 #: node_modules/react-components/containers/support/BugModal.js:135
 msgctxt "Label"
 msgid "Proton username"
-msgstr "Nome de usuário Proton"
+msgstr "Nama Pengguna Proton"
 
 #: node_modules/react-components/containers/support/BugModal.js:159
 msgctxt "Label"
 msgid "Category"
-msgstr "Categoria"
+msgstr "Kategori"
 
 #: node_modules/react-components/containers/support/BugModal.js:171
 msgctxt "Label"
 msgid "What happened?"
-msgstr "O que aconteceu?"
+msgstr "Apa yang terjadi?"
 
 #: node_modules/react-components/containers/support/BugModal.js:192
 msgctxt "Label"
 msgid "System information"
-msgstr "Informações do sistema"
+msgstr "Informasi sistem"
 
 #: node_modules/react-components/containers/support/BugModal.js:200
 msgctxt "Label"
 msgid "Operating system"
-msgstr "Sistema operacional"
+msgstr "Sistem operasi"
 
 #: node_modules/react-components/containers/support/BugModal.js:211
 msgctxt "Label"
 msgid "Operating system version"
-msgstr "Versão do sistema operacional"
+msgstr "Versi sistem operasi"
 
 #: node_modules/react-components/containers/support/BugModal.js:222
 msgctxt "Label"
 msgid "Browser"
-msgstr "Navegador"
+msgstr "Peramban"
 
 #: node_modules/react-components/containers/support/BugModal.js:233
 msgctxt "Label"
 msgid "Browser version"
-msgstr "Versão do navegador"
+msgstr "Versi peramban"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:34
 msgctxt "Label"
 msgid "Verification method"
-msgstr "Método de verificação"
+msgstr "Metode verifikasi"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:45
 msgctxt "Label"
 msgid "6-digit code"
-msgstr "Código de 6 dígitos"
+msgstr "Kode 6 digit"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:14
 msgctxt "Label"
 msgid "1 month"
-msgstr "1 mês"
+msgstr "1 bulan"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:15
 msgctxt "Label"
 msgid "Total price"
-msgstr "Valor total"
+msgstr "Harga total"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:18
 msgctxt "Label"
 msgid "12 months"
-msgstr "12 meses"
+msgstr "12 bulan"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:19
 #, javascript-format
 msgctxt "Label"
 msgid "Annual discount (${ discountPercentage }%)"
-msgstr "Desconto anual de (${ discountPercentage }%)"
+msgstr "Diskon tahunan (${ discountPercentage }%)"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:20
 msgctxt "Label"
 msgid "Total price (annually)"
-msgstr "Valor total (anual)"
+msgstr "Harga total (tahunan)"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:23
 msgctxt "Label"
 msgid "24 months"
-msgstr "24 meses"
+msgstr "24 bulan"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:24
 #, javascript-format
 msgctxt "Label"
 msgid "Two-year discount (${ discountPercentage }%)"
-msgstr "Desconto a cada 2 anos de (${ discountPercentage }%)"
+msgstr "Diskon dua-tahun (${ discountPercentage }%)"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PriceInfo.js:25
 msgctxt "Label"
 msgid "Total price (two-year)"
-msgstr "Valor total (dois anos)"
+msgstr "Harga total (dua tahun)"
 
 #: node_modules/react-components/components/toggle/Toggle.js:10
 msgctxt "Toggle button"
 msgid "On"
-msgstr "On"
+msgstr "Aktifkan"
 
 #: node_modules/react-components/components/toggle/Toggle.js:11
 msgctxt "Toggle button"
 msgid "Off"
-msgstr "Off"
+msgstr "Nonaktifkan"
 
 #: node_modules/react-components/components/sidebar/SubSidebar.js:18
 msgctxt "Title"
 msgid "Navigation"
-msgstr "Navegação"
+msgstr "Navigasi"
 
 #: node_modules/react-components/components/modal/PreviewPDFModal.js:6
 msgctxt "Title"
 msgid "Preview"
-msgstr "Visualizar"
+msgstr "Pratayang"
 
 #: node_modules/react-components/components/dropdown/DropdownActions.js:48
 msgctxt "Title"
 msgid "Open actions dropdown"
-msgstr "Abrir menu de ações"
+msgstr "Buka menu tindakan"
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:29
 msgctxt "Title"
 msgid "Confirm reset password"
-msgstr "Confirme senha de redefinição"
+msgstr "Konfirmasikan penyetelan ulang kata sandi"
 
 #: node_modules/react-components/containers/api/HumanVerificationModal.js:9
 msgctxt "Title"
 msgid "Human verification"
-msgstr "Verificação humana"
+msgstr "Pembuktian manusia"
 
 #: node_modules/react-components/containers/account/TwoFactorSection.js:29
 #: src/app/containers/AccountContainer.js:30
 msgctxt "Title"
 msgid "Two-factor authentication"
-msgstr "Autenticação de dois fatores"
+msgstr "Otentikasi dua-faktor"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:123
 #: node_modules/react-components/containers/account/PasswordsSection.js:38
 msgctxt "Title"
 msgid "Change login password"
-msgstr "Alterar senha de início de sessão"
+msgstr "Ubah kata sandi masuk"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:151
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:185
 msgctxt "Title"
 msgid "Switch to two-password mode"
-msgstr "Mudar para modo de duas senhas"
+msgstr "Beralih ke mode dua sandi"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:276
 msgctxt "Title"
 msgid "Switch to one-password mode"
-msgstr "Mudar para o modo de senha única"
+msgstr "Beralih ke mode satu sandi"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:294
 #: node_modules/react-components/containers/account/PasswordsSection.js:38
 msgctxt "Title"
 msgid "Change password"
-msgstr "Alterar senha"
+msgstr "Ubah sandi"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:306
 msgctxt "Title"
 msgid "Change mailbox password"
-msgstr "Alterar senha da caixa de correio"
+msgstr "Ubah sandi kotak pesan"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:23
 #: src/app/containers/AccountContainer.js:26
 msgctxt "Title"
 msgid "Passwords"
-msgstr "Senhas"
+msgstr "Kata Sandi"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:37
 msgctxt "Title"
 msgid "Password"
-msgstr "Senha"
+msgstr "Kata sandi"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:37
 msgctxt "Title"
 msgid "Login password"
-msgstr "Senha de acesso"
+msgstr "Kata sandi masuk"
 
 #: node_modules/react-components/containers/account/UsernameSection.js:16
 #: src/app/containers/AccountContainer.js:22
 msgctxt "Title"
 msgid "Username"
-msgstr "Nome de usuário"
+msgstr "Nama pengguna"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:97
 #: node_modules/react-components/containers/account/DeleteSection.js:33
 msgctxt "Title"
 msgid "Delete account"
-msgstr "Excluir conta"
+msgstr "Hapus akun"
 
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:82
 msgctxt "Title"
 msgid "Disable two-factor authentication"
-msgstr "Desativar autenticação de dois fatores"
+msgstr "Nonaktifkan otentikasi dua-faktor"
 
 #: node_modules/react-components/containers/account/NewsSection.js:17
 #: node_modules/react-components/containers/account/NewsSection.js:25
 #: src/app/containers/AccountContainer.js:42
 msgctxt "Title"
 msgid "Email subscriptions"
-msgstr "Inscrições de e-mail"
+msgstr "Langganan via surel"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:272
 msgctxt "Title"
 msgid "Set up two-factor authentication"
-msgstr "Configurar autenticação de dois fatores"
+msgstr "Aktifkan pemeriksaan dua jenjang"
 
 #: node_modules/react-components/containers/notification/EmailModal.js:33
 msgctxt "Title"
 msgid "Confirm address"
-msgstr "Confirme endereço"
+msgstr "Konfirmasi alamat"
 
 #: node_modules/react-components/containers/notification/EmailModal.js:70
 msgctxt "Title"
 msgid "Update recovery/notification email"
-msgstr "Atualizar e-mail de recuperação/notificação"
+msgstr "Perbarui surel pemulihan/pemberitahuan"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:62
 #: src/app/containers/AccountContainer.js:38
 msgctxt "Title"
 msgid "Recovery & notification"
-msgstr "Recuperação e notificação"
+msgstr "Pemulihan & pemberitahuan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:62
 #: node_modules/react-components/containers/payments/BillingSection.js:88
@@ -833,150 +833,150 @@ msgstr "Recuperação e notificação"
 #: node_modules/react-components/containers/payments/BillingSection.js:108
 msgctxt "Title"
 msgid "Billing details"
-msgstr "Detalhes de faturamento"
+msgstr "Rincian tagihan"
 
 #: node_modules/react-components/containers/payments/DonateModal.js:42
 msgctxt "Title"
 msgid "Make a donation"
-msgstr "Fazer uma doação"
+msgstr "Menyumbang"
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:7
 #: src/app/components/sections/plans/PlansSection.js:59
 msgctxt "Title"
 msgid "Confirm downgrade"
-msgstr "Confirmar rebaixamento"
+msgstr "Konfirmasi downgrade"
 
 #: node_modules/react-components/containers/payments/EditCardModal.js:18
 msgctxt "Title"
 msgid "Edit credit/debit card"
-msgstr "Editar cartão de crédito/débito"
+msgstr "Ubah kartu kredit/debit"
 
 #: node_modules/react-components/containers/payments/EditCardModal.js:18
 msgctxt "Title"
 msgid "Add credit/debit card"
-msgstr "Adicionar cartão de crédito/débito"
+msgstr "Tambah kartu kredit/debit"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:41
 msgctxt "Title"
 msgid "Card verification"
-msgstr "Verificação do cartão"
+msgstr "Verifikasi kartu"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:41
 msgctxt "Title"
 msgid "Payment verification"
-msgstr "Verificação de pagamento"
+msgstr "Verifikasi pembayaran"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:42
 msgctxt "Title"
 msgid "Processing..."
-msgstr "Processando..."
+msgstr "Memproses..."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:44
 msgctxt "Title"
 msgid "Card verification in progress"
-msgstr "Verificação do cartão em andamento"
+msgstr "Verifikasi kartu sedang berlangsung"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:45
 msgctxt "Title"
 msgid "Payment verification in progress"
-msgstr "Verificação de pagamento em progresso"
+msgstr "Verifikasi pembayaran sedang berlangsung"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:46
 msgctxt "Title"
 msgid "3-D Secure verification failed"
-msgstr "Falha na verificação 3-D de segurança"
+msgstr "Verifikasi 3-D Secure gagal"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:152
 msgctxt "Title"
 msgid "Error"
-msgstr "Erro"
+msgstr "Galat"
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:9
 msgctxt "Title"
 msgid "Confirm loss of Proton bonuses"
-msgstr "Confirmar a perda de bônus Proton"
+msgstr "Konfirmasi hilangnya bonus Proton"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:68
 msgctxt "Title"
 msgid "Add credits"
-msgstr "Adicionar créditos"
+msgstr "Tambahkan kredit"
 
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:48
 msgctxt "Title"
 msgid "Gift code"
-msgstr "Código do vale-presente"
+msgstr "Kode hadiah"
 
 #: node_modules/react-components/containers/payments/Card.js:80
 msgctxt "Title"
 msgid "ZIP / postal code"
-msgstr "CEP"
+msgstr "Kode pos"
 
 #: node_modules/react-components/containers/payments/PayPalModal.js:23
 msgctxt "Title"
 msgid "Add PayPal payment method"
-msgstr "Adicionar o Paypal como método de pagamento"
+msgstr "Tambahkan metode pembayaran PayPal"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:24
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:204
 msgctxt "Title"
 msgid "Payment details"
-msgstr "Detalhes do pagamento"
+msgstr "Rincian pembayaran"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:54
 #: src/app/containers/DashboardContainer.js:35
 msgctxt "Title"
 msgid "Subscription"
-msgstr "Assinatura"
+msgstr "Langganan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:98
 msgctxt "Title"
 msgid "Subscription details"
-msgstr "Configurações de assinatura"
+msgstr "Rincian langganan"
 
 #: node_modules/react-components/containers/payments/subscription/CustomMailSection.js:26
 msgctxt "Title"
 msgid "ProtonMail total"
-msgstr "Total do ProtonMail"
+msgstr "Total ProtonMail"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:136
 msgctxt "Title"
 msgid "Order summary"
-msgstr "Resumo do pedido"
+msgstr "Ringkasan pesanan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:163
 msgctxt "Title"
 msgid "Upgrading account"
-msgstr "Fazendo upgrade de conta"
+msgstr "Tingkatkan akun"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:177
 msgctxt "Title"
 msgid "VPN protection"
-msgstr "Proteção VPN"
+msgstr "Perlindungan VPN"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:190
 msgctxt "Title"
 msgid "Customization"
-msgstr "Personalização"
+msgstr "Penyesuaian"
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:17
 msgctxt "Title"
 msgid "Thank you!"
-msgstr "Obrigado!"
+msgstr "Terima kasih!"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:28
 msgctxt "Title"
 msgid "1 month deal"
-msgstr "Oferta de 1 mês"
+msgstr "Paket 1 bulan"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:29
 msgctxt "Title"
 msgid "1 year deal"
-msgstr "Oferta de 1 ano"
+msgstr "Paket 1 tahun"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:30
 msgctxt "Title"
 msgid "2 year deal"
-msgstr "Oferta de 2 anos"
+msgstr "Paket 2 tahun"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:35
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:36
@@ -984,154 +984,154 @@ msgstr "Oferta de 2 anos"
 #, javascript-format
 msgctxt "Title"
 msgid "Billed as ${ amount } (${ notice })"
-msgstr "Faturado como ${ amount } (${ notice })"
+msgstr "Tertagih sebagai ${ amount } (${ notice })"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:42
 #, javascript-format
 msgctxt "Title"
 msgid "(${ notice }) Renews after 1 year at a discounted annual price of ${ amount } per year (20% discount)."
-msgstr "(${ notice }) Renova após 1 ano a um preço anual descontado de ${ amount } por ano (20% de desconto)."
+msgstr "(${ notice }) Memperbarui setelah 1 tahun dengan harga diskon tahunan ${ amount } per tahun (diskon 20%)."
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:44
 #, javascript-format
 msgctxt "Title"
 msgid "(${ notice }) Renews after 2 years at a discounted 2-year price of ${ amount } every 2 years (33% discount)."
-msgstr "(${ notice }) Renova após 2 anos a um preço descontado de ${ amount } a cada 2 anos (33% de desconto)."
+msgstr "(${ notice }) Memperbarui setelah 2 tahun dengan harga diskon 2-tahun ${ amount } setiap 2 tahun (diskon 33%)."
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:46
 msgctxt "Title"
 msgid "(${ notice }) Renews after 2 years at a discounted 2-year & bundle price of ${ amount } every 2 years (47% discount)."
-msgstr "(${ notice }) Renova após 2 anos a um preço descontado do pacto de ${ amount } a cada 2 anos (33% de desconto)."
+msgstr "(${ notice }) Memperbarui setelah 2 tahun dengan harga diskon 2-tahun & harga bundel ${ amount } setiap 2 tahun (diskon 47%)."
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:99
 msgctxt "Title"
 msgid "Black Friday sale"
-msgstr "Promoção da Black Friday"
+msgstr "Obral Black Friday"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:137
 msgctxt "Title"
 msgid "Most popular"
-msgstr "Mais popular"
+msgstr "Terpopuler"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:98
 #: src/app/containers/DownloadsContainer.js:18
 msgctxt "Title"
 msgid "OpenVPN configuration files"
-msgstr "Arquivos de configuração OpenVPN"
+msgstr "Berkas konfigurasi OpenVPN"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:106
 msgctxt "Title"
 msgid "1. Select platform"
-msgstr "1. Selecione a plataforma"
+msgstr "1. Pilih platform"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:123
 msgctxt "Title"
 msgid "2. Select protocol"
-msgstr "2. Selecione o protocolo"
+msgstr "2. Pilih protokol"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:136
 msgctxt "Title"
 msgid "3. Select connection and download"
-msgstr "3. Selecione a conexão e faça o download"
+msgstr "3. Pilih koneksi dan unduh"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:155
 msgctxt "Title"
 msgid "Secure core configs"
-msgstr "Configurações Secure core"
+msgstr "Konfigurasi Secure Core"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:177
 msgctxt "Title"
 msgid "Country configs"
-msgstr "Configurações do país"
+msgstr "Konfigurasi negara"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:198
 msgctxt "Title"
 msgid "Server configs"
-msgstr "Configurações do servidor"
+msgstr "Konfigurasi server"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:31
 #: src/app/containers/AccountContainer.js:34
 msgctxt "Title"
 msgid "OpenVPN / IKEv2 username"
-msgstr "Nome de usuário OpenVPN / IKEv2"
+msgstr "Nama pengguna OpenVPN / IKEv2"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:22
 msgctxt "Title"
 msgid "Edit OpenVPN / IKEv2 credentials"
-msgstr "Editar OpenVPN / Credenciais IKEv2"
+msgstr "Ubah kredensial OpenVPN / IKEv2"
 
 #: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:9
 #: src/app/containers/DownloadsContainer.js:14
 msgctxt "Title"
 msgid "ProtonVPN clients"
-msgstr "Clientes ProtonVPN"
+msgstr "Klien ProtonVPN"
 
 #: node_modules/react-components/containers/login/UnlockModal.js:33
 #: node_modules/react-components/containers/password/AskAuthModal.js:17
 msgctxt "Title"
 msgid "Sign in again to continue"
-msgstr "Inicie a sessão novamente para continuar"
+msgstr "Masuk lagi untuk melanjutkan"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:33
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:51
 #: src/app/containers/PaymentsContainer.js:18
 msgctxt "Title"
 msgid "Payment methods"
-msgstr "Métodos de pagamento"
+msgstr "Metode pembayaran"
 
 #: node_modules/react-components/containers/login/ForgotUsernameContainer.js:23
 #: node_modules/react-components/containers/login/ResetPasswordContainer.js:8
 #: src/app/containers/LoginContainer.js:14
 msgctxt "Title"
 msgid "Log in"
-msgstr "Iniciar sessão"
+msgstr "Masuk"
 
 #: node_modules/react-components/containers/login/ResetPasswordContainer.js:9
 msgctxt "Title"
 msgid "Reset password"
-msgstr "Redefinir senha"
+msgstr "Setel ulang sandi"
 
 #: node_modules/react-components/containers/login/ForgotUsernameContainer.js:24
 msgctxt "Title"
 msgid "Forgot your username?"
-msgstr "Esqueceu seu nome de usuário?"
+msgstr "Lupa nama pengguna?"
 
 #: node_modules/react-components/containers/login/AbuseModal.js:6
 msgctxt "Title"
 msgid "Account disabled"
-msgstr "Conta desativada"
+msgstr "Akun dinonaktifkan"
 
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:31
 msgctxt "Title"
 msgid "Preview invoice"
-msgstr "Visualizar fatura"
+msgstr "Lihat tagihan"
 
 #: node_modules/react-components/containers/invoices/PayInvoiceModal.js:51
 msgctxt "Title"
 msgid "Pay invoice"
-msgstr "Pagar fatura"
+msgstr "Bayar tagihan"
 
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:40
 msgctxt "Title"
 msgid "Add invoice details"
-msgstr "Adicionar detalhes na fatura"
+msgstr "Isi rincian tagihan"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:59
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:69
 #: src/app/containers/PaymentsContainer.js:22
 msgctxt "Title"
 msgid "Invoices"
-msgstr "Faturas"
+msgstr "Tagihan"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:116
 msgctxt "Title"
 msgid "Amount"
-msgstr "Quantidade"
+msgstr "Jumlah"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:117
 msgctxt "Title"
 msgid "Type"
-msgstr "Tipo"
+msgstr "Jenis"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:118
 msgctxt "Title"
@@ -1141,104 +1141,104 @@ msgstr "Status"
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:119
 msgctxt "Title"
 msgid "Date"
-msgstr "Data"
+msgstr "Tanggal"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:120
 msgctxt "Title"
 msgid "Action"
-msgstr "Ação"
+msgstr "Tindakan"
 
 #: node_modules/react-components/containers/support/BugModal.js:127
 msgctxt "Title"
 msgid "Report bug"
-msgstr "Reportar um problema"
+msgstr "Laporkan galat"
 
 #: src/app/components/sections/plans/PlansTable.js:41
 msgctxt "Title"
 msgid "My subscription"
-msgstr "Minha assinatura"
+msgstr "Langganan saya"
 
 #: src/app/components/sections/plans/PlansSection.js:137
 #: src/app/components/sections/plans/PlansSection.js:145
 #: src/app/containers/DashboardContainer.js:31
 msgctxt "Title"
 msgid "Plans"
-msgstr "Planos"
+msgstr "Paket"
 
 #: src/app/containers/DashboardContainer.js:25
 msgctxt "Title"
 msgid "Dashboard"
-msgstr "Painel de controle"
+msgstr "Dasbor"
 
 #: src/app/containers/DashboardContainer.js:40
 msgctxt "Title"
 msgid "Billing"
-msgstr "Faturamento"
+msgstr "Penagihan"
 
 #: src/app/containers/PaymentsContainer.js:12
 msgctxt "Title"
 msgid "Payments"
-msgstr "Pagamentos"
+msgstr "Pembayaran"
 
 #: src/app/containers/AccountContainer.js:17
 msgctxt "Title"
 msgid "Account"
-msgstr "Conta"
+msgstr "Akun"
 
 #: src/app/containers/AccountContainer.js:46
 msgctxt "Title"
 msgid "Delete"
-msgstr "Excluir"
+msgstr "Hapus"
 
 #: src/app/containers/DownloadsContainer.js:9
 msgctxt "Title"
 msgid "Downloads"
-msgstr "Baixar"
+msgstr "Unduhan"
 
 #: src/app/containers/LoginContainer.js:15
 msgctxt "Title"
 msgid "User log in"
-msgstr "Login do usuário"
+msgstr "Login pengguna"
 
 #: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:16
 msgctxt "Title"
 msgid "Provide payment details"
-msgstr "Fornecer detalhes do pagamento"
+msgstr "Masukkan informasi pembayaran"
 
 #: src/app/containers/SignupContainer/LoginPanel.js:8
 msgctxt "Title"
 msgid "Already have a Proton account?"
-msgstr "Já tem uma conta Proton?"
+msgstr "Apakah Anda punya akun Proton?"
 
 #: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:9
 msgctxt "Title"
 msgid "Account created"
-msgstr "Conta criada"
+msgstr "Akun telah dibuat"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:30
 msgctxt "Title"
 msgid "Select an account verification method"
-msgstr "Selecione um método de verificação da conta"
+msgstr "Pilih metode verifikasi akun"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:14
 msgctxt "Title"
 msgid "Resend code"
-msgstr "Reenviar código"
+msgstr "Kirim ulang kode"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:36
 msgctxt "Title"
 msgid "Enter verification code"
-msgstr "Digite o código de verificação"
+msgstr "Masukkan kode verifikasi"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:22
 msgctxt "Title"
 msgid "Are you human?"
-msgstr "Você é humano?"
+msgstr "Apakah Anda manusia?"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountStep.js:24
 msgctxt "Title"
 msgid "Create an account"
-msgstr "Criar uma conta"
+msgstr "Buat akun"
 
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:11
 msgctxt "Title"
@@ -1249,63 +1249,63 @@ msgstr "ProtonVPN"
 #: src/app/containers/SignupContainer/SignupContainer.js:205
 msgctxt "Title"
 msgid "Sign up"
-msgstr "Registre-se"
+msgstr "Daftar"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanDetails.js:13
 #, javascript-format
 msgctxt "Title"
 msgid "${ title } plan details"
-msgstr "Detalhes do plano ${ title }"
+msgstr "Informasi paket ${ title }"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:32
 msgctxt "Title"
 msgid "Upgrade and get more"
-msgstr "Faça o upgrade e obtenha mais"
+msgstr "Tingkatkan dan nikmati keunggulannya"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:33
 msgctxt "Title"
 msgid "Summary"
-msgstr "Resumo"
+msgstr "Ringkasan"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanComparisonModal.js:19
 msgctxt "Title"
 msgid "ProtonVPN plan comparison"
-msgstr "Comparação de plano ProtonVPN"
+msgstr "Perbandingan paket ProtonVPN"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:34
 msgctxt "Title"
 msgid "Select a plan"
-msgstr "Selecione um plano"
+msgstr "Pilih paket"
 
 #: src/app/containers/PreInviteContainer.js:42
 msgctxt "Title"
 msgid "Checking invitation parameters"
-msgstr "Verificando parâmetros do convite"
+msgstr "Memeriksa parameter undangan"
 
 #: src/app/containers/RedeemContainer.js:18
 msgctxt "Title"
 msgid "Redeem coupon"
-msgstr "Resgatar cupom"
+msgstr "Tukar kupon"
 
 #: src/app/containers/RedeemContainer.js:25
 msgctxt "Title"
 msgid "Redeem your coupon and start protecting your online privacy"
-msgstr "Resgate seu cupom e comece a proteger sua privacidade online"
+msgstr "Gunakan kupon Anda dan mulailah melindungi privasi daring Anda"
 
 #: src/app/containers/RedeemContainer.js:44
 msgctxt "Title"
 msgid "Swiss Based"
-msgstr "Sediado na Suíça"
+msgstr "Berbasis di Swiss"
 
 #: src/app/containers/RedeemContainer.js:51
 msgctxt "Title"
 msgid "Secure Core Servers"
-msgstr "Servidores Secure Core"
+msgstr "Server Secure Core"
 
 #: src/app/containers/RedeemContainer.js:58
 msgctxt "Title"
 msgid "No Logs"
-msgstr "Não há registros"
+msgstr "Tidak Ada Log"
 
 #: src/app/containers/RedeemContainer.js:65
 msgctxt "Title"
@@ -1315,18 +1315,18 @@ msgstr "Kill Switch"
 #: src/app/containers/RedeemContainer.js:71
 msgctxt "Title"
 msgid "DNS leak prevention"
-msgstr "Proteção de vazamento DNS"
+msgstr "Pencegahan kebocoran DNS"
 
 #: src/app/containers/RedeemContainer.js:78
 msgctxt "Title"
 msgid "Strong encryption"
-msgstr "Criptografia forte"
+msgstr "Enkripsi kuat"
 
 #: node_modules/react-components/components/modal/Header.js:11
 #: node_modules/react-components/components/modal/Header.js:13
 msgctxt "Action"
 msgid "Close modal"
-msgstr "Fechar janela"
+msgstr "Tutup jendela"
 
 #: node_modules/react-components/components/modal/PreviewPDFModal.js:8
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:420
@@ -1339,7 +1339,7 @@ msgstr "Fechar janela"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:258
 msgctxt "Action"
 msgid "Close"
-msgstr "Fechar"
+msgstr "Tutup"
 
 #: node_modules/react-components/components/modal/Confirm.js:11
 #: node_modules/react-components/components/modal/FormModal.js:19
@@ -1354,7 +1354,7 @@ msgstr "Fechar"
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:25
 msgctxt "Action"
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Batal"
 
 #: node_modules/react-components/components/modal/FormModal.js:20
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:76
@@ -1365,74 +1365,74 @@ msgstr "Cancelar"
 #: node_modules/react-components/containers/support/BugModal.js:126
 msgctxt "Action"
 msgid "Submit"
-msgstr "Enviar"
+msgstr "Kirim"
 
 #: node_modules/react-components/components/modal/Confirm.js:10
 #: node_modules/react-components/components/modal/Confirm.js:12
 msgctxt "Action"
 msgid "Confirm"
-msgstr "Confirmar"
+msgstr "Konfirmasi"
 
 #: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:30
 msgctxt "Action"
 msgid "Reset password"
-msgstr "Redefinir senha"
+msgstr "Atur ulang kata sandi"
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:74
 msgctxt "Action"
 msgid "Get a new password"
-msgstr "Obter uma nova senha"
+msgstr "Buat kata sandi baru"
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:34
 msgctxt "Action"
 msgid "Email me my username(s)"
-msgstr "Enviar meu(s) nome(s) de usuário(s)"
+msgstr "Kirim surel nama pengguna saya"
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:47
 msgctxt "Action"
 msgid "Reset my password"
-msgstr "Redefinir minha senha"
+msgstr "Atur ulang kata sandi saya"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:421
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:265
 msgctxt "Action"
 msgid "Ok"
-msgstr "Ok"
+msgstr "Ya"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:435
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:39
 #: node_modules/react-components/containers/payments/EditCardModal.js:51
 msgctxt "Action"
 msgid "Save"
-msgstr "Salvar"
+msgstr "Simpan"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:93
 msgctxt "Action"
 msgid "Change mailbox password"
-msgstr "Alterar senha da caixa de correio"
+msgstr "Ganti kata sandi kotak pesan"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:96
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:65
 msgctxt "Action"
 msgid "Delete"
-msgstr "Excluir"
+msgstr "Hapus"
 
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:38
 msgctxt "Action"
 msgid "Yes"
-msgstr "Sim"
+msgstr "Ya"
 
 #: node_modules/react-components/containers/account/DeleteSection.js:75
 msgctxt "Action"
 msgid "Delete your account"
-msgstr "Excluir sua conta"
+msgstr "Hapus akun Anda"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:218
 #: src/app/containers/SignupContainer/SignupContainer.js:188
 #: src/app/containers/SignupContainer/SignupContainer.js:191
 msgctxt "Action"
 msgid "Back"
-msgstr "Voltar"
+msgstr "Kembali"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:257
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:38
@@ -1441,7 +1441,7 @@ msgstr "Voltar"
 #: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/VPNClientCard.js:14
 msgctxt "Action"
 msgid "Download"
-msgstr "Baixar"
+msgstr "Unduh"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:273
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:140
@@ -1449,93 +1449,93 @@ msgstr "Baixar"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:191
 msgctxt "Action"
 msgid "Next"
-msgstr "Próximo"
+msgstr "Selanjutnya"
 
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:15
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:56
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:7
 msgctxt "Action"
 msgid "Edit"
-msgstr "Editar"
+msgstr "Sunting"
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:52
 #: node_modules/react-components/containers/payments/PayPal.js:94
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:155
 msgctxt "Action"
 msgid "Try again"
-msgstr "Tentar novamente"
+msgstr "Coba lagi"
 
 #: node_modules/react-components/containers/payments/PayPal.js:134
 #: node_modules/react-components/containers/payments/PayPal.js:163
 msgctxt "Action"
 msgid "Check out with PayPal"
-msgstr "Finalizar compra com PayPal"
+msgstr "Bayar dengan PayPal"
 
 #: node_modules/react-components/containers/payments/PayPal.js:149
 msgctxt "Action"
 msgid "Add PayPal payment method"
-msgstr "Adicionar o Paypal como método de pagamento"
+msgstr "Tambahkan metode pembayaran PayPal"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:72
 #: node_modules/react-components/containers/payments/BillingSection.js:80
 #: node_modules/react-components/containers/payments/BillingSection.js:268
 msgctxt "Action"
 msgid "Add credits"
-msgstr "Adicionar créditos"
+msgstr "Tambahkan kredit"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:79
 #: node_modules/react-components/containers/payments/BillingSection.js:260
 msgctxt "Action"
 msgid "Use gift code"
-msgstr "Usar código de vale-presente"
+msgstr "Gunakan kode hadiah"
 
 #: node_modules/react-components/containers/payments/DonateModal.js:43
 msgctxt "Action"
 msgid "Donate"
-msgstr "Fazer uma doação"
+msgstr "Donasi"
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:7
 msgctxt "Action"
 msgid "Downgrade"
-msgstr "Rebaixar"
+msgstr "Turunkan"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:98
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:57
 msgctxt "Action"
 msgid "Verify"
-msgstr "Verificar"
+msgstr "Verifikasikan"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:161
 msgctxt "Action"
 msgid "Use a different card"
-msgstr "Usar outro cartão"
+msgstr "Gunakan kartu lain"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:162
 msgctxt "Action"
 msgid "Use a different payment method"
-msgstr "Use outro método de pagamento"
+msgstr "Gunakan metode pembayaran lainnya"
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:10
 msgctxt "Action"
 msgid "Remove bonuses"
-msgstr "Remover bônus"
+msgstr "Hapus bonus"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:66
 msgctxt "Action"
 msgid "Top up"
-msgstr "Recarregar"
+msgstr "Isi ulang"
 
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:50
 #: node_modules/react-components/containers/payments/subscription/CouponForm.js:27
 #: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:26
 msgctxt "Action"
 msgid "Apply"
-msgstr "Aplicar"
+msgstr "Terapkan"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:87
 msgctxt "Action"
 msgid "Add gift code"
-msgstr "Adicionar código de vale-presente"
+msgstr "Tambah kode hadiah"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:134
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:207
@@ -1546,58 +1546,58 @@ msgstr "Adicionar código de vale-presente"
 #: src/app/components/sections/plans/PlansTable.js:374
 msgctxt "Action"
 msgid "Update"
-msgstr "Atualizar"
+msgstr "Perbarui"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:134
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:207
 msgctxt "Action"
 msgid "Upgrade"
-msgstr "Upgrade"
+msgstr "Tingkatkan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:243
 msgctxt "Action"
 msgid "Pay yearly"
-msgstr "Pagar anualmente"
+msgstr "Bayar tahunan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:115
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:259
 msgctxt "Action"
 msgid "Remove coupon"
-msgstr "Remover cupom"
+msgstr "Hapus kupon"
 
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:21
 msgctxt "Action"
 msgid "Switch now"
-msgstr "Mudar agora"
+msgstr "Ganti sekarang"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:145
 msgctxt "Action"
 msgid "Add coupon"
-msgstr "Adicionar cupom"
+msgstr "Tambahkan kupon"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
 #: src/app/components/sections/plans/PlansTable.js:350
 msgctxt "Action"
 msgid "Hide additional features"
-msgstr "Ocultar recursos adicionais"
+msgstr "Sembunyikan fitur tambahan"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
 #: src/app/components/sections/plans/PlansTable.js:350
 msgctxt "Action"
 msgid "Compare all features"
-msgstr "Comparar todos os recursos"
+msgstr "Bandingkan semua fitur"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:140
 msgctxt "Action"
 msgid "Continue"
-msgstr "Continuar"
+msgstr "Lanjut"
 
 #.  Insert it before the last one
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:238
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:261
 msgctxt "Action"
 msgid "Previous"
-msgstr "Anterior"
+msgstr "Sebelumnya"
 
 #.  Insert it before the last one
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:45
@@ -1605,136 +1605,136 @@ msgstr "Anterior"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:239
 msgctxt "Action"
 msgid "Pay"
-msgstr "Pagar"
+msgstr "Bayar"
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:23
 msgctxt "Action"
 msgid "Got it"
-msgstr "Entendi"
+msgstr "Mengerti"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:167
 msgctxt "Action"
 msgid "Get the deal"
-msgstr "Obter oferta"
+msgstr "Dapatkan penawaran"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:206
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:209
 msgctxt "Action"
 msgid "Download all configurations"
-msgstr "Baixar todas configurações"
+msgstr "Unduh semua konfigurasi"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:54
 msgctxt "Action"
 msgid "Edit credentials"
-msgstr "Editar credenciais"
+msgstr "Ubah kredensial"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:62
 msgctxt "Action"
 msgid "Hide"
-msgstr "Ocultar"
+msgstr "Sembunyikan"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:62
 msgctxt "Action"
 msgid "Show"
-msgstr "Exibir"
+msgstr "Tampilkan"
 
 #: node_modules/react-components/containers/heading/SupportDropdown.js:57
 #: node_modules/react-components/containers/heading/UserDropdown.js:109
 msgctxt "Action"
 msgid "I have a question"
-msgstr "Eu tenho uma dúvida"
+msgstr "Saya memiliki pertanyaan"
 
 #: node_modules/react-components/containers/heading/SupportDropdown.js:67
 #: node_modules/react-components/containers/heading/UserDropdown.js:119
 msgctxt "Action"
 msgid "Report bug"
-msgstr "Reportar um problema"
+msgstr "Laporkan bug"
 
 #: node_modules/react-components/containers/heading/UserDropdown.js:84
 #: node_modules/react-components/containers/heading/UserDropdown.js:92
 msgctxt "Action"
 msgid "Settings"
-msgstr "Configurações"
+msgstr "Pengaturan"
 
 #: node_modules/react-components/containers/heading/UserDropdown.js:130
 msgctxt "Action"
 msgid "Proton shop"
-msgstr "Loja da Proton"
+msgstr "Toko Proton"
 
 #: node_modules/react-components/containers/heading/UserDropdown.js:140
 msgctxt "Action"
 msgid "Support us"
-msgstr "Apoie-nos"
+msgstr "Dukung kami"
 
 #: node_modules/react-components/containers/heading/UserDropdown.js:149
 msgctxt "Action"
 msgid "Logout"
-msgstr "Encerrar sessão"
+msgstr "Keluar"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:61
 msgctxt "Action"
 msgid "Mark as default"
-msgstr "Definir como padrão"
+msgstr "Tandai sebagai standar"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:61
 msgctxt "Action"
 msgid "Add credit / debit card"
-msgstr "Adicionar cartão de crédito/débito"
+msgstr "Tambah kartu kredit / debit"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:63
 msgctxt "Action"
 msgid "Add PayPal"
-msgstr "Adicionar PayPal"
+msgstr "Tambahkan Paypal"
 
 #: node_modules/react-components/containers/login/LoginForm.js:207
 msgctxt "Action"
 msgid "Log in"
-msgstr "Iniciar sessão"
+msgstr "Masuk"
 
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:24
 msgctxt "Action"
 msgid "View"
-msgstr "Visualizar"
+msgstr "Lihat"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:92
 msgctxt "Action"
 msgid "User"
-msgstr "Usuário"
+msgstr "Pengguna"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:98
 msgctxt "Action"
 msgid "Organization"
-msgstr "Organização"
+msgstr "Organisasi"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:101
 msgctxt "Action"
 msgid "Customize"
-msgstr "Personalizar"
+msgstr "Sesuaikan"
 
 #: node_modules/react-components/containers/support/AttachScreenshot.js:46
 msgctxt "Action"
 msgid "Clear"
-msgstr "Limpar"
+msgstr "Bersihkan"
 
 #: node_modules/react-components/containers/support/AttachScreenshot.js:53
 msgctxt "Action"
 msgid "Add screenshot(s)"
-msgstr "Adicionar captura(s) de tela"
+msgstr "Tambah tangkapan layar"
 
 #: node_modules/react-components/containers/support/BugModal.js:194
 msgctxt "Action"
 msgid "Hide info"
-msgstr "Ocultar informação"
+msgstr "Sembunyikan info"
 
 #: node_modules/react-components/containers/support/BugModal.js:194
 msgctxt "Action"
 msgid "Show info"
-msgstr "Mostrar informação"
+msgstr "Tampilkan info"
 
 #: src/app/components/sections/redeem/RedeemCouponForm.js:43
 msgctxt "Action"
 msgid "Activate my coupon"
-msgstr "Ativar meu cupom"
+msgstr "Aktifkan kupon saya"
 
 #: src/app/components/sections/plans/PlansTable.js:355
 #: src/app/components/sections/plans/PlansTable.js:360
@@ -1742,130 +1742,130 @@ msgstr "Ativar meu cupom"
 #: src/app/components/sections/plans/PlansTable.js:374
 msgctxt "Action"
 msgid "Select"
-msgstr "Selecionar"
+msgstr "Pilih"
 
 #: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:47
 msgctxt "Action"
 msgid "Confirm payment"
-msgstr "Confirmar pagamento"
+msgstr "Konfirmasi pembayaran"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationEmailInput.js:21
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationPhoneInput.js:29
 msgctxt "Action"
 msgid "Send"
-msgstr "Enviar"
+msgstr "Kirim"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:41
 msgctxt "Action"
 msgid "Resend"
-msgstr "Reenviar"
+msgstr "Kirim ulang"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:61
 msgctxt "Action"
 msgid "Did not receive the code?"
-msgstr "Não recebeu o código?"
+msgstr "Tidak menerima kode?"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:65
 msgctxt "Action"
 msgid "Use another verification method"
-msgstr "Utilizar outro método de verificação"
+msgstr "Gunakan metode verifikasi lainnya"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:144
 msgctxt "Action"
 msgid "Create account"
-msgstr "Criar uma conta"
+msgstr "Buat akun"
 
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:15
 msgctxt "Action"
 msgid "Go to login"
-msgstr "Ir para login"
+msgstr "Ke halaman Masuk"
 
 #: src/app/containers/SignupContainer/SignupContainer.js:191
 msgctxt "Action"
 msgid "Homepage"
-msgstr "Página inicial"
+msgstr "Beranda"
 
 #: src/app/containers/SignupContainer/SignupContainer.js:201
 msgctxt "Action"
 msgid "Need help"
-msgstr "Preciso de ajuda"
+msgstr "Butuh bantuan"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:52
 msgctxt "Action"
 msgid "Pay annually and save 20%"
-msgstr "Pague anualmente e economize 20%"
+msgstr "Bayar tahunan dan hemat 20%"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:64
 #, javascript-format
 msgctxt "Action"
 msgid "Try ${ upsellPlan.title } for only ${ totalMonthlyText }"
-msgstr "Experimente ${ upsellPlan.title } por apenas ${ totalMonthlyText }"
+msgstr "Cobalah ${ upsellPlan.title } hanya dengan ${ totalMonthlyText }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:77
 msgctxt "Action"
 msgid "View full plan comparison"
-msgstr "Ver comparação completa de planos"
+msgstr "Lihat perbandingan paket lengkap"
 
 #: node_modules/react-components/components/link/LearnMore.js:7
 msgctxt "Link"
 msgid "Learn more"
-msgstr "Saiba mais"
+msgstr "Pelajari lebih lanjut"
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:33
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:73
 msgctxt "Link"
 msgid "Back to login"
-msgstr "Voltar para o início de sessão"
+msgstr "Kembali ke masuk"
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:13
 msgctxt "Link"
 msgid "here"
-msgstr "aqui"
+msgstr "di sini"
 
 #: node_modules/react-components/containers/account/UsernameSection.js:36
 msgctxt "Link"
 msgid "Not activated"
-msgstr "Não ativado"
+msgstr "Belum diaktifkan"
 
 #: node_modules/react-components/containers/payments/PayPal.js:110
 msgctxt "Link"
 msgid "click here"
-msgstr "clique aqui"
+msgstr "klik di sini"
 
 #: node_modules/react-components/containers/login/SignInLayout.js:45
 msgctxt "Link"
 msgid "Sign up for free"
-msgstr "Cadastre-se gratuitamente"
+msgstr "Daftar gratis"
 
 #: node_modules/react-components/containers/login/SignInLayout.js:58
 msgctxt "Link"
 msgid "Don't have an account yet? Sign up for free!"
-msgstr "Ainda não tem uma conta? Cadastre-se gratuitamente!"
+msgstr "Belum memiliki akun? Daftar gratis!"
 
 #: node_modules/react-components/containers/support/BugModal.js:95
 msgctxt "Link"
 msgid "clearing your browser cache"
-msgstr "limpando o cache do seu navegador"
+msgstr "membersihkan cache peramban Anda"
 
 #: src/app/components/layout/PrivateLayout.js:16
 msgctxt "Link"
 msgid "Dashboard"
-msgstr "Painel de controle"
+msgstr "Dasbor"
 
 #: src/app/components/layout/PrivateLayout.js:21
 msgctxt "Link"
 msgid "Account"
-msgstr "Conta"
+msgstr "Akun"
 
 #: src/app/components/layout/PrivateLayout.js:26
 msgctxt "Link"
 msgid "Downloads"
-msgstr "Downloads"
+msgstr "Unduhan"
 
 #: src/app/components/layout/PrivateLayout.js:31
 msgctxt "Link"
 msgid "Payments"
-msgstr "Pagamentos"
+msgstr "Pembayaran"
 
 #: src/app/components/layout/PublicHeader.js:14
 msgctxt "Link"
@@ -1875,544 +1875,545 @@ msgstr "protonvpn.com"
 #: src/app/components/page/Page.js:25
 msgctxt "Link"
 msgid "Upgrade now"
-msgstr "Fazer upgrade agora"
+msgstr "Tingkatkan sekarang"
 
 #: src/app/containers/LoginContainer.js:22
 msgctxt "Link"
 msgid "Reset password"
-msgstr "Redefinir senha"
+msgstr "Setel ulang kata sandi"
 
 #: src/app/containers/LoginContainer.js:25
 msgctxt "Link"
 msgid "Forgot username?"
-msgstr "Esqueceu seu nome de usuário?"
+msgstr "Lupa nama pengguna?"
 
 #: src/app/containers/LoginContainer.js:28
 msgctxt "Link"
 msgid "Common login problems"
-msgstr "Problemas comuns para iniciar sessão"
+msgstr "Masalah umum proses masuk"
 
 #: src/app/containers/LoginContainer.js:32
 msgctxt "Link"
 msgid "Contact support"
-msgstr "Contatar o suporte"
+msgstr "Hubungi dukungan"
 
 #: src/app/containers/SignupContainer/LoginPanel.js:12
 msgctxt "Link"
 msgid "Log in"
-msgstr "Iniciar sessão"
+msgstr "Masuk"
 
 #: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:17
 msgctxt "Link"
 msgid "Close"
-msgstr "Fechar"
+msgstr "Tutup"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:59
 msgctxt "Link"
 msgid "Terms of Service"
-msgstr "Termos de serviço"
+msgstr "Ketentuan Layanan"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:63
 msgctxt "Link"
 msgid "Privacy Policy"
-msgstr "Politica de privacidade"
+msgstr "Kebijakan Privasi"
 
 #: node_modules/react-components/containers/error/GenericError.js:13
 msgctxt "Error message"
 msgid "Aaah! Something went wrong"
-msgstr "Eita! Alguma coisa deu errado"
+msgstr "Ups! Ada yang salah"
 
 #: node_modules/react-components/containers/error/GenericError.js:16
 msgctxt "Error message"
 msgid "Brace yourself till we get the error fixed."
-msgstr "Fique tranquilo, logo iremos corrigir este erro."
+msgstr "Kami sedang perbaiki. Mohon bersabar."
 
 #: node_modules/react-components/containers/error/GenericError.js:17
 msgctxt "Error message"
 msgid "You may also refresh the page or try again later."
-msgstr "Você pode atualizar a página ou tentar novamente mais tarde."
+msgstr "Segarkan halaman ini atau coba lagi nanti."
 
 #: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:14
 msgctxt "Info"
 msgid "We've sent a reset code to your recovery email, valid for one hour or until you request a new code. Enter it below to continue."
-msgstr "Enviamos um código de redefinição para seu endereço de recuperação, ele é válido por apenas uma hora ou até você solicitar um novo. Digite no abaixo para continuar."
+msgstr "Kami telah mengirim kode untuk mengatur ulang ke surel pemulihan, valid hingga satu jam sampai Anda meminta kode baru. Masukkanlah kode di bawah untuk melanjutkan."
 
 #: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:27
 msgctxt "Info"
 msgid "IMPORTANT: Do not close or navigate away from this page. You will need to enter the reset code into the field below once you receive it."
-msgstr "IMPORTANTE: não feche esta página ou navegue para outra. Você precisará inserir o código de redefinição no campo abaixo depois de recebê-lo."
+msgstr "PENTING: Jangan tutup atau pindah dari halaman ini. Anda harus memasukkan kode set ulang ke bidang di bawah saat Anda sudah menerimanya."
 
 #: node_modules/react-components/containers/resetPassword/ResetPasswordForm.js:74
 msgctxt "Info"
 msgid "This can take a few seconds or a few minutes depending on your device."
-msgstr "Isto pode demorar alguns segundos ou minutos dependendo do seu dispositivo."
+msgstr "Hal ini bisa memakan waktu beberapa detik atau beberapa menit tergantung perangkat Anda."
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:30
 msgctxt "Info"
 msgid "Resetting your password means your old password and the places it is saved will no longer work. Are you sure you want to reset your password?"
-msgstr "Redefinir sua senha significa que sua senha antiga e os locais onde ela foi salva não funcionarão mais. Você tem certeza de que deseja redefinir sua senha?"
+msgstr "Mengatur ulang kata sandi Anda berarti kata sandi lama Anda dan tempat ia disimpan tidak lagi bisa digunakan. Apakah yakin ingin mengatur ulang kata sandi Anda?"
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:46
 msgctxt "Info"
 msgid "We will send a reset code to your recovery email to reset your password."
-msgstr "Enviamos um código de redefinição para o seu endereço de e-mail de recuperação."
+msgstr "Kami akan mengirim sebuah kode untuk mengatur ulang ke alamat surel pemulihan Anda guna mengatur ulang kata sandi Anda."
 
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:22
 msgctxt "Info"
 msgid "Keep this password safe, it cannot be recovered."
-msgstr "Mantenha esta senha segura -- ela não pode ser recuperada."
+msgstr "Simpan kata sandi ini dengan aman, ia tidak dapat dipulihkan."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:330
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:41
 msgctxt "Info"
 msgid "Do NOT forget this password. If you forget it, you will not be able to login or decrypt your messages."
-msgstr "NÃO se esqueça da sua senha. Se você a esquecê-la, você não será capaz de iniciar a sessão ou descriptografar suas mensagens."
+msgstr "JANGAN lupa password ini. Jika Anda lupa, Anda tidak akan bisa masuk atau mendekripsi pesan Anda."
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:17
 msgctxt "Info"
 msgid "Enter your recovery email address, and we'll send you your username(s). (This is usually the email address you provided during signup.)"
-msgstr "Digite seu endereço de e-mail de recuperação e enviaremos seu(s) nome(s) de usuário(s). (Geralmente, esse é o endereço de e-mail que você forneceu durante o registro.)"
+msgstr "Masukkan alamat surel pemulihan Anda, dan kami akan mengirim nama pengguna Anda. (Biasanya ini alamat surel yang Anda isikan saat mendaftar.)"
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:29
 #, javascript-format
 msgctxt "Info"
 msgid "Resetting your password will reset your encryption keys for all Proton related services (Mail and VPN). You will be unable to read your existing messages. If you know your ProtonMail credentials, do NOT reset. You can log in with them ${ loginLink }."
-msgstr "Redefinindo sua senha irá redefinir suas chaves de criptografia para todos os serviços relacionados ao Proton (E-mail e VPN). Você não será mais capaz de ler suas mensagens existentes. Se você sabe suas credenciais do ProtonMail, NÃO redefina. Você pode entrar com elas aqui."
+msgstr "Mengatur ulang kata sandi Anda akan mengatur ulang kunci enkripsi Anda pada semua layanan Proton yang berhubungan (Mail dan VPN). Anda tidak akan dapat membaca pesan Anda. Jika Anda tahu kredensial ProtonMail Anda, JANGAN atur ulang. Anda dapat masuk dengannya ${ loginLink }."
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:31
 msgctxt "Info"
 msgid "ALL YOUR DATA WILL BE LOST!"
-msgstr "TODOS OS SEUS DADOS SERÃO PERDIDOS!"
+msgstr "SEMUA DATA ANDA AKAN HILANG!"
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:43
 msgctxt "Info"
 msgid "If you remember your old password later, you can recover your existing messages."
-msgstr "Caso você lembre da sua senha antiga, você poderá recuperar as mensagens existentes."
+msgstr "Jika dikemudian hari Anda ingat kata sandi lama Anda, Anda bisa mendapatkan kembali pesan-pesan anda."
 
 #: node_modules/react-components/containers/api/HumanVerificationModal.js:19
 msgctxt "Info"
 msgid "For security reasons, please verify that you are not a robot."
-msgstr "Por razões de segurança, precisamos que comprove que você não é um robô."
+msgstr "Demi alasan keamanan, harap verifikasi bahwa Anda bukan robot."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:154
 msgctxt "Info"
 msgid "Two-password mode uses separate passwords for login and mailbox decryption. This provides a minor security benefit in some situations, however we recommend one-password mode for most users. To switch to two password mode, first set a login password and then set a mailbox password."
-msgstr "O modo de duas senhas usa senhas separadas para acessar e descriptografar a caixa de correio. Isso provê um pequeno benefício de segurança em algumas situações, porém recomendamos o modo de senha única para a maioria dos usuários. Para mudar para o modo de duas senhas, primeiro defina uma senha de acesso e depois uma senha para a caixa de correio."
+msgstr "Mode dua-kata sandi menggunakan kata sandi terpisah untuk dekripsi masuk dan kotak surat. Hal ini memberikan sedikit manfaat keamanan pada situasi tertentu, namun kami menyarankan mode satu kata sandi untuk sebagian besar pengguna. Untuk beralih ke mode dua-kata sandi, atur dulu kata sandi masuk kemudian tentukan kata sandi kotak surat."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:284
 msgctxt "Info"
 msgid "ProtonMail can also be used with a single password which replaces both the login and mailbox password. To switch to single password mode, enter the single password you would like to use and click Save."
-msgstr "O ProtonMail também pode ser usado com uma única senha que substituí as senhas de acesso e da caixa de correio. Para mudar para o modo de senha única, digite a senha única que deseja usar e clique em Salvar."
+msgstr "ProtonMail juga bisa digunakan dengan kata sandi tunggal yang menggantikan kata sandi untuk masuk dan kotak pesan. Untuk beralih ke mode kata sandi tunggal, masukkan satu kata sandi yang ingin Anda gunakan dan klik Simpan."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:334
 #, javascript-format
 msgctxt "Info"
 msgid "Save your password somewhere safe. Click on the ${ eye } icon to confirm you that have typed your password correctly."
-msgstr "Salve sua senha em um lugar seguro. Clique no ícone ${ eye } para confirmar que você digitou a senha corretamente."
+msgstr "Simpan kata sandi Anda di tempat aman. Klik ikon ${ eye } untuk mengonfirmasi bahwa Anda sudah mengetik kata sandi dengan benar."
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:338
 msgctxt "Info"
 msgid "We recommend adding a recovery email address first. Otherwise, you cannot recover your account if something goes wrong."
-msgstr "Recomendamos colocar um endereço de e-mail de recuperação. Caso contrário, você não poderá recuperar sua conta se algo der errado."
+msgstr "Kami sarankan tambahkan alamat surel pemulihan lebih dulu. Jika tidak, Anda tidak dapat memulihkan akun jika terjadi kesalahan."
 
 #: node_modules/react-components/containers/account/MozillaInfoPanel.js:9
 msgctxt "Info"
 msgid "Your subscription is managed by Mozilla. Please contact Mozilla support."
-msgstr "Sua assinatura é gerenciada pela Mozilla. Por favor, entre em contato com o suporte da Mozilla."
+msgstr "Langganan Anda dikelola oleh Mozilla.\n"
+"Harap hubungi dukungan Mozilla."
 
 #: node_modules/react-components/containers/account/UsernameSection.js:35
 msgctxt "Info"
 msgid "Log in to ProtonMail to activate your address"
-msgstr "Inicie a sessão no ProtonMail para ativar seu endereço"
+msgstr "Masuk ke ProtonMail untuk mengaktifkan alamat Anda"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:102
 msgctxt "Info"
 msgid "Warning: This also deletes all connected services"
-msgstr "Aviso: Isso também irá excluir todos os serviços conectados"
+msgstr "Peringatan: Ini menghapuskan juga semua layanan tersambung"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:103
 msgctxt "Info"
 msgid "Example: ProtonMail, ProtonContact, ProtonVPN, ProtonDrive, ProtonCalendar"
-msgstr "Exemplo: ProtonMail, ProtonContact, ProtonVPN, ProtonDrive e ProtonCalendar"
+msgstr "Contoh: ProtonMail, ProtonContact, ProtonVPN, ProtonDrive, ProtonCalendar"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:106
 msgctxt "Info"
 msgid "Warning: deletion is permanent"
-msgstr "Aviso: a exclusão é permanente"
+msgstr "Peringatan: Penghapusan berlaku permanen"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:107
 msgctxt "Info"
 msgid "If you wish to delete this account in order to combine it with another one, do NOT delete it."
-msgstr "Se você deseja excluir esta conta para combiná-la com outra, NÃO a exclua."
+msgstr "Jika Anda hendak menghapus akun ini untuk digabungkan dengan akun lainnya, JANGAN dihapus."
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:136
 msgctxt "Info"
 msgid "Please provide an email address in case we need to contact you."
-msgstr "Por favor, forneça um endereço de e-mail para entrar em contato com você."
+msgstr "Harap berikan alamat surel seandainya kami perlu menghubungi Anda."
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:150
 msgctxt "Info"
 msgid "Enter your login password to confirm your identity."
-msgstr "Digite sua senha de inicio de sessão para confirmar sua identidade."
+msgstr "Masukkan kata sandi masuk Anda untuk mengkonfirmasi identitas Anda."
 
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:51
 msgctxt "Info"
 msgid "Two-factor authentication disabled"
-msgstr "Autenticação de dois fatores desativada"
+msgstr "Otentikasi dua-faktor dinonaktifkan"
 
 #: node_modules/react-components/containers/account/DeleteSection.js:45
 #, javascript-format
 msgctxt "Info"
 msgid "Your ProtonVPN and ProtonMail accounts are linked. To delete them both, please log in at ${ loginLink } and delete your account there."
-msgstr "Suas contas do ProtonVPN e ProtonMail estão vinculadas. Para excluir ambas, inicie a sessão em ${ loginLink } e exclua sua conta lá."
+msgstr "Akun ProtonVPN dan ProtonMail Anda saling terkait. Untuk menghapus keduanya, harap masuk ke ${ loginLink } dan hapus akun Anda di sana."
 
 #: node_modules/react-components/containers/account/DeleteSection.js:69
 msgctxt "Info"
 msgid "Deleting your account will permanently delete your emails, and you will lose your email address."
-msgstr "Excluir sua conta irá excluir permanentemente seus e-mails e você perderá seu endereço de e-mail."
+msgstr "Menghapus akun akan menghapus semua surel Anda secara permanen, Anda juga akan kehilangan alamat surel Anda."
 
 #: node_modules/react-components/containers/account/DeleteSection.js:71
 msgctxt "Info"
 msgid "Deleting your account will permanently delete all data associated with it and it cannot be recovered. You will no longer be able to use the same username should you decide to create a new account."
-msgstr "A exclusão da sua conta excluirá permanentemente todos os dados associados a ela e não poderá ser recuperada. Você não poderá mais usar o mesmo nome de usuário se decidir criar uma nova conta."
+msgstr "Menghapus akun Anda akan menghapus seluruh data yang terkait dengannya secara permanen dan tidak dapat dipulihkan. Anda tidak akan dapat lagi memakai nama pengguna yang sama jika Anda memutuskan membuat akun baru."
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:20
 msgctxt "Info"
 msgid "Emailing preference updated"
-msgstr "Preferência de envio de e-mails atualizada"
+msgstr "Preferensi bersurat diperbarui"
 
 #: node_modules/react-components/containers/account/NewsSection.js:26
 msgctxt "Info"
 msgid "To keep up with the latest development at Proton products, you can subscribe to our various emails and visit our blog from time to time."
-msgstr "Para acompanhar o desenvolvimento dos produtos da Proton, você poderá se inscrever em nossos e-mails e/ou visitar nosso blog periodicamente."
+msgstr "Untuk terus mendapat perkembangan baru produk-produk Proton, Anda dapat berlangganan pada beragam surel kami dan mengunjungi blog kami dari waktu ke waktu."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:91
 msgctxt "Info"
 msgid "reading our 2FA Guide first"
-msgstr "lendo nosso guia de autenticação de dois fatores primeiro"
+msgstr "baca Panduan 2FA kami terlebih dahulu"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:97
 msgctxt "Info"
 msgid "This wizard will enable Two Factor Authentication (2FA) on your Proton account. 2FA will make your Proton account more secure so we recommend enabling it."
-msgstr "Este assistente irá ativar a autenticação em dois fatores (2FA) na sua conta Proton. A autenticação de dois fatores tornará sua conta Proton mais segura e é recomendado que este recurso seja ativado."
+msgstr "Proses ini akan mengaktifkan Otentikasi Dua Faktor (2FA) di akun Proton Anda. 2FA akan membuat akun Proton Anda lebih aman sehingga kami sarankan untuk mengaktifkannya."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:101
 #, javascript-format
 msgctxt "Info"
 msgid "If you have never used 2FA before, we strongly recommend you ${ guideButton }."
-msgstr "Se você nunca usou a autenticação de dois fatores, recomendamos você ${ guideButton }."
+msgstr "Jika Anda belum pernah menggunakan 2FA, sangat kami anjurkan Anda ${ guideButton }."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:118
 msgctxt "Info"
 msgid "Enter key manually instead"
-msgstr "Em vez disso, digite a chave manualmente"
+msgstr "Masukkan kunci secara manual"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:126
 #, javascript-format
 msgctxt "Info"
 msgid "Scan this code with your two-factor authentication device to set up your account. ${ switchButton }."
-msgstr "Escaneie este código com seu dispositivo de autenticação de dois fatores para configurar sua conta. ${ switchButton }."
+msgstr "Pindai kode QR ini dengan perangkat otentikasi dua faktor untuk mengatur akun Anda. ${ switchButton }."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:141
 msgctxt "Info"
 msgid "Scan QR code instead"
-msgstr "Escaneie o código QR"
+msgstr "Pindai kode QR"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:149
 #, javascript-format
 msgctxt "Info"
 msgid "Manually enter this information into your two-factor authentication device to set up your account. ${ _switchButton }."
-msgstr "Insira estas informações manualmente no seu dispositivo de autenticação de dois fatores para configurar a sua conta. ${ _switchButton }."
+msgstr "Masukkan informasi ini secara manual ke perangkat otentikasi dua faktor Anda untuk menyiapkan akun Anda. ${ _switchButton }."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:187
 msgctxt "Info"
 msgid "Two-factor authentication enabled"
-msgstr "Autenticação de dois fatores ativada"
+msgstr "Otentikasi dua-faktor diaktifkan"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:231
 msgctxt "Info"
 msgid "Important: Please make sure you save the recovery codes. Otherwise you can permanently lose access to your account if you lose your 2FA device."
-msgstr "Importante: Por favor, certifique-se de salvar os códigos de recuperação. Caso contrário, poderá perder permanentemente o acesso à sua conta caso perca o seu dispositivo de autenticação de dois fatores."
+msgstr "Penting: Pastikan Anda menyimpan kode pemulihan. Jika tidak, Anda dapat kehilangan akses ke akun Anda secara permanen jika kehilangan perangkat 2FA Anda."
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:235
 msgctxt "Info"
 msgid "If you lose your two-factor-enabled device, these codes can be used instead of the 6-digit 2FA code to log into your account. Each code can only be used once."
-msgstr "Se você perdeu o seu dispositivo com autenticação de dois fatores ativado, estes códigos podem ser utilizados ao invés do código de 6 dígitos de dois fatores para entrar em sua conta. Cada código só pode ser utilizado uma única vez."
+msgstr "Jika Anda kehilangan perangkat berkemampuan dua-faktor, kode ini dapat menggantikan kode 6 digit 2FA untuk masuk ke akun Anda. Setiap kode hanya dapat digunakan sekali."
 
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:11
 msgctxt "Info"
 msgid "Not set"
-msgstr "Não configurado"
+msgstr "Tidak diatur"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:63
 msgctxt "Info"
 msgid "The selected method can be used to recover an account in the event you forget your password and to be notified about missed emails."
-msgstr "O método selecionado pode ser usado para recuperar uma conta no caso de você esquecer sua senha e ser notificado sobre e-mails recebidos que não foram lidos."
+msgstr "Metode yang dipilih dapat digunakan untuk memulihkan akun Anda pada saat Anda lupa kata sandi dan agar Anda diberitahu terkait surel yang terlewatkan."
 
 #: node_modules/react-components/containers/notification/EmailSection.js:86
 msgctxt "Info"
 msgid "When notifications are enabled, we'll send an alert to your recovery/notification address if you have new messages in your ProtonMail account."
-msgstr "Quando as notificações estão ativas, será enviado um alerta para o seu endereço de recuperação/notificação avisando que você tem novas mensagens na sua conta do ProtonMail."
+msgstr "Saat pemberitahuan diaktifkan, kami akan mengirimkan peringatan ke alamat pemulihan/pemberitahuan Anda jika Anda memiliki pesan baru di akun ProtonMail Anda."
 
 #: node_modules/react-components/containers/payments/PayPal.js:120
 msgctxt "Info"
 msgid "Please verify the payment in the new tab."
-msgstr "Por favor, finalize o pagamento na nova guia."
+msgstr "Harap lakukan verifikasi pembayaran di tab baru."
 
 #: node_modules/react-components/containers/payments/PayPal.js:130
 #: node_modules/react-components/containers/payments/PayPal.js:160
 msgctxt "Info"
 msgid "We will redirect you to PayPal in a new browser tab to complete this transaction. If you use any pop-up blockers, please disable them to continue."
-msgstr "Vamos redirecioná-lo para o PayPal em uma nova guia do navegador para concluir esta transação. Desative qualquer bloqueador de pop-ups que estiver usando."
+msgstr "Kami akan mengalihkan Anda ke PayPal di tab baru peramban guna menyelesaikan transaksi ini. Jika Anda memakai pemblokir pop-up, harap menonaktifkannya untuk melanjutkan."
 
 #: node_modules/react-components/containers/payments/PayPal.js:138
 #, javascript-format
 msgctxt "Info"
 msgid "You must have a credit card or bank account linked with your PayPal account. If your PayPal account doesn't have that, please ${ clickHere }."
-msgstr "Você precisa ter um cartão de crédito ou uma conta bancária vinculada à sua conta do PayPal. Se a sua conta do PayPal não tiver isso, ${ clickHere }."
+msgstr "Anda harus memiliki kartu kredit atau akun bank yang terhubung dengan akun Paypal Anda. Jika akun Paypal Anda tidak memilikinya, harap ${ clickHere }."
 
 #: node_modules/react-components/containers/payments/PayPal.js:145
 msgctxt "Info"
 msgid "This will enable PayPal to be used to pay for your Proton subscription. We will redirect you to PayPal in a new browser tab. If you use any pop-up blockers, please disable them to continue."
-msgstr "Isso permitirá que o PayPal seja usado para pagar sua assinatura Proton. Vamos redirecioná-lo para o PayPal em uma nova guia do navegador. Desative qualquer bloqueador de pop-ups que estiver usando."
+msgstr "Hal ini akan mengaktifkan PayPal guna membayar langganan Proton Anda. Kami akan mengalihkan Anda di tab baru peramban. Jika Anda memakai pemblokir pop-up, harap menonaktifkannya untuk melanjutkan."
 
 #: node_modules/react-components/containers/payments/PayPal.js:153
 msgctxt "Info"
 msgid "You must have a credit card or bank account linked with your PayPal account in order to add it as a payment method."
-msgstr "Você deve ter um cartão de crédito ou uma conta bancária vinculada à sua conta do PayPal para que possa ser adicionada como método de pagamento."
+msgstr "Anda harus memiliki kartu kredit atau akun bank yang terhubung dengan akun Paypal Anda agar dapat menambahkannya sebagai cara pembayaran."
 
 #: node_modules/react-components/containers/payments/BillingSection.js:63
 msgctxt "Info"
 msgid "There are no billing details available for your current subscription."
-msgstr "Não há informações de pagamento disponíveis para sua assinatura atual."
+msgstr "Rincian tagihan tidak tersedia bagi langganan Anda saat ini."
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:71
 #: node_modules/react-components/containers/payments/DonateModal.js:46
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:208
 msgctxt "Info"
 msgid "Your payment details are protected with TLS encryption and Swiss privacy laws."
-msgstr "Suas informações de pagamento estão protegidas com a criptografia TLS e leis de privacidade suíças."
+msgstr "Detail pembayaran Anda dilindungi dengan enkripsi TLS dan hukum privasi Swiss."
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:8
 msgctxt "Info"
 msgid "Your account will be downgraded in a few minutes."
-msgstr "A sua conta será rebaixada em poucos minutos."
+msgstr "Akun Anda akan diturunkan dalam beberapa menit."
 
 #: node_modules/react-components/containers/payments/DowngradeModal.js:9
 msgctxt "Info"
 msgid "Additional addresses, custom domains, and users must be removed/disabled before performing this action. Any connections to premium servers will be terminated."
-msgstr "Endereços adicionais, domínios personalizados e usuários devem ser removidos/desativados antes de executar essa ação. Quaisquer conexões a servidores premium serão encerradas."
+msgstr "Alamat tambahan, domain kustom, dan pengguna harus dihapus/dinonaktifkan sebelum melakukan tindakan ini. Segala koneksi ke server premium akan diputuskan."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:108
 msgctxt "Info"
 msgid "Your bank requires 3-D Secure verification for security purposes."
-msgstr "Seu banco requer a verificação de segurança 3-D para fins de segurança."
+msgstr "Bank Anda memerlukan verifikasi 3-D Secure demi keamanan."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:115
 msgctxt "Info"
 msgid "Verification will open a new tab, please disable any popup blockers. You will not be charged. Any amount used to verify the card will be refunded immediately."
-msgstr "O processo de verificação irá precisar abrir uma nova guia. Por favor, desative os bloqueadores de pop-ups. Você não será cobrado. Qualquer quantia usada para verificar seu cartão será reembolsado imediatamente."
+msgstr "Verifikasi akan membuka tab baru, mohon menonaktifkan pemblokir popup. Anda tidak akan dikenakan biaya. Berapapun jumlah yang digunakan untuk verifikasi akan segera dikembalikan."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:117
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:126
 msgctxt "Info"
 msgid "Verification will open a new tab, please disable any popup blockers."
-msgstr "A verificação irá abrir um novo separador. Por favor, desative todos os bloqueadores de pop-ups."
+msgstr "Verifikasi akan membuka tab baru, mohon menonaktifkan pemblokir popup."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:123
 msgctxt "Info"
 msgid "You will be soon redirected to your bank to verify your payment."
-msgstr "Em breve você será redirecionado ao seu banco para verificar seu pagamento."
+msgstr "Anda akan segera dialihkan menuju bank Anda untuk memverifikasi pembayaran Anda."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:134
 msgctxt "Info"
 msgid "Please verify the card in the new tab which was opened."
-msgstr "Por favor, verifique o cartão na nova guia que foi aberta no seu navegador."
+msgstr "Mohon verifikasi kartu pada tab baru yang telah dibuka."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:135
 msgctxt "Info"
 msgid "Please verify payment at the new tab which was opened."
-msgstr "Por favor, verifique o pagamento na nova guia que foi aberta."
+msgstr "Mohon verifikasi pembayaran pada tab baru yang telah dibuka."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:143
 msgctxt "Info"
 msgid "Verification can take a few minutes."
-msgstr "A verificação pode levar alguns minutos."
+msgstr "Verifikasi dapat berlangsung dalam beberapa menit."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:144
 msgctxt "Info"
 msgid "Payment can take a few minutes to fully verify."
-msgstr "O pagamento pode demorar alguns minutos para ser totalmente verificado."
+msgstr "Pembayaran dapat memakan waktu beberapa menit untuk terverifikasi sepenuhnya."
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:150
 msgctxt "Info"
 msgid "Please try again, use a different payment method, or call your bank for assistance."
-msgstr "Por favor. Tente novamente, use um método de pagamento diferente ou ligue para o seu banco para autorizar o pagamento."
+msgstr "Mohon ulangi kembali, menggunakan metode pembayaran berbeda, atau menghubungi bank Anda untuk mendapatkan bantuan."
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:13
 msgctxt "Info"
 msgid "As an early Proton user, your account has extra features.."
-msgstr "Como um usuário Proton antigo, sua conta tem recursos extras."
+msgstr "Sebagai pengguna Proton awal, akun Anda memiliki fitur tambahan."
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:15
 msgctxt "Info"
 msgid "By downgrading to a Free plan, you will permanently lose these benefits, even if you upgrade again in the future."
-msgstr "Ao rebaixar para um plano Gratuito, você perderá permanentemente esses benefícios, mesmo que você faça o upgrade novamente no futuro."
+msgstr "Dengan menurunkan versi ke paket Free, Anda akan kehilangan manfaat ini secara permanen, bahkan jika Anda meningkatkan lagi di masa depan."
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:18
 msgctxt "Info"
 msgid "+5GB bonus storage"
-msgstr "+ 5GB bônus de armazenamento"
+msgstr "Bonus kapasitas +5GB"
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:20
 msgctxt "Info"
 msgid "+2 connections for ProtonVPN (allows you to connect more devices to VPN)"
-msgstr "+2 conexões para ProtonVPN (permite conectar mais dispositivos na VPN)"
+msgstr "+2 koneksi untuk ProtonVPN (memungkinkan Anda untuk menyambungkan lebih banyak perangkat ke VPN)"
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:40
 #, javascript-format
 msgctxt "Info"
 msgid "Amount below minimum. (${ amount })"
-msgstr "Valor abaixo do mínimo. (${ amount })"
+msgstr "Di bawah jumlah minimum. (${ amount })"
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:64
 msgctxt "Info"
 msgid "Bitcoin transactions can take some time to be confirmed (up to 24 hours). Once confirmed, we will add credits to your account. After transaction confirmation, you can pay your invoice with the credits."
-msgstr "As transações em Bitcoin podem levar algum tempo para serem confirmadas (até 24 horas). Uma vez confirmada, adicionaremos os créditos na sua conta. Após a confirmação da transação, você pode pagar sua fatura com os créditos."
+msgstr "Transaksi bitcoin membutuhkan waktu untuk dikonfirmasi (hingga 24 jam). Setelah dikonfirmasi, kami akan menambahkan kredit ke akun Anda. Setelah konfirmasi transaksi, Anda dapat membayar tagihan Anda dengan kredit."
 
 #: node_modules/react-components/containers/payments/Bitcoin.js:73
 msgctxt "Info"
 msgid "After making your Bitcoin payment, please follow the instructions below to upgrade."
-msgstr "Após efetuar o seu pagamento em Bitcoin. Por favor, siga as instruções abaixo para fazer o upgrade de plano."
+msgstr "Usai melakukan pembayaran dengan Bitcoin, harap ikuti instruksi di bawah untuk meningkatkan."
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:78
 #, javascript-format
 msgctxt "Info"
 msgid "Top up your account with credits that you can use to subscribe to a new plan or renew your current plan. You get one credit for every ${ i18nCurrency } spent."
-msgstr "Recarregue sua conta com créditos que podem ser utilizados para assinar um novo plano ou renovar seu plano atual. Você recebe um crédito a cada ${ i18nCurrency } gasto."
+msgstr "Isikan akun Anda dengan kredit yang dapat Anda pakai untuk berlangganan paket baru atau memperbarui paket. Anda mendapatkan satu kredit untuk setiap ${ i18nCurrency } yang dihabiskan."
 
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:53
 msgctxt "Info"
 msgid "If you purchased or were given a gift code, add it here."
-msgstr "Se você comprou ou recebeu um código de vale-presente, insira-o aqui."
+msgstr "Jika Anda membeli atau mendapatkan kode hadiah, tambahkan kode tersebut di sini."
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:12
 msgctxt "Info"
 msgid "monthly billing"
-msgstr "faturamento mensal"
+msgstr "penagihan bulanan"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:13
 msgctxt "Info"
 msgid "annual billing"
-msgstr "faturamento anual"
+msgstr "penagihan tahunan"
 
 #: node_modules/react-components/containers/payments/subscription/PaymentDetails.js:14
 msgctxt "Info"
 msgid "two-year billing"
-msgstr "faturamento a cada 2 anos"
+msgstr "penagihan dua tahunan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:60
 msgctxt "Info"
 msgid "No subscription yet"
-msgstr "Nenhuma assinatura ativa"
+msgstr "Belum berlangganan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:125
 msgctxt "Info"
 msgid "Not activated"
-msgstr "Não ativado"
+msgstr "Belum diaktifkan"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:130
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:203
 msgctxt "Info"
 msgid "Combine paid ProtonMail and ProtonVPN and get a 20% discount on both"
-msgstr "Combine os planos pagos do ProtonMail e ProtonVPN e ganhe 20% de desconto em ambos"
+msgstr "Gabungkan ProtonMail dan ProtonVPN berbayar dan dapatkan potongan 20% atas keduanya"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:230
 msgctxt "Info"
 msgid "Switch to annual billing for a 20% discount"
-msgstr "Mudar faturamento para anual e obter 20% de desconto"
+msgstr "Pindah ke penagihan tahunan untuk mendapatkan potongan harga 20%"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:234
 msgctxt "Info"
 msgid "20% rebate applied to your subscription"
-msgstr "20% de desconto aplicado na sua assinatura"
+msgstr "potongan harga 20% diberlakukan bagi langganan Anda"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:238
 msgctxt "Info"
 msgid "33% rebate applied to your subscription"
-msgstr "33% de desconto aplicado na sua assinatura"
+msgstr "Potongan harga 33% diberlakukan bagi langganan Anda"
 
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:13
 msgctxt "Info"
 msgid "Black Friday 2019 newcomer discount has been applied!"
-msgstr "Foi aplicado um desconto da Black Friday 2019 para novatos!"
+msgstr "Diskon Black Friday 2019 untuk pendatang baru telah diterapkan!"
 
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:20
 msgctxt "Info"
 msgid "Save 20% with annual"
-msgstr "Economize 20% com anual"
+msgstr "Hemat 20% tahunan"
 
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:25
 msgctxt "Info"
 msgid "A 20% discount for annual billing has been automatically applied."
-msgstr "Um desconto de 20% para o faturamento anual foi aplicado automaticamente."
+msgstr "Diskon 20% untuk tagihan tahunan telah diterapkan secara otomatis."
 
 #: node_modules/react-components/containers/payments/subscription/AlertPromotion.js:28
 msgctxt "Info"
 msgid "A 33% discount two year billing has been automatically applied."
-msgstr "Um desconto de 33% para o faturamento de dois anos foi aplicado automaticamente."
+msgstr "Diskon 33% untuk tagihan dua tahun telah diterapkan secara otomatis."
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:17
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:18
 msgctxt "Info"
 msgid "no subscription"
-msgstr "sem assinatura"
+msgstr "tidak ada paket berlangganan"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:50
 msgctxt "Info"
 msgid "By using ProtonVPN to browse the web, your Internet connection is encrypted to ensure that your navigation is secure. ProtonVPN has servers located in 30+ countries around the world."
-msgstr "Ao usar o ProtonVPN para navegar na web, sua conexão com a Internet será criptografada para garantir que sua navegação seja segura. O ProtonVPN possui servidores localizados em mais de 30 países em todo o mundo."
+msgstr "Dengan menggunakan ProtonVPN untuk menjelajah web, koneksi internet Anda terenkripsi untuk memastikan aktivitas Anda aman. ProtonVPN memiliki server berlokasi di 30+ negara di seluruh dunia."
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:19
 msgctxt "Info"
 msgid "Thank you for your subscription."
-msgstr "Agradecemos por sua assinatura."
+msgstr "Terima kasih atas langganan Anda."
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:20
 msgctxt "Info"
 msgid "Your new features are now available."
-msgstr "Agora suas novas funcionalidades estão disponíveis."
+msgstr "Fitur baru Anda sekarang tersedia."
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:27
 msgctxt "Info"
 msgid "Thank you"
-msgstr "Obrigado"
+msgstr "Terima kasih"
 
 #: node_modules/react-components/containers/payments/subscription/Upgrading.js:8
 msgctxt "Info"
 msgid "Your account is being upgraded, this may take up to 30 seconds."
-msgstr "Estamos efetuando o upgrade da sua conta, isto pode demorar até 30 segundos."
+msgstr "Akun Anda sedang ditingkatkan, ini perlu waktu hingga 30 detik."
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:104
 msgctxt "Info"
 msgid "Don't miss out on limited time discounts for newcomers!"
-msgstr "Não perca os descontos por tempo limitado para novatos!"
+msgstr "Jangan lewatkan diskon dengan waktu terbatas untuk pendatang baru!"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:152
 #, javascript-format
 msgctxt "Info"
 msgid "Regular price: ${ regularPrice }"
-msgstr "Preço normal: ${ regularPrice }"
+msgstr "Harga biasa: ${ regularPrice }"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/LoadIndicator.js:8
 msgctxt "Info"
 msgid "Server load"
-msgstr "Carga do servidor"
+msgstr "Beban server"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:38
 msgctxt "Info"
 msgid "Server is currently down"
-msgstr "O servidor está indisponível no momento"
+msgstr "Server sedang tidak aktif"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:48
 msgctxt "Info"
@@ -2428,261 +2429,261 @@ msgstr "Tor"
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:205
 msgctxt "Info"
 msgid "Plan upgrade required"
-msgstr "Upgrade de plano requerido"
+msgstr "Memerlukan peningkatan paket berlangganan"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:100
 msgctxt "Info"
 msgid "Use this section to generate config files for third party VPN clients\n"
 "or when setting up a connection on a router. If you use a native ProtonVPN\n"
 "client to connect, you do not need to manually handle these configuration files."
-msgstr "Use esta seção para gerar arquivos de configuração para clientes VPN de terceiros ou para configurar uma conexão em um roteador. Se você usa o cliente ProtonVPN nativo para se conectar, você não precisa gerar arquivos de configuração manualmente."
+msgstr "Gunakan bagian ini untuk menghasilkan berkas konfigurasi bagi klien VPN pihak ke-tiga atau saat menetapkan sambungan atas router. Jika Anda menggunakan klien ProtonVPN asal untuk tersambung, Anda tidak perlu menangani berkas konfigurasi ini secara manual."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:157
 msgctxt "Info"
 msgid "Install a Secure Core configuration file to benefit from an additional protection against VPN endpoint compromise."
-msgstr "Instale um arquivo de configuração do Secure Core para se beneficiar de uma proteção adicional contra o comprometimento do ponto de extremidade da VPN."
+msgstr "Pasang konfigurasi Secure Core untuk mendapat manfaat perlindungan tambahan terhadap ancaman titik akhir VPN."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:162
 msgctxt "Info"
 msgid "ProtonVPN Plus or Visionary required for Secure Core feature."
-msgstr "É necessário o plano ProtonVPN Plus ou Visionário para usar o recurso Secure Core."
+msgstr "Diperlukan paket ProtonVPN Plus atau Visionary untuk fitur Secure Core."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:179
 msgctxt "Info"
 msgid "Install a Country configuration file to connect to a random server in the country of your choice."
-msgstr "Instale um arquivo de configuração do País para se conectar a um servidor aleatório no país de sua escolha."
+msgstr "Pasang berkas konfigurasi negara untuk tersambung ke server secara acak di negara pilihan Anda."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:183
 msgctxt "Info"
 msgid "ProtonVPN Basic, Plus or Visionary required for Country level connection."
-msgstr "O ProtonVPN Basic, Plus ou Visionário é necessário para conexão ao nível do país."
+msgstr "Membutuhkan paket ProtonVPN Basic, Plus atau Visionary untuk sambungan tingkat Negara."
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:199
 msgctxt "Info"
 msgid "Install a Server configuration file to connect to a specific server in the country of your choice."
-msgstr "Instale um arquivo de configuração do servidor para se conectar a um servidor específico no país de sua escolha."
+msgstr "Pasang berkas Konfigurasi server untuk menyambung ke server khusus di negara pilihan Anda."
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:33
 msgctxt "Info"
 msgid "Use the following credentials when connecting to ProtonVPN servers without application. Examples use cases include: Tunnelblick on MacOS, OpenVPN on GNU/Linux.\n"
 "Do not use the OpenVPN / IKEv2 credentials in ProtonVPN applications or on the ProtonVPN dashboard."
-msgstr "Use as seguintes credenciais ao conectar-se aos servidores ProtonVPN sem o aplicativo. Exemplos: Tunnelblick no MacOS, OpenVPN no GNU/Linux.\n"
-"Não use as credenciais OpenVPN / IKEv2 no aplicativo ProtonVPN ou no painel ProtonVPN."
+msgstr "Gunakan kredensial berikut saat menyambung ke server ProtonVPN tanpa aplikasi. Contoh penerapannya termasuk: Tunnelblick di MacOS, OpenVPN di GNU/Linux.\n"
+"Jangan gunakan kredensial OpenVPN / IKEv2 di aplikasi ProtonVPN atau di dasbor ProtonVPN."
 
 #: node_modules/react-components/containers/app/LoaderPage.js:15
 #, javascript-format
 msgctxt "Info"
 msgid "Loading ${ appName }"
-msgstr "Carregando ${ appName }"
+msgstr "Memuat ${ appName }"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:12
 msgctxt "Info"
 msgid "You have no saved payment methods."
-msgstr "Você não tem uma opção de pagamento salva."
+msgstr "Anda tidak memiliki metode pembayaran yang tersimpan."
 
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:43
 msgctxt "Info"
 msgid "Expired"
-msgstr "Expirado"
+msgstr "Kedaluarsa"
 
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:44
 msgctxt "Info"
 msgid "default"
-msgstr "padrão"
+msgstr "standar"
 
 #: node_modules/react-components/containers/login/AbuseModal.js:10
 msgctxt "Info"
 msgid "abuse or fraud"
-msgstr "abuso ou fraude"
+msgstr "penyalahgunaan atau penipuan"
 
 #: node_modules/react-components/containers/login/AbuseModal.js:16
 msgctxt "Info"
 msgid "here"
-msgstr "aqui"
+msgstr "di sini"
 
 #: node_modules/react-components/containers/login/AbuseModal.js:23
 #, javascript-format
 msgctxt "Info"
 msgid "Account disabled due to ${ abuseOrFraudLink }."
-msgstr "Conta desativada devido a ${ abuseOrFraudLink }."
+msgstr "Akun dinonaktifkan karena ${ abuseOrFraudLink }."
 
 #: node_modules/react-components/containers/login/AbuseModal.js:24
 #, javascript-format
 msgctxt "Info"
 msgid "You can find more information and contact us ${ contactLink }."
-msgstr "Você pode encontrar mais informações e/ou entrar em contato conosco ${ contactLink }."
+msgstr "Anda bisa mendapatkan informasi lebih lanjut dan menghubungi kami ${ contactLink }."
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:83
 msgctxt "Info"
 msgid "You can customize and download your invoices for accounting purposes."
-msgstr "Você pode personalizar e baixar suas faturas para fins contábeis."
+msgstr "Anda dapat menyesuaikan dan mengunduh faktur tagihan Anda untuk keperluan akuntansi."
 
 #: node_modules/react-components/containers/support/AttachScreenshot.js:45
 msgctxt "Info"
 msgid "Screenshot(s) attached"
-msgstr "Captura(s) de tela anexada"
+msgstr "Tangkapan layar terlampir"
 
 #: node_modules/react-components/containers/support/BugModal.js:130
 #, javascript-format
 msgctxt "Info"
 msgid "Refreshing the page or ${ link } will automatically resolve most issues."
-msgstr "Atualizando a página ou ${ link } irá resolver automaticamente a maioria dos problemas."
+msgstr "Memuat ulang halaman atau ${ link } akan secara otomatis mengatasi sebagian besar masalah."
 
 #: node_modules/react-components/containers/support/BugModal.js:245
 #, javascript-format
 msgctxt "Info"
 msgid "Contact us at ${ criticalEmail } for critical security issues."
-msgstr "Contate-nos em ${ criticalEmail } para problemas críticos de segurança."
+msgstr "Hubungi kami melalui ${ criticalEmail } untuk permasalahan keamanan yang bersifat kritis."
 
 #: src/app/components/sections/plans/PlanPrice.js:51
 #, javascript-format
 msgctxt "Info"
 msgid "billed as ${ billedPrice }"
-msgstr "faturado como ${ billedPrice }"
+msgstr "ditagih sebagai ${ billedPrice }"
 
 #: src/app/components/sections/plans/PlansSection.js:51
 msgctxt "Info"
 msgid "You already have a free account"
-msgstr "Você já possui uma conta gratuita"
+msgstr "Anda sudah memiliki akun gratis"
 
 #: src/app/components/sections/plans/PlansSection.js:60
 msgctxt "Info"
 msgid "This will downgrade your VPN to a free subscription. ProtonVPN is free software that is possible thanks to donations and paid accounts. Please consider making a donation so we can continue to enable secure internet anywhere for everyone."
-msgstr "Isso irá realizar o downgrade da sua conta para uma gratuita. O ProtonVPN é um software gratuito que é suportado por doações e contas pagas. Por favor, considere fazer uma doação para que possamos continuar a oferecer o nosso serviços gratuitamente."
+msgstr "Hal ini akan menurunkan paket VPN Anda menjadi pengguna gratis. ProtonVPN adalah perangkat lunak gratis yang hadir berkat sumbangan dan akun berbayar. Mohon bersedia menyumbang agar kami dapat terus menghadirkan internet yang aman bagi semua orang."
 
 #: src/app/components/sections/plans/PlansSection.js:148
 msgctxt "Info"
 msgid "Get 20% bundle discount when you purchase ProtonMail and ProtonVPN together."
-msgstr "Obtenha um desconto de 20% na compra conjunta do ProtonMail e ProtonVPN."
+msgstr "Dapatkan paket diskon borongan 20% saat Anda melakukan pembelian ProtonMail dan ProtonVPN secara bersamaan."
 
 #: src/app/components/sections/plans/PlansSection.js:151
 #, javascript-format
 msgctxt "Info"
 msgid "You are currently subscribed to ${ names }."
-msgstr "Você está com o plano de assinatura ${ names }."
+msgstr "Saat ini Anda berlangganan ke paket ${ names }."
 
 #: src/app/containers/SignupContainer/PaymentStep/PaymentStep.js:19
 msgctxt "Info"
 msgid "Your payment details are protected with TLS encryption and Swiss laws"
-msgstr "Suas informações de pagamento estão protegidas com a criptografia TLS e leis de privacidade suíças"
+msgstr "Rincian pembayaran Anda dilindungi oleh enkripsi TLS dan hukum yang berlaku di Swiss"
 
 #: src/app/containers/SignupContainer/LoginPanel.js:9
 msgctxt "Info"
 msgid "If you are a ProtonMail user you can use your Proton account to log in to ProtonVPN."
-msgstr "Se você já é um usuário do ProtonMail, você pode usar sua conta Proton para entrar no ProtonVPN."
+msgstr "Jika Anda pengguna ProtonMail Anda dapat menggunakan akun Proton Anda untuk masuk ke ProtonVPN."
 
 #: src/app/containers/SignupContainer/MobileRedirectionStep/MobileRedirectionStep.js:11
 msgctxt "Info"
 msgid "Your account has been successfully created. Please press the \"Close\" button to be taken back to the app."
-msgstr "Sua conta foi criada com sucesso. Por favor, clique no botão \"Fechar\" para voltar para o programa."
+msgstr "Akun anda telah berhasil dibuat. Silakan tekan tombol \"Tutup\" untuk kembali ke aplikasi."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:19
 #, javascript-format
 msgctxt "Info"
 msgid "Click below to resend the code to ${ destinationText }. If ${ destinationType } is incorrect, please click \"${ editI18n }\"."
-msgstr "Clique abaixo para reenviar o código para ${ destinationText }. Se ${ destinationType } estiver incorreto. Por favor clique em \"${ editI18n }\"."
+msgstr "Klik di bawah untuk mengirim ulang kode ke ${ destinationText }. Jika ${ destinationType } salah, mohon tekan \"${ editI18n }\"."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:38
 #, javascript-format
 msgctxt "Info"
 msgid "Enter the verification code that was sent to ${ destinationText }."
-msgstr "Digite o código de verificação que foi enviado para ${ destinationText }."
+msgstr "Masukkan kode verifikasi yang dikirim ke ${ destinationText }."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/VerificationCodeForm.js:40
 msgctxt "Info"
 msgid "If you don't find the email in your inbox, please check your spam folder."
-msgstr "Se você não encontrar o e-mail na caixa de entrada. Por favor, verifique a pasta de spam."
+msgstr "Jika Anda tidak menemukan surel di kotak masuk, mohon periksa folder spam Anda."
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationStep.js:25
 msgctxt "Info"
 msgid "To prevent misuse, please verify you are human. Please do not close this tab until you have verified your account."
-msgstr "Para evitar abusos, verifique se você é humano. Por favor, não feche esta guia até que você tenha verificado sua conta."
+msgstr "Guna menghindari penyalahgunaan, mohon lakukan verifikasi bahwa Anda manusia. Mohon tidak menutup tab ini sampai akun Anda terverifikasi."
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:140
 #, javascript-format
 msgctxt "Info"
 msgid "By clicking Create account you agree to abide by our ${ termsOfServiceLink } and ${ privacyPolicyLink }."
-msgstr "Ao clicar em criar conta, você concorda com o nosso ${ termsOfServiceLink } e ${ privacyPolicyLink }."
+msgstr "Dengan mengeklik Buat Akun Anda setuju untuk tunduk pada ${ termsOfServiceLink } dan ${ privacyPolicyLink } kami."
 
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:21
 msgctxt "Info"
 msgid "You already have a Proton account."
-msgstr "Você já tem uma conta Proton."
+msgstr "Anda sudah memiliki akun Proton."
 
 #: src/app/containers/SignupContainer/AccountStep/LoginPromptModal.js:23
 #, javascript-format
 msgctxt "Info"
 msgid "Your existing Proton account can be used to access all Proton services. Please login with ${ email }"
-msgstr "Sua conta Proton existente pode ser usada para acessar todos os serviços da Proton. Por favor, inicie a sessão com ${ email }"
+msgstr "Akun Proton yang sudah Anda miliki dapat digunakan untuk mengakses semua layanan Proton. Silakan login menggunakan ${ email }"
 
 #: src/app/containers/SignupContainer/SignupContainer.js:211
 msgctxt "Info"
 msgid "Loading"
-msgstr "Carregando"
+msgstr "Memuat"
 
 #: src/app/containers/SignupContainer/SignupContainer.js:211
 msgctxt "Info"
 msgid "Creating your account"
-msgstr "Criando sua conta"
+msgstr "Membuat akun anda"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:60
 msgctxt "Info"
 msgid "This plan is temporarily disabled"
-msgstr "Este plano está temporariamente desativado"
+msgstr "Paket berlangganan ini diberhentikan sementara"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:69
 msgctxt "Info"
 msgid "You are saving 20% with an annual plan"
-msgstr "Você está economizando 20% com um plano anual"
+msgstr "Anda menghemat 20% dengan berlangganan paket tahunan"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:73
 msgctxt "Info"
 msgid "You are saving 33% with an two-year plan"
-msgstr "Você está economizando 33% com um plano de dois anos"
+msgstr "Anda menghemat 33% dengan berlangganan paket dua tahun"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:81
 #, javascript-format
 msgctxt "Info"
 msgid "All plans support: ${ supportedOS }"
-msgstr "Todos os planos suportam: ${ supportedOS }"
+msgstr "Semua paket berlangganan mendukung: ${ supportedOS }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:83
 msgctxt "Info"
 msgid "30-days money back guarantee"
-msgstr "Garantia de devolução do seu dinheiro por até 30 dias"
+msgstr "Jaminan 30 hari uang kembali"
 
 #: node_modules/react-components/containers/resetPassword/ValidateResetTokenForm.js:24
 msgctxt "Placeholder"
 msgid "Reset code"
-msgstr "Código de redefinição"
+msgstr "Set ulang kode"
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:54
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:85
 msgctxt "Placeholder"
 msgid "Username"
-msgstr "Nome de usuário"
+msgstr "Nama Pengguna"
 
 #: node_modules/react-components/containers/resetPassword/RequestResetTokenForm.js:66
 msgctxt "Placeholder"
 msgid "Recovery email"
-msgstr "E-mail de recuperação"
+msgstr "Alamat Surel untuk Pemulihan"
 
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:27
 msgctxt "Placeholder"
 msgid "Choose a new password"
-msgstr "Digite a nova senha"
+msgstr "Tentukan kata sandi baru"
 
 #: node_modules/react-components/containers/resetPassword/ForgotUsernameForm.js:26
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationEmailInput.js:18
 msgctxt "Placeholder"
 msgid "Email"
-msgstr "E-mail"
+msgstr "Surel"
 
 #: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:34
 #, javascript-format
 msgctxt "Placeholder"
 msgid "Enter the word '${ WORD }' here"
-msgstr "Digite a palavra '${ WORD }' aqui"
+msgstr "Masukkan kata '${ WORD }' di sini"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:362
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:393
@@ -2692,7 +2693,7 @@ msgstr "Digite a palavra '${ WORD }' aqui"
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:106
 msgctxt "Placeholder"
 msgid "Password"
-msgstr "Senha"
+msgstr "Kata Sandi"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:378
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:162
@@ -2700,379 +2701,379 @@ msgstr "Senha"
 #: node_modules/react-components/containers/password/PasswordTotpInputs.js:29
 msgctxt "Placeholder"
 msgid "Two-factor code"
-msgstr "Código de dois fatores"
+msgstr "Kode dua-faktor"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:408
 msgctxt "Placeholder"
 msgid "Confirm"
-msgstr "Confirmar"
+msgstr "Konfirmasi"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:118
 msgctxt "Placeholder"
 msgid "Feedback"
-msgstr "Feedback"
+msgstr "Umpan balik"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:133
 msgctxt "Placeholder"
 msgid "Email address"
-msgstr "Endereço de e-mail"
+msgstr "Alamat Surel"
 
 #: node_modules/react-components/containers/payments/CardNumberInput.js:48
 msgctxt "Placeholder"
 msgid "Card number"
-msgstr "Número do cartão"
+msgstr "Nomor kartu"
 
 #: node_modules/react-components/containers/payments/PaymentSelector.js:30
 msgctxt "Placeholder"
 msgid "Other"
-msgstr "Outro"
+msgstr "Lainnya"
 
 #: node_modules/react-components/containers/payments/Card.js:22
 msgctxt "Placeholder"
 msgid "Full name"
-msgstr "Nome completo"
+msgstr "Nama lengkap"
 
 #: node_modules/react-components/containers/payments/Card.js:79
 msgctxt "Placeholder"
 msgid "ZIP"
-msgstr "CEP"
+msgstr "ZIP"
 
 #: node_modules/react-components/containers/payments/Card.js:79
 msgctxt "Placeholder"
 msgid "Postal code"
-msgstr "CEP"
+msgstr "Kode Pos"
 
 #: node_modules/react-components/containers/payments/subscription/CouponForm.js:20
 msgctxt "Placeholder"
 msgid "Coupon"
-msgstr "Cupom"
+msgstr "Kupon"
 
 #: node_modules/react-components/containers/login/UnlockForm.js:20
 msgctxt "Placeholder"
 msgid "Mailbox password"
-msgstr "Senha da caixa de correio"
+msgstr "Kata sandi kotak pesan"
 
 #: node_modules/react-components/containers/login/PasswordForm.js:22
 msgctxt "Placeholder"
 msgid "Username or email"
-msgstr "Nome de usuário ou e-mail"
+msgstr "Nama pengguna atau surel"
 
 #: node_modules/react-components/containers/support/BugModal.js:141
 msgctxt "Placeholder"
 msgid "Proton username"
-msgstr "Nome de usuário Proton"
+msgstr "Nama Pengguna Proton"
 
 #: node_modules/react-components/containers/support/BugModal.js:153
 msgctxt "Placeholder"
 msgid "A way to contact you"
-msgstr "Uma maneira de entrar em contato com você"
+msgstr "Cara menghubungi Anda"
 
 #: node_modules/react-components/containers/support/BugModal.js:177
 msgctxt "Placeholder"
 msgid "Please describe the problem and include any error messages"
-msgstr "Por favor, descreva o problema e inclua quaisquer mensagens de erro"
+msgstr "Mohon uraikan masalah dan sertakan pesan galat apapun"
 
 #: node_modules/react-components/containers/support/BugModal.js:206
 msgctxt "Placeholder"
 msgid "OS name"
-msgstr "Nome do sistema operacional"
+msgstr "Nama Sistem Operasi"
 
 #: node_modules/react-components/containers/support/BugModal.js:217
 msgctxt "Placeholder"
 msgid "OS version"
-msgstr "Versão do sistema operacional"
+msgstr "Versi Sistem Operasi"
 
 #: node_modules/react-components/containers/support/BugModal.js:228
 msgctxt "Placeholder"
 msgid "Browser name"
-msgstr "Nome do navegador"
+msgstr "Nama Peramban"
 
 #: node_modules/react-components/containers/support/BugModal.js:239
 msgctxt "Placeholder"
 msgid "Browser version"
-msgstr "Versão do navegador"
+msgstr "Versi Peramban"
 
 #: src/app/components/sections/redeem/RedeemCouponForm.js:35
 msgctxt "Placeholder"
 msgid "Enter coupon code"
-msgstr "Insira o código do cupom"
+msgstr "Masukkan kode kupon"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:116
 msgctxt "Placeholder"
 msgid "Confirm password"
-msgstr "Confirmar senha"
+msgstr "Konfirmasi kata sandi"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:136
 msgctxt "Placeholder"
 msgid "user@domain.com"
-msgstr "nome@dominio.com"
+msgstr "pengguna@domain.com"
 
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:35
 msgctxt "Password"
 msgid "Confirm new password"
-msgstr "Confirmar nova senha"
+msgstr "Konfirmasi sandi baru"
 
 #: node_modules/react-components/containers/account/ChangePasswordModal.js:114
 msgctxt "Success"
 msgid "Password updated"
-msgstr "Senha atualizada"
+msgstr "Sandi telah diperbarui"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:77
 msgctxt "Success"
 msgid "Account deleted. Logging out..."
-msgstr "Conta excluída. Saindo..."
+msgstr "Akun dihapus. Keluar akun..."
 
 #: node_modules/react-components/containers/notification/EmailModal.js:61
 msgctxt "Success"
 msgid "Email updated"
-msgstr "E-mail atualizado"
+msgstr "Surel berhasil diperbarui"
 
 #: node_modules/react-components/containers/payments/DonateModal.js:33
 msgctxt "Success"
 msgid "Your support is essential to keeping Proton running. Thank you for supporting internet privacy!"
-msgstr "Seu suporte é essencial para manter a Proton em execução. Obrigado por apoiar a privacidade da internet!"
+msgstr "Dukungan Anda memastikan Proton terus ada. Terima kasih sudah mendukung privasi Internet!"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:51
 #: node_modules/react-components/containers/payments/EditCardModal.js:41
 msgctxt "Success"
 msgid "Payment method updated"
-msgstr "Método de pagamento atualizado"
+msgstr "Metode pembayaran berhasil diperbarui"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:58
 msgctxt "Success"
 msgid "Credits added"
-msgstr "Créditos adicionados"
+msgstr "Kredit ditambahkan"
 
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:39
 msgctxt "Success"
 msgid "Gift code applied"
-msgstr "Código de presente aplicado"
+msgstr "Kode hadiah berhasil digunakan"
 
 #: node_modules/react-components/containers/payments/PayPalModal.js:19
 msgctxt "Success"
 msgid "Payment method added"
-msgstr "Método de pagamento adicionado"
+msgstr "Metode pembayaran berhasil ditambahkan"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:41
 msgctxt "Success"
 msgid "Payment method deleted"
-msgstr "Método de pagamento excluído"
+msgstr "Metode pembayaran berhasil dihapus"
 
 #: node_modules/react-components/containers/login/ForgotUsernameContainer.js:16
 msgctxt "Success"
 msgid "If you entered a valid notification email we will send you an email with your usernames in the next minute."
-msgstr "Se você digitou um endereço de e-mail válido, enviaremos um e-mail com os seu(s) nome(s) de usuário(s) no próximo minuto."
+msgstr "Apabila surel pemberitahuan yang Anda masukkan terdaftar, nama pengguna Anda akan dikirimkan via surel."
 
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:29
 msgctxt "Success"
 msgid "Invoice customized"
-msgstr "Fatura personalizada"
+msgstr "Tagihan berhasil disesuaikan"
 
 #: node_modules/react-components/containers/support/BugModal.js:111
 msgctxt "Success"
 msgid "Bug reported"
-msgstr "Relatório de erros enviado"
+msgstr "Bug berhasil dilaporkan"
 
 #: src/app/components/sections/plans/PlansSection.js:79
 msgctxt "Success"
 msgid "You have successfully unsubscribed"
-msgstr "Sua assinatura foi cancelada com sucesso"
+msgstr "Anda telah berhenti berlangganan"
 
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:34
 msgctxt "Message"
 msgid "Are you sure you want to disable two-factor authentication?"
-msgstr "Você tem certeza de que deseja desativar a autenticação de dois fatores?"
+msgstr "Anda yakin ingin mematikan pemeriksaan dua jenjang?"
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:26
 msgctxt "Label for news"
 msgid "Major announcements (2-3 per year)"
-msgstr "Anúncios principais (2-3 por ano)"
+msgstr "Pengumuman penting (2-3 per tahun)"
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:27
 msgctxt "Label for news"
 msgid "Major features (3-4 per year)"
-msgstr "Grandes adições de recursos (3-4 por ano)"
+msgstr "Fitur penting (3-4 per tahun)"
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:28
 msgctxt "Label for news"
 msgid "Proton for business (4-5 per year)"
-msgstr "Proton corporativo (4-5 por ano)"
+msgstr "Proton untuk bisnis (4-5 per tahun)"
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:29
 msgctxt "Label for news"
 msgid "Proton newsletter (5-6 per year)"
-msgstr "Boletim informativo Proton (5-6 por ano)"
+msgstr "Nawala Proton (5-6 per tahun)"
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:30
 msgctxt "Label for news"
 msgid "Proton Beta (10-12 per year)"
-msgstr "Próton Beta (~ 10-12 por ano)"
+msgstr "Proton Beta (10-12 per tahun)"
 
 #: node_modules/react-components/containers/notification/EmailModal.js:37
 msgctxt "Warning"
 msgid "By deleting this address, you will no longer be able to recover your account."
-msgstr "Ao excluir este endereço, você não poderá mais recuperar sua conta."
+msgstr "Apabila dihapus, Anda tidak bisa memulihkan akun lagi."
 
 #: node_modules/react-components/containers/notification/EmailModal.js:41
 msgctxt "Warning"
 msgid "By deleting this address, you will no longer be able to receive daily email notifications."
-msgstr "Ao excluir este endereço, você não poderá mais receber notificações diárias por e-mail."
+msgstr "Apabila dihapus, Anda berhenti menerima surel pemberitahuan harian."
 
 #: node_modules/react-components/containers/notification/EmailModal.js:45
 msgctxt "Warning"
 msgid "By deleting this address, you will no longer be able to recover your account or receive daily email notifications."
-msgstr "Ao excluir este endereço, você não poderá mais recuperar sua conta ou receber notificações diárias por e-mail."
+msgstr "Apabila dihapus, Anda tidak bisa memulihkan akun Anda dan berhenti menerima email pemberitahuan harian."
 
 #: node_modules/react-components/containers/notification/EmailModal.js:49
 msgctxt "Warning"
 msgid "Are you sure you want to delete the address?"
-msgstr "Você tem certeza que deseja excluir este endereço?"
+msgstr "Anda yakin ingin menghapus alamat ini?"
 
 #: node_modules/react-components/containers/support/BugModal.js:131
 msgctxt "Warning"
 msgid "Bug reports are not end-to-end encrypted, please do not send any sensitive information."
-msgstr "Os relatórios de erros não são criptografados de ponta a ponta. Por favor, não envie nenhuma informação sensível."
+msgstr "Laporan bug tidak terenkripsi total. Jangan masukkan informasi sensitif."
 
 #: node_modules/react-components/containers/payments/Cash.js:13
 #, javascript-format
 msgctxt "Info for cash payment method"
 msgid "To pay via Cash, please email us at ${ email } for instructions."
-msgstr "Para pagar com dinheiro, favor nos enviar um e-mail para ${ email } para obter instruções."
+msgstr "Bila ingin bayar tunai, hubungi kami via ${ email } untuk keterangan lebih lanjut."
 
 #: node_modules/react-components/containers/payments/CycleDiscountBadge.js:15
 msgctxt "Tooltip"
 msgid "Discount applied for annual billing cycle"
-msgstr "Desconto aplicado para o ciclo de faturamento anual"
+msgstr "Diskon diaktifkan untuk penagihan tahunan"
 
 #: node_modules/react-components/containers/payments/CycleDiscountBadge.js:16
 msgctxt "Tooltip"
 msgid "Discount applied for two-year billing cycle"
-msgstr "Desconto aplicado para o ciclo de faturamento de dois anos"
+msgstr "Diskon diaktifkan untuk penagihan dwitahunan"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:83
 msgctxt "Tooltip"
 msgid "Download and stream faster with a faster VPN connection."
-msgstr "Faça o download e transmita mais rápido com uma conexão VPN mais rápida."
+msgstr "Unduh & nonton lebih lancar dengan koneksi VPN yang lebih kencang."
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:92
 msgctxt "Tooltip"
 msgid "More connections allows more devices to use ProtonVPN at the same time."
-msgstr "Mais conexões permitem que mais dispositivos utilizem o ProtonVPN ao mesmo tempo."
+msgstr "Semakin banyak koneksi semakin banyak pengguna ProtonVPN secara bersamaan."
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:162
 msgctxt "Tooltip"
 msgid "Easily route your traffic through the Tor anonymity network."
-msgstr "Roteie facilmente o tráfego da sua internet através da rede de anonimato Tor."
+msgstr "Alihkan koneksi Anda ke jaringan anonim Tor."
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:177
 msgctxt "Tooltip"
 msgid "Additional protection by routing your traffic through multiple locations before leaving the ProtonVPN network."
-msgstr "Proteção adicional ao rotear seu tráfego por vários locais antes de sair da rede do ProtonVPN."
+msgstr "Perlindungan ekstra dengan mengalihkan koneksi Anda lewat banyak server sebelum keluar dari jaringan ProtonVPN."
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:212
 msgctxt "Tooltip"
 msgid "Order additional connections to provide ProtonVPN to other users with your organization"
-msgstr "Adquira conexões adicionais para poder fornecer o ProtonVPN a outros usuários com sua organização"
+msgstr "Pesan koneksi tambahan agar pengguna lain di perusahaan Anda bisa mengakses ProtonVPN"
 
 #: node_modules/react-components/containers/payments/subscription/CustomProfessionalSection.js:44
 msgctxt "Tooltip"
 msgid "For each additional user, 5GB of storage and 5 email addresses are added to your subscription."
-msgstr "Para cada usuário adicional, 5GB de armazenamento e 5 endereços de e-mail são adicionados na sua assinatura."
+msgstr "Kapasitas 5GB dan 5 alamat surel ditambahkan ke paket Anda per pengguna tambahan."
 
 #: node_modules/react-components/containers/payments/subscription/CustomProfessionalSection.js:67
 msgctxt "Tooltip"
 msgid "Allows you to host emails for your own domain(s) at ProtonMail, e.g. thomas.anderson@example.com"
-msgstr "Permite que você hospede e-mails do seu(s) próprio(s) domínio(s) no ProtonMail, por exemplo, alex.silva@exemplo.com"
+msgstr "Anda bisa membuat surel dengan domain sendiri di ProtonMail, misalnya rizki.samudra@example.com"
 
 #: src/app/components/sections/plans/PlansTable.js:49
 msgctxt "Tooltip"
 msgid "Save 20% when billed annually"
-msgstr "Economize 20% no plano anual"
+msgstr "Hemat 20% apabila ditagih per tahun"
 
 #: src/app/components/sections/plans/PlansTable.js:169
 msgctxt "Tooltip"
 msgid "Provides additional protection against VPN server compromise by routing connections through our Secure Core network"
-msgstr "Fornece uma proteção adicional contra o comprometimento do servidor VPN ao rotear conexões através da nossa rede Secure Core"
+msgstr "Menyediakan perlindungan ekstra dari kebocoran server VPN dengan mengalihkan koneksi via jaringan Secure Core kami"
 
 #: src/app/components/sections/plans/PlansTable.js:311
 msgctxt "Tooltip"
 msgid "Includes ProtonMail encrypted email with all features"
-msgstr "Inclui o e-mail criptografado do ProtonMail com todos os recursos"
+msgstr "Termasuk surel terenkripsi ProtonMail dan segala fiturnya"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:72
 msgctxt "Tooltip"
 msgid "Username which is used for all Proton services. This can also be used later to create a secure ProtonMail account."
-msgstr "Nome de usuário que é usado para todos os serviços da Proton. Isto também pode ser usado mais tarde para criar uma conta segura do ProtonMail."
+msgstr "Nama pengguna untuk semua produk Proton. Ini bisa dipakai untuk membuat akun ProtonMail yang aman."
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:94
 msgctxt "Tooltip"
 msgid "If you forget your password, you will no longer have access to your account or your data. Please save it someplace safe."
-msgstr "Se você esquecer sua senha, você não terá mais acesso à sua conta ou aos seus dados. Por favor, salve a senha em um lugar seguro."
+msgstr "Apabila lupa sandi, Anda akan kehilangan akses akun atau data. Catat dan simpan sandi Anda di tempat yang aman."
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:125
 msgctxt "Tooltip"
 msgid "Your email is not shared with third parties and is only used for recovery and account-related questions or communication."
-msgstr "Seu e-mail não é compartilhado com terceiros e só será usado para recuperação, perguntas e a comunicação relacionadas à conta."
+msgstr "Surel Anda tidak dijual ke pihak ketiga. Fungsinya hanya untuk pemulihan dan masalah akun Anda atau komunikasi."
 
 #: src/app/containers/SignupContainer/plans.js:81
 msgctxt "Tooltip"
 msgid "Support for file sharing protocols such as Bittorrent."
-msgstr "Suporte para protocolos de compartilhamento de arquivos, como BitTorrent."
+msgstr "Dukungan untuk protokol berbagi berkas seperti Bittorrent."
 
 #: src/app/containers/SignupContainer/plans.js:104
 #: src/app/containers/SignupContainer/plans.js:141
 msgctxt "Tooltip"
 msgid "Access content (Netflix, Amazon Prime, Wikipedia, Facebook, Youtube, etc) no matter where you are."
-msgstr "Acesso ao conteúdo (Netflix, Amazon Prime, Wikipedia, Facebook, YouTube, etc) não importa onde você esteja."
+msgstr "Akses konten (Netflix, Amazon Prime, Wikipedia, Facebook, Youtube, dll) di mana saja."
 
 #: node_modules/react-components/containers/payments/CycleSelector.js:14
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:42
 msgctxt "Billing cycle option"
 msgid "Monthly"
-msgstr "Mensalmente"
+msgstr "Bulanan"
 
 #: node_modules/react-components/containers/payments/CycleSelector.js:15
 msgctxt "Billing cycle option"
 msgid "Annually"
-msgstr "Anualmente"
+msgstr "Tahunan"
 
 #: node_modules/react-components/containers/payments/CycleSelector.js:23
 msgctxt "Billing cycle option"
 msgid "Two-year"
-msgstr "Dois anos"
+msgstr "Dwitahunan"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:43
 msgctxt "Billing cycle option"
 msgid "Annually SAVE 20%"
-msgstr "Anualmente ECONOMIZE 20%"
+msgstr "Tahunan HEMAT 20%"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:29
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:29
 msgctxt "Billing cycle"
 msgid "Monthly"
-msgstr "Mensalmente"
+msgstr "Bulanan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:30
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:30
 msgctxt "Billing cycle"
 msgid "Yearly"
-msgstr "Anualmemnte"
+msgstr "Tahunan"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:31
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:31
 msgctxt "Billing cycle"
 msgid "2-year"
-msgstr "2 anos"
+msgstr "Dwitahunan"
 
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:12
 msgctxt "Discount with coupon code"
 msgid "20% discount applied to your subscription"
-msgstr "20% de desconto aplicado à sua assinatura"
+msgstr "Diskon 20% ditambahkan ke paket Anda"
 
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:22
 msgctxt "Discount with coupon code"
 msgid "Black Friday 2019 newcomer discount has been applied"
-msgstr "Foi aplicado um desconto da Black Friday 2019 para novatos"
+msgstr "Diskon Black Friday 2019 untuk pendatang baru telah diterapkan"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:27
 msgctxt "Monetary unit"
@@ -3082,17 +3083,17 @@ msgstr "Euro"
 #: node_modules/react-components/containers/payments/CreditsModal.js:28
 msgctxt "Monetary unit"
 msgid "Swiss franc"
-msgstr "Franco suíço"
+msgstr "Franc Swiss"
 
 #: node_modules/react-components/containers/payments/CreditsModal.js:29
 msgctxt "Monetary unit"
 msgid "Dollar"
-msgstr "Dólar"
+msgstr "Dolar"
 
 #: node_modules/react-components/containers/payments/Card.js:57
 msgctxt "Placeholder, make it short"
 msgid "Security code"
-msgstr "Código de segurança"
+msgstr "Kode keamanan"
 
 #: node_modules/react-components/containers/payments/subscription/PlanPrice.js:10
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:23
@@ -3100,77 +3101,72 @@ msgstr "Código de segurança"
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:48
 msgctxt "Suffix"
 msgid "/ month"
-msgstr "/mês"
+msgstr "/ bulan"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:70
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:75
 msgctxt "Suffix"
 msgid "/mo"
-msgstr "/mês"
+msgstr "/bln"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:18
 msgctxt "Suffix"
 msgid "monthly"
-msgstr "mensalmente"
+msgstr "bulanan"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:25
 msgctxt "Suffix"
 msgid "/2-year"
-msgstr "/2 anos"
+msgstr "/2 tahun"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:25
 msgctxt "Suffix"
 msgid "/year"
-msgstr "/ano"
+msgstr "/tahun"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:124
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:199
 msgctxt "Plan"
 msgid "Free"
-msgstr "Gratuito"
+msgstr "Free"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:13
 msgctxt "Option"
 msgid "included"
-msgstr "incluído"
+msgstr "termasuk"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:15
 #, javascript-format
 msgctxt "Option"
 msgid "${ value } address"
 msgid_plural "${ value } addresses"
-msgstr[0] "${ value } endereço"
-msgstr[1] "${ value } endereços"
+msgstr[0] "${ value } alamat"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:18
 msgctxt "Option"
 msgid "${ value } GB storage"
 msgid_plural "${ value } GB storage"
-msgstr[0] "${ value } GB de armazenamento"
-msgstr[1] "${ value } GB de armazenamento"
+msgstr[0] "${ value } GB kapasitas penyimpanan"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:21
 #, javascript-format
 msgctxt "Option"
 msgid "${ value } custom domain"
 msgid_plural "${ value } custom domains"
-msgstr[0] "${ value } domínio personalizado"
-msgstr[1] "${ value } domínios personalizados"
+msgstr[0] "${ value } domain kustom"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:24
 msgctxt "Option"
 msgid "${ value } user"
 msgid_plural "${ value } users"
-msgstr[0] "${ value } usuário"
-msgstr[1] "${ value } usuários"
+msgstr[0] "${ value } pengguna"
 
 #: node_modules/react-components/containers/payments/subscription/helpers.js:27
 #, javascript-format
 msgctxt "Option"
 msgid "${ value } VPN connection"
 msgid_plural "${ value } VPN connections"
-msgstr[0] "${ value } conexão VPN"
-msgstr[1] "${ value } conexões VPN"
+msgstr[0] "${ value } koneksi VPN"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:113
 msgctxt "Option"
@@ -3200,7 +3196,7 @@ msgstr "iOS"
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:118
 msgctxt "Option"
 msgid "Router"
-msgstr "Roteador"
+msgstr "Perute"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:130
 msgctxt "Option"
@@ -3215,7 +3211,7 @@ msgstr "TCP"
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:42
 msgctxt "Option"
 msgid "Email address"
-msgstr "Endereço de e-mail"
+msgstr "Alamat surel"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationMethodForm/VerificationMethodForm.js:48
 msgctxt "Option"
@@ -3228,58 +3224,58 @@ msgstr "SMS"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:77
 msgctxt "Price"
 msgid "Free"
-msgstr "Gratuito"
+msgstr "Gratis"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:67
 msgctxt "Header"
 msgid "Pricing"
-msgstr "Preços"
+msgstr "Harga"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:82
 #: src/app/components/sections/plans/PlansTable.js:121
 msgctxt "Header"
 msgid "Speed"
-msgstr "Velocidade"
+msgstr "Kecepatan"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:90
 #: src/app/components/sections/plans/PlansTable.js:102
 msgctxt "Header"
 msgid "Simultaneous connections"
-msgstr "Conexões simultâneas"
+msgstr "Koneksi bersamaan"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:101
 #: src/app/components/sections/plans/PlansTable.js:210
 msgctxt "Header"
 msgid "Advanced encryption"
-msgstr "Criptografia avançada"
+msgstr "Enkripsi canggih"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:113
 #: src/app/components/sections/plans/PlansTable.js:250
 msgctxt "Header"
 msgid "No logs policy"
-msgstr "Nenhuma política de registros"
+msgstr "Kebijakan tanpa log"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:125
 #: src/app/components/sections/plans/PlansTable.js:270
 msgctxt "Header"
 msgid "No data limits"
-msgstr "Sem limites de dados"
+msgstr "Data tidak terbatas"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:137
 msgctxt "Header"
 msgid "P2P support"
-msgstr "Suporte P2P"
+msgstr "Dukungan P2P"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:148
 msgctxt "Header"
 msgid "Secure streaming"
-msgstr "Streaming seguro"
+msgstr "Pemutaran video terenkripsi"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:159
 #: src/app/components/sections/plans/PlansTable.js:149
 msgctxt "Header"
 msgid "Tor over VPN"
-msgstr "Tor com VPN"
+msgstr "Tor via VPN"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:174
 #: src/app/components/sections/plans/PlansTable.js:167
@@ -3290,68 +3286,68 @@ msgstr "Secure core"
 #: node_modules/react-components/containers/heading/SupportDropdownButton.js:6
 msgctxt "Header"
 msgid "Support"
-msgstr "Suporte"
+msgstr "Bantuan"
 
 #: src/app/components/sections/plans/PlansTable.js:112
 msgctxt "Header"
 msgid "Countries"
-msgstr "Países"
+msgstr "Negara"
 
 #: src/app/components/sections/plans/PlansTable.js:131
 msgctxt "Header"
 msgid "P2P support (BitTorrent, etc.)"
-msgstr "Suporte P2P (BitTorrent, etc.)"
+msgstr "Dukungan P2P (BitTorrent, dll.)"
 
 #: src/app/components/sections/plans/PlansTable.js:190
 msgctxt "Header"
 msgid "Apps for Android / Linux / iOS / Windows"
-msgstr "Applicativos para Android / Linux / iOS / Windows"
+msgstr "Aplikasi untuk Android / Linux / iOS / Windows"
 
 #: src/app/components/sections/plans/PlansTable.js:230
 msgctxt "Header"
 msgid "Kill Switch / Always-on"
-msgstr "Kill Switch / Sempre ativo"
+msgstr "Kill Switch / Always-on"
 
 #: src/app/components/sections/plans/PlansTable.js:290
 msgctxt "Header"
 msgid "Stream geo-blocked content"
-msgstr "Streaming de conteúdo bloqueado geologicamente"
+msgstr "Tonton video yang diblokir per negara"
 
 #: src/app/components/sections/plans/PlansTable.js:331
 msgctxt "Header"
 msgid "30-day money-back guarantee"
-msgstr "Garantia de devolução do seu dinheiro por até 30 dias"
+msgstr "Jaminan uang kembali 30 hari"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:85
 msgctxt "VPN speed"
 msgid "High"
-msgstr "Alta"
+msgstr "Tinggi"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:86
 msgctxt "VPN speed"
 msgid "Highest"
-msgstr "Máxima"
+msgstr "Sangat tinggi"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:144
 #, javascript-format
 msgctxt "Badge plan"
 msgid "${ percentage }% off"
-msgstr "${ percentage }% de desconto"
+msgstr "${ percentage }% potongan"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:155
 msgctxt "Text"
 msgid "Save"
-msgstr "Economize"
+msgstr "Hemat"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
 msgctxt "TableHeader"
 msgid "Name"
-msgstr "Nome"
+msgstr "Nama"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
 msgctxt "TableHeader"
 msgid "Country"
-msgstr "País"
+msgstr "Negara"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:83
 msgctxt "TableHeader"
@@ -3361,49 +3357,49 @@ msgstr "Status"
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:84
 msgctxt "TableHeader"
 msgid "Action"
-msgstr "Ação"
+msgstr "Tindakan"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:141
 msgctxt "Tab"
 msgid "Secure Core configs"
-msgstr "Configurações Secure core"
+msgstr "Konfigurasi Secure Core"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:145
 msgctxt "Tab"
 msgid "Country configs"
-msgstr "Configurações do país"
+msgstr "Konfigurasi negara"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:149
 msgctxt "Tab"
 msgid "Server configs"
-msgstr "Configurações do servidor"
+msgstr "Konfigurasi server"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/Country.js:28
 #, javascript-format
 msgctxt "CountryInfo"
 msgid "(via ${ exitCountryName })"
-msgstr "(por ${ exitCountryName })"
+msgstr "(via ${ exitCountryName })"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:39
 msgctxt "Notification"
 msgid "OpenVPN / IKEv2 credentials updated"
-msgstr "Credenciais OpenVPN / IKEv2 atualizadas"
+msgstr "Identitas OpenVPN / IKEv2 berhasil diperbarui"
 
 #: src/app/containers/SignupContainer/useSignup.js:157
 msgctxt "Notification"
 msgid "Coupons are temporarily disabled"
-msgstr "Os cupons estão temporariamente desativados"
+msgstr "Kupon ditangguhkan sementara"
 
 #: src/app/containers/SignupContainer/useSignup.js:173
 msgctxt "Notification"
 msgid "Invites are temporarily disabled"
-msgstr "Os convites estão temporariamente desativados"
+msgstr "Undangan ditangguhkan sementara"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationForm.js:17
 #, javascript-format
 msgctxt "Notification"
 msgid "Verification code successfully sent to ${ destination }"
-msgstr "O código de verificação enviado com sucesso para ${ destination }"
+msgstr "Kode verifikasi berhasil dikirim ke ${ destination }"
 
 #: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:12
 msgctxt "VPNClient"
@@ -3433,7 +3429,7 @@ msgstr "GNU/Linux"
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:30
 msgctxt "Title for payment methods table"
 msgid "Method"
-msgstr "Método"
+msgstr "Metode"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:31
 msgctxt "Title for payment methods table"
@@ -3443,339 +3439,339 @@ msgstr "Status"
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsTable.js:32
 msgctxt "Title for payment methods table"
 msgid "Actions"
-msgstr "Ações"
+msgstr "Tindakan"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodState.js:10
 msgctxt "Label on payment method"
 msgid "Expired"
-msgstr "Expirado"
+msgstr "Kedaluwarsa"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodState.js:17
 msgctxt "Label on payment method"
 msgid "Default"
-msgstr "Padrão"
+msgstr "Bawaan"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:68
 msgctxt "Confirmation title"
 msgid "Delete payment method"
-msgstr "Excluir método de pagamento"
+msgstr "Hapus metode pembayaran"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:69
 msgctxt "Confirmation message to delete payment method"
 msgid "Are you sure you want to delete this payment method?"
-msgstr "Você tem certeza de que deseja excluir esse método de pagamento?"
+msgstr "Anda yakin menghapus metode pembayaran ini?"
 
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:34
 msgctxt "Payment method option"
 msgid "Pay with credit/debit card"
-msgstr "Pagar com cartão de crédito/débito"
+msgstr "Bayar dengan kartu kredit/debit"
 
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:56
 msgctxt "Payment method option"
 msgid "Pay with PayPal"
-msgstr "Pagar com PayPal"
+msgstr "Bayar dengan PayPal"
 
 #: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:63
 msgctxt "Payment method option"
 msgid "Pay with Bitcoin"
-msgstr "Pagar com Bitcoin"
+msgstr "Bayar dengan Bitcoin"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodDetails.js:21
 msgctxt "Label for credit card"
 msgid "Expiration"
-msgstr "Vencimento"
+msgstr "Kedaluwarsa"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:58
 msgctxt "Info for payment methods"
 msgid "If you wish to pay by credit card, you can add your card below. Learn about other payment options."
-msgstr "Se você quiser pagar com cartão de crédito, você deve adicionar seu cartão abaixo. Saiba mais sobre outras opções de pagamento."
+msgstr "Bila ingin bayar dengan kartu kredit, masukkan kartu Anda di bawah. Lihat metode pembayaran lainnya."
 
 #: node_modules/react-components/containers/login/FooterDetails.js:10
 msgctxt "Footer"
 msgid "Made globally, hosted in Switzerland."
-msgstr "Feito globalmente, hospedado na Suíça."
+msgstr "Dari Swiss melalui mancanegara."
 
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:12
 msgctxt "Title for PDF file"
 msgid "ProtonMail invoice"
-msgstr "Fatura do ProtonMail"
+msgstr "Tagihan ProtonMail"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:7
 msgctxt "Invoice type display as badge"
 msgid "Other"
-msgstr "Outro"
+msgstr "Lain-lain"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:8
 msgctxt "Invoice type display as badge"
 msgid "Subscription"
-msgstr "Assinatura"
+msgstr "Langganan"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:9
 msgctxt "Invoice type display as badge"
 msgid "Cancellation"
-msgstr "Cancelamento"
+msgstr "Pembatalan"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:10
 msgctxt "Invoice type display as badge"
 msgid "Credit"
-msgstr "Crédito"
+msgstr "Kredit"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:11
 msgctxt "Invoice type display as badge"
 msgid "Donation"
-msgstr "Doação"
+msgstr "Sumbangan"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:12
 msgctxt "Invoice type display as badge"
 msgid "Chargeback"
-msgstr "Estorno"
+msgstr "Tolak bayar"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:13
 msgctxt "Invoice type display as badge"
 msgid "Renewal"
-msgstr "Renovação"
+msgstr "Pembaruan"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:14
 msgctxt "Invoice type display as badge"
 msgid "Refund"
-msgstr "Reembolso"
+msgstr "Pengembalian dana"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:15
 msgctxt "Invoice type display as badge"
 msgid "Modification"
-msgstr "Modificação"
+msgstr "Penyesuaian"
 
 #: node_modules/react-components/containers/invoices/InvoiceType.js:16
 msgctxt "Invoice type display as badge"
 msgid "Addition"
-msgstr "Adição"
+msgstr "Penambahan"
 
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:43
 msgctxt "Info message for custom invoice modal"
 msgid "Add your name (or company name) and address to your invoices."
-msgstr "Adicione seu nome (ou nome da empresa) e endereço para suas faturas."
+msgstr "Masukkan nama dan alamat Anda (atau perusahaan Anda) ke tagihan."
 
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:52
 msgctxt "Placeholder for custom invoice text"
 msgid "Add your name (or company name) and address to your invoices"
-msgstr "Adicione seu nome (ou nome da empresa) e endereço para suas faturas"
+msgstr "Masukkan nama dan alamat Anda (atau perusahaan Anda) ke tagihan"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:16
 msgctxt "Invoice state display as badge"
 msgid "Unpaid"
-msgstr "Não pago"
+msgstr "Belum lunas"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:17
 msgctxt "Invoice state display as badge"
 msgid "Paid"
-msgstr "Pago"
+msgstr "Lunas"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:18
 msgctxt "Invoice state display as badge"
 msgid "Void"
-msgstr "Vazio"
+msgstr "Batal"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:19
 msgctxt "Invoice state display as badge"
 msgid "Billed"
-msgstr "Faturado"
+msgstr "Tertagih"
 
 #: node_modules/react-components/containers/invoices/InvoiceState.js:20
 msgctxt "Invoice state display as badge"
 msgid "Writeoff"
-msgstr "Anular"
+msgstr "Hapus buku"
 
 #: node_modules/react-components/containers/support/AttachScreenshot.js:23
 msgctxt "Error notification in the bug report modal when the user upload file"
 msgid "No image selected"
-msgstr "Nenhuma imagem selecionada"
+msgstr "Gambar tidak dipilih"
 
 #: node_modules/react-components/containers/support/BugModal.js:35
 #: node_modules/react-components/containers/support/BugModal.js:49
 msgctxt "Bug category"
 msgid "Login problem"
-msgstr "Problema de início de sessão"
+msgstr "Masalah masuk log"
 
 #: node_modules/react-components/containers/support/BugModal.js:36
 msgctxt "Bug category"
 msgid "Sign up problem"
-msgstr "Problema de registro"
+msgstr "Masalah pendaftaran"
 
 #: node_modules/react-components/containers/support/BugModal.js:37
 msgctxt "Bug category"
 msgid "Bridge problem"
-msgstr "Problema de bridge"
+msgstr "Masalah bridge"
 
 #: node_modules/react-components/containers/support/BugModal.js:38
 msgctxt "Bug category"
 msgid "Import / export problem"
-msgstr "Problema ao importar / exportar"
+msgstr "Masalah impor / ekspor"
 
 #: node_modules/react-components/containers/support/BugModal.js:39
 msgctxt "Bug category"
 msgid "Custom domains problem"
-msgstr "Problema com domínios personalizados"
+msgstr "Masalah domain bebas"
 
 #: node_modules/react-components/containers/support/BugModal.js:40
 #: node_modules/react-components/containers/support/BugModal.js:51
 msgctxt "Bug category"
 msgid "Payments problem"
-msgstr "Problema com pagamento"
+msgstr "Masalah pembayaran"
 
 #: node_modules/react-components/containers/support/BugModal.js:41
 #: node_modules/react-components/containers/support/BugModal.js:55
 msgctxt "Bug category"
 msgid "Connection problem"
-msgstr "Problema de conexão"
+msgstr "Masalah koneksi"
 
 #: node_modules/react-components/containers/support/BugModal.js:42
 msgctxt "Bug category"
 msgid "Slow speed problem"
-msgstr "Problema com lentidão"
+msgstr "Masalah kecepatan lambat"
 
 #: node_modules/react-components/containers/support/BugModal.js:43
 msgctxt "Bug category"
 msgid "VPN problem"
-msgstr "Problema na VPN"
+msgstr "Masalah VPN"
 
 #: node_modules/react-components/containers/support/BugModal.js:44
 #: node_modules/react-components/containers/support/BugModal.js:60
 msgctxt "Bug category"
 msgid "Feature request"
-msgstr "Solicitação de recurso"
+msgstr "Permintaan fitur"
 
 #: node_modules/react-components/containers/support/BugModal.js:45
 msgctxt "Bug category"
 msgid "Other"
-msgstr "Outro"
+msgstr "Lain-lain"
 
 #: node_modules/react-components/containers/support/BugModal.js:50
 msgctxt "Bug category"
 msgid "Signup problem"
-msgstr "Problema de registro"
+msgstr "Masalah pendaftaran"
 
 #: node_modules/react-components/containers/support/BugModal.js:52
 msgctxt "Bug category"
 msgid "Installation problem"
-msgstr "Problema de instalação"
+msgstr "Masalah instalasi"
 
 #: node_modules/react-components/containers/support/BugModal.js:53
 msgctxt "Bug category"
 msgid "Update problem"
-msgstr "Problema na atualização"
+msgstr "Masalah pemutakhiran"
 
 #: node_modules/react-components/containers/support/BugModal.js:54
 msgctxt "Bug category"
 msgid "Application problem"
-msgstr "Problema no app"
+msgstr "Masalah aplikasi"
 
 #: node_modules/react-components/containers/support/BugModal.js:56
 msgctxt "Bug category"
 msgid "Speed problem"
-msgstr "Problema de velocidade"
+msgstr "Masalah kecepatan"
 
 #: node_modules/react-components/containers/support/BugModal.js:57
 msgctxt "Bug category"
 msgid "Manual setup problem"
-msgstr "Problema de configuração manual"
+msgstr "Masalah pemasangan manual"
 
 #: node_modules/react-components/containers/support/BugModal.js:58
 msgctxt "Bug category"
 msgid "Website access problem"
-msgstr "Problema de acesso ao site"
+msgstr "Masalah akses situs"
 
 #: node_modules/react-components/containers/support/BugModal.js:59
 msgctxt "Bug category"
 msgid "Streaming problem"
-msgstr "Problema de streaming"
+msgstr "Masalah pemutaran konten"
 
 #: node_modules/react-components/containers/support/BugModal.js:80
 msgctxt "Action to select a title for the bug report modal"
 msgid "Select"
-msgstr "Selecione"
+msgstr "Pilih"
 
 #: node_modules/react-components/containers/support/BugModal.js:184
 msgctxt "Label, make it short please"
 msgid "Attach screenshot(s)"
-msgstr "Anexar captura(s) de tela"
+msgstr "Lampirkan tangkapan layar"
 
 #: src/app/components/sections/plans/PlansTable.js:123
 msgctxt "Plan details"
 msgid "Medium"
-msgstr "Média"
+msgstr "Sedang"
 
 #: src/app/components/sections/plans/PlansTable.js:124
 msgctxt "Plan details"
 msgid "High"
-msgstr "Alta"
+msgstr "Tinggi"
 
 #: src/app/components/sections/plans/PlansTable.js:125
 #: src/app/components/sections/plans/PlansTable.js:126
 msgctxt "Plan details"
 msgid "Highest"
-msgstr "Máxima"
+msgstr "Sangat tinggi"
 
 #: src/app/components/sections/plans/PlansSection.js:46
 msgctxt "Separator, spacing is important"
 msgid " and "
-msgstr " e "
+msgstr " dan "
 
 #: src/app/containers/LoginContainer.js:19
 msgctxt "Dropdown button"
 msgid "Need help?"
-msgstr "Precisa de ajuda?"
+msgstr "Butuh bantuan?"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
 msgctxt "VerificationType"
 msgid "email"
-msgstr "e-mail"
+msgstr "surel"
 
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:9
 msgctxt "VerificationType"
 msgid "phone"
-msgstr "telefone"
+msgstr "telepon"
 
 #: src/app/containers/SignupContainer/plans.js:37
 msgctxt "Plan Description"
 msgid "Privacy and security for everyone"
-msgstr "Privacidade e segurança para todos"
+msgstr "Privasi dan keamanan untuk semua"
 
 #: src/app/containers/SignupContainer/plans.js:61
 msgctxt "Plan Description"
 msgid "Basic privacy features"
-msgstr "Recursos básicos de privacidade"
+msgstr "Fitur privasi dasar"
 
 #: src/app/containers/SignupContainer/plans.js:89
 msgctxt "Plan Description"
 msgid "Advanced security features"
-msgstr "Recursos avançados de segurança"
+msgstr "Fitur privasi canggih"
 
 #: src/app/containers/SignupContainer/plans.js:113
 msgctxt "Plan Description"
 msgid "The complete privacy suite"
-msgstr "A suíte de privacidade completa"
+msgstr "Fitur privasi lengkap"
 
 #: src/app/containers/SignupContainer/plans.js:126
 msgctxt "Plan Description"
 msgid "Bundle plan"
-msgstr "Plano de pacote"
+msgstr "Paket bundel"
 
 #: src/app/containers/SignupContainer/plans.js:41
 msgctxt "Plan Feature"
 msgid "High speed 1 Gbps VPN servers"
-msgstr "Servidores VPN de 1 Gbps de alta velocidade"
+msgstr "Server VPN 1 Gbps berkecepatan tinggi"
 
 #: src/app/containers/SignupContainer/plans.js:42
 #, javascript-format
 msgctxt "Plan Feature"
 msgid "Access to ${ countries.basic.length } countries"
-msgstr "Acesso a ${ countries.basic.length } países"
+msgstr "Akses di ${ countries.basic.length } negara"
 
 #: src/app/containers/SignupContainer/plans.js:43
 #: src/app/containers/SignupContainer/plans.js:80
 msgctxt "Plan Feature"
 msgid "Filesharing/P2P support"
-msgstr "Suporte a compartilhamento de arquivos/P2P"
+msgstr "Dukungan berbagi berkas/P2P"
 
 #: src/app/containers/SignupContainer/plans.js:47
 #: src/app/containers/SignupContainer/plans.js:72
@@ -3786,70 +3782,69 @@ msgstr "Suporte a compartilhamento de arquivos/P2P"
 msgctxt "Plan Feature"
 msgid "${ maxConnections } simultaneous VPN connection"
 msgid_plural "${ maxConnections } simultaneous VPN connections"
-msgstr[0] "${ maxConnections } conexões VPN simultâneas"
-msgstr[1] "${ maxConnections } conexões VPN simultâneas"
+msgstr[0] "${ maxConnections } koneksi VPN bersamaan"
 
 #: src/app/containers/SignupContainer/plans.js:52
 msgctxt "Plan Feature"
 msgid "Servers in ${ countries.free.length } countries"
-msgstr "Servidores em ${ countries.free.length } países"
+msgstr "Server di ${ countries.free.length } negara"
 
 #: src/app/containers/SignupContainer/plans.js:53
 msgctxt "Plan Feature"
 msgid "Medium speed"
-msgstr "Velocidade média"
+msgstr "Kecepatan sedang"
 
 #: src/app/containers/SignupContainer/plans.js:54
 #: src/app/containers/SignupContainer/plans.js:83
 msgctxt "Plan Feature"
 msgid "No logs policy"
-msgstr "Nenhuma política de registros"
+msgstr "Kebijakan tanpa log"
 
 #: src/app/containers/SignupContainer/plans.js:55
 msgctxt "Plan Feature"
 msgid "No data limit"
-msgstr "Sem limites de dados"
+msgstr "Data tidak terbatas"
 
 #: src/app/containers/SignupContainer/plans.js:56
 msgctxt "Plan Feature"
 msgid "No ads"
-msgstr "Sem anúncios"
+msgstr "Tanpa iklan"
 
 #: src/app/containers/SignupContainer/plans.js:66
 msgctxt "Plan Feature"
 msgid "Highest speed servers (10 Gbps)"
-msgstr "Servidores de alta velocidade (10 Gbps)"
+msgstr "Server tercepat (10 Gbps)"
 
 #: src/app/containers/SignupContainer/plans.js:67
 #: src/app/containers/SignupContainer/plans.js:102
 #: src/app/containers/SignupContainer/plans.js:139
 msgctxt "Plan Feature"
 msgid "Access blocked content"
-msgstr "Acesso a conteúdo bloqueado"
+msgstr "Akses konten yang diblokir"
 
 #: src/app/containers/SignupContainer/plans.js:68
 #: src/app/containers/SignupContainer/plans.js:108
 #: src/app/containers/SignupContainer/plans.js:145
 msgctxt "Plan Feature"
 msgid "All advanced security features"
-msgstr "Todos os recursos avançados de segurança"
+msgstr "Semua fitur keamanan canggih"
 
 #: src/app/containers/SignupContainer/plans.js:77
 msgctxt "Plan Feature"
 msgid "Servers in ${ countries.basic.length } countries"
-msgstr "Servidores em ${ countries.basic.length } países"
+msgstr "Server di ${ countries.basic.length } negara"
 
 #: src/app/containers/SignupContainer/plans.js:78
 msgctxt "Plan Feature"
 msgid "High speed servers"
-msgstr "Servidores de alta velocidade"
+msgstr "Server kencang"
 
 #: src/app/containers/SignupContainer/plans.js:98
 #: src/app/containers/SignupContainer/plans.js:135
 #, javascript-format
 msgctxt "Plan Feature"
 msgid "Servers in ${ countries.all.length } countries"
-msgstr "Servidores em ${ countries.all.length } países"
+msgstr "Server di ${ countries.all.length } negara"
 
 #: src/app/containers/SignupContainer/plans.js:99
 #: src/app/containers/SignupContainer/plans.js:136
@@ -3861,136 +3856,136 @@ msgstr "Secure Core"
 #: src/app/containers/SignupContainer/plans.js:137
 msgctxt "Plan Feature"
 msgid "Highest speeds"
-msgstr "Altas velocidades"
+msgstr "Kecepatan tertinggi"
 
 #: src/app/containers/SignupContainer/plans.js:121
 msgctxt "Plan Feature"
 msgid "ProtonMail Visionary account"
-msgstr "Conta ProtonMail Visionário"
+msgstr "Akun ProtonMail Visionary"
 
 #: src/app/containers/SignupContainer/plans.js:62
 #, javascript-format
 msgctxt "Plan feature"
 msgid "All ${ PLAN_NAMES[PLAN.FREE] } plan features"
-msgstr "Todos os recursos do plano ${ PLAN_NAMES[PLAN.FREE] }"
+msgstr "Semua fitur paket ${ PLAN_NAMES[PLAN.FREE] }"
 
 #: src/app/containers/SignupContainer/plans.js:90
 #, javascript-format
 msgctxt "Plan feature"
 msgid "All ${ PLAN_NAMES[PLAN.BASIC] } plan features"
-msgstr "Todos os recursos do plano ${ PLAN_NAMES[PLAN.BASIC] }"
+msgstr "Semua fitur paket ${ PLAN_NAMES[PLAN.BASIC] }"
 
 #: src/app/containers/SignupContainer/plans.js:114
 #, javascript-format
 msgctxt "Plan feature"
 msgid "All ${ PLAN_NAMES[PLAN.PLUS] } plan features"
-msgstr "Todos os recursos do plano ${ PLAN_NAMES[PLAN.PLUS] }"
+msgstr "Semua fitur paket ${ PLAN_NAMES[PLAN.PLUS] }"
 
 #: src/app/containers/SignupContainer/plans.js:127
 msgctxt "Plan feature"
 msgid "ProtonMail Plus plan included"
-msgstr "Plano do ProtonMail Plus incluído"
+msgstr "Termasuk paket ProtonMail Plus"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:39
 msgctxt "Plan upsell"
 msgid "Monthly plan"
-msgstr "Plano mensal"
+msgstr "Paket bulanan"
 
 #: src/app/containers/SignupContainer/SelectedPlan/PlanUpsell.js:47
 msgctxt "Plan upsell"
 msgid "Yearly plan"
-msgstr "Plano anual"
+msgstr "Paket tahunan"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:37
 #, javascript-format
 msgctxt "PlanPrice"
 msgid "${ totalMonthlyPriceText } / mo"
-msgstr "${ totalMonthlyPriceText } / mês"
+msgstr "${ totalMonthlyPriceText } / bln"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:40
 #, javascript-format
 msgctxt "PlanPrice"
 msgid "Billed as ${ totalBilledText }"
-msgstr "Faturado como ${ totalBilledText }"
+msgstr "Tertagih ${ totalBilledText }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanPrice.js:41
 #, javascript-format
 msgctxt "PlanPrice"
 msgid "SAVE ${ discountText }"
-msgstr "ECONOMIZE ${ discountText }"
+msgstr "HEMAT ${ discountText }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:19
 msgctxt "Plan Action"
 msgid "Get ${ plan.title }"
-msgstr "Obtenha ${ plan.title }"
+msgstr "Dapatkan ${ plan.title }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:35
 msgctxt "Plan info"
 msgid "Most popular"
-msgstr "Mais popular"
+msgstr "Terpopuler"
 
 #: src/app/containers/RedeemContainer.js:32
 msgctxt "Image alt"
 msgid "Laptop & smartphone shown connected to ProtonVPN network."
-msgstr "Notebook e smartphone são exibidos conectados na rede ProtonVPN."
+msgstr "Laptop & ponsel yang tersambung ke jaringan ProtonVPN."
 
 #: src/app/containers/RedeemContainer.js:43
 msgctxt "Image alt"
 msgid "Swiss based"
-msgstr "Sediado na Suíça"
+msgstr "Bertempat di Swiss"
 
 #: src/app/containers/RedeemContainer.js:50
 msgctxt "Image alt"
 msgid "Secure core servers"
-msgstr "Servidores Secure Core"
+msgstr "Server Secure Core"
 
 #: src/app/containers/RedeemContainer.js:57
 msgctxt "Image alt"
 msgid "No logs"
-msgstr "Sem registros"
+msgstr "Tanpa jejak"
 
 #: src/app/containers/RedeemContainer.js:64
 msgctxt "Image alt"
 msgid "Kill switch to prevent IP exposure"
-msgstr "Kill switch para prevenir a exposição do IP"
+msgstr "Kill Switch untuk mencegah kebocoran IP"
 
 #: src/app/containers/RedeemContainer.js:70
 msgctxt "Image alt"
 msgid "DNS leak prevention"
-msgstr "Proteção de vazamento DNS"
+msgstr "Pencegahan kebocoran DNS"
 
 #: src/app/containers/RedeemContainer.js:77
 msgctxt "Image alt"
 msgid "Strong encryption"
-msgstr "Criptografia forte"
+msgstr "Enkripsi yang kuat"
 
 #: src/app/containers/RedeemContainer.js:45
 msgctxt "About"
 msgid "Protect your data with Swiss privacy laws, some of the strongest in the world"
-msgstr "Proteja seus dados com as leis de privacidade suíças, uma das mais fortes do mundo"
+msgstr "Simpan data Anda di Swiss, negara yang tidak main-main soal privasi"
 
 #: src/app/containers/RedeemContainer.js:52
 msgctxt "About"
 msgid "Defend yourself against advanced network-based attacks by routing your traffic through hardened servers"
-msgstr "Proteja-se contra ataques avançados baseados na rede, direcionando seu tráfego através de servidores robustos"
+msgstr "Hindari serangan jaringan bertubi-tubi dengan mengalihkan koneksi Anda ke server yang aman dan kuat"
 
 #: src/app/containers/RedeemContainer.js:59
 msgctxt "About"
 msgid "Keep your browsing history private - we do not keep any records of our users' online activity"
-msgstr "Mantenha o seu histórico de navegação em sigilo - não mantemos quaisquer registros das atividades online dos nossos usuários"
+msgstr "Amankan riwayat selancar Anda - segala aktivitas pengguna tidak direkam sama sekali"
 
 #: src/app/containers/RedeemContainer.js:66
 msgctxt "About"
 msgid "Keep your data secure even if you are disconnected from your VPN server"
-msgstr "Mantenha seus dados seguros mesmo quando você estiver desconectado do seu servidor VPN"
+msgstr "Lindungi data Anda meskipun sudah tidak tersambung ke server VPN"
 
 #: src/app/containers/RedeemContainer.js:72
 msgctxt "About"
 msgid "Prevent your DNS requests from revealing your browsing history by encrypting all your DNS queries"
-msgstr "Previna que as solicitações de DNS revelem seu histórico de navegação ao criptografar todas as consultas de DNS"
+msgstr "Mencegah kebocoran riwayat selancar Anda via DNS dengan mengenkripsi semua kueri DNS Anda"
 
 #: src/app/containers/RedeemContainer.js:79
 msgctxt "About"
 msgid "Defend your Internet connection with AES-256, the highest strength encryption."
-msgstr "Proteja sua conexão com a Internet com AES-256, a criptografia de maior força."
+msgstr "Lindungi koneksi Internet Anda dengan enkripsi terkuat saat ini, AES-256."
 

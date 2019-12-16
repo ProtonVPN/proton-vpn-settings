@@ -2,15 +2,13 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: protonvpn\n"
 "X-Crowdin-Language: pl\n"
 "X-Crowdin-File: ProtonVPN Settings Application.pot\n"
 "Project-Id-Version: protonvpn\n"
-"Last-Translator: PMtranslator\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2019-11-25 07:22\n"
+"PO-Revision-Date: 2019-12-13 10:27\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -2291,7 +2289,7 @@ msgstr "Po dokonaniu płatności w Bitcoinach, wykonaj tę instrukcję, aby ulep
 #, javascript-format
 msgctxt "Info"
 msgid "Top up your account with credits that you can use to subscribe to a new plan or renew your current plan. You get one credit for every ${ i18nCurrency } spent."
-msgstr "Doładuj swoje konto środkami, których możesz użyć do wykupienia nowego planu lub odnowienia obecnego. Otrzymasz jeden kredyt za każde wydane ${ i18nCurrency }."
+msgstr "Doładuj swoje konto środkami, których możesz użyć do wykupienia nowego planu lub odnowienia obecnego. 1 ${ i18nCurrency } to jeden otrzymany kredyt."
 
 #: node_modules/react-components/containers/payments/GiftCodeModal.js:53
 msgctxt "Info"
@@ -3066,7 +3064,7 @@ msgstr "Rocznie"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:31
 msgctxt "Billing cycle"
 msgid "2-year"
-msgstr "Dwuletni"
+msgstr "Co dwa lata"
 
 #: node_modules/react-components/containers/payments/CouponDiscountBadge.js:12
 msgctxt "Discount with coupon code"

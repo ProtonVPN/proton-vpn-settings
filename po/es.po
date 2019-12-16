@@ -2,15 +2,13 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: protonvpn\n"
 "X-Crowdin-Language: es-ES\n"
 "X-Crowdin-File: ProtonVPN Settings Application.pot\n"
 "Project-Id-Version: protonvpn\n"
-"Last-Translator: PMtranslator\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-11-25 07:21\n"
+"PO-Revision-Date: 2019-12-13 10:27\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -2404,7 +2402,7 @@ msgstr "¡No te pierdas los descuentos por tiempo limitado para los usuarios rec
 #, javascript-format
 msgctxt "Info"
 msgid "Regular price: ${ regularPrice }"
-msgstr "Precio regular: ${ regularPrice }"
+msgstr "Precio habitual: ${ regularPrice }"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/LoadIndicator.js:8
 msgctxt "Info"

@@ -2,15 +2,13 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: crowdin.com\n"
 "X-Crowdin-Project: protonvpn\n"
 "X-Crowdin-Language: es-MX\n"
 "X-Crowdin-File: ProtonVPN Settings Application.pot\n"
 "Project-Id-Version: protonvpn\n"
-"Last-Translator: PMtranslator\n"
 "Language-Team: Spanish, Mexico\n"
 "Language: es_MX\n"
-"PO-Revision-Date: 2019-11-25 07:23\n"
+"PO-Revision-Date: 2019-12-13 22:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -1581,13 +1579,13 @@ msgstr "Añadir cupón"
 #: src/app/components/sections/plans/PlansTable.js:350
 msgctxt "Action"
 msgid "Hide additional features"
-msgstr "Ocultar características adicionales"
+msgstr "Ocultar funciones adicionales"
 
 #: node_modules/react-components/containers/payments/subscription/CustomVPNSection.js:191
 #: src/app/components/sections/plans/PlansTable.js:350
 msgctxt "Action"
 msgid "Compare all features"
-msgstr "Comparar todas las características"
+msgstr "Comparar todas las funciones"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:140
 msgctxt "Action"
@@ -2254,7 +2252,7 @@ msgstr "Intente de nuevo, utilice un método de pago diferente o llame a su banc
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:13
 msgctxt "Info"
 msgid "As an early Proton user, your account has extra features.."
-msgstr "Como uno de los primeros usuarios de Proton, su cuenta tiene características adicionales."
+msgstr "Como uno de los primeros usuarios de Proton, su cuenta tiene funciones adicionales."
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:15
 msgctxt "Info"
@@ -2383,7 +2381,7 @@ msgstr "Gracias por su suscripción."
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:20
 msgctxt "Info"
 msgid "Your new features are now available."
-msgstr "Sus características nuevas ya están disponibles."
+msgstr "Sus funciones nuevas ya están disponibles."
 
 #: node_modules/react-components/containers/payments/subscription/Thanks.js:27
 msgctxt "Info"
@@ -2895,7 +2893,7 @@ msgstr "Anuncios importantes (2-3 por año)"
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:27
 msgctxt "Label for news"
 msgid "Major features (3-4 per year)"
-msgstr "Funciones nuevas (3-4 por año)"
+msgstr "Funciones importantes (3-4 por año)"
 
 #: node_modules/react-components/containers/account/NewsCheckboxes.js:28
 msgctxt "Label for news"
@@ -3001,7 +2999,7 @@ msgstr "Proporciona protección adicional contra el compromiso del servidor VPN 
 #: src/app/components/sections/plans/PlansTable.js:311
 msgctxt "Tooltip"
 msgid "Includes ProtonMail encrypted email with all features"
-msgstr "Incluye ProtonMail cifrado con todas las características"
+msgstr "Incluye ProtonMail cifrado con todas las funciones"
 
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:72
 msgctxt "Tooltip"
@@ -3646,7 +3644,7 @@ msgstr "Problema de VPN"
 #: node_modules/react-components/containers/support/BugModal.js:60
 msgctxt "Bug category"
 msgid "Feature request"
-msgstr "Solicitud de característica"
+msgstr "Solicitar funcionalidad"
 
 #: node_modules/react-components/containers/support/BugModal.js:45
 msgctxt "Bug category"
@@ -3747,12 +3745,12 @@ msgstr "Privacidad y seguridad para todos"
 #: src/app/containers/SignupContainer/plans.js:61
 msgctxt "Plan Description"
 msgid "Basic privacy features"
-msgstr "Características de privacidad de Basic"
+msgstr "Funciones de privacidad de Basic"
 
 #: src/app/containers/SignupContainer/plans.js:89
 msgctxt "Plan Description"
 msgid "Advanced security features"
-msgstr "Características de seguridad avanzadas"
+msgstr "Funciones de seguridad avanzadas"
 
 #: src/app/containers/SignupContainer/plans.js:113
 msgctxt "Plan Description"
@@ -3836,7 +3834,7 @@ msgstr "Acceso a contenido bloqueado"
 #: src/app/containers/SignupContainer/plans.js:145
 msgctxt "Plan Feature"
 msgid "All advanced security features"
-msgstr "Todas las características de seguridad avanzadas"
+msgstr "Todas las funciones de seguridad avanzadas"
 
 #: src/app/containers/SignupContainer/plans.js:77
 msgctxt "Plan Feature"
@@ -3876,19 +3874,19 @@ msgstr "Cuenta ProtonMail Visionary"
 #, javascript-format
 msgctxt "Plan feature"
 msgid "All ${ PLAN_NAMES[PLAN.FREE] } plan features"
-msgstr "Todas las características del plan ${ PLAN_NAMES[PLAN.FREE] }"
+msgstr "Todas las funciones del plan ${ PLAN_NAMES[PLAN.FREE] }"
 
 #: src/app/containers/SignupContainer/plans.js:90
 #, javascript-format
 msgctxt "Plan feature"
 msgid "All ${ PLAN_NAMES[PLAN.BASIC] } plan features"
-msgstr "Todas las características del plan ${ PLAN_NAMES[PLAN.BASIC] }"
+msgstr "Todas las funciones del plan ${ PLAN_NAMES[PLAN.BASIC] }"
 
 #: src/app/containers/SignupContainer/plans.js:114
 #, javascript-format
 msgctxt "Plan feature"
 msgid "All ${ PLAN_NAMES[PLAN.PLUS] } plan features"
-msgstr "Todas las características del plan ${ PLAN_NAMES[PLAN.PLUS] }"
+msgstr "Todas las funciones del plan ${ PLAN_NAMES[PLAN.PLUS] }"
 
 #: src/app/containers/SignupContainer/plans.js:127
 msgctxt "Plan feature"
