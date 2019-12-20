@@ -27,7 +27,7 @@ const PrivateLayout = ({ children, location }) => {
             text: c('Link').t`Downloads`,
             link: '/downloads'
         },
-        !isSubUser && {
+        canPay && {
             icon: 'payments',
             text: c('Link').t`Payments`,
             link: '/payments'
