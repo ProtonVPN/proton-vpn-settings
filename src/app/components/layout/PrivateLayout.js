@@ -12,7 +12,7 @@ const PrivateLayout = ({ children, location }) => {
     const { state: expanded, toggle: onToggleExpand, set: setExpand } = useToggle();
     const [{ canPay }] = useUser();
     const list = [
-        !isSubUser && {
+        canPay && {
             icon: 'dashboard',
             text: c('Link').t`Dashboard`,
             link: '/dashboard'
