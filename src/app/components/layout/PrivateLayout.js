@@ -10,7 +10,7 @@ import PrivateHeader from './PrivateHeader';
 const PrivateLayout = ({ children, location }) => {
     const mainAreaRef = useRef();
     const { state: expanded, toggle: onToggleExpand, set: setExpand } = useToggle();
-    const [{ isSubUser }] = useUser();
+    const [{ canPay }] = useUser();
     const list = [
         !isSubUser && {
             icon: 'dashboard',
