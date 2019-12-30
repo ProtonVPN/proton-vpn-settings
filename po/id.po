@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2019-12-21 07:20\n"
+"PO-Revision-Date: 2019-12-30 07:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -2361,7 +2361,7 @@ msgstr "Sub-total"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:107
 msgctxt "Label"
 msgid "Cycle discount +"
-msgstr ""
+msgstr "Siklus diskon +"
 
 #.  Includes coupon discount and cycle discount
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:108
@@ -2373,7 +2373,7 @@ msgstr "Kupon"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:130
 msgctxt "Label"
 msgid "Cycle discount"
-msgstr ""
+msgstr "Siklus diskon"
 
 #.  Includes coupon discount and cycle discount
 #: node_modules/react-components/containers/payments/BillingSection.js:299
@@ -3317,7 +3317,7 @@ msgstr[0] "${ addressAddon.MaxAddresses } alamat"
 msgctxt "Addon unit for subscription"
 msgid "${ domainAddon.MaxDomains } domain"
 msgid_plural "${ domainAddon.MaxDomains } domains"
-msgstr[0] "${ domainAddon.MaxDomains } domains"
+msgstr[0] "${ domainAddon.MaxDomains } domain"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:243
 #, javascript-format

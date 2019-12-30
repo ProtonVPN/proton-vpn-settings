@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2019-12-21 07:20\n"
+"PO-Revision-Date: 2019-12-29 20:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -758,7 +758,7 @@ msgstr "Paiements"
 #: src/app/containers/LoginContainer.js:15
 msgctxt "Title"
 msgid "User log in"
-msgstr "Identifiant"
+msgstr "Identifiants"
 
 #: src/app/containers/RedeemContainer.js:18
 msgctxt "Title"
@@ -3100,7 +3100,7 @@ msgstr "Secure Core"
 #: node_modules/react-components/containers/heading/SupportDropdownButton.js:6
 msgctxt "Header"
 msgid "Support"
-msgstr "Aide"
+msgstr "Support"
 
 #: src/app/components/sections/plans/PlansTable.js:112
 msgctxt "Header"

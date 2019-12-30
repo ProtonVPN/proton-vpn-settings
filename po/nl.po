@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2019-12-21 07:20\n"
+"PO-Revision-Date: 2019-12-28 13:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -205,7 +205,7 @@ msgstr "Uw account of organisatie heeft een openstaande factuur. Betaal alle ope
 #: node_modules/react-components/components/alert/DoNotWindowOpenAlertError.js:7
 msgctxt "Error"
 msgid "The browser you are using does not allow the payment to be fully authorized. Please use a different browser or log in via a computer."
-msgstr ""
+msgstr "De browser die u gebruikt staat niet toe dat de betaling volledig geautoriseerd wordt. Gebruik een andere browser of log in via een computer."
 
 #: node_modules/react-components/components/input/Input.js:32
 msgctxt "Error"
@@ -230,7 +230,7 @@ msgstr "Kan gebruikersnaam niet controleren, probeer het later opnieuw"
 #: node_modules/proton-shared/lib/themes/themes.js:13
 msgctxt "Theme"
 msgid "Default theme"
-msgstr ""
+msgstr "Standaard thema"
 
 #: node_modules/proton-shared/lib/themes/themes.js:23
 msgctxt "Theme"
@@ -250,12 +250,12 @@ msgstr "Blauw"
 #: node_modules/proton-shared/lib/themes/themes.js:51
 msgctxt "Theme"
 msgid "Dark theme"
-msgstr ""
+msgstr "Donker thema"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:44
 msgctxt "Title"
 msgid "Unsupported browser"
-msgstr ""
+msgstr "Niet-ondersteunde browser"
 
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:45
 msgctxt "Title"
@@ -343,35 +343,35 @@ msgstr "Deal van 2 jaar"
 #, javascript-format
 msgctxt "Title"
 msgid "Billed as ${ amount } for 1 month ${ NOTICES[notice] }"
-msgstr ""
+msgstr "Verrekend als ${ amount } voor 1 maand ${ NOTICES[notice] }"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:44
 #, javascript-format
 msgctxt "Title"
 msgid "Billed as ${ amount } for 1 year ${ NOTICES[notice] }"
-msgstr ""
+msgstr "Verrekend als ${ amount } voor 1 jaar ${ NOTICES[notice] }"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:45
 msgctxt "Title"
 msgid "Billed as ${ amount } for 2 years ${ NOTICES[notice] }"
-msgstr ""
+msgstr "Verrekend als ${ amount } voor 2 jaar ${ NOTICES[notice] }"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:50
 #, javascript-format
 msgctxt "Title"
 msgid "${ NOTICES[notice] } Renews after 1 year at a discounted annual price of ${ amount } per year (20% discount)."
-msgstr ""
+msgstr "${ NOTICES[notice] } Vernieuwt na 1 jaar tegen een gereduceerde jaarlijkse prijs van ${ amount } per jaar (20% korting)."
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:52
 #, javascript-format
 msgctxt "Title"
 msgid "${ NOTICES[notice] } Renews after 2 years at a discounted 2-year price of ${ amount } every 2 years (33% discount)."
-msgstr ""
+msgstr "${ NOTICES[notice] } Vernieuwt na 2 jaar tegen een gereduceerde tweejaarlijkse prijs van ${ amount } elke 2 jaar (33% korting)."
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:54
 msgctxt "Title"
 msgid "${ NOTICES[notice] } Renews after 2 years at a discounted 2-year & bundle price of ${ amount } every 2 years (47% discount)."
-msgstr ""
+msgstr "${ NOTICES[notice] } Vernieuwt na 2 jaar tegen een gereduceerde tweejaarlijkse én bundelprijs van ${ amount } elke 2 jaar (47% korting)."
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:117
 msgctxt "Title"
@@ -1067,7 +1067,7 @@ msgstr "Gebruik Geschenkcode"
 #: node_modules/react-components/containers/payments/BillingSection.js:311
 msgctxt "Action"
 msgid "Pay annualy and save 20%!"
-msgstr ""
+msgstr "Betaal jaarlijks en bespaar 20%!"
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:10
 msgctxt "Action"
@@ -1424,7 +1424,7 @@ msgstr "Nog geen abonnement"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:132
 msgctxt "Info"
 msgid "To manage your subscription, customize your current plan or select another one from the plan's table."
-msgstr ""
+msgstr "Om uw abonnement te beheren pas uw huidig abonnement aan of selecteer een ander abonnement uit de tabel van het abonnement."
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:153
 msgctxt "Info"
@@ -1558,12 +1558,12 @@ msgstr "Er zijn geen facturatiegegevens beschikbaar voor uw huidige abonnement."
 #: node_modules/react-components/containers/payments/BillingSection.js:343
 msgctxt "Info"
 msgid "If you purchased a gift code or received one from our support team, you can enter it here."
-msgstr ""
+msgstr "Als u een cadeaucode heeft gekocht of een cadeaucode heeft ontvangen van ons supportteam, kunt u deze hier invoeren."
 
 #: node_modules/react-components/containers/payments/BillingSection.js:122
 msgctxt "Info"
 msgid "We always use credits before charging your saved payment method."
-msgstr ""
+msgstr "We gebruiken altijd credits voordat u uw opgeslagen betaalmethode in rekening brengt."
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:13
 msgctxt "Info"
@@ -2321,7 +2321,7 @@ msgstr "U bent succesvol afgemeld"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:30
 msgctxt "x of y"
 msgid "of"
-msgstr ""
+msgstr "van"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:114
 msgctxt "Label"
@@ -2360,7 +2360,7 @@ msgstr "Subtotaal"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:107
 msgctxt "Label"
 msgid "Cycle discount +"
-msgstr ""
+msgstr "Herhalingskorting +"
 
 #.  Includes coupon discount and cycle discount
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:108
@@ -2372,7 +2372,7 @@ msgstr "Kortingscode"
 #: node_modules/react-components/containers/payments/subscription/SubscriptionDetails.js:130
 msgctxt "Label"
 msgid "Cycle discount"
-msgstr ""
+msgstr "Herhalingskorting"
 
 #.  Includes coupon discount and cycle discount
 #: node_modules/react-components/containers/payments/BillingSection.js:299
@@ -2423,7 +2423,7 @@ msgstr "Voer cadeaucode in"
 #: node_modules/react-components/containers/payments/BillingSection.js:341
 msgctxt "Label"
 msgid "Gift code"
-msgstr ""
+msgstr "Geschenkcode"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:128
 msgctxt "Label"
@@ -2448,7 +2448,7 @@ msgstr "Extra opslagruimte"
 #: node_modules/react-components/containers/payments/BillingSection.js:194
 msgctxt "Label"
 msgid "Bonus storage"
-msgstr ""
+msgstr "Bonusopslag"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:203
 msgctxt "Label"
@@ -2463,17 +2463,17 @@ msgstr "ProtonVPN abonnementen"
 #: node_modules/react-components/containers/payments/BillingSection.js:240
 msgctxt "Label"
 msgid "Extra connections"
-msgstr ""
+msgstr "Extra verbindingen"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:260
 msgctxt "Label"
 msgid "Bonus connections"
-msgstr ""
+msgstr "Bonus verbindingen"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:286
 msgctxt "Label"
 msgid "Discount"
-msgstr ""
+msgstr "Korting"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:308
 msgctxt "Label"
@@ -2483,7 +2483,7 @@ msgstr "Factuurperiode"
 #: node_modules/react-components/containers/payments/BillingSection.js:318
 msgctxt "Label"
 msgid "Renewal date"
-msgstr ""
+msgstr "Verlengingsdatum"
 
 #: node_modules/react-components/containers/payments/BitcoinDetails.js:10
 msgctxt "Label"
@@ -3144,12 +3144,12 @@ msgstr "Hoogste"
 #: node_modules/react-components/containers/payments/DiscountBadge.js:17
 msgctxt "Discount with coupon code"
 msgid "36% discount applied to your subscription"
-msgstr ""
+msgstr "36% korting toegepast op uw abonnement"
 
 #: node_modules/react-components/containers/payments/DiscountBadge.js:28
 msgctxt "Discount with coupon code"
 msgid "47% discount applied to your subscription"
-msgstr ""
+msgstr "47% korting toegepast op uw abonnement"
 
 #: node_modules/react-components/containers/payments/DiscountBadge.js:36
 msgctxt "Discount with coupon code"
@@ -3307,40 +3307,40 @@ msgstr "2-jaarlijks"
 msgctxt "Addon unit for subscription"
 msgid "${ memberAddon.MaxMembers } user"
 msgid_plural "${ memberAddon.MaxMembers } users"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ memberAddon.MaxMembers } gebruiker"
+msgstr[1] "${ memberAddon.MaxMembers } gebruikers"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:164
 #, javascript-format
 msgctxt "Addon unit for subscription"
 msgid "${ addressAddon.MaxAddresses } address"
 msgid_plural "${ addressAddon.MaxAddresses } addresses"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ addressAddon.MaxAddresses } adres"
+msgstr[1] "${ addressAddon.MaxAddresses } adressen"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:206
 #, javascript-format
 msgctxt "Addon unit for subscription"
 msgid "${ domainAddon.MaxDomains } domain"
 msgid_plural "${ domainAddon.MaxDomains } domains"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ domainAddon.MaxDomains } domein"
+msgstr[1] "${ domainAddon.MaxDomains } domeinen"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:243
 #, javascript-format
 msgctxt "Addon unit for subscription"
 msgid "${ vpnAddon.MaxVPN } connection"
 msgid_plural "${ vpnAddon.MaxVPN } connections"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ vpnAddon.MaxVPN } verbinding"
+msgstr[1] "${ vpnAddon.MaxVPN } verbindingen"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:263
 #, javascript-format
 msgctxt "Addon unit for subscription"
 msgid "${ LOYAL_BONUS_CONNECTION } connection"
 msgid_plural "${ LOYAL_BONUS_CONNECTION } connections"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ LOYAL_BONUS_CONNECTION } verbinding"
+msgstr[1] "${ LOYAL_BONUS_CONNECTION } verbindingen"
 
 #: node_modules/react-components/containers/payments/Cash.js:13
 #, javascript-format
@@ -3782,37 +3782,37 @@ msgstr "Voeg uw naam (of bedrijfsnaam) en adres toe aan uw facturen"
 #: node_modules/react-components/components/countdown/Countdown.js:27
 msgctxt "Countdown status"
 msgid "Expired"
-msgstr ""
+msgstr "Verlopen"
 
 #: node_modules/react-components/components/countdown/Countdown.js:39
 #, javascript-format
 msgctxt "Countdown unit"
 msgid "${ days } day"
 msgid_plural "${ days } days"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ days } dag"
+msgstr[1] "${ days } dagen"
 
 #: node_modules/react-components/components/countdown/Countdown.js:40
 msgctxt "Countdown unit"
 msgid "${ hours } hour"
 msgid_plural "${ hours } hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ hours } uur"
+msgstr[1] "${ hours } uren"
 
 #: node_modules/react-components/components/countdown/Countdown.js:41
 #, javascript-format
 msgctxt "Countdown unit"
 msgid "${ minutes } minute"
 msgid_plural "${ minutes } minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ minutes } minuut"
+msgstr[1] "${ minutes } minuten"
 
 #: node_modules/react-components/components/countdown/Countdown.js:42
 msgctxt "Countdown unit"
 msgid "${ seconds } second"
 msgid_plural "${ seconds } seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "${ seconds } seconde"
+msgstr[1] "${ seconds } seconden"
 
 #: node_modules/react-components/components/toggle/Toggle.js:10
 msgctxt "Toggle button"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Polish\n"
 "Language: pl_PL\n"
-"PO-Revision-Date: 2019-12-21 07:20\n"
+"PO-Revision-Date: 2019-12-29 21:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -1348,7 +1348,7 @@ msgstr "Zapłać za plan roczny i zaoszczędź 20%"
 #, javascript-format
 msgctxt "Action"
 msgid "Try ${ upsellPlan.title } for only ${ totalMonthlyText }"
-msgstr "Wypróbuj ${ upsellPlan.title } za ${ totalMonthlyText }"
+msgstr "Wypróbuj plan ${ upsellPlan.title } za ${ totalMonthlyText }"
 
 #: src/app/containers/SignupContainer/SignupContainer.js:194
 msgctxt "Action"
@@ -3857,7 +3857,7 @@ msgstr "Wyłącz"
 #: src/app/components/sections/plans/PlansTable.js:123
 msgctxt "Plan details"
 msgid "Medium"
-msgstr "Średnia"
+msgstr "Umiarkowana"
 
 #: src/app/components/sections/plans/PlansTable.js:124
 msgctxt "Plan details"
@@ -3966,7 +3966,7 @@ msgstr "ZAOSZCZĘDŹ ${ discountText }"
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:19
 msgctxt "Plan Action"
 msgid "Get ${ plan.title }"
-msgstr "Wybierz ${ plan.title }"
+msgstr "Wybierz plan ${ plan.title }"
 
 #: src/app/containers/SignupContainer/PlanStep/PlanCard/PlanCard.js:35
 msgctxt "Plan info"
@@ -4037,7 +4037,7 @@ msgstr "Serwery w ${ countries.free.length } krajach"
 #: src/app/containers/SignupContainer/plans.js:53
 msgctxt "Plan Feature"
 msgid "Medium speed"
-msgstr "Średnia prędkość"
+msgstr "Umiarkowana prędkość"
 
 #: src/app/containers/SignupContainer/plans.js:54
 #: src/app/containers/SignupContainer/plans.js:83

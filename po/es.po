@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Spanish\n"
 "Language: es_ES\n"
-"PO-Revision-Date: 2019-12-21 07:20\n"
+"PO-Revision-Date: 2019-12-28 13:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -205,7 +205,7 @@ msgstr "Su cuenta u organización tiene actualmente una factura vencida. Por fav
 #: node_modules/react-components/components/alert/DoNotWindowOpenAlertError.js:7
 msgctxt "Error"
 msgid "The browser you are using does not allow the payment to be fully authorized. Please use a different browser or log in via a computer."
-msgstr "El navegador que está utilizando no permite que el pago sea totalmente autorizado. Por favor, utilice un navegador diferente o inicie sesión a través de un ordenador."
+msgstr "El navegador que está utilizando no permite que el pago sea autorizado. Por favor utilice un navegador diferente o inicie sesión a través de un ordenador."
 
 #: node_modules/react-components/components/input/Input.js:32
 msgctxt "Error"
@@ -343,18 +343,18 @@ msgstr "Oferta de 2 años"
 #, javascript-format
 msgctxt "Title"
 msgid "Billed as ${ amount } for 1 month ${ NOTICES[notice] }"
-msgstr "Facturado como ${ amount } por 1 mes ${ NOTICES[notice]}"
+msgstr "Facturado como ${ amount } por 1 mes ${ NOTICES[notice] }"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:44
 #, javascript-format
 msgctxt "Title"
 msgid "Billed as ${ amount } for 1 year ${ NOTICES[notice] }"
-msgstr "Facturado como ${ amount } por 1 mes ${ NOTICES[notice]}"
+msgstr "Facturado como ${ amount } por 1 año ${ NOTICES[notice] }"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:45
 msgctxt "Title"
 msgid "Billed as ${ amount } for 2 years ${ NOTICES[notice] }"
-msgstr "Facturado como ${ amount } por 2 años ${ NOTICES[notice]}"
+msgstr "Facturado como ${ amount } por 2 años ${ NOTICES[notice] }"
 
 #: node_modules/react-components/containers/payments/subscription/BlackFridayModal.js:50
 #, javascript-format
@@ -1558,7 +1558,7 @@ msgstr "No hay detalles de facturación disponibles para su suscripción actual.
 #: node_modules/react-components/containers/payments/BillingSection.js:343
 msgctxt "Info"
 msgid "If you purchased a gift code or received one from our support team, you can enter it here."
-msgstr "Si compró un código de regalo o recibió uno de nuestro equipo de soporte, puede inteoducirlo aquí."
+msgstr "Si compró un código de regalo o recibió uno de nuestro equipo de soporte, puede introducirlo aquí."
 
 #: node_modules/react-components/containers/payments/BillingSection.js:122
 msgctxt "Info"
@@ -2470,7 +2470,7 @@ msgstr "Conexiones extra"
 #: node_modules/react-components/containers/payments/BillingSection.js:260
 msgctxt "Label"
 msgid "Bonus connections"
-msgstr "Conexiones bonus"
+msgstr "Conexiones adicionales"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:286
 msgctxt "Label"
@@ -3310,14 +3310,14 @@ msgctxt "Addon unit for subscription"
 msgid "${ memberAddon.MaxMembers } user"
 msgid_plural "${ memberAddon.MaxMembers } users"
 msgstr[0] "${ memberAddon.MaxMembers } usuario"
-msgstr[1] ""
+msgstr[1] "${ memberAddon.MaxMembers } usuarios"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:164
 #, javascript-format
 msgctxt "Addon unit for subscription"
 msgid "${ addressAddon.MaxAddresses } address"
 msgid_plural "${ addressAddon.MaxAddresses } addresses"
-msgstr[0] ""
+msgstr[0] "${ addressAddon.MaxAddresses } dirección"
 msgstr[1] "${ addressAddon.MaxAddresses } direcciones"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:206
@@ -3333,7 +3333,7 @@ msgstr[1] "${ domainAddon.MaxDomains } dominios"
 msgctxt "Addon unit for subscription"
 msgid "${ vpnAddon.MaxVPN } connection"
 msgid_plural "${ vpnAddon.MaxVPN } connections"
-msgstr[0] ""
+msgstr[0] "${ vpnAddon.MaxVPN } conexión"
 msgstr[1] "${ vpnAddon.MaxVPN } conexiones"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:263
@@ -3341,7 +3341,7 @@ msgstr[1] "${ vpnAddon.MaxVPN } conexiones"
 msgctxt "Addon unit for subscription"
 msgid "${ LOYAL_BONUS_CONNECTION } connection"
 msgid_plural "${ LOYAL_BONUS_CONNECTION } connections"
-msgstr[0] ""
+msgstr[0] "${ LOYAL_BONUS_CONNECTION } conexión"
 msgstr[1] "${ LOYAL_BONUS_CONNECTION } conexiones"
 
 #: node_modules/react-components/containers/payments/Cash.js:13
@@ -3784,22 +3784,22 @@ msgstr "Añada su nombre (o nombre de la empresa) y dirección a sus facturas"
 #: node_modules/react-components/components/countdown/Countdown.js:27
 msgctxt "Countdown status"
 msgid "Expired"
-msgstr "Expired"
+msgstr "Expirado"
 
 #: node_modules/react-components/components/countdown/Countdown.js:39
 #, javascript-format
 msgctxt "Countdown unit"
 msgid "${ days } day"
 msgid_plural "${ days } days"
-msgstr[0] ""
+msgstr[0] "${ days } día"
 msgstr[1] "${ days } días"
 
 #: node_modules/react-components/components/countdown/Countdown.js:40
 msgctxt "Countdown unit"
 msgid "${ hours } hour"
 msgid_plural "${ hours } hours"
-msgstr[0] ""
-msgstr[1] "${ hours } hours"
+msgstr[0] "${ hours } hora"
+msgstr[1] "${ hours } horas"
 
 #: node_modules/react-components/components/countdown/Countdown.js:41
 #, javascript-format
@@ -3813,7 +3813,7 @@ msgstr[1] "${ minutes } minutos"
 msgctxt "Countdown unit"
 msgid "${ seconds } second"
 msgid_plural "${ seconds } seconds"
-msgstr[0] ""
+msgstr[0] "${ seconds } segundo"
 msgstr[1] "${ seconds } segundos"
 
 #: node_modules/react-components/components/toggle/Toggle.js:10
