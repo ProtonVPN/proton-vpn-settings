@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2019-12-30 07:20\n"
+"PO-Revision-Date: 2020-01-04 17:21\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -506,7 +506,7 @@ msgctxt "Title"
 msgid "OpenVPN / IKEv2 username"
 msgstr "Utilizador OpenVPN/IKEv2"
 
-#: node_modules/react-components/containers/support/BugModal.js:127
+#: node_modules/react-components/containers/support/BugModal.js:136
 msgctxt "Title"
 msgid "Report bug"
 msgstr "Reportar erro"
@@ -1066,8 +1066,8 @@ msgstr "Usar código de oferta"
 
 #: node_modules/react-components/containers/payments/BillingSection.js:311
 msgctxt "Action"
-msgid "Pay annualy and save 20%!"
-msgstr "Pague anualmente e poupe 20 %!"
+msgid "Pay annually and save 20%!"
+msgstr "Pague anualmente e poupe 20%!"
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:10
 msgctxt "Action"
@@ -1129,17 +1129,17 @@ msgstr "Adicionar captura(s) de ecrã"
 #: node_modules/react-components/containers/login/LoginForm.js:239
 #: node_modules/react-components/containers/login/LoginForm.js:267
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:44
-#: node_modules/react-components/containers/support/BugModal.js:126
+#: node_modules/react-components/containers/support/BugModal.js:135
 msgctxt "Action"
 msgid "Submit"
 msgstr "Submeter"
 
-#: node_modules/react-components/containers/support/BugModal.js:194
+#: node_modules/react-components/containers/support/BugModal.js:203
 msgctxt "Action"
 msgid "Hide info"
 msgstr "Ocultar informação"
 
-#: node_modules/react-components/containers/support/BugModal.js:194
+#: node_modules/react-components/containers/support/BugModal.js:203
 msgctxt "Action"
 msgid "Show info"
 msgstr "Mostrar informação"
@@ -1671,13 +1671,13 @@ msgctxt "Info"
 msgid "Screenshot(s) attached"
 msgstr "Capturas de ecrã anexadas"
 
-#: node_modules/react-components/containers/support/BugModal.js:130
+#: node_modules/react-components/containers/support/BugModal.js:139
 #, javascript-format
 msgctxt "Info"
 msgid "Refreshing the page or ${ link } will automatically resolve most issues."
 msgstr "Actualizar a página ou ${ link } resolve automaticamente a maioria dos problemas."
 
-#: node_modules/react-components/containers/support/BugModal.js:245
+#: node_modules/react-components/containers/support/BugModal.js:254
 #, javascript-format
 msgctxt "Info"
 msgid "Contact us at ${ criticalEmail } for critical security issues."
@@ -2121,37 +2121,37 @@ msgctxt "Placeholder"
 msgid "Other"
 msgstr "Outro"
 
-#: node_modules/react-components/containers/support/BugModal.js:141
+#: node_modules/react-components/containers/support/BugModal.js:150
 msgctxt "Placeholder"
 msgid "Proton username"
 msgstr "Utilizador Proton"
 
-#: node_modules/react-components/containers/support/BugModal.js:153
+#: node_modules/react-components/containers/support/BugModal.js:162
 msgctxt "Placeholder"
 msgid "A way to contact you"
 msgstr "Uma forma de o contactar"
 
-#: node_modules/react-components/containers/support/BugModal.js:177
+#: node_modules/react-components/containers/support/BugModal.js:186
 msgctxt "Placeholder"
 msgid "Please describe the problem and include any error messages"
 msgstr "Por favor, descreva o problema e inclua as mensagens de erro"
 
-#: node_modules/react-components/containers/support/BugModal.js:206
+#: node_modules/react-components/containers/support/BugModal.js:215
 msgctxt "Placeholder"
 msgid "OS name"
 msgstr "Nome do SO"
 
-#: node_modules/react-components/containers/support/BugModal.js:217
+#: node_modules/react-components/containers/support/BugModal.js:226
 msgctxt "Placeholder"
 msgid "OS version"
 msgstr "Versão do SO"
 
-#: node_modules/react-components/containers/support/BugModal.js:228
+#: node_modules/react-components/containers/support/BugModal.js:237
 msgctxt "Placeholder"
 msgid "Browser name"
 msgstr "Nome do navegador"
 
-#: node_modules/react-components/containers/support/BugModal.js:239
+#: node_modules/react-components/containers/support/BugModal.js:248
 msgctxt "Placeholder"
 msgid "Browser version"
 msgstr "Versão do navegador"
@@ -2278,7 +2278,7 @@ msgctxt "Success"
 msgid "Credits added"
 msgstr "Créditos adicionados"
 
-#: node_modules/react-components/containers/support/BugModal.js:111
+#: node_modules/react-components/containers/support/BugModal.js:120
 msgctxt "Success"
 msgid "Bug reported"
 msgstr "Erro reportado"
@@ -2512,50 +2512,50 @@ msgctxt "Label"
 msgid "OpenVPN / IKEv2 password"
 msgstr "Senha OpenVPN/IKEv2"
 
-#: node_modules/react-components/containers/support/BugModal.js:135
+#: node_modules/react-components/containers/support/BugModal.js:144
 msgctxt "Label"
 msgid "Proton username"
 msgstr "Utilizador Proton"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:125
 #: node_modules/react-components/containers/notification/EmailSection.js:66
-#: node_modules/react-components/containers/support/BugModal.js:147
+#: node_modules/react-components/containers/support/BugModal.js:156
 #: src/app/containers/SignupContainer/AccountStep/AccountForm.js:123
 msgctxt "Label"
 msgid "Email address"
 msgstr "Endereço de email"
 
-#: node_modules/react-components/containers/support/BugModal.js:159
+#: node_modules/react-components/containers/support/BugModal.js:168
 msgctxt "Label"
 msgid "Category"
 msgstr "Categoria"
 
-#: node_modules/react-components/containers/support/BugModal.js:171
+#: node_modules/react-components/containers/support/BugModal.js:180
 msgctxt "Label"
 msgid "What happened?"
 msgstr "O que aconteceu?"
 
-#: node_modules/react-components/containers/support/BugModal.js:192
+#: node_modules/react-components/containers/support/BugModal.js:201
 msgctxt "Label"
 msgid "System information"
 msgstr "Informação do sistema"
 
-#: node_modules/react-components/containers/support/BugModal.js:200
+#: node_modules/react-components/containers/support/BugModal.js:209
 msgctxt "Label"
 msgid "Operating system"
 msgstr "Sistema operativo"
 
-#: node_modules/react-components/containers/support/BugModal.js:211
+#: node_modules/react-components/containers/support/BugModal.js:220
 msgctxt "Label"
 msgid "Operating system version"
 msgstr "Versão do sistema operativo"
 
-#: node_modules/react-components/containers/support/BugModal.js:222
+#: node_modules/react-components/containers/support/BugModal.js:231
 msgctxt "Label"
 msgid "Browser"
 msgstr "Navegador"
 
-#: node_modules/react-components/containers/support/BugModal.js:233
+#: node_modules/react-components/containers/support/BugModal.js:242
 msgctxt "Label"
 msgid "Browser version"
 msgstr "Versão do navegador"
@@ -3166,7 +3166,7 @@ msgctxt "Link"
 msgid "click here"
 msgstr "clique aqui"
 
-#: node_modules/react-components/containers/support/BugModal.js:95
+#: node_modules/react-components/containers/support/BugModal.js:89
 msgctxt "Link"
 msgid "clearing your browser cache"
 msgstr "limpar a memória do navegador"
@@ -3440,101 +3440,101 @@ msgctxt "Error notification in the bug report modal when the user upload file"
 msgid "No image selected"
 msgstr "Nenhuma imagem seleccionada"
 
-#: node_modules/react-components/containers/support/BugModal.js:35
-#: node_modules/react-components/containers/support/BugModal.js:49
+#: node_modules/react-components/containers/support/BugModal.js:38
+#: node_modules/react-components/containers/support/BugModal.js:52
 msgctxt "Bug category"
 msgid "Login problem"
 msgstr "Problema ao iniciar sessão"
 
-#: node_modules/react-components/containers/support/BugModal.js:36
+#: node_modules/react-components/containers/support/BugModal.js:39
 msgctxt "Bug category"
 msgid "Sign up problem"
 msgstr "Problema ao registar"
 
-#: node_modules/react-components/containers/support/BugModal.js:37
+#: node_modules/react-components/containers/support/BugModal.js:40
 msgctxt "Bug category"
 msgid "Bridge problem"
 msgstr "Problema na Bridge"
 
-#: node_modules/react-components/containers/support/BugModal.js:38
+#: node_modules/react-components/containers/support/BugModal.js:41
 msgctxt "Bug category"
 msgid "Import / export problem"
 msgstr "Problema ao importar/exportar"
 
-#: node_modules/react-components/containers/support/BugModal.js:39
+#: node_modules/react-components/containers/support/BugModal.js:42
 msgctxt "Bug category"
 msgid "Custom domains problem"
 msgstr "Problema com os domínios personalizados"
 
-#: node_modules/react-components/containers/support/BugModal.js:40
-#: node_modules/react-components/containers/support/BugModal.js:51
+#: node_modules/react-components/containers/support/BugModal.js:43
+#: node_modules/react-components/containers/support/BugModal.js:54
 msgctxt "Bug category"
 msgid "Payments problem"
 msgstr "Problema com os pagamentos"
 
-#: node_modules/react-components/containers/support/BugModal.js:41
-#: node_modules/react-components/containers/support/BugModal.js:55
+#: node_modules/react-components/containers/support/BugModal.js:44
+#: node_modules/react-components/containers/support/BugModal.js:58
 msgctxt "Bug category"
 msgid "Connection problem"
 msgstr "Problema com a ligação"
 
-#: node_modules/react-components/containers/support/BugModal.js:42
+#: node_modules/react-components/containers/support/BugModal.js:45
 msgctxt "Bug category"
 msgid "Slow speed problem"
 msgstr "Problema de velocidade lenta"
 
-#: node_modules/react-components/containers/support/BugModal.js:43
+#: node_modules/react-components/containers/support/BugModal.js:46
 msgctxt "Bug category"
 msgid "VPN problem"
 msgstr "Problema de VPN"
 
-#: node_modules/react-components/containers/support/BugModal.js:44
-#: node_modules/react-components/containers/support/BugModal.js:60
+#: node_modules/react-components/containers/support/BugModal.js:47
+#: node_modules/react-components/containers/support/BugModal.js:63
 msgctxt "Bug category"
 msgid "Feature request"
 msgstr "Pedido de funcionalidade"
 
-#: node_modules/react-components/containers/support/BugModal.js:45
+#: node_modules/react-components/containers/support/BugModal.js:48
 msgctxt "Bug category"
 msgid "Other"
 msgstr "Outro"
 
-#: node_modules/react-components/containers/support/BugModal.js:50
+#: node_modules/react-components/containers/support/BugModal.js:53
 msgctxt "Bug category"
 msgid "Signup problem"
 msgstr "Problema ao registar"
 
-#: node_modules/react-components/containers/support/BugModal.js:52
+#: node_modules/react-components/containers/support/BugModal.js:55
 msgctxt "Bug category"
 msgid "Installation problem"
 msgstr "Problema de instalação"
 
-#: node_modules/react-components/containers/support/BugModal.js:53
+#: node_modules/react-components/containers/support/BugModal.js:56
 msgctxt "Bug category"
 msgid "Update problem"
 msgstr "Problema de actualização"
 
-#: node_modules/react-components/containers/support/BugModal.js:54
+#: node_modules/react-components/containers/support/BugModal.js:57
 msgctxt "Bug category"
 msgid "Application problem"
 msgstr "Problema de aplicação"
 
-#: node_modules/react-components/containers/support/BugModal.js:56
+#: node_modules/react-components/containers/support/BugModal.js:59
 msgctxt "Bug category"
 msgid "Speed problem"
 msgstr "Problema de velocidade"
 
-#: node_modules/react-components/containers/support/BugModal.js:57
+#: node_modules/react-components/containers/support/BugModal.js:60
 msgctxt "Bug category"
 msgid "Manual setup problem"
 msgstr "Problema de configuração manual"
 
-#: node_modules/react-components/containers/support/BugModal.js:58
+#: node_modules/react-components/containers/support/BugModal.js:61
 msgctxt "Bug category"
 msgid "Website access problem"
 msgstr "Problema de acesso à página web"
 
-#: node_modules/react-components/containers/support/BugModal.js:59
+#: node_modules/react-components/containers/support/BugModal.js:62
 msgctxt "Bug category"
 msgid "Streaming problem"
 msgstr "Problema de transmissão"
@@ -3544,7 +3544,7 @@ msgctxt "Action to select a title for the bug report modal"
 msgid "Select"
 msgstr "Seleccionar"
 
-#: node_modules/react-components/containers/support/BugModal.js:131
+#: node_modules/react-components/containers/support/BugModal.js:140
 msgctxt "Warning"
 msgid "Bug reports are not end-to-end encrypted, please do not send any sensitive information."
 msgstr "Os relatórios de erro não são encriptados de ponta-a-ponta, por favor não envie informação sensível."
@@ -3569,7 +3569,7 @@ msgctxt "Warning"
 msgid "Are you sure you want to delete the address?"
 msgstr "Tem a certeza de que deseja eliminar este endereço?"
 
-#: node_modules/react-components/containers/support/BugModal.js:184
+#: node_modules/react-components/containers/support/BugModal.js:193
 msgctxt "Label, make it short please"
 msgid "Attach screenshot(s)"
 msgstr "Anexar captura(s) de ecrã"
