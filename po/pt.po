@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2020-01-06 01:20\n"
+"PO-Revision-Date: 2020-01-11 17:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -2116,7 +2116,7 @@ msgctxt "Placeholder"
 msgid "Coupon"
 msgstr "Cupom"
 
-#: node_modules/react-components/containers/payments/PaymentSelector.js:30
+#: node_modules/react-components/containers/payments/PaymentSelector.js:47
 msgctxt "Placeholder"
 msgid "Other"
 msgstr "Outro"
