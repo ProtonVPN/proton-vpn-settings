@@ -1,16 +1,15 @@
-import React, { Children, useEffect, useState } from 'react';
+import React, { Children, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Alert, ObserverSections, SubSidebar, SettingsTitle, usePermissions } from 'react-components';
+import { Alert, ObserverSections, SettingsTitle, usePermissions } from 'react-components';
 import { hasPermission } from 'proton-shared/lib/helpers/permissions';
 import { c } from 'ttag';
 import { Link } from 'react-router-dom';
 
 import Main from './Main';
 
-const Page = ({ config, children }) => {
+const Page = ({ config, children, setActiveSection }) => {
     const userPermissions = usePermissions();
     const { sections = [], permissions: pagePermissions, text } = config;
-    const [activeSection, setActiveSection] = useState('');
 
     useEffect(() => {
         document.title = `${text} - ProtonVPN`;
@@ -30,27 +29,25 @@ const Page = ({ config, children }) => {
     }
 
     return (
-        <>
-            {sections.length ? <SubSidebar activeSection={activeSection} list={sections} /> : null}
-            <Main>
-                <SettingsTitle>{text}</SettingsTitle>
-                <div className="container-section-sticky">
-                    <ObserverSections activeSection={activeSection} setActiveSection={setActiveSection}>
-                        {Children.map(children, (child, index) => {
-                            const { id, permissions: sectionPermissions = [] } = sections[index] || {};
-                            return React.cloneElement(child, {
-                                id,
-                                permission: hasPermission(userPermissions, sectionPermissions)
-                            });
-                        })}
-                    </ObserverSections>
-                </div>
-            </Main>
-        </>
+        <Main>
+            <SettingsTitle>{text}</SettingsTitle>
+            <div className="container-section-sticky">
+                <ObserverSections setActiveSection={setActiveSection}>
+                    {Children.map(children, (child, index) => {
+                        const { id, permissions: sectionPermissions = [] } = sections[index] || {};
+                        return React.cloneElement(child, {
+                            id,
+                            permission: hasPermission(userPermissions, sectionPermissions)
+                        });
+                    })}
+                </ObserverSections>
+            </div>
+        </Main>
     );
 };
 
 Page.propTypes = {
+    setActiveSection: PropTypes.func,
     config: PropTypes.object,
     children: PropTypes.node
 };
