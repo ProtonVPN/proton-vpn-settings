@@ -36,7 +36,6 @@ const PrivateLayout = ({ location }) => {
 
     useEffect(() => {
         setExpand(false);
-
         mainAreaRef.current.scrollTop = 0;
     }, [location.pathname]);
 
@@ -57,8 +56,8 @@ const PrivateLayout = ({ location }) => {
                             />
                         )}
                     />
-                    <div className="main flex-item-fluid main-area scroll-smooth-touch" ref={mainAreaRef}>
-                        <div className="flex flex-reverse">
+                    <div className="main flex-item-fluid main-area" ref={mainAreaRef}>
+                        <div className="flex flex-reverse h100">
                             <MainAreaContext.Provider value={mainAreaRef}>
                                 <ErrorBoundary key={location.pathname}>
                                     <Switch>
