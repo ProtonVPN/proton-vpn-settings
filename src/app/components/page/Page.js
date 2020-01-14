@@ -1,19 +1,38 @@
-import React, { Children, useEffect } from 'react';
+import React, { Children, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Alert, ObserverSections, SettingsTitle, usePermissions } from 'react-components';
 import { hasPermission } from 'proton-shared/lib/helpers/permissions';
 import { c } from 'ttag';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import Main from './Main';
 
-const Page = ({ config, children, setActiveSection }) => {
+const Page = ({ config, location, children, setActiveSection }) => {
     const userPermissions = usePermissions();
     const { sections = [], permissions: pagePermissions, text } = config;
+    const containerRef = useRef(null);
 
     useEffect(() => {
         document.title = `${text} - ProtonVPN`;
     }, [text]);
+
+    useEffect(() => {
+        if (!location.hash) {
+            return;
+        }
+
+        // Need a delay to let the navigation ends
+        const handle = setTimeout(() => {
+            if (containerRef.current) {
+                const el = containerRef.current.querySelector(location.hash);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        }, 100);
+
+        return () => clearTimeout(handle);
+    }, [location.hash]);
 
     if (!hasPermission(userPermissions, pagePermissions)) {
         return (
@@ -31,7 +50,7 @@ const Page = ({ config, children, setActiveSection }) => {
     return (
         <Main>
             <SettingsTitle>{text}</SettingsTitle>
-            <div className="container-section-sticky">
+            <div className="container-section-sticky" ref={containerRef}>
                 <ObserverSections setActiveSection={setActiveSection}>
                     {Children.map(children, (child, index) => {
                         const { id, permissions: sectionPermissions = [] } = sections[index] || {};
@@ -49,7 +68,8 @@ const Page = ({ config, children, setActiveSection }) => {
 Page.propTypes = {
     setActiveSection: PropTypes.func,
     config: PropTypes.object,
-    children: PropTypes.node
+    children: PropTypes.node,
+    location: PropTypes.object
 };
 
-export default Page;
+export default withRouter(Page);
