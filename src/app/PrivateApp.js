@@ -18,7 +18,7 @@ const PrivateApp = ({ onLogout }) => {
         <StandardPrivateApp
             onLogout={onLogout}
             locales={locales}
-            preloadModels={[UserModel, UserSettingsModel]}
+            preloadModels={[UserModel, UserSettingsModel, MailSettingsModel]}
             eventModels={[
                 UserModel,
                 AddressesModel,
