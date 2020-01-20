@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Italian\n"
 "Language: it_IT\n"
-"PO-Revision-Date: 2020-01-11 17:20\n"
+"PO-Revision-Date: 2020-01-18 12:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -319,7 +319,7 @@ msgid "Add PayPal payment method"
 msgstr "Aggiungi il metodo di pagamento PayPal"
 
 #: node_modules/react-components/containers/payments/subscription/SubscriptionSection.js:54
-#: src/app/containers/DashboardContainer.js:35
+#: src/app/containers/DashboardContainer.js:36
 msgctxt "Title"
 msgid "Subscription"
 msgstr "Abbonamento"
@@ -454,7 +454,7 @@ msgid "Confirm loss of Proton bonuses"
 msgstr "Conferma la perdita dei bonus di Proton"
 
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:98
-#: src/app/containers/DownloadsContainer.js:18
+#: src/app/containers/DownloadsContainer.js:19
 msgctxt "Title"
 msgid "OpenVPN configuration files"
 msgstr "File di configurazione di OpenVPN"
@@ -490,7 +490,7 @@ msgid "Server configs"
 msgstr "Configurazioni dei server"
 
 #: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/ProtonVPNClientsSection.js:9
-#: src/app/containers/DownloadsContainer.js:14
+#: src/app/containers/DownloadsContainer.js:15
 msgctxt "Title"
 msgid "ProtonVPN clients"
 msgstr "Client ProtonVPN"
@@ -501,7 +501,7 @@ msgid "Edit OpenVPN / IKEv2 credentials"
 msgstr "Modifica credenziali OpenVPN / IKEv2"
 
 #: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNAccountSection.js:31
-#: src/app/containers/AccountContainer.js:34
+#: src/app/containers/AccountContainer.js:35
 msgctxt "Title"
 msgid "OpenVPN / IKEv2 username"
 msgstr "Nome utente OpenVPN / IKEv2"
@@ -518,7 +518,7 @@ msgstr "Conferma password di reset"
 
 #: node_modules/react-components/containers/login/ForgotUsernameContainer.js:23
 #: node_modules/react-components/containers/login/ResetPasswordContainer.js:8
-#: src/app/containers/LoginContainer.js:14
+#: src/app/containers/LoginContainer.js:23
 msgctxt "Title"
 msgid "Log in"
 msgstr "Accedi"
@@ -573,7 +573,7 @@ msgid "Change mailbox password"
 msgstr "Cambia la password della casella email"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:23
-#: src/app/containers/AccountContainer.js:26
+#: src/app/containers/AccountContainer.js:27
 msgctxt "Title"
 msgid "Passwords"
 msgstr "Password"
@@ -595,14 +595,14 @@ msgid "Delete account"
 msgstr "Eliminazione account"
 
 #: node_modules/react-components/containers/account/UsernameSection.js:16
-#: src/app/containers/AccountContainer.js:22
+#: src/app/containers/AccountContainer.js:23
 msgctxt "Title"
 msgid "Username"
 msgstr "Nome utente"
 
 #: node_modules/react-components/containers/account/NewsSection.js:17
 #: node_modules/react-components/containers/account/NewsSection.js:25
-#: src/app/containers/AccountContainer.js:42
+#: src/app/containers/AccountContainer.js:43
 msgctxt "Title"
 msgid "Email subscriptions"
 msgstr "Iscrizioni email"
@@ -618,14 +618,14 @@ msgid "Disable two-factor authentication"
 msgstr "Disabilita l'autenticazione a due fattori"
 
 #: node_modules/react-components/containers/account/TwoFactorSection.js:29
-#: src/app/containers/AccountContainer.js:30
+#: src/app/containers/AccountContainer.js:31
 msgctxt "Title"
 msgid "Two-factor authentication"
 msgstr "Autenticazione a due fattori"
 
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:33
 #: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:51
-#: src/app/containers/PaymentsContainer.js:18
+#: src/app/containers/PaymentsContainer.js:19
 msgctxt "Title"
 msgid "Payment methods"
 msgstr "Metodi di pagamento"
@@ -646,7 +646,7 @@ msgid "Update recovery/notification email"
 msgstr "Aggiorna email di recupero/notifica"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:62
-#: src/app/containers/AccountContainer.js:38
+#: src/app/containers/AccountContainer.js:39
 msgctxt "Title"
 msgid "Recovery & notification"
 msgstr "Recupero e notifica"
@@ -668,7 +668,7 @@ msgstr "Aggiungi dettagli fattura"
 
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:59
 #: node_modules/react-components/containers/invoices/InvoicesSection.js:69
-#: src/app/containers/PaymentsContainer.js:22
+#: src/app/containers/PaymentsContainer.js:23
 msgctxt "Title"
 msgid "Invoices"
 msgstr "Fatture"
@@ -698,11 +698,6 @@ msgctxt "Title"
 msgid "Action"
 msgstr "Azione"
 
-#: node_modules/react-components/components/sidebar/SubSidebar.js:10
-msgctxt "Title"
-msgid "Navigation"
-msgstr "Navigazione"
-
 #: node_modules/react-components/components/dropdown/DropdownActions.js:48
 msgctxt "Title"
 msgid "Open actions dropdown"
@@ -720,42 +715,42 @@ msgstr "Il mio abbonamento"
 
 #: src/app/components/sections/plans/PlansSection.js:137
 #: src/app/components/sections/plans/PlansSection.js:145
-#: src/app/containers/DashboardContainer.js:31
+#: src/app/containers/DashboardContainer.js:32
 msgctxt "Title"
 msgid "Plans"
 msgstr "Piani"
 
-#: src/app/containers/DashboardContainer.js:25
+#: src/app/containers/DashboardContainer.js:26
 msgctxt "Title"
 msgid "Dashboard"
 msgstr "Pannello di controllo"
 
-#: src/app/containers/DashboardContainer.js:40
+#: src/app/containers/DashboardContainer.js:41
 msgctxt "Title"
 msgid "Billing"
 msgstr "Fatturazione"
 
-#: src/app/containers/AccountContainer.js:17
+#: src/app/containers/AccountContainer.js:18
 msgctxt "Title"
 msgid "Account"
 msgstr "Account"
 
-#: src/app/containers/AccountContainer.js:46
+#: src/app/containers/AccountContainer.js:47
 msgctxt "Title"
 msgid "Delete"
 msgstr "Elimina"
 
-#: src/app/containers/DownloadsContainer.js:9
+#: src/app/containers/DownloadsContainer.js:10
 msgctxt "Title"
 msgid "Downloads"
 msgstr "Download"
 
-#: src/app/containers/PaymentsContainer.js:12
+#: src/app/containers/PaymentsContainer.js:13
 msgctxt "Title"
 msgid "Payments"
 msgstr "Pagamenti"
 
-#: src/app/containers/LoginContainer.js:15
+#: src/app/containers/LoginContainer.js:24
 msgctxt "Title"
 msgid "User log in"
 msgstr "Login utente"
@@ -1076,8 +1071,8 @@ msgstr "Rimuovi bonus"
 
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:257
 #: node_modules/react-components/containers/invoices/InvoiceActions.js:38
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:102
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:105
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:101
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:104
 #: node_modules/react-components/containers/vpn/ProtonVPNClientsSection/VPNClientCard.js:14
 msgctxt "Action"
 msgid "Download"
@@ -1621,7 +1616,7 @@ msgctxt "Info"
 msgid "Tor"
 msgstr "Tor"
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:101
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:100
 #: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/OpenVPNConfigurationSection.js:205
 msgctxt "Info"
 msgid "Plan upgrade required"
@@ -3204,52 +3199,32 @@ msgctxt "Link"
 msgid "Learn more"
 msgstr "Per saperne di più"
 
-#: src/app/components/layout/PrivateLayout.js:17
+#: src/app/components/page/Page.js:43
 msgctxt "Link"
-msgid "Dashboard"
-msgstr "Pannello di controllo"
-
-#: src/app/components/layout/PrivateLayout.js:22
-msgctxt "Link"
-msgid "Account"
-msgstr "Account"
-
-#: src/app/components/layout/PrivateLayout.js:27
-msgctxt "Link"
-msgid "Downloads"
-msgstr "Download"
-
-#: src/app/components/layout/PrivateLayout.js:32
-msgctxt "Link"
-msgid "Payments"
-msgstr "Pagamenti"
+msgid "Upgrade now"
+msgstr "Effettua l'upgrade ora"
 
 #: src/app/components/layout/PublicHeader.js:14
 msgctxt "Link"
 msgid "protonvpn.com"
 msgstr "protonvpn.com"
 
-#: src/app/components/page/Page.js:25
-msgctxt "Link"
-msgid "Upgrade now"
-msgstr "Effettua l'upgrade ora"
-
-#: src/app/containers/LoginContainer.js:22
+#: src/app/containers/LoginContainer.js:31
 msgctxt "Link"
 msgid "Reset password"
 msgstr "Reimposta la password"
 
-#: src/app/containers/LoginContainer.js:25
+#: src/app/containers/LoginContainer.js:34
 msgctxt "Link"
 msgid "Forgot username?"
 msgstr "Nome utente dimenticato?"
 
-#: src/app/containers/LoginContainer.js:28
+#: src/app/containers/LoginContainer.js:37
 msgctxt "Link"
 msgid "Common login problems"
 msgstr "Problemi comuni di login"
 
-#: src/app/containers/LoginContainer.js:32
+#: src/app/containers/LoginContainer.js:41
 msgctxt "Link"
 msgid "Contact support"
 msgstr "Contatta il supporto"
@@ -3356,22 +3331,22 @@ msgctxt "CountryInfo"
 msgid "(via ${ exitCountryName })"
 msgstr "(tramite ${ exitCountryName })"
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:80
 msgctxt "TableHeader"
 msgid "Name"
 msgstr "Nome"
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:81
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:80
 msgctxt "TableHeader"
 msgid "Country"
 msgstr "Paese"
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:83
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:82
 msgctxt "TableHeader"
 msgid "Status"
 msgstr "Stato"
 
-#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:84
+#: node_modules/react-components/containers/vpn/OpenVPNConfigurationSection/ConfigsTable.js:83
 msgctxt "TableHeader"
 msgid "Action"
 msgstr "Azione"
@@ -3847,7 +3822,7 @@ msgctxt "Separator, spacing is important"
 msgid " and "
 msgstr " e "
 
-#: src/app/containers/LoginContainer.js:19
+#: src/app/containers/LoginContainer.js:28
 msgctxt "Dropdown button"
 msgid "Need help?"
 msgstr "Hai bisogno di aiuto?"
