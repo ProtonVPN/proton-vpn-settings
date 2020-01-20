@@ -1,8 +1,8 @@
 {
-  "version": "4.0.1",
+  "version": "4.1.4",
   "api_version": 1,
   "layout": {
-    "logo": "/assets/yandex-browser-50x50.png",
+    "logo": "/settings/assets/yandex-browser-50x50.png",
     "color": "#ddd",
     "show_title": true
   }
