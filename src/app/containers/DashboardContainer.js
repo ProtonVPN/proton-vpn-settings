@@ -14,7 +14,7 @@ export const getDashboardPage = (user = {}) => {
         icon: 'dashboard',
         permissions: [UPGRADER],
         sections: [
-            !user.isPaid && {
+            !user.hasPaidVpn && {
                 text: c('Title').t`Plans`,
                 id: 'plans'
             },
@@ -39,7 +39,7 @@ const DashboardContainer = () => {
         return null;
     }
 
-    if (user.isPaid) {
+    if (user.hasPaidVpn) {
         return (
             <Page config={getDashboardPage(user)}>
                 <SubscriptionSection />
