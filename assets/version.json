@@ -1,1 +1,7 @@
-{ "version": "v4.1.4", "commit": "5f58ee98c5f36bfa8386e414b619d1f0202a9f3d" }
+{
+    "version": "v4.1.5",
+    "commit": "c5e7f10654c4648591147b2be2c235a1f114d652",
+    "branch": "HEAD",
+    "buildDate": "2020-01-22T11:45:18Z",
+    "release": "v4.1.5-0-gc5e7f10"
+}
