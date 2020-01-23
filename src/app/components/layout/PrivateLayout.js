@@ -11,6 +11,7 @@ import DashboardContainer from '../../containers/DashboardContainer';
 import AccountContainer from '../../containers/AccountContainer';
 import DownloadsContainer from '../../containers/DownloadsContainer';
 import PaymentsContainer from '../../containers/PaymentsContainer';
+import SettingsContainer from '../../containers/SettingsContainer';
 
 const PrivateLayout = ({ location }) => {
     const mainAreaRef = useRef();
@@ -96,6 +97,16 @@ const PrivateLayout = ({ location }) => {
                                             exact
                                             render={({ history }) => (
                                                 <PaymentsContainer
+                                                    history={history}
+                                                    setActiveSection={setActiveSection}
+                                                />
+                                            )}
+                                        />
+                                        <Route
+                                            path="/settings"
+                                            exact
+                                            render={({ history }) => (
+                                                <SettingsContainer
                                                     history={history}
                                                     setActiveSection={setActiveSection}
                                                 />
