@@ -9,14 +9,12 @@ import RedeemContainer from './containers/RedeemContainer';
 import PreInviteContainer from './containers/PreInviteContainer';
 import SignupContainer from './containers/SignupContainer/SignupContainer';
 
-import locales from './locales';
-
 const PublicApp = ({ onLogin }) => {
     const hasStopRedirect = useRef(false);
     const stopRedirect = () => (hasStopRedirect.current = true);
 
     return (
-        <StandardPublicApp locales={locales}>
+        <StandardPublicApp>
             <PublicLayout>
                 <Switch>
                     <Route path="/redeem" render={({ history }) => <RedeemContainer history={history} />} />
