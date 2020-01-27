@@ -1,7 +1,1 @@
-{
-    "version": "v4.1.5",
-    "commit": "432dc5949e56caf3128483de7e8bebf4e861013a",
-    "branch": "master",
-    "buildDate": "2020-01-27T10:37:10Z",
-    "release": "heads/master-0-g432dc59-dirty"
-}
+{ "version": "v4.1.4", "commit": "98d46c413eee5a17cc599b4b7a699d910ba7c663" }
