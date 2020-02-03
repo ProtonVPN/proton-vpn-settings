@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Portuguese, Brazilian\n"
 "Language: pt_BR\n"
-"PO-Revision-Date: 2020-01-26 09:20\n"
+"PO-Revision-Date: 2020-01-30 12:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -120,7 +120,7 @@ msgctxt "Error"
 msgid "Amount above the maximum."
 msgstr "Quantidade acima do máximo."
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:51
+#: node_modules/react-components/containers/payments/Bitcoin.js:53
 msgctxt "Error"
 msgid "Error connecting to the Bitcoin API."
 msgstr "Erro ao conectar com a API do Bitcoin."
@@ -912,7 +912,7 @@ msgctxt "Action"
 msgid "Close"
 msgstr "Fechar"
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:52
+#: node_modules/react-components/containers/payments/Bitcoin.js:54
 #: node_modules/react-components/containers/payments/PayPal.js:105
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:165
 msgctxt "Action"
@@ -1580,18 +1580,18 @@ msgctxt "Info"
 msgid "+2 connections for ProtonVPN (allows you to connect more devices to VPN)"
 msgstr "+2 conexões para ProtonVPN (permite conectar mais dispositivos na VPN)"
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:40
+#: node_modules/react-components/containers/payments/Bitcoin.js:42
 #, javascript-format
 msgctxt "Info"
-msgid "Amount below minimum. (${ amount })"
-msgstr "Valor abaixo do mínimo. (${ amount })"
+msgid "Amount below minimum (${ amount })."
+msgstr "Valor abaixo do mínimo (${ amount })."
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:64
+#: node_modules/react-components/containers/payments/Bitcoin.js:66
 msgctxt "Info"
 msgid "Bitcoin transactions can take some time to be confirmed (up to 24 hours). Once confirmed, we will add credits to your account. After transaction confirmation, you can pay your invoice with the credits."
 msgstr "As transações em Bitcoin podem levar algum tempo para serem confirmadas (até 24 horas). Uma vez confirmada, adicionaremos os créditos na sua conta. Após a confirmação da transação, você pode pagar sua fatura com os créditos."
 
-#: node_modules/react-components/containers/payments/Bitcoin.js:73
+#: node_modules/react-components/containers/payments/Bitcoin.js:75
 msgctxt "Info"
 msgid "After making your Bitcoin payment, please follow the instructions below to upgrade."
 msgstr "Após efetuar o seu pagamento em Bitcoin. Por favor, siga as instruções abaixo para fazer o upgrade de plano."
@@ -2111,7 +2111,7 @@ msgctxt "Placeholder"
 msgid "Coupon"
 msgstr "Cupom"
 
-#: node_modules/react-components/containers/payments/PaymentSelector.js:47
+#: node_modules/react-components/containers/payments/PaymentSelector.js:51
 msgctxt "Placeholder"
 msgid "Other"
 msgstr "Outro"
@@ -2480,12 +2480,12 @@ msgctxt "Label"
 msgid "Renewal date"
 msgstr "Data de renovação"
 
-#: node_modules/react-components/containers/payments/BitcoinDetails.js:10
+#: node_modules/react-components/containers/payments/BitcoinDetails.js:11
 msgctxt "Label"
-msgid "Amount BTC"
+msgid "BTC amount"
 msgstr "Valor em BTC"
 
-#: node_modules/react-components/containers/payments/BitcoinDetails.js:16
+#: node_modules/react-components/containers/payments/BitcoinDetails.js:20
 msgctxt "Label"
 msgid "BTC address"
 msgstr "Endereço BTC"
@@ -2700,7 +2700,7 @@ msgctxt "Label"
 msgid "Cardholder name"
 msgstr "Nome do titular do cartão"
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:68
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:70
 msgctxt "Label"
 msgid "Pay with cash"
 msgstr "Pagar com dinheiro"
@@ -2735,12 +2735,12 @@ msgctxt "Label"
 msgid "Customize invoices"
 msgstr "Personalizar faturas"
 
-#: node_modules/react-components/components/button/Copy.js:20
+#: node_modules/react-components/components/button/Copy.js:21
 msgctxt "Label"
 msgid "Copied"
 msgstr "Copiado"
 
-#: node_modules/react-components/components/button/Copy.js:20
+#: node_modules/react-components/components/button/Copy.js:21
 msgctxt "Label"
 msgid "Copy"
 msgstr "Copiar"
@@ -3659,7 +3659,7 @@ msgctxt "Payment method option"
 msgid "Pay with PayPal"
 msgstr "Pagar com PayPal"
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:63
+#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:64
 msgctxt "Payment method option"
 msgid "Pay with Bitcoin"
 msgstr "Pagar com Bitcoin"
