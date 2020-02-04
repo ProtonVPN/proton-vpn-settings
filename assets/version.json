@@ -1,7 +1,7 @@
 {
-    "version": "v4.1.6",
-    "commit": "b77fc89b74a47b778dc2ecf795d7e3ca1813fe70",
-    "branch": "master",
-    "buildDate": "2020-02-04T13:13:02Z",
-    "release": "heads/master-0-gb77fc89-dirty"
+    "version": "v4.1.7",
+    "commit": "7ae07ddc74548e7f2d26b7b75153bf3cedcba6ef",
+    "branch": "HEAD",
+    "buildDate": "2020-02-04T18:10:02Z",
+    "release": "v4.1.7-0-g7ae07dd-dirty"
 }
