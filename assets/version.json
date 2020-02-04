@@ -1,7 +1,7 @@
 {
-    "version": "v4.1.5",
-    "commit": "c5e7f10654c4648591147b2be2c235a1f114d652",
+    "version": "v4.1.6",
+    "commit": "c205d3018bdaa710c2d4439ded766f8df269f527",
     "branch": "HEAD",
-    "buildDate": "2020-01-27T10:48:07Z",
-    "release": "v4.1.5-0-gc5e7f10"
+    "buildDate": "2020-02-04T09:03:04Z",
+    "release": "v4.1.6-0-gc205d30"
 }
