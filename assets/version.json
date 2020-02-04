@@ -1,7 +1,7 @@
 {
-    "version": "v4.1.5",
-    "commit": "5222e4c37a2be3d4ad49472460541b28508bce07",
-    "branch": "feat/themes-section",
-    "buildDate": "2020-02-03T16:23:22Z",
-    "release": "heads/feat/themes-section-0-g5222e4c"
+    "version": "v4.1.6",
+    "commit": "b77fc89b74a47b778dc2ecf795d7e3ca1813fe70",
+    "branch": "master",
+    "buildDate": "2020-02-04T13:13:02Z",
+    "release": "heads/master-0-gb77fc89-dirty"
 }
