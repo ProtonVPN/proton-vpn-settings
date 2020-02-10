@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: French\n"
 "Language: fr_FR\n"
-"PO-Revision-Date: 2020-01-30 07:20\n"
+"PO-Revision-Date: 2020-02-09 21:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -24,208 +24,6 @@ msgstr "Mo"
 msgctxt "file size format"
 msgid "GB"
 msgstr "Go"
-
-#: node_modules/proton-shared/lib/keys/keys.js:102
-msgctxt "Error"
-msgid "Signature verification failed"
-msgstr "Échec de la vérification de la signature"
-
-#: node_modules/proton-shared/lib/keys/keys.js:122
-msgctxt "Error"
-msgid "Incorrect decryption password"
-msgstr "Mot de passe de déchiffrement incorrect"
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:32
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:128
-msgctxt "Error"
-msgid "Process aborted"
-msgstr "Processus interrompu"
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:36
-msgctxt "Error"
-msgid "Payment process cancelled"
-msgstr "Processus de paiement annulé"
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:42
-msgctxt "Error"
-msgid "Payment process failed"
-msgstr "Échec du processus de paiement"
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:46
-msgctxt "Error"
-msgid "Payment process consumed"
-msgstr "Processus de paiement achevé"
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:50
-msgctxt "Error"
-msgid "Payment process not supported"
-msgstr "Processus de paiement non pris en charge"
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:62
-msgctxt "Error"
-msgid "Unknown payment token status"
-msgstr "Statut du jeton de paiement inconnu"
-
-#: node_modules/react-components/containers/payments/paymentTokenHelper.js:95
-msgctxt "Error"
-msgid "Tab closed"
-msgstr "Onglet fermé"
-
-#: node_modules/react-components/containers/payments/GiftCodeInput.js:9
-#: node_modules/react-components/containers/payments/GiftCodeModal.js:31
-#: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:14
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:81
-msgctxt "Error"
-msgid "Invalid gift code"
-msgstr "Code cadeau invalide"
-
-#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:75
-msgctxt "Error"
-msgid "Your coupon is invalid or cannot be applied to your plan"
-msgstr "Votre code promo est invalide ou ne peut pas être appliqué à votre offre"
-
-#: node_modules/react-components/containers/payments/cardValidator.js:16
-msgctxt "Error"
-msgid "Name on card required"
-msgstr "Nom du titulaire de la carte requis"
-
-#: node_modules/react-components/containers/payments/cardValidator.js:22
-msgctxt "Error"
-msgid "Invalid expiration date"
-msgstr "Date d’expiration invalide"
-
-#: node_modules/react-components/containers/payments/cardValidator.js:27
-msgctxt "Error"
-msgid "Invalid card number"
-msgstr "Numéro de carte invalide"
-
-#: node_modules/react-components/containers/payments/cardValidator.js:36
-#, javascript-format
-msgctxt "Error"
-msgid "Invalid ${ name } code"
-msgstr "Code ${ name } invalide"
-
-#: node_modules/react-components/containers/payments/cardValidator.js:43
-msgctxt "Error"
-msgid "Invalid postal code"
-msgstr "Code postal invalide"
-
-#: node_modules/react-components/containers/payments/PayPal.js:85
-msgctxt "Error"
-msgid "Amount below minimum."
-msgstr "Montant inférieur au minimum autorisé."
-
-#: node_modules/react-components/containers/payments/PayPal.js:91
-msgctxt "Error"
-msgid "Amount above the maximum."
-msgstr "Montant supérieur au maximum autorisé."
-
-#: node_modules/react-components/containers/payments/Bitcoin.js:53
-msgctxt "Error"
-msgid "Error connecting to the Bitcoin API."
-msgstr "Erreur lors de la connexion à l'API de Bitcoin."
-
-#: node_modules/react-components/containers/payments/Payment.js:50
-#, javascript-format
-msgctxt "Error"
-msgid "The minimum amount that can be donated is ${ price }"
-msgstr "Le montant minimum qui peut être donné est ${ price }"
-
-#: node_modules/react-components/containers/payments/Payment.js:59
-#, javascript-format
-msgctxt "Error"
-msgid "The minimum amount of credit that can be added is ${ _price }"
-msgstr "Le montant minimum de crédit qui peut être ajouté est ${ _price }"
-
-#: node_modules/react-components/containers/payments/Payment.js:68
-#, javascript-format
-msgctxt "Error"
-msgid "The minimum payment we accept is ${ _price2 }"
-msgstr "Le paiement minimum que nous acceptons est de ${ _price2 }"
-
-#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:31
-#, javascript-format
-msgctxt "Error"
-msgid "'${ credentials.username }' is a reserved word. Please set another username."
-msgstr "'${ credentials.username } est un mot réservé. Veuillez choisir un autre nom d'utilisateur."
-
-#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:38
-msgctxt "Error"
-msgid "Please enter '${ WORD }'"
-msgstr "Veuillez entrer '${ WORD }'"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:96
-#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:37
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:114
-msgctxt "Error"
-msgid "Passwords do not match"
-msgstr "Les mots de passe ne correspondent pas"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:231
-msgctxt "Error"
-msgid "Please generate keys before you try to change your password."
-msgstr "Veuillez générer des clés avant de tenter de changer votre mot de passe."
-
-#: node_modules/react-components/containers/api/ApiProvider.js:47
-msgctxt "Error"
-msgid "Could not connect to server."
-msgstr "Impossible de se connecter au serveur."
-
-#: node_modules/react-components/containers/api/ApiProvider.js:48
-msgctxt "Error"
-msgid "No internet connection found"
-msgstr "Aucune connexion internet trouvée"
-
-#: node_modules/react-components/containers/api/ApiProvider.js:56
-msgctxt "Error"
-msgid "Request timed out."
-msgstr "La requête a expiré."
-
-#: node_modules/react-components/containers/notification/EmailSection.js:44
-#: node_modules/react-components/containers/notification/EmailSection.js:54
-msgctxt "Error"
-msgid "Please set a recovery/notification email"
-msgstr "Veuillez définir une adresse e-mail de récupération/notification"
-
-#: node_modules/react-components/containers/invoices/InvoiceActions.js:53
-msgctxt "Error"
-msgid "Payments are currently not available, please try again later"
-msgstr "Les paiements sont actuellement indisponibles, veuillez réessayer ultérieurement"
-
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:75
-msgctxt "Error"
-msgid "You have no invoices."
-msgstr "Vous n'avez pas de factures."
-
-#: node_modules/react-components/containers/invoices/InvoicesSection.js:85
-msgctxt "Error"
-msgid "Your account or organization currently has an overdue invoice. Please pay all unpaid invoices."
-msgstr "Votre compte ou organisation possède actuellement une facture en retard. Veuillez régler toutes les factures impayées."
-
-#: node_modules/react-components/components/alert/DoNotWindowOpenAlertError.js:7
-msgctxt "Error"
-msgid "The browser you are using does not allow the payment to be fully authorized. Please use a different browser or log in via a computer."
-msgstr "Le navigateur que vous utilisez ne permet pas d'autoriser entièrement le paiement. Veuillez utiliser un autre navigateur ou vous connecter via un ordinateur."
-
-#: node_modules/react-components/components/input/Input.js:32
-msgctxt "Error"
-msgid "This field is required"
-msgstr "Ce champ est obligatoire"
-
-#: node_modules/react-components/components/input/EmailInput.js:9
-msgctxt "Error"
-msgid "Email address invalid"
-msgstr "Adresse e-mail invalide"
-
-#: src/app/containers/PreInviteContainer.js:16
-msgctxt "Error"
-msgid "Invalid invitation link"
-msgstr "Lien d'invitation invalide"
-
-#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:54
-msgctxt "Error"
-msgid "Can't check username, try again later"
-msgstr "Impossible de vérifier le nom d'utilisateur, réessayez plus tard"
 
 #: node_modules/proton-shared/lib/themes/themes.js:13
 msgctxt "Theme"
@@ -303,17 +101,17 @@ msgctxt "Title"
 msgid "Confirm downgrade"
 msgstr "Confirmez votre passage à une offre inférieure"
 
-#: node_modules/react-components/containers/payments/EditCardModal.js:18
+#: node_modules/react-components/containers/payments/EditCardModal.js:19
 msgctxt "Title"
 msgid "Edit credit/debit card"
 msgstr "Modifier la carte de crédit / débit"
 
-#: node_modules/react-components/containers/payments/EditCardModal.js:18
+#: node_modules/react-components/containers/payments/EditCardModal.js:19
 msgctxt "Title"
 msgid "Add credit/debit card"
 msgstr "Ajouter une carte de crédit / débit"
 
-#: node_modules/react-components/containers/payments/PayPalModal.js:23
+#: node_modules/react-components/containers/payments/PayPalModal.js:24
 msgctxt "Title"
 msgid "Add PayPal payment method"
 msgstr "Ajouter le mode de paiement PayPal"
@@ -529,7 +327,6 @@ msgid "Forgot your username?"
 msgstr "Vous avez oublié votre nom d'utilisateur ?"
 
 #: node_modules/react-components/containers/login/UnlockModal.js:33
-#: node_modules/react-components/containers/password/AskAuthModal.js:17
 msgctxt "Title"
 msgid "Sign in again to continue"
 msgstr "Connectez-vous à nouveau pour continuer"
@@ -543,34 +340,6 @@ msgstr "Réinitialiser le mot de passe"
 msgctxt "Title"
 msgid "Account disabled"
 msgstr "Compte désactivé"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:123
-#: node_modules/react-components/containers/account/PasswordsSection.js:38
-msgctxt "Title"
-msgid "Change login password"
-msgstr "Changer le mot de passe de connexion"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:151
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:185
-msgctxt "Title"
-msgid "Switch to two-password mode"
-msgstr "Passer en mode deux mots de passe"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:276
-msgctxt "Title"
-msgid "Switch to one-password mode"
-msgstr "Passer en mode un seul mot de passe"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:294
-#: node_modules/react-components/containers/account/PasswordsSection.js:38
-msgctxt "Title"
-msgid "Change password"
-msgstr "Changer le mot de passe"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:306
-msgctxt "Title"
-msgid "Change mailbox password"
-msgstr "Changer le mot de passe de messagerie"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:23
 #: src/app/containers/AccountContainer.js:27
@@ -587,6 +356,16 @@ msgstr "Mot de passe"
 msgctxt "Title"
 msgid "Login password"
 msgstr "Mot de passe de connexion"
+
+#: node_modules/react-components/containers/account/PasswordsSection.js:38
+msgctxt "Title"
+msgid "Change password"
+msgstr "Changer le mot de passe"
+
+#: node_modules/react-components/containers/account/PasswordsSection.js:38
+msgctxt "Title"
+msgid "Change login password"
+msgstr "Changer le mot de passe de connexion"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:97
 #: node_modules/react-components/containers/account/DeleteSection.js:33
@@ -623,8 +402,9 @@ msgctxt "Title"
 msgid "Two-factor authentication"
 msgstr "Authentification à deux facteurs"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:33
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:51
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:32
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:41
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:59
 #: src/app/containers/PaymentsContainer.js:19
 msgctxt "Title"
 msgid "Payment methods"
@@ -880,7 +660,7 @@ msgstr "Inscription"
 #: node_modules/react-components/components/modal/Confirm.js:11
 #: node_modules/react-components/components/modal/FormModal.js:19
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:95
-#: node_modules/react-components/containers/login/LoginForm.js:216
+#: node_modules/react-components/containers/login/LoginForm.js:221
 #: node_modules/react-components/containers/payments/PayPal.js:137
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:101
 #: node_modules/react-components/containers/payments/PaymentVerificationModal.js:143
@@ -899,8 +679,6 @@ msgid "Verify"
 msgstr "Vérifier "
 
 #: node_modules/react-components/components/modal/PreviewPDFModal.js:8
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:420
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:434
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:38
 #: node_modules/react-components/containers/invoices/PayInvoiceModal.js:49
 #: node_modules/react-components/containers/login/AbuseModal.js:21
@@ -934,9 +712,8 @@ msgctxt "Action"
 msgid "Downgrade"
 msgstr "Rétrograder"
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:435
 #: node_modules/react-components/containers/invoices/InvoiceTextModal.js:39
-#: node_modules/react-components/containers/payments/EditCardModal.js:51
+#: node_modules/react-components/containers/payments/EditCardModal.js:52
 msgctxt "Action"
 msgid "Save"
 msgstr "Sauvegarder"
@@ -1121,8 +898,8 @@ msgstr "Ajouter une ou des capture(s) d'écran"
 #: node_modules/react-components/components/modal/FormModal.js:20
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:76
 #: node_modules/react-components/containers/account/EnableTwoFactorModal.js:222
-#: node_modules/react-components/containers/login/LoginForm.js:239
-#: node_modules/react-components/containers/login/LoginForm.js:267
+#: node_modules/react-components/containers/login/LoginForm.js:244
+#: node_modules/react-components/containers/login/LoginForm.js:272
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:44
 #: node_modules/react-components/containers/support/BugModal.js:135
 msgctxt "Action"
@@ -1159,16 +936,10 @@ msgctxt "Action"
 msgid "Reset my password"
 msgstr "Réinitialiser mon mot de passe"
 
-#: node_modules/react-components/containers/login/LoginForm.js:207
+#: node_modules/react-components/containers/login/LoginForm.js:212
 msgctxt "Action"
 msgid "Log in"
 msgstr "Connexion"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:421
-#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:265
-msgctxt "Action"
-msgid "Ok"
-msgstr "Ok"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:93
 msgctxt "Action"
@@ -1176,7 +947,7 @@ msgid "Change mailbox password"
 msgstr "Changer le mot de passe de messagerie"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:96
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:65
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:67
 msgctxt "Action"
 msgid "Delete"
 msgstr "Supprimer"
@@ -1193,29 +964,34 @@ msgctxt "Action"
 msgid "Back"
 msgstr "Retour"
 
+#: node_modules/react-components/containers/account/EnableTwoFactorModal.js:265
+msgctxt "Action"
+msgid "Ok"
+msgstr "Ok"
+
 #: node_modules/react-components/containers/account/DisableTwoFactorModal.js:38
 msgctxt "Action"
 msgid "Yes"
 msgstr "Oui"
 
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:15
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:56
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:58
 #: src/app/containers/SignupContainer/VerificationStep/VerificationForm/VerificationCodeForm/ResendCodeModal.js:7
 msgctxt "Action"
 msgid "Edit"
 msgstr "Modifier"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:61
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:63
 msgctxt "Action"
 msgid "Mark as default"
 msgstr "Définir par défaut"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:61
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:69
 msgctxt "Action"
 msgid "Add credit / debit card"
 msgstr "Ajouter une carte de crédit / débit"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:63
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:71
 msgctxt "Action"
 msgid "Add PayPal"
 msgstr "Ajouter PayPal"
@@ -1562,8 +1338,8 @@ msgstr "Nous utilisons toujours les crédits disponibles avant de facturer votre
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:13
 msgctxt "Info"
-msgid "As an early Proton user, your account has extra features.."
-msgstr "Étant un des premiers utilisateurs de Proton, votre compte bénéficie de fonctionnalités supplémentaires."
+msgid "As an early Proton user, your account has extra features."
+msgstr "En tant qu'utilisateur Proton de la première heure, votre compte dispose de fonctionnalités supplémentaires."
 
 #: node_modules/react-components/containers/payments/LossLoyaltyModal.js:15
 msgctxt "Info"
@@ -1725,7 +1501,6 @@ msgctxt "Info"
 msgid "Keep this password safe, it cannot be recovered."
 msgstr "Gardez précieusement ce mot de passe, il ne pourra pas être récupéré ultérieurement."
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:330
 #: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:41
 msgctxt "Info"
 msgid "Do NOT forget this password. If you forget it, you will not be able to login or decrypt your messages."
@@ -1757,27 +1532,6 @@ msgstr "Compte désactivé en raison de : ${ abuseOrFraudLink }."
 msgctxt "Info"
 msgid "You can find more information and contact us ${ contactLink }."
 msgstr "Vous pouvez trouver plus d'informations et nous contacter ${ contactLink }."
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:154
-msgctxt "Info"
-msgid "Two-password mode uses separate passwords for login and mailbox decryption. This provides a minor security benefit in some situations, however we recommend one-password mode for most users. To switch to two password mode, first set a login password and then set a mailbox password."
-msgstr "Le mode à deux mots de passe utilise des mots de passe distincts pour la connexion à votre compte et pour le déchiffrement de votre messagerie. Ce mode fournit un léger avantage en terme de sécurité dans certains cas. Cependant, nous recommandons le mode mot de passe unique pour la plupart des utilisateurs. Pour activer le mode à deux mots de passe, configurez d’abord le mot de passe de connexion à votre compte, puis le mot de passe de messagerie."
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:284
-msgctxt "Info"
-msgid "ProtonMail can also be used with a single password which replaces both the login and mailbox password. To switch to single password mode, enter the single password you would like to use and click Save."
-msgstr "ProtonMail peut également être utilisé avec un mot de passe unique qui remplace à la fois le mot de passe de connexion et celui de messagerie. Pour basculer en mode mot de passe unique, entrez le mot de passe que vous souhaitez utiliser et cliquez sur Enregistrer."
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:334
-#, javascript-format
-msgctxt "Info"
-msgid "Save your password somewhere safe. Click on the ${ eye } icon to confirm you that have typed your password correctly."
-msgstr "Conservez votre mot de passe dans un endroit sûr. Cliquez sur l'icône ${ eye } pour confirmer que vous avez correctement tapé votre mot de passe."
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:338
-msgctxt "Info"
-msgid "We recommend adding a recovery email address first. Otherwise, you cannot recover your account if something goes wrong."
-msgstr "Nous vous recommandons d'ajouter tout d'abord une adresse e-mail de récupération. Dans le cas contraire, vous ne pourrez pas récupérer votre compte en cas de problème."
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:102
 msgctxt "Info"
@@ -1908,12 +1662,12 @@ msgctxt "Info"
 msgid "You have no saved payment methods."
 msgstr "Vous n'avez aucun mode de paiement enregistré."
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:43
+#: node_modules/react-components/containers/paymentMethods/useMethods.js:43
 msgctxt "Info"
 msgid "Expired"
 msgstr "Expiré"
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:44
+#: node_modules/react-components/containers/paymentMethods/useMethods.js:44
 msgctxt "Info"
 msgid "default"
 msgstr "défaut"
@@ -2066,6 +1820,197 @@ msgctxt "Info"
 msgid "Creating your account"
 msgstr "Création de votre compte"
 
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:32
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:128
+msgctxt "Error"
+msgid "Process aborted"
+msgstr "Processus interrompu"
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:36
+msgctxt "Error"
+msgid "Payment process cancelled"
+msgstr "Processus de paiement annulé"
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:42
+msgctxt "Error"
+msgid "Payment process failed"
+msgstr "Échec du processus de paiement"
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:46
+msgctxt "Error"
+msgid "Payment process consumed"
+msgstr "Processus de paiement achevé"
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:50
+msgctxt "Error"
+msgid "Payment process not supported"
+msgstr "Processus de paiement non pris en charge"
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:62
+msgctxt "Error"
+msgid "Unknown payment token status"
+msgstr "Statut du jeton de paiement inconnu"
+
+#: node_modules/react-components/containers/payments/paymentTokenHelper.js:95
+msgctxt "Error"
+msgid "Tab closed"
+msgstr "Onglet fermé"
+
+#: node_modules/react-components/containers/payments/GiftCodeInput.js:9
+#: node_modules/react-components/containers/payments/GiftCodeModal.js:31
+#: node_modules/react-components/containers/payments/subscription/GiftCodeForm.js:14
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:81
+msgctxt "Error"
+msgid "Invalid gift code"
+msgstr "Code cadeau invalide"
+
+#: node_modules/react-components/containers/payments/subscription/SubscriptionModal.js:75
+msgctxt "Error"
+msgid "Your coupon is invalid or cannot be applied to your plan"
+msgstr "Votre code promo est invalide ou ne peut pas être appliqué à votre offre"
+
+#: node_modules/react-components/containers/payments/cardValidator.js:16
+msgctxt "Error"
+msgid "Name on card required"
+msgstr "Nom du titulaire de la carte requis"
+
+#: node_modules/react-components/containers/payments/cardValidator.js:22
+msgctxt "Error"
+msgid "Invalid expiration date"
+msgstr "Date d’expiration invalide"
+
+#: node_modules/react-components/containers/payments/cardValidator.js:27
+msgctxt "Error"
+msgid "Invalid card number"
+msgstr "Numéro de carte invalide"
+
+#: node_modules/react-components/containers/payments/cardValidator.js:36
+#, javascript-format
+msgctxt "Error"
+msgid "Invalid ${ name } code"
+msgstr "Code ${ name } invalide"
+
+#: node_modules/react-components/containers/payments/cardValidator.js:43
+msgctxt "Error"
+msgid "Invalid postal code"
+msgstr "Code postal invalide"
+
+#: node_modules/react-components/containers/payments/PayPal.js:85
+msgctxt "Error"
+msgid "Amount below minimum."
+msgstr "Montant inférieur au minimum autorisé."
+
+#: node_modules/react-components/containers/payments/PayPal.js:91
+msgctxt "Error"
+msgid "Amount above the maximum."
+msgstr "Montant supérieur au maximum autorisé."
+
+#: node_modules/react-components/containers/payments/Bitcoin.js:53
+msgctxt "Error"
+msgid "Error connecting to the Bitcoin API."
+msgstr "Erreur lors de la connexion à l'API de Bitcoin."
+
+#: node_modules/react-components/containers/payments/Payment.js:50
+#, javascript-format
+msgctxt "Error"
+msgid "The minimum amount that can be donated is ${ price }"
+msgstr "Le montant minimum qui peut être donné est ${ price }"
+
+#: node_modules/react-components/containers/payments/Payment.js:59
+#, javascript-format
+msgctxt "Error"
+msgid "The minimum amount of credit that can be added is ${ _price }"
+msgstr "Le montant minimum de crédit qui peut être ajouté est ${ _price }"
+
+#: node_modules/react-components/containers/payments/Payment.js:68
+#, javascript-format
+msgctxt "Error"
+msgid "The minimum payment we accept is ${ _price2 }"
+msgstr "Le paiement minimum que nous acceptons est de ${ _price2 }"
+
+#: node_modules/react-components/containers/vpn/OpenVPNAccountSection/OpenVPNCredentialsModal.js:31
+#, javascript-format
+msgctxt "Error"
+msgid "'${ credentials.username }' is a reserved word. Please set another username."
+msgstr "'${ credentials.username } est un mot réservé. Veuillez choisir un autre nom d'utilisateur."
+
+#: node_modules/react-components/containers/resetPassword/DangerVerificationForm.js:38
+msgctxt "Error"
+msgid "Please enter '${ WORD }'"
+msgstr "Veuillez entrer '${ WORD }'"
+
+#: node_modules/react-components/containers/resetPassword/NewPasswordForm.js:37
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:114
+msgctxt "Error"
+msgid "Passwords do not match"
+msgstr "Les mots de passe ne correspondent pas"
+
+#: node_modules/react-components/containers/login/LoginForm.js:88
+msgctxt "Error"
+msgid "Wrong mailbox password"
+msgstr "Mauvais mot de passe de messagerie"
+
+#: node_modules/react-components/containers/api/ApiProvider.js:47
+msgctxt "Error"
+msgid "Could not connect to server."
+msgstr "Impossible de se connecter au serveur."
+
+#: node_modules/react-components/containers/api/ApiProvider.js:48
+msgctxt "Error"
+msgid "No internet connection found"
+msgstr "Aucune connexion internet trouvée"
+
+#: node_modules/react-components/containers/api/ApiProvider.js:56
+msgctxt "Error"
+msgid "Request timed out."
+msgstr "La requête a expiré."
+
+#: node_modules/react-components/containers/notification/EmailSection.js:44
+#: node_modules/react-components/containers/notification/EmailSection.js:54
+msgctxt "Error"
+msgid "Please set a recovery/notification email"
+msgstr "Veuillez définir une adresse e-mail de récupération/notification"
+
+#: node_modules/react-components/containers/invoices/InvoiceActions.js:53
+msgctxt "Error"
+msgid "Payments are currently not available, please try again later"
+msgstr "Les paiements sont actuellement indisponibles, veuillez réessayer ultérieurement"
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:75
+msgctxt "Error"
+msgid "You have no invoices."
+msgstr "Vous n'avez pas de factures."
+
+#: node_modules/react-components/containers/invoices/InvoicesSection.js:85
+msgctxt "Error"
+msgid "Your account or organization currently has an overdue invoice. Please pay all unpaid invoices."
+msgstr "Votre compte ou organisation possède actuellement une facture en retard. Veuillez régler toutes les factures impayées."
+
+#: node_modules/react-components/components/alert/DoNotWindowOpenAlertError.js:7
+msgctxt "Error"
+msgid "The browser you are using does not allow the payment to be fully authorized. Please use a different browser or log in via a computer."
+msgstr "Le navigateur que vous utilisez ne permet pas d'autoriser entièrement le paiement. Veuillez utiliser un autre navigateur ou vous connecter via un ordinateur."
+
+#: node_modules/react-components/components/input/Input.js:32
+msgctxt "Error"
+msgid "This field is required"
+msgstr "Ce champ est obligatoire"
+
+#: node_modules/react-components/components/input/EmailInput.js:9
+msgctxt "Error"
+msgid "Email address invalid"
+msgstr "Adresse e-mail invalide"
+
+#: src/app/containers/PreInviteContainer.js:16
+msgctxt "Error"
+msgid "Invalid invitation link"
+msgstr "Lien d'invitation invalide"
+
+#: src/app/containers/SignupContainer/AccountStep/AccountForm.js:54
+msgctxt "Error"
+msgid "Can't check username, try again later"
+msgstr "Impossible de vérifier le nom d'utilisateur, réessayez plus tard"
+
 #: node_modules/react-components/containers/payments/CycleSelector.js:15
 #: src/app/containers/SignupContainer/PlanStep/PlanStep.js:42
 msgctxt "Billing cycle option"
@@ -2190,8 +2135,6 @@ msgctxt "Placeholder"
 msgid "Username or email"
 msgstr "Nom d'utilisateur ou adresse e-mail"
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:362
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:393
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:147
 #: node_modules/react-components/containers/login/PasswordForm.js:37
 #: node_modules/react-components/containers/password/PasswordTotpInputs.js:13
@@ -2200,7 +2143,6 @@ msgctxt "Placeholder"
 msgid "Password"
 msgstr "Mot de passe"
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:378
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:162
 #: node_modules/react-components/containers/login/TOTPForm.js:20
 #: node_modules/react-components/containers/password/PasswordTotpInputs.js:29
@@ -2212,11 +2154,6 @@ msgstr "Code d'identification à deux facteurs"
 msgctxt "Placeholder"
 msgid "Mailbox password"
 msgstr "Mot de passe de messagerie"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:408
-msgctxt "Placeholder"
-msgid "Confirm"
-msgstr "Confirmez"
 
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:118
 msgctxt "Placeholder"
@@ -2248,13 +2185,13 @@ msgctxt "Placeholder, make it short"
 msgid "Security code"
 msgstr "Code de sécurité"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:51
-#: node_modules/react-components/containers/payments/EditCardModal.js:41
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:53
+#: node_modules/react-components/containers/payments/EditCardModal.js:42
 msgctxt "Success"
 msgid "Payment method updated"
 msgstr "Mode de paiement mis à jour"
 
-#: node_modules/react-components/containers/payments/PayPalModal.js:19
+#: node_modules/react-components/containers/payments/PayPalModal.js:20
 msgctxt "Success"
 msgid "Payment method added"
 msgstr "Mode de paiement ajouté"
@@ -2284,17 +2221,12 @@ msgctxt "Success"
 msgid "If you entered a valid notification email we will send you an email with your usernames in the next minute."
 msgstr "Si vous avez entré une adresse électronique de notification correcte, nous vous enverrons un e-mail avec vos noms d'utilisateurs dans la prochaine minute."
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:114
-msgctxt "Success"
-msgid "Password updated"
-msgstr "Mot de passe mis à jour"
-
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:77
 msgctxt "Success"
 msgid "Account deleted. Logging out..."
 msgstr "Compte supprimé. Déconnexion..."
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:41
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:43
 msgctxt "Success"
 msgid "Payment method deleted"
 msgstr "Mode de paiement supprimé"
@@ -2557,13 +2489,11 @@ msgid "Browser version"
 msgstr "Version du navigateur"
 
 #: node_modules/react-components/containers/login/UnlockModal.js:34
-#: node_modules/react-components/containers/password/AskAuthModal.js:18
 msgctxt "Label"
 msgid "Cancel"
 msgstr "Annuler"
 
 #: node_modules/react-components/containers/login/UnlockModal.js:35
-#: node_modules/react-components/containers/password/AskAuthModal.js:19
 msgctxt "Label"
 msgid "Submit"
 msgstr "Soumettre"
@@ -2588,7 +2518,6 @@ msgctxt "Label"
 msgid "Username"
 msgstr "Nom d'utilisateur"
 
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:371
 #: node_modules/react-components/containers/account/DeleteAccountModal.js:155
 #: node_modules/react-components/containers/login/TOTPForm.js:9
 #: node_modules/react-components/containers/password/PasswordTotpInputs.js:26
@@ -2601,55 +2530,6 @@ msgstr "Code d'identification à deux facteurs"
 msgctxt "Label"
 msgid "Mailbox password"
 msgstr "Mot de passe de messagerie"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:125
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:278
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:308
-msgctxt "Label"
-msgid "Old login password"
-msgstr "Ancien mot de passe de connexion"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:126
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:160
-msgctxt "Label"
-msgid "New login password"
-msgstr "Nouveau mot de passe de connexion"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:127
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:161
-msgctxt "Label"
-msgid "Confirm login password"
-msgstr "Confirmez le mot de passe de connexion"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:159
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:296
-msgctxt "Label"
-msgid "Old password"
-msgstr "Ancien mot de passe"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:187
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:309
-msgctxt "Label"
-msgid "New mailbox password"
-msgstr "Nouveau mot de passe de messagerie"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:188
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:310
-msgctxt "Label"
-msgid "Confirm mailbox password"
-msgstr "Confirmez le mot de passe de la messagerie"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:279
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:297
-msgctxt "Label"
-msgid "New password"
-msgstr "Nouveau mot de passe"
-
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:280
-#: node_modules/react-components/containers/account/ChangePasswordModal.js:298
-msgctxt "Label"
-msgid "Confirm password"
-msgstr "Confirmez le mot de passe"
 
 #: node_modules/react-components/containers/account/PasswordsSection.js:67
 msgctxt "Label"
@@ -2701,7 +2581,7 @@ msgctxt "Label"
 msgid "Cardholder name"
 msgstr "Titulaire de la carte"
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:70
+#: node_modules/react-components/containers/paymentMethods/useMethods.js:70
 msgctxt "Label"
 msgid "Pay with cash"
 msgstr "Payer en espèces"
@@ -3550,17 +3430,17 @@ msgctxt "Label, make it short please"
 msgid "Attach screenshot(s)"
 msgstr "Joindre une ou des capture(s) d'écran"
 
-#: node_modules/react-components/containers/error/GenericError.js:13
+#: node_modules/react-components/containers/error/GenericError.js:16
 msgctxt "Error message"
 msgid "Aaah! Something went wrong"
 msgstr "Aaah ! Quelque chose s'est mal passé"
 
-#: node_modules/react-components/containers/error/GenericError.js:16
+#: node_modules/react-components/containers/error/GenericError.js:19
 msgctxt "Error message"
 msgid "Brace yourself till we get the error fixed."
 msgstr "Veuillez patienter jusqu'à ce qu'on règle l'erreur."
 
-#: node_modules/react-components/containers/error/GenericError.js:17
+#: node_modules/react-components/containers/error/GenericError.js:20
 msgctxt "Error message"
 msgid "You may also refresh the page or try again later."
 msgstr "Vous pouvez également rafraîchir la page ou réessayer plus tard."
@@ -3605,12 +3485,12 @@ msgctxt "Message"
 msgid "Are you sure you want to disable two-factor authentication?"
 msgstr "Êtes-vous sûr de vouloir désactiver l'authentification à deux facteurs ?"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:68
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:70
 msgctxt "Confirmation title"
 msgid "Delete payment method"
 msgstr "Supprimer ce mode de paiement"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:69
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodActions.js:71
 msgctxt "Confirmation message to delete payment method"
 msgid "Are you sure you want to delete this payment method?"
 msgstr "Êtes-vous sûr de vouloir supprimer ce mode de paiement ?"
@@ -3640,7 +3520,7 @@ msgctxt "Title for payment methods table"
 msgid "Actions"
 msgstr "Actions"
 
-#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:58
+#: node_modules/react-components/containers/paymentMethods/PaymentMethodsSection.js:66
 msgctxt "Info for payment methods"
 msgid "If you wish to pay by credit card, you can add your card below. Learn about other payment options."
 msgstr "Si vous souhaitez payer par carte de crédit, vous pouvez ajouter votre carte ci-dessous. En savoir plus sur les autres options de paiement."
@@ -3650,17 +3530,17 @@ msgctxt "Label for credit card"
 msgid "Expiration"
 msgstr "Expiration"
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:34
+#: node_modules/react-components/containers/paymentMethods/useMethods.js:34
 msgctxt "Payment method option"
 msgid "Pay with credit/debit card"
 msgstr "Payer par carte de crédit / débit"
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:56
+#: node_modules/react-components/containers/paymentMethods/useMethods.js:56
 msgctxt "Payment method option"
 msgid "Pay with PayPal"
 msgstr "Payer avec PayPal"
 
-#: node_modules/react-components/containers/paymentMethods/usePaymentMethods.js:64
+#: node_modules/react-components/containers/paymentMethods/useMethods.js:64
 msgctxt "Payment method option"
 msgid "Pay with Bitcoin"
 msgstr "Payer en Bitcoin"
