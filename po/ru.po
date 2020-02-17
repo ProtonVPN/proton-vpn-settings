@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Russian\n"
 "Language: ru_RU\n"
-"PO-Revision-Date: 2020-02-08 20:20\n"
+"PO-Revision-Date: 2020-02-14 18:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -573,7 +573,7 @@ msgstr "Предотвращение утечки DNS"
 #: src/app/containers/RedeemContainer.js:78
 msgctxt "Title"
 msgid "Strong encryption"
-msgstr "Надежное шифрование"
+msgstr "Сильное шифрование"
 
 #: src/app/containers/PreInviteContainer.js:42
 msgctxt "Title"
@@ -995,6 +995,11 @@ msgstr "Добавить кредитную / дебетовую карту"
 msgctxt "Action"
 msgid "Add PayPal"
 msgstr "Добавить PayPal"
+
+#: node_modules/react-components/containers/api/OfflineNotification.js:10
+msgctxt "Action"
+msgid "Retry now"
+msgstr "Повторить попытку"
 
 #: node_modules/react-components/containers/heading/SupportDropdown.js:57
 #: node_modules/react-components/containers/heading/UserDropdown.js:109
@@ -1676,6 +1681,12 @@ msgctxt "Info"
 msgid "For security reasons, please verify that you are not a robot."
 msgstr "Из соображений безопасности подтвердите, что вы не являетесь роботом."
 
+#.  The only way to get out of this one is to refresh.
+#: node_modules/react-components/containers/api/ApiProvider.js:71
+msgctxt "Info"
+msgid "Application upgrade required"
+msgstr "Требуется обновление приложения"
+
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:11
 msgctxt "Info"
 msgid "Not set"
@@ -1949,20 +1960,20 @@ msgctxt "Error"
 msgid "Wrong mailbox password"
 msgstr "Неправильный пароль почтового ящика"
 
-#: node_modules/react-components/containers/api/ApiProvider.js:47
+#: node_modules/react-components/containers/api/OfflineNotification.js:15
 msgctxt "Error"
-msgid "Could not connect to server."
-msgstr "Не удалось подключиться к серверу."
+msgid "Servers are unreachable."
+msgstr "Серверы недоступны."
 
-#: node_modules/react-components/containers/api/ApiProvider.js:48
-msgctxt "Error"
-msgid "No internet connection found"
-msgstr "Нет соединения с Интернетом"
-
-#: node_modules/react-components/containers/api/ApiProvider.js:56
+#: node_modules/react-components/containers/api/ApiProvider.js:105
 msgctxt "Error"
 msgid "Request timed out."
 msgstr "Истекло время ожидания запроса."
+
+#: node_modules/react-components/containers/api/ApiProvider.js:152
+msgctxt "Error"
+msgid "Bad app version"
+msgstr "Недопустимая версия приложения"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:44
 #: node_modules/react-components/containers/notification/EmailSection.js:54
@@ -3110,7 +3121,7 @@ msgstr "Забыли имя пользователя?"
 #: src/app/containers/LoginContainer.js:37
 msgctxt "Link"
 msgid "Common login problems"
-msgstr "Распространённые проблемы входа"
+msgstr "Частые проблемы"
 
 #: src/app/containers/LoginContainer.js:41
 msgctxt "Link"
@@ -3392,7 +3403,7 @@ msgstr "Проблема с обновлением"
 #: node_modules/react-components/containers/support/BugModal.js:57
 msgctxt "Bug category"
 msgid "Application problem"
-msgstr "Проблема в применении"
+msgstr "Проблема с приложением"
 
 #: node_modules/react-components/containers/support/BugModal.js:59
 msgctxt "Bug category"
@@ -3402,7 +3413,7 @@ msgstr "Проблема со скоростью"
 #: node_modules/react-components/containers/support/BugModal.js:60
 msgctxt "Bug category"
 msgid "Manual setup problem"
-msgstr "Проблема при ручной настройки"
+msgstr "Проблема при ручной настройке"
 
 #: node_modules/react-components/containers/support/BugModal.js:61
 msgctxt "Bug category"
@@ -3766,7 +3777,7 @@ msgstr "Предотвращение утечки DNS"
 #: src/app/containers/RedeemContainer.js:77
 msgctxt "Image alt"
 msgid "Strong encryption"
-msgstr "Надежное шифрование"
+msgstr "Сильное шифрование"
 
 #: src/app/containers/RedeemContainer.js:45
 msgctxt "About"

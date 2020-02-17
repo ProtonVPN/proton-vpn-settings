@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Dutch\n"
 "Language: nl_NL\n"
-"PO-Revision-Date: 2020-02-08 13:20\n"
+"PO-Revision-Date: 2020-02-14 10:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -996,6 +996,11 @@ msgctxt "Action"
 msgid "Add PayPal"
 msgstr "PayPal toevoegen"
 
+#: node_modules/react-components/containers/api/OfflineNotification.js:10
+msgctxt "Action"
+msgid "Retry now"
+msgstr "Probeer nu opnieuw"
+
 #: node_modules/react-components/containers/heading/SupportDropdown.js:57
 #: node_modules/react-components/containers/heading/UserDropdown.js:109
 msgctxt "Action"
@@ -1676,6 +1681,12 @@ msgctxt "Info"
 msgid "For security reasons, please verify that you are not a robot."
 msgstr "Bevestig dat u geen robot bent voor veiligheidsredenen."
 
+#.  The only way to get out of this one is to refresh.
+#: node_modules/react-components/containers/api/ApiProvider.js:71
+msgctxt "Info"
+msgid "Application upgrade required"
+msgstr "Toepassing upgrade vereist"
+
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:11
 msgctxt "Info"
 msgid "Not set"
@@ -1949,20 +1960,20 @@ msgctxt "Error"
 msgid "Wrong mailbox password"
 msgstr "Verkeerd mailbox-wachtwoord"
 
-#: node_modules/react-components/containers/api/ApiProvider.js:47
+#: node_modules/react-components/containers/api/OfflineNotification.js:15
 msgctxt "Error"
-msgid "Could not connect to server."
-msgstr "Kan geen verbinding maken met de server."
+msgid "Servers are unreachable."
+msgstr "Servers zijn onbereikbaar."
 
-#: node_modules/react-components/containers/api/ApiProvider.js:48
-msgctxt "Error"
-msgid "No internet connection found"
-msgstr "Geen internetverbinding gevonden"
-
-#: node_modules/react-components/containers/api/ApiProvider.js:56
+#: node_modules/react-components/containers/api/ApiProvider.js:105
 msgctxt "Error"
 msgid "Request timed out."
 msgstr "Het verzoek timed out."
+
+#: node_modules/react-components/containers/api/ApiProvider.js:152
+msgctxt "Error"
+msgid "Bad app version"
+msgstr "Slechte app versie"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:44
 #: node_modules/react-components/containers/notification/EmailSection.js:54

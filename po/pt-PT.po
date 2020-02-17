@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Portuguese\n"
 "Language: pt_PT\n"
-"PO-Revision-Date: 2020-02-08 08:20\n"
+"PO-Revision-Date: 2020-02-14 09:20\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -996,6 +996,11 @@ msgctxt "Action"
 msgid "Add PayPal"
 msgstr "Adicionar conta PayPal"
 
+#: node_modules/react-components/containers/api/OfflineNotification.js:10
+msgctxt "Action"
+msgid "Retry now"
+msgstr "Repetir agora"
+
 #: node_modules/react-components/containers/heading/SupportDropdown.js:57
 #: node_modules/react-components/containers/heading/UserDropdown.js:109
 msgctxt "Action"
@@ -1676,6 +1681,12 @@ msgctxt "Info"
 msgid "For security reasons, please verify that you are not a robot."
 msgstr "Por razões de segurança, por favor confirme que não é um robô."
 
+#.  The only way to get out of this one is to refresh.
+#: node_modules/react-components/containers/api/ApiProvider.js:71
+msgctxt "Info"
+msgid "Application upgrade required"
+msgstr "Actualização da aplicação requerida"
+
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:11
 msgctxt "Info"
 msgid "Not set"
@@ -1949,20 +1960,20 @@ msgctxt "Error"
 msgid "Wrong mailbox password"
 msgstr "Senha da caixa de correio errada"
 
-#: node_modules/react-components/containers/api/ApiProvider.js:47
+#: node_modules/react-components/containers/api/OfflineNotification.js:15
 msgctxt "Error"
-msgid "Could not connect to server."
-msgstr "Impossível ligar ao servidor."
+msgid "Servers are unreachable."
+msgstr "Os servidores estão inacessíveis."
 
-#: node_modules/react-components/containers/api/ApiProvider.js:48
-msgctxt "Error"
-msgid "No internet connection found"
-msgstr "Sem ligação à Internet"
-
-#: node_modules/react-components/containers/api/ApiProvider.js:56
+#: node_modules/react-components/containers/api/ApiProvider.js:105
 msgctxt "Error"
 msgid "Request timed out."
 msgstr "O pedido expirou."
+
+#: node_modules/react-components/containers/api/ApiProvider.js:152
+msgctxt "Error"
+msgid "Bad app version"
+msgstr "Versão da aplicação inválida"
 
 #: node_modules/react-components/containers/notification/EmailSection.js:44
 #: node_modules/react-components/containers/notification/EmailSection.js:54

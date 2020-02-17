@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: protonvpn\n"
 "Language-Team: Indonesian\n"
 "Language: id_ID\n"
-"PO-Revision-Date: 2020-02-08 12:20\n"
+"PO-Revision-Date: 2020-02-14 07:21\n"
 
 #: node_modules/proton-shared/lib/helpers/humanSize.js:13
 msgctxt "file size format"
@@ -996,6 +996,11 @@ msgctxt "Action"
 msgid "Add PayPal"
 msgstr "Tambahkan Paypal"
 
+#: node_modules/react-components/containers/api/OfflineNotification.js:10
+msgctxt "Action"
+msgid "Retry now"
+msgstr ""
+
 #: node_modules/react-components/containers/heading/SupportDropdown.js:57
 #: node_modules/react-components/containers/heading/UserDropdown.js:109
 msgctxt "Action"
@@ -1677,6 +1682,12 @@ msgctxt "Info"
 msgid "For security reasons, please verify that you are not a robot."
 msgstr "Demi alasan keamanan, harap verifikasi bahwa Anda bukan robot."
 
+#.  The only way to get out of this one is to refresh.
+#: node_modules/react-components/containers/api/ApiProvider.js:71
+msgctxt "Info"
+msgid "Application upgrade required"
+msgstr ""
+
 #: node_modules/react-components/containers/notification/RecoveryEmail.js:11
 msgctxt "Info"
 msgid "Not set"
@@ -1950,20 +1961,20 @@ msgctxt "Error"
 msgid "Wrong mailbox password"
 msgstr "Sandi kotak pesan salah"
 
-#: node_modules/react-components/containers/api/ApiProvider.js:47
+#: node_modules/react-components/containers/api/OfflineNotification.js:15
 msgctxt "Error"
-msgid "Could not connect to server."
-msgstr "Gagal sambung ke server."
+msgid "Servers are unreachable."
+msgstr ""
 
-#: node_modules/react-components/containers/api/ApiProvider.js:48
-msgctxt "Error"
-msgid "No internet connection found"
-msgstr "Gagal sambung ke Internet"
-
-#: node_modules/react-components/containers/api/ApiProvider.js:56
+#: node_modules/react-components/containers/api/ApiProvider.js:105
 msgctxt "Error"
 msgid "Request timed out."
 msgstr "Terlalu lama memuat."
+
+#: node_modules/react-components/containers/api/ApiProvider.js:152
+msgctxt "Error"
+msgid "Bad app version"
+msgstr ""
 
 #: node_modules/react-components/containers/notification/EmailSection.js:44
 #: node_modules/react-components/containers/notification/EmailSection.js:54
