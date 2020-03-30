@@ -4,7 +4,7 @@
     "description": "ProtonVPN React web application",
     "main": "index.js",
     "scripts": {
-        "start": "git update-index --assume-unchanged package-lock.json && proton-pack dev-server",
+        "start": "proton-pack dev-server",
         "lint": "eslint src --ext .js,.ts,.tsx --quiet --cache",
         "pretty": "prettier --write  $(find src/app -type f -name '*.js' -o -name '*.ts' -o -name '*.tsx')",
         "preversion": "git update-index --no-assume-unchanged package-lock.json",
