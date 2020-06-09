@@ -69,6 +69,6 @@
         }
     },
     "config": {
-        "publicPathFlag": "--publicPath=/settings/"
+        "publicPathFlag": "--publicPath=/"
     }
 }
