@@ -1,8 +1,17 @@
-import React from 'react';
-import { Alert, usePermissions, SettingsPropsShared, PrivateMainSettingsArea, SectionConfig } from 'react-components';
-import { hasPermission } from 'proton-shared/lib/helpers/permissions';
+import * as React from 'react';
+import {
+    usePermissions,
+    Paragraph,
+    SettingsPropsShared,
+    PrivateMainSettingsArea,
+    SectionConfig
+} from 'react-components';
 import { c } from 'ttag';
 import { Link } from 'react-router-dom';
+import { hasPermission } from 'proton-shared/lib/helpers/permissions';
+import { getLightOrDark } from 'proton-shared/lib/themes/helpers';
+import upgradeSvgLight from 'design-system/assets/img/shared/no-organization.svg';
+import upgradeSvgDark from 'design-system/assets/img/shared/no-organization-dark.svg';
 
 interface Props extends SettingsPropsShared {
     config: SectionConfig;
@@ -11,18 +20,19 @@ interface Props extends SettingsPropsShared {
 
 const PrivateMainSettingsAreaWithPermissions = ({ config, location, children, setActiveSection }: Props) => {
     const userPermissions = usePermissions();
-    const { subsections = [], permissions: pagePermissions, text } = config;
+    const { subsections = [], permissions: pagePermissions = [], text } = config;
 
     const noPermissionChild = (() => {
         if (!hasPermission(userPermissions, pagePermissions)) {
+            const upgradeSvg = getLightOrDark(upgradeSvgLight, upgradeSvgDark);
             return (
                 <div id="page-error" className="aligncenter">
-                    <h3 className="bold">{c('Title').t`Sorry, you can't access this page`}</h3>
-                    <div className="container-section-sticky">
-                        <Alert>
-                            <Link to="/settings/subscription">{c('Link').t`Upgrade now`}</Link>
-                        </Alert>
-                    </div>
+                    <img src={upgradeSvg} alt={c('Title').t`Upgrade`} className="mb2" />
+                    <Paragraph>
+                        {c('Info')
+                            .t`Upgrade to a paid plan to access premium features and increase your storage space.`}
+                    </Paragraph>
+                    <Link to="/dashboard">{c('Link').t`Upgrade now`}</Link>
                 </div>
             );
         }
@@ -42,7 +52,6 @@ const PrivateMainSettingsAreaWithPermissions = ({ config, location, children, se
     return (
         <PrivateMainSettingsArea
             title={text}
-            appName="ProtonVPN"
             location={location}
             setActiveSection={setActiveSection}
             subsections={noPermissionChild ? [] : subsections}

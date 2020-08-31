@@ -1,6 +1,5 @@
-import { hot } from 'react-hot-loader/root';
 import React from 'react';
-import { ProtonApp, useAuthentication } from 'react-components';
+import { ProtonApp, useAuthentication, PublicAuthenticationStore, PrivateAuthenticationStore } from 'react-components';
 import sentry from 'proton-shared/lib/helpers/sentry';
 
 import * as config from './config';
@@ -12,7 +11,7 @@ import './app.scss';
 sentry(config);
 
 const Setup = () => {
-    const { UID, login, logout } = useAuthentication();
+    const { UID, login, logout } = useAuthentication() as PublicAuthenticationStore & PrivateAuthenticationStore;
     if (UID) {
         return <PrivateApp onLogout={logout} />;
     }
@@ -27,4 +26,4 @@ const App = () => {
     );
 };
 
-export default hot(App);
+export default App;

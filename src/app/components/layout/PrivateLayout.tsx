@@ -12,13 +12,15 @@ import {
     useActiveBreakpoint,
     SidebarList,
     SidebarNav,
-    SidebarListItemsWithSubsections
+    SidebarListItemsWithSubsections,
+    MainLogo
 } from 'react-components';
 import { hasPermission } from 'proton-shared/lib/helpers/permissions';
 import { c } from 'ttag';
 
 import { getPages } from '../../pages';
 import DashboardContainer from '../../containers/DashboardContainer';
+import GeneralContainer from '../../containers/GeneralContainer';
 import AccountContainer from '../../containers/AccountContainer';
 import DownloadsContainer from '../../containers/DownloadsContainer';
 import PaymentsContainer from '../../containers/PaymentsContainer';
@@ -38,11 +40,11 @@ const PrivateLayout = ({ location }: RouteComponentProps) => {
         setExpand(false);
     }, [location.pathname, location.hash]);
 
-    const base = '/account';
+    const logo = <MainLogo to="/" />;
 
     const header = (
         <PrivateHeader
-            url={base}
+            logo={logo}
             title={c('Title').t`Settings`}
             expanded={expanded}
             onToggleExpand={onToggleExpand}
@@ -52,12 +54,7 @@ const PrivateLayout = ({ location }: RouteComponentProps) => {
     );
 
     const sidebar = (
-        <Sidebar
-            url={base}
-            expanded={expanded}
-            onToggleExpand={onToggleExpand}
-            version={<AppVersion appName="ProtonVPN" />}
-        >
+        <Sidebar logo={logo} expanded={expanded} onToggleExpand={onToggleExpand} version={<AppVersion />}>
             <SidebarNav>
                 <SidebarList>
                     <SidebarListItemsWithSubsections
@@ -78,6 +75,13 @@ const PrivateLayout = ({ location }: RouteComponentProps) => {
                     exact
                     render={({ location }) => (
                         <DashboardContainer location={location} setActiveSection={setActiveSection} />
+                    )}
+                />
+                <Route
+                    path="/general"
+                    exact
+                    render={({ location }) => (
+                        <GeneralContainer location={location} setActiveSection={setActiveSection} />
                     )}
                 />
                 <Route

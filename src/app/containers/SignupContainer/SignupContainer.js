@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Button, Title, useLoading, TextLoader, VpnLogo, Href, FullLoader, SupportDropdown } from 'react-components';
 import AccountStep from './AccountStep/AccountStep';
@@ -28,7 +28,7 @@ const BRAVE_COOKIE = '1397';
 const BESTDEAL_COOKIE = 'bestdeal';
 
 // TODO: Flexible urls and plans for reuse between project
-const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
+const SignupContainer = ({ match, history, onLogin }) => {
     const searchParams = new URLSearchParams(history.location.search);
     const from = searchParams.get('from');
     const couponCode = searchParams.get('coupon');
@@ -38,6 +38,7 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
     const historyState = history.location.state || {};
     const preSelectedPlan = searchParams.get('plan') || historyState.preSelectedPlan;
     const invite = historyState.invite;
+    const redirectToMobileRef = useRef((from || historyState.from) === 'mobile');
     const coupon =
         historyState.coupon ||
         (couponCode && {
@@ -46,10 +47,9 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
             cycle: billingCycle
         });
 
-    const redirectToMobile = (from || historyState.from) === 'mobile';
     const hasCookieOffer = checkCookie('offer', BESTDEAL_COOKIE) || checkCookie('offer', BRAVE_COOKIE);
     const availablePlans =
-        hasCookieOffer && !redirectToMobile ? BEST_DEAL_PLANS : PLAN_BUNDLES[preSelectedPlan] || VPN_PLANS;
+        hasCookieOffer && !redirectToMobileRef.current ? BEST_DEAL_PLANS : PLAN_BUNDLES[preSelectedPlan] || VPN_PLANS;
 
     useEffect(() => {
         // Always start at plans, or account if plan is preselected
@@ -80,14 +80,11 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
             preSelectedPlan
         });
 
-    const handleLogin = (...args) => {
-        if (redirectToMobile) {
+    const handleLogin = (data) => {
+        if (redirectToMobileRef.current) {
             return goToStep(SignupState.MobileRedirection);
         }
-
-        stopRedirect();
-        history.push('/downloads');
-        onLogin(...args);
+        return onLogin({ ...data, path: '/downloads' });
     };
 
     const {
@@ -262,7 +259,6 @@ const SignupContainer = ({ match, history, onLogin, stopRedirect }) => {
 };
 
 SignupContainer.propTypes = {
-    stopRedirect: PropTypes.func.isRequired,
     onLogin: PropTypes.func.isRequired,
     match: PropTypes.shape({
         params: PropTypes.shape({
