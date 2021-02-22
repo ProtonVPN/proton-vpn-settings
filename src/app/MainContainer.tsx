@@ -13,10 +13,10 @@ import {
     SidebarNav,
     SidebarListItemsWithSubsections,
     MainLogo,
+    useEarlyAccess,
 } from 'react-components';
 import { hasPermission } from 'proton-shared/lib/helpers/permissions';
 import { c } from 'ttag';
-
 import { getPages } from './pages';
 import DashboardContainer from './containers/DashboardContainer';
 import GeneralContainer from './containers/GeneralContainer';
@@ -32,18 +32,15 @@ const MainContainer = () => {
     const userPermissions = usePermissions();
     const { isNarrow } = useActiveBreakpoint();
     const location = useLocation();
-
     const [activeSection, setActiveSection] = useState('');
-    const filteredPages = getPages(user).filter(({ permissions: pagePermissions = [] }) =>
+    const { hasEarlyAccess } = useEarlyAccess();
+    const filteredPages = getPages(user, hasEarlyAccess).filter(({ permissions: pagePermissions = [] }) =>
         hasPermission(userPermissions, pagePermissions)
     );
-
     useEffect(() => {
         setExpand(false);
     }, [location.pathname, location.hash]);
-
     const logo = <MainLogo to="/" />;
-
     const header = (
         <PrivateHeader
             logo={logo}
@@ -54,7 +51,6 @@ const MainContainer = () => {
             hasAppsDropdown={false}
         />
     );
-
     const sidebar = (
         <Sidebar
             logo={logo}
@@ -74,20 +70,24 @@ const MainContainer = () => {
             </SidebarNav>
         </Sidebar>
     );
-
+    const dashboardPage = filteredPages.some(({ to }) => {
+        return to === '/dashboard';
+    });
     return (
         <Switch>
             <Route path="/tv" exact component={TVContainer} />
             <Route path="*">
                 <PrivateAppContainer header={header} sidebar={sidebar}>
                     <Switch>
-                        <Route
-                            path="/dashboard"
-                            exact
-                            render={({ location }) => (
-                                <DashboardContainer location={location} setActiveSection={setActiveSection} />
-                            )}
-                        />
+                        {dashboardPage && (
+                            <Route
+                                path="/dashboard"
+                                exact
+                                render={({ location }) => (
+                                    <DashboardContainer location={location} setActiveSection={setActiveSection} />
+                                )}
+                            />
+                        )}
                         <Route
                             path="/general"
                             exact
@@ -116,12 +116,11 @@ const MainContainer = () => {
                                 <PaymentsContainer location={location} setActiveSection={setActiveSection} />
                             )}
                         />
-                        <Redirect to="/dashboard" />
+                        <Redirect to={dashboardPage ? '/dashboard' : '/downloads'} />
                     </Switch>
                 </PrivateAppContainer>
             </Route>
         </Switch>
     );
 };
-
 export default MainContainer;
