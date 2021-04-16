@@ -176,11 +176,7 @@ const getPlanFeatures = (plan, maxConnections, countries) => {
             isBest: true,
             description: c('Plan Description').t`Advanced security features`,
             features: [
-                c('Plan Feature').ngettext(
-                    msgid`${maxConnections} VPN connection`,
-                    `${maxConnections} VPN connections`,
-                    maxConnections
-                ),
+                c('Plan Feature').t`10 VPN connections`,
                 c('Plan Feature').t`Servers in ${countries.all.length} countries`,
                 c('Plan Feature').t`Highest speed (up to 10Gbps)`,
                 c('Plan Feature').t`Strict no-logs policy`,
@@ -236,11 +232,6 @@ const getPlanFeatures = (plan, maxConnections, countries) => {
             description: c('Plan Description').t`The complete privacy suite`,
             features: [
                 c('Plan feature').t`All Plus plan features`,
-                c('Plan Feature').ngettext(
-                    msgid`${maxConnections} VPN connection`,
-                    `${maxConnections} VPN connections`,
-                    maxConnections
-                ),
                 <>
                     <span className="mr0-5">{c('Plan Feature').t`ProtonMail Visionary account`}</span>
                     <Info
