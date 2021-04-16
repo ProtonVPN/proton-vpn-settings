@@ -108,7 +108,7 @@ const PlansTable = ({
                     </th>
                     <td className="text-center">1</td>
                     <td className="text-center">{getPlan(VPNBASIC).MaxVPN}</td>
-                    <td className="text-center">{getPlan(VPNPLUS).MaxVPN}</td>
+                    <td className="text-center">10</td>
                     <td className="text-center">{getPlan(VISIONARY).MaxVPN}</td>
                 </tr>
 
