@@ -31,7 +31,7 @@ export const VPN_PLANS = [PLAN.FREE, PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
 export const BEST_DEAL_PLANS = [PLAN.BASIC, PLAN.PLUS, PLAN.VISIONARY];
 
 const getServersText = (n) => {
-    return c('Plan Feature').ngettext(msgid`Server in ${n} country`, `Servers in ${n} countries`, n);
+    return c('Plan Feature').ngettext(msgid`Servers in ${n} country`, `Servers in ${n} countries`, n);
 };
 
 const getPlanFeatures = (plan, maxConnections, countries) => {
@@ -239,7 +239,7 @@ const getPlanFeatures = (plan, maxConnections, countries) => {
             image: <img width={100} src={visionaryPlanSvg} alt={`${PLAN_NAMES[PLAN.VISIONARY]} plan`} />,
             description: c('Plan Description').t`The complete privacy suite`,
             features: [
-                c('Plan feature').t`All Plus plan features`,
+                c('Plan feature').t`All ${PLAN_NAMES[PLAN.PLUS]} plan features`,
                 <>
                     <span className="mr0-5">{c('Plan Feature').t`ProtonMail Visionary account`}</span>
                     <Info
